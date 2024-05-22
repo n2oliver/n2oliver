@@ -34,15 +34,15 @@ $products = array(
     ),
     array(
         "id" => 6, 
-        "name" => "Ano Novo, Contas em Dia", 
-        "affiliate_link" => "https://go.hotmart.com/N89476028F", 
-        "image_url" => "img\\livros\\ano-novo-contas-em-dia.jpg"
+        "name" => "Antotário - Um Caminho Sem Volta", 
+        "affiliate_link" => "https://go.hotmart.com/K93021937G", 
+        "image_url" => "img\\livros\\livro-antiotario-pdf-download.jpg"
     ),
     array(
         "id" => 7, 
-        "name" => "Antotário", 
-        "affiliate_link" => "https://go.hotmart.com/K93021937G", 
-        "image_url" => "img\\livros\\ano-novo-contas-em-dia.jpg"
+        "name" => "Bíblia de Estudo Cronológica Organizada em Ordem Consecutiva", 
+        "affiliate_link" => "https://go.hotmart.com/K93185898N", 
+        "image_url" => "img\\livros\\Semtitulolivroraralivroraracpebcphtcpedcpht.jpg"
     )
     // Adicione mais produtos conforme necessário
 );

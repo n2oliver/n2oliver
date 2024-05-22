@@ -63,7 +63,12 @@ var i;
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
-    if($(this).parent('.collapsible').length && event.target.localName != "h2" || $(event.target).parent(".product").length) return;
+    if(
+        $(this).parent('.collapsible').length && event.target.localName != "h2" || 
+        $(event.target).hasClass("content") ||
+        $(event.target).hasClass("product") ||
+        $(event.target).parent(".product").length
+    ) return;
     this.classList.toggle("active");
     var content = this.lastElementChild;
     if (content.style.display === "flex") {
