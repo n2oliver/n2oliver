@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-adsense-account" content="ca-pub-8124594027670911">
-    <title>Minha Loja Virtual</title>
+    <title>Oliv3r Store</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/logoOliverStore-live.jpg">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="collapsible.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">

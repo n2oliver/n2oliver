@@ -34,7 +34,7 @@ $products = array(
     ),
     array(
         "id" => 6, 
-        "name" => "Antotário - Um Caminho Sem Volta", 
+        "name" => "Antiotário - Um Caminho Sem Volta", 
         "affiliate_link" => "https://go.hotmart.com/K93021937G", 
         "image_url" => "img\\livros\\livro-antiotario-pdf-download.jpg"
     ),

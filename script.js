@@ -15,7 +15,7 @@ $(document).ready(function(){
                         '<div class="product'+ hightlight + '">' +
                         '<h2>' + product.name + '</h2>' +
                         '<img src="' + product.image_url + '" alt="' + product.name + '"><br>' +
-                        '<a href="' + product.affiliate_link + '" target="_blank">Comprar</a>' +
+                        '<a href="' + product.affiliate_link + '" target="_blank">Ver detalhes</a>' +
                         '</div>'
                     );
                 });
