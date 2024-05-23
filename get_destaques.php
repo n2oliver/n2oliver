@@ -10,13 +10,13 @@ $products = array(
     
     array(
         "id" => 2, 
-        "name" => "Lucro no Instagram", 
+        "name" => "Lucro No Instagram", 
         "affiliate_link" => "https://go.hotmart.com/F93196255C?dp=1", 
         "image_url" => "img\\livros\\INSTAGRAM2.jpg",
     ),
     array(
         "id" => 3, 
-        "name" => "Especialista em Bentô Cake", 
+        "name" => "Especialista Em Bentô Cake", 
         "affiliate_link" => "https://go.hotmart.com/D93217684L", 
         "image_url" => "img\\cursos\\bento2.png", 
     )

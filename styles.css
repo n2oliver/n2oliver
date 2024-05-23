@@ -66,6 +66,7 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 header h1 {
     margin: 0;
@@ -102,6 +103,10 @@ nav ul li a:hover {
 }
 section>h2 {
     color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+}
+section>h2:hover {
+    text-decoration: underline;
 }
 .menu h2 {
     color: #FFF;
@@ -125,19 +130,24 @@ section>h2 {
 }
 .section {
     display: flex;
-    justify-content: center;
 }
 #destaques-container {
     overflow-x: scroll;
+    justify-content: center;
 }
 @media screen and (max-width: 768px) {
     .menu {
         width: 80%; /* Reduz a largura do menu em telas menores */
     }
     .section {
+        display: block;
+    }
+    
+    #destaques-container {
         display: flex;
         align-items: center;
         flex-direction: column;
+        justify-content: 0;
     }
     .product:not(.hightlight) img {
         width: 150px;

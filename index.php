@@ -16,9 +16,10 @@
 
 <body>
     <header>
-        <span style="font-size: 64px; font-family: 'Montserrat', sans-serif;">Oliv3r Store</span>
+        <span style="font-size: 64px;">Oliv3r Store</span>
         <br>
-        <span style="font-size: 18px">Bem-vindo à nossa loja</span>
+        <span style="font-size: 18px;">Bem-vindo à nossa loja!</span><br>
+        <span style="font-size: 18px; color: lightgreen; font-weight: 300">Explore Oliv3r Store, <br>uma variedade de livros, fragrâncias <br>e cursos online em um único lugar.</span>
         <nav>
             <ul>
                 <li><a href="#perfumes" data-id="perfumes">Perfumes</a></li>
