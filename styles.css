@@ -125,6 +125,7 @@ section>h2 {
 }
 .section {
     display: flex;
+    justify-content: center;
 }
 #destaques-container {
     overflow-x: scroll;
@@ -134,7 +135,9 @@ section>h2 {
         width: 80%; /* Reduz a largura do menu em telas menores */
     }
     .section {
-        display: block;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
     .product:not(.hightlight) img {
         width: 150px;

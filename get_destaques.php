@@ -11,7 +11,7 @@ $products = array(
     array(
         "id" => 2, 
         "name" => "Lucro no Instagram", 
-        "affiliate_link" => "https://go.hotmart.com/F93196255C", 
+        "affiliate_link" => "https://go.hotmart.com/F93196255C?dp=1", 
         "image_url" => "img\\livros\\INSTAGRAM2.jpg",
     ),
     array(
