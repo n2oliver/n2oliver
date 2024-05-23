@@ -126,6 +126,9 @@ section>h2 {
 .section {
     display: flex;
 }
+#destaques-container {
+    overflow-x: scroll;
+}
 @media screen and (max-width: 768px) {
     .menu {
         width: 80%; /* Reduz a largura do menu em telas menores */
