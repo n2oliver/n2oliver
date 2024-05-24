@@ -98,6 +98,10 @@
                     $(this).parent('.collapsible').length && event.target.localName != "h2" ||
                     $(event.target).hasClass("content") ||
                     $(event.target).hasClass("product") ||
+                    event.target.id == 'perfumes_masculinos-container' ||
+                    event.target.id == 'perfumes_femininos-container' ||
+                    $(event.target).parent('#perfumes_masculinos-container').length ||
+                    $(event.target).parent('#perfumes_femininos-container').length ||
                     $(event.target).parent(".product").length
                 ) return;
                 this.classList.toggle("active");
