@@ -140,6 +140,8 @@ section>h2:hover {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 #perfumes_femininos-container, #perfumes_masculinos-container{
     display: flex;
@@ -149,6 +151,8 @@ section>h2:hover {
 #destaques-container {
     overflow-x: scroll;
     justify-content: center;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 @media screen and (max-width: 768px) {
     .menu {
