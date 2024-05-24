@@ -7,6 +7,8 @@ $(document).ready(function(){
             dataType: "json",
             success: function(data) {
                 data.forEach(function(product) {
+                    if(product.unavailable) return;
+                    
                     hightlight = "";
                     if(product.hightlight && window.screen.width > 768) {
                         hightlight = " hightlight";

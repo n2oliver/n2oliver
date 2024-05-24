@@ -28,3 +28,9 @@
     scrollbar-width: none;
     outline: none;
   }
+  .subsection-title {
+    border-bottom: 1px solid rgba(185, 185, 185, .6);
+  }
+  .subsection-title:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+  }
