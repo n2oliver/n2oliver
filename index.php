@@ -41,12 +41,12 @@
         <div id="perfumes-container" class="section content">
             <h3 style="margin: 20px" class="subsection-title">Para Cavalheiros</h3>
             <div class="subsection">
-                <div id="perfumes_masculinos-container" class="section content"></div>
+                <div id="perfumes_masculinos-container" class="section subsection-content content"></div>
             </div>
 
             <h3 style="margin: 20px" class="subsection-title">Para Damas</h3>
             <div class="subsection">
-                <div id="perfumes_femininos-container" class="section content"></div>
+                <div id="perfumes_femininos-container" class="section subsection-content content"></div>
             </div>
         </div>
     </section>
@@ -107,10 +107,9 @@
                     $(event.target).hasClass("content") ||
                     $(event.target).hasClass("product") ||
                     $(event.target).hasClass("subsection-title") ||
-                    event.target.id == 'perfumes_masculinos-container' ||
-                    event.target.id == 'perfumes_femininos-container' ||
-                    $(event.target).parent('#perfumes_masculinos-container').length ||
-                    $(event.target).parent('#perfumes_femininos-container').length ||
+                    $(event.target).hasClass(".subsection-content") ||
+                    $(event.target).parent('.subsection-content').length ||
+                    $(event.target).parent('.subsection-content').length ||
                     $(event.target).parent(".product").length
                 ) return;
                 this.classList.toggle("active");
