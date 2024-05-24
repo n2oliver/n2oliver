@@ -39,12 +39,12 @@
         <h2 style="margin: 20px">Perfumes</h2>
         
         <div id="perfumes-container" class="section content">
-            <h3 style="margin: 20px" class="subsection-title">Masculinos</h3>
+            <h3 style="margin: 20px" class="subsection-title">Para Cavalheiros</h3>
             <div class="subsection">
                 <div id="perfumes_masculinos-container" class="section content"></div>
             </div>
 
-            <h3 style="margin: 20px" class="subsection-title">Femininos</h3>
+            <h3 style="margin: 20px" class="subsection-title">Para Damas</h3>
             <div class="subsection">
                 <div id="perfumes_femininos-container" class="section content"></div>
             </div>
