@@ -35,10 +35,20 @@
         <div id="destaques-container" class="section"></div>
     </section>
 
-    <section id="perfumes" class="collapsible">
+    <section id="perfumes" class="collapsible multiple">
         <h2 style="margin: 20px">Perfumes</h2>
+        
+        <div id="perfumes-container" class="section content">
+            <h3 style="margin: 20px">Masculinos</h3>
+            <div>
+                <div id="perfumes_masculinos-container"></div>
+            </div>
 
-        <div id="perfumes-container" class="section content"></div>
+            <h3 style="margin: 20px">Femininos</h3>
+            <div>
+                <div id="perfumes_femininos-container"></div>
+            </div>
+        </div>
     </section>
 
     <section id="livros" class="collapsible">

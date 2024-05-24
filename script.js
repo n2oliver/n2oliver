@@ -1,4 +1,4 @@
-const sections = ["perfumes", "livros", "cursos", "destaques"]
+const sections = ["perfumes_masculinos", "perfumes_femininos", "livros", "cursos", "destaques"]
 $(document).ready(function(){
     for(let section of sections) 
         $.ajax({

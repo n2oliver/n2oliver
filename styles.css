@@ -131,6 +131,21 @@ section>h2:hover {
 .section {
     display: flex;
 }
+#perfumes-container {
+    color: white;
+    flex-direction: column;
+}
+#perfumes-container>div {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+#perfumes_femininos-container, #perfumes_masculinos-container{
+    display: flex;
+    flex-direction: row;
+    overflow-x: 0 !important;
+}
 #destaques-container {
     overflow-x: scroll;
     justify-content: center;
