@@ -39,14 +39,14 @@
         <h2 style="margin: 20px">Perfumes</h2>
         
         <div id="perfumes-container" class="section content">
-            <h3 style="margin: 20px">Masculinos</h3>
-            <div>
-                <div id="perfumes_masculinos-container"></div>
+            <h3 style="margin: 20px" class="subsection-title">Masculinos</h3>
+            <div class="subsection">
+                <div id="perfumes_masculinos-container" class="section content"></div>
             </div>
 
-            <h3 style="margin: 20px">Femininos</h3>
-            <div>
-                <div id="perfumes_femininos-container"></div>
+            <h3 style="margin: 20px" class="subsection-title">Femininos</h3>
+            <div class="subsection">
+                <div id="perfumes_femininos-container" class="section content"></div>
             </div>
         </div>
     </section>
@@ -88,6 +88,14 @@
                 }, 200)
 
         });
+        $(".subsection-title").on("click", () => {
+            $(".subsection-title").next().find(".section");
+            if($(event.target.nextElementSibling.firstElementChild).is(":visible")) {
+                $(event.target.nextElementSibling.firstElementChild).hide(500);
+            } else {
+                $(event.target.nextElementSibling.firstElementChild).show({}, 1000).css("display", "flex");
+            }
+        });
 
         var coll = document.getElementsByClassName("collapsible");
         var i;
@@ -98,6 +106,7 @@
                     $(this).parent('.collapsible').length && event.target.localName != "h2" ||
                     $(event.target).hasClass("content") ||
                     $(event.target).hasClass("product") ||
+                    $(event.target).hasClass("subsection-title") ||
                     event.target.id == 'perfumes_masculinos-container' ||
                     event.target.id == 'perfumes_femininos-container' ||
                     $(event.target).parent('#perfumes_masculinos-container').length ||
@@ -109,7 +118,7 @@
                 if (content.style.display === "flex") {
                     $(content).hide(500);
                 } else {
-                    $(content).show({ display: "flex" }, 1000).css("display", "flex");
+                    $(content).show({}, 1000).css("display", "flex");
                 }
             });
         }
