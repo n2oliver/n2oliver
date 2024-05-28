@@ -26,10 +26,18 @@ h1 {
     border-radius: 5px;
     width: 300px;
     height: fit-content;
-    text-align: center;
     background-color: #FFF;
 }
+.product {
+    text-align: center;
+}
 
+.product .descricao {
+    text-align: left;
+    border: solid 1px #0056b3;
+    border-radius: 10px;
+    padding: 18px;
+}
 .product.hightlight {
     width: 720px;
 }
@@ -39,13 +47,13 @@ h1 {
 }
 
 .product img {
-    width: 200px;
+    width: auto;
     height: 200px;
     margin-bottom: 10px;
 }
 
 .product.hightlight img {
-    width: 450px;
+    width: auto;
     height: 450px;
 }
 
@@ -131,11 +139,14 @@ section>h2:hover {
 .section {
     display: flex;
 }
-#perfumes-container {
+.multiple .section:not(.subsection-content) {
     color: white;
     flex-direction: column;
 }
-#perfumes-container>div {
+.section-title, .product {
+    color: black;
+}
+.subsection-content {
     color: black;
     display: flex;
     flex-direction: row;
@@ -168,10 +179,11 @@ section>h2:hover {
         justify-content: 0;
     }
     .product:not(.hightlight) img {
-        width: 150px;
-        height: 150px;
+        width: 100%;
+        height: auto;
     }
     .product:not(.hightlight) {
         width: 200px;
+        height: fit-content;
     }
 }

@@ -25,6 +25,7 @@
                 <li><a href="#perfumes" data-id="perfumes">Perfumes</a></li>
                 <li><a href="#livros" data-id="livros">Livros</a></li>
                 <li><a href="#cursos" data-id="cursos">Cursos</a></li>
+                <li><a href="#smartphones" data-id="smartphones">Smartphones</a></li>
             </ul>
         </nav>
     </header>
@@ -60,6 +61,30 @@
         <h2 style="margin: 20px">Cursos</h2>
         <div id="cursos-container" class="section content"></div>
     </section>
+    <section id="smartphones" class="collapsible multiple">
+        <h2 style="margin: 20px">Smarphones</h2>
+        <div id="smartphones-container" class="section content">
+            <h3 style="margin: 20px" class="subsection-title">Xiaomi</h3>
+            <div class="subsection">
+                <div id="smartphones_xiaomi-container" class="section subsection-content content"></div>
+            </div>
+
+            <h3 style="margin: 20px" class="subsection-title">Samsung</h3>
+            <div class="subsection">
+                <div id="smartphones_samsung-container" class="section subsection-content content"></div>
+            </div>
+
+            <h3 style="margin: 20px" class="subsection-title">Apple</h3>
+            <div class="subsection">
+                <div id="smartphones_apple-container" class="section subsection-content content"></div>
+            </div>
+
+            <h3 style="margin: 20px" class="subsection-title">Motorola</h3>
+            <div class="subsection">
+                <div id="smartphones_motorola-container" class="section subsection-content content"></div>
+            </div>
+        </div>
+    </section>
     <footer style="text-align: center; color: white; padding: 24px; background-image: linear-gradient(transparent,#000000)">
         <span style="font-family: Montserrat">Oliv3r Store</span>
         <span style="font-size: 9px">Todos os direitos reservados - Oliv3r Store -  2024</span>
@@ -85,7 +110,7 @@
             content.css({ display: "flex" });
                 setTimeout(()=>{
                     window.location=`#${sectionId}`
-                }, 200)
+                }, 500)
 
         });
         $(".subsection-title").on("click", () => {
@@ -122,7 +147,7 @@
             });
         }
     </script>
-    <script async src="https://udzpel.com/pw/waWQiOjExODE0MTQsInNpZCI6MTM0NzgzMSwid2lkIjo1NzM1NzUsInNyYyI6Mn0=eyJ.js"></script>
+    
 </body>
 
 </html>
