@@ -29,14 +29,15 @@ $products = array(
     ),
     array(
         "id" => 3, 
-        "name" => "Smartphone E 2 Dourado 32GB 3G Wi-Fi Tela 5,0” Dual Chip", 
-        "affiliate_link" => "https://amzn.to/44SPoct", 
-        "image_url" => "img\\smartphones\\41KSR4y1FKL._AC_SX522_.jpg",
+        "name" => "POCO C65 8GB+256GB NFC MediaTek Helio G85 Octa Core", 
+        "affiliate_link" => "https://amzn.to/450H4XX", 
+        "image_url" => "img\\smartphones\\514hAJCEjRL._AC_SX569_.jpg",
         "descricao" =>
-            "&bull; Android 11 Go Edition
-            &bull; Memória 32GB + 1GB Ram
-            &bull; Processador Quad Core
-            &bull; Bateria de 2000mAh"
+            "&bull; Smooth 6.74\" 90Hz display
+            &bull; Massive 5000mAh (typ) battery
+            &bull; 10W Type-C PD fast charging
+            &bull; 50MP AI triple camera
+            &bull; Dual SIM+microSD"
     )
     // Adicione mais produtos conforme necessário
 );

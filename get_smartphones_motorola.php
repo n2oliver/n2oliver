@@ -8,10 +8,10 @@ $products = array(
         "image_url" => "img\\smartphones\\51vjQLRYFzL._AC_SX522_.jpg",
         "descricao" =>
             "&bull; Design ultramoderno <br>
-            &bull Câmera de 50 MP Ultra Pixel + OIS <br>
-            &bull Tela pOLED cinematográfica de 6,5\" <br>
-            &bull Som espacial e Dolby Atmos <br>
-            &bull Desempenho 5G de outro nível"
+            &bull; Câmera de 50 MP Ultra Pixel + OIS <br>
+            &bull; Tela pOLED cinematográfica de 6,5\" <br>
+            &bull; Som espacial e Dolby Atmos <br>
+            &bull; Desempenho 5G de outro nível"
     ),
     array(
         "id" => 2, 
