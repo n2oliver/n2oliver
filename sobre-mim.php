@@ -9,8 +9,8 @@
             
             <?php include("navbar.php"); ?>
 
-            <div class="row px-3 mt-2">
-                <div class="col-lg-5 bg-white py-4" style="background-image: url(img/YSnlRKp0.png); background-position: center; background-size: cover; min-height: 320px">
+            <div class="row px-3">
+                <div class="col-lg-5 bg-white py-4 mt-2" style="background-image: url(img/YSnlRKp0.png); background-position: center; background-size: cover; min-height: 320px">
                 </div>
                 <div class="col-lg-6 bg-white mt-2">
                     <h2>Sobre o Dev</h2>
@@ -18,7 +18,7 @@
                         e conhecedor de diversas técnicas de programação
                         e marketing digital,
                         Óliver Silva pode te ajudar.
-                        Com 29 anos e mais de 15 anos de 
+                        Com mais de 15 anos de 
                         experiência na área de desenvolvimento de software, 
                         ao longo de sua carreira, ele 
                         demonstrou habilidades excepcionais 
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="row px-3">    
-                <div class="col-lg-6 bg-white">
+                <div class="col-lg-6 bg-white mt-2">
                     <h2>Experiência e Habilidades</h2>
                     <p>Com uma vasta experiência no 
                         desenvolvimento de software, Óliver tem um profundo conhecimento em 
