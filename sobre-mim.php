@@ -10,26 +10,26 @@
             <?php include("navbar.php"); ?>
 
             <div class="row px-3 mt-2">
-                <div class="col-6 bg-white">
-                    <img src="img/web-design-technology-browsing-programming-concept.jpg" width="80%"/>
+                <div class="col-lg-5 bg-white py-4" style="background-image: url(img/YSnlRKp0.png); background-position: center; background-size: cover; min-height: 320px">
                 </div>
-                <div class="col-6 bg-white mt-0">
-                    <h2>Óliver Silva Castilho</h2>
-                    <p>Óliver Silva Castilho é um 
-                        desenvolvedor experiente com 29 
-                        anos e mais de 15 anos de 
-                        experiência na área de 
-                        desenvolvimento de software. Ao 
-                        longo de sua carreira, ele 
+                <div class="col-lg-6 bg-white mt-2">
+                    <h2>Sobre o Dev</h2>
+                    <p>Se você precisa de um desenvolvedor experiente, 
+                        e conhecedor de diversas técnicas de programação
+                        e marketing digital,
+                        Óliver Silva pode te ajudar.
+                        Com 29 anos e mais de 15 anos de 
+                        experiência na área de desenvolvimento de software, 
+                        ao longo de sua carreira, ele 
                         demonstrou habilidades excepcionais 
-                        em várias linguagens de programação 
+                        em diversas linguagens de programação 
                         e frameworks, contribuindo para 
-                        diversos projetos de alta 
-                        complexidade e impacto.</p>
+                        vários projetos de alta 
+                        complexidade e excelentes benefícios aos seus usuários.</p>
                 </div>
             </div>
             <div class="row px-3">    
-                <div class="col-6 bg-white">
+                <div class="col-lg-6 bg-white">
                     <h2>Experiência e Habilidades</h2>
                     <p>Com uma vasta experiência no 
                         desenvolvimento de software, Óliver tem um profundo conhecimento em 
@@ -41,8 +41,8 @@
                         manter atualizado com as últimas 
                         tendências do mercado.</p>
                 </div>
-                <div class="col-6 bg-white">
-                    <img src="img/calculadoras-pediatricas.jpg" width="80%" style="border: gray solid 2px"/>
+                <div class="col-lg-5 bg-white">
+                    <img src="img/web-design-technology-browsing-programming-concept.jpg" width="80%" style="border: gray solid 2px"/>
                     <p class="my-2" style="text-align: center">Conheça o meu portifólio 
                         clicando no link abaixo:<br/><a class="btn btn-primary" href="portfolio.php">Conhecer portifólio</a></p>
                 </div>

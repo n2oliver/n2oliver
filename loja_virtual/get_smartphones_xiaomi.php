@@ -5,7 +5,7 @@ $products = array(
         "id" => 1, 
         "name" => "Smartphone Xiaomi Redmi Note 13 Pro", 
         "affiliate_link" => "https://amzn.to/4dWzWAc", 
-        "image_url" => "loja_virtual\\img\\smartphones\\51pk5PzpzZL._AC_SX569_.jpg",
+        "image_url" => "img\\smartphones\\51pk5PzpzZL._AC_SX569_.jpg",
         "descricao" =>
             "&bull; SnapdragonPlataforma móvel 7s Gen 2, processo de fabricação 4nm, até 2,4 GHz<br>
             &bull; Tela CrystalRes AMOLED de 6,67\" 2712x1220 (resolução 1.5K), até 120Hz Taxa de atualização<br>
@@ -17,7 +17,7 @@ $products = array(
         "id" => 2, 
         "name" => "Smartphone Xiaomi Redmi 12 4G 256GB - 8GB Ram (Versao Global) (Polar Silver)", 
         "affiliate_link" => "https://amzn.to/3KcVzyu", 
-        "image_url" => "loja_virtual\\img\\smartphones\\41hUnMEimkL._AC_SX522_.jpg",
+        "image_url" => "img\\smartphones\\41hUnMEimkL._AC_SX522_.jpg",
         "descricao" =>
             "&bull; Connectivity technology : Wi-fi <br>
             &bull; Display.size : 6.79 inches <br>
@@ -31,7 +31,7 @@ $products = array(
         "id" => 3, 
         "name" => "POCO C65 8GB+256GB NFC MediaTek Helio G85 Octa Core", 
         "affiliate_link" => "https://amzn.to/450H4XX", 
-        "image_url" => "loja_virtual\\img\\smartphones\\514hAJCEjRL._AC_SX569_.jpg",
+        "image_url" => "img\\smartphones\\514hAJCEjRL._AC_SX569_.jpg",
         "descricao" =>
             "&bull; Smooth 6.74\" 90Hz display
             &bull; Massive 5000mAh (typ) battery

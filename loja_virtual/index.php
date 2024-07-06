@@ -7,8 +7,8 @@
     <meta name="google-adsense-account" content="ca-pub-8124594027670911">
     <title>Oliv3r Store</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/loja_virtual/img/logoOliverStore-live.jpg">
-    <link rel="stylesheet" href="loja_virtual/styles.css">
-    <link rel="stylesheet" href="loja_virtual/collapsible.css">
+    <link rel="stylesheet" href="/loja_virtual/styles.css">
+    <link rel="stylesheet" href="/loja_virtual/collapsible.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
         crossorigin="anonymous"></script>
@@ -101,7 +101,7 @@
 </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="loja_virtual/script.js"></script>
+    <script src="/loja_virtual/script.js"></script>
     <script>
 
         $(window).on("resize", () => {
