@@ -3,3 +3,6 @@
     <span style="font-size: 9px">Todos os direitos reservados - Oliv3r Store -  2024</span>
     <span style="font-size: 9px">CNPJ 54.983.228/0001-78</span>
 </footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

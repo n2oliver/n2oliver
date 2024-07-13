@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <?php include("cabecalho.php"); ?>
 <body>
+    <?php @include("video-background.php"); ?>
     <div class="row">
         <div class="col-lg-2 px-0"></div>
         <div class="col-sm-12 col-md-12 col-lg-8 px-0">
@@ -56,9 +57,6 @@
         </div>
         <div class="col-lg-2 px-0"></div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(()=>{
             $('.nav-item').removeClass('active');

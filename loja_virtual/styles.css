@@ -184,7 +184,7 @@ section>h2:hover {
         height: auto;
     }
     .product:not(.hightlight) {
-        width: 200px;
+        min-width: 80%;
         height: fit-content;
     }
 }
