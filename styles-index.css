@@ -102,12 +102,12 @@ footer a:hover {
 .title {
     position: relative;
     top: -54%;
-    left: 30%;
+    left: 33%;
     color: white;
     transform: translate-y(-100%);
     height: 0;
     margin: 0;
 }
 .title-image {
-    filter: brightness(.4);
+    filter: brightness(.7);
 }
