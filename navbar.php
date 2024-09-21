@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
+<nav class="navbar navbar-expand-lg navbar-light bg-white mx-0">
     <a class="navbar-brand" href="/" target="_new">Oliv3r Store</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -10,9 +10,6 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/portfolio.php">Portfólio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/loja_virtual" target="_new">Loja virtual</a>
             </li>
         </ul>
     </div>

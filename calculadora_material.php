@@ -229,9 +229,6 @@
     
     <script>
         $(document).ready(function() {
-            $('input').on('keyup', function(e) {
-
-            })
             $('.remover').unbind('click').on('click', function(e) {
                 if($('.measure-item').length !== 1) {
                     $(e.target).parents('.measure-item').remove();
@@ -255,7 +252,7 @@
                                     <input type="number" step="0.01" class="comprimento" name="comprimento[]" required>
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-6" style="flex: 0">
-                                    <img alt="Ícone da peça" src="/img/peca-generica.png" width="100%" style="margin-top: 10px">
+                                    <img alt="Ícone da peça" src="/img/peca-generica.png" style="margin-top: 10px">
                                 </div>
                             </div>
                         </div>
@@ -264,12 +261,6 @@
                         </div>
                     </div>
                 `);
-                
-                $('.remover').unbind('click').on('click', function(e) {
-                    if($('.measure-item').length !== 1) {
-                        $(e.target).parents('.measure-item').remove();
-                    }
-                });
             });
         });
     </script>

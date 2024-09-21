@@ -69,6 +69,8 @@ h1 {
 
 .product a:hover {
     background-color: #0056b3;
+    text-decoration: none;
+    color: white;
 }
 
 header {
@@ -164,6 +166,12 @@ section>h2:hover {
     justify-content: center;
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+footer a {
+    color: white;
+}
+footer a:hover {
+    text-decoration: none;
 }
 @media screen and (max-width: 768px) {
     .menu {
