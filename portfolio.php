@@ -29,40 +29,40 @@
                 <div class="carousel-inner mt-2">
                     <div class="carousel-item active" style="overflow-x: hidden">
                         <div class="row">
-                            <div class="px-0">
+                            <div class="px-0" style="overflow: clip">
                                 <img class="title-image" class="title-image" src="img/calculadoras-pediatricas.jpg" height="100%" />
                                 <h2 class="title">
-                                    <a href="https://whitebook.pebmed.com.br/voce-sabe-usar-o-whitebook/" role="button" class="btn btn-primary">Decisões Clínicas</a>
+                                    <a href="https://whitebook.pebmed.com.br/voce-sabe-usar-o-whitebook/" role="button" class="btn btn-custom">Decisões Clínicas</a>
                                 </h2>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item" style="overflow-x: hidden">
                         <div class="row">
-                            <div class="px-0">
+                            <div class="px-0" style="overflow: clip">
                             <img class="title-image" class="title-image" src="img/linhaamarela.jpg" height="100%" />
                                 <h2 class="title">
-                                    <a href="/linhaamarela" role="button" class="btn btn-primary">Linha Amarela</a>
+                                    <a href="/linhaamarela" role="button" class="btn btn-custom">Linha Amarela</a>
                                 </h2>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item" style="overflow-x: hidden">
                         <div class="row">
-                            <div class="px-0">
+                            <div class="px-0" style="overflow: clip">
                             <img class="title-image" class="title-image" src="img/loja_virtual.jpg" height="100%" />
                                 <h2 class="title">
-                                    <a href="/loja_virtual" role="button" class="btn btn-primary">Loja Virtual</a>
+                                    <a href="/loja_virtual" role="button" class="btn btn-custom">Loja Virtual</a>
                                 </h2>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item" style="overflow-x: hidden">
                         <div class="row">
-                            <div class="px-0">
+                            <div class="px-0" style="overflow: clip">
                                 <img class="title-image" class="title-image" src="img/calculadoramateriais.jpg" height="100%" />
                                 <h2 class="title">
-                                    <a href="/calculadora_material.php" role="button" class="btn btn-primary">Calculadora de Aplicação de Materiais</a>
+                                    <a href="/calculadora_material.php" role="button" class="btn btn-custom">Calculadora de Aplicação de Materiais</a>
                                 </h2>
                             </div>
                         </div>
