@@ -28,8 +28,8 @@
             <div id="carouselControls" class="carousel slide col-sm-12 col-md-6 col-lg-6 d-flex align-items-center bg-dark bg-opacity-75" data-bs-ride="carousel">
                 <div class="carousel-inner mt-2">
                     <div class="carousel-item active" style="overflow-x: hidden">
-                        <div class="row">
-                            <div class="px-0" style="overflow: clip">
+                        <div class="row" style="height: 100%">
+                            <div class="px-0" style="overflow: clip; height: 100vh;">
                                 <img class="title-image" class="title-image" src="img/calculadoras-pediatricas.jpg" height="100%" />
                                 <h2 class="title">
                                     <a href="https://whitebook.pebmed.com.br/voce-sabe-usar-o-whitebook/" role="button" class="btn btn-custom">Decisões Clínicas</a>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="carousel-item" style="overflow-x: hidden">
                         <div class="row">
-                            <div class="px-0" style="overflow: clip">
+                            <div class="px-0" style="overflow: clip; height: 100vh;">
                             <img class="title-image" class="title-image" src="img/linhaamarela.jpg" height="100%" />
                                 <h2 class="title">
                                     <a href="/linhaamarela" role="button" class="btn btn-custom">Linha Amarela</a>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="carousel-item" style="overflow-x: hidden">
                         <div class="row">
-                            <div class="px-0" style="overflow: clip">
+                            <div class="px-0" style="overflow: clip; height: 100vh;">
                             <img class="title-image" class="title-image" src="img/loja_virtual.jpg" height="100%" />
                                 <h2 class="title">
                                     <a href="/loja_virtual" role="button" class="btn btn-custom">Loja Virtual</a>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="carousel-item" style="overflow-x: hidden">
                         <div class="row">
-                            <div class="px-0" style="overflow: clip">
+                            <div class="px-0" style="overflow: clip; height: 100vh;">
                                 <img class="title-image" class="title-image" src="img/calculadoramateriais.jpg" height="100%" />
                                 <h2 class="title">
                                     <a href="/calculadora_material.php" role="button" class="btn btn-custom">Calculadora de Aplicação de Materiais</a>
@@ -71,7 +71,7 @@
             </div>
 
             <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="0">
-                <div class="bg-white mx-0" style="font-family: Helvetica; height: 100%">
+                <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                     <h1>Whitebook</h1>
                     <p>O Whitebook é um sistema abrangente de conteúdo e calculadoras clínicas desenvolvido para fornecer suporte essencial aos profissionais de saúde. Com informações médicas atualizadas e ferramentas de cálculo específicas, o Whitebook é a solução ideal para médicos, enfermeiros e outros profissionais da área da saúde que buscam eficiência e precisão em seus atendimentos.</p>
                     <p>Com o Whitebook, os profissionais de saúde têm acesso rápido a informações essenciais e ferramentas práticas, otimizando o tempo e aprimorando a qualidade do atendimento. É uma ferramenta indispensável para a prática médica moderna.</p>
@@ -79,7 +79,7 @@
             </div>
 
             <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="1" style="display: none">
-                <div class="bg-white mx-0" style="font-family: Helvetica; height: 100%">
+                <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                     <h1>Linha Amarela</h1>
                     <p>Linha Amarela é um jogo empolgante do tipo Arkanoid que combina elementos clássicos com uma dinâmica moderna. No jogo, os jogadores enfrentam invasores que aparecem na parte superior da tela, enquanto controlam um sistema de defesa na parte inferior.</p>
                     <p>Com gráficos vibrantes e controles intuitivos, Linha Amarela desafia os jogadores a protegerem sua base e derrotarem os invasores, oferecendo horas de diversão e estratégia. É a escolha perfeita para quem ama jogos retrô com um toque contemporâneo.</p>
@@ -87,14 +87,14 @@
             </div>
 
             <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="2" style="display: none">
-                <div class="bg-white mx-0" style="font-family: Helvetica; height: 100%">
+                <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                     <h1>Oliv3r Store - Loja Virtual</h1>
                     <p>Oliv3r Store é uma loja virtual que oferece uma variedade de produtos, incluindo perfumes, livros, cursos e tecnologia. Navegue pela nossa seleção e descubra produtos que combinam com o seu estilo e interesse.</p>
                 </div>
             </div>
 
             <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="3" style="display: none">
-                <div class="bg-white mx-0" style="font-family: Helvetica; height: 100%">
+                <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                     <h1>Calculadora de Materiais com Perda</h1>
                     <p>A Calculadora de Materiais com Perda é uma ferramenta inovadora desenvolvida para simplificar o processo de cálculo e otimização de materiais em diversos projetos de construção e design. Nossa calculadora permite que profissionais e entusiastas estimem com precisão a quantidade de materiais necessários, considerando perdas inevitáveis durante o processo de corte, montagem e instalação.</p>
                 </div>

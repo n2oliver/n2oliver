@@ -30,7 +30,7 @@ body {
 }
 
 .navbar a:hover {
-    background-color: #575757;
+    background-color: #009C30;
     color: white;
 }
 
@@ -126,21 +126,26 @@ footer a:hover {
 }
 
 /* Title Styles */
+/* Title Styles */
 .title {
-    position: relative;
-    top: -100%;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
+    position: absolute; /* Posicionamento absoluto para sobrepor a imagem */
+    top: 50%; /* Posiciona o título verticalmente no centro */
+    left: 50%; /* Posiciona o título horizontalmente no centro */
+    transform: translate(-50%, -50%); /* Centraliza o título perfeitamente */
+    width: 100%; /* Faz o título ocupar toda a largura do contêiner */
     color: white;
-    margin: 0;
+    text-align: center; /* Centraliza o texto no título */
     display: flex;
+    justify-content: center;
     align-items: center;
+    z-index: 1; /* Garante que o título fique sobre a imagem */
 }
 
 .title-image {
-    filter:brightness(.6);
-    transform: translateX(-15%);
+    width: 100%;
+    height: 100%; /* Faz a imagem preencher toda a altura da região */
+    object-fit: cover; /* Garante que a imagem cubra toda a área sem distorção */
+    filter: brightness(0.6);
 }
 /* Arrow Styles */
 .arrow-container {
@@ -165,6 +170,9 @@ footer a:hover {
 }
 
 /* Carousel Controls */
+.carousel {
+    height: 100vh;
+}
 .carousel-control-prev {
     background: #9c006c;
 }
@@ -177,10 +185,61 @@ footer a:hover {
     align-items: center;
 }
 .carousel-item {
-    height: 100%;
-    align-content: center;
+    position: relative; /* Para garantir que o título e a imagem sejam posicionados corretamente */
+    height: 100%; /* Garante que o item do carrossel ocupe toda a altura do contêiner */
 }
 
+.row {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background-color: #fff;
+    padding: 20px;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    word-wrap: anywhere;
+}
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.icon-box {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.icon-item {
+    text-align: center;
+}
+.icon-item i {
+    font-size: 48px;
+    color: #009C30;
+}
+.icon-item span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+.text-box {
+    height: 100vh;
+    overflow-y: scroll;
+}
 /* Media Queries */
 @media screen and (max-width: 768px) {
     .col-6 {
@@ -197,5 +256,8 @@ footer a:hover {
 
     .carousel-control-prev, .carousel-control-next {
         background: transparent;
+    }
+    .icon-box {
+        display: inline-block;
     }
 }
