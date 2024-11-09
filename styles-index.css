@@ -197,6 +197,13 @@ footer a:hover {
     justify-content: center;
     align-items: center;
 }
+.about-me::-webkit-scrollbar {
+    display: none;
+}
+.about-me {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 .container {
     background-color: #fff;
     padding: 20px;
@@ -206,6 +213,9 @@ footer a:hover {
     text-align: center;
     margin: 10px;
     word-wrap: anywhere;
+    flex-wrap: wrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 h1 {
     color: #333;
@@ -219,12 +229,27 @@ p {
 }
 .icon-box {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    background-color: transparent;
+    overflow-x: scroll;
+    height: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.icon-box::-webkit-scrollbar {
+    display: none;
 }
 .icon-item {
+    float: left;
     text-align: center;
+    margin: 4px;
+    background-color: white;
+    padding:14px;
+    width: 180px;
+    height: 160px;
+    border: solid 2px #ccc
 }
 .icon-item i {
     font-size: 48px;
@@ -256,8 +281,5 @@ p {
 
     .carousel-control-prev, .carousel-control-next {
         background: transparent;
-    }
-    .icon-box {
-        display: inline-block;
     }
 }
