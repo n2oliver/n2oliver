@@ -11,15 +11,28 @@
             <div class="row px-3">
                 <div class="bg-white py-4 mt-2 d-flex" style="background-image: url(img/YSnlRKp0.png); background-position: center; background-size: cover; min-height: 320px; height: auto; justify-content: center; flex-direction: column">
                 </div>
+                
                 <div class="mt-2 d-flex about-me" style="height: auto; flex-direction: row; overflow-x: scroll">  
-                    <div class="container d-flex flex-column">
+                    <div class="container d-flex mb-0" style="border-bottom-left-radius: 0px">
                         <h1>Sobre o Dev</h1>
                         <p>Se você precisa de um desenvolvedor experiente, e conhecedor de diversas técnicas de programação e marketing digital, Óliver Silva pode te ajudar. Com mais de 15 anos de experiência na área de desenvolvimento de software, ele demonstrou habilidades excepcionais em diversas linguagens de programação e frameworks, contribuindo para vários projetos de alta complexidade e excelentes benefícios aos seus usuários.</p>
-
+                        <script type="text/javascript" src="https://cdn.diclotrans.com/sdk/v1/45303/996bcaef8b45091e9a620d396a8522e6c1eea3a0/lib.js"></script>
                     </div> 
-                    <div class="container d-flex flex-column">
+                    <div class="container d-flex flex-column mb-0" style="border-bottom-right-radius: 0px">
                         <h1>Experiência e Habilidades</h1>
                         <p>Com uma vasta experiência no desenvolvimento de software, Óliver tem um profundo conhecimento em design de sistemas, desenvolvimento front-end e back-end, e é proficiente em várias tecnologias modernas. Sua dedicação e paixão pela tecnologia o impulsionam a se manter atualizado com as últimas tendências do mercado.</p>
+
+                    </div>
+                </div>
+                <div class="d-flex about-me px-0 d-none" style="
+                        width: 100%;
+                        width: -moz-available;          /* For Mozzila */
+                        width: -webkit-fill-available;  /* For Chrome */
+                        width: stretch;
+                        justify-content: center">  
+                    <div class="container d-flex flex-column px-0 mx-0"  style="border-top-left-radius: 0px; border-top-right-radius: 0px">
+                        <h1>Jogos - Em desenvolvimento</h1>
+                        <p>Lugar para compra de jogos.</p>
 
                     </div>
                 </div>

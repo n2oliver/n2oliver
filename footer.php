@@ -1,4 +1,4 @@
-<footer class="mt-2" style="text-align: center; color: white; padding: 24px; background-image: linear-gradient(transparent,#000000);">
+<footer class="mt-2" style="display: flex; justify-content: center; flex-direction: column; text-align: center; color: white; padding: 24px; background-image: linear-gradient(transparent,#000000);">
     <a href="/"><span style="font-family: Montserrat">Oliv3r Store</span></a>
     <span style="font-size: 9px">Todos os direitos reservados - Oliv3r Store -  2024</span>
     <span style="font-size: 9px">CNPJ 54.983.228/0001-78</span>
@@ -6,3 +6,5 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.diclotrans.com/sdk/v1/45413/75bf32f7e1ae1caca2bda58a9d373b1f0d3807c3/lib.js"></script>
+<script type="text/javascript" src="https://cdn.diclotrans.com/sdk/v1/45416/243008a16ef703b192575f10b5f84cf2e852b397/lib.js"></script>
