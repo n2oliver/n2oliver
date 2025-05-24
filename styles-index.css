@@ -20,6 +20,8 @@ body {
     z-index: 9999;
     padding: 15px 30px;
     backdrop-filter: blur(10px);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
 }
 
 .navbar a {
@@ -249,7 +251,19 @@ p {
     padding:14px;
     width: 180px;
     height: 160px;
-    border: solid 2px #ccc
+    border: solid 2px #ccc;
+    transition: 5s;
+}
+.icon-item:hover {
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: 100vw;
+    transition: 5s;
+    transform: translateY(-1vw);
+}
+.icon-item:hover span {
+    padding: 14px;
 }
 .icon-item i {
     font-size: 48px;
@@ -276,7 +290,7 @@ p {
     }
 
     .arrow {
-        opacity: .25;
+        opacity: .80;
     }
 
     .carousel-control-prev, .carousel-control-next {
