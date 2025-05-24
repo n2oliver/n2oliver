@@ -252,18 +252,29 @@ p {
     width: 180px;
     height: 160px;
     border: solid 2px #ccc;
-    transition: 5s;
+    transition: 1s;
 }
-.icon-item:hover {
+.icon-item:hover, .icon-item.hover {
     display: flex;
     align-items: center;
     height: auto;
     width: 100vw;
-    transition: 5s;
+    transition: 1s;
     transform: translateY(-1vw);
+    flex-direction: column;
 }
-.icon-item:hover span {
+.icon-item:hover i, .icon-item.hover i {
+    width: 5em;
+}
+.icon-item:hover span, .icon-item.hover span {
     padding: 14px;
+    text-align: center;
+}
+.icon-item .tooltip {
+    display: none;
+}
+.icon-item.hover .tooltip, .icon-item:hover .tooltip {
+    display: contents;
 }
 .icon-item i {
     font-size: 48px;
@@ -295,5 +306,8 @@ p {
 
     .carousel-control-prev, .carousel-control-next {
         background: transparent;
+    }
+    .icon-item:hover i, .icon-item.hover i {
+        width: 50vw;
     }
 }

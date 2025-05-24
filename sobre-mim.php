@@ -47,43 +47,53 @@
                         <div class="icon-item" title="Especialista em desenvolvimento web com foco em performance, usabilidade e código limpo.">
                             <i class="fas fa-user-tie"></i>
                             <span>Desenvolvedor Experiente</span>
+                            <div class="tooltip">Especialista em desenvolvimento web com foco em performance, usabilidade e código limpo.</div>
                         </div>
                         <div class="icon-item" title="Construção de sistemas, sites e ferramentas com foco em performance e usabilidade.">
                             <i class="fas fa-laptop-code"></i>
                             <span>Programação</span>
+                            <div class="tooltip">Construção de sistemas, sites e ferramentas com foco em performance e usabilidade.</div>
                         </div>
                         <div class="icon-item" title="Criatividade, dados e alcance: tudo para sua marca crescer no digital.">
                             <i class="fas fa-bullhorn"></i>
                             <span>Marketing Digital</span>
+                            <div class="tooltip">Criatividade, dados e alcance: tudo para sua marca crescer no digital.</div>
                         </div>
                         <div class="icon-item" title="Experiência sólida em desenvolvimento web, design e tecnologia.">
                             <i class="fas fa-calendar-alt"></i>
                             <span>Mais de 15 Anos de Experiência</span>
+                            <div class="tooltip">Experiência sólida em desenvolvimento web, design e tecnologia.</div>
                         </div>
                         <div class="icon-item" title="Domínio de tecnologias como HTML, CSS, JavaScript, PHP, React, Laravel e mais.">
                             <i class="fas fa-code-branch"></i>
                             <span>Linguagens & Frameworks</span>
+                            <div class="tooltip">Domínio de tecnologias como HTML, CSS, JavaScript, PHP, React, Laravel e mais.</div>
                         </div>
                         
                         <div class="icon-item" title="Do front ao back, escrevo com as ferramentas certas para cada desafio.">
                             <i class="fas fa-cogs"></i>
                             <span>Design de Sistemas</span>
+                            <div class="tooltip">Do front ao back, escrevo com as ferramentas certas para cada desafio.</div>
                         </div>
                         <div class="icon-item" title="Interfaces modernas, responsivas e centradas na experiência do usuário.">
                             <i class="fas fa-desktop"></i>
                             <span>Desenvolvimento Front-end</span>
+                            <div class="tooltip">Interfaces modernas, responsivas e centradas na experiência do usuário.</div>
                         </div>
                         <div class="icon-item" title="APIs robustas, integrações eficientes e bancos de dados bem estruturados.">
                             <i class="fas fa-server"></i>
                             <span>Desenvolvimento Back-end</span>
+                            <div class="tooltip">APIs robustas, integrações eficientes e bancos de dados bem estruturados.</div>
                         </div>
                         <div class="icon-item" title="Trabalho com ferramentas atuais para soluções rápidas, seguras e escaláveis.">
                             <i class="fas fa-laptop-code"></i>
                             <span>Tecnologias Modernas</span>
+                            <div class="tooltip">Trabalho com ferramentas atuais para soluções rápidas, seguras e escaláveis.</div>
                         </div>
                         <div class="icon-item" title="Antenado nas tendências que movem o design, o código e a experiência digital.">
                             <i class="fas fa-chart-line"></i>
                             <span>Últimas Tendências</span>
+                            <div class="tooltip">Antenado nas tendências que movem o design, o código e a experiência digital.</div>
                         </div>
                     </div>
                 </div>
@@ -103,7 +113,16 @@
         $(document).ready(()=>{
             $('.nav-item').removeClass('active');
             $('.nav-item:contains("Sobre mim")').addClass("active");
+            $('.icon-item').on('touchstart', (event) => atualizarIconItens(event.target));
+            $('.icon-item').on('click', (event) => atualizarIconItens(event.target));
+            $('.icon-item').on('mouseover', (event) => atualizarIconItens(event.target));
         });
+        function atualizarIconItens(target) {
+            for(let iconItem of target.closest(".icon-box").querySelectorAll(".icon-item")) {
+                iconItem.classList.remove("hover");
+            }
+            target.closest(".icon-item").classList.add("hover");
+        }
     </script>
 </body>
 </html>
