@@ -1,4 +1,5 @@
 <footer class="mt-2" style="display: flex; justify-content: center; flex-direction: column; text-align: center; color: white; padding: 24px; background-image: linear-gradient(transparent,#000000);">
+    <a href="https://hilltopads.com/pt?ref=291186"><img src="//static.hilltopads.com/other/banners/pub/huge_income/728x90.gif?v=1748010101"></a>
     <a href="/"><span style="font-family: Montserrat">Oliv3r Dev</span></a>
     <span style="font-size: 9px">Todos os direitos reservados - Oliv3r Dev -  2025</span>
     <span style="font-size: 9px">CNPJ 60.407.027/0001-25</span>
