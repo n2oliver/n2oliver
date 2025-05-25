@@ -31,9 +31,9 @@
                     <div class="carousel-item active" style="overflow-x: hidden">
                         <div class="row" style="height: 100%">
                             <div class="px-0" style="overflow: clip; height: 100vh;">
-                                <img class="title-image" class="title-image" src="" height="100%" />
+                                <img class="title-image" class="title-image" src="img/combo-memo.png" height="100%" />
                                 <h2 class="title">
-                                    <a href="/jogos/combo-memo" role="button" class="btn btn-custom">Combo-Memo</a>
+                                    <a href="/jogos/combo-memo/" role="button" class="btn btn-custom">Combo-Memo</a>
                                 </h2>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                 </div>
             </div>
 
-            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="0">
+            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="1" style="display: none">
                 <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                     <h1>Whitebook</h1>
                     <p>O Whitebook é um sistema abrangente de conteúdo e calculadoras clínicas desenvolvido para fornecer suporte essencial aos profissionais de saúde. Com informações médicas atualizadas e ferramentas de cálculo específicas, o Whitebook é a solução ideal para médicos, enfermeiros e outros profissionais da área da saúde que buscam eficiência e precisão em seus atendimentos.</p>
@@ -96,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="1" style="display: none">
+            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="2" style="display: none">
                 <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                     <h1>Linha Amarela</h1>
                     <p>Linha Amarela é um jogo empolgante do tipo Arkanoid que combina elementos clássicos com uma dinâmica moderna. No jogo, os jogadores enfrentam invasores que aparecem na parte superior da tela, enquanto controlam um sistema de defesa na parte inferior.</p>
@@ -104,14 +104,14 @@
                 </div>
             </div>
 
-            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="2" style="display: none">
+            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="3" style="display: none">
                 <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                     <h1>Oliv3r Store - Loja Virtual</h1>
                     <p>Oliv3r Store é uma loja virtual que oferece uma variedade de produtos, incluindo perfumes, livros, cursos e tecnologia. Navegue pela nossa seleção e descubra produtos que combinam com o seu estilo e interesse.</p>
                 </div>
             </div>
 
-            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="3" style="display: none">
+            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="4" style="display: none">
                 <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                     <h1>Calculadora de Materiais com Perda</h1>
                     <p>A Calculadora de Materiais com Perda é uma ferramenta inovadora desenvolvida para simplificar o processo de cálculo e otimização de materiais em diversos projetos de construção e design. Nossa calculadora permite que profissionais e entusiastas estimem com precisão a quantidade de materiais necessários, considerando perdas inevitáveis durante o processo de corte, montagem e instalação.</p>
