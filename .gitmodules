@@ -1,0 +1,3 @@
+[submodule "jogos/combo-memo"]
+	path = jogos/combo-memo
+	url = https://github.com/n2oliver/combo-memo

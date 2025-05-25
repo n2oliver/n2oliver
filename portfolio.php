@@ -26,8 +26,19 @@
         <div class="col-md-8 col-lg-8">
             <div class="row">
             <div id="carouselControls" class="carousel slide col-sm-12 col-md-6 col-lg-6 d-flex align-items-center bg-dark bg-opacity-75" data-bs-ride="carousel">
+                
                 <div class="carousel-inner mt-2">
                     <div class="carousel-item active" style="overflow-x: hidden">
+                        <div class="row" style="height: 100%">
+                            <div class="px-0" style="overflow: clip; height: 100vh;">
+                                <img class="title-image" class="title-image" src="" height="100%" />
+                                <h2 class="title">
+                                    <a href="/jogos/combo-memo" role="button" class="btn btn-custom">Combo-Memo</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="overflow-x: hidden">
                         <div class="row" style="height: 100%">
                             <div class="px-0" style="overflow: clip; height: 100vh;">
                                 <img class="title-image" class="title-image" src="img/calculadoras-pediatricas.jpg" height="100%" />
@@ -67,6 +78,13 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="0">
+                <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
+                    <h1>Combo-Memo</h1>
+                    <p>Jogo da memória totalmente open-source e gratuito online</p>
                 </div>
             </div>
 
