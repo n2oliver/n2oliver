@@ -116,7 +116,6 @@
     <div class="row pt-3">
         
         <div class="col-md-8 col-lg-8 px-0" style="display: flex; justify-content: center;">
-            <script type="text/javascript" src="https://cdn.diclotrans.com/sdk/v1/45303/996bcaef8b45091e9a620d396a8522e6c1eea3a0/lib.js"></script>
         </div>
     </div>
     <div class="row">

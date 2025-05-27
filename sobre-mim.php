@@ -18,7 +18,6 @@
                     <div class="bg-white mt-2 d-flex m-auto mb-4" style="background-image: url(img/YSnlRKp0.png); background-position: center; background-size: contain; width: 128px; height: 128px; justify-content: center; flex-direction: column">
                     </div>
                         <p>Se você precisa de um desenvolvedor experiente, e conhecedor de diversas técnicas de programação e marketing digital, Óliver Silva pode te ajudar. Com mais de 15 anos de experiência na área de desenvolvimento de software, ele demonstrou habilidades excepcionais em diversas linguagens de programação e frameworks, contribuindo para vários projetos de alta complexidade e excelentes benefícios aos seus usuários.</p>
-                        <script type="text/javascript" src="https://cdn.diclotrans.com/sdk/v1/45303/996bcaef8b45091e9a620d396a8522e6c1eea3a0/lib.js"></script>
                     </div> 
 
                 </div>
