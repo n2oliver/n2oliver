@@ -51,16 +51,6 @@
                     <div class="carousel-item" style="overflow-x: hidden">
                         <div class="row">
                             <div class="px-0" style="overflow: clip; height: 100vh;">
-                            <img class="title-image" class="title-image" src="img/linhaamarela.jpg" height="100%" />
-                                <h2 class="title">
-                                    <a href="/linhaamarela" role="button" class="btn btn-custom">Linha Amarela</a>
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="overflow-x: hidden">
-                        <div class="row">
-                            <div class="px-0" style="overflow: clip; height: 100vh;">
                             <img class="title-image" class="title-image" src="img/loja_virtual.jpg" height="100%" />
                                 <h2 class="title">
                                     <a href="/loja_virtual" role="button" class="btn btn-custom">Loja Virtual</a>
@@ -98,20 +88,12 @@
 
             <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="2" style="display: none">
                 <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
-                    <h1>Linha Amarela</h1>
-                    <p>Linha Amarela é um jogo empolgante do tipo Arkanoid que combina elementos clássicos com uma dinâmica moderna. No jogo, os jogadores enfrentam invasores que aparecem na parte superior da tela, enquanto controlam um sistema de defesa na parte inferior.</p>
-                    <p>Com gráficos vibrantes e controles intuitivos, Linha Amarela desafia os jogadores a protegerem sua base e derrotarem os invasores, oferecendo horas de diversão e estratégia. É a escolha perfeita para quem ama jogos retrô com um toque contemporâneo.</p>
-                </div>
-            </div>
-
-            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="3" style="display: none">
-                <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                     <h1>Oliv3r Store - Loja Virtual</h1>
                     <p>Oliv3r Store é uma loja virtual que oferece uma variedade de produtos, incluindo perfumes, livros, cursos e tecnologia. Navegue pela nossa seleção e descubra produtos que combinam com o seu estilo e interesse.</p>
                 </div>
             </div>
 
-            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="4" style="display: none">
+            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="3" style="display: none">
                 <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                     <h1>Calculadora de Materiais com Perda</h1>
                     <p>A Calculadora de Materiais com Perda é uma ferramenta inovadora desenvolvida para simplificar o processo de cálculo e otimização de materiais em diversos projetos de construção e design. Nossa calculadora permite que profissionais e entusiastas estimem com precisão a quantidade de materiais necessários, considerando perdas inevitáveis durante o processo de corte, montagem e instalação.</p>
