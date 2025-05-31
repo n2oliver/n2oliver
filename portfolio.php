@@ -25,49 +25,55 @@
         </button>
         <div class="col-md-8 col-lg-8">
             <div class="row">
-            <div id="carouselControls" class="carousel slide col-sm-12 col-md-6 col-lg-6 d-flex align-items-center bg-dark bg-opacity-75" data-bs-ride="carousel">
+            <div id="carouselControls" class="carousel slide carousel-fade col-sm-12 col-md-6 col-lg-6 d-flex align-items-center bg-dark bg-opacity-75" data-bs-ride="carousel">
                 
                 <div class="carousel-inner mt-2">
                     <div class="carousel-item active" style="overflow-x: hidden">
                         <div class="row" style="height: 100%">
-                            <div class="px-0" style="overflow: clip; height: 100vh;">
-                                <img class="title-image" class="title-image" src="img/combo-memo.png" height="100%" />
+                            <div class="px-0 carousel-item-content">
+                                <img class="title-image img-fluid" class="title-image" src="img/combo-memo.png" />
                                 <h2 class="title">
                                     <a href="/jogos/combo-memo/" role="button" class="btn btn-custom">Combo-Memo</a>
                                 </h2>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" style="overflow-x: hidden">
+                    <div class="carousel-item carousel-item-content" style="overflow-x: hidden">
                         <div class="row" style="height: 100%">
                             <div class="px-0" style="overflow: clip; height: 100vh;">
-                                <img class="title-image" class="title-image" src="img/calculadoras-pediatricas.jpg" height="100%" />
+                                <img class="title-image img-fluid" class="title-image" src="img/calculadoras-pediatricas.jpg" />
                                 <h2 class="title">
                                     <a href="https://whitebook.pebmed.com.br/voce-sabe-usar-o-whitebook/" role="button" class="btn btn-custom">Decisões Clínicas</a>
                                 </h2>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" style="overflow-x: hidden">
+                    <div class="carousel-item carousel-item-content" style="overflow-x: hidden">
                         <div class="row">
                             <div class="px-0" style="overflow: clip; height: 100vh;">
-                            <img class="title-image" class="title-image" src="img/loja_virtual.jpg" height="100%" />
+                            <img class="title-image img-fluid" class="title-image" src="img/loja_virtual.jpg"/>
                                 <h2 class="title">
                                     <a href="/loja_virtual" role="button" class="btn btn-custom">Loja Virtual</a>
                                 </h2>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" style="overflow-x: hidden">
+                    <div class="carousel-item carousel-item-content" style="overflow-x: hidden">
                         <div class="row">
                             <div class="px-0" style="overflow: clip; height: 100vh;">
-                                <img class="title-image" class="title-image" src="img/calculadoramateriais.jpg" height="100%" />
+                                <img class="title-image img-fluid" class="title-image" src="img/calculadoramateriais.jpg"/>
                                 <h2 class="title">
                                     <a href="/calculadora_material.php" role="button" class="btn btn-custom">Calculadora de Aplicação de Materiais</a>
                                 </h2>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
             </div>
 
