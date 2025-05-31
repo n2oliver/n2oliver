@@ -12,12 +12,11 @@
                 
             <div class="mt-2 d-flex about-me" style="height: auto; flex-direction: row; overflow-x: scroll">  
                 <div class="container d-flex mb-0" style="border-bottom-left-radius: 0px">
-                    <h1 class="w-100 text-center">Sobre o Dev</h1>
-                    <div class="row px-3">
-
-                    <div class="bg-white mt-2 d-flex m-auto mb-4" style="background-image: url(img/YSnlRKp0.png); background-position: center; background-size: contain; width: 128px; height: 128px; justify-content: center; flex-direction: column">
-                    </div>
-                        <p>Se você precisa de um desenvolvedor experiente, e conhecedor de diversas técnicas de programação e marketing digital, Óliver Silva pode te ajudar. Com mais de 15 anos de experiência na área de desenvolvimento de software, ele demonstrou habilidades excepcionais em diversas linguagens de programação e frameworks, contribuindo para vários projetos de alta complexidade e excelentes benefícios aos seus usuários.</p>
+                    <div>
+                        <h1 class="w-100">Sobre o Dev</h1>
+                        <div class="bg-white my-1 me-4" style="background-image: url(img/YSnlRKp0.png); background-position: center; background-size: contain; width: 128px; height: 128px; float: left">
+                        </div>
+                        <p class="text-start">Se você precisa de um desenvolvedor experiente, e conhecedor de diversas técnicas de programação e marketing digital, Óliver Silva pode te ajudar. Com mais de 15 anos de experiência na área de desenvolvimento de software, ele demonstrou habilidades excepcionais em diversas linguagens de programação e frameworks, contribuindo para vários projetos de alta complexidade e excelentes benefícios aos seus usuários.</p>
                     </div> 
 
                 </div>

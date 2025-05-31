@@ -25,88 +25,69 @@
         </button>
         <div class="col-md-8 col-lg-8">
             <div class="row">
-            <div id="carouselControls" class="carousel slide carousel-fade col-sm-12 col-md-6 col-lg-6 d-flex align-items-center bg-dark bg-opacity-75" data-bs-ride="carousel">
-                
-                <div class="carousel-inner mt-2">
-                    <div class="carousel-item active" style="overflow-x: hidden">
-                        <div class="row" style="height: 100%">
-                            <div class="px-0 carousel-item-content">
-                                <img class="title-image img-fluid" class="title-image" src="img/combo-memo.png" />
-                                <h2 class="title">
-                                    <a href="/jogos/combo-memo/" role="button" class="btn btn-custom">Combo-Memo</a>
-                                </h2>
+                <div id="carouselControls" class="carousel slide carousel-fade col-sm-12 col-md-6 col-lg-6 d-flex align-items-center bg-dark bg-opacity-75" data-bs-ride="carousel">
+                    
+                    <div class="carousel-inner mt-2">
+                        <div class="carousel-item active" style="overflow-x: hidden">
+                            <div class="row" style="height: 100%">
+                                <div class="px-0 carousel-item-content">
+                                    <img class="title-image img-fluid" class="title-image" src="img/combo-memo.png" />
+                                    <h2 class="title">
+                                        <a href="/jogos/combo-memo/" role="button" class="btn btn-custom">Combo-Memo</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row" style="height: 100%">
+                                <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
+                                    <img class="title-image img-fluid" class="title-image" src="img/calculadoras-pediatricas.jpg" />
+                                    <h2 class="title">
+                                        <a href="https://whitebook.pebmed.com.br/voce-sabe-usar-o-whitebook/" role="button" class="btn btn-custom">Decisões Clínicas</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
+                                <img class="title-image img-fluid" class="title-image" src="img/loja_virtual.jpg"/>
+                                    <h2 class="title">
+                                        <a href="/loja_virtual" role="button" class="btn btn-custom">Loja Virtual</a>
+                                    </h2>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item carousel-item-content" style="overflow-x: hidden">
-                        <div class="row" style="height: 100%">
-                            <div class="px-0" style="overflow: clip; height: 100vh;">
-                                <img class="title-image img-fluid" class="title-image" src="img/calculadoras-pediatricas.jpg" />
-                                <h2 class="title">
-                                    <a href="https://whitebook.pebmed.com.br/voce-sabe-usar-o-whitebook/" role="button" class="btn btn-custom">Decisões Clínicas</a>
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item-content" style="overflow-x: hidden">
-                        <div class="row">
-                            <div class="px-0" style="overflow: clip; height: 100vh;">
-                            <img class="title-image img-fluid" class="title-image" src="img/loja_virtual.jpg"/>
-                                <h2 class="title">
-                                    <a href="/loja_virtual" role="button" class="btn btn-custom">Loja Virtual</a>
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item-content" style="overflow-x: hidden">
-                        <div class="row">
-                            <div class="px-0" style="overflow: clip; height: 100vh;">
-                                <img class="title-image img-fluid" class="title-image" src="img/calculadoramateriais.jpg"/>
-                                <h2 class="title">
-                                    <a href="/calculadora_material.php" role="button" class="btn btn-custom">Calculadora de Aplicação de Materiais</a>
-                                </h2>
-                            </div>
-                        </div>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="3" aria-label="Slide 4"></button>
                     </div>
                 </div>
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+                <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="0">
+                    <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
+                        <h1>Combo-Memo</h1>
+                        <p>Jogo da memória totalmente open-source e gratuito online</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="0">
-                <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
-                    <h1>Combo-Memo</h1>
-                    <p>Jogo da memória totalmente open-source e gratuito online</p>
+                <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="1" style="display: none">
+                    <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
+                        <h1>Whitebook</h1>
+                        <p>O Whitebook é um sistema abrangente de conteúdo e calculadoras clínicas desenvolvido para fornecer suporte essencial aos profissionais de saúde. Com informações médicas atualizadas e ferramentas de cálculo específicas, o Whitebook é a solução ideal para médicos, enfermeiros e outros profissionais da área da saúde que buscam eficiência e precisão em seus atendimentos.</p>
+                        <p>Com o Whitebook, os profissionais de saúde têm acesso rápido a informações essenciais e ferramentas práticas, otimizando o tempo e aprimorando a qualidade do atendimento. É uma ferramenta indispensável para a prática médica moderna.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="1" style="display: none">
-                <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
-                    <h1>Whitebook</h1>
-                    <p>O Whitebook é um sistema abrangente de conteúdo e calculadoras clínicas desenvolvido para fornecer suporte essencial aos profissionais de saúde. Com informações médicas atualizadas e ferramentas de cálculo específicas, o Whitebook é a solução ideal para médicos, enfermeiros e outros profissionais da área da saúde que buscam eficiência e precisão em seus atendimentos.</p>
-                    <p>Com o Whitebook, os profissionais de saúde têm acesso rápido a informações essenciais e ferramentas práticas, otimizando o tempo e aprimorando a qualidade do atendimento. É uma ferramenta indispensável para a prática médica moderna.</p>
+                <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="2" style="display: none">
+                    <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
+                        <h1>Oliv3r Store - Loja Virtual</h1>
+                        <p>Oliv3r Store é uma loja virtual que oferece uma variedade de produtos, incluindo perfumes, livros, cursos e tecnologia. Navegue pela nossa seleção e descubra produtos que combinam com o seu estilo e interesse.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="2" style="display: none">
-                <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
-                    <h1>Oliv3r Store - Loja Virtual</h1>
-                    <p>Oliv3r Store é uma loja virtual que oferece uma variedade de produtos, incluindo perfumes, livros, cursos e tecnologia. Navegue pela nossa seleção e descubra produtos que combinam com o seu estilo e interesse.</p>
-                </div>
-            </div>
-
-            <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="3" style="display: none">
-                <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
-                    <h1>Calculadora de Materiais com Perda</h1>
-                    <p>A Calculadora de Materiais com Perda é uma ferramenta inovadora desenvolvida para simplificar o processo de cálculo e otimização de materiais em diversos projetos de construção e design. Nossa calculadora permite que profissionais e entusiastas estimem com precisão a quantidade de materiais necessários, considerando perdas inevitáveis durante o processo de corte, montagem e instalação.</p>
-                </div>
-            </div>
-
-
             </div>
         </div>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">

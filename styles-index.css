@@ -145,8 +145,7 @@ footer a:hover {
     text-align: center; /* Centraliza o texto no título */
     display: flex;
     align-self: center;
-    word-wrap: nowrap;
-    white-space: nowrap;
+    word-wrap: break-word;
     justify-content: center;
     align-items: center;
     z-index: 1; /* Garante que o título fique sobre a imagem */
