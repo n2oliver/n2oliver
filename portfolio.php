@@ -58,6 +58,16 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="carousel-item carousel-item-content" style="overflow-x: hidden">
+                            <div class="row">
+                                <div class="px-0" style="overflow: clip; height: 100vh;">
+                                    <img class="title-image img-fluid" class="title-image" src="img/calculadoramateriais.jpg"/>
+                                    <h2 class="title">
+                                        <a href="/calculadora_material.php" role="button" class="btn btn-custom">Calculadora de Aplicação de Materiais</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -86,6 +96,13 @@
                     <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                         <h1>Oliv3r Store - Loja Virtual</h1>
                         <p>Oliv3r Store é uma loja virtual que oferece uma variedade de produtos, incluindo perfumes, livros, cursos e tecnologia. Navegue pela nossa seleção e descubra produtos que combinam com o seu estilo e interesse.</p>
+                    </div>
+                </div>
+
+                <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="3" style="display: none">
+                    <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
+                        <h1>Cobertura de Superfícies com Perdas</h1>
+                        <p>A Calculadora Cobertura de Superfícies com Perdas é uma ferramenta inovadora desenvolvida para simplificar o processo de cálculo e otimização de materiais em diversos projetos de construção e design. Nossa calculadora permite que profissionais e entusiastas estimem com precisão a quantidade de materiais necessários, considerando perdas inevitáveis durante o processo de corte, montagem e instalação.</p>
                     </div>
                 </div>
             </div>

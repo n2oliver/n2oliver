@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    flex-direction: column;
+    font-size: .8rem;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 420px;
+    width: fit-content;
+    text-align: center;
+    z-index: 1;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    position: relative;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.tooltip-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #0073e6;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+.tooltip-text {
+    display: none;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    left: 20px;
+    top: -5px;
+    width: 200px;
+    z-index: 1;
+}
+
+.tooltip-icon:hover+.tooltip-text,
+.tooltip-icon:focus+.tooltip-text {
+    display: block;
+}
+
+input[type="number"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"],
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #218838;
+}
+
+#measuresContainer {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 250px;
+    border: solid lightgray 1px;
+    padding: 14px;
+    width: fit-content;
+}
+#addMeasure {
+    color: white;
+    background-color: green;
+}
+#addMeasure, input[type="submit"] {
+    border-radius: 10px;
+    width: auto;
+    padding: 14px;
+    height: 45px;
+    line-height: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 14px;
+}
+
+.measure-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    min-width: 340px;
+    margin-right: 20px;
+    border-bottom: solid 1px #ccc;
+}
+
+.measure-item img {
+    width: 60px;
+    margin-top: 10px;
+}
+
+.measure-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.result {
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.navbar {
+    z-index: 2;
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+}
