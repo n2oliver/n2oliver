@@ -1,3 +1,6 @@
 [submodule "jogos/combo-memo"]
 	path = jogos/combo-memo
 	url = https://github.com/n2oliver/combo-memo
+[submodule "jogos/linhaamarela"]
+	path = jogos/linhaamarela
+	url = https://github.com/n2oliver/linhaamarela
