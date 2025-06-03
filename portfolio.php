@@ -29,6 +29,13 @@
                     
                     <div class="carousel-inner mt-2">
                         <div class="carousel-item active" style="overflow-x: hidden">
+                            <div class="row" style="height: 100%; align-content: center;">
+                                <div class="px-0 carousel-item-content" style="height: auto">
+                                    <img style="width: 100%; height: 53%;" src="img/linhaamarela.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="overflow-x: hidden">
                             <div class="row" style="height: 100%">
                                 <div class="px-0 carousel-item-content">
                                     <img class="title-image img-fluid" class="title-image" src="img/combo-memo.png" />
@@ -74,17 +81,32 @@
                         <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="4" aria-label="Slide 5"></button>
                     </div>
                 </div>
 
                 <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="0">
+                    <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
+                        <h1>Linha Amarela</h1>
+                        <p>🚨 Os monstros estão voltando. Você está pronto? 👾
+                            No dia 27 de junho de 2025, o jogo Linha Amarela retorna com novos desafios, visuais impactantes e uma jogabilidade viciante no estilo Arkanoid.
+                            🔥 Prepare-se para enfrentar ondas de criaturas brilhantes em um cenário distópico.
+                            🎮 Mostre sua habilidade, quebre as defesas e salve o que restou!
+                            💥 Totalmente gratuito e direto no navegador.
+                            🌐 Compatível com desktop e mobile.
+                            📅 Data de lançamento: 27/06/2025
+                            🔗 Em breve: link para jogar!</p>
+                    </div>
+                </div>
+
+                <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="1" style="display: none">
                     <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                         <h1>Combo-Memo</h1>
                         <p>Jogo da memória totalmente open-source e gratuito online</p>
                     </div>
                 </div>
 
-                <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="1" style="display: none">
+                <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="2" style="display: none">
                     <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                         <h1>Whitebook</h1>
                         <p>O Whitebook é um sistema abrangente de conteúdo e calculadoras clínicas desenvolvido para fornecer suporte essencial aos profissionais de saúde. Com informações médicas atualizadas e ferramentas de cálculo específicas, o Whitebook é a solução ideal para médicos, enfermeiros e outros profissionais da área da saúde que buscam eficiência e precisão em seus atendimentos.</p>
@@ -92,14 +114,14 @@
                     </div>
                 </div>
 
-                <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="2" style="display: none">
+                <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="3" style="display: none">
                     <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                         <h1>Oliv3r Store - Loja Virtual</h1>
                         <p>Oliv3r Store é uma loja virtual que oferece uma variedade de produtos, incluindo perfumes, livros, cursos e tecnologia. Navegue pela nossa seleção e descubra produtos que combinam com o seu estilo e interesse.</p>
                     </div>
                 </div>
 
-                <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="3" style="display: none">
+                <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="4" style="display: none">
                     <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
                         <h1>Cobertura de Superfícies com Perdas</h1>
                         <p>A Calculadora Cobertura de Superfícies com Perdas é uma ferramenta inovadora desenvolvida para simplificar o processo de cálculo e otimização de materiais em diversos projetos de construção e design. Nossa calculadora permite que profissionais e entusiastas estimem com precisão a quantidade de materiais necessários, considerando perdas inevitáveis durante o processo de corte, montagem e instalação.</p>
