@@ -107,6 +107,9 @@ footer a {
 footer a:hover {
     color: #9c006c;
 }
+footer iframe, div iframe {
+    width: 80vw;
+}
 
 /* Button Styles */
 .btn-primary {
