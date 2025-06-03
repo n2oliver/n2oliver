@@ -1,5 +1,5 @@
 <footer class="mt-2" style="display: flex; justify-content: center; flex-direction: column; text-align: center; color: white; padding: 24px; background-image: linear-gradient(transparent,#000000);">
-    <div style="margin: 0 auto">
+    <div style="margin: 0 auto; width: 100%">
         <script type="text/javascript">
             atOptions = {
                 'key' : '36908cd1702faba6c183fb82dc5a6c78',
@@ -18,3 +18,31 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script>
+    $(window).on('load', () => {
+        const checkIframe = setInterval(() => {
+            const doc = document.querySelector('iframe');
+            if (doc) {
+                clearInterval(checkIframe); // para a verificação
+                console.log('iframe encontrado:', doc);
+                // Agora você pode usar iframe.contentWindow / contentDocument, etc.
+                doc.width = "100%";
+                doc.height = "";
+                const docContent = doc.contentDocument; 
+                const styleDoc = docContent.createElement("style");
+                styleDoc.textContent = `
+                div {
+                    text-align: center;
+                    width: 100%;
+                    align-content: center;
+                    display: flex;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                }`;
+                docContent.head.appendChild(styleDoc);
+            }
+            }, 100);
+        });
+</script>
