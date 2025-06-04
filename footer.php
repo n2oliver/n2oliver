@@ -34,8 +34,6 @@
                 div {
                     text-align: center;
                     width: 100%;
-                    align-content: center;
-                    display: flex;
                 }
                 img {
                     width: 100%;

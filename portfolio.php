@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <?php include("cabecalho.php"); ?>
 
-<body>
+<body class="oliver-dev">
     <?php @include("video-background.php"); ?>
 
     <div class="row">

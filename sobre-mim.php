@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <?php include("cabecalho.php"); ?>
-<body>
+<body class="oliver-dev">
     <?php @include("video-background.php"); ?>
     <div class="col-md-10 col-sm-12 col-lg-10 row d-flex" style="margin: 0 auto">
         <div class="col-lg-2 px-0"></div>
