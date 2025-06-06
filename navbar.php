@@ -11,6 +11,9 @@
             <li class="nav-item">
                 <a class="nav-link rounded" href="/portfolio.php">Portfólio</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link rounded" href="/jogos">Jogos Online</a>
+            </li>
         </ul>
     </div>
 </nav>
