@@ -13,7 +13,7 @@
     </div>
     <a href="/"><span style="font-family: Montserrat">Oliv3r Dev</span></a>
     <span style="font-size: 9px">Todos os direitos reservados - Oliv3r Dev -  2025</span>
-    <a href="/politica-de-privacidade.html">Política de Privacidade</a>
+    <a href="/politica-de-privacidade.php">Política de Privacidade</a>
     <span style="font-size: 9px">CNPJ 60.407.027/0001-25</span>
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -46,7 +46,7 @@
         });
 </script>
 
-<?php include('politica-de-privacidade.php'); ?>
+<?php include('politica-de-privacidade-aviso.php'); ?>
 <script>
     if(localStorage.getItem('cookieConsent')) {
         const scriptAds = document.createElement('script');

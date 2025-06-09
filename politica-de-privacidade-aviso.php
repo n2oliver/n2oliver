@@ -12,9 +12,9 @@
   z-index: 9999 !important;
   display: none !important;
 ">
-  <p style="margin: 0; padding-right: 80px;">
+  <p class="m-auto" style="padding-right: 80px;">
     Este site exibe anúncios que podem utilizar cookies para personalização. Ao continuar, você concorda com nossa 
-    <a href="/politica-de-privacidade.html" target="_blank" style="color: #0066cc;">Política de Privacidade</a>.
+    <a href="/politica-de-privacidade.php" target="_blank" style="color: #0066cc;">Política de Privacidade</a>.
   </p>
   <button id="cookie-ok" style="
     position: absolute;
