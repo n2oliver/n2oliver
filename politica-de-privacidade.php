@@ -33,13 +33,6 @@
   // Verifica se o aviso já foi aceito
   if (!localStorage.getItem('cookieConsent')) {
     document.getElementById('cookie-banner').style.display = 'block';
-  } else {
-    const scriptAds = document.createElement('script');
-    scriptAds.src = "https://fpyf8.com/88/tag.min.js";
-    scriptAds.dataset.zone = "149213"
-    scriptAds.async = "true"; 
-    scriptAds.dataset.cfasync = "false";
-    document.querySelector("head").appendChild(scriptAds);
   }
 
   // Ao clicar em OK, oculta o banner e salva a aceitação

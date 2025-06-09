@@ -22,7 +22,7 @@
       font-family: 'Montserrat';
       -webkit-text-stroke: 1px #000;
       font-size: 2rem;
-      background-color: darkslategray;
+      background-image: linear-gradient(0deg, darkslategray, #343a40);
     }
     header h1 {
       color: #fff !important;
@@ -58,20 +58,25 @@
     .game-card .link {
       text-align: center;
     }
+    .game-card span {
+      background-image: linear-gradient(0deg, darkslategray, #343a40)
+    }
   </style>
 </head>
 <body>
-  <header class="m-auto col-md-8">
-    <h1>Oliv3r Dev Jogos</h1>
-    <p>Lugar de diversão com jogos simples <br> e gratuitos<br>direto no navegador!</p>
+  <header class="m-auto col-md-8 text-center">
+    <h1 style="font-size: 3rem">Oliv3r Dev Jogos</h1>
+    <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
   </header>
 
   <main class="container m-auto col-md-8">
     <div class="game-card">
       <h2>Combo-Memo</h2>
-      <div class="d-flex justify-content-around pb-3">
-        <img src="../img/combo-memo.png" class="col-md-6 p-0"/>
-        <p class="align-content-center col-md-6">Um divertido jogo da memória com tempo e combos!</p>
+      <div class="d-flex justify-content-around mb-3 border border-light">
+        <img src="../img/combo-memo.png" class="p-0" style="width: 50%"/>
+        <span class="bg-dark align-content-center p-3">
+          <p class="text-light">Um divertido jogo da memória com combinações!</p>
+        </span>
       </div>
       <div class="link">
         <a href="/jogos/combo-memo" class="btn btn-danger">Jogar agora</a>
@@ -79,12 +84,17 @@
     </div>
 
     <div class="game-card">
-      <h2>Linha Amarela</h2>
-      <div class="d-flex justify-content-around pb-3">
-        <img src="../img/linhaamarela.jpg" class="col-md-6 p-0"/>
-        <p class="align-content-center col-md-6">Ataques alienígenas chegaram à Terra! É hora de lutar e defender!</p>
-    </div>
-      <a href="#" class="btn btn-danger">Em breve...</a>
+      <h2>Linha Amarela</h2> 
+      <div class="d-flex justify-content-around mb-3 border border-light">
+        <img src="../img/linhaamarela.jpg" class="p-0" style="width: 50%"/>
+        <span class="bg-dark align-content-center p-3">
+          <p class="text-light">Ataques alienígenas chegaram à Terra! É hora de lutar e defender!<br><small>Lançamento: 27/jun</small></p>
+        </span>
+      </div>
+
+      <div class="link">
+        <a href="#" class="btn btn-danger">Em breve...</a>
+      </div>
     </div>
     
     <!-- Adicione mais jogos aqui -->
