@@ -39,11 +39,11 @@
       background-color: transparent;
     }
     .game-card {
-      background: white;
       padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
+      background-image: linear-gradient(0deg, darkslategray, #343a40)
     }
     .game-card h2 {
       margin: 0.5rem 0;
@@ -58,10 +58,8 @@
     .game-card .link {
       text-align: center;
     }
-    .game-card span {
-      background-image: linear-gradient(0deg, darkslategray, #343a40)
-    }
   </style>
+  <script type="text/javascript" src="https://cdn.diclotrans.com/sdk/v1/51575/0913fc70523dbd6c3077ec92d155957cc8ac57e6/lib.js"></script>
 </head>
 <body>
   <header class="m-auto col-md-8 text-center">
@@ -74,8 +72,8 @@
       <h2>Combo-Memo</h2>
       <div class="d-flex justify-content-around mb-3 border border-light">
         <img src="../img/combo-memo.png" class="p-0" style="width: 50%"/>
-        <span class="bg-dark align-content-center p-3">
-          <p class="text-light">Um divertido jogo da memória com combinações!</p>
+        <span class="bg-white align-content-center p-3 rounded-0" onclick='window.location.href = "/jogos/combo-memo";'>
+          <p class="text-dark">Um divertido jogo da memória com combinações!</p>
         </span>
       </div>
       <div class="link">
@@ -87,8 +85,8 @@
       <h2>Linha Amarela</h2> 
       <div class="d-flex justify-content-around mb-3 border border-light">
         <img src="../img/linhaamarela.jpg" class="p-0" style="width: 50%"/>
-        <span class="bg-dark align-content-center p-3">
-          <p class="text-light">Ataques alienígenas chegaram à Terra! É hora de lutar e defender!<br><small>Lançamento: 27/jun</small></p>
+        <span class="bg-white align-content-center p-3 rounded-0" onclick='window.location.href = "#";'>
+          <p class="text-dark">Ataques alienígenas chegaram à Terra! É hora de lutar e defender!<br><small>Lançamento: 27/jun</small></p>
         </span>
       </div>
 
