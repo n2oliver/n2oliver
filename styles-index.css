@@ -29,11 +29,12 @@ body.oliver-dev > * {
     text-decoration: none;
     padding: 10px 20px;
     transition: color 0.3s, background-color 0.3s ease;
+    border-radius: 60px;
 }
 
 .navbar a:hover {
     background-color: #009C30;
-    color: white;
+    color: white!important;
 }
 
 /* Header Image */
