@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles-index.css">
+    <link rel="stylesheet" href="../navbar.css">
   <style>
     body {
       font-family: sans-serif;
@@ -62,6 +63,13 @@
   <script type="text/javascript" src="https://cdn.diclotrans.com/sdk/v1/51575/0913fc70523dbd6c3077ec92d155957cc8ac57e6/lib.js"></script>
 </head>
 <body>
+    <?php include('../navbar.php'); ?>
+    <script>
+      const nav = document.querySelector('nav')
+      nav.classList.add('col-md-8');
+      nav.classList.add('m-auto');
+      nav.classList.add('px-0');
+    </script>
   <header class="m-auto col-md-8 text-center">
     <h1 style="font-size: 3rem">Oliv3r Dev Jogos</h1>
     <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
@@ -97,6 +105,12 @@
     
     <!-- Adicione mais jogos aqui -->
   </main>
-  <?php include("../noads-footer.php"); ?>
+  <?php include("../footer.php"); ?>
+    <script>
+      const footer = document.querySelector('footer')
+      footer.classList.add('col-md-8');
+      footer.classList.add('m-auto');
+      footer.classList.add('px-0');
+    </script>
 </body>
 </html>

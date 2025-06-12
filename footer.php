@@ -1,5 +1,5 @@
 <footer class="mt-2" style="display: flex; justify-content: center; flex-direction: column; text-align: center; color: white; padding: 24px; background-image: linear-gradient(transparent,#000000);">
-    <div style="margin: 0 auto; width: 100%">
+    <div style="margin: 0 auto; width: 468px; height: 60px;">
         <script type="text/javascript">
             atOptions = {
                 'key' : '36908cd1702faba6c183fb82dc5a6c78',
@@ -47,3 +47,11 @@
 </script>
 
 <?php include('politica-de-privacidade-aviso.php'); ?>
+<script>
+    if(localStorage.getItem('cookieConsent')) {
+        const adBanner = document.querySelector('#ad-banner');
+        if(adBanner) {
+            adBanner.outerHTML = `<a class="${adBanner.className}"href="https://otieu.com/4/9441779" target="_blank">${adBanner.innerHTML}</a>`;
+        }
+    }
+</script>

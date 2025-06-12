@@ -14,6 +14,9 @@
             <li class="nav-item">
                 <a class="nav-link rounded" href="/jogos">Jogos Online</a>
             </li>
+            <li class="nav-item">
+                <span id="ad-banner" class="nav-link rounded">Patrocínio</span>
+            </li>
         </ul>
     </div>
 </nav>

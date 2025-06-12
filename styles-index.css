@@ -1,7 +1,6 @@
 /* Global Styles */
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #121212;
     margin: 0;
     padding: 0;
 }
@@ -13,7 +12,7 @@ body.oliver-dev > * {
 
 /* Navbar Styles */
 .navbar {
-    background-color: rgba(31, 31, 31, 0.9);
+    background-color: rgba(255, 255, 255, 0.8) !important;
     position: sticky;
     top: 0;
     width: 100%;
@@ -24,16 +23,16 @@ body.oliver-dev > * {
     font-weight: 700;
 }
 
-.navbar a {
-    color: #9c006c;
+.navbar a, .navbar span {
+    color: #9c006c !important;
     text-decoration: none;
     padding: 10px 20px;
-    transition: color 0.3s, background-color 0.3s ease;
+    transition: color 0.3s, background-color 0.3s ease !important;
     border-radius: 60px;
 }
 
 .navbar a:hover {
-    background-color: #009C30;
+    background-color: #009C30 !important;
     color: white!important;
 }
 
