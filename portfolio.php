@@ -15,15 +15,7 @@
     <div class="row">
         <div class="col-md-2 col-lg-2"></div>
         
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
-                <div class="arrow-container">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="arrow back-arrow">
-                        <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                    </svg>
-                </div>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <div class="col-md-8 col-lg-8">
+        <div class="col-md-8 col-lg-8 portifolio">
             <div class="row">
                 <div id="carouselControls" class="carousel slide carousel-fade col-sm-12 col-md-6 col-lg-6 d-flex align-items-center bg-dark bg-opacity-75" data-bs-ride="carousel">
                     
@@ -50,7 +42,7 @@
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
                                     <img class="title-image img-fluid" class="title-image" src="img/calculadoras-pediatricas.jpg" />
                                     <h2 class="title">
-                                        <a href="https://whitebook.pebmed.com.br/voce-sabe-usar-o-whitebook/" role="button" class="btn btn-custom">Decisões Clínicas</a>
+                                        <a href="https://whitebook.pebmed.com.br/planos" role="button" class="btn btn-custom">Decisões Clínicas</a>
                                     </h2>
                                 </div>
                             </div>
@@ -86,7 +78,7 @@
                 </div>
 
                 <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="0">
-                    <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
+                    <div class="bg-white mx-auto" style="font-family: Helvetica">
                         <h1>Linha Amarela</h1>
                         <p>🚨 Os monstros estão voltando. Você está pronto? 👾
                             No dia 27 de junho de 2025, o jogo Linha Amarela retorna com novos desafios, visuais impactantes e uma jogabilidade viciante no estilo Arkanoid.
@@ -100,14 +92,14 @@
                 </div>
 
                 <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="1" style="display: none">
-                    <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
+                    <div class="bg-white mx-auto" style="font-family: Helvetica">
                         <h1>Combo-Memo</h1>
                         <p>Jogo da memória totalmente open-source e gratuito online</p>
                     </div>
                 </div>
 
                 <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="2" style="display: none">
-                    <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
+                    <div class="bg-white mx-auto" style="font-family: Helvetica">
                         <h1>Whitebook</h1>
                         <p>O Whitebook é um sistema abrangente de conteúdo e calculadoras clínicas desenvolvido para fornecer suporte essencial aos profissionais de saúde. Com informações médicas atualizadas e ferramentas de cálculo específicas, o Whitebook é a solução ideal para médicos, enfermeiros e outros profissionais da área da saúde que buscam eficiência e precisão em seus atendimentos.</p>
                         <p>Com o Whitebook, os profissionais de saúde têm acesso rápido a informações essenciais e ferramentas práticas, otimizando o tempo e aprimorando a qualidade do atendimento. É uma ferramenta indispensável para a prática médica moderna.</p>
@@ -115,20 +107,28 @@
                 </div>
 
                 <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="3" style="display: none">
-                    <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
+                    <div class="bg-white mx-auto" style="font-family: Helvetica">
                         <h1>Oliv3r Store - Loja Virtual</h1>
                         <p>Oliv3r Store é uma loja virtual que oferece uma variedade de produtos, incluindo perfumes, livros, cursos e tecnologia. Navegue pela nossa seleção e descubra produtos que combinam com o seu estilo e interesse.</p>
                     </div>
                 </div>
 
                 <div class="text-box col-sm-12 col-md-6 col-lg-6 p-0" data-content-index="4" style="display: none">
-                    <div class="bg-white mx-0" style="font-family: Helvetica; min-height: 100vh;">
+                    <div class="bg-white mx-auto" style="font-family: Helvetica">
                         <h1>Cobertura de Superfícies com Perdas</h1>
                         <p>A Calculadora Cobertura de Superfícies com Perdas é uma ferramenta inovadora desenvolvida para simplificar o processo de cálculo e otimização de materiais em diversos projetos de construção e design. Nossa calculadora permite que profissionais e entusiastas estimem com precisão a quantidade de materiais necessários, considerando perdas inevitáveis durante o processo de corte, montagem e instalação.</p>
                     </div>
                 </div>
             </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+                <div class="arrow-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="arrow back-arrow">
+                        <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </div>
+            <span class="visually-hidden">Previous</span>
+        </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
                 <div class="arrow-container">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="arrow">

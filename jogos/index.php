@@ -1,3 +1,4 @@
+<?php $APP_URL = '/jogos'; ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,16 +22,20 @@
       padding: 2rem;
       font-weight: 700;
       font-family: 'Montserrat';
-      -webkit-text-stroke: 1px #000;
       font-size: 2rem;
-      background-image: linear-gradient(0deg, darkslategray, #343a40);
+      background-image: linear-gradient(0deg, darkslategray, slategray, white);
+      border-radius: 15px;
+      height: 200px;
     }
     header h1 {
       color: #fff !important;
     }
     header p {
-        font-size: 1.4rem;
-        color: #fff !important;
+        font-size: 12px;
+        color: white !important;
+    }
+    header img {
+      filter: drop-shadow(0 0 0.1rem rgb(0, 0, 0));
     }
     .container {
       margin: 2rem auto;
@@ -44,13 +49,14 @@
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
-      background-image: linear-gradient(0deg, darkslategray, #343a40)
+      background-image: linear-gradient(0deg, darkslategray, #343a40);
+      height: fit-content;
     }
     .game-card h2 {
       margin: 0.5rem 0;
       font-family: 'Montserrat';
       -webkit-text-stroke: 1px #000;
-      color: yellow
+      color: darkcyan
     }
     .game-card a {
       text-decoration: none;
@@ -70,30 +76,30 @@
       nav.classList.add('m-auto');
       nav.classList.add('px-0');
     </script>
-  <header class="m-auto col-md-8 text-center">
-    <h1 style="font-size: 3rem">Oliv3r Dev Jogos</h1>
+  <header class="mx-auto mt-3 col-md-8 text-center">
+    <img src="<?=$APP_URL?>/logo-frizzer-games.png" style="height: 100px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
   </header>
 
   <main class="container m-auto col-md-8">
     <div class="game-card">
       <h2>Combo-Memo</h2>
-      <div class="d-flex justify-content-around mb-3 border border-light">
-        <img src="../img/combo-memo.png" class="p-0" style="width: 50%"/>
-        <span class="bg-white align-content-center p-3 rounded-0" onclick='window.location.href = "/jogos/combo-memo";'>
+      <div class="bg-white row mb-3 border border-light">
+        <img src="../img/combo-memo.png" class="p-0 w-100"/>
+        <span class="align-content-center p-3 rounded-0" onclick='window.location.href = "/jogos/combo-memo";'>
           <p class="text-dark">Um divertido jogo da memória com combinações!</p>
         </span>
       </div>
       <div class="link">
-        <a href="/jogos/combo-memo" class="btn btn-danger">Jogar agora</a>
+        <a href="<?= $APP_URL ?>/combo-memo" class="btn btn-danger">Jogar agora</a>
       </div>
     </div>
 
     <div class="game-card">
       <h2>Linha Amarela</h2> 
-      <div class="d-flex justify-content-around mb-3 border border-light">
-        <img src="../img/linhaamarela.jpg" class="p-0" style="width: 50%"/>
-        <span class="bg-white align-content-center p-3 rounded-0" onclick='window.location.href = "#";'>
+      <div class="bg-white row mb-3 border border-light">
+        <img src="../img/linhaamarela.jpg" class="p-0 w-100"/>
+        <span class="align-content-center p-3 rounded-0" onclick='window.location.href = "#";'>
           <p class="text-dark">Ataques alienígenas chegaram à Terra! É hora de lutar e defender!<br><small>Lançamento: 27/jun</small></p>
         </span>
       </div>

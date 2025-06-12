@@ -3,6 +3,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    min-width: 538px;
 }
 
 body.oliver-dev > * {
@@ -26,7 +27,7 @@ body.oliver-dev > * {
 .navbar a, .navbar span {
     color: #9c006c !important;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 20px !important;
     transition: color 0.3s, background-color 0.3s ease !important;
     border-radius: 60px;
 }
@@ -40,7 +41,6 @@ body.oliver-dev > * {
 header img {
     width: 100%;
     height: auto;
-    border-bottom: 2px solid #333;
 }
 
 .row {
@@ -311,7 +311,6 @@ p {
     color: #333;
 }
 .text-box {
-    height: 100vh;
     overflow-y: scroll;
 }
 .carousel-indicators button {
@@ -326,6 +325,9 @@ p {
 .carousel-indicators .active {
     background-color: #fff;
 }
+.portifolio .bg-white {
+    min-height: 100vh;
+}
 /* Media Queries */
 @media screen and (max-width: 768px) {
     .col-6 {
@@ -339,19 +341,27 @@ p {
     .arrow {
         opacity: .80;
     }
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    opacity: 1;
-    transform: scale(1.05);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        opacity: 1;
+        transform: scale(1.05);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
     .carousel-control-prev,
     .carousel-control-next {
         opacity: 0.7;
         transition: all 0.3s ease;
         background: transparent;
+        height: 50%;
+        align-content: center;
+        display: flex;
+        align-self: center;
     }
     .icon-item:hover i, .icon-item.hover i {
         width: 50vw;
+    }
+
+    .portifolio .bg-white {
+        min-height: auto;
     }
 }
