@@ -47,13 +47,3 @@
 </script>
 
 <?php include('politica-de-privacidade-aviso.php'); ?>
-<script>
-    if(localStorage.getItem('cookieConsent')) {
-        const scriptAds = document.createElement('script');
-        scriptAds.src = "https://fpyf8.com/88/tag.min.js";
-        scriptAds.dataset.zone = "149213"
-        scriptAds.async = "true"; 
-        scriptAds.dataset.cfasync = "false";
-        document.querySelector("head").appendChild(scriptAds);
-    }
-</script>
