@@ -6,7 +6,67 @@
     <div class="col-md-10 col-sm-12 col-lg-10 row d-flex" style="margin: 0 auto">
         <div class="col-lg-2 px-0"></div>
         <div class="col-sm-12 col-md-12 col-lg-12 px-0">
-            <img src="img/oliver-silva-software-developer-cover.png" width="100%"/>
+            <div class="row pb-3" style="background-image: linear-gradient(180deg, transparent, transparent, rgba(255,255,255, .8))">
+                <div class="col-12" style="height: 0px">
+                    <span style="
+                        font-family: Montserrat;
+                        font-size: 72px;
+                        filter: drop-shadow(0 0 0.2rem rgb(255, 255, 255));
+                        color: rgba(25,120,255, 1);
+                        font-weight: bolder;
+                        position: relative;
+                        top: 0px;
+                        left: 24px">Oliv3r Dev</span><br>
+                    <span style="
+                        font-family: Montserrat;
+                        font-size: 24px;
+                        filter: drop-shadow(0 0 0.2rem rgb(255, 255, 255));
+                        color: white;
+                        font-weight: bolder;
+                        position: relative;
+                        top: -28px;
+                        left: 32px;
+                        -webkit-text-stroke: .007cm #000;">
+                        Desenvolvedor de Software
+                    </span>
+                </div>
+                <div class="col-8 d-flex align-self-end flex-column"
+                    style="
+                        height: 128px;
+                        background-color: rgba(0,172,220, .9);
+                        transform: translateX(15px)">
+                        <div class="text-white rounded-pill py-0 px-3 w-100 my-3"
+                            style="
+                                line-height: 1;
+                                height: fit-content;
+                                font-size: 28px;
+                                transform: scaleY(90%);
+                                font-family: 'Quicksand', sans-serif;
+                                font-weight: 700">Pronto para a próxima linha!
+                                <div style="font-size: 14px; line-height: 32px;" class="mt-4">Óliver Silva Castilho</div>
+                        </div>    
+                    <div class="d-flex w-100 align-self-end justify-content-between" style="height: fit-content">
+                        <div></div>
+                        <div class="text-white rounded-pill py-0 px-3"
+                            style="
+                                line-height: 1;
+                                background-color: rgba(33,120,210, .85);
+                                height: 3rem;
+                                width: 14rem;
+                                font-size: 24px;
+                                transform: scale(120%);
+                                font-family: 'Quicksand', sans-serif;
+                                font-weight: 700;
+                                position: absolute;
+                                right: -24px;
+                                bottom: 28px;">Software sob<br>demanda<div style="position: fixed; transform: translateY(-28px) scale(200%); right: 8px">⏎</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 bg-transparent" style="height: 250px; background-image: url(img/notebook.png); background-position: center; background-size: contain; background-repeat: no-repeat;">
+
+                </div>
+            </div>
             <?php include("navbar.php"); ?>
 
                 
