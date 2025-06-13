@@ -248,9 +248,9 @@ h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
-p {
+.oliver-dev p {
     color: #555;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.6;
 }
 .icon-box {
@@ -327,6 +327,11 @@ p {
 }
 .portifolio .bg-white {
     min-height: 100vh;
+}
+.quicksand {
+    font-size: .9em;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
 }
 /* Media Queries */
 @media screen and (max-width: 768px) {

@@ -71,19 +71,27 @@
 
                 
             <div class="mt-2 d-flex about-me" style="height: auto; flex-direction: row; overflow-x: scroll">  
-                <div class="container d-flex mb-0" style="border-bottom-left-radius: 0px">
+                <div class="container d-flex mb-0 quicksand" style="border-bottom-left-radius: 0px">
                     <div>
                         <h1 class="w-100">Sobre o Dev</h1>
                         <div class="bg-white my-1 me-4" style="background-image: url(img/YSnlRKp0.png); background-position: center; background-size: contain; width: 128px; height: 128px; float: left">
                         </div>
                         <p class="text-start">Se você precisa de um desenvolvedor experiente, e conhecedor de diversas técnicas de programação e marketing digital, Óliver Silva pode te ajudar. Com mais de 15 anos de experiência na área de desenvolvimento de software, ele demonstrou habilidades excepcionais em diversas linguagens de programação e frameworks, contribuindo para vários projetos de alta complexidade e excelentes benefícios aos seus usuários.</p>
                     </div> 
-
-                </div>
-                <div class="container d-flex flex-column mb-0" style="border-bottom-right-radius: 0px">
                     <h1 class="w-100 text-center">Experiência e Habilidades</h1>
                     <p>Com uma vasta experiência no desenvolvimento de software, Óliver tem um profundo conhecimento em design de sistemas, desenvolvimento front-end e back-end, e é proficiente em várias tecnologias modernas. Sua dedicação e paixão pela tecnologia o impulsionam a se manter atualizado com as últimas tendências do mercado.</p>
 
+                </div>
+                <div class="container d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px">
+                    <h1 class="w-100 text-start px-4 pt-3 mb-4">Notícias</h1>
+                    <h6 class="text-start mx-4 p-3 mb-0 border rounded-top shadow"><strong>Linha Amarela a caminho!</strong></h6>
+                    <div class="mx-4 shadow" style="height: 100px; background-image: url(img/linhaamarela.png); background-position: center; background-size: cover; background-repeat: no-repeat;" ></div>
+                    <p class="mx-4 p-3 rounded-bottom text-start border shadow" >🚧 Estamos em obras — e isso é uma ótima notícia! 🛠️
+                        O jogo Linha Amarela está passando por uma fase de transformações importantes. Estamos realizando melhorias significativas para tornar a experiência de jogo ainda mais envolvente, acessível e divertida para todos.
+                        A boa notícia? A nova versão já tem data marcada: 27 de junho! 🗓️
+                        Essa atualização é fruto de muito feedback, testes e, claro, dedicação de uma equipe apaixonada por criar experiências memoráveis.
+                        👉 Fique de olho! Em breve vamos compartilhar mais detalhes sobre as novidades que estão chegando.
+                    </p>
                 </div>
             </div>
 
