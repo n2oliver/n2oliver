@@ -1,0 +1,72 @@
+.oliver-dev-logo {
+    font-family: Montserrat;
+    font-size: 72px;
+    filter: drop-shadow(0 0 0.2rem rgb(255, 255, 255));
+    color: rgba(25, 120, 255, 1);
+    font-weight: bolder;
+    position: relative;
+    top: 0px;
+    left: 24px
+}
+
+.desenvolvedor-de-software {
+    font-family: Montserrat;
+    font-size: 24px;
+    filter: drop-shadow(0 0 0.2rem rgb(255, 255, 255));
+    color: white;
+    font-weight: bolder;
+    position: relative;
+    top: -28px;
+    left: 32px;
+    -webkit-text-stroke: .007cm #000;
+}
+
+.proxima-linha-wrapper {
+    height: 128px;
+    background-color: rgba(0, 172, 220, .9);
+    transform: translateX(15px)
+}
+
+.proxima-linha {
+    line-height: 1;
+    height: fit-content;
+    font-size: 28px;
+    transform: scaleY(90%);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700
+}
+
+.oliver-dev-parent-wrapper {
+    background-image: linear-gradient(180deg, transparent, transparent, rgba(255, 255, 255, .8));
+}
+
+.height-0 {
+    height: 0px;
+}
+
+.nome-completo-osc {
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.sob-demanda {
+    line-height: 1;
+    background-color: rgba(33, 120, 210, .85);
+    height: 3rem;
+    width: 14rem;
+    font-size: 24px;
+    transform: scale(120%);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    position: absolute;
+    right: -24px;
+    bottom: 28px;
+}
+
+.notebook {
+    height: 250px;
+    background-image: url(img/notebook.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
