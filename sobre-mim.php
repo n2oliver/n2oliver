@@ -15,7 +15,7 @@
                 </div>
                 <div class="proxima-linha-wrapper col-8 d-flex align-self-end flex-column">
                         <div class="proxima-linha text-white rounded-pill py-0 px-3 w-100 my-3">Pronto para a próxima linha!
-                                <div style="nome-completo-osc" class="mt-4">Óliver Silva Castilho</div>
+                                <div class="nome-completo-osc" class="mt-4">Óliver Silva Castilho</div>
                         </div>    
                     <div class="d-flex w-100 align-self-end justify-content-between" style="height: fit-content">
                         <div></div>
