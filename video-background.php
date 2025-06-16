@@ -1,5 +1,5 @@
 
-<video autoplay loop id="myVideo">
+<video autoplay loop preload="auto" id="myVideo">
     <source src="mov/pixverse_mp4_media_405b7dc6-5961-47d3-bcde-6a69213b5f14_seed1297476027.mp4" type="video/mp4">
 </video>
 <style>
