@@ -11,8 +11,8 @@
         </script>
         <script type="text/javascript" src="//www.highperformanceformat.com/36908cd1702faba6c183fb82dc5a6c78/invoke.js"></script>
     </div>
-    <a href="/"><span style="font-family: Montserrat">Oliv3r Dev</span></a>
-    <span style="font-size: 9px">Todos os direitos reservados - Oliv3r Dev -  2025</span>
+    <a href="/"><span class="oliver-dev-logo" style="font-size: 32px">n2oliver</span></a>
+    <span style="font-size: 9px">Todos os direitos reservados - n2oliver -  2025</span>
     <a href="/politica-de-privacidade.php">Política de Privacidade</a>
     <span style="font-size: 9px">CNPJ 60.407.027/0001-25</span>
 </footer>
@@ -20,6 +20,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 <script src="/limitar-largura-img-iframe.js">
+<link rel="stylesheet" href="sobre-mim.css"/>
 </script>
 
 <?php include('politica-de-privacidade-aviso.php'); ?>

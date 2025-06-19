@@ -8,7 +8,7 @@
         <div class="col-sm-12 col-md-12 col-lg-12 px-0">
             <div class="row pb-3 oliver-dev-parent-wrapper" style="">
                 <div class="col-12 height-0">
-                    <span class="oliver-dev-logo">Oliv3r Dev</span><br>
+                    <span class="oliver-dev-logo" style="font-size: 72px; position: relative">n2oliver</span><br>
                     <span class="desenvolvedor-de-software">
                         Desenvolvedor de Software
                     </span>

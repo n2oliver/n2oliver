@@ -4,12 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oliv3r Dev Jogos Online</title>
+  <title>n2oliver Jogos Online</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/loja_virtual/img/logoOliverStore-live.jpg"/>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles-index.css">
     <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="sobre-mim.css"/>
   <style>
     body {
       font-family: sans-serif;
@@ -22,7 +25,7 @@
       text-align: center;
       padding: 2rem;
       font-weight: 700;
-      font-family: 'Montserrat';
+      font-family: 'Ubuntu';
       font-size: 2rem;
       background-image: linear-gradient(0deg, darkslategray, slategray, white);
       border-radius: 15px;
@@ -55,13 +58,13 @@
     }
     .game-card h2 {
       margin: 0.5rem 0;
-      font-family: 'Montserrat';
+      font-family: 'Ubuntu';
       -webkit-text-stroke: 1px #000;
       color: darkcyan
     }
     .game-card a {
       text-decoration: none;
-      font-family: 'Montserrat';
+      font-family: 'Ubuntu';
     }
     .game-card .link {
       text-align: center;
