@@ -25,7 +25,7 @@ body.oliver-dev > * {
 }
 
 .navbar a, .navbar span {
-    color: #9c006c !important;
+    color: rgba(25, 120, 255, 1) !important;
     text-decoration: none;
     padding: 10px 20px !important;
     transition: color 0.3s, background-color 0.3s ease !important;

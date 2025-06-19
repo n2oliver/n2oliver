@@ -1,15 +1,15 @@
 <footer class="mt-2" style="display: flex; justify-content: center; flex-direction: column; text-align: center; color: white; padding: 24px; background-image: linear-gradient(transparent,#000000);">
-    <div style="margin: 0 auto; width: 468px; height: 60px;">
-        <script type="text/javascript">
-            atOptions = {
-                'key' : '36908cd1702faba6c183fb82dc5a6c78',
-                'format' : 'iframe',
-                'height' : 60,
-                'width' : 468,
-                'params' : {}
-            };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/36908cd1702faba6c183fb82dc5a6c78/invoke.js"></script>
+    <div style="margin: 0 auto; width: 100%; height: 60px;">
+        <a href="https://otieu.com/4/9386875" target="_blank"><div style="
+            width: 100%;
+            height: 60px;
+            background-image: url(/img/web-design-technology-browsing-programming-concept.jpg);
+            background-position: bottom;
+            color: white;
+            text-decoration: 0!important;
+            align-content: center;
+            font-weight: bolder;
+            font-size: 18px">Patrocinadores</div></a>
     </div>
     <a href="/"><span class="oliver-dev-logo" style="font-size: 32px">n2oliver</span></a>
     <span style="font-size: 9px">Todos os direitos reservados - n2oliver -  2025</span>
