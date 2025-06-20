@@ -126,7 +126,6 @@ footer a:hover {
     width: 100%;
     height: auto; /* Faz a imagem preencher toda a altura da região */
     object-fit: contain; /* Garante que a imagem cubra toda a área sem distorção */
-    filter: brightness(0.6);
     border-radius: 12px;
 }
 /* Arrow Styles */
