@@ -39,7 +39,7 @@
         color: white !important;
     }
     header img {
-      filter: drop-shadow(0 0 0.1rem rgb(0, 0, 0));
+      filter: drop-shadow(0 0 0.2rem rgb(255, 255, 255));
     }
     .container {
       margin: 2rem auto;
