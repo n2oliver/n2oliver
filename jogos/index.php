@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>n2oliver Jogos Online</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/loja_virtual/img/logoOliverStore-live.jpg"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles-index.css">
-    <link rel="stylesheet" href="../navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../styles-index.css"/>
+    <link rel="stylesheet" href="../navbar.css"/>
     <link rel="stylesheet" href="sobre-mim.css"/>
   <style>
     body {
@@ -49,18 +49,19 @@
       background-color: transparent;
     }
     .game-card {
-      padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
-      background-image: linear-gradient(0deg, darkslategray, #343a40);
       height: fit-content;
     }
     .game-card h2 {
       margin: 0.5rem 0;
       font-family: 'Ubuntu';
       -webkit-text-stroke: 1px #000;
-      color: darkcyan
+      color: yellow;
+      width: 50%;
+      text-shadow: 3px 3px 3px darkslategray;
+      background-image: linear-gradient(#fff, #ddd, #fff)
     }
     .game-card a {
       text-decoration: none;
@@ -68,6 +69,18 @@
     }
     .game-card .link {
       text-align: center;
+    }
+    .game-card > a > div {
+      padding: 10px;
+      background-image: radial-gradient(white, darkslategray);
+      align-items: end;
+    }
+    .game-card > a > div > span {
+      background-image: radial-gradient(slategray, darkslategray);
+      background-position: top;
+      color: white;
+      font-weight: bold;
+      border: solid 1px white;
     }
   </style>
   <script type="text/javascript" src="https://cdn.diclotrans.com/sdk/v1/51575/0913fc70523dbd6c3077ec92d155957cc8ac57e6/lib.js"></script>
@@ -87,30 +100,32 @@
 
   <main class="container m-auto col-md-8">
     <div class="game-card">
-      <h2>Combo-Memo</h2>
-      <div class="bg-white row mb-3 border border-light">
-        <img src="../img/combo-memo.png" class="p-0 w-100"/>
-        <span class="align-content-center p-3 rounded-0" onclick='window.location.href = "/jogos/combo-memo";'>
-          <p class="text-dark">Um divertido jogo da memória com combinações!</p>
-        </span>
-      </div>
-      <div class="link">
-        <a href="<?= $APP_URL ?>/combo-memo" class="btn btn-danger">Jogar agora</a>
-      </div>
+      <a href="<?= $APP_URL ?>/combo-memo">
+        <div class="bg-white row mb-3 border border-light">
+          <h2 class="rounded-left border border-warning border-right-0">Combo-Memo</h2>
+          <img src="../img/combo-memo.png" class="p-0 w-50 border border-light"/>
+          <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "/jogos/combo-memo";'>
+            <p>Um divertido jogo da memória com combinações!</p>
+            <div class="link btn btn-danger my-2">Jogar
+            </div>
+          </span>
+        </div>
+      </a>
     </div>
 
     <div class="game-card">
-      <h2>Linha Amarela</h2> 
+      <a href="#">
       <div class="bg-white row mb-3 border border-light">
-        <img src="../img/linhaamarela.jpg" class="p-0 w-100"/>
-        <span class="align-content-center p-3 rounded-0" onclick='window.location.href = "#";'>
-          <p class="text-dark">Ataques alienígenas chegaram à Terra! É hora de lutar e defender!<br><small>Lançamento: 27/jun</small></p>
+        <h2 class="rounded-left border border-warning border-right-0">Linha Amarela</h2> 
+        <img src="../img/linhaamarela.jpg" class="p-0 w-50 border border-light"/>
+        <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "#";'>
+          <p>Ataques alienígenas chegaram à Terra! É hora de lutar e defender!<br><small>Lançamento: 27/jun</small></p>
+          <div class="link btn btn-danger my-2">
+            Em breve...
+          </div>
         </span>
       </div>
-
-      <div class="link">
-        <a href="#" class="btn btn-danger">Em breve...</a>
-      </div>
+      </a>
     </div>
     
     <!-- Adicione mais jogos aqui -->
