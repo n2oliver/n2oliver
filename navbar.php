@@ -6,16 +6,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link rounded" href="/sobre-mim.php">Desenvolvedor</a>
+                <a class="nav-link rounded" href="/sobre-mim.php"><i class="fa-solid fa-user"></i> Desenvolvedor</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link rounded" href="/portfolio.php">Portfólio</a>
+                <a class="nav-link rounded" href="/portfolio.php"><i class="fa-solid fa-hand-pointer"></i> Portfólio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link rounded" href="/jogos">Jogos Online</a>
+                <a class="nav-link rounded" href="/jogos"><i class="fa-solid fa-puzzle-piece"></i> Jogos Online</a>
             </li>
             <li class="nav-item">
-                <span id="ad-banner" class="nav-link rounded">Patrocínio</span>
+                <span id="ad-banner" class="nav-link rounded"><i class="fa-solid fa-rectangle-ad"></i> Patrocínio</span>
             </li>
         </ul>
     </div>
