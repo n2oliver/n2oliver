@@ -30,11 +30,17 @@ Sou desenvolvedor full stack com foco em aplicações web e jogos interativos. T
 ## 📁 Estrutura do projeto
 
 /
+
 ├── index.html # Página principal
+
 ├── /jogos/ # Subpasta com jogos desenvolvidos
+
 ├── /portifolio.php # Página de portfólio
+
 ├── /img/ # Imagens usadas no site
+
 ├── /css/ # Estilos personalizados
+
 └── /scripts/ # (Opcional) JS para futuras interações
 
 
