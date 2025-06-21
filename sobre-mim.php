@@ -24,10 +24,10 @@
                             <div class="nome-completo-osc" class="mt-4">Pronto para a próxima linha!
                                 <div class="d-flex align-content-end">
                                     <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=oliver-c-ab2748b9" target="_blank">Seguir no LinkedIn</a>
-                                    <a style="font-size: 24px; color: white; background-image: linear-gradient(green, lightgreen, green)" class="px-1 rounded-circle mx-1" href="https://wa.me/5521986695629?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" target="_blank" rel="noopener noreferrer">
+                                    <a style="font-size: 24px; color: white; background-image: linear-gradient(green, lightgreen, green)" class="px-1 rounded-circle mx-1 align-content-center" href="https://wa.me/5521986695629?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" target="_blank" rel="noopener noreferrer">
                                         <i class="fa-brands fa-whatsapp"></i>
                                     </a>
-                                    <a style="font-size: 24px; color: white; background-image: linear-gradient(magenta, pink, magenta)" class="px-1 rounded-circle mx-1" href="https://www.instagram.com/n2oliver/" target="_blank" rel="noopener noreferrer">
+                                    <a style="font-size: 24px; color: white; background-image: linear-gradient(magenta, pink, magenta)" class="px-1 rounded-circle mx-1 align-content-center" href="https://www.instagram.com/n2oliver/" target="_blank" rel="noopener noreferrer">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
                                 </div>

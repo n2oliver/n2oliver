@@ -10,7 +10,6 @@
         bottom: 0;
         min-width: 100%;
         min-height: 100%;
-        filter: contrast(.5) brightness(.4) blur(3px);
     }
 
     /* Add some content at the bottom of the video/page */
