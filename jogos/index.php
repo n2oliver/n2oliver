@@ -83,6 +83,9 @@
       font-weight: bold;
       border: solid 1px white;
     }
+    .intr-in {
+      top: 60px!important;
+    }
   </style>
   <script type="text/javascript" src="https://cdn.diclotrans.com/sdk/v1/51575/0913fc70523dbd6c3077ec92d155957cc8ac57e6/lib.js"></script>
 </head>
