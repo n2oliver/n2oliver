@@ -50,10 +50,10 @@
 
 .sob-demanda {
     line-height: 1;
-    background-color: rgba(33, 120, 210, .85);
-    height: 3rem;
-    width: 14rem;
-    font-size: 24px;
+    background-image: linear-gradient(rgba(33, 120, 210, .85), rgba(58, 180, 255, .85), rgba(33, 120, 210, .85));
+    height: 2rem;
+    width: 7.4rem;
+    font-size: 12px;
     transform: scale(120%);
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
@@ -68,4 +68,23 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.libutton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7px;
+    text-align: center;
+    outline: none;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    width: 150px;
+    height: 32px;
+    border-radius: 16px;
+    background-image: linear-gradient(#0A66C2, cyan, #0A66C2);
+    font-family: "SF Pro Text", Helvetica, sans-serif;
+    font-size: 14px!important;
+    line-height: 1rem !important;
+    margin: 0 !important;
 }
