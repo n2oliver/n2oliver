@@ -50,7 +50,7 @@
                 <div class="container d-flex mb-0 quicksand" style="border-bottom-left-radius: 0px">
                     <div>
                         <h1 class="w-100">Sobre o Dev</h1>
-                        <div class="bg-white my-1 me-4" style="background-image: url(img/YSnlRKp0.png); background-position: center; background-size: contain; width: 128px; height: 128px; float: left">
+                        <div class="bg-white my-1 me-4 rounded shadow" style="background-image: url(img/oliver.jpg); background-position: center; background-size: contain; width: 128px; height: 128px; float: left; border: 2px darkslategray solid">
                         </div>
                         <p class="text-start">Se você precisa de um desenvolvedor experiente, e conhecedor de diversas técnicas de programação e marketing digital, Óliver Silva pode te ajudar. Com mais de 15 anos de experiência na área de desenvolvimento de software, ele demonstrou habilidades excepcionais em diversas linguagens de programação e frameworks, contribuindo para vários projetos de alta complexidade e excelentes benefícios aos seus usuários.</p>
                     </div> 
