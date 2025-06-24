@@ -1,6 +1,6 @@
 <footer class="mt-2" style="display: flex; justify-content: center; flex-direction: column; text-align: center; color: white; padding: 24px; background-image: linear-gradient(transparent,#000000);">
     <div style="margin: 0 auto; width: 100%; height: 60px;">
-        <a href="https://otieu.com/4/9386875" target="_blank"><div style="
+        <a href="https://n2oliver.com/loja_virtual" target="_blank"><div style="
             width: 100%;
             height: 60px;
             background-image: url(/img/web-design-technology-browsing-programming-concept.jpg);
@@ -28,7 +28,7 @@
     if(localStorage.getItem('cookieConsent')) {
         const adBanner = document.querySelector('#ad-banner');
         if(adBanner) {
-            adBanner.outerHTML = `<a class="${adBanner.className}"href="https://otieu.com/4/9441779" target="_blank">${adBanner.innerHTML}</a>`;
+            adBanner.outerHTML = `<a class="${adBanner.className}"href="https://n2oliver.com/loja_virtual" target="_blank">${adBanner.innerHTML}</a>`;
         }
     }
 </script>

@@ -1,6 +1,7 @@
 
 <video autoplay loop preload="auto" id="myVideo">
     <source src="mov/pixverse_mp4_media_405b7dc6-5961-47d3-bcde-6a69213b5f14_seed1297476027.mp4" type="video/mp4">
+    <img src="/img/web-design-technology-browsing-programming-concept.jpg" alt="Imagem alternativa">
 </video>
 <style>
     /* Style the video: 100% width and height to cover the entire window */
