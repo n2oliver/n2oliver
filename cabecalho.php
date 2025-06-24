@@ -24,5 +24,7 @@
 
     gtag('config', 'G-0T82Y59VYL');
     </script>
-    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
+     crossorigin="anonymous"></script>
+     <meta name="monetag" content="632aa4380ec2b41d0a8bec05a84390b6">
 </head>
