@@ -2,7 +2,7 @@
 $(window).on('load', () => {
     const checkIframe = setInterval(() => {
         const doc = document.querySelector('iframe');
-        if (doc) {
+        if (doc && doc.contentDocument) {
             clearInterval(checkIframe); // para a verificação
             console.log('iframe encontrado:', doc);
             // Agora você pode usar iframe.contentWindow / contentDocument, etc.

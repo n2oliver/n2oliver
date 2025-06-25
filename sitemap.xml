@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Página principal -->
+  <url>
+    <loc>https://n2oliver.com/</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Páginas principais -->
+  <url>
+    <loc>https://n2oliver.com/portfolio.php</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://n2oliver.com/sobre-mim.php</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://n2oliver.com/politica-de-privacidade.html</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://n2oliver.com/politica-de-privacidade-aviso.php</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://n2oliver.com/calculadora_material.php</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Loja Virtual -->
+  <url><loc>https://n2oliver.com/loja_virtual/</loc></url>
+  <url><loc>https://n2oliver.com/loja_virtual/get_cursos.php</loc></url>
+  <url><loc>https://n2oliver.com/loja_virtual/get_livros.php</loc></url>
+  <url><loc>https://n2oliver.com/loja_virtual/get_destaques.php</loc></url>
+  <url><loc>https://n2oliver.com/loja_virtual/get_perfumes_femininos.php</loc></url>
+  <url><loc>https://n2oliver.com/loja_virtual/get_perfumes_masculinos.php</loc></url>
+  <url><loc>https://n2oliver.com/loja_virtual/get_smartphones_apple.php</loc></url>
+  <url><loc>https://n2oliver.com/loja_virtual/get_smartphones_motorola.php</loc></url>
+  <url><loc>https://n2oliver.com/loja_virtual/get_smartphones_samsung.php</loc></url>
+  <url><loc>https://n2oliver.com/loja_virtual/get_smartphones_xiaomi.php</loc></url>
+
+  <!-- Jogos -->
+  <url><loc>https://n2oliver.com/jogos/</loc></url>
+  <url><loc>https://n2oliver.com/jogos/combo-memo/</loc></url>
+  <url><loc>https://n2oliver.com/jogos/combo-memo/jogo.php</loc></url>
+  <url><loc>https://n2oliver.com/jogos/linhaamarela/</loc></url>
+  <url><loc>https://n2oliver.com/jogos/linhaamarela/game.php</loc></url>
+  <url><loc>https://n2oliver.com/jogos/linhaamarela/login.php</loc></url>
+  <url><loc>https://n2oliver.com/jogos/linhaamarela/password-create.php</loc></url>
+  <url><loc>https://n2oliver.com/jogos/linhaamarela/password-recovery.php</loc></url>
+  <url><loc>https://n2oliver.com/jogos/linhaamarela/gameover.html</loc></url>
+
+</urlset>

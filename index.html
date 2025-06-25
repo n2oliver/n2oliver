@@ -1,3 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>n2oliver</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles-index.css"/>
+    <link rel="stylesheet" href="sobre-mim.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T82Y59VYL"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0T82Y59VYL');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
+     crossorigin="anonymous"></script>
+     <meta name="monetag" content="632aa4380ec2b41d0a8bec05a84390b6">
+     <meta name="google-adsense-account" content="ca-pub-8124594027670911">
+</head>
 <body class="oliver-dev">
     <style>
         nav {
@@ -5,7 +38,30 @@
               margin-bottom: 1.5rem !important;
         }
     </style>
-    <?php @include("video-background.php"); ?>
+    <video autoplay loop preload="auto" id="myVideo">
+        <source src="mov/pixverse_mp4_media_405b7dc6-5961-47d3-bcde-6a69213b5f14_seed1297476027.mp4" type="video/mp4">
+        <img src="/img/web-design-technology-browsing-programming-concept.jpg" alt="Imagem alternativa">
+    </video>
+    <style>
+        /* Style the video: 100% width and height to cover the entire window */
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        /* Add some content at the bottom of the video/page */
+        .content {
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+    </style>
     <div class="col-md-10 col-sm-12 col-lg-10 row d-flex" style="margin: 0 auto">
         <div class="col-lg-2 px-0"></div>
         <div class="col-sm-12 col-md-12 col-lg-12 px-0">
@@ -40,7 +96,29 @@
 
                 </div>
             </div>
-            <?php include("navbar.php"); ?>
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-2 mx-0">
+                <a class="navbar-brand rounded" style="-webkit-text-stroke: 1px white" href="/"><img src="/img/n2.jpg" width="32" class="rounded"><span>oliver</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active nav-a">
+                            <a class="nav-link rounded" href="/sobre-mim.php"><i class="fa-solid fa-user"></i> Desenvolvedor</a>
+                        </li>
+                        <li class="nav-item nav-b">
+                            <a class="nav-link rounded" href="/portfolio.php"><i class="fa-solid fa-hand-pointer"></i> Portfólio</a>
+                        </li>
+                        <li class="nav-item nav-c">
+                            <a class="nav-link rounded" href="/jogos"><i class="fa-solid fa-puzzle-piece"></i> Jogos Online</a>
+                        </li>
+                        <li class="nav-item nav-d">
+                            <span id="ad-banner" class="nav-link rounded"><i class="fa-solid fa-rectangle-ad"></i> Patrocínio</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
 
                 
             <div class="mt-2 d-flex about-me" style="height: auto; flex-direction: row; overflow-x: scroll">  
@@ -146,7 +224,82 @@
                     </div>
                     
                 </div>
-                <?php include("footer.php"); ?>
+                <footer class="mt-2" style="display: flex; justify-content: center; flex-direction: column; text-align: center; color: white; padding: 24px; background-image: linear-gradient(transparent,#000000);">
+                    <div style="margin: 0 auto; width: 100%; height: 60px;">
+                        <a href="https://n2oliver.com/loja_virtual" target="_blank"><div style="
+                            width: 100%;
+                            height: 60px;
+                            background-image: url(/img/web-design-technology-browsing-programming-concept.jpg);
+                            background-position: bottom;
+                            color: white;
+                            text-decoration: 0!important;
+                            align-content: center;
+                            font-weight: bolder;
+                            font-size: 18px">Patrocinadores</div></a>
+                    </div>
+                    <a href="/"><span class="oliver-dev-logo" style="font-size: 32px">n2oliver</span></a>
+                    <span style="font-size: 9px">Todos os direitos reservados - n2oliver -  2025</span>
+                    <a href="/politica-de-privacidade.php">Política de Privacidade</a>
+                    <span style="font-size: 9px">CNPJ 60.407.027/0001-25</span>
+                </footer>
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+                <script src="/limitar-largura-img-iframe.js">
+                <link rel="stylesheet" href="sobre-mim.css"/>
+                </script>
+
+                <div id="cookie-banner" style="
+                    position: fixed !important;
+                    bottom: 20px !important;
+                    left: 20px !important;
+                    right: 20px !important;
+                    background: #f1f1f1 !important;
+                    padding: 15px !important;
+                    border-radius: 8px !important;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;
+                    font-family: Arial, sans-serif !important;
+                    font-size: 14px !important;
+                    z-index: 9999 !important;
+                    display: none !important;
+                    ">
+                    <p class="m-auto" style="padding-right: 80px;">
+                        Este site exibe anúncios que podem utilizar cookies para personalização. Ao continuar, você concorda com nossa 
+                        <a href="/politica-de-privacidade.php" target="_blank" style="color: #0066cc;">Política de Privacidade</a>.
+                    </p>
+                    <button id="cookie-ok" style="
+                        position: absolute;
+                        right: 30px;
+                        top: 15px;
+                        background-color: #4CAF50;
+                        color: white;
+                        border: none;
+                        padding: 6px 12px;
+                        border-radius: 4px;
+                        cursor: pointer;
+                    ">OK</button>
+                    </div>
+
+                    <script>
+                    // Verifica se o aviso já foi aceito
+                    if (!localStorage.getItem('cookieConsent')) {
+                        document.getElementById('cookie-banner').style.display = 'block';
+                    }
+
+                    // Ao clicar em OK, oculta o banner e salva a aceitação
+                    document.getElementById('cookie-ok').addEventListener('click', function () {
+                        localStorage.setItem('cookieConsent', 'true');
+                        document.getElementById('cookie-banner').style.display = 'none';
+                    });
+                    </script>
+                <script>
+                    if(localStorage.getItem('cookieConsent')) {
+                        const adBanner = document.querySelector('#ad-banner');
+                        if(adBanner) {
+                            adBanner.outerHTML = `<a class="${adBanner.className}"href="https://n2oliver.com/loja_virtual" target="_blank">${adBanner.innerHTML}</a>`;
+                        }
+                    }
+                </script>
             </div>
         </div>
         <div class="col-lg-2 px-0"></div>
