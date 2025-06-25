@@ -1,8 +1,8 @@
-# 🌐 Site Pessoal - Óliver Silva Castilho
+# 🌐 Site Profissional - Óliver Silva Castilho
 
 Este é o repositório do meu site profissional como desenvolvedor web e criador de jogos online. A página está publicada em:
 
-🔗 **https://oliver.liveblog365.com**
+🔗 **https://n2oliver.com**
 
 ## 🧑‍💻 Sobre mim
 
@@ -23,8 +23,8 @@ Sou desenvolvedor full stack com foco em aplicações web e jogos interativos. T
 
 ## 🚀 Acesse
 
-🔹 Portfólio: [oliver.liveblog365.com/portifolio.php](https://oliver.liveblog365.com/portifolio.php)  
-🔹 Jogos online: [oliver.liveblog365.com/jogos/](https://oliver.liveblog365.com/jogos/)  
+🔹 Portfólio: [n2oliver.com/portifolio.php](https://n2oliver.com/portifolio.php)  
+🔹 Jogos online: [n2oliver.com/jogos/](https://n2oliver.com/jogos/)  
 🔹 GitHub: [github.com/n2oliver](https://github.com/n2oliver)
 
 ## 📁 Estrutura do projeto
@@ -48,7 +48,7 @@ Sou desenvolvedor full stack com foco em aplicações web e jogos interativos. T
 
 📧 silva.liver@gmail.com  
 📱 (21) 98669-5629  
-🌍 [oliver.liveblog365.com](https://oliver.liveblog365.com)
+🌍 [n2oliver.com](https://n2oliver.com)
 
 ---
 
