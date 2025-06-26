@@ -98,7 +98,7 @@
       nav.classList.add('px-0');
     </script>
   <header class="mx-auto mt-3 col-md-8 text-center">
-    <img src="<?=$APP_URL?>/logo-frizzer-games.png" style="height: 100px; width: auto;"/>
+    <img src="<?=$APP_URL?>/img/logo.png" style="height: 100px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
   </header>
 

@@ -136,7 +136,40 @@
                         </div>
                     </div>
                 </div>
-            
+
+                    <div class="container mt-2 d-flex justify-content-between">
+
+                        <a class="shadow rounded border border-light p-2" href="https://amzn.to/4k8QJSa" style="text-decoration: none">
+                            <div class="flex-column align-items-center align-content-start">
+                                <h1>Redmi Buds 6</h1>
+                                <img src="img/redmi-buds-6.png" width="100"/>
+                                <div style="width: 200px"><small>Xiaomi Redmi Buds 6 Active, Fones de Ouvido Sem Fio, Versão Global (Preto) </small></div>
+                            </div>
+                        </a>
+                        <a class="shadow rounded border border-light p-2" href="https://amzn.to/45HkmXl" style="text-decoration: none">
+                            <div class="flex-column align-items-center align-content-start">
+                                <h1>LG UltraGear 24”</h1>
+                                <img src="img/ultragear-lg.png" width="100"/>
+                                <div style="width: 200px"><small>Monitor Gamer LG UltraGear 24” 24GS60F-B IPS Full HD 180Hz 1ms (GtG) NVIDIA® G-SYNC® AMD FreeSync™ HDR10 sRGB 99% HDMI DisplayPort</small></div>
+                            </div>
+                        </a>
+                        <a class="shadow rounded border border-light p-2" href="https://amzn.to/45ADMNA" style="text-decoration: none">
+                            <div class="flex-column align-items-center align-content-start">
+                                <h1>C50HI - Preto</h1>
+                                <img src="img/jbl-fone.png" width="100"/>
+                                <div style="width: 200px"><small>JBL, Fone de Ouvido in Ear, C50HI - Preto</small></div>
+                            </div>
+                        </a>
+                        <a class="shadow rounded border border-light p-2" href="https://amzn.to/45ADMNA" style="text-decoration: none">
+                            <div class="flex-column align-items-center align-content-start">
+                                <h1>Monitor Gamer<br>AOC 100Hz</h1>
+                                <img src="img/monitor-gamer-aoc.png" width="100"/>
+                                <div style="width: 200px"><small>Monitor AOC 24" 100Hz 1ms Gaming HDMI 24B35HM2 </small></div>
+                            </div>
+                        </a>
+                    </div>
+                </a>
+
                 <div class="container mt-2 d-inline-flex flex-column">
                     <div class="align-content-center" style="border: gray solid 2px; background-image: url(img/web-design-technology-browsing-programming-concept.jpg); background-position: center; background-size: cover; background-attachment: fixed;">
                         <div class="container mx-auto" style="width: fit-content; background-color: rgba(255, 255, 255, .8)">
