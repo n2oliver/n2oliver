@@ -23,7 +23,7 @@ Sou desenvolvedor full stack com foco em aplicações web e jogos interativos. T
 
 ## 🚀 Acesse
 
-🔹 Portfólio: [n2oliver.com/portifolio.php](https://n2oliver.com/portifolio.php)  
+🔹 Portfólio: [n2oliver.com/portfolio.php](https://n2oliver.com/portfolio.php)  
 🔹 Jogos online: [n2oliver.com/jogos/](https://n2oliver.com/jogos/)  
 🔹 GitHub: [github.com/n2oliver](https://github.com/n2oliver)
 
