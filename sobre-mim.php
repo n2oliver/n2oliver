@@ -6,10 +6,10 @@
         }
     </style>
     <?php @include("video-background.php"); ?>
-    <div class="col-md-10 col-sm-12 col-lg-10 row d-flex" style="margin: 0 auto">
+    <div id="sobre-mim" class="col-md-10 col-sm-12 col-lg-10 row d-flex" style="margin: 0 auto">
         <div class="col-lg-2 px-0"></div>
         <div class="col-sm-12 col-md-12 col-lg-12 px-0">
-            <div class="row pb-3 oliver-dev-parent-wrapper" style="">
+            <div class="row pb-3 oliver-dev-parent-wrapper main-content">
                 <div class="col-12 height-0">
                     <span class="oliver-dev-logo" style="font-size: 72px; position: relative">n2oliver</span><br>
                     <span class="desenvolvedor-de-software">
@@ -43,8 +43,8 @@
             <?php include("navbar.php"); ?>
 
                 
-            <div class="mt-2 d-flex about-me" style="height: auto; flex-direction: row; overflow-x: scroll">  
-                <div class="container d-flex mb-0 quicksand" style="border-bottom-left-radius: 0px">
+            <div class="mt-2 d-flex about-me" style="height: 768px; flex-direction: row">  
+                <div class="container d-flex my-0 quicksand main-content" style="border-bottom-left-radius: 0px; overflow-y: scroll">
                     <div>
                         <h1 class="w-100">Sobre o Dev</h1>
                         <div class="bg-white my-1 me-4 rounded shadow" style="background-image: url(img/oliver.jpg); background-position: center; background-size: cover; width: 128px; height: 128px; float: left; border: 2px darkslategray solid">
@@ -55,20 +55,12 @@
                     <p>Com uma vasta experiência no desenvolvimento de software, Óliver tem um profundo conhecimento em design de sistemas, desenvolvimento front-end e back-end, e é proficiente em várias tecnologias modernas. Sua dedicação e paixão pela tecnologia o impulsionam a se manter atualizado com as últimas tendências do mercado.</p>
 
                 </div>
-                <div class="container d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px">
-                    <h1 class="w-100 text-start px-4 pt-3 mb-4">Notícias</h1>
-                    <h6 class="text-start mx-4 p-3 mb-0 border rounded-top shadow"><strong>Linha Amarela a caminho!</strong></h6>
-                    <div class="mx-4 shadow" style="height: 189px; background-image: url(img/linhaamarela.png); background-position: center; background-size: contain; background-repeat: no-repeat;" ></div>
-                    <p class="mx-4 p-3 rounded-bottom text-start border shadow" >🚧 Estamos em obras — e isso é uma ótima notícia! 🛠️
-                        O jogo Linha Amarela está passando por uma fase de transformações importantes. Estamos realizando melhorias significativas para tornar a experiência de jogo ainda mais envolvente, acessível e divertida para todos.
-                        A boa notícia? A nova versão já tem data marcada: 27 de junho! 🗓️
-                        Essa atualização é fruto de muito feedback, testes e, claro, dedicação de uma equipe apaixonada por criar experiências memoráveis.
-                        👉 Fique de olho! Em breve vamos compartilhar mais detalhes sobre as novidades que estão chegando.
-                    </p>
+                <div class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px; overflow-y: scroll">
+                    <?php include('./noticias.php'); ?>
                 </div>
             </div>
 
-            <div class="row px-3">
+            <div class="row px-3 main-content">
                 <div class="d-flex about-me px-0 d-none" style="
                         width: 100%;
                         width: -moz-available;          /* For Mozzila */
@@ -139,6 +131,18 @@
 
                     <div class="container mt-2 d-flex justify-content-between">
 
+                        <div class="shadow rounded border border-light p-2" style="text-decoration: none">
+                            <script type="text/javascript">
+                                atOptions = {
+                                    'key' : 'b5463c03cd36f2b207d3e311906ba716',
+                                    'format' : 'iframe',
+                                    'height' : 250,
+                                    'width' : 300,
+                                    'params' : {}
+                                };
+                            </script>
+                            <script type="text/javascript" src="//www.highperformanceformat.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"></script>
+                        </div>
                         <a class="shadow rounded border border-light p-2" href="https://amzn.to/4k8QJSa" style="text-decoration: none">
                             <div class="flex-column align-items-center align-content-start">
                                 <h1>Redmi Buds 6</h1>
@@ -167,6 +171,18 @@
                                 <div style="width: 200px"><small>Monitor AOC 24" 100Hz 1ms Gaming HDMI 24B35HM2 </small></div>
                             </div>
                         </a>
+                        <div class="shadow rounded border border-light p-2" style="text-decoration: none">
+                            <script type="text/javascript">
+                                atOptions = {
+                                    'key' : 'b5463c03cd36f2b207d3e311906ba716',
+                                    'format' : 'iframe',
+                                    'height' : 250,
+                                    'width' : 300,
+                                    'params' : {}
+                                };
+                            </script>
+                            <script type="text/javascript" src="//www.highperformanceformat.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"></script>
+                        </div>
                     </div>
                 </a>
 

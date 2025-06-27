@@ -118,14 +118,15 @@
     </div>
 
     <div class="game-card">
-      <a href="#">
+      <a href="<?= $APP_URL ?>/linhaamarela">
       <div class="bg-white row mb-3 border border-light">
         <h2 class="rounded-left border border-warning border-right-0">Linha Amarela</h2> 
         <img src="../img/linhaamarela.jpg" class="p-0 w-50 border border-light"/>
         <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "#";'>
-          <p>Ataques alienígenas chegaram à Terra! É hora de lutar e defender!<br><small>Lançamento: 27/jun</small></p>
+          <p>Divirta-se eliminando os invasores, antes que eles desçam e eliminem a terra!<br>
+          <small>Um território, uma linha, um herói: você.</small></p>
           <div class="link btn btn-danger my-2">
-            Em breve...
+            Jogar
           </div>
         </span>
       </div>
