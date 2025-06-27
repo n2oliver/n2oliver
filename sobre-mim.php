@@ -143,14 +143,14 @@
                             </script>
                             <script type="text/javascript" src="//www.highperformanceformat.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"></script>
                         </div>
-                        <a class="shadow rounded border border-light p-2" href="https://amzn.to/4k8QJSa" style="text-decoration: none">
+                        <a class="shadow rounded border border-light p-2" href="https://amzn.to/4lrgvCe" style="text-decoration: none">
                             <div class="flex-column align-items-center align-content-start">
                                 <h1>Redmi Buds 6</h1>
                                 <img src="img/redmi-buds-6.png" width="100"/>
                                 <div style="width: 200px"><small>Xiaomi Redmi Buds 6 Active, Fones de Ouvido Sem Fio, Versão Global (Preto) </small></div>
                             </div>
                         </a>
-                        <a class="shadow rounded border border-light p-2" href="https://amzn.to/45HkmXl" style="text-decoration: none">
+                        <a class="shadow rounded border border-light p-2" href="https://amzn.to/4nn3XxH" style="text-decoration: none">
                             <div class="flex-column align-items-center align-content-start">
                                 <h1>LG UltraGear 24”</h1>
                                 <img src="img/ultragear-lg.png" width="100"/>
@@ -164,7 +164,7 @@
                                 <div style="width: 200px"><small>JBL, Fone de Ouvido in Ear, C50HI - Preto</small></div>
                             </div>
                         </a>
-                        <a class="shadow rounded border border-light p-2" href="https://amzn.to/45ADMNA" style="text-decoration: none">
+                        <a class="shadow rounded border border-light p-2" href="https://amzn.to/4ep7gQU" style="text-decoration: none">
                             <div class="flex-column align-items-center align-content-start">
                                 <h1>Monitor Gamer<br>AOC 100Hz</h1>
                                 <img src="img/monitor-gamer-aoc.png" width="100"/>

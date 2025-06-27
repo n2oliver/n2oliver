@@ -1,6 +1,8 @@
-<div id="noticias" class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px; overflow-y: scroll">
-    <h1 class="w-100 text-light px-4 pt-3 pb-4 bg-primary mb-0"><div class="d-flex justify-content-between"><span>Notícias</span><i class="fa fa-expand"></i></div></h1>
-    
+<div id="noticias" class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px; overflow-y: scroll; min-width: fit-content">
+    <h1 class="w-100 text-light px-4 pt-3 pb-4 bg-primary mb-0">
+        <div class="d-flex justify-content-between align-items-center"><i class="fa fa-pager p-2" style="position: absolute; top: 10px; left: 0px"></i><span id="noticias-span-title">Notícias</span><span class="oliver-dev-logo">n2oliver</span></div>
+    </h1>
+
     <?php include('./buscar-noticias.php'); ?>
     <?php foreach ($noticias as $index => $noticia): ?>
         <div class="border rounded shadow-sm mb-3 bg-light" style="transition: 1s">
@@ -25,12 +27,12 @@
                         <div class="mt-2 text-muted"><?= $noticia['resumo'] ?></div>
                     <?php endif; ?>
                     <div class="mb-2">
-                    <?php if (!empty($noticia['imagem'])): ?>
-                            <img class="w-100" src="<?= htmlspecialchars($noticia['imagem'])?>"/>
-                    <?php endif; ?>
-                    <p><?= nl2br(htmlspecialchars($noticia['conteudo'])) ?></p>
+                        <?php if (!empty($noticia['imagem'])): ?>
+                            <img class="w-100" src="<?= htmlspecialchars($noticia['imagem']) ?>" />
+                        <?php endif; ?>
+                        <p><?= nl2br(htmlspecialchars($noticia['conteudo'])) ?></p>
 
-                        </div>
+                    </div>
                     <?php if (!empty($noticia['data_edicao'])): ?>
                         <small class="text-muted">Editado em <?= date("d/m/Y H:i", strtotime($noticia['data_edicao'])) ?></small>
                     <?php endif; ?>
@@ -42,43 +44,52 @@
 </div>
 
 <script>
-
-        function fecharTodasNoticias() {
-            document.querySelectorAll('.noticia-conteudo').forEach(div => {
-                div.style.display = 'none';
-            });
-        }
-        function toggleNoticiaContent(index) {
-            const contentDiv = document.getElementById('noticia-content-' + index);
-            if (!contentDiv) return;
-
-            if (contentDiv.style.display === 'none') {
-                // Fecha todos os conteúdos abertos antes (opcional)
-
-
-                const visivel = contentDiv.style.display === 'block';
-                fecharTodasNoticias();
-                
-                // Abre o conteúdo clicado
-                contentDiv.style.display = 'block';
-                contentDiv.closest('.border').style.overflowY = 'scroll';
-            } else {
-                // Fecha o conteúdo se já estava aberto
-                contentDiv.style.display = 'none';
-                contentDiv.closest('.border').style.overflowY = '';
-            }
-        }
-        toggleNoticiaContent(1);
-        $('.fa-expand').click(()=>{
-            if($('#noticias').hasClass('noticia-expandida')) {
-                $('#noticias').removeClass('noticia-expandida');
-                $('#sobre-mim').addClass('col-md-10');
-                $('.main-content').removeClass('d-none');
-            } else {
-                $('#noticias').addClass('noticia-expandida');
-                $('#sobre-mim').removeClass('col-md-10');
-                $('.main-content').addClass('d-none');
-            }
+    function fecharTodasNoticias() {
+        document.querySelectorAll('.noticia-conteudo').forEach(div => {
+            div.style.display = 'none';
         });
+    }
 
-    </script>
+    function toggleNoticiaContent(index) {
+        const contentDiv = document.getElementById('noticia-content-' + index);
+        if (!contentDiv) return;
+
+        if (contentDiv.style.display === 'none') {
+            // Fecha todos os conteúdos abertos antes (opcional)
+
+
+            const visivel = contentDiv.style.display === 'block';
+            fecharTodasNoticias();
+
+            // Abre o conteúdo clicado
+            contentDiv.style.display = 'block';
+            contentDiv.closest('.border').style.overflowY = 'scroll';
+        } else {
+            // Fecha o conteúdo se já estava aberto
+            contentDiv.style.display = 'none';
+            contentDiv.closest('.border').style.overflowY = '';
+        }
+    }
+    toggleNoticiaContent(1);
+    $('.fa-pager').click(() => {
+        if ($('#noticias').hasClass('noticia-expandida')) {
+            $('#noticias').removeClass('noticia-expandida');
+            $('#sobre-mim').addClass('col-xs-10');
+            $('#sobre-mim').addClass('col-sm-10');
+            $('#sobre-mim').addClass('col-md-10');
+            $('#sobre-mim').addClass('col-lg-10');
+            $('#sobre-mim').addClass('col-xl-10');
+            $('#noticias-span-title').css('padding-left', 'initial');
+            $('.main-content').removeClass('d-none');
+        } else {
+            $('#noticias').addClass('noticia-expandida');
+            $('#sobre-mim').removeClass('col-xs-10');
+            $('#sobre-mim').removeClass('col-sm-10');
+            $('#sobre-mim').removeClass('col-md-10');
+            $('#sobre-mim').removeClass('col-lg-10');
+            $('#sobre-mim').removeClass('col-xl-10');
+            $('#noticias-span-title').css('padding-left', 12);
+            $('.main-content').addClass('d-none');
+        }
+    });
+</script>

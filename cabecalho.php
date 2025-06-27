@@ -1,4 +1,14 @@
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-687386749"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-687386749');
+    </script>
+
     <title>n2oliver</title>
     
     <meta charset="UTF-8">
@@ -14,16 +24,7 @@
     <link rel="stylesheet" href="styles-index.css"/>
     <link rel="stylesheet" href="sobre-mim.css"/>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T82Y59VYL"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-0T82Y59VYL');
-    </script>
+   
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
      crossorigin="anonymous"></script>
      <meta name="monetag" content="632aa4380ec2b41d0a8bec05a84390b6">
