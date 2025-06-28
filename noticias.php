@@ -30,7 +30,7 @@
                         <?php if (!empty($noticia['imagem'])): ?>
                             <img class="w-100" src="<?= htmlspecialchars($noticia['imagem']) ?>" />
                         <?php endif; ?>
-                        <p><?= nl2br(htmlspecialchars($noticia['conteudo'])) ?></p>
+                        <p><?= $noticia['conteudo'] ?></p>
 
                     </div>
                     <?php if (!empty($noticia['data_edicao'])): ?>
@@ -70,7 +70,7 @@
             contentDiv.closest('.border').style.overflowY = '';
         }
     }
-    toggleNoticiaContent(1);
+    toggleNoticiaContent(4);
     $('.fa-pager').click(() => {
         if ($('#noticias').hasClass('noticia-expandida')) {
             $('#noticias').removeClass('noticia-expandida');
