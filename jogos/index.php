@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../styles-index.css"/>
-    <link rel="stylesheet" href="../navbar.css"/>
     <link rel="stylesheet" href="sobre-mim.css"/>
   <style>
     body {
@@ -96,7 +95,6 @@
       top: 60px!important;
     }
   </style>
-  <script type="text/javascript" src="https://cdn.diclotrans.com/sdk/v1/51575/0913fc70523dbd6c3077ec92d155957cc8ac57e6/lib.js"></script>
 </head>
 <body>
     <?php include('../navbar.php'); ?>
