@@ -19,13 +19,12 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-<script src="/limitar-largura-img-iframe.js">
+<script src="/limitar-largura-img-iframe.js"></script>
 <link rel="stylesheet" href="sobre-mim.css"/>
-</script>
 <script type="text/javascript" src="/lib/tarteaucitron/tarteaucitron.js"></script>
 <script type="text/javascript">
 tarteaucitron.init({
-  "privacyUrl": "/politica-de-privacidade.php",
+  "privacyUrl": "/politica-de-privacidade.html",
   "hashtag": "#cookies",
   "cookieName": "tarteaucitron",
   "orientation": "bottom",
@@ -39,12 +38,6 @@ tarteaucitron.init({
   "removeCredit": false,
   "moreInfoLink": true,
   "useExternalCss": false,
-  "readmoreLink": "/politica-de-privacidade.php"
+  "readmoreLink": "/politica-de-privacidade.html"
 });
-</script>
-<script>
-    const adBanner = document.querySelector('#ad-banner');
-    if(adBanner) {
-        adBanner.outerHTML = `<a class="${adBanner.className}"href="https://n2oliver.com/loja_virtual" target="_blank">${adBanner.innerHTML}</a>`;
-    }
 </script>

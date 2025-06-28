@@ -14,9 +14,6 @@
             <li class="nav-item nav-c">
                 <a class="nav-link rounded" href="/jogos"><i class="fa-solid fa-puzzle-piece"></i> Jogos Online</a>
             </li>
-            <li class="nav-item nav-d">
-                <span id="ad-banner" class="nav-link rounded"><i class="fa-solid fa-rectangle-ad"></i> Patrocínio</span>
-            </li>
         </ul>
     </div>
 </nav>

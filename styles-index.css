@@ -394,7 +394,7 @@ h1 {
     overflow-y: scroll;
 }
 .noticia-expandida > div > div > .noticia-conteudo{
-    display: flex !important;
+    display: flex;
     flex-direction: row;
 }
 .noticia-expandida img {

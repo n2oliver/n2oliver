@@ -44,7 +44,7 @@
 
                 
             <div class="mt-2 d-flex about-me" style="height: 768px; flex-direction: row">  
-                <div class="container d-flex my-0 quicksand main-content" style="border-bottom-left-radius: 0px; overflow-y: scroll">
+                <div class="container d-flex my-0 quicksand main-content" style="border-bottom-left-radius: 0px">
                     <div>
                         <h1 class="w-100">Sobre o Dev</h1>
                         <div class="bg-white my-1 me-4 rounded shadow" style="background-image: url(img/oliver.jpg); background-position: center; background-size: cover; width: 128px; height: 128px; float: left; border: 2px darkslategray solid">
@@ -137,7 +137,7 @@
                     </div>
                     
                 </div>
-                <?php include("footer.php"); ?>
+                <?php include("noads-footer.php"); ?>
             </div>
         </div>
         <div class="col-lg-2 px-0"></div>
