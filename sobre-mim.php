@@ -137,7 +137,7 @@
                     </div>
                     
                 </div>
-                <?php include("noads-footer.php"); ?>
+                <?php include("footer.php"); ?>
             </div>
         </div>
         <div class="col-lg-2 px-0"></div>

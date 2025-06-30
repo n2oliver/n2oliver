@@ -82,9 +82,9 @@
             $('#sobre-mim').addClass('col-lg-10');
             $('#sobre-mim').addClass('col-xl-10');
             $('#noticias-span-title').css('padding-left', 'initial');
-            $('.main-content').show(1000);
+            $('.main-content').removeClass('d-none');
             $('#noticias').css('position', 'relative');
-            $('#noticias').css('background-color', 'white');
+            $('#noticias').css('background-color', 'transparent');
         } else {
             $('.fa-expand').addClass('d-none');
             $('.fa-pager').removeClass('d-none');
@@ -95,7 +95,7 @@
             $('#sobre-mim').removeClass('col-lg-10');
             $('#sobre-mim').removeClass('col-xl-10');
             $('#noticias-span-title').css('padding-left', 30);
-            $('.main-content').hide(1000);
+            $('.main-content').addClass('d-none');
             $('#noticias').css('position', 'absolute');
             $('#noticias').css('background-color', 'white');
         }
