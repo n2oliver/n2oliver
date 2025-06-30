@@ -20,11 +20,11 @@ h1 {
 }
 
 .product {
-    margin: 20px;
-    padding: 20px;
+    margin: 2px;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 300px;
+    width: auto;
     height: fit-content;
     background-color: #FFF;
 }
@@ -37,6 +37,7 @@ h1 {
     border: solid 1px #0056b3;
     border-radius: 10px;
     padding: 18px;
+    font-size: 12px;
 }
 .product.hightlight {
     width: 720px;
@@ -45,6 +46,7 @@ h1 {
 .product h2 {
     margin-top: 0;
     font-weight: 100;
+    font-size: 18px;
 }
 
 .product img {
@@ -82,6 +84,13 @@ header {
 }
 header h1 {
     margin: 0;
+}
+header img {
+    width: 32px;
+}
+.navbar {
+    position: sticky !important;
+    top: 0px;
 }
 nav ul {
     list-style: none;

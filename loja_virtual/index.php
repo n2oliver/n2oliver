@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+
     <style>
         .subsection-content {
             position: relative !important;
@@ -27,9 +29,9 @@
 <body>
     
 <div class="row">
-        <div class="col-lg-2 px-0"></div>
-        <div class="col-sm-12 col-md-12 col-lg-8 px-0">
+        <div class="col-sm-12 col-md-12 col-lg-10 px-0">
     <header>
+        <?php include("../navbar.php"); ?>
         <span style="font-size: 64px;">Oliv3r Store</span>
         <br>
         <span style="font-size: 18px;">Bem-vindo à nossa loja!</span><br>
@@ -101,7 +103,6 @@
     </section>
     <?php include('../footer.php'); ?>
 </div>
-<div class="col-lg-2 px-0"></div>
 </div>
 </div>
 
