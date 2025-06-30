@@ -5,7 +5,7 @@ $products = array(
         "id" => 1, 
         "name" => "Samsung Galaxy M55", 
         "affiliate_link" => "https://amzn.to/4dWzWAc", 
-        "image_url" => "img\\smartphones\\51hR9ad6OoL._AC_SX425_.jpg",
+        "image_url" => "\\loja_virtual\\img\\smartphones\\51hR9ad6OoL._AC_SX425_.jpg",
         "descricao" =>
             "&bull; 5G <br>
             &bull; Nightography <br>
@@ -23,7 +23,7 @@ $products = array(
         "id" => 2, 
         "name" => "Samsung Galaxy A14 4G , Preto , 64GB", 
         "affiliate_link" => "https://amzn.to/3wQrT7a", 
-        "image_url" => "img\\smartphones\\61MDcMBr7AL._AC_SX569_.jpg",
+        "image_url" => "\\loja_virtual\\img\\smartphones\\61MDcMBr7AL._AC_SX569_.jpg",
         "descricao" =>
             "&bull; 64GB de Memória Interna(*) e 4GB RAM<br>
             &bull; Bateria de 5000mAh<br>
@@ -35,7 +35,7 @@ $products = array(
         "id" => 3, 
         "name" => "Samsung, Smartphone Samsung Galaxy A05 128GB/4GB RAM, Tela 6,7\" Preto", 
         "affiliate_link" => "https://amzn.to/3VeuPnj", 
-        "image_url" => "img\\smartphones\\51VEElKDH9L._AC_SX425_.jpg",
+        "image_url" => "\\loja_virtual\\img\\smartphones\\51VEElKDH9L._AC_SX425_.jpg",
         "descricao" =>
             "&bull; Marca: Samsung<br>
             &bull; Sistema operacional: Android 13.0<br>

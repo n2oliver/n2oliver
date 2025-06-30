@@ -7,6 +7,7 @@
     <meta name="google-adsense-account" content="ca-pub-8124594027670911">
     <title>Oliv3r Store</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/loja_virtual/img/logoOliverStore-live.jpg">
+    <link rel="stylesheet" href="/styles-index.css">
     <link rel="stylesheet" href="/loja_virtual/styles.css">
     <link rel="stylesheet" href="/loja_virtual/collapsible.css">
     <link rel="stylesheet" href="../sobre-mim.css">
@@ -16,6 +17,11 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .subsection-content {
+            position: relative !important;
+        }
+    </style>
 </head>
 
 <body>

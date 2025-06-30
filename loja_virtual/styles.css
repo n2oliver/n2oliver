@@ -78,6 +78,7 @@ header {
     padding: 20px;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
 }
 header h1 {
     margin: 0;

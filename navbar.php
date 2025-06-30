@@ -14,6 +14,9 @@
             <li class="nav-item nav-c">
                 <a class="nav-link rounded" href="/jogos"><i class="fa-solid fa-puzzle-piece"></i> Jogos Online</a>
             </li>
+            <li class="nav-item nav-d">
+                <a class="nav-link rounded" href="/loja_virtual"><i class="fa-solid fa-store"></i> Oliv3r Store</a>
+            </li>
         </ul>
     </div>
 </nav>
