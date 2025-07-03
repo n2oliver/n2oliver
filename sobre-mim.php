@@ -44,7 +44,7 @@
 
                 
             <div class="mt-2 d-flex about-me" style="height: 768px; flex-direction: row">  
-                <div class="container d-flex my-0 quicksand main-content" style="border-bottom-left-radius: 0px">
+                <div class="container d-flex my-0 quicksand main-content" style="border-bottom-left-radius: 0px; height: fit-content">
                     <div>
                         <h1 class="w-100">Sobre o Dev</h1>
                         <div class="bg-white my-1 me-4 rounded shadow" style="background-image: url(img/oliver.jpg); background-position: center; background-size: cover; width: 128px; height: 128px; float: left; border: 2px darkslategray solid">

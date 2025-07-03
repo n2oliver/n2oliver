@@ -48,6 +48,11 @@
 </div>
 
 <script>
+    // Fecha todos os conteúdos abertos antes (opcional)
+    for(let item of $('.noticia-conteudo')){
+        item.style.display = 'none';
+        item.closest('.border').style.overflowY = '';
+    }
     toggleNoticiaContent(4);
     function toggleNoticiaContent(index) {
 
