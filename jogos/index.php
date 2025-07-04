@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../styles-index.css"/>
     <link rel="stylesheet" href="sobre-mim.css"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <style>
     body {
       font-family: sans-serif;
@@ -116,7 +117,6 @@
         </div>
       </a>
     </div>
-
     <div class="game-card">
       <a href="<?= $APP_URL ?>/linhaamarela">
       <div class="bg-white row mb-3 border border-light">
@@ -132,6 +132,14 @@
       </div>
       </a>
     </div>
+
+    <div class="game-card">
+      <div class="bg-white row mb-3 border border-light">
+        <script async="async" data-cfasync="false" src="//pl27079464.profitableratecpm.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
+        <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
+      </div>
+    </div>
+
     
     <!-- Adicione mais jogos aqui -->
   </main>

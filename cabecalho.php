@@ -1,11 +1,12 @@
 <head>
     <?php include('/g-tags.php'); ?>
-
-    <title>Sobre mim | n2oliver</title>
     
+    <title>Sobre mim | n2oliver</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="monetag" content="632aa4380ec2b41d0a8bec05a84390b6">
+    
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,6 @@
    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
      crossorigin="anonymous"></script>
-     <meta name="monetag" content="632aa4380ec2b41d0a8bec05a84390b6">
      <meta name="google-adsense-account" content="ca-pub-8124594027670911">
     <script type="text/javascript" src="/lib/tarteaucitron/tarteaucitron.js"></script>
     <script type="text/javascript">
