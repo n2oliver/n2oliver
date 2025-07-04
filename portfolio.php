@@ -3,10 +3,6 @@
 <?php include("cabecalho.php"); ?>
 
 <body class="oliver-dev">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJG9QZDS"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <?php @include("video-background.php"); ?>
 
     <div class="row">
@@ -27,7 +23,10 @@
                         <div class="carousel-item active" style="overflow-x: hidden">
                             <div class="row" style="height: fit-content; align-content: center;">
                                 <div class="px-0 carousel-item-content" style="height: fit-content">
-                                    <img class="title-image img-fluid" src="img/linhaamarela.png" />
+                                    <img class="title-image img-fluid" src="img/linhaamarela.jpg" />
+                                    <h2 class="title">
+                                        <a href="/jogos/linhaamarela/" role="button" class="btn btn-custom">Combo-Memo</a>
+                                    </h2>
                                 </div>
                             </div>
                         </div>
@@ -84,14 +83,14 @@
                 <div class="text-box align-items-center p-0" data-content-index="0">
                     <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica">
                         <h1>Linha Amarela</h1>
-                        <p>🚨 Os monstros estão voltando. Você está pronto? 👾
-                            No dia 27 de junho de 2025, o jogo Linha Amarela retorna com novos desafios, visuais impactantes e uma jogabilidade viciante no estilo Arkanoid.
-                            🔥 Prepare-se para enfrentar ondas de criaturas brilhantes em um cenário distópico.
-                            🎮 Mostre sua habilidade, quebre as defesas e salve o que restou!
-                            💥 Totalmente gratuito e direto no navegador.
-                            🌐 Compatível com desktop e mobile.
-                            📅 Data de lançamento: 27/06/2025
-                            🔗 Em breve: link para jogar!</p>
+                        <p>🚨 Os monstros estão voltando. Você está pronto? 👾<br>
+                            No dia 27 de junho de 2025, o jogo Linha Amarela retorna com novos desafios, visuais impactantes e uma jogabilidade viciante no estilo Arkanoid.<br>
+                            🔥 Prepare-se para enfrentar ondas de criaturas brilhantes em um cenário distópico.<br>
+                            🎮 Mostre sua habilidade, quebre as defesas e salve o que restou!<br>
+                            💥 Totalmente gratuito e direto no navegador.<br>
+                            🌐 Compatível com desktop e mobile.<br>
+                            📅 Data de lançamento: 27/06/2025<br>
+                            🔗 Link: <a href="/jogos/linhaamarela/">https://n2oliver.com/jogos/linhaamarela/</a></p>
                     </div>
                 </div>
 

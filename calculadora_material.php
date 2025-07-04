@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cobertura de Superfícies com Perdas</title>
+    <?php include('/g-tags.php'); ?>
+    <title>Cobertura de Superfícies com Perdas | n2oliver</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

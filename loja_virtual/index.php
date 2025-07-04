@@ -2,10 +2,11 @@
 <html lang="pt-BR">
 
 <head>
+    <?php include('/g-tags.php'); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-adsense-account" content="ca-pub-8124594027670911">
-    <title>Oliv3r Store</title>
+    <title>Oliv3r Store | n2oliver</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/loja_virtual/img/logoOliverStore-live.jpg">
     <link rel="stylesheet" href="/styles-index.css">
     <link rel="stylesheet" href="/loja_virtual/styles.css">

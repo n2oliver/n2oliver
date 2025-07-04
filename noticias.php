@@ -28,13 +28,13 @@
                 <div id="noticia-content-<?= $noticia['id'] ?>" style="" class="mt-3 noticia-conteudo">
 
                     <?php if (!empty($noticia['resumo'])): ?>
-                        <div class="mt-2 text-muted"><?= $noticia['resumo'] ?></div>
+                        <div class="mt-2 text-dark"><?= $noticia['resumo'] ?></div>
                     <?php endif; ?>
                     <div class="mb-2">
                         <?php if (!empty($noticia['imagem'])): ?>
-                            <img class="w-100" src="<?= htmlspecialchars($noticia['imagem']) ?>" />
+                            <img class="w-100 float-start me-2 my-2" src="<?= htmlspecialchars($noticia['imagem']) ?>" />
                         <?php endif; ?>
-                        <p><?= $noticia['conteudo'] ?></p>
+                        <p class="text-dark"><?= $noticia['conteudo'] ?></p>
 
                     </div>
                     <?php if (!empty($noticia['data_edicao'])): ?>
@@ -53,7 +53,7 @@
         item.style.display = 'none';
         item.closest('.border').style.overflowY = '';
     }
-    toggleNoticiaContent(4);
+    toggleNoticiaContent(5);
     function toggleNoticiaContent(index) {
 
         const contentDiv = document.getElementById('noticia-content-' + index);
