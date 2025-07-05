@@ -31,6 +31,9 @@
                                     <a style="font-size: 24px; color: white; background-image: linear-gradient(magenta, pink, magenta)" class="px-1 rounded-circle mx-1 align-content-center" href="https://www.instagram.com/n2oliver/" target="_blank" rel="noopener noreferrer">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
+                                    <a style="font-size: 24px; color: white; background-image: linear-gradient(black, gray, black)" class="px-1 rounded-circle mx-1 align-content-center" href="https://github.com/n2oliver" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>    

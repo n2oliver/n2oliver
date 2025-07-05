@@ -28,7 +28,7 @@
                 <div id="noticia-content-<?= $noticia['id'] ?>" style="" class="mt-3 noticia-conteudo">
 
                     <?php if (!empty($noticia['resumo'])): ?>
-                        <div class="mt-2 text-dark"><?= $noticia['resumo'] ?></div>
+                        <div class="mt-2 text-dark text-center"><?= $noticia['resumo'] ?></div>
                     <?php endif; ?>
                     <div class="mb-2">
                         <?php if (!empty($noticia['imagem'])): ?>
