@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <?php include('/g-tags.php'); ?>
+  <?php include('../g-tags.php'); ?>
+  <?php include('../richads.php'); ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jogos Online | n2oliver</title>
@@ -10,12 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../styles-index.css"/>
-    <link rel="stylesheet" href="sobre-mim.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../sobre-mim.css"/>
   <style>
     body {
       font-family: sans-serif;
@@ -88,9 +86,25 @@
     .intr-in {
       top: 60px!important;
     }
+    .bootbox.modal {
+      z-index: 9999;
+    }
+    .modal-body {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
+<!-- jQuery (sempre primeiro) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+  <!-- Bootstrap Bundle (JS + Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Bootbox 6 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.min.js"></script>
+
     <?php include('../navbar.php'); ?>
     <script>
       const nav = document.querySelector('nav')
@@ -102,7 +116,9 @@
     <img src="<?=$APP_URL?>/img/logo.png" style="height: 100px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
   </header>
-
+  <div class="container m-auto p-1 col-md-8 bg-success-subtle shadow">
+    <p><br>Se deseja contribuir com nossa plataforma, <a class="text-success bg-light rounded shadow p-1" id="contribuir" href="#" style="white-space: nowrap">clique aqui <i class="fa-solid fa-money-bill-wave"></i></a>!</p>
+  </div>
   <main class="container m-auto col-md-8">
     <div class="game-card">
       <a href="<?= $APP_URL ?>/combo-memo">
@@ -133,22 +149,63 @@
       </a>
     </div>
 
+    
+    <!-- Adicione mais jogos aqui -->
+  </main>
+
+  <div class="container m-auto col-md-8">
     <div class="game-card">
       <div class="bg-white row mb-3 border border-light">
         <script async="async" data-cfasync="false" src="//pl27079464.profitableratecpm.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
         <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
       </div>
     </div>
-
-    
-    <!-- Adicione mais jogos aqui -->
-  </main>
+  </div>
   <?php include("../footer.php"); ?>
     <script>
       const footer = document.querySelector('footer')
       footer.classList.add('col-md-8');
       footer.classList.add('m-auto');
       footer.classList.add('px-0');
+    </script>
+
+    <!-- <a href="https://11745.xml.4armn.com/direct-link?pubid=978902&siteid=366028" target="_blank" rel="noopener noreferrer" style="display: none;" id="hidden-link-richads">.</a>
+    <a href="https://diclotrans.com/redirect?id=52297&auth=c9f9eeacaee3c632d5c482193f6449149c04e73b" target="_blank" rel="noopener noreferrer" style="display: none;" id="hidden-link-adport">.</a>
+    <a href="https://otieu.com/4/9386875" target="_blank" rel="noopener noreferrer" style="display: none;" id="hidden-link-monetag">.</a>
+    <a href="https://www.profitableratecpm.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530" target="_blank" rel="noopener noreferrer" style="display: none;" id="hidden-link-adsterra">.</a> -->
+    <script>
+      window.addEventListener('DOMContentLoaded', ()=>{
+        /* bootbox.confirm({
+          title: '<img width="100px" src="<?= $APP_URL ?>/img/logo.png"/><br>Aviso de anúncio!',
+          buttons: {
+            confirm: {
+                label: 'Sim',
+                className: 'btn-success'
+            },
+            cancel: {
+                label: 'Não',
+                className: 'btn-danger'
+            }
+          },
+          message: 'Permite exibirmos anúncios de patrocínio?',
+          callback: function (result){
+            if(result) {
+              // document.getElementById('hidden-link-richads').click();
+              // document.getElementById('hidden-link-adport').click();
+              document.getElementById('hidden-link-monetag').click();
+              document.getElementById('hidden-link-adsterra').click();
+            }
+          }
+        }); */
+        $('#contribuir').click(()=>{
+          bootbox.alert({
+            title: 'Contribua!',
+            message: 'Escaneie a chave-pix abaixo com seu celular ou envie BTC para o endereço abaixo:' +
+              '<img id="qr-code" src="<?= $APP_URL ?>/linhaamarela/img/qrcode-pix.png"/><br>' +
+              'BTC (segwit): bc1q69y8wuwm0xxwdtnuxttddha9nj460l6tc52vjn'
+          })
+        })
+      });
     </script>
 </body>
 </html>

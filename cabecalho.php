@@ -1,5 +1,6 @@
 <head>
-    <?php include('/g-tags.php'); ?>
+    <?php include('g-tags.php'); ?>
+    <?php include('richads.php'); ?>
     
     <title>Sobre mim | n2oliver</title>
     <meta charset="UTF-8">

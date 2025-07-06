@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php include('/g-tags.php'); ?>
+    <?php include('g-tags.php'); ?>
+    <?php include('richads.php'); ?>
     <title>Cobertura de Superfícies com Perdas | n2oliver</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
 

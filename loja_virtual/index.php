@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 
 <head>
-    <?php include('/g-tags.php'); ?>
+    <?php include('../g-tags.php'); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-adsense-account" content="ca-pub-8124594027670911">
@@ -47,6 +47,18 @@
             </ul>
         </nav>
     </header>
+    <div class="m-auto" style="width: fit-content">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '36908cd1702faba6c183fb82dc5a6c78',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {},
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/36908cd1702faba6c183fb82dc5a6c78/invoke.js"></script>
+    </div>
 
     <section id="destaques">
         <h2 style="margin: 20px">Destaques</h2>
@@ -101,6 +113,18 @@
             <div class="subsection">
                 <div id="smartphones_motorola-container" class="section subsection-content content"></div>
             </div>
+        </div>
+        <div class="m-auto" style="width: fit-content">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '36908cd1702faba6c183fb82dc5a6c78',
+                    'format' : 'iframe',
+                    'height' : 60,
+                    'width' : 468,
+                    'params' : {},
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/36908cd1702faba6c183fb82dc5a6c78/invoke.js"></script>
         </div>
     </section>
     <?php include('../footer.php'); ?>

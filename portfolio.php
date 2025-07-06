@@ -25,7 +25,7 @@
                                 <div class="px-0 carousel-item-content" style="height: fit-content">
                                     <img class="title-image img-fluid" src="img/linhaamarela.jpg" />
                                     <h2 class="title">
-                                        <a href="/jogos/linhaamarela/" role="button" class="btn btn-custom">Combo-Memo</a>
+                                        <a href="/jogos/linhaamarela/" role="button" class="btn btn-custom">Linha Amarela</a>
                                     </h2>
                                 </div>
                             </div>
