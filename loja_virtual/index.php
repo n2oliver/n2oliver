@@ -5,7 +5,9 @@
     <?php include('../g-tags.php'); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-adsense-account" content="ca-pub-8124594027670911">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
+     crossorigin="anonymous"></script>
+     <meta name="google-adsense-account" content="ca-pub-8124594027670911">
     <title>Oliv3r Store | n2oliver</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/loja_virtual/img/logoOliverStore-live.jpg">
     <link rel="stylesheet" href="/styles-index.css">
@@ -24,6 +26,10 @@
     <style>
         .subsection-content {
             position: relative !important;
+        }
+        .ads {
+            max-width: 100% !important;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -47,7 +53,7 @@
             </ul>
         </nav>
     </header>
-    <div class="m-auto" style="width: fit-content">
+    <div class="ads m-auto" style="width: fit-content">
         <script type="text/javascript">
             atOptions = {
                 'key' : '36908cd1702faba6c183fb82dc5a6c78',
@@ -60,24 +66,46 @@
         <script type="text/javascript" src="//www.highperformanceformat.com/36908cd1702faba6c183fb82dc5a6c78/invoke.js"></script>
     </div>
 
-    <section id="destaques">
+    <section id="destaques" class="collapsible">
         <h2 style="margin: 20px">Destaques</h2>
-
-        <div id="destaques-container" class="section"></div>
+        <div id="destaques-container" class="section content d-flex"></div>
     </section>
+    <section id="smartphones" class="collapsible multiple">
+        <h2 style="margin: 20px">Smarphones</h2>
+        <div id="smartphones-container" class="section content d-flex">
+            <h3 style="margin: 20px" class="subsection-title">Xiaomi</h3>
+            <div class="subsection">
+                <div id="smartphones_xiaomi-container" class="section subsection-content content d-flex"></div>
+            </div>
 
+            <h3 style="margin: 20px" class="subsection-title">Samsung</h3>
+            <div class="subsection">
+                <div id="smartphones_samsung-container" class="section subsection-content content d-flex"></div>
+            </div>
+
+            <h3 style="margin: 20px" class="subsection-title">Apple</h3>
+            <div class="subsection">
+                <div id="smartphones_apple-container" class="section subsection-content content d-flex"></div>
+            </div>
+
+            <h3 style="margin: 20px" class="subsection-title">Motorola</h3>
+            <div class="subsection">
+                <div id="smartphones_motorola-container" class="section subsection-content content d-flex"></div>
+            </div>
+        </div>
+    </section>
     <section id="perfumes" class="collapsible multiple">
         <h2 style="margin: 20px">Perfumes</h2>
         
-        <div id="perfumes-container" class="section content">
+        <div id="perfumes-container" class="section content d-flex">
             <h3 style="margin: 20px" class="subsection-title">Para Cavalheiros</h3>
             <div class="subsection">
-                <div id="perfumes_masculinos-container" class="section subsection-content content"></div>
+                <div id="perfumes_masculinos-container" class="section subsection-content content d-flex"></div>
             </div>
 
             <h3 style="margin: 20px" class="subsection-title">Para Damas</h3>
             <div class="subsection">
-                <div id="perfumes_femininos-container" class="section subsection-content content"></div>
+                <div id="perfumes_femininos-container" class="section subsection-content content d-flex"></div>
             </div>
         </div>
     </section>
@@ -91,42 +119,19 @@
         <h2 style="margin: 20px">Cursos</h2>
         <div id="cursos-container" class="section content"></div>
     </section>
-    <section id="smartphones" class="collapsible multiple">
-        <h2 style="margin: 20px">Smarphones</h2>
-        <div id="smartphones-container" class="section content">
-            <h3 style="margin: 20px" class="subsection-title">Xiaomi</h3>
-            <div class="subsection">
-                <div id="smartphones_xiaomi-container" class="section subsection-content content"></div>
-            </div>
-
-            <h3 style="margin: 20px" class="subsection-title">Samsung</h3>
-            <div class="subsection">
-                <div id="smartphones_samsung-container" class="section subsection-content content"></div>
-            </div>
-
-            <h3 style="margin: 20px" class="subsection-title">Apple</h3>
-            <div class="subsection">
-                <div id="smartphones_apple-container" class="section subsection-content content"></div>
-            </div>
-
-            <h3 style="margin: 20px" class="subsection-title">Motorola</h3>
-            <div class="subsection">
-                <div id="smartphones_motorola-container" class="section subsection-content content"></div>
-            </div>
-        </div>
-        <div class="m-auto" style="width: fit-content">
-            <script type="text/javascript">
-                atOptions = {
-                    'key' : '36908cd1702faba6c183fb82dc5a6c78',
-                    'format' : 'iframe',
-                    'height' : 60,
-                    'width' : 468,
-                    'params' : {},
-                };
-            </script>
-            <script type="text/javascript" src="//www.highperformanceformat.com/36908cd1702faba6c183fb82dc5a6c78/invoke.js"></script>
-        </div>
-    </section>
+    
+    <div class="ads m-auto" style="width: fit-content">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '36908cd1702faba6c183fb82dc5a6c78',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {},
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/36908cd1702faba6c183fb82dc5a6c78/invoke.js"></script>
+    </div>
     <?php include('../footer.php'); ?>
 </div>
 </div>
@@ -135,14 +140,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/loja_virtual/script.js"></script>
     <script>
-
-        $(window).on("resize", () => {
-            if (window.screen.width > 768) {
-                $('.hightlight-off').addClass('.hightlight').removeClass('.hightlight-off');
-            } else {
-                $('.hightlight').addClass('.hightlight-off').removeClass('.hightlight');
-            }
-        })
         $("nav>ul>li>a").on("click", () => {
             const sectionId = event.target.dataset.id;
             $(`section[id="${sectionId}"]`).get(0).classList.toggle("active")

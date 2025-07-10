@@ -6,7 +6,6 @@ $products = array(
         "name" => "Ella Radiance Deo Colônia 100ml", 
         "affiliate_link" => "https://www.hinode.com.br/ella-radiance-deo-colonia-100ml/p?id_consultor=68286068", 
         "image_url" => "\\loja_virtual\\img\\perfumes\\157502-800-auto.png", 
-        "hightlight" => true
     ),
     array(
         "id" => 2, 

@@ -19,12 +19,8 @@ $(document).ready(function(){
                 data.forEach(function(product) {
                     if(product.unavailable) return;
                     
-                    hightlight = "";
-                    if(product.hightlight && window.screen.width > 768) {
-                        hightlight = " hightlight";
-                    } 
                     $("#" + section + "-container").append(
-                        '<div class="product'+ hightlight + '">' +
+                        '<div class="product">' +
                         '<h2>' + product.name + '</h2>' +
                         '<img src="' + product.image_url + '" alt="' + product.name + '"><br>' +
                         (product.descricao ? '<div class="descricao"><b>Sobre este produto:</b><br><br>' + product.descricao  + '</div>' : '') + '<br>' +

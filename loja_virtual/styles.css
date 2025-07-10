@@ -39,10 +39,6 @@ h1 {
     padding: 18px;
     font-size: 12px;
 }
-.product.hightlight {
-    width: 720px;
-}
-
 .product h2 {
     margin-top: 0;
     font-weight: 100;
@@ -55,10 +51,6 @@ h1 {
     margin-bottom: 10px;
 }
 
-.product.hightlight img {
-    width: auto;
-    height: 450px;
-}
 
 .product a {
     display: inline-block;
@@ -171,12 +163,6 @@ section>h2:hover {
     flex-direction: row;
     overflow-x: 0 !important;
 }
-#destaques-container {
-    overflow-x: scroll;
-    justify-content: center;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
 footer a {
     color: white;
 }
@@ -189,20 +175,5 @@ footer a:hover {
     }
     .section {
         display: block;
-    }
-    
-    #destaques-container {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: 0;
-    }
-    .product:not(.hightlight) img {
-        width: 100%;
-        height: auto;
-    }
-    .product:not(.hightlight) {
-        min-width: 80%;
-        height: fit-content;
     }
 }

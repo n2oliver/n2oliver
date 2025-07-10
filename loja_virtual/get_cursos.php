@@ -6,7 +6,6 @@ $products = array(
         "name" => "Especialista Em Bentô Cake", 
         "affiliate_link" => "https://go.hotmart.com/D93217684L?dp=1", 
         "image_url" => "\\loja_virtual\\img\\cursos\\bento2.png", 
-        "hightlight" => true
     ),
     array(
         "id" => 2, 

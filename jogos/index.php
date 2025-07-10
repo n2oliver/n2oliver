@@ -14,6 +14,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../styles-index.css"/>
     <link rel="stylesheet" href="../sobre-mim.css"/>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
+     crossorigin="anonymous"></script>
+     <meta name="google-adsense-account" content="ca-pub-8124594027670911">
   <style>
     body {
       font-family: sans-serif;
@@ -201,7 +204,8 @@
           bootbox.alert({
             title: 'Contribua!',
             message: 'Escaneie a chave-pix abaixo com seu celular ou envie BTC para o endereço abaixo:' +
-              '<img id="qr-code" src="<?= $APP_URL ?>/linhaamarela/img/qrcode-pix.png"/><br>' +
+              '<img class="w-100" id="qr-code" src="<?= $APP_URL ?>/linhaamarela/img/qrcode-pix.png"/><br>' +
+              'Chave-pix: silva.liver@gmail.com<br>' +
               'BTC (segwit): bc1q69y8wuwm0xxwdtnuxttddha9nj460l6tc52vjn'
           })
         })

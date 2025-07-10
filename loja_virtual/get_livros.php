@@ -6,7 +6,6 @@ $products = array(
         "name" => "Lucro No Instagram", 
         "affiliate_link" => "https://go.hotmart.com/F93196255C?dp=1", 
         "image_url" => "\\loja_virtual\\img\\livros\\INSTAGRAM2.jpg",
-        "hightlight" => true
     ),
     array(
         "id" => 2, 
