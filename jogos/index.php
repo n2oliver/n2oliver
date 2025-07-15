@@ -3,7 +3,6 @@
 <html lang="pt-BR">
 <head>
   <?php include('../g-tags.php'); ?>
-  <?php include('../richads.php'); ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jogos Online | n2oliver</title>
@@ -95,20 +94,27 @@
     .modal-body {
       text-align: center;
     }
+    .donation-section {
+      background-color: #e9ecef;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 2rem;
+      text-align: center;
+      color: #343a40;
+    }
   </style>
 </head>
 <body>
-<!-- jQuery (sempre primeiro) -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 
   <!-- Bootstrap Bundle (JS + Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Bootbox 6 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.min.js"></script>
-
+  <div class="m-auto p-1 col-md-8">
     <?php include('../navbar.php'); ?>
+  </div>
     <script>
       const nav = document.querySelector('nav')
       nav.classList.add('col-md-8');
@@ -119,9 +125,6 @@
     <img src="<?=$APP_URL?>/img/logo.png" style="height: 100px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
   </header>
-  <div class="container m-auto p-1 col-md-8 bg-success-subtle shadow">
-    <p><br>Se deseja contribuir com nossa plataforma, <a class="text-success bg-light rounded shadow p-1" id="contribuir" href="#" style="white-space: nowrap">clique aqui <i class="fa-solid fa-money-bill-wave"></i></a>!</p>
-  </div>
   <main class="container m-auto col-md-8">
     <div class="game-card">
       <a href="<?= $APP_URL ?>/combo-memo">
@@ -157,59 +160,19 @@
   </main>
 
   <div class="container m-auto col-md-8">
-    <div class="game-card">
-      <div class="bg-white row mb-3 border border-light">
-        <script async="async" data-cfasync="false" src="//pl27079464.profitableratecpm.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
-        <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
-      </div>
+    <div class="donation-section">
+      <h3>Gostou dos jogos?</h3>
+      <p>Seu apoio ajuda a manter o site no ar e a desenvolver novos projetos. Considere fazer uma doação para nos ajudar a continuar criando conteúdo gratuito e divertido para todos!</p>
+      <p><strong>Chave PIX:</strong> silva.liver@gmail.com</p>
     </div>
   </div>
+
   <?php include("../footer.php"); ?>
     <script>
       const footer = document.querySelector('footer')
       footer.classList.add('col-md-8');
       footer.classList.add('m-auto');
       footer.classList.add('px-0');
-    </script>
-
-    <!-- <a href="https://11745.xml.4armn.com/direct-link?pubid=978902&siteid=366028" target="_blank" rel="noopener noreferrer" style="display: none;" id="hidden-link-richads">.</a>
-    <a href="https://diclotrans.com/redirect?id=52297&auth=c9f9eeacaee3c632d5c482193f6449149c04e73b" target="_blank" rel="noopener noreferrer" style="display: none;" id="hidden-link-adport">.</a>
-    <a href="https://otieu.com/4/9386875" target="_blank" rel="noopener noreferrer" style="display: none;" id="hidden-link-monetag">.</a>
-    <a href="https://www.profitableratecpm.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530" target="_blank" rel="noopener noreferrer" style="display: none;" id="hidden-link-adsterra">.</a> -->
-    <script>
-      window.addEventListener('DOMContentLoaded', ()=>{
-        /* bootbox.confirm({
-          title: '<img width="100px" src="<?= $APP_URL ?>/img/logo.png"/><br>Aviso de anúncio!',
-          buttons: {
-            confirm: {
-                label: 'Sim',
-                className: 'btn-success'
-            },
-            cancel: {
-                label: 'Não',
-                className: 'btn-danger'
-            }
-          },
-          message: 'Permite exibirmos anúncios de patrocínio?',
-          callback: function (result){
-            if(result) {
-              // document.getElementById('hidden-link-richads').click();
-              // document.getElementById('hidden-link-adport').click();
-              document.getElementById('hidden-link-monetag').click();
-              document.getElementById('hidden-link-adsterra').click();
-            }
-          }
-        }); */
-        $('#contribuir').click(()=>{
-          bootbox.alert({
-            title: 'Contribua!',
-            message: 'Escaneie a chave-pix abaixo com seu celular ou envie BTC para o endereço abaixo:' +
-              '<img class="w-100" id="qr-code" src="<?= $APP_URL ?>/linhaamarela/img/qrcode-pix.png"/><br>' +
-              'Chave-pix: silva.liver@gmail.com<br>' +
-              'BTC (segwit): bc1q69y8wuwm0xxwdtnuxttddha9nj460l6tc52vjn'
-          })
-        })
-      });
     </script>
 </body>
 </html>

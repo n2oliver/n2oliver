@@ -2,7 +2,6 @@
 <html>
 <head>
     <?php include('g-tags.php'); ?>
-    <?php include('richads.php'); ?>
     <title>Cobertura de Superfícies com Perdas | n2oliver</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
 
@@ -19,11 +18,11 @@
 </head>
 
 <body>
-<?php @include("video-background.php"); ?>
+<?php include("video-background.php"); ?>
 
     <div class="container col-md-8 col-sm-12 col-lg-8">
         <div class="row">
-            <?php @include("navbar.php"); ?>
+            <?php include("navbar.php"); ?>
         </div>
         <h1>Cobertura de Superfícies com Perdas</h1>
         

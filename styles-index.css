@@ -76,6 +76,17 @@ body.oliver-dev>* {
     color: white !important;
 }
 
+.navbar .nav-e a:hover {
+    background-color: lightcyan !important;
+    color: black !important;
+}
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-item a {
+    white-space: nowrap;
+}
 /* Header Image */
 header img {
     width: 100%;

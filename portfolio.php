@@ -3,7 +3,7 @@
 <?php include("cabecalho.php"); ?>
 
 <body class="oliver-dev">
-    <?php @include("video-background.php"); ?>
+    <?php include("video-background.php"); ?>
 
     <div class="row">
         <div class="col-lg-2 px-0"></div>
@@ -33,7 +33,7 @@
                         <div class="carousel-item" style="overflow-x: hidden">
                             <div class="row" style="height: 100%">
                                 <div class="px-0 carousel-item-content">
-                                    <img class="title-image img-fluid" class="title-image" src="img/combo-memo.png" />
+                                    <img class="title-image img-fluid" src="img/combo-memo.png" />
                                     <h2 class="title">
                                         <a href="/jogos/combo-memo/" role="button" class="btn btn-custom">Combo-Memo</a>
                                     </h2>
@@ -43,7 +43,7 @@
                         <div class="carousel-item">
                             <div class="row" style="height: 100%">
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
-                                    <img class="title-image img-fluid" class="title-image" src="img/calculadoras-pediatricas.jpg" />
+                                    <img class="title-image img-fluid" src="img/calculadoras-pediatricas.jpg" />
                                     <h2 class="title">
                                         <a href="https://whitebook.pebmed.com.br/planos" role="button" class="btn btn-custom">Decisões Clínicas</a>
                                     </h2>
@@ -53,7 +53,7 @@
                         <div class="carousel-item">
                             <div class="row">
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
-                                <img class="title-image img-fluid" class="title-image" src="img/loja_virtual.jpg"/>
+                                <img class="title-image img-fluid" src="img/loja_virtual.jpg"/>
                                     <h2 class="title">
                                         <a href="/loja_virtual" role="button" class="btn btn-custom">Loja Virtual</a>
                                     </h2>
@@ -63,7 +63,7 @@
                         <div class="carousel-item" style="overflow-x: hidden">
                             <div class="row">
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
-                                    <img class="title-image img-fluid" class="title-image" src="img/calculadoramateriais.jpg"/>
+                                    <img class="title-image img-fluid" src="img/calculadoramateriais.jpg"/>
                                     <h2 class="title">
                                         <a href="/calculadora_material.php" role="button" class="btn btn-custom">Calculadora de Aplicação de Materiais</a>
                                     </h2>

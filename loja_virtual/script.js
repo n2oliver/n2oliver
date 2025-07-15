@@ -19,15 +19,32 @@ $(document).ready(function(){
                 data.forEach(function(product) {
                     if(product.unavailable) return;
                     
-                    $("#" + section + "-container").append(
-                        '<div class="product">' +
-                        '<h2>' + product.name + '</h2>' +
-                        '<img src="' + product.image_url + '" alt="' + product.name + '"><br>' +
-                        (product.descricao ? '<div class="descricao"><b>Sobre este produto:</b><br><br>' + product.descricao  + '</div>' : '') + '<br>' +
-                        '<a href="' + product.affiliate_link + '" target="_blank">Ver detalhes</a>' +
-                        '</div>'
-                    );
+                    createProductCard(product).appendTo(`#${section}-container`)
                 });
             }
         });
 });
+function createProductCard(product) {
+    const productDiv = $('<div>').addClass('product').attr('data-id', product.id);
+
+    // Cria um wrapper para a imagem e a descrição
+    const imageWrapper = $('<div>').addClass('product-image-wrapper');
+    const image = $('<img>').attr('src', product.image_url).attr('alt', product.name);
+    imageWrapper.append(image);
+
+    // Adiciona a descrição dentro do wrapper se ela existir
+    if (product.descricao) {
+        const descriptionDiv = $('<div>').addClass('product-description').html(product.descricao);
+        imageWrapper.append(descriptionDiv);
+    }
+
+    const name = $('<h3>').text(product.name);
+    const link = $('<a>').attr('href', product.affiliate_link).attr('target', '_blank').addClass('buy-button').text('Ver na Loja');
+
+    if (product.unavailable) {
+        link.text('Indisponível').addClass('unavailable').attr('href', '#');
+    }
+
+    productDiv.append(imageWrapper, name, link);
+    return productDiv;
+}

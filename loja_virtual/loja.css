@@ -1,0 +1,18 @@
+/* Estilos para a Oliv3r Store */
+.store-header .store-title {
+    font-size: 64px;
+}
+
+.store-header .store-subtitle {
+    font-size: 18px;
+}
+
+.store-header .store-welcome-text {
+    font-size: 18px;
+    color: lightgreen;
+    font-weight: 300;
+}
+
+.section-title {
+    margin: 20px;
+}

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/styles-index.css">
     <link rel="stylesheet" href="/loja_virtual/styles.css">
     <link rel="stylesheet" href="/loja_virtual/collapsible.css">
+    <link rel="stylesheet" href="/loja_virtual/loja.css">
     <link rel="stylesheet" href="../sobre-mim.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,74 +37,65 @@
 
 <body>
     
+
+
 <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-10 px-0">
-    <header>
+    <header class="store-header">
         <?php include("../navbar.php"); ?>
-        <span style="font-size: 64px;">Oliv3r Store</span>
+        <span class="store-title">Oliv3r Store</span>
         <br>
-        <span style="font-size: 18px;">Bem-vindo à nossa loja!</span><br>
-        <span style="font-size: 18px; color: lightgreen; font-weight: 300">Explore Oliv3r Store, <br>uma variedade de livros, fragrâncias <br>e cursos online em um único lugar.</span>
+        <span class="store-subtitle">Bem-vindo à nossa loja!</span><br>
+        <span class="store-welcome-text">Explore Oliv3r Store, <br>uma variedade de livros, fragrâncias <br>e cursos online em um único lugar.</span>
         <nav>
             <ul>
                 <li><a href="#perfumes" data-id="perfumes">Perfumes</a></li>
+                <li><a href="#destaques" data-id="destaques">Destaques</a></li>
                 <li><a href="#livros" data-id="livros">Livros</a></li>
                 <li><a href="#cursos" data-id="cursos">Cursos</a></li>
                 <li><a href="#smartphones" data-id="smartphones">Smartphones</a></li>
             </ul>
         </nav>
-    </header>
-    <div class="ads m-auto" style="width: fit-content">
-        <script type="text/javascript">
-            atOptions = {
-                'key' : '36908cd1702faba6c183fb82dc5a6c78',
-                'format' : 'iframe',
-                'height' : 60,
-                'width' : 468,
-                'params' : {},
-            };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/36908cd1702faba6c183fb82dc5a6c78/invoke.js"></script>
-    </div>
+        </header>
 
     <section id="destaques" class="collapsible">
-        <h2 style="margin: 20px">Destaques</h2>
+        <h2 class="section-title">Destaques</h2>
         <div id="destaques-container" class="section content d-flex"></div>
     </section>
     <section id="smartphones" class="collapsible multiple">
-        <h2 style="margin: 20px">Smarphones</h2>
+        <h2 class="section-title">Smarphones</h2>
         <div id="smartphones-container" class="section content d-flex">
-            <h3 style="margin: 20px" class="subsection-title">Xiaomi</h3>
+            <h3 class="section-title subsection-title">Xiaomi</h3>
             <div class="subsection">
                 <div id="smartphones_xiaomi-container" class="section subsection-content content d-flex"></div>
             </div>
 
-            <h3 style="margin: 20px" class="subsection-title">Samsung</h3>
+            <h3 class="section-title subsection-title">Samsung</h3>
             <div class="subsection">
                 <div id="smartphones_samsung-container" class="section subsection-content content d-flex"></div>
             </div>
 
-            <h3 style="margin: 20px" class="subsection-title">Apple</h3>
+            <h3 class="section-title subsection-title">Apple</h3>
             <div class="subsection">
                 <div id="smartphones_apple-container" class="section subsection-content content d-flex"></div>
             </div>
 
-            <h3 style="margin: 20px" class="subsection-title">Motorola</h3>
+            <h3 class="section-title subsection-title">Motorola</h3>
             <div class="subsection">
                 <div id="smartphones_motorola-container" class="section subsection-content content d-flex"></div>
             </div>
         </div>
     </section>
     <section id="perfumes" class="collapsible multiple">
-        <h2 style="margin: 20px">Perfumes</h2>
+        <h2 class="section-title">Perfumes</h2>
         
         <div id="perfumes-container" class="section content d-flex">
-            <h3 style="margin: 20px" class="subsection-title">Para Cavalheiros</h3>
+            <h3 class="section-title subsection-title">Para Cavalheiros</h3>
             <div class="subsection">
                 <div id="perfumes_masculinos-container" class="section subsection-content content d-flex"></div>
             </div>
 
-            <h3 style="margin: 20px" class="subsection-title">Para Damas</h3>
+            <h3 class="section-title subsection-title">Para Damas</h3>
             <div class="subsection">
                 <div id="perfumes_femininos-container" class="section subsection-content content d-flex"></div>
             </div>
@@ -111,28 +103,16 @@
     </section>
 
     <section id="livros" class="collapsible">
-        <h2 style="margin: 20px">Livros</h2>
+        <h2 class="section-title">Livros</h2>
         <div id="livros-container" class="section content"></div>
     </section>
 
     <section id="cursos" class="collapsible">
-        <h2 style="margin: 20px">Cursos</h2>
+        <h2 class="section-title">Cursos</h2>
         <div id="cursos-container" class="section content"></div>
     </section>
-    
-    <div class="ads m-auto" style="width: fit-content">
-        <script type="text/javascript">
-            atOptions = {
-                'key' : '36908cd1702faba6c183fb82dc5a6c78',
-                'format' : 'iframe',
-                'height' : 60,
-                'width' : 468,
-                'params' : {},
-            };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/36908cd1702faba6c183fb82dc5a6c78/invoke.js"></script>
-    </div>
     <?php include('../footer.php'); ?>
+
 </div>
 </div>
 </div>

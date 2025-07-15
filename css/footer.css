@@ -1,0 +1,19 @@
+/* Estilos do Rodapé */
+.site-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 24px;
+    background-image: linear-gradient(transparent, #000000);
+}
+
+.site-footer .footer-logo {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 32px;
+}
+
+.site-footer .footer-text-small {
+    font-size: 9px;
+}

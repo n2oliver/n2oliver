@@ -1,12 +1,9 @@
 <head>
     <?php include('g-tags.php'); ?>
-    <?php include('richads.php'); ?>
-    
     <title>Sobre mim | n2oliver</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer-when-downgrade" />
-    <meta name="monetag" content="632aa4380ec2b41d0a8bec05a84390b6">
     
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
