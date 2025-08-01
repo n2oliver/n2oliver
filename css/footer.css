@@ -6,7 +6,7 @@
     text-align: center;
     color: white;
     padding: 24px;
-    background-image: linear-gradient(transparent, #000000);
+    background-image: linear-gradient(darkslategray, #000000);
 }
 
 .site-footer .footer-logo {

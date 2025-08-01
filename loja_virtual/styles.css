@@ -4,13 +4,14 @@ body {
     padding: 0;
     background-color: #090909;
     background-image: url(img/bg.jpeg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat
+    background-attachment: fixed;
+    background-size: 100vw;
+    background-repeat: repeat;
 }
 
 h1 {
     text-align: center;
+    color: white !important;
 }
 
 #products-container {
@@ -102,6 +103,9 @@ header {
 }
 header h1 {
     margin: 0;
+}
+header p {
+    color: white !important
 }
 header img {
     width: 32px;

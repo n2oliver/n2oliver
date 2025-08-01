@@ -155,6 +155,33 @@
       </a>
     </div>
 
+    <div class="game-card">
+      <a href="<?= $APP_URL ?>/caca-palavras">
+        <div class="bg-white row mb-3 border border-light">
+          <h2 class="rounded-left border border-warning border-right-0">Caça-Palavras</h2>
+          <img src="/jogos/img/a.jpg" class="p-0 w-50 border border-light" alt="Ícone do jogo Caça-Palavras" style="object-fit: cover; background-color: #007bff;"/>
+          <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "/jogos/caca-palavras";'>
+            <p>Um clássico caça-palavras para testar sua atenção e vocabulário.</p>
+            <div class="link btn btn-danger my-2">Jogar
+            </div>
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <div class="game-card">
+      <a href="<?= $APP_URL ?>/palavras-cruzadas">
+        <div class="bg-white row mb-3 border border-light">
+          <h2 class="rounded-left border border-warning border-right-0">Palavras Cruzadas</h2>
+          <img src="/jogos/img/flat-crosswords.png" class="p-0 w-50 border border-light" alt="Ícone do jogo Palavras Cruzadas" style="object-fit: cover; background-color: #007bff;"/>
+          <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "/jogos/palavras-cruzadas";'>
+            <p>Desafie seu conhecimento com este quebra-cabeça de palavras.</p>
+            <div class="link btn btn-danger my-2">Jogar
+            </div>
+          </span>
+        </div>
+      </a>
+    </div>
     
     <!-- Adicione mais jogos aqui -->
   </main>

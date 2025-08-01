@@ -1,5 +1,5 @@
 <?php
-include('DBSessionHandler.php');
+include(__DIR__.'/DBSessionHandler.php');
 try {
     $pdo = new PDO(
         "mysql:host=" . getenv('DB_HOST') . 
@@ -18,5 +18,5 @@ try {
     session_set_save_handler($handler, true);
     session_start();
 } catch (PDOException $e) {
-    echo "Erro ao conectar ao banco!" . $e;
+    echo "Erro ao conectar ao banco!" . "<br>". __DIR__ ."<br>" . $e;
 }

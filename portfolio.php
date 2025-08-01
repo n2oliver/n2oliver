@@ -97,7 +97,7 @@
                 <div class="text-box p-0" data-content-index="1" style="display: none">
                     <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica">
                         <h1>Combo-Memo</h1>
-                        <p>Jogo da memória totalmente open-source e gratuito online</p>
+                        <p>Um jogo da memória clássico, desenvolvido com JavaScript puro e CSS para ser leve e divertido. O projeto inclui animações dinâmicas, sistema de combos e comemorações, oferecendo uma experiência de jogo engajante e totalmente gratuita no navegador.</p>
                     </div>
                 </div>
 
@@ -112,7 +112,7 @@
                 <div class="text-box p-0" data-content-index="3" style="display: none">
                     <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica">
                         <h1>Oliv3r Store - Loja Virtual</h1>
-                        <p>Oliv3r Store é uma loja virtual que oferece uma variedade de produtos, incluindo perfumes, livros, cursos e tecnologia. Navegue pela nossa seleção e descubra produtos que combinam com o seu estilo e interesse.</p>
+                        <p>A Oliv3r Store é um espaço de afiliados onde apresento uma curadoria pessoal de produtos que uso e recomendo. O foco é oferecer valor real, com descrições originais e uma seleção cuidadosa de tecnologia, livros e cursos, alinhados aos temas de desenvolvimento e bem-estar do site.</p>
                     </div>
                 </div>
 

@@ -1,6 +1,6 @@
 <head>
     <?php include('g-tags.php'); ?>
-    <title>Sobre mim | n2oliver</title>
+    <title>n2oliver</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer-when-downgrade" />
