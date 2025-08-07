@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer-when-downgrade" />
-    
+    <meta name="pushsdk" content="322d99f94878aedd7de1ac412ba0561c">
+
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,4 +82,9 @@
     });
     (tarteaucitron.job = tarteaucitron.job || []).push('gcmadstorage');
     </script>
+    <script>
+      var Back_Button_Zone = 9682995;
+      var Domain_TB = "rel-s.com";
+    </script>
+    <script async src="https://desenteir.com/3d7/fa6a1/reverse.min.js?sf=1"></script>
 </head>

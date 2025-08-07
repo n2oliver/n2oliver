@@ -19,6 +19,11 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
      crossorigin="anonymous"></script>
      <meta name="google-adsense-account" content="ca-pub-8124594027670911">
+     <script>
+          var Back_Button_Zone = 9682995;
+          var Domain_TB = "rel-s.com";
+    </script>
+    <script async src="https://desenteir.com/3d7/fa6a1/reverse.min.js?sf=1"></script>
   <style>
     body {
       font-family: sans-serif;
@@ -152,6 +157,33 @@
     </div>
     </a>
   </div>
+    <div class="text-light mx-auto mt-3 col-md-8 text-center">
+      Anúncios
+    </div>
+    <div class="mx-auto mt-3 col-md-8 text-center">
+
+      <script type="text/javascript">
+        atOptions = {
+          'key' : 'b5463c03cd36f2b207d3e311906ba716',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"></script>
+
+      <script type="text/javascript">
+        atOptions = {
+          'key' : 'b5463c03cd36f2b207d3e311906ba716',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"></script>
+    </div>
   <main class="container m-auto col-md-8">
     <div class="game-card">
       <a href="<?= $APP_URL ?>/combo-memo">
@@ -197,6 +229,14 @@
     
     <!-- Adicione mais jogos aqui -->
   </main>
+
+  <div class="text-light mx-auto mt-3 col-md-8 text-center">
+    Anúncios
+  </div>
+  <div class="container m-auto col-md-8 text-light">
+    <script async="async" data-cfasync="false" src="//pl27079464.profitableratecpm.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
+    <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
+  </div>
 
   <div class="container m-auto col-md-8">
     <div class="donation-section">
