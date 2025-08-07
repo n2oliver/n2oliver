@@ -13,6 +13,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../styles-index.css"/>
     <link rel="stylesheet" href="../sobre-mim.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
      crossorigin="anonymous"></script>
      <meta name="google-adsense-account" content="ca-pub-8124594027670911">
@@ -55,16 +58,14 @@
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
-      height: fit-content;
+      height: 100vh;
     }
     .game-card h2 {
       margin: 0.5rem 0;
       font-family: 'Ubuntu';
       -webkit-text-stroke: 1px #000;
       color: yellow;
-      width: 50%;
       text-shadow: 3px 3px 3px darkslategray;
-      background-image: linear-gradient(#fff, #ddd, #fff)
     }
     .game-card a {
       text-decoration: none;
@@ -75,8 +76,9 @@
     }
     .game-card > a > div {
       padding: 10px;
-      background-image: radial-gradient(white, darkslategray);
       align-items: end;
+      height: 100vh;
+      background-position: center !important;
     }
     .game-card > a > div > span {
       background-image: radial-gradient(slategray, darkslategray);
@@ -103,9 +105,19 @@
       text-align: center;
       color: #343a40;
     }
+    .success {
+      background: linear-gradient(135deg,#54a554,#77f554);
+    }
   </style>
 </head>
 <body>
+  <script>
+    Toastify({
+        text: 'Clique em um jogo para jogar!',
+        duration: 3000,
+        className: 'success',
+    }).showToast();
+  </script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 
@@ -125,12 +137,27 @@
     <img src="<?=$APP_URL?>/img/logo.png" style="height: 100px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
   </header>
+  <div class="game-card mx-auto mt-3 col-md-8 text-center">
+    <a href="<?= $APP_URL ?>/linhaamarela">
+    <div class="bg-white row mb-3 border border-light"
+      style="background: url(<?=$APP_URL?>/linhaamarela/img/fundo.png)">
+      <h2 class="rounded-left">Linha Amarela</h2> 
+      <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "#";'>
+        <p>Divirta-se eliminando os invasores, antes que eles desçam e eliminem a terra!<br>
+        <small>Um território, uma linha, um herói: você.</small></p>
+        <div class="link btn btn-danger my-2">
+          Jogar
+        </div>
+      </span>
+    </div>
+    </a>
+  </div>
   <main class="container m-auto col-md-8">
     <div class="game-card">
       <a href="<?= $APP_URL ?>/combo-memo">
-        <div class="bg-white row mb-3 border border-light">
-          <h2 class="rounded-left border border-warning border-right-0">Combo-Memo</h2>
-          <img src="../img/combo-memo.png" class="p-0 w-50 border border-light"/>
+        <div class="bg-white row mb-3 border border-light"
+          style="background: url(../img/combo-memo.png)">
+          <h2 class="rounded-left">Combo-Memo</h2>
           <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "/jogos/combo-memo";'>
             <p>Um divertido jogo da memória com combinações!</p>
             <div class="link btn btn-danger my-2">Jogar
@@ -139,27 +166,12 @@
         </div>
       </a>
     </div>
-    <div class="game-card">
-      <a href="<?= $APP_URL ?>/linhaamarela">
-      <div class="bg-white row mb-3 border border-light">
-        <h2 class="rounded-left border border-warning border-right-0">Linha Amarela</h2> 
-        <img src="../img/linhaamarela.jpg" class="p-0 w-50 border border-light"/>
-        <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "#";'>
-          <p>Divirta-se eliminando os invasores, antes que eles desçam e eliminem a terra!<br>
-          <small>Um território, uma linha, um herói: você.</small></p>
-          <div class="link btn btn-danger my-2">
-            Jogar
-          </div>
-        </span>
-      </div>
-      </a>
-    </div>
 
     <div class="game-card">
       <a href="<?= $APP_URL ?>/caca-palavras">
-        <div class="bg-white row mb-3 border border-light">
-          <h2 class="rounded-left border border-warning border-right-0">Caça-Palavras</h2>
-          <img src="/jogos/img/a.jpg" class="p-0 w-50 border border-light" alt="Ícone do jogo Caça-Palavras" style="object-fit: cover; background-color: #007bff;"/>
+        <div class="bg-white row mb-3 border border-light"
+          style="background: url(/jogos/img/a.jpg)">
+          <h2 class="rounded-left">Caça-Palavras</h2>
           <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "/jogos/caca-palavras";'>
             <p>Um clássico caça-palavras para testar sua atenção e vocabulário.</p>
             <div class="link btn btn-danger my-2">Jogar
@@ -171,9 +183,9 @@
 
     <div class="game-card">
       <a href="<?= $APP_URL ?>/palavras-cruzadas">
-        <div class="bg-white row mb-3 border border-light">
-          <h2 class="rounded-left border border-warning border-right-0">Palavras Cruzadas</h2>
-          <img src="/jogos/img/flat-crosswords.png" class="p-0 w-50 border border-light" alt="Ícone do jogo Palavras Cruzadas" style="object-fit: cover; background-color: #007bff;"/>
+        <div class="bg-white row mb-3 border border-light"
+          style="background: url(/jogos/img/flat-crosswords.png)">
+          <h2 class="rounded-left">Palavras Cruzadas</h2>
           <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "/jogos/palavras-cruzadas";'>
             <p>Desafie seu conhecimento com este quebra-cabeça de palavras.</p>
             <div class="link btn btn-danger my-2">Jogar
