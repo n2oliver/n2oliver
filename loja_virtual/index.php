@@ -126,6 +126,7 @@
             color: #ccc;
         }
     </style>
+    <script type='text/javascript' src='//pl27369832.profitableratecpm.com/f0/b1/79/f0b17922dcf7861be67a02cba8a9b7ee.js'></script>
 </head>
 
 <body>
@@ -175,6 +176,15 @@
         <div class="col-lg-2"></div>
     </div>
 
+
+    <div class="text-light mx-auto mt-3 col-md-8 text-center">
+        Anúncios
+    </div>
+    <div class="container m-auto col-md-8 text-light">
+        <script async="async" data-cfasync="false" src="//pl27079464.profitableratecpm.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
+        <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
+    </div>
+    <br>
     <div class="row">
         <div class="col-lg-2 px-0"></div>
         <div class="col-sm-12 col-md-8 col-lg-8 px-0">

@@ -44,7 +44,7 @@
         <p>Arraste para selecionar as palavras.</p>
     </header>
 
-    <main class="game-container col-md-10">
+    <main class="game-container col-md-10 notranslate" translate="no">
         <div class="sidebar col-md-6">
             <h2>Palavras para Encontrar</h2>
             <ul id="word-list">

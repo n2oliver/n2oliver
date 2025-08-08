@@ -24,7 +24,7 @@
         <h1>Palavras Cruzadas</h1>
     </header>
 
-    <main class="game-container">
+    <main class="game-container notranslate" translate="no">
         <div id="crossword-grid" class="grid-container">
             <!-- A grade será gerada aqui via JS -->
         </div>
