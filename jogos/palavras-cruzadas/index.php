@@ -60,6 +60,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   <script type='text/javascript' src='//pl27371375.profitableratecpm.com/af/e7/3c/afe73c790e73cadb95ef255203cc5f61.js'></script>
   <script type="text/javascript" data-cfasync="false" src="/popads-monetization.js"></script>
+  <script type='text/javascript' src='//witnessportfoliolobes.com/f0/b1/79/f0b17922dcf7861be67a02cba8a9b7ee.js'></script>
   <script type='text/javascript' src='//pl27369832.profitableratecpm.com/f0/b1/79/f0b17922dcf7861be67a02cba8a9b7ee.js'></script>
 </head>
 <body style="backdrop-filter: brightness(.2)">
