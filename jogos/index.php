@@ -24,8 +24,8 @@
           var Domain_TB = "rel-s.com";
     </script>
     <script async src="https://desenteir.com/3d7/fa6a1/reverse.min.js?sf=1"></script>
-    <script type='text/javascript' src='//witnessportfoliolobes.com/f0/b1/79/f0b17922dcf7861be67a02cba8a9b7ee.js'></script>
-    <script type='text/javascript' src='//pl27369832.profitableratecpm.com/f0/b1/79/f0b17922dcf7861be67a02cba8a9b7ee.js'></script>
+    
+    
   <style>
     body {
       font-family: sans-serif;
