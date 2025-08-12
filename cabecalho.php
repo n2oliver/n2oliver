@@ -87,6 +87,4 @@
       var Domain_TB = "rel-s.com";
     </script>
     <script async src="https://desenteir.com/3d7/fa6a1/reverse.min.js?sf=1"></script>
-    <script type='text/javascript' src='//pl27371375.profitableratecpm.com/af/e7/3c/afe73c790e73cadb95ef255203cc5f61.js'></script>
-    <meta name="coinzilla" content="529faa6859c2539eadcab29f6121c282" />
 </head>

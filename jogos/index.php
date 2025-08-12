@@ -116,7 +116,6 @@
       background: linear-gradient(135deg,#54a554,#77f554);
     }
   </style>
-  <script type='text/javascript' src='//pl27371375.profitableratecpm.com/af/e7/3c/afe73c790e73cadb95ef255203cc5f61.js'></script>
 </head>
 <body>
   <script>

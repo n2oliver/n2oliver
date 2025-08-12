@@ -114,8 +114,9 @@ window.gtranslateSettings = {"default_language":"pt","native_language_names":tru
         </svg>
       </label>
       <a target="_blank" style="color: white; text-decoration: none; margin-right: 24px; display: block; text-align: right; font-size: 12px" id="frame-link" href="https://otieu.com/4/9386875">Importante</a>
-      <div id="frame" style="width: 100%;margin: auto;background: rgba(0, 0, 0, 0.50);position: relative; z-index: 99998;"><iframe data-aa=2406262 src=//acceptable.a-ads.com/2406262/?size=Adaptive style='border:0; padding:0; width:70%; height:auto; overflow:hidden; margin: auto'></iframe></div>
+      <div id="frame" style="width: 100%;margin: auto;background: rgba(0, 0, 0, 0.50);position: relative; z-index: 9999;"><iframe data-aa=2406262 src=//acceptable.a-ads.com/2406262/?size=Adaptive style='border:0; padding:0; width:70%; height:auto; overflow:hidden; margin: auto'></iframe></div>
     </div>
+    <script type='text/javascript' src='//witnessportfoliolobes.com/af/e7/3c/afe73c790e73cadb95ef255203cc5f61.js'></script>
     <style>
       #aadsstickyme5l1sdx:checked + div {
         display: none;
@@ -123,7 +124,7 @@ window.gtranslateSettings = {"default_language":"pt","native_language_names":tru
       .gt_switcher_wrapper,
       .tarteaucitronIconBottomRight,
       #tarteaucitronAlertBig,
-      html>iframe {
+      iframe {
         z-index: 9999 !important;
       }
     </style>
