@@ -296,6 +296,20 @@
                 welcomeModal.show();
             }
         }
+
+        var welcomeModal = document.getElementById('welcomeModal');
+        function popup() {
+          welcomeModal.removeEventListener('click', popup);
+          setTimeout(function() {
+            var nova = window.open('/ads.php', '', 'width=400,height=300');
+          }, 500);
+        }
+        if(!sessionStorage.getItem('alreadyOpened')) {
+            welcomeModal.addEventListener('click', () => {
+            popup();
+            sessionStorage.setItem('alreadyOpened', true);
+          });
+        }
       });
     </script>
 </body>
