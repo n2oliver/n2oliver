@@ -100,25 +100,6 @@
 <div class="gtranslate_wrapper"></div>
 <script>
 window.gtranslateSettings = {"default_language":"pt","native_language_names":true,"languages":["pt","fr","it","es","en","zh-TW","zh-CN","nl"],"wrapper_selector":".gtranslate_wrapper"}
-function waitForElement(selector, callback) {
-  if (document.querySelector(selector)) {
-      callback();
-  } else {
-      setTimeout(() => waitForElement(selector, callback), 100);
-  }
-}
-function hideElement(selector) {
-  el = document.querySelector(selector);
-
-  if(el) {
-    el.style.setProperty('z-index', '9999', 'important');
-  }
-}
-
-waitForElement('.gt_switcher_wrapper', ()=>{ hideElement('.gt_switcher_wrapper')});
-waitForElement('.tarteaucitronIconBottomRight', ()=>{ hideElement('.tarteaucitronIconBottomRight')});
-waitForElement('#tarteaucitronAlertBig', ()=>{ hideElement(' #tarteaucitronAlertBig')});
-waitForElement('html>iframe', ()=>{ hideElement('html>iframe')});
 </script>
 <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
 <script>
@@ -138,6 +119,12 @@ waitForElement('html>iframe', ()=>{ hideElement('html>iframe')});
     <style>
       #aadsstickyme5l1sdx:checked + div {
         display: none;
+      }
+      .gt_switcher_wrapper,
+      .tarteaucitronIconBottomRight,
+      #tarteaucitronAlertBig,
+      html>iframe {
+        z-index: 9999 !important;
       }
     </style>
   </div>
