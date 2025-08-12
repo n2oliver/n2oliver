@@ -162,7 +162,10 @@
                         <li class="nav-item"><a class="nav-link" href="#" data-category="cursos">Cursos</a></li>
                     </ul>
                 </nav>
-
+                <div id="frame" style="width: 100%;margin: auto;background: rgba(0, 0, 0, 0.50);position: relative; z-index: 9;">
+                    <iframe data-aa='2406506' src='//acceptable.a-ads.com/2406506/?size=Adaptive'
+                        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+                </div>
                 <div id="product-grid" class="row g-4">
                     <!-- Products will be injected here by JavaScript -->
                     <div class="col-12 text-center">

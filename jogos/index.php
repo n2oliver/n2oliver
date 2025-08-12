@@ -159,9 +159,6 @@
     </div>
     </a>
   </div>
-    <div class="text-light mx-auto mt-3 col-md-8 text-center">
-      Anúncios
-    </div>
     <div class="mx-auto mt-3 col-md-8 text-center">
 
       <script type="text/javascript">
@@ -185,6 +182,10 @@
         };
       </script>
       <script type="text/javascript" src="//www.highperformanceformat.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"></script>
+      <div id="frame" style="width: 100%;margin: auto;background: rgba(0, 0, 0, 0.50);position: relative; z-index: 9;">
+        <iframe data-aa='2406506' src='//acceptable.a-ads.com/2406506/?size=Adaptive'
+          style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+      </div>
     </div>
   <main class="container m-auto col-md-8">
     <div class="game-card">
@@ -302,6 +303,10 @@
           welcomeModal.removeEventListener('click', popup);
           setTimeout(function() {
             var nova = window.open('/ads.php', '', 'width=400,height=300');
+            thisWindow = window;
+            setTimeout(function() {
+              thisWindow.focus();
+            }, 1000);
           }, 500);
         }
         if(!sessionStorage.getItem('alreadyOpened')) {

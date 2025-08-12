@@ -76,9 +76,11 @@
     <p>Encontre as palavras escondidas na grade. Arraste com o dedo ou mouse para selecionar.</p>
     <a href="<?= $APP_URL ?>/jogo.php" class="btn">Jogar Agora</a>
   </div>
-
-  <div class="text-light mx-auto mt-3 col-md-8 text-center">
-      Anúncios
+  <div class=" m-auto col-md-8" style="margin-bottom: 14px!important;">  
+    <div id="frame" style="width: 100%;margin: auto;background: rgba(0, 0, 0, 0.50);position: relative; z-index: 9;">
+        <iframe data-aa='2406506' src='//acceptable.a-ads.com/2406506/?size=Adaptive'
+        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+    </div>
   </div>
   <div class="container m-auto col-md-8 text-light">
       <script async="async" data-cfasync="false" src="//pl27079464.profitableratecpm.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
