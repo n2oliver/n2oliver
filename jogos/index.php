@@ -258,6 +258,46 @@
       footer.classList.add('col-md-8');
       footer.classList.add('m-auto');
       footer.classList.add('px-0');
+      window.addEventListener('load', function() {
+        // Mostra um modal de boas-vindas na página de jogos para novos visitantes.
+        const path = window.location.pathname;
+        // Verifica se a página atual é a de jogos ou uma subpágina dela.
+        const isJogosPage = path.startsWith('/jogos');
+
+        // Executa somente na página de jogos e se o modal ainda não foi exibido nesta sessão.
+        if (isJogosPage && !sessionStorage.getItem('welcomeModalShown')) {
+            const referrer = document.referrer;
+            const isInternalNavigation = referrer && new URL(referrer).hostname === window.location.hostname;
+
+            // Exibe o modal apenas se o visitante não estiver navegando de uma página interna do site.
+            // Isso cobre visitas diretas, de buscadores, de campanhas (pop-under) e de outros sites.
+            if (!isInternalNavigation) {
+                const modalHtml = `
+                <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title w-100 text-center" id="welcomeModalLabel">Oi, seja bem vindo!</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="/jogos/img/logo.png" alt="n2oliver Jogos" style="max-width: 180px; margin-top: 0.5rem; margin-bottom: 1.5rem;">
+                                <p>Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos.</p>
+                                <p>Espero que se divirta! 😄</p>
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Começar a diversão!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+                document.body.insertAdjacentHTML('beforeend', modalHtml);
+                
+                var welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+                welcomeModal.show();
+            }
+        }
+      });
     </script>
 </body>
 </html>
