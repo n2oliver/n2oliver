@@ -63,16 +63,20 @@ document.addEventListener('DOMContentLoaded', () => {
         return array;
     }
 
-    function placeWord(word) {
-        const directions = [
-            { x: 1, y: 0 },   // Horizontal (->)
-            { x: 0, y: 1 },   // Vertical (v)
-            { x: -1, y: 0 },  // Horizontal (<-)
-            { x: 0, y: -1 }   // Vertical (^)
-        ];
+    // ...existing code...
+
+function placeWord(word) {
+    const directions = [
+        { x: 1, y: 0 },   // Horizontal (->)
+        { x: 0, y: 1 },   // Vertical (v)
+        { x: -1, y: 0 },  // Horizontal (<-)
+        { x: 0, y: -1 }   // Vertical (^)
+    ];
+
+    // Verifica se é a primeira palavra (grade vazia)
+    if (grid.flat().every(cell => cell === '')) {
         let placed = false;
         let attempts = 0;
-
         while (!placed && attempts < 100) {
             attempts++;
             const direction = directions[Math.floor(Math.random() * directions.length)];
@@ -82,22 +86,17 @@ document.addEventListener('DOMContentLoaded', () => {
             let endX = startX + (word.length - 1) * direction.x;
             let endY = startY + (word.length - 1) * direction.y;
 
-            if (endX < 0 || endX >= gridSize || endY < 0 || endY >= gridSize) {
-                continue;
-            }
+            if (endX < 0 || endX >= gridSize || endY < 0 || endY >= gridSize) continue;
 
             let canPlace = true;
-
             for (let i = 0; i < word.length; i++) {
                 let checkX = startX + i * direction.x;
                 let checkY = startY + i * direction.y;
-
                 if (grid[checkY][checkX] !== '' && grid[checkY][checkX] !== word[i]) {
                     canPlace = false;
                     break;
                 }
             }
-
             if (canPlace) {
                 for (let i = 0; i < word.length; i++) {
                     let placeX = startX + i * direction.x;
@@ -107,7 +106,56 @@ document.addEventListener('DOMContentLoaded', () => {
                 placed = true;
             }
         }
+        return;
     }
+
+    // Para as demais palavras, tenta cruzar com as já existentes
+    for (let letterIdx = 0; letterIdx < word.length; letterIdx++) {
+        let letter = word[letterIdx];
+        for (let y = 0; y < gridSize; y++) {
+            for (let x = 0; x < gridSize; x++) {
+                if (grid[y][x] === letter) {
+                    for (const direction of directions) {
+                        let startX = x - letterIdx * direction.x;
+                        let startY = y - letterIdx * direction.y;
+                        let endX = startX + (word.length - 1) * direction.x;
+                        let endY = startY + (word.length - 1) * direction.y;
+
+                        if (
+                            startX < 0 || startY < 0 ||
+                            endX < 0 || endY < 0 ||
+                            startX >= gridSize || startY >= gridSize ||
+                            endX >= gridSize || endY >= gridSize
+                        ) continue;
+
+                        let canPlace = true;
+                        for (let i = 0; i < word.length; i++) {
+                            let checkX = startX + i * direction.x;
+                            let checkY = startY + i * direction.y;
+                            if (
+                                grid[checkY][checkX] !== '' &&
+                                grid[checkY][checkX] !== word[i]
+                            ) {
+                                canPlace = false;
+                                break;
+                            }
+                        }
+                        if (canPlace) {
+                            for (let i = 0; i < word.length; i++) {
+                                let placeX = startX + i * direction.x;
+                                let placeY = startY + i * direction.y;
+                                grid[placeY][placeX] = word[i];
+                            }
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ...existing code...
 
     function fillEmptyCells() {
         const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';

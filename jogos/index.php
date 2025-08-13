@@ -131,6 +131,12 @@
   <!-- Bootstrap Bundle (JS + Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <div class="mx-auto mt-3 col-md-8 text-center">
+    <div id="frame" style="width: 100%;margin: auto;background: rgba(0, 0, 0, 0.50);position: relative; z-index: 9;">
+      <iframe data-aa='2406506' src='//acceptable.a-ads.com/2406506/?size=Adaptive'
+        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+    </div>
+  </div>
   <div class="m-auto p-1 col-md-8">
     <?php include('../navbar.php'); ?>
   </div>
@@ -144,6 +150,12 @@
     <img src="<?=$APP_URL?>/img/logo.png" style="height: 100px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
   </header>
+
+  <div class="container m-auto col-md-8 text-light">
+    <script async="async" data-cfasync="false" src="//pl27079464.profitableratecpm.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
+    <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
+  </div>
+  
   <div class="game-card mx-auto mt-3 col-md-8 text-center">
     <a href="<?= $APP_URL ?>/linhaamarela">
     <div class="bg-white row mb-3 border border-light"
@@ -159,34 +171,6 @@
     </div>
     </a>
   </div>
-    <div class="mx-auto mt-3 col-md-8 text-center">
-
-      <script type="text/javascript">
-        atOptions = {
-          'key' : 'b5463c03cd36f2b207d3e311906ba716',
-          'format' : 'iframe',
-          'height' : 250,
-          'width' : 300,
-          'params' : {}
-        };
-      </script>
-      <script type="text/javascript" src="//www.highperformanceformat.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"></script>
-
-      <script type="text/javascript">
-        atOptions = {
-          'key' : 'b5463c03cd36f2b207d3e311906ba716',
-          'format' : 'iframe',
-          'height' : 250,
-          'width' : 300,
-          'params' : {}
-        };
-      </script>
-      <script type="text/javascript" src="//www.highperformanceformat.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"></script>
-      <div id="frame" style="width: 100%;margin: auto;background: rgba(0, 0, 0, 0.50);position: relative; z-index: 9;">
-        <iframe data-aa='2406506' src='//acceptable.a-ads.com/2406506/?size=Adaptive'
-          style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
-      </div>
-    </div>
   <main class="container m-auto col-md-8">
     <div class="game-card">
       <a href="<?= $APP_URL ?>/combo-memo">
@@ -232,14 +216,6 @@
     
     <!-- Adicione mais jogos aqui -->
   </main>
-
-  <div class="text-light mx-auto mt-3 col-md-8 text-center">
-    Anúncios
-  </div>
-  <div class="container m-auto col-md-8 text-light">
-    <script async="async" data-cfasync="false" src="//pl27079464.profitableratecpm.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
-    <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
-  </div>
 
   <div class="container m-auto col-md-8">
     <div class="donation-section">
