@@ -100,6 +100,28 @@
 <div class="gtranslate_wrapper"></div>
 <script>
 window.gtranslateSettings = {"default_language":"pt","native_language_names":true,"languages":["pt","fr","it","es","en","zh-TW","zh-CN","nl"],"wrapper_selector":".gtranslate_wrapper"}
+function waitForElement(selector, callback) {
+    const el = document.querySelector(selector);
+    if (el) return callback(el);
+
+    const observer = new MutationObserver(() => {
+        const el = document.querySelector(selector);
+        if (el) {
+            observer.disconnect();
+            callback(el);
+        }
+    });
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+}
+
+waitForElement('html > iframe', iframe => {
+    // Remove do local original
+    if (iframe.parentNode) {
+        iframe.parentNode.removeChild(iframe);
+    }
+    // Adiciona no final do body
+    document.body.appendChild(iframe);
+});
 </script>
 <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
 <script>
@@ -126,7 +148,7 @@ window.gtranslateSettings = {"default_language":"pt","native_language_names":tru
     .gt_switcher_wrapper,
     .tarteaucitronIconBottomRight,
     #tarteaucitronAlertBig,
-    iframe {
+    html>iframe, iframe {
       z-index: 9999 !important;
     }
   </style>

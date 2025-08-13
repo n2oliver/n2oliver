@@ -32,7 +32,7 @@
                     <?php endif; ?>
                     <div class="mb-2">
                         <?php if (!empty($noticia['imagem'])): ?>
-                            <img class="w-100 float-start me-2 my-2" src="<?= htmlspecialchars($noticia['imagem']) ?>" />
+                            <img class="w-50 float-start me-2 my-2" src="<?= htmlspecialchars($noticia['imagem']) ?>" />
                         <?php endif; ?>
                         <p class="text-dark"><?= $noticia['conteudo'] ?></p>
 
@@ -75,6 +75,16 @@
             contentDiv.style.display = 'none';
             contentDiv.closest('.border').style.overflowY = '';
         }
+        setTimeout(() => {
+            contentDiv.parentElement.scrollIntoView(
+                {
+                    block: "start", 
+                    inline: "nearest",
+                    behavior: "auto",
+                    inline: "nearest"
+                }
+            );
+        }, 200);
     }
     $('.fa-pager, .fa-expand').click(() => {
         if ($('#noticias').hasClass('noticia-expandida')) {

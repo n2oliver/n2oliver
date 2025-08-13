@@ -8,6 +8,11 @@
               margin-top: 1.5rem !important;
               margin-bottom: 1.5rem !important;
         }
+        .noticia-conteudo {
+            transition: 1s ease;
+            -moz-transition: 1s ease;
+            -webkit-transition: 1s ease;
+        }
     </style>
     <?php @include("video-background.php"); ?>
     <div id="sobre-mim" class="col-md-10 col-sm-12 col-lg-10 row d-flex" style="margin: 0 auto">
@@ -58,7 +63,7 @@
                             style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
                     </div>
                 </div>
-                <div class="mt-2 d-flex about-me" style="height: 768px; flex-direction: row">  
+                <div class="mt-2 d-flex about-me mb-2" style="height: auto; flex-direction: row">  
                     <div class="container d-flex my-0 quicksand main-content" style="border-bottom-left-radius: 0px; height: fit-content">
                         <div>
                             <h1 class="w-100">Sobre o Dev</h1>
@@ -70,9 +75,10 @@
                         <p>Com uma vasta experiência no desenvolvimento de software, Óliver tem um profundo conhecimento em design de sistemas, desenvolvimento front-end e back-end, e é proficiente em várias tecnologias modernas. Sua dedicação e paixão pela tecnologia o impulsionam a se manter atualizado com as últimas tendências do mercado.</p>
 
                     </div>
-                    <div class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px; overflow-y: scroll">
-                        <?php include('./noticias.php'); ?>
-                    </div>
+                </div>
+
+                <div class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px; overflow-y: scroll">
+                    <?php include('./noticias.php'); ?>
                 </div>
 
                 <div class="row px-3 main-content">
