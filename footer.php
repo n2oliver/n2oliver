@@ -9,6 +9,19 @@
 </footer>
 <script type="text/javascript" src="/lib/tarteaucitron/tarteaucitron.js"></script>
 <script type="text/javascript">
+  function waitForElement(selector, callback) {
+    const el = document.querySelector(selector);
+    if (el) return callback(el);
+
+    const observer = new MutationObserver(() => {
+        const el = document.querySelector(selector);
+        if (el) {
+            observer.disconnect();
+            callback(el);
+        }
+    });
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+  }
   tarteaucitron.init({
     "privacyUrl": "/politica-de-privacidade.html",
     /* Privacy policy url */
@@ -93,35 +106,33 @@
     "serverSide": false,
     /* Server side only, tags are not loaded client side */
 
-    "partnersList": true /* Show the number of partners on the popup/middle banner */
+    "partnersList": true, /* Show the number of partners on the popup/middle banner */
+    "timeout": 0, // Previne que o pop-up seja exibido automaticamente
+    "force": false // Desativa a exibição forçada do pop-up
   });
   (tarteaucitron.job = tarteaucitron.job || []).push('gcmadstorage');
+  $(document).ready(()=>{
+    waitForElement('#tarteaucitronCloseCross', function(el) {
+      setTimeout(function() {
+        $('#tarteaucitronRoot').removeClass('tarteaucitronBeforeVisible');
+        $('#tarteaucitronAlertBig').hide();
+        $('#tarteaucitronIcon').show();
+      }, 500);
+    });
+    waitForElement('html > iframe', iframe => {
+        // Remove do local original
+        if (iframe.parentNode) {
+            iframe.parentNode.removeChild(iframe);
+        }
+        // Adiciona no final do body
+        document.body.appendChild(iframe);
+    });
+  });
 </script>
 <div class="gtranslate_wrapper"></div>
 <script>
 window.gtranslateSettings = {"default_language":"pt","native_language_names":true,"languages":["pt","fr","it","es","en","zh-TW","zh-CN","nl"],"wrapper_selector":".gtranslate_wrapper"}
-function waitForElement(selector, callback) {
-    const el = document.querySelector(selector);
-    if (el) return callback(el);
 
-    const observer = new MutationObserver(() => {
-        const el = document.querySelector(selector);
-        if (el) {
-            observer.disconnect();
-            callback(el);
-        }
-    });
-    observer.observe(document.documentElement, { childList: true, subtree: true });
-}
-
-waitForElement('html > iframe', iframe => {
-    // Remove do local original
-    if (iframe.parentNode) {
-        iframe.parentNode.removeChild(iframe);
-    }
-    // Adiciona no final do body
-    document.body.appendChild(iframe);
-});
 </script>
 <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
 <script>

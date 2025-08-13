@@ -254,68 +254,64 @@
   </div>
   <?php include("../footer.php"); ?>
     <script>
-      const footer = document.querySelector('footer')
-      footer.classList.add('col-md-8');
-      footer.classList.add('m-auto');
-      footer.classList.add('px-0');
-      window.addEventListener('load', function() {
-        // Mostra um modal de boas-vindas na página de jogos para novos visitantes.
-        const path = window.location.pathname;
-        // Verifica se a página atual é a de jogos ou uma subpágina dela.
-        const isJogosPage = path.startsWith('/jogos');
+  window.addEventListener('load', function() {
+    const path = window.location.pathname;
+    const isJogosPage = path.startsWith('/jogos');
 
-        // Executa somente na página de jogos e se o modal ainda não foi exibido nesta sessão.
-        if (isJogosPage && !sessionStorage.getItem('welcomeModalShown')) {
-            const referrer = document.referrer;
-            const isInternalNavigation = referrer && new URL(referrer).hostname === window.location.hostname;
+    if (isJogosPage && !sessionStorage.getItem('welcomeModalShown')) {
+      const referrer = document.referrer;
+      const isInternalNavigation = referrer && new URL(referrer).hostname === window.location.hostname;
 
-            // Exibe o modal apenas se o visitante não estiver navegando de uma página interna do site.
-            // Isso cobre visitas diretas, de buscadores, de campanhas (pop-under) e de outros sites.
-            if (!isInternalNavigation) {
-                const modalHtml = `
-                <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title w-100 text-center" id="welcomeModalLabel">Oi, seja bem vindo!</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body text-center">
-                                <img src="/jogos/img/logo.png" alt="n2oliver Jogos" style="max-width: 180px; margin-top: 0.5rem; margin-bottom: 1.5rem;">
-                                <p>Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos.</p>
-                                <p>Espero que se divirta! 😄</p>
-                            </div>
-                            <div class="modal-footer justify-content-center">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Começar a diversão!</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
-                document.body.insertAdjacentHTML('beforeend', modalHtml);
-                
-                var welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
-                welcomeModal.show();
-            }
-        }
+      if (!isInternalNavigation) {
+        // Painel embutido no fluxo com o MESMO id: welcomeModal
+        const panelHtml = `
+          <div id="welcomeModal" class="alert alert-primary mx-auto mt-3 col-md-8"
+               role="region" aria-label="Boas-vindas"
+               style="box-shadow:0 2px 6px rgba(0,0,0,.08);">
+            <div class="d-flex align-items-start gap-3">
+              <img src="/jogos/img/logo.png" alt="n2oliver Jogos" style="width:72px;height:auto;flex:0 0 auto;">
+              <div class="flex-grow-1 text-start">
+                <h5 class="mb-1">Oi, seja bem vindo!</h5>
+                <p class="mb-2">Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos. 😄</p>
+                <button type="button" class="btn btn-primary btn-sm">Começar a diversão!</button>
+              </div>
+              <button type="button" class="btn-close" aria-label="Fechar"
+                      onclick="document.getElementById('welcomeModal')?.remove()"></button>
+            </div>
+          </div>
+        `;
 
-        var welcomeModal = document.getElementById('welcomeModal');
-        function popup() {
-          welcomeModal.removeEventListener('click', popup);
-          setTimeout(function() {
-            var nova = window.open('/ads.php', '', 'width=400,height=300');
-            thisWindow = window;
-            setTimeout(function() {
-              thisWindow.focus();
-            }, 1000);
-          }, 500);
-        }
-        if(!sessionStorage.getItem('alreadyOpened')) {
-            welcomeModal.addEventListener('click', () => {
-            popup();
-            sessionStorage.setItem('alreadyOpened', true);
-          });
-        }
+        const headerEl = document.querySelector('header');
+        if (headerEl) headerEl.insertAdjacentHTML('afterend', panelHtml);
+        else document.body.insertAdjacentHTML('afterbegin', panelHtml);
+
+        sessionStorage.setItem('welcomeModalShown', true);
+      }
+    }
+
+    // A PARTIR DAQUI mantém seus nomes/fluxo originais:
+    var welcomeModal = document.getElementById('welcomeModal');
+
+    function popup() {
+      welcomeModal && welcomeModal.removeEventListener('click', popup);
+      setTimeout(function() {
+        var nova = window.open('/ads.php', '', 'width=400,height=300');
+        thisWindow = window;
+        setTimeout(function() { thisWindow.focus(); }, 1000);
+      }, 500);
+    }
+
+    if (welcomeModal && !sessionStorage.getItem('alreadyOpened')) {
+      welcomeModal.addEventListener('click', function() {
+        popup();
+        sessionStorage.setItem('alreadyOpened', true);
       });
-    </script>
+    }
+
+    const footer = document.querySelector('footer');
+    if (footer) footer.classList.add('col-md-8', 'm-auto', 'px-0');
+  });
+</script>
+
 </body>
 </html>
