@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles-calculadora-material.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script defer
+        data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
+        src="https://cdn.megapush.com.br/MegaPush.js">
+    </script>
 </head>
 
 <body>

@@ -60,7 +60,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   <script type="text/javascript" data-cfasync="false" src="/popads-monetization.js"></script>
   
-  
+  <script defer
+        data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
+        src="https://cdn.megapush.com.br/MegaPush.js">
+    </script>
 </head>
 <body style="backdrop-filter: brightness(.2)">
     <?php include('../../navbar.php'); ?>

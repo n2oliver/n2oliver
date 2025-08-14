@@ -116,6 +116,10 @@
       background: linear-gradient(135deg,#54a554,#77f554);
     }
   </style>
+  <script defer
+        data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
+        src="https://cdn.megapush.com.br/MegaPush.js">
+    </script>
 </head>
 <body>
   <script>
