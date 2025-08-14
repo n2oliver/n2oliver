@@ -1,4 +1,6 @@
-<?php $APP_URL = '/jogos'; ?>
+<?php 
+include('/conversion.php');
+$APP_URL = '/jogos'; ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -120,6 +122,7 @@
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
         src="https://cdn.megapush.com.br/MegaPush.js">
     </script>
+  <script src="/gtag_dispatcher.js"></script>
 </head>
 <body>
   <script>
@@ -291,6 +294,19 @@
     const footer = document.querySelector('footer');
     if (footer) footer.classList.add('col-md-8', 'm-auto', 'px-0');
   });
+  (function() {
+    const p = new URLSearchParams(location.search);
+    const impressionId = p.get('IMPRESSIONID') || p.get('id');
+    if (!impressionId) return;
+
+    // valor em ponto (o proxy também normaliza)
+    const value = '0.00005';
+
+    fetch(`/conversion.php?IMPRESSIONID=${encodeURIComponent(impressionId)}&value=${encodeURIComponent(value)}`)
+      .then(r => r.json())
+      .then(j => console.log('Postback PopAds (proxy):', j))
+      .catch(e => console.error('Erro no postback (proxy):', e));
+  })();
 </script>
 
 </body>

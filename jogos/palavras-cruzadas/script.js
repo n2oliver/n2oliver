@@ -205,11 +205,8 @@ crosswordData.forEach(entry => {
         const inputs = document.querySelectorAll('.grid-cell input');
         inputs.forEach(input => {
             input.addEventListener('input', (e) => {
-                const parentCell = e.target.parentElement;
-                const nextCell = parentCell.nextElementSibling;
-                if (nextCell && nextCell.querySelector('input')) {
-                   // Navegação simplificada
-                }
+                // Remove o fundo vermelho ao digitar
+                e.target.classList.remove('input-error');
                 e.target.value = e.target.value.toUpperCase();
             });
 
@@ -236,20 +233,42 @@ crosswordData.forEach(entry => {
             });
         });
     }
-
+    
     function checkAnswers() {
         let allCorrect = true;
-        const inputs = document.querySelectorAll('.grid-cell input');
-        inputs.forEach(input => {
-            if (input.value.toUpperCase() !== input.dataset.correct) {
-                allCorrect = false;
+        // Limpa erros anteriores
+        document.querySelectorAll('.grid-cell input').forEach(input => {
+            input.classList.remove('input-error');
+        });
+
+        // Agrupa inputs por palavra
+        crosswordData.forEach(entry => {
+            const { word, orientation, startx, starty } = entry;
+            let erroNaPalavra = false;
+            let inputs = [];
+            for (let i = 0; i < word.length; i++) {
+                let x = startx, y = starty;
+                if (orientation === 'across') x += i; else y += i;
+                const cell = document.querySelector(`.grid-cell[data-x='${x}'][data-y='${y}']`);
+                if (cell && cell.querySelector('input')) {
+                    const input = cell.querySelector('input');
+                    inputs.push(input);
+                    if (input.value.toUpperCase() !== input.dataset.correct) {
+                        erroNaPalavra = true;
+                        allCorrect = false;
+                    }
+                }
+            }
+            // Se a palavra está errada, marca todos os inputs dela
+            if (erroNaPalavra) {
+                inputs.forEach(input => input.classList.add('input-error'));
             }
         });
 
         if (allCorrect) {
             showMessage('Parabéns! Você completou as palavras cruzadas!', 5000);
         } else {
-            showMessage('Algumas respostas estão incorretas. Continue tentando!', 3000);
+            showMessage('Algumas palavras estão incorretas. Corrija para continuar!', 3000);
         }
     }
 

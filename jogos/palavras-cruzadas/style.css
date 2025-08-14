@@ -162,6 +162,10 @@ header, .actions-container {
 h1 {
     color: white !important;
 }
+.input-error {
+    background: #ffdddd !important;
+    color: #b00 !important;
+}
 @media (max-width: 800px) {
     .clues-container {
         flex-direction: column;
