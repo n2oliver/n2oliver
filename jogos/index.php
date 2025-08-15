@@ -274,19 +274,34 @@ $APP_URL = '/jogos'; ?>
 
     // A PARTIR DAQUI mantém seus nomes/fluxo originais:
     var welcomeModal = document.getElementById('welcomeModal');
-
+    function scrollToGames() {
+      const jogosSection = document.querySelector('main.container');
+      if (jogosSection) {
+        jogosSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
     function popup() {
       welcomeModal && welcomeModal.removeEventListener('click', popup);
+      welcomeModal && welcomeModal.addEventListener('click', function() {
+        scrollToGames();
+      });
       setTimeout(function() {
-        var nova = window.open('/ads.php', '', 'width=400,height=300');
-        thisWindow = window;
-        setTimeout(function() { thisWindow.focus(); }, 1000);
+        window.open('/ads.php');
+        window.open('/jogos', '', "width="+screen.availWidth+",height="+screen.availHeight+",top=0,left=0");
+        window.resizeTo(400, 300);
+        window.moveTo((screen.availWidth - 400) / 2, (screen.availHeight - 300) / 2);
       }, 500);
     }
 
     if (welcomeModal && !sessionStorage.getItem('alreadyOpened')) {
       welcomeModal.addEventListener('click', function() {
+        scrollToGames();
         popup();
+        sessionStorage.setItem('alreadyOpened', true);
+      });
+    } else if(welcomeModal) {
+      welcomeModal.addEventListener('click', function() {
+        scrollToGames();
         sessionStorage.setItem('alreadyOpened', true);
       });
     }
