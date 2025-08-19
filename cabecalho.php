@@ -83,11 +83,6 @@
     });
     (tarteaucitron.job = tarteaucitron.job || []).push('gcmadstorage');
     </script>
-    <script>
-      var Back_Button_Zone = 9682995;
-      var Domain_TB = "rel-s.com";
-    </script>
-    <script async src="https://desenteir.com/3d7/fa6a1/reverse.min.js?sf=1"></script>
     <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
         src="https://cdn.megapush.com.br/MegaPush.js">
