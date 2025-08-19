@@ -123,6 +123,7 @@ $APP_URL = '/jogos'; ?>
         src="https://cdn.megapush.com.br/MegaPush.js">
     </script>
   <script src="/gtag_dispatcher.js"></script>
+  <script src="/popads-monetization.js"></script>
 </head>
 <body>
   <script>

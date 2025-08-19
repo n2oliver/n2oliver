@@ -75,16 +75,6 @@
             contentDiv.style.display = 'none';
             contentDiv.closest('.border').style.overflowY = '';
         }
-        setTimeout(() => {
-            contentDiv.parentElement.scrollIntoView(
-                {
-                    block: "start", 
-                    inline: "nearest",
-                    behavior: "auto",
-                    inline: "nearest"
-                }
-            );
-        }, 200);
     }
     $('.fa-pager, .fa-expand').click(() => {
         if ($('#noticias').hasClass('noticia-expandida')) {
