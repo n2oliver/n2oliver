@@ -77,7 +77,7 @@
                     </div>
                 </div>
 
-                <div class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px; overflow-y: scroll">
+                <div class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px;">
                     <?php include('./noticias.php'); ?>
                 </div>
 

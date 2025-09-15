@@ -1,4 +1,4 @@
-<div id="noticias" class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px; overflow-y: scroll; min-width: fit-content">
+<div id="noticias" class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px; min-width: fit-content">
     
     <h1 class="w-100 text-light px-4 pt-3 pb-4 bg-primary mb-0">
         <div class="d-flex justify-content-start align-items-center">
@@ -69,7 +69,7 @@
             const visivel = contentDiv.style.display === 'block';
             // Abre o conteúdo clicado
             contentDiv.style.display = 'block';
-            contentDiv.closest('.border').style.overflowY = 'scroll';
+            contentDiv.closest('.border').style.overflowY = 'auto';
         } else {
             // Fecha o conteúdo se já estava aberto
             contentDiv.style.display = 'none';
