@@ -1,6 +1,4 @@
 <?php
-include('./load-env.php');
-include('./database/connectdb.php');
 try {
 
     $stmt = $pdo->query("SELECT * FROM noticia ORDER BY data_publicacao DESC LIMIT 10");
