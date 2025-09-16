@@ -1,5 +1,5 @@
 <?php 
-include('/conversion.php');
+#include('/conversion.php');
 $APP_URL = '/jogos'; ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -57,7 +57,8 @@ $APP_URL = '/jogos'; ?>
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
-      height: 100vh;
+      height: auto;
+      overflow: auto;
     }
     .game-card h2 {
       margin: 0.5rem 0;
@@ -76,15 +77,14 @@ $APP_URL = '/jogos'; ?>
     .game-card > a > div {
       padding: 10px;
       align-items: end;
-      height: 100vh;
+      height: auto;
       background-position: center !important;
     }
     .game-card > a > div > span {
-      background-image: radial-gradient(slategray, darkslategray);
+      background-color: rgba(0.0,0,0,0.5);
       background-position: top;
       color: white;
       font-weight: bold;
-      border: solid 1px white;
     }
     .intr-in {
       top: 60px!important;
@@ -146,10 +146,6 @@ $APP_URL = '/jogos'; ?>
       <iframe data-aa='2406506' src='//acceptable.a-ads.com/2406506/?size=Adaptive'
         style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
     </div>
-  </div>
-  <div class="container m-auto col-md-8 text-light">
-    <script async="async" data-cfasync="false" src="//pl27079464.profitableratecpm.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
-    <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
   </div>
   
   <div class="game-card mx-auto mt-3 col-md-8 text-center">
@@ -213,6 +209,10 @@ $APP_URL = '/jogos'; ?>
     <!-- Adicione mais jogos aqui -->
   </main>
 
+  <div class="container m-auto col-md-8 text-light">
+    <script async="async" data-cfasync="false" src="//pl27079464.profitableratecpm.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
+    <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
+  </div>
   <div class="container m-auto col-md-8">
     <div class="donation-section">
       <h3>Gostou dos jogos?</h3>
@@ -298,37 +298,6 @@ $APP_URL = '/jogos'; ?>
     const footer = document.querySelector('footer');
     if (footer) footer.classList.add('col-md-8', 'm-auto', 'px-0');
   });
-  // Detecta intenção de fechar a aba
-  window.onbeforeunload = function(e) {
-      // Cancela o fechamento
-      e.preventDefault();
-      e.returnValue = '';
-
-      // Exibe modal Bootbox
-      if(!document.querySelector("#saindo")) {
-        bootbox.alert({
-            message: `
-                <div style="text-align:center;" id="saindo">
-                    <img src="/jogos/img/logo.png" alt="Logo" style="max-width:120px; margin-bottom:15px;">
-                    <h4>Espere um pouco! 👀</h4>
-                    <p>Você está prestes a perder novidades exclusivas e conteúdos divertidos.<br>
-                    Continue mais um pouco e aproveite!</p>
-                </div>
-            `,
-            centerVertical: true,
-            backdrop: true,
-            buttons: {
-                ok: {
-                    label: 'Continuar explorando 🚀',
-                    className: 'btn-success'
-                }
-            }
-        });
-
-        // Impede fechamento imediato (alguns navegadores ignoram)
-        return '';
-      }
-  };
   (function() {
     const p = new URLSearchParams(location.search);
     const impressionId = p.get('IMPRESSIONID') || p.get('id');

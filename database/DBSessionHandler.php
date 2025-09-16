@@ -5,12 +5,14 @@ class DBSessionHandler implements SessionHandlerInterface
 
     public function __construct(PDO $pdo)
     {   // Testa se a pasta padrão está funcional (local vs servidor)
-        if (!is_writable(session_save_path())) {
-            session_save_path(__DIR__ . '/sessao-temp'); // só se local estiver quebrado
-            if (!is_dir(__DIR__ . '/sessao-temp')) {
-                mkdir(__DIR__ . '/sessao-temp', 0700, true);
-            }
+        $sessionPath = __DIR__ . '/sessao-temp';
+
+        if (!is_dir($sessionPath)) {
+            mkdir($sessionPath, 0700, true); // cria a pasta se não existir
         }
+
+        ini_set('session.save_handler', 'files');
+        ini_set('session.save_path', $sessionPath);
         $this->pdo = $pdo;
     }
 
