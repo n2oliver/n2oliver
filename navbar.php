@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active nav-a">
-                <a class="nav-link rounded" href="/"><i class="fa-solid fa-user"></i> Desenvolvedor</a>
+                <a class="nav-link rounded" href="/"><i class="fa-solid fa-user"></i> Notícias</a>
             </li>
             <li class="nav-item nav-b">
                 <a class="nav-link rounded" href="/portfolio.php"><i class="fa-solid fa-hand-pointer"></i> Portfólio</a>

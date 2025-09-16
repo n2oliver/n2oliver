@@ -3,8 +3,7 @@
         
         <h1 class="w-100 text-light px-4 pt-3 pb-4 bg-primary mb-0">
             <div class="d-flex justify-content-start align-items-center">
-                <i class="fa fa-pager p-2" style="position: absolute; top: 10px; left: 14px"></i>
-                <i class="fa fa-expand pe-2 text-light"></i>
+                <i class="fa fa-pager p-2"></i>
                 <span id="noticias-span-title">Notícias</span><div class="oliver-dev-logo text-end w-100">n2oliver</div></div>
         </h1>
 
@@ -47,7 +46,7 @@
 </div>
 
 <script>
-    toggleNoticiaContent(5);
+    toggleNoticiaContent(6);
     function toggleNoticiaContent(index) {
         $.ajax({
             url: './buscar-noticia.php',
@@ -66,33 +65,4 @@
             }
         });
     }
-    $('.fa-pager, .fa-expand').click(() => {
-        if ($('#recentes').hasClass('noticia-expandida')) {
-            $('.fa-expand').removeClass('d-none');
-            $('.fa-pager').addClass('d-none');
-            $('#recentes').removeClass('noticia-expandida');
-            $('#sobre-mim').addClass('col-xs-10');
-            $('#sobre-mim').addClass('col-sm-10');
-            $('#sobre-mim').addClass('col-md-10');
-            $('#sobre-mim').addClass('col-lg-10');
-            $('#sobre-mim').addClass('col-xl-10');
-            $('#noticias-span-title').css('padding-left', 'initial');
-            $('.main-content').removeClass('d-none');
-            $('#recentes').css('position', 'relative');
-            $('#recentes').css('background-color', 'transparent');
-        } else {
-            $('.fa-expand').addClass('d-none');
-            $('.fa-pager').removeClass('d-none');
-            $('#recentes').addClass('noticia-expandida');
-            $('#sobre-mim').removeClass('col-xs-10');
-            $('#sobre-mim').removeClass('col-sm-10');
-            $('#sobre-mim').removeClass('col-md-10');
-            $('#sobre-mim').removeClass('col-lg-10');
-            $('#sobre-mim').removeClass('col-xl-10');
-            $('#noticias-span-title').css('padding-left', 30);
-            $('.main-content').addClass('d-none');
-            $('#recentes').css('position', 'absolute');
-            $('#recentes').css('background-color', 'white');
-        }
-    });
 </script>
