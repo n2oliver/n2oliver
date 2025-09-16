@@ -38,7 +38,7 @@ try {
                     if (!empty($noticiaInfo['imagem'])) {
                         echo '<img class="w-50 float-start me-2 my-2" src="' . htmlspecialchars($noticiaInfo['imagem']) . '" />';
                     }
-                    echo '<p class="text-dark">' . nl2br(htmlspecialchars($noticiaInfo['conteudo'])) . '</p>
+                    echo '<p class="text-dark">' . $noticiaInfo['conteudo'] . '</p>
                 </div>';
                 if (!empty($noticiaInfo['data_edicao'])) {
                     echo '<small class="text-muted">Editado em ' . date("d/m/Y H:i", strtotime($noticiaInfo['data_edicao'])) . '</small>';
