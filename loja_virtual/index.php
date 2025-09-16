@@ -18,6 +18,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 
     <style>
+        #product-grid {
+            align-items: auto;
+        }
         .product-card {
             border: 1px solid #eee;
             border-radius: 8px;
@@ -154,7 +157,7 @@
                 <a href="/loja_virtual/sobre-a-loja.php" class="btn btn-outline-light btn-sm">Saiba mais sobre a loja</a>
             </header>
 
-            <main class="p-4 rounded" style="background-color: darkslategrey">
+            <main class="p-4 rounded" style="background-color: #343a4069;">
                 <div class="mb-4 px-md-5">
                     <input type="search" id="search-input" class="form-control" placeholder="🔎 Buscar produtos por nome...">
                 </div>
@@ -163,7 +166,6 @@
                         <li class="nav-item"><a class="nav-link active" href="#" data-category="todos">Todos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#" data-category="destaques">Destaques</a></li>
                         <li class="nav-item"><a class="nav-link" href="#" data-category="smartphones">Smartphones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" data-category="perfumes">Perfumes</a></li>
                         <li class="nav-item"><a class="nav-link" href="#" data-category="livros">Livros</a></li>
                         <li class="nav-item"><a class="nav-link" href="#" data-category="cursos">Cursos</a></li>
                     </ul>
@@ -221,10 +223,6 @@
                     '/loja_virtual/get_smartphones_samsung.php',
                     '/loja_virtual/get_smartphones_motorola.php',
                     '/loja_virtual/get_smartphones_xiaomi.php'
-                ],
-                'perfumes': [
-                    '/loja_virtual/get_perfumes_masculinos.php',
-                    '/loja_virtual/get_perfumes_femininos.php'
                 ],
                 'livros': '/loja_virtual/get_livros.php',
                 'cursos': '/loja_virtual/get_cursos.php'

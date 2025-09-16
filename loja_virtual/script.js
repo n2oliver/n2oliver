@@ -1,6 +1,4 @@
 const sections = [
-    "perfumes_masculinos",
-    "perfumes_femininos",
     "livros",
     "cursos",
     "destaques",
