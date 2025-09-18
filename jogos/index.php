@@ -104,6 +104,15 @@ $APP_URL = '/jogos'; ?>
     .success {
       background: linear-gradient(135deg,#54a554,#77f554);
     }
+    .modal-content {
+      background-color: #34343434 !important;
+    }
+    .modal-header {
+      background-color: white !important;
+    }
+    .modal-title {
+      width: 100vw !important;
+    }
   </style>
   <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
@@ -227,6 +236,26 @@ $APP_URL = '/jogos'; ?>
   <?php include("../footer.php"); ?>
     <script>
   window.addEventListener('load', function() {
+    setTimeout(function() {
+       bootbox.alert({
+            title: "Junte-se a mim no <strong>TikTok</strong>",
+            message: `
+                <div style="text-align:center;" id="saindo">
+                    <a target="_blank" href="https://vm.tiktok.com/ZMHn4DwAU62Ye-4irF2/">
+                      <img src="/img/tiktok.png" alt="banner" style="height:50vh; margin-bottom:15px;"/>
+                    </a>
+                </div>
+            `,
+            centerVertical: true,
+            backdrop: true,
+            buttons: {
+                ok: {
+                    label: 'Continuar explorando 🚀',
+                    className: 'btn-success'
+                }
+            }
+        });
+    }, 5000);
     const path = window.location.pathname;
     const isJogosPage = path.startsWith('/jogos');
 

@@ -71,8 +71,17 @@
                             </div>
                             <p class="text-start">Se você precisa de um desenvolvedor experiente, e conhecedor de diversas técnicas de programação e marketing digital, Óliver Silva pode te ajudar. Com mais de 15 anos de experiência na área de desenvolvimento de software, ele demonstrou habilidades excepcionais em diversas linguagens de programação e frameworks, contribuindo para vários projetos de alta complexidade e excelentes benefícios aos seus usuários.</p>
                         </div> 
-                        <h1 class="w-100 text-center">Experiência e Habilidades</h1>
-                        <p>Com uma vasta experiência no desenvolvimento de software, Óliver tem um profundo conhecimento em design de sistemas, desenvolvimento front-end e back-end, e é proficiente em várias tecnologias modernas. Sua dedicação e paixão pela tecnologia o impulsionam a se manter atualizado com as últimas tendências do mercado.</p>
+                        <div class="col-6">
+                            <h1 class="w-100 text-center">Experiência e Habilidades</h1>
+                            <p>Com uma vasta experiência no desenvolvimento de software, Óliver tem um profundo conhecimento em design de sistemas, desenvolvimento front-end e back-end, e é proficiente em várias tecnologias modernas. Sua dedicação e paixão pela tecnologia o impulsionam a se manter atualizado com as últimas tendências do mercado.
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <h1>Junte-se a mim no <strong>TikTok</strong></h1>
+                            <a target="_blank" href="https://vm.tiktok.com/ZMHn4DwAU62Ye-4irF2/" >
+                                <img src="/img/tiktok.png" alt="banner" style="height:50vh; margin-bottom:15px;"/>
+                            </a>
+                        </div>
 
                     </div>
                 </div>
