@@ -55,7 +55,6 @@
             success: function(response) {
                 const contentDiv = document.getElementById('noticia-content');
                 if (contentDiv) {
-                    console.log(response);
                     contentDiv.innerHTML = '';
                     contentDiv.innerHTML = response;
                 }

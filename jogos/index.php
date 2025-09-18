@@ -33,7 +33,8 @@ $APP_URL = '/jogos'; ?>
       font-family: 'Ubuntu';
       font-size: 2rem;
       background-image: linear-gradient(0deg, darkslategray, slategray, white);
-      border-radius: 15px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
       height: 200px;
     }
     header h1 {
@@ -47,9 +48,8 @@ $APP_URL = '/jogos'; ?>
       filter: drop-shadow(0 0 0.2rem rgb(255, 255, 255));
     }
     .container {
-      margin: 2rem auto;
       display: grid;
-      gap: 20px;
+      gap: .2rem;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       background-color: transparent;
     }
@@ -119,7 +119,7 @@ $APP_URL = '/jogos'; ?>
         src="https://cdn.megapush.com.br/MegaPush.js">
     </script>
   <script src="/gtag_dispatcher.js"></script>
-  <script src="/popads-monetization.js"></script>
+  <script src="/popads-monetization.js" data-cfasync="false"></script>
 </head>
 <body>
   <script>
@@ -145,21 +145,21 @@ $APP_URL = '/jogos'; ?>
       nav.classList.add('m-auto');
       nav.classList.add('px-0');
     </script>
-  <header class="mx-auto mt-3 col-md-8 text-center">
+  <header class="mx-auto col-md-8 text-center">
     <img src="<?=$APP_URL?>/img/logo.png" style="height: 100px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
   </header>
 
-  <div class="mx-auto mt-3 col-md-8 text-center">
+  <div class="mx-auto col-md-8 text-center">
     <div id="frame" style="width: 100%;margin: auto;background: rgba(0, 0, 0, 0.50);position: relative; z-index: 9;">
       <iframe data-aa='2406506' src='//acceptable.a-ads.com/2406506/?size=Adaptive'
         style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
     </div>
   </div>
   
-  <div class="game-card mx-auto mt-3 col-md-8 text-center">
+  <div class="game-card mx-auto mt-2 col-md-8 text-center">
     <a href="<?= $APP_URL ?>/linhaamarela">
-    <div class="bg-white row mb-3 border border-light"
+    <div class="bg-white row border border-light"
       style="background: url(<?=$APP_URL?>/linhaamarela/img/fundo.png)">
       <h2 class="rounded-left">Linha Amarela</h2> 
       <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "#";'>
@@ -214,6 +214,20 @@ $APP_URL = '/jogos'; ?>
         </div>
       </a>
     </div>
+
+    <div class="game-card">
+      
+      <script type="text/javascript">
+        atOptions = {
+          "key" : "b5463c03cd36f2b207d3e311906ba716",
+          "format" : "iframe",
+          "height" : 250,
+          "width" : 300,
+          "params" : {}
+        };
+      </script>
+      <script type="text/javascript" src="//playedsophomore.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"></script>
+    </div>
     
     <!-- Adicione mais jogos aqui -->
   </main>
@@ -236,26 +250,6 @@ $APP_URL = '/jogos'; ?>
   <?php include("../footer.php"); ?>
     <script>
   window.addEventListener('load', function() {
-    setTimeout(function() {
-       bootbox.alert({
-            title: "Junte-se a mim no <strong>TikTok</strong>",
-            message: `
-                <div style="text-align:center;" id="saindo">
-                    <a target="_blank" href="https://vm.tiktok.com/ZMHn4DwAU62Ye-4irF2/">
-                      <img src="/img/tiktok.png" alt="banner" style="height:50vh; margin-bottom:15px;"/>
-                    </a>
-                </div>
-            `,
-            centerVertical: true,
-            backdrop: true,
-            buttons: {
-                ok: {
-                    label: 'Continuar explorando 🚀',
-                    className: 'btn-success'
-                }
-            }
-        });
-    }, 5000);
     const path = window.location.pathname;
     const isJogosPage = path.startsWith('/jogos');
 
@@ -266,7 +260,7 @@ $APP_URL = '/jogos'; ?>
       if (!isInternalNavigation) {
         // Painel embutido no fluxo com o MESMO id: welcomeModal
         const panelHtml = `
-          <div id="welcomeModal" class="alert alert-primary mx-auto mt-3 col-md-8"
+          <div id="welcomeModal" class="alert alert-primary mx-auto col-md-8"
                role="region" aria-label="Boas-vindas"
                style="box-shadow:0 2px 6px rgba(0,0,0,.08);">
             <div class="d-flex align-items-start gap-3">
@@ -305,10 +299,31 @@ $APP_URL = '/jogos'; ?>
       });
       setTimeout(function() {
         window.open('/ads.php');
+        window.open('https://otieu.com/4/9386875', '');
         window.open('/jogos', '', "width="+screen.availWidth+",height="+screen.availHeight+",top=0,left=0");
         window.resizeTo(400, 300);
         window.moveTo((screen.availWidth - 400) / 2, (screen.availHeight - 300) / 2);
       }, 500);
+      setTimeout(function() {
+        bootbox.alert({
+              title: "Junte-se a mim no <strong>TikTok</strong>",
+              message: `
+                  <div style="text-align:center;" id="saindo">
+                      <a target="_blank" href="https://vm.tiktok.com/ZMHn4DwAU62Ye-4irF2/">
+                        <img src="/img/tiktok.png" alt="banner" style="height:50vh; margin-bottom:15px;"/>
+                      </a>
+                  </div>
+              `,
+              centerVertical: true,
+              backdrop: true,
+              buttons: {
+                  ok: {
+                      label: 'Continuar explorando 🚀',
+                      className: 'btn-success'
+                  }
+              }
+          });
+      }, 5000);
     }
 
     if (welcomeModal && !sessionStorage.getItem('alreadyOpened')) {
