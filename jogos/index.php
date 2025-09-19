@@ -149,14 +149,6 @@ $APP_URL = '/jogos'; ?>
     <img src="<?=$APP_URL?>/img/logo.png" style="height: 100px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
   </header>
-
-  <div class="mx-auto col-md-8 text-center">
-    <div id="frame" style="width: 100%;margin: auto;background: rgba(0, 0, 0, 0.50);position: relative; z-index: 9;">
-      <iframe data-aa='2406506' src='//acceptable.a-ads.com/2406506/?size=Adaptive'
-        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
-    </div>
-  </div>
-  
   <div class="game-card mx-auto mt-2 col-md-8 text-center">
     <a href="<?= $APP_URL ?>/linhaamarela">
     <div class="bg-white row border border-light"
@@ -310,7 +302,7 @@ $APP_URL = '/jogos'; ?>
               message: `
                   <div style="text-align:center;" id="saindo">
                       <a target="_blank" href="https://vm.tiktok.com/ZMHn4DwAU62Ye-4irF2/">
-                        <img src="/img/tiktok.png" alt="banner" style="height:50vh; margin-bottom:15px;"/>
+                        <img src="/img/tiktok.png" alt="banner" style="width: 100%; max-width: 467px; margin-bottom:15px;"/>
                       </a>
                   </div>
               `,
