@@ -36,8 +36,10 @@
         <div class="col-lg-2"></div>
     </div>
 
-    <div class="fixed-bottom">
+    <div>
         <?php include("footer.php"); ?>
     </div>
+    
+    <?php include("aads.php"); ?>
 </body>
 </html>

@@ -16,8 +16,7 @@
     </style>
     <?php @include("video-background.php"); ?>
     <div id="sobre-mim" class="col-md-10 col-sm-12 col-lg-10 row d-flex" style="margin: 0 auto">
-        <div class="col-lg-2 px-0"></div>
-        <div class="col-sm-12 col-md-12 col-lg-12 px-0">
+        <div class="col-sm-12 col-md-12 col-lg-12 px-0 m-auto">
             <header>
                 <div class="row pb-3 oliver-dev-parent-wrapper main-content">
                     <div class="col-12 height-0">
@@ -58,9 +57,9 @@
             <?php include("navbar.php"); ?>
             <main>
                 <div class="mt-2 d-flex" style="flex-direction: row"> 
-                    <div id="frame" style="width: 100%;margin: auto;background: rgba(0, 0, 0, 0.50);position: relative; z-index: 9;">
-                        <iframe data-aa='2406506' src='//acceptable.a-ads.com/2406506/?size=Adaptive'
-                            style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+                    <div id="frame" class="frame" style="width: 100%;margin: auto;position: relative; background: rgba(0, 0, 0, 0.50); z-index: 9;">
+                    <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
+                                        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
                     </div>
                 </div>
                 <div class="mt-2 d-flex about-me mb-2" style="height: auto; flex-direction: row">  
@@ -174,13 +173,14 @@
                 Anúncios
             </div>
             <div class="container m-auto col-md-8 text-light">
-                <script async="async" data-cfasync="false" src="//pl27079464.profitableratecpm.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
+                <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
                 <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
             </div>
             <?php include("footer.php"); ?>
         </div>
-        <div class="col-lg-2 px-0"></div>
     </div>
+    
+    <?php include("aads.php"); ?>
     <script>
         $(document).ready(()=>{
             $('.nav-item').removeClass('active');

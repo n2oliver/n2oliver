@@ -453,3 +453,8 @@ h1 {
         width: 50vw;
     }
 }
+.frame {
+    position: sticky !important;
+    bottom: 0 !important;
+    left: 0 !important;
+}

@@ -170,10 +170,6 @@
                         <li class="nav-item"><a class="nav-link" href="#" data-category="cursos">Cursos</a></li>
                     </ul>
                 </nav>
-                <div id="frame" style="width: 100%;margin: auto;background: rgba(0, 0, 0, 0.50);position: relative; z-index: 9;">
-                    <iframe data-aa='2406506' src='//acceptable.a-ads.com/2406506/?size=Adaptive'
-                        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
-                </div>
                 <div id="product-grid" class="row g-4">
                     <!-- Products will be injected here by JavaScript -->
                     <div class="col-12 text-center">
@@ -192,22 +188,20 @@
         Anúncios
     </div>
     <div class="container m-auto col-md-8 text-light">
-        <script async="async" data-cfasync="false" src="//pl27079464.profitableratecpm.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
-        <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
+        <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
+      <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
     </div>
     <div class="m-auto col-md-8">
-        <script async="async" data-cfasync="false" src="//pl27079464.profitableratecpm.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
-        <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
+        <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
+      <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
     </div>
     <br>
     <div class="row">
-        <div class="col-lg-2 px-0"></div>
         <div class="col-sm-12 col-md-8 col-lg-8 px-0">
             <?php include('../footer.php'); ?>
         </div>
-        <div class="col-lg-2 px-0"></div>
     </div>
-
+    <?php include("../aads.php"); ?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>

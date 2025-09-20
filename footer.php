@@ -137,24 +137,11 @@ window.gtranslateSettings = {"default_language":"pt","native_language_names":tru
 <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
 <script>
 </script>
-    <div id="frame" style="width: 100%;margin: auto;background: rgba(0, 0, 0, 0.50); z-index: 9;">
-      <iframe data-aa='2406506' src='//acceptable.a-ads.com/2406506/?size=Adaptive'
-        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
-    </div>
-    
-        <style>
-      #aadsstickymea7c3c1:checked + div {
-        display: none;
-      }
-      .gt_switcher_wrapper,
+    <style>
+      .gtranslate_wrapper,
       .tarteaucitronIconBottomRight,
-      #tarteaucitronAlertBig,
-      html>#frame, #frame {
+      #tarteaucitronAlertBig {
         z-index: 9999 !important;
-      }
-      #frame {
-        position: fixed;
-        bottom: 0;
       }
     </style>
 </div>

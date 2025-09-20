@@ -148,12 +148,13 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-2 px-0"></div>
         <div class="col-sm-12 col-md-8 col-lg-8 px-0">
             <?php include("footer.php"); ?>
         </div>
-        <div class="col-lg-2 px-0"></div>
     </div>
+    
+    
+    <?php include("aads.php"); ?>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const carouselElement = document.querySelector('#carouselControls');
