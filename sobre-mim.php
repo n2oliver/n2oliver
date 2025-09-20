@@ -1,8 +1,5 @@
 <body class="oliver-dev">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJNPSQS"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<?php include("gtagmanager.php"); ?>
     <style>
         nav {
               margin-top: 1.5rem !important;

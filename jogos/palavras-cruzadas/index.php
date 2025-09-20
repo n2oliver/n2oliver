@@ -68,6 +68,7 @@
   <script src="/gtag_dispatcher.js"></script>
 </head>
 <body style="backdrop-filter: brightness(.2)">
+<?php include("gtagmanager.php"); ?>
     <?php include('../../navbar.php'); ?>
     <script>
       const nav = document.querySelector('nav')

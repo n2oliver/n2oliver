@@ -3,6 +3,7 @@
 <?php include("cabecalho.php"); ?>
 
 <body class="oliver-dev">
+<?php include("gtagmanager.php"); ?>
     <?php include("video-background.php"); ?>
 
     <div class="row">

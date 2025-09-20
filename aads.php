@@ -2,3 +2,8 @@
     <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
         style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
 </div>
+<script>
+    $('.frame').click((e)=>{
+        e.target.style.display = 'none';
+    });
+</script>

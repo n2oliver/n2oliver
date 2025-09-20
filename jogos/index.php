@@ -122,6 +122,7 @@ $APP_URL = '/jogos'; ?>
   <script src="/popads-monetization.js" data-cfasync="false"></script>
 </head>
 <body>
+<?php include("gtagmanager.php"); ?>
   <script>
     Toastify({
         text: 'Clique em um jogo para jogar!',
