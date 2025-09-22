@@ -10,5 +10,7 @@
 <style>
     iframe[id^="container-"] {
         z-index: 9999 !important;
+        display: inline-flex;
+        box-sizing: 0 !important;
     }
 </style>

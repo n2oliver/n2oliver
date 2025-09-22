@@ -29,6 +29,7 @@ services:
       - ./jogos/palavras-cruzadas/:/var/www/html/jogos/palavras-cruzadas/
       - ./loja_virtual/:/var/www/html/loja_virtual/
     environment:
+      ENVIRONMENT: ${ENVIRONMENT}
       DB_HOST: ${DB_HOST}
       DB_PORT: ${DB_PORT}
       DB_NAME: ${DB_NAME}

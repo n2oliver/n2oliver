@@ -84,7 +84,7 @@ $APP_URL = '/jogos'; ?>
     .game-card a div span {
       background-color: rgba(0.0,0,0,0.5);
       background-position: top;
-      color: white;z
+      color: white;
       font-weight: bold;
     }
     .intr-in {
@@ -159,6 +159,38 @@ $APP_URL = '/jogos'; ?>
     <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
   </header>
   
+  <div id="welcomeModal" class="alert alert-primary mx-auto col-md-8"
+        role="region" aria-label="Boas-vindas"
+        style="box-shadow:0 2px 6px rgba(0,0,0,.08);">
+    <div class="d-flex flex-column align-items-start">
+      <div class="row w-100">
+        <div class="col-md-6 col-sm-12 col-lg-6 text-start">
+          <img src="/jogos/img/logo.png" alt="n2oliver Jogos" style="width:72px;height:auto;flex:0 0 auto;" class="align-self-start"/>
+        </div>
+        <div class="col-md-6 col-sm-12 col-lg-6 text-end">          
+          <button type="button" class="btn-close" aria-label="Fechar"
+              onclick="document.getElementById('welcomeModal')?.remove()"></button>
+        </div>
+      </div>
+      <div class="flex-grow-1 text-start">
+        <div class="row">
+          <div class="col-md-6">
+            <iframe width="auto" height="200" src="https://www.youtube.com/embed/ncnigutZROs" title="Jogue Online Gratuitamente no n2oliver.com #jogosonline #quiz #tecnologiadomestica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="col-md-6">
+            <h5 class="mb-1">Oi, seja bem vindo!</h5>
+            <p class="mb-2">Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos. 😄</p>
+            <button type="button" class="btn btn-primary btn-sm">Começar a diversão!</button>
+            
+            <div class="w-100 text-center p-0">
+                <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
+                <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="main-game" class="game-card mx-auto mt-2 col-md-8 text-center">
     <div class="row">
       <div class="col-6">
@@ -234,10 +266,6 @@ $APP_URL = '/jogos'; ?>
     </div>
     <!-- Adicione mais jogos aqui -->
   </main>
-  <div class="container m-auto col-md-8 text-light text-center p-0">
-      <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
-      <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
-  </div>
   <div class="container m-auto col-md-8">
     <div class="donation-section">
       <h3>Gostou dos jogos?</h3>
@@ -258,50 +286,6 @@ $APP_URL = '/jogos'; ?>
   window.addEventListener('load', function() {
     const path = window.location.pathname;
     const isJogosPage = path.startsWith('/jogos');
-
-    if (isJogosPage && !sessionStorage.getItem('welcomeModalShown')) {
-      const referrer = document.referrer;
-      const isInternalNavigation = referrer && new URL(referrer).hostname === window.location.hostname;
-
-      if (!isInternalNavigation) {
-        // Painel embutido no fluxo com o MESMO id: welcomeModal
-        const panelHtml = `
-          <div id="welcomeModal" class="alert alert-primary mx-auto col-md-8"
-               role="region" aria-label="Boas-vindas"
-               style="box-shadow:0 2px 6px rgba(0,0,0,.08);">
-            <div class="d-flex flex-column align-items-start gap-3">
-              <div class="row w-100">
-                <div class="col-md-6 col-sm-12 col-lg-6 text-start">
-                  <img src="/jogos/img/logo.png" alt="n2oliver Jogos" style="width:72px;height:auto;flex:0 0 auto;" class="align-self-start"/>
-                </div>
-                <div class="col-md-6 col-sm-12 col-lg-6 text-end">          
-                  <button type="button" class="btn-close" aria-label="Fechar"
-                      onclick="document.getElementById('welcomeModal')?.remove()"></button>
-                </div>
-              </div>
-              <div class="flex-grow-1 text-start">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <iframe width="auto" height="200" src="https://www.youtube.com/embed/ncnigutZROs" title="Jogue Online Gratuitamente no n2oliver.com #jogosonline #quiz #tecnologiadomestica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  </div>
-                  <div class="welcome-text-box col-md-6">
-                    <h5 class="mb-1">Oi, seja bem vindo!</h5>
-                    <p class="mb-2">Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos. 😄</p>
-                    <button type="button" class="btn btn-primary btn-sm">Começar a diversão!</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-
-        const mainGame = document.querySelector('#main-game');
-        if (mainGame) mainGame.insertAdjacentHTML('afterend', panelHtml);
-        else document.body.insertAdjacentHTML('afterbegin', panelHtml);
-
-        sessionStorage.setItem('welcomeModalShown', true);
-      }
-    }
 
     // A PARTIR DAQUI mantém seus nomes/fluxo originais:
     var welcomeModal = document.getElementById('welcomeModal');
@@ -375,6 +359,5 @@ $APP_URL = '/jogos'; ?>
       .catch(e => console.error('Erro no postback (proxy):', e));
   })();
 </script>
-<script type='text/javascript' src='//playedsophomore.com/af/e7/3c/afe73c790e73cadb95ef255203cc5f61.js'></script>
 </body>
 </html>
