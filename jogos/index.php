@@ -75,16 +75,16 @@ $APP_URL = '/jogos'; ?>
     .game-card .link {
       text-align: center;
     }
-    .game-card > a > div {
+    .game-card a div {
       padding: 10px;
       align-items: end;
       height: auto;
       background-position: center !important;
     }
-    .game-card > a > div > span {
+    .game-card a div span {
       background-color: rgba(0.0,0,0,0.5);
       background-position: top;
-      color: white;
+      color: white;z
       font-weight: bold;
     }
     .intr-in {
@@ -152,24 +152,43 @@ $APP_URL = '/jogos'; ?>
       nav.classList.add('m-auto');
       nav.classList.add('px-0');
     </script>
+    
+
   <header class="mx-auto col-md-8 text-center">
     <img src="<?=$APP_URL?>/img/logo.png" style="height: 100px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
   </header>
-  <div class="game-card mx-auto mt-2 col-md-8 text-center">
-    <a href="<?= $APP_URL ?>/linhaamarela">
-    <div class="bg-white row border border-light"
-      style="background: url(<?=$APP_URL?>/linhaamarela/img/fundo.png)">
-      <h2 class="rounded-left">Linha Amarela</h2> 
-      <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "#";'>
-        <p>Divirta-se eliminando os invasores, antes que eles desçam e eliminem a terra!<br>
-        <small>Um território, uma linha, um herói: você.</small></p>
-        <div class="link btn btn-danger my-2">
-          Jogar
-        </div>
-      </span>
-    </div>
-    </a>
+  
+  <div id="main-game" class="game-card mx-auto mt-2 col-md-8 text-center">
+    <div class="row">
+      <div class="col-6">
+        <script type="text/javascript">
+          atOptions = {
+            "key" : "b5463c03cd36f2b207d3e311906ba716",
+            "format" : "iframe",
+            "height" : 250,
+            "width" : 300,
+            "params" : {}
+          };
+        </script>
+        <script type="text/javascript" src="//playedsophomore.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"></script>
+      </div>
+      <div class="col-6">
+        <a href="<?= $APP_URL ?>/linhaamarela">
+          <div class="bg-white row border border-light"
+            style="background: url(<?=$APP_URL?>/linhaamarela/img/fundo.png)">
+            <h2 class="rounded-left">Linha Amarela</h2> 
+            <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "#";'>
+              <p>Divirta-se eliminando os invasores, antes que eles desçam e eliminem a terra!<br>
+              <small>Um território, uma linha, um herói: você.</small></p>
+              <div class="link btn btn-danger my-2">
+                Jogar
+              </div>
+            </span>
+          </div>
+          </a>
+      </div>
+  </div>
   </div>
   <main class="container m-auto col-md-8">
     <div class="game-card">
@@ -213,25 +232,9 @@ $APP_URL = '/jogos'; ?>
         </div>
       </a>
     </div>
-
-    <div class="game-card">
-      
-      <script type="text/javascript">
-        atOptions = {
-          "key" : "b5463c03cd36f2b207d3e311906ba716",
-          "format" : "iframe",
-          "height" : 250,
-          "width" : 300,
-          "params" : {}
-        };
-      </script>
-      <script type="text/javascript" src="//playedsophomore.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"></script>
-    </div>
-    
     <!-- Adicione mais jogos aqui -->
   </main>
-
-  <div class="container m-auto col-md-8 text-light">
+  <div class="container m-auto text-light text-center p-0">
       <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
       <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
   </div>
@@ -292,8 +295,8 @@ $APP_URL = '/jogos'; ?>
           </div>
         `;
 
-        const headerEl = document.querySelector('header');
-        if (headerEl) headerEl.insertAdjacentHTML('afterend', panelHtml);
+        const mainGame = document.querySelector('#main-game');
+        if (mainGame) mainGame.insertAdjacentHTML('afterend', panelHtml);
         else document.body.insertAdjacentHTML('afterbegin', panelHtml);
 
         sessionStorage.setItem('welcomeModalShown', true);
@@ -372,6 +375,6 @@ $APP_URL = '/jogos'; ?>
       .catch(e => console.error('Erro no postback (proxy):', e));
   })();
 </script>
-
+<script type='text/javascript' src='//playedsophomore.com/af/e7/3c/afe73c790e73cadb95ef255203cc5f61.js'></script>
 </body>
 </html>
