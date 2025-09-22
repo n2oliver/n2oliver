@@ -234,7 +234,7 @@ $APP_URL = '/jogos'; ?>
     </div>
     <!-- Adicione mais jogos aqui -->
   </main>
-  <div class="container m-auto text-light text-center p-0">
+  <div class="container m-auto col-md-8 text-light text-center p-0">
       <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
       <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
   </div>
