@@ -108,7 +108,7 @@
 
         .store-header-new {
             color: white;
-            padding: 4rem 2rem;
+            padding: .4rem .2rem;
             border-radius: .25rem;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
@@ -129,6 +129,8 @@
             color: #ccc;
         }
     </style>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" data-cfasync="false" src="/popads-monetization.js"></script>
     <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
@@ -152,7 +154,7 @@
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8 mt-2">
-            <header class="store-header-new text-center mb-4">
+            <header class="store-header-new text-center">
                 <h1 class="display-4">Oliv3r Store</h1>
                 <p class="lead">Diversos itens para o seu dia a dia.</p>
                 <a href="/loja_virtual/sobre-a-loja.php" class="btn btn-outline-light btn-sm">Saiba mais sobre a loja</a>

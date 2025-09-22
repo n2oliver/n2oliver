@@ -29,14 +29,13 @@ $APP_URL = '/jogos'; ?>
     }
     header {
       text-align: center;
-      padding: 2rem;
+      padding: .2rem;
       font-weight: 700;
       font-family: 'Ubuntu';
       font-size: 2rem;
       background-image: linear-gradient(0deg, darkslategray, slategray, white);
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
-      height: 200px;
     }
     header h1 {
       color: #fff !important;
@@ -164,6 +163,14 @@ $APP_URL = '/jogos'; ?>
         role="region" aria-label="Boas-vindas"
         style="box-shadow:0 2px 6px rgba(0,0,0,.08);">
     <div class="d-flex flex-column align-items-start">
+      <div class="d-flex justify-content-center w-100 text-center p-0 mb-2">
+        <script type="text/javascript">
+            aclib.runBanner({
+                zoneId: '10435502',
+            });
+        </script>
+    </div>
+
       <div class="row w-100">
         <div class="col-md-6 col-sm-12 col-lg-6 text-start">
           <img src="/jogos/img/logo.png" alt="n2oliver Jogos" style="width:72px;height:auto;flex:0 0 auto;" class="align-self-start"/>
@@ -360,11 +367,5 @@ $APP_URL = '/jogos'; ?>
       .catch(e => console.error('Erro no postback (proxy):', e));
   })();
 </script>
-<script type="text/javascript">
-    aclib.runAutoTag({
-        zoneId: '9zbtbacmoh',
-    });
-</script>
-
 </body>
 </html>
