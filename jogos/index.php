@@ -126,6 +126,7 @@ $APP_URL = '/jogos'; ?>
     </script>
   <script src="/gtag_dispatcher.js"></script>
   <script src="/popads-monetization.js" data-cfasync="false"></script>
+  <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
 </head>
 <body>
 <?php include("gtagmanager.php"); ?>
@@ -359,5 +360,11 @@ $APP_URL = '/jogos'; ?>
       .catch(e => console.error('Erro no postback (proxy):', e));
   })();
 </script>
+<script type="text/javascript">
+    aclib.runAutoTag({
+        zoneId: '9zbtbacmoh',
+    });
+</script>
+
 </body>
 </html>

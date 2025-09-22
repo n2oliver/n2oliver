@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const allWords = [
         // Tecnologia
-        'html', 'css', 'javascript', 'php', 'desenvolvedor', 'jogo', 'web', 
+        'html', 'css', 'javascript', 'php', 'jogo', 'web', 
         'programacao', 'computador', 'tecnologia', 'internet', 'codigo', 'software', 
         'rede', 'algoritmo', 'dados', 'nuvem', 'api', 'framework', 'linguagem',
         

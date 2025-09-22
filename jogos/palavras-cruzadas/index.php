@@ -53,6 +53,9 @@
     .btn:hover {
         background-color: #0056b3;
     }
+    #main-text {
+      background-image: url(/jogos/img/bg-grid.jpg);
+    }
   </style>
   <link rel="stylesheet" href="/styles-index.css">
   <link rel="stylesheet" href="/css/footer.css">
@@ -66,6 +69,7 @@
     </script>
 
   <script src="/gtag_dispatcher.js"></script>
+  <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
 </head>
 <body style="backdrop-filter: brightness(.2)">
 <?php include("gtagmanager.php"); ?>
@@ -77,7 +81,7 @@
       nav.classList.add('px-2');
       nav.style.fontSize = '12px';
     </script>
-  <div class="container" style="margin: 0 auto; margin-top: 14px; margin-bottom: 14px;">
+  <div id="main-text" class="container" style="margin: 0 auto; margin-top: 14px; margin-bottom: 14px;">
     <h1>Palavras Cruzadas</h1>
     <p>Preencha a grade com as palavras corretas usando as dicas.</p>
     <a href="<?= $APP_URL ?>/jogo.php" class="btn">Jogar Agora</a>

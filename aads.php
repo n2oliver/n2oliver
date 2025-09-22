@@ -14,3 +14,5 @@
         box-sizing: 0 !important;
     }
 </style>
+<?php include("adcash.php"); ?>
+
