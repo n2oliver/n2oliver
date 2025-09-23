@@ -118,6 +118,11 @@ $APP_URL = '/jogos'; ?>
       padding: 1rem;
       border-radius: 14px;
     }
+    #welcomeModal {
+      z-index: 9999999999;
+      position: relative;
+      background-color: var(--bs-alert-bg);
+    }
   </style>
   <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
