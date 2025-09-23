@@ -22,7 +22,6 @@ body.oliver-dev>* {
     top: 0;
     width: 100%;
     z-index: 999;
-    padding: 15px 30px;
     backdrop-filter: blur(10px);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 700;
@@ -32,9 +31,8 @@ body.oliver-dev>* {
 .navbar span {
     color: white !important;
     text-decoration: none;
-    padding: 10px 20px !important;
+    padding: .3rem .4rem !important;
     transition: color 0.3s, background-color 0.3s ease !important;
-    border-radius: 60px;
     margin-right: 4px;
 }
 

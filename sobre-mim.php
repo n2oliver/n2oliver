@@ -1,10 +1,6 @@
 <body class="oliver-dev">
 <?php include("gtagmanager.php"); ?>
     <style>
-        nav {
-              margin-top: 1.5rem !important;
-              margin-bottom: 1.5rem !important;
-        }
         .noticia-conteudo {
             transition: 1s ease;
             -moz-transition: 1s ease;
