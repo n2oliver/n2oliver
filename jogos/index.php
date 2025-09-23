@@ -130,6 +130,11 @@ $APP_URL = '/jogos'; ?>
   <script src="/gtag_dispatcher.js"></script>
   <script src="/popads-monetization.js" data-cfasync="false"></script>
   <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+  <script>
+      var Back_Button_Zone = 9682995;
+      var Domain_TB = "g0st.com";
+  </script>
+  <script async src="https://9hito.com/3d7/fa6a1/reverse.min.js?sf=1"></script>
 </head>
 <body>
 <?php include("../gtagmanager.php"); ?>
@@ -233,6 +238,11 @@ $APP_URL = '/jogos'; ?>
           </a>
       </div>
   </div>
+  
+      <div id="frame" class="frame" style="width: 100%;margin: auto;position: relative !important; background: rgba(0, 0, 0, 0.50); z-index: 9;">
+      <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
+                          style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+      </div>
   </div>
   <main class="container m-auto col-md-8">
     <div class="game-card">

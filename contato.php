@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php include("cabecalho.php"); ?>
-
+<head>
+    <?php include("cabecalho.php"); ?>
+</head>
 <body class="oliver-dev">
 <?php include("gtagmanager.php"); ?>
     <?php include("video-background.php"); ?>

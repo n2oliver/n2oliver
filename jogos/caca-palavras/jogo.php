@@ -42,7 +42,7 @@
     <?php include('../../navbar.php'); ?>
     <?php
         $nav = "nav";
-        echo "<script>const $nav = document.querySelector('$nav'); $nav.classList.add('container');</script>";
+        echo "<script>const $nav = document.querySelector('$nav');</script>";
     ?> 
     <header class="col-md-10">
         <h1>Caça-Palavras</h1>
