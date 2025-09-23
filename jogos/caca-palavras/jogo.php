@@ -38,7 +38,7 @@
     <script type="text/javascript" data-cfasync="false" src="/popads-monetization.js"></script>
 </head>
 <body>
-<?php include("gtagmanager.php"); ?>
+<?php include("../../gtagmanager.php"); ?>
     <?php include('../../navbar.php'); ?>
     <?php
         $nav = "nav";

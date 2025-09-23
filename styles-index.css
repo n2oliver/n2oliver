@@ -131,7 +131,6 @@ footer a:hover {
 /* Button Styles */
 .btn-primary {
     border: none;
-    padding: 10px 20px;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
@@ -452,7 +451,7 @@ h1 {
     }
 }
 .frame {
-    position: sticky !important;
+    position: fixed !important;
     bottom: 0 !important;
     left: 0 !important;
 }

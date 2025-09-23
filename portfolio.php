@@ -56,7 +56,7 @@
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
                                 <img class="title-image img-fluid" src="img/loja_virtual.jpg"/>
                                     <h2 class="title">
-                                        <a href="/loja_virtual" role="button" class="btn btn-custom">Loja Virtual</a>
+                                        <a href="/loja_virtual/" role="button" class="btn btn-custom">Loja Virtual</a>
                                     </h2>
                                 </div>
                             </div>

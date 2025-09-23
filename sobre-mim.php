@@ -1,5 +1,5 @@
 <body class="oliver-dev">
-<?php include("gtagmanager.php"); ?>
+<?php include("../../gtagmanager.php"); ?>
     <style>
         .noticia-conteudo {
             transition: 1s ease;

@@ -21,7 +21,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-<?php include("gtagmanager.php"); ?>
+<?php include("../../gtagmanager.php"); ?>
     <?php include('../../navbar.php'); ?>
     <header>
         <h1>Palavras Cruzadas</h1>

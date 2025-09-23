@@ -25,7 +25,7 @@ $APP_URL = '/jogos'; ?>
       padding: 0;
       background: #f0f0f0;
       background-image: url(../jogos/img/quebracabecas.jpg);
-      min-width: 340px;
+      min-width: 640px;
     }
     header {
       text-align: center;
@@ -119,7 +119,6 @@ $APP_URL = '/jogos'; ?>
       border-radius: 14px;
     }
     #welcomeModal {
-      z-index: 9999999999;
       position: relative;
       background-color: var(--bs-alert-bg);
     }
@@ -133,7 +132,7 @@ $APP_URL = '/jogos'; ?>
   <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
 </head>
 <body>
-<?php include("gtagmanager.php"); ?>
+<?php include("../gtagmanager.php"); ?>
   <script>
     Toastify({
         text: 'Clique em um jogo para jogar!',
@@ -160,28 +159,30 @@ $APP_URL = '/jogos'; ?>
     
 
   <header class="mx-auto col-md-8 text-center">
-    <img src="<?=$APP_URL?>/img/logo.png" style="height: 100px; width: auto;"/>
+    <img src="<?=$APP_URL?>/img/logo.png" style="height: 60px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
   </header>
   
-  <div id="welcomeModal" class="alert alert-primary mx-auto col-md-8"
+  <div id="welcomeModal" class="alert alert-primary p-1 mx-auto col-md-8"
         role="region" aria-label="Boas-vindas"
         style="box-shadow:0 2px 6px rgba(0,0,0,.08);">
     <div class="d-flex align-items-start justify-content-between">
-      <div class="text-start">
-        <img src="/jogos/img/logo.png" alt="n2oliver Jogos" style="width:72px;height:auto;flex:0 0 auto;" class="align-self-start"/>
-      </div>
-      <div class="text-end">          
-        <button type="button" class="btn-close" aria-label="Fechar"
-            onclick="document.getElementById('welcomeModal')?.remove()"></button>
-      </div>
-    </div>
-    <div class="d-flex text-center justify-content-center w-100 p-0 mb-2">
+      <div>
         <script type="text/javascript">
             aclib.runBanner({
                 zoneId: '10435502',
             });
         </script>
+      </div>
+      <div class="d-flex p-1 rounded shadow alert-primary" style="background: var(--bs-primary-bg-subtle)">
+        <div class="text-start">
+          <img src="/jogos/img/logo.png" alt="n2oliver Jogos" style="width:72px;height:auto;flex:0 0 auto;" class="align-self-start"/>
+        </div>
+        <div class="text-end">          
+          <button type="button" class="btn-close" aria-label="Fechar"
+              onclick="document.getElementById('welcomeModal')?.remove()"></button>
+        </div>
+      </div>
     </div>
     <div class="d-flex flex-column align-items-start justify-content-between">
       <div class="flex-grow-1 text-start">
@@ -190,14 +191,13 @@ $APP_URL = '/jogos'; ?>
             <iframe width="auto" height="200" src="https://www.youtube.com/embed/ncnigutZROs" title="Jogue Online Gratuitamente no n2oliver.com #jogosonline #quiz #tecnologiadomestica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           <div class="col-md-6">
-            <h5 class="mb-1">Oi, seja bem vindo!</h5>
-            <p class="mb-2">Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos. 😄</p>
-            <button type="button" class="btn btn-primary btn-sm">Começar a diversão!</button>
-            
             <div class="w-100 text-center p-0">
                 <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
                 <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
             </div>
+            <h5 class="mb-1">Oi, seja bem vindo!</h5>
+            <p class="mb-2">Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos. 😄</p>
+            <button type="button" class="btn btn-primary btn-sm">Começar a diversão!</button>
           </div>
         </div>
       </div>
@@ -290,54 +290,7 @@ $APP_URL = '/jogos'; ?>
       <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
   </div>
   <?php include("../footer.php"); ?>
-  
-  
-    
-  <?php include("../aads.php"); ?>
     <script>
-  window.addEventListener('load', function() {
-    const path = window.location.pathname;
-    const isJogosPage = path.startsWith('/jogos');
-
-    // A PARTIR DAQUI mantém seus nomes/fluxo originais:
-    var welcomeModal = document.getElementById('welcomeModal');
-    function scrollToGames() {
-      const jogosSection = document.querySelector('main.container');
-      if (jogosSection) {
-        jogosSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-    function popup() {
-      setTimeout(function() {
-        bootbox.alert({
-              title: "Junte-se a mim no <strong>TikTok</strong>",
-              message: `
-                  <div style="text-align:center;" id="saindo">
-                      <a target="_blank" href="https://vm.tiktok.com/ZMHn4DwAU62Ye-4irF2/">
-                        <img src="/img/tiktok.png" alt="banner" style="width: 100%; max-width: 467px; margin-bottom:15px;"/>
-                      </a>
-                  </div>
-              `,
-              centerVertical: true,
-              backdrop: true,
-              buttons: {
-                  ok: {
-                      label: 'Continuar explorando 🚀',
-                      className: 'btn-success'
-                  }
-              }
-          });
-      }, 3000);
-    }
-
-    welcomeModal.addEventListener('click', function() {
-      scrollToGames();
-      popup();
-    });
-
-    const footer = document.querySelector('footer');
-    if (footer) footer.classList.add('col-md-8', 'm-auto', 'px-0');
-  });
   (function() {
     const p = new URLSearchParams(location.search);
     const impressionId = p.get('IMPRESSIONID') || p.get('id');
@@ -352,5 +305,6 @@ $APP_URL = '/jogos'; ?>
       .catch(e => console.error('Erro no postback (proxy):', e));
   })();
 </script>
+  <?php include("../aads.php"); ?>
 </body>
 </html>

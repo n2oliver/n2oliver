@@ -12,10 +12,10 @@
                 <a class="nav-link rounded" href="/portfolio.php"><i class="fa-solid fa-hand-pointer"></i> Portfólio</a>
             </li>
             <li class="nav-item nav-c">
-                <a class="nav-link rounded" href="/jogos"><i class="fa-solid fa-puzzle-piece"></i> Jogos Online</a>
+                <a class="nav-link rounded" href="/jogos/index.php"><i class="fa-solid fa-puzzle-piece"></i> Jogos Online</a>
             </li>
             <li class="nav-item nav-d">
-                <a class="nav-link rounded" href="/loja_virtual"><i class="fa-solid fa-store"></i> Oliv3r Store</a>
+                <a class="nav-link rounded" href="/loja_virtual/index.php"><i class="fa-solid fa-store"></i> Oliv3r Store</a>
             </li>
             <li class="nav-item nav-e">
                 <a class="nav-link rounded" href="/contato.php"><i class="fa-solid fa-envelope"></i> Contato</a>
