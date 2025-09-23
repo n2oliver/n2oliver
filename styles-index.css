@@ -17,7 +17,7 @@ body.oliver-dev>* {
 
 /* Navbar Styles */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.8) !important;
+    background-color: rgba(0, 0, 0, .3);
     position: sticky;
     top: 0;
     width: 100%;
@@ -30,7 +30,7 @@ body.oliver-dev>* {
 
 .navbar a,
 .navbar span {
-    color: rgba(25, 120, 255, 1) !important;
+    color: white !important;
     text-decoration: none;
     padding: 10px 20px !important;
     transition: color 0.3s, background-color 0.3s ease !important;
@@ -47,7 +47,7 @@ body.oliver-dev>* {
     -webkit-text-stroke: 0px #fff;
     font-family: Ubuntu;
     filter: drop-shadow(0 0 0.07rem rgb(255, 255, 255));
-    color: rgba(25, 120, 255, 1);
+    color: rgba(25, 120, 255, 1) !important;
     font-weight: bolder;
     font-size: 18px;
     -webkit-text-stroke: 1px #fff;
