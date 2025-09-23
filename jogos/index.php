@@ -167,24 +167,23 @@ $APP_URL = '/jogos'; ?>
   <div id="welcomeModal" class="alert alert-primary mx-auto col-md-8"
         role="region" aria-label="Boas-vindas"
         style="box-shadow:0 2px 6px rgba(0,0,0,.08);">
-    <div class="d-flex flex-column align-items-start">
-      <div class="d-flex justify-content-center w-100 text-center p-0 mb-2">
+    <div class="d-flex align-items-start justify-content-between">
+      <div class="text-start">
+        <img src="/jogos/img/logo.png" alt="n2oliver Jogos" style="width:72px;height:auto;flex:0 0 auto;" class="align-self-start"/>
+      </div>
+      <div class="text-end">          
+        <button type="button" class="btn-close" aria-label="Fechar"
+            onclick="document.getElementById('welcomeModal')?.remove()"></button>
+      </div>
+    </div>
+    <div class="d-flex text-center justify-content-center w-100 p-0 mb-2">
         <script type="text/javascript">
             aclib.runBanner({
                 zoneId: '10435502',
             });
         </script>
     </div>
-
-      <div class="row w-100">
-        <div class="col-md-6 col-sm-12 col-lg-6 text-start">
-          <img src="/jogos/img/logo.png" alt="n2oliver Jogos" style="width:72px;height:auto;flex:0 0 auto;" class="align-self-start"/>
-        </div>
-        <div class="col-md-6 col-sm-12 col-lg-6 text-end">          
-          <button type="button" class="btn-close" aria-label="Fechar"
-              onclick="document.getElementById('welcomeModal')?.remove()"></button>
-        </div>
-      </div>
+    <div class="d-flex flex-column align-items-start justify-content-between">
       <div class="flex-grow-1 text-start">
         <div class="row">
           <div class="col-md-6">
@@ -309,17 +308,6 @@ $APP_URL = '/jogos'; ?>
       }
     }
     function popup() {
-      welcomeModal && welcomeModal.removeEventListener('click', popup);
-      welcomeModal && welcomeModal.addEventListener('click', function() {
-        scrollToGames();
-      });
-      setTimeout(function() {
-        window.open('/ads.php');
-        window.open('https://otieu.com/4/9386875', '');
-        window.open('/jogos', '', "width="+screen.availWidth+",height="+screen.availHeight+",top=0,left=0");
-        window.resizeTo(400, 300);
-        window.moveTo((screen.availWidth - 400) / 2, (screen.availHeight - 300) / 2);
-      }, 500);
       setTimeout(function() {
         bootbox.alert({
               title: "Junte-se a mim no <strong>TikTok</strong>",
@@ -339,21 +327,13 @@ $APP_URL = '/jogos'; ?>
                   }
               }
           });
-      }, 5000);
+      }, 3000);
     }
 
-    if (welcomeModal && !sessionStorage.getItem('alreadyOpened')) {
-      welcomeModal.addEventListener('click', function() {
-        scrollToGames();
-        popup();
-        sessionStorage.setItem('alreadyOpened', true);
-      });
-    } else if(welcomeModal) {
-      welcomeModal.addEventListener('click', function() {
-        scrollToGames();
-        sessionStorage.setItem('alreadyOpened', true);
-      });
-    }
+    welcomeModal.addEventListener('click', function() {
+      scrollToGames();
+      popup();
+    });
 
     const footer = document.querySelector('footer');
     if (footer) footer.classList.add('col-md-8', 'm-auto', 'px-0');
