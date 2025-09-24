@@ -27,7 +27,7 @@ $APP_URL = '/jogos'; ?>
       padding: 0;
       background: #f0f0f0;
       background-image: url(../jogos/img/quebracabecas.jpg);
-      min-width: 640px;
+      overflow: auto;
     }
     header {
       text-align: center;
@@ -124,7 +124,7 @@ $APP_URL = '/jogos'; ?>
       position: relative;
       background-color: var(--bs-alert-bg);
     }
-    .loading>*:not(.loader) {
+    .loading>*:not(.loader):not(.frame) {
       display: none;
     }
     .loader {
@@ -134,7 +134,7 @@ $APP_URL = '/jogos'; ?>
       position: fixed;
       left: 0;
       top: 0;
-      z-index: 2447483647;
+      z-index: 2447483646;
     }
   </style>
   <script defer
@@ -144,11 +144,8 @@ $APP_URL = '/jogos'; ?>
   <script src="/gtag_dispatcher.js"></script>
   <script src="/popads-monetization.js" data-cfasync="false"></script>
   <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
-  <script>
-      var Back_Button_Zone = 9682995;
-      var Domain_TB = "g0st.com";
-  </script>
-  <script async src="https://9hito.com/3d7/fa6a1/reverse.min.js?sf=1"></script>
+  <script async src="https://ss.mrmnd.com/banner.js"></script>
+  <script async src="https://ss.mrmnd.com/static/30ac6d0b-b9ea-4fe0-9b09-882166ba26aa.js"></script>
 </head>
 <body class="loading">
   <div class="loader d-flex flex-column align-items-center justify-content-center">
@@ -190,7 +187,7 @@ $APP_URL = '/jogos'; ?>
   <div id="welcomeModal" class="alert alert-primary p-1 mx-auto col-md-8"
         role="region" aria-label="Boas-vindas"
         style="box-shadow:0 2px 6px rgba(0,0,0,.08);">
-    <div class="d-flex align-items-start justify-content-between">
+    <div class="d-flex align-items-start justify-content-center">
       <div>
         <script type="text/javascript">
             aclib.runBanner({
@@ -211,17 +208,18 @@ $APP_URL = '/jogos'; ?>
     <div class="d-flex flex-column align-items-start justify-content-between">
       <div class="flex-grow-1 text-start">
         <div class="row">
-          <div class="col-md-6">
-            <iframe width="auto" height="200" src="https://www.youtube.com/embed/ncnigutZROs" title="Jogue Online Gratuitamente no n2oliver.com #jogosonline #quiz #tecnologiadomestica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-          <div class="col-md-6">
-            <div class="w-100 text-center p-0">
-                <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
-                <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
-            </div>
+          <div class="col-md-6 align-self-start">
+            <iframe width="auto" height="200" class="m-2" src="https://www.youtube.com/embed/ncnigutZROs" title="Jogue Online Gratuitamente no n2oliver.com #jogosonline #quiz #tecnologiadomestica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <h5 class="mb-1">Oi, seja bem vindo!</h5>
             <p class="mb-2">Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos. 😄</p>
             <button type="button" class="btn btn-primary btn-sm">Começar a diversão!</button>
+          </div>
+          <div class="col m-2">
+            <div data-mndbanid="752815f8-0818-43e0-9381-cc69ab1d3ee7"></div>
+            <div class="d-flex w-100 text-center p-0 m-1">
+                <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
+                <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -242,7 +240,7 @@ $APP_URL = '/jogos'; ?>
         <script type="text/javascript" src="//playedsophomore.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"></script>
       </div>
       <div class="col-6">
-        <a href="<?= $APP_URL ?>/linhaamarela">
+        <a href="<?= $APP_URL ?>/linhaamarela/">
           <div class="bg-white row border border-light"
             style="background: url(<?=$APP_URL?>/linhaamarela/img/fundo.png)">
             <h2 class="rounded-left">Linha Amarela</h2> 
@@ -265,7 +263,7 @@ $APP_URL = '/jogos'; ?>
   </div>
   <main class="container m-auto col-md-8">
     <div class="game-card">
-      <a href="<?= $APP_URL ?>/combo-memo">
+      <a href="<?= $APP_URL ?>/combo-memo/">
         <div class="bg-white row mb-3 border border-light"
           style="background: url(../img/combo-memo.png)">
           <h2 class="rounded-left">Combo-Memo</h2>
@@ -279,7 +277,7 @@ $APP_URL = '/jogos'; ?>
     </div>
 
     <div class="game-card">
-      <a href="<?= $APP_URL ?>/caca-palavras">
+      <a href="<?= $APP_URL ?>/caca-palavras/">
         <div class="bg-white row mb-3 border border-light"
           style="background: url(/jogos/img/a.jpg)">
           <h2 class="rounded-left">Caça-Palavras</h2>
@@ -293,7 +291,7 @@ $APP_URL = '/jogos'; ?>
     </div>
 
     <div class="game-card">
-      <a href="<?= $APP_URL ?>/palavras-cruzadas">
+      <a href="<?= $APP_URL ?>/palavras-cruzadas/">
         <div class="bg-white row mb-3 border border-light"
           style="background: url(/jogos/img/flat-crosswords.png)">
           <h2 class="rounded-left">Palavras Cruzadas</h2>

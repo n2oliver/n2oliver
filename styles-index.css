@@ -452,6 +452,6 @@ h1 {
 }
 .frame {
     position: sticky !important;
-    bottom: 0 !important;
-    left: 0 !important;
+    bottom: 0px !important;
+    left: 0px !important;
 }
