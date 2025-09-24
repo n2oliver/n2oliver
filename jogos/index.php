@@ -136,7 +136,7 @@ $APP_URL = '/jogos'; ?>
       position: fixed;
       left: 0;
       right: 0;
-      margin: auto;
+      margin: 0 auto;
       top: 0;
       bottom: 0;
       z-index: 2447483646;
