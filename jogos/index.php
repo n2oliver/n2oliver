@@ -124,16 +124,21 @@ $APP_URL = '/jogos'; ?>
       position: relative;
       background-color: var(--bs-alert-bg);
     }
-    .loading>*:not(.loader):not(.frame) {
+    .loading>div:not(.loader):not(.frame),
+    header,
+    main {
       display: none;
     }
     .loader {
       background-color: white;
-      width: 100%!important;
-      height: 50%!important;
+      width: 400px !important;
+      height: 200px !important;
       position: fixed;
       left: 0;
-      top: 25%;
+      right: 0;
+      margin: auto;
+      top: 0;
+      bottom: 0;
       z-index: 2447483646;
     }
   </style>
