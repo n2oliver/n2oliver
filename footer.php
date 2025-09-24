@@ -99,7 +99,8 @@
   });
   (tarteaucitron.job = tarteaucitron.job || []).push('gcmadstorage');
   document.addEventListener("allRequestsFinished", () => {
-    document.querySelector('body').classList.remove('d-none');
+    document.querySelector('body').classList.remove('loading');
+    document.querySelector('.loader').classList.add('d-none');
   });
   (function() {
   let pendingRequests = 0;

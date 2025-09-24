@@ -12,10 +12,12 @@ $APP_URL = '/jogos'; ?>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../styles-index.css"/>
     <link rel="stylesheet" href="../sobre-mim.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
   <style>
@@ -122,6 +124,18 @@ $APP_URL = '/jogos'; ?>
       position: relative;
       background-color: var(--bs-alert-bg);
     }
+    .loading>*:not(.loader) {
+      display: none;
+    }
+    .loader {
+      background-color: white;
+      width: 100%!important;
+      height: 100%!important;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 2447483647;
+    }
   </style>
   <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
@@ -136,7 +150,12 @@ $APP_URL = '/jogos'; ?>
   </script>
   <script async src="https://9hito.com/3d7/fa6a1/reverse.min.js?sf=1"></script>
 </head>
-<body class="d-none">
+<body class="loading">
+  <div class="loader d-flex flex-column align-items-center justify-content-center">
+    <img src="/jogos/img/logo.png" alt="n2oliver Jogos"
+      style="height:72px"/>
+    <i class="fas fa-spinner fa-spin fa-2x" aria-hidden="true"></i>
+  </div>
 <?php include("../gtagmanager.php"); ?>
   <script>
     Toastify({
