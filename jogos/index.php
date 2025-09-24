@@ -130,10 +130,10 @@ $APP_URL = '/jogos'; ?>
     .loader {
       background-color: white;
       width: 100%!important;
-      height: 100%!important;
+      height: 50%!important;
       position: fixed;
       left: 0;
-      top: 0;
+      top: 25%;
       z-index: 2447483646;
     }
   </style>
