@@ -136,7 +136,7 @@ $APP_URL = '/jogos'; ?>
   </script>
   <script async src="https://9hito.com/3d7/fa6a1/reverse.min.js?sf=1"></script>
 </head>
-<body>
+<body class="d-none">
 <?php include("../gtagmanager.php"); ?>
   <script>
     Toastify({

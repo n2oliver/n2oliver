@@ -98,6 +98,28 @@
     "force": false // Desativa a exibição forçada do pop-up
   });
   (tarteaucitron.job = tarteaucitron.job || []).push('gcmadstorage');
+  document.addEventListener("allRequestsFinished", () => {
+    document.querySelector('body').classList.remove('d-none');
+  });
+  (function() {
+  let pendingRequests = 0;
+
+  function checkDone() {
+    if (pendingRequests === 0) {
+      document.dispatchEvent(new Event("allRequestsFinished"));
+    }
+  }
+
+  const originalFetch = window.fetch;
+  window.fetch = function(...args) {
+    pendingRequests++;
+    return originalFetch(...args).finally(() => {
+      pendingRequests--;
+      checkDone();
+    });
+  };
+})();
+
 </script>
 <div class="gtranslate_wrapper"></div>
 <script>
