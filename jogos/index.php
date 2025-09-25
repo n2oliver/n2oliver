@@ -169,7 +169,7 @@ $APP_URL = '/jogos'; ?>
   <div id="welcomeModal" class="alert alert-primary p-1 mx-auto col-md-8"
         role="region" aria-label="Boas-vindas"
         style="box-shadow:0 2px 6px rgba(0,0,0,.08);">
-    <div class="d-flex align-items-start justify-content-center">
+    <div class="d-flex flex-wrap align-items-start justify-content-between">
       <div>
         <script type="text/javascript">
             aclib.runBanner({
@@ -177,6 +177,16 @@ $APP_URL = '/jogos'; ?>
             });
         </script>
       </div>
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '29929d8720c37977a6ea64b1b7db2d02',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="//playedsophomore.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
       <div class="d-flex p-1" style="background: #cfe2ff">
         <div class="text-end">          
           <button type="button" class="btn-close" aria-label="Fechar"
@@ -193,12 +203,8 @@ $APP_URL = '/jogos'; ?>
             <p class="mb-2">Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos. 😄</p>
             <button type="button" class="btn btn-primary btn-sm">Começar a diversão!</button>
           </div>
-          <div class="col m-2">
+          <div class="col m-2 text-center">
             <div data-mndbanid="752815f8-0818-43e0-9381-cc69ab1d3ee7"></div>
-            <div class="d-flex w-100 text-center p-0 m-1">
-                <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
-                <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
-            </div>
           </div>
         </div>
       </div>
