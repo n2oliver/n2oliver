@@ -157,7 +157,6 @@
     </div>
     
     
-    <?php include("aads.php"); ?>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const carouselElement = document.querySelector('#carouselControls');
@@ -193,5 +192,6 @@
 
     </script>
 </body>
+    <?php include("aads.php"); ?>
 
 </html>

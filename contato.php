@@ -42,6 +42,6 @@
         <?php include("footer.php"); ?>
     </div>
     
-    <?php include("aads.php"); ?>
 </body>
+    <?php include("aads.php"); ?>
 </html>

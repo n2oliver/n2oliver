@@ -135,7 +135,6 @@ $APP_URL = '/jogos'; ?>
   <script async src="https://ss.mrmnd.com/banner.js"></script>
 </head>
 <body>
-  <?php include("../aads.php"); ?>
 <?php include("../gtagmanager.php"); ?>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -305,4 +304,5 @@ $APP_URL = '/jogos'; ?>
   })();
 </script>
 </body>
+  <?php include("../aads.php"); ?>
 </html>

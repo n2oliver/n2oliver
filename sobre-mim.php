@@ -167,7 +167,6 @@
         </div>
     </div>
     
-    <?php include("aads.php"); ?>
     <script>
         $(document).ready(()=>{
             $('.nav-item').removeClass('active');
@@ -184,4 +183,5 @@
         }
     </script>
 </body>
+    <?php include("aads.php"); ?>
 </html>

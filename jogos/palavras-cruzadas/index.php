@@ -97,7 +97,6 @@
   </div>
   <br>
   <?php include("../../footer.php"); ?>
-    <?php include("../../aads.php"); ?>
     <script>
       const footer = document.querySelector('footer')
       footer.classList.add('col-md-8');
@@ -105,4 +104,5 @@
       footer.classList.add('px-0');
     </script>
 </body>
+    <?php include("../../aads.php"); ?>
 </html>
