@@ -9,7 +9,6 @@
     })(window,document,'script','dataLayer','GTM-TJNPSQS');</script>
     <!-- End Google Tag Manager -->
      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T82Y59VYL"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
