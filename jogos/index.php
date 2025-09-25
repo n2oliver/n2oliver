@@ -16,6 +16,10 @@ $APP_URL = '/jogos'; ?>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../styles-index.css"/>
     <link rel="stylesheet" href="../sobre-mim.css"/>
+    <link rel="preload" as="image" href="/jogos/linhaamarela/img/fundo.png" />
+    <link rel="preload" as="image" href="<?=$APP_URL?>/img/logo.png" />
+    <link rel="preload" as="image" href="../img/combo-memo.png" />
+    <link rel="preload" as="image" href="/jogos/img/flat-crosswords.png" />
   <style>
     body {
       font-family: sans-serif;
