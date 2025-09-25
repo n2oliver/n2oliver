@@ -36,7 +36,7 @@ try {
                 }
                 echo '<div class="mb-2">';
                     if (!empty($noticiaInfo['imagem'])) {
-                        echo '<img class="w-25 float-start me-2 my-2" src="' . htmlspecialchars($noticiaInfo['imagem']) . '" />';
+                        echo '<img alt="imagem" class="w-25 float-start me-2 my-2" src="' . htmlspecialchars($noticiaInfo['imagem']) . '" />';
                     }
                     echo '<p class="text-dark">' . $noticiaInfo['conteudo'] . '</p>
                 </div>';

@@ -249,7 +249,7 @@
                     const productCard = `
                         <div class="col-12 col-md-6 col-lg-4 product-item" data-category="${product.category}">
                             <div class="card product-card h-100 shadow border">
-                                <img src="${product.image_url}" class="card-img-top shadow border" alt="${product.name}">
+                                <img alt="produto" src="${product.image_url}" class="card-img-top shadow border" alt="${product.name}">
                                 <div class="card-body">
                                     <h5 class="card-title">${product.name}</h5>
                                     <div class="card-text">${product.descricao}</div>

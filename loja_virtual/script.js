@@ -27,7 +27,7 @@ function createProductCard(product) {
 
     // Cria um wrapper para a imagem e a descrição
     const imageWrapper = $('<div>').addClass('product-image-wrapper');
-    const image = $('<img>').attr('src', product.image_url).attr('alt', product.name);
+    const image = $('<img alt="product-card" alt="">').attr('src', product.image_url).attr('alt', product.name);
     imageWrapper.append(image);
 
     // Adiciona a descrição dentro do wrapper se ela existir

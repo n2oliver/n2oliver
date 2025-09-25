@@ -26,7 +26,7 @@
                         <div class="carousel-item active" style="overflow-x: hidden">
                             <div class="row" style="height: fit-content; align-content: center;">
                                 <div class="px-0 carousel-item-content" style="height: fit-content">
-                                    <img class="title-image img-fluid" src="img/linhaamarela.jpg" />
+                                    <img alt="linhaamarela" class="title-image img-fluid" src="img/linhaamarela.jpg" />
                                     <h2 class="title">
                                         <a href="/jogos/linhaamarela/" role="button" class="btn btn-custom">Linha Amarela</a>
                                     </h2>
@@ -36,7 +36,7 @@
                         <div class="carousel-item" style="overflow-x: hidden">
                             <div class="row" style="height: 100%">
                                 <div class="px-0 carousel-item-content">
-                                    <img class="title-image img-fluid" src="img/combo-memo.png" />
+                                    <img alt="combo-memo" class="title-image img-fluid" src="img/combo-memo.png" />
                                     <h2 class="title">
                                         <a href="/jogos/combo-memo/" role="button" class="btn btn-custom">Combo-Memo</a>
                                     </h2>
@@ -46,7 +46,7 @@
                         <div class="carousel-item">
                             <div class="row" style="height: 100%">
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
-                                    <img class="title-image img-fluid" src="img/calculadoras-pediatricas.jpg" />
+                                    <img alt="calculadoras-pediatricas" class="title-image img-fluid" src="img/calculadoras-pediatricas.jpg" />
                                     <h2 class="title">
                                         <a href="https://whitebook.pebmed.com.br/planos" role="button" class="btn btn-custom">Decisões Clínicas</a>
                                     </h2>
@@ -56,7 +56,7 @@
                         <div class="carousel-item">
                             <div class="row">
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
-                                <img class="title-image img-fluid" src="img/loja_virtual.jpg"/>
+                                <img alt="loja_virtual" class="title-image img-fluid" src="img/loja_virtual.jpg"/>
                                     <h2 class="title">
                                         <a href="/loja_virtual/" role="button" class="btn btn-custom">Loja Virtual</a>
                                     </h2>
@@ -66,7 +66,7 @@
                         <div class="carousel-item" style="overflow-x: hidden">
                             <div class="row">
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
-                                    <img class="title-image img-fluid" src="img/calculadoramateriais.jpg"/>
+                                    <img alt="calculadoramateriais" class="title-image img-fluid" src="img/calculadoramateriais.jpg"/>
                                     <h2 class="title">
                                         <a href="/calculadora_material.php" role="button" class="btn btn-custom">Calculadora de Aplicação de Materiais</a>
                                     </h2>

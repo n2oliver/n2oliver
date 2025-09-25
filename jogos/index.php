@@ -16,9 +16,6 @@ $APP_URL = '/jogos'; ?>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../styles-index.css"/>
     <link rel="stylesheet" href="../sobre-mim.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
   <style>
     body {
       font-family: sans-serif;
@@ -136,17 +133,10 @@ $APP_URL = '/jogos'; ?>
   <script src="/popads-monetization.js" data-cfasync="false"></script>
   <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
   <script async src="https://ss.mrmnd.com/banner.js"></script>
-  <script async src="https://ss.mrmnd.com/static/30ac6d0b-b9ea-4fe0-9b09-882166ba26aa.js"></script>
 </head>
 <body>
+  <?php include("../aads.php"); ?>
 <?php include("../gtagmanager.php"); ?>
-  <script>
-    Toastify({
-        text: 'Clique em um jogo para jogar!',
-        duration: 3000,
-        className: 'success',
-    }).showToast();
-  </script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 
@@ -166,7 +156,7 @@ $APP_URL = '/jogos'; ?>
     
 
   <header class="mx-auto col-md-8 text-center">
-    <img src="<?=$APP_URL?>/img/logo.png" style="height: 60px; width: auto;"/>
+    <img alt="logo" src="<?=$APP_URL?>/img/logo.png" style="height: 60px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
   </header>
   
@@ -201,23 +191,20 @@ $APP_URL = '/jogos'; ?>
         </div>
       </div>
     </div>
-    <div class="d-flex flex-column align-items-start justify-content-between">
+    <div class="d-flex flex-column align-items-center justify-content-between">
       <div class="flex-grow-1 text-start">
         <div class="row">
-          <div class="col-md-6 align-self-start">
-            
-            <h5 class="mb-1">Oi, seja bem vindo!</h5>
-            <p class="mb-2">Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos. 😄</p>
-            <button type="button" class="btn btn-primary btn-sm">Começar a diversão!</button>
-            <img class="m-2" src="/img/tremamarelo.jpg" style="height: auto; width: 100%; border-radius: 8px;"
-              alt="Imagem de boas-vindas com um trem amarelo"/>
-          </div>
           <div class="col m-2 text-center">
-            <div data-mndbanid="752815f8-0818-43e0-9381-cc69ab1d3ee7"></div>
+            <div data-mndbanid="d34bd492-9d50-4f0d-b8af-38606d771973"></div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="alert alert-primary m-auto col-md-8">
+    <h5 class="mb-1">Oi, seja bem vindo!</h5>
+    <p class="mb-2">Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos. 😄</p>
+    <button type="button" class="btn btn-primary btn-sm">Começar a diversão!</button>            
   </div>
   <div id="main-game" class="game-card mx-auto mt-2 col-md-8 text-center">
     <div class="row">
@@ -294,16 +281,12 @@ $APP_URL = '/jogos'; ?>
     </div>
     <!-- Adicione mais jogos aqui -->
   </main>
-  <div class="container m-auto col-md-8">
-    <div class="donation-section">
+  <div class="container m-auto col-md-8 p-0">
+    <div class="donation-section m-0">
       <h3>Gostou dos jogos?</h3>
       <p>Seu apoio ajuda a manter o site no ar e a desenvolver novos projetos. Considere fazer uma doação para nos ajudar a continuar criando conteúdo gratuito e divertido para todos!</p>
       <p><strong>Chave PIX:</strong> silva.liver@gmail.com</p>
     </div>
-  </div>
-  <div id="adsterra-banner" class="m-auto col-md-8">
-      <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
-      <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
   </div>
   <?php include("../footer.php"); ?>
     <script>
@@ -321,6 +304,5 @@ $APP_URL = '/jogos'; ?>
       .catch(e => console.error('Erro no postback (proxy):', e));
   })();
 </script>
-  <?php include("../aads.php"); ?>
 </body>
 </html>

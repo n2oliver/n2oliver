@@ -1,5 +1,5 @@
 <nav class="navbar light navbar-expand-lg navbar-dark py-0 mx-0">
-    <a class="navbar-brand rounded" style="-webkit-text-stroke: 1px white" href="/"><img src="/img/n2.jpg" width="32" class="rounded"><span>oliver</span></a>
+    <a class="navbar-brand rounded" style="-webkit-text-stroke: 1px white" href="/"><img alt="logomarca" src="/img/n2.jpg" width="32" class="rounded"><span>oliver</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

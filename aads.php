@@ -3,8 +3,10 @@
         style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
 </div>
 <script>
-    $('.frame').click((e)=>{
-        e.target.style.display = 'none';
+    document.addEventListener("DOMContentLoaded", function() {
+        $('.frame').click((e)=>{
+            e.target.style.display = 'none';
+        });
     });
 </script>
 <style>
