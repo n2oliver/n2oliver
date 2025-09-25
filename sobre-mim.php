@@ -49,12 +49,6 @@
                 
             <?php include("navbar.php"); ?>
             <main>
-                <div class="mt-2 d-flex" style="flex-direction: row"> 
-                    <div class="frame" style="width: 100%;margin: auto;position: relative !important; background: rgba(0, 0, 0, 0.50); z-index: 9;">
-                    <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
-                                        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
-                    </div>
-                </div>
                 <div class="mt-2 d-flex about-me mb-2" style="height: auto; flex-direction: row">  
                     <div class="container d-flex my-0 quicksand main-content" style="border-bottom-left-radius: 0px; height: fit-content">
                         <div>

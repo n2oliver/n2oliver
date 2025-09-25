@@ -15,5 +15,4 @@
     }
 </style>
 <?php include("adcash.php"); ?>
-<?php include("popcash.php"); ?>
 

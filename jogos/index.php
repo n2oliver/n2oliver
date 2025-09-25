@@ -123,6 +123,10 @@ $APP_URL = '/jogos'; ?>
       position: relative;
       background-color: var(--bs-alert-bg);
     }
+    #adsterra-banner > div {
+      background: rgba(255, 255, 255, .8);
+      backdrop-filter: blur(1px);
+    }
   </style>
   <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
@@ -171,11 +175,14 @@ $APP_URL = '/jogos'; ?>
         style="box-shadow:0 2px 6px rgba(0,0,0,.08);">
     <div class="d-flex flex-wrap align-items-start justify-content-between">
       <div>
-        <script type="text/javascript">
-            aclib.runBanner({
-                zoneId: '10435502',
-            });
-        </script>
+        <div>
+            <script type="text/javascript">
+                aclib.runBanner({
+                    zoneId: '10445942',
+                });
+            </script>
+        </div>
+
       </div>
       <script type="text/javascript">
         atOptions = {
@@ -198,10 +205,12 @@ $APP_URL = '/jogos'; ?>
       <div class="flex-grow-1 text-start">
         <div class="row">
           <div class="col-md-6 align-self-start">
-            <iframe width="auto" height="200" class="m-2" src="https://www.youtube.com/embed/ncnigutZROs" title="Jogue Online Gratuitamente no n2oliver.com #jogosonline #quiz #tecnologiadomestica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
             <h5 class="mb-1">Oi, seja bem vindo!</h5>
             <p class="mb-2">Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos. 😄</p>
             <button type="button" class="btn btn-primary btn-sm">Começar a diversão!</button>
+            <img class="m-2" src="/img/tremamarelo.jpg" style="height: auto; width: 100%; border-radius: 8px;"
+              alt="Imagem de boas-vindas com um trem amarelo"/>
           </div>
           <div class="col m-2 text-center">
             <div data-mndbanid="752815f8-0818-43e0-9381-cc69ab1d3ee7"></div>
@@ -240,11 +249,6 @@ $APP_URL = '/jogos'; ?>
           </a>
       </div>
   </div>
-  
-      <div class="frame" style="width: 100%;margin: auto;position: relative !important; background: rgba(0, 0, 0, 0.50); z-index: 9;">
-      <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
-                          style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
-      </div>
   </div>
   <main class="container m-auto col-md-8">
     <div class="game-card">
@@ -297,7 +301,7 @@ $APP_URL = '/jogos'; ?>
       <p><strong>Chave PIX:</strong> silva.liver@gmail.com</p>
     </div>
   </div>
-  <div class="m-auto col-md-8">
+  <div id="adsterra-banner" class="m-auto col-md-8">
       <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
       <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
   </div>
