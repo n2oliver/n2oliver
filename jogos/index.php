@@ -17,7 +17,6 @@ $APP_URL = '/jogos'; ?>
     <link rel="stylesheet" href="../styles-index.css"/>
     <link rel="stylesheet" href="../sobre-mim.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
   <style>
@@ -124,23 +123,6 @@ $APP_URL = '/jogos'; ?>
       position: relative;
       background-color: var(--bs-alert-bg);
     }
-    .loading>div:not(.loader):not(.frame),
-    header,
-    main {
-      display: none;
-    }
-    .loader {
-      background-color: white;
-      width: 400px !important;
-      height: 200px !important;
-      position: fixed;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      top: 0;
-      bottom: 0;
-      z-index: 2447483646;
-    }
   </style>
   <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
@@ -152,12 +134,7 @@ $APP_URL = '/jogos'; ?>
   <script async src="https://ss.mrmnd.com/banner.js"></script>
   <script async src="https://ss.mrmnd.com/static/30ac6d0b-b9ea-4fe0-9b09-882166ba26aa.js"></script>
 </head>
-<body class="loading">
-  <div class="loader d-flex flex-column align-items-center justify-content-center">
-    <img src="/jogos/img/logo.png" alt="n2oliver Jogos"
-      style="height:72px"/>
-    <i class="fas fa-spinner fa-spin fa-2x" aria-hidden="true"></i>
-  </div>
+<body>
 <?php include("../gtagmanager.php"); ?>
   <script>
     Toastify({
@@ -200,10 +177,7 @@ $APP_URL = '/jogos'; ?>
             });
         </script>
       </div>
-      <div class="d-flex p-1 rounded shadow alert-primary" style="background: var(--bs-primary-bg-subtle)">
-        <div class="text-start">
-          <img src="/jogos/img/logo.png" alt="n2oliver Jogos" style="width:72px;height:auto;flex:0 0 auto;" class="align-self-start"/>
-        </div>
+      <div class="d-flex p-1" style="background: #cfe2ff">
         <div class="text-end">          
           <button type="button" class="btn-close" aria-label="Fechar"
               onclick="document.getElementById('welcomeModal')?.remove()"></button>
