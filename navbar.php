@@ -9,7 +9,7 @@
                 <a class="nav-link rounded" href="/"><i class="fa-solid fa-user"></i> Notícias</a>
             </li>
             <li class="nav-item nav-b">
-                <a class="nav-link rounded" href="/portfolio.php"><i class="fa-solid fa-hand-pointer"></i> Portfólio</a>
+                <a class="nav-link rounded" href="/aplicativos.php"><i class="fa-solid fa-hand-pointer"></i> Aplicativos</a>
             </li>
             <li class="nav-item nav-c">
                 <a class="nav-link rounded" href="/jogos/index.php"><i class="fa-solid fa-puzzle-piece"></i> Jogos Online</a>

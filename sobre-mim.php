@@ -148,7 +148,7 @@
                         <div class="align-content-center" style="border: gray solid 2px; background-image: url(img/web-design-technology-browsing-programming-concept.jpg); background-position: center; background-size: cover; background-attachment: fixed;">
                             <div class="container mx-auto" style="width: fit-content; background-color: rgba(255, 255, 255, .8)">
                                 <p class="my-2" style="text-align: center">Conheça o meu portfólio 
-                                clicando no link abaixo:<br/><a class="btn btn-primary" href="portfolio.php">Conhecer portfólio</a></p>
+                                clicando no link abaixo:<br/><a class="btn btn-primary" href="aplicativos.php">Conhecer portfólio</a></p>
                             </div>
                         </div>
                         
