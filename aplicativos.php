@@ -66,6 +66,26 @@
                         <div class="carousel-item" style="overflow-x: hidden">
                             <div class="row">
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
+                                    <img alt="caca-palavras" class="title-image img-fluid" src="/jogos/img/a.jpg"/>
+                                    <h2 class="title">
+                                        <a href="/jogos/caca-palavras/" role="button" class="btn btn-custom">Caça-Palavras</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="overflow-x: hidden">
+                            <div class="row">
+                                <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
+                                    <img alt="palavras-cruzadas" class="title-image img-fluid" src="/jogos/img/flat-crosswords.jpg"/>
+                                    <h2 class="title">
+                                        <a href="/jogos/palavras-cruzadas/" role="button" class="btn btn-custom">Palavras-Cruzadas</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="overflow-x: hidden">
+                            <div class="row">
+                                <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
                                     <img alt="calculadoramateriais" class="title-image img-fluid" src="img/calculadoramateriais.jpg"/>
                                     <h2 class="title">
                                         <a href="/calculadora_material.php" role="button" class="btn btn-custom">Calculadora de Aplicação de Materiais</a>
@@ -80,6 +100,8 @@
                         <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="3" aria-label="Slide 4"></button>
                         <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="6" aria-label="Slide 7"></button>
                     </div>
                 </div>
 
@@ -92,8 +114,10 @@
                             🎮 Mostre sua habilidade, quebre as defesas e salve o que restou!<br>
                             💥 Totalmente gratuito e direto no navegador.<br>
                             🌐 Compatível com desktop e mobile.<br>
-                            📅 Data de lançamento: 27/06/2025<br>
-                            🔗 Link: <a href="/jogos/linhaamarela/">https://n2oliver.com/jogos/linhaamarela/</a></p>
+                            
+                        <div class="text-center">
+                            <a href="/jogos/linhaamarela/"><button class="btn btn-danger"><strong>Jogar agora</strong></button></a>
+                        </div>
                     </div>
                 </div>
 
@@ -101,6 +125,10 @@
                     <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica">
                         <h1>Combo-Memo</h1>
                         <p>Um jogo da memória clássico, desenvolvido com JavaScript puro e CSS para ser leve e divertido. O projeto inclui animações dinâmicas, sistema de combos e comemorações, oferecendo uma experiência de jogo engajante e totalmente gratuita no navegador.</p>
+                        
+                        <div class="text-center">
+                            <a href="/jogos/combo-memo/"><button class="btn btn-danger"><strong>Jogar agora</strong></button></a>
+                        </div>
                     </div>
                 </div>
 
@@ -109,6 +137,10 @@
                         <h1>Whitebook</h1>
                         <p>O Whitebook é um sistema abrangente de conteúdo e calculadoras clínicas desenvolvido para fornecer suporte essencial aos profissionais de saúde. Com informações médicas atualizadas e ferramentas de cálculo específicas, o Whitebook é a solução ideal para médicos, enfermeiros e outros profissionais da área da saúde que buscam eficiência e precisão em seus atendimentos.</p>
                         <p>Com o Whitebook, os profissionais de saúde têm acesso rápido a informações essenciais e ferramentas práticas, otimizando o tempo e aprimorando a qualidade do atendimento. É uma ferramenta indispensável para a prática médica moderna.</p>
+                        
+                        <div class="text-center">
+                            <a href="https://whitebook.pebmed.com.br/planos"><button class="btn btn-primary"><strong>Acessar</strong></button></a>
+                        </div>
                     </div>
                 </div>
 
@@ -116,13 +148,61 @@
                     <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica">
                         <h1>Oliv3r Store - Loja Virtual</h1>
                         <p>A Oliv3r Store é um espaço de afiliados onde apresento uma curadoria pessoal de produtos que uso e recomendo. O foco é oferecer valor real, com descrições originais e uma seleção cuidadosa de tecnologia, livros e cursos, alinhados aos temas de desenvolvimento e bem-estar do site.</p>
+                        
+                        <div class="text-center">
+                            <a href="/loja_virtual/"><button class="btn btn-primary"><strong>Acessar</strong></button></a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="text-box p-0" data-content-index="4" style="display: none">
                     <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica">
+                        <h1>Caça-Palavras</h1>
+                        <p>Venha jogar Caça-Palavras com a gente!
+                        No Caça-Palavras, cada partida é uma nova descoberta.
+                        As palavras estão escondidas entre as !letras e cabe a você encontrá-las.
+                        <ul>
+                            <li>Simples de jogar</li>
+
+                            <li>Bom para treinar a atenção</li>
+
+                            <li>Perfeito para passar o tempo</li>
+                        </ul>
+                        Jogue no seu ritmo e divirta-se encontrando cada palavra escondida.
+                        Será que você consegue achar todas?</p>
+                        <div class="text-center">
+                            <a href="/jogos/caca-palavras/"><button class="btn btn-danger"><strong>Jogar agora</strong></button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-box p-0" data-content-index="5" style="display: none">
+                    <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica">
+                        <h1>Desafie-se nas Palavras Cruzadas!</h1>
+                        
+                        <p>As <strong>Palavras Cruzadas</strong> são um clássico que exercita a mente e amplia o vocabulário — com um ritmo tranquilo e descomplicado.</p>
+
+                            <ul>
+                                <li>Teste seus conhecimentos</li>
+                                <li>Aprenda palavras novas</li>
+                                <li>Relaxe enquanto resolve</li>
+                            </ul>
+
+                            <p>Tem alguns minutos? Complete a grade no seu tempo e divirta-se descobrindo cada resposta.</p>
+                        <div class="text-center">
+                            <a href="/jogos/palavras-cruzadas/"><button class="btn btn-danger"><strong>Jogar agora</strong></button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-box p-0" data-content-index="6" style="display: none">
+                    <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica">
                         <h1>Cobertura de Superfícies com Perdas</h1>
                         <p>A Calculadora Cobertura de Superfícies com Perdas é uma ferramenta inovadora desenvolvida para simplificar o processo de cálculo e otimização de materiais em diversos projetos de construção e design. Nossa calculadora permite que profissionais e entusiastas estimem com precisão a quantidade de materiais necessários, considerando perdas inevitáveis durante o processo de corte, montagem e instalação.</p>
+                        
+                        <div class="text-center">
+                            <a href="/calculadora_material.php"><button class="btn btn-primary"><strong>Acessar</strong></button></a>
+                        </div>
                     </div>
                 </div>
             </div>
