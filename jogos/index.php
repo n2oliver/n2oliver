@@ -147,18 +147,15 @@ $APP_URL = '/jogos'; ?>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootbox@5.5.2/bootbox.min.js"></script>
 
-  <div class="m-auto p-1 col-md-8">
-    <?php include('../navbar.php'); ?>
-  </div>
-    <script>
-      const nav = document.querySelector('nav')
-      nav.classList.add('col-md-8');
-      nav.classList.add('m-auto');
-      nav.classList.add('px-0');
-    </script>
+  <?php include('../navbar.php'); ?>
+  <script>
+    const nav = document.querySelector('nav')
+    nav.classList.add('col-md-8');
+    nav.classList.add('m-auto');
+    nav.classList.add('px-0');
+  </script>
     
-
-  <header class="mx-auto col-md-8 text-center">
+  <header class="mx-auto col-md-8 text-center mt-3">
     <img alt="logo" src="<?=$APP_URL?>/img/logo.png" style="height: 60px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
   </header>
