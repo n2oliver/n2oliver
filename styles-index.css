@@ -455,3 +455,19 @@ h1 {
     bottom: 0 !important;
     left: 0 !important;
 }
+#recentes {
+    max-height: 480px;
+    overflow-y: scroll;
+}
+#noticia {
+    max-height: 480px;
+    overflow-y: scroll;
+    max-width: 64%;
+}
+#recentes, #noticia {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}   
+#recentes::-webkit-scrollbar, #noticia::-webkit-scrollbar {
+    display: none;
+}

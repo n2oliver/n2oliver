@@ -11,7 +11,7 @@
     </div>
     <div id="recentes" class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px">
         
-        <h1 class="w-100 text-light px-4 pt-3 pb-4 bg-primary mb-0">
+        <h1 class="text-light px-4 pt-3 pb-4 bg-primary mb-0" style="width: fit-content; min-width: 100%;">
             <div class="d-flex justify-content-start align-items-center">
                 <i class="fa fa-clock pe-2 text-light"></i>
                 <span id="noticias-span-title">Recentes</span></div>
@@ -21,10 +21,10 @@
             include('./buscar-noticias.php');
         ?>
         <?php if (empty($noticias)) { ?>
-            <div class="p-3">Nenhuma notícia encontrada.</div>
+            <div class="p-3" style="width: fit-content">Nenhuma notícia encontrada.</div>
         <?php } else { ?>
             <?php foreach ($noticias as $noticiasInfo): ?>
-                <div class="border rounded shadow-sm mb-1 ms-1 bg-light">
+                <div class="border rounded shadow-sm mb-1 ms-1 bg-light" style="width: fit-content; min-width: 100%; cursor: pointer;" onclick="toggleNoticiaContent(<?= $noticiasInfo['id'] ?>)">
                     <div class="p-3" style="background: darkslategray">
                         <div class="mb-1 text-light" style="cursor:pointer;" onclick="toggleNoticiaContent(<?= $noticiasInfo['id'] ?>)">
                             <?= $noticiasInfo['titulo'] ?>

@@ -65,7 +65,7 @@
                         <div class="col-6">
                             <h1>Junte-se a mim no <strong>TikTok</strong></h1>
                             <a target="_blank" href="https://vm.tiktok.com/ZMHn4DwAU62Ye-4irF2/" >
-                                <img src="/img/tiktok.png" alt="banner" style="height:50vh; margin-bottom:15px;"/>
+                                <img src="/img/tiktok.png" alt="banner" style="width:60%; margin-bottom:15px;"/>
                             </a>
                         </div>
 

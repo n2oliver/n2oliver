@@ -14,7 +14,7 @@ try {
     }
     $noticiaInfo = $noticia[0];
     echo '<div id="noticia-content" class="border rounded shadow-sm mb-3 bg-light">' .
-        '<div class="p-3" style="position: sticky; top: 64px; background: darkslategray">' .
+        '<div class="p-3" style="position: sticky; top: 0px; background: darkslategray">' .
             '<h5 class="mb-1 text-light" style="cursor:pointer;" onclick="toggleNoticiaContent(' .
             $noticiaInfo['id'] . 
             ')">
