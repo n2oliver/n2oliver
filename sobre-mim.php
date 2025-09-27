@@ -49,6 +49,11 @@
                 
             <?php include("navbar.php"); ?>
             <main>
+
+                <div class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px;">
+                    <?php include('./noticias.php'); ?>
+                </div>
+                
                 <div class="mt-2 d-flex about-me mb-2" style="height: auto; flex-direction: row">  
                     <div class="container d-flex my-0 quicksand main-content" style="border-bottom-left-radius: 0px; height: fit-content">
                         <div>
@@ -70,10 +75,6 @@
                         </div>
 
                     </div>
-                </div>
-
-                <div class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px;">
-                    <?php include('./noticias.php'); ?>
                 </div>
 
                 <div class="row px-3 main-content">

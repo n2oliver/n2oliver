@@ -43,6 +43,12 @@ Sou desenvolvedor full stack com foco em aplicações web e jogos interativos. T
 
 └── /scripts/ # (Opcional) JS para futuras interações
 
+## 📁 Build do projeto
+
+Execute o comando de terminal na pasta raiz do projeto: 
+
+/
+docker compose watch
 
 ## 📫 Contato
 

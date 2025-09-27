@@ -462,7 +462,6 @@ h1 {
 #noticia {
     max-height: 480px;
     overflow-y: scroll;
-    max-width: 64%;
 }
 #recentes, #noticia {
     -ms-overflow-style: none;
@@ -470,4 +469,12 @@ h1 {
 }   
 #recentes::-webkit-scrollbar, #noticia::-webkit-scrollbar {
     display: none;
+}
+.recentes-imagem {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 12px;
 }

@@ -13,6 +13,12 @@ services:
       context: .
     ports:
       - 8000:80
+    develop:
+      watch:
+        - path: . # Path to monitor for changes
+          action: rebuild # Action to take: rebuild the image and recreate the container
+        - path: ./package.json # Example for specific file requiring rebuild
+          action: rebuild
     volumes:
       - ./index.php:/var/www/html/index.php
       - ./cabecalho.php:/var/www/html/cabecalho.php
