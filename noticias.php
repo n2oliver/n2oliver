@@ -17,11 +17,11 @@
                 <span id="noticias-span-title">Recentes</span></div>
         </h1>
 
-        <div class="d-flex mb-0 p-0">
+        <div class="d-flex mb-0 p-0" style="height: 400px; overflow: hidden;">
             <?php 
                 include_once('./buscar-noticias.php');
             ?>
-            <div class="flex-column">
+            <div class="flex-column" style="overflow-y: scroll">
                 <?php if (empty($noticias)) { ?>
                     <div class="p-3" style="width: fit-content">Nenhuma notícia encontrada.</div>
                 <?php } else { ?>
@@ -50,8 +50,7 @@
                     <?php endforeach; ?>
                 <?php } ?>
             </div>
-            <div id="preview">
-                <img class="w-100" src="/img/n2.jpg" alt="noticia" />
+            <div id="preview" style="background-image: url(<?= $noticiaInfo['imagem'] ?>)">
             </div>
         </div>
     </div>
@@ -69,7 +68,7 @@
                 if (contentDiv) {
                     contentDiv.outerHTML = response;
                     if(e !== null) {
-                        document.getElementById('noticia-content').scrollIntoView({ behavior: 'smooth' });
+                        document.getElementById('noticia').scrollIntoView({ behavior: 'smooth' });
                     }
                 }
             },
@@ -79,8 +78,10 @@
         });
     }
     $(document).ready(function() {
+        let img = $(this).find('.recentes-imagem').css('background-image').replace('url("', 'url(').replace('")', ')');
+        $('#preview').html(`<div class="h-100" style="background-image: ${img};" alt="Carregando..." />`);
         $('.item').hover(function() {
-            const img = $(this).find('.recentes-imagem').css('background-image').replace('url("', 'url(').replace('")', ')');
+            img = $(this).find('.recentes-imagem').css('background-image').replace('url("', 'url(').replace('")', ')');
             if (img) {
                 $('#preview').html(`<div class="h-100" style="background-image: ${img};" alt="Carregando..." />`);
             }
