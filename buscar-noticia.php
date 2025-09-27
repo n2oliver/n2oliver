@@ -32,13 +32,13 @@ try {
         <div class="px-3">
             <div data-id=' . $noticiaInfo['id'] . ' style="" class="mt-3 noticia-conteudo">';
                 if (!empty($noticiaInfo['imagem'])) {
-                    echo '<div><div id="imagem-background" alt="imagem-background" style="background-image: url(' . htmlspecialchars($noticiaInfo['imagem']) . ')" class="w-100 float-start me-2 my-2" ></div><img src="' . htmlspecialchars($noticiaInfo['imagem'])  . '" id="imagem" alt="imagem" class="w-100 float-start me-2 my-2" /></div>';
+                    echo '<div class="me-2"><div id="imagem-background" alt="imagem-background" style="background-image: url(' . htmlspecialchars($noticiaInfo['imagem']) . ')" class="w-100 float-start me-2 my-2" ></div><div class="w-100 float-start me-2 my-2" style="overflow-y: visible; height: 0px"><img src="' . htmlspecialchars($noticiaInfo['imagem'])  . '" id="imagem" alt="imagem" class="w-100" /></div></div>';
                 }
                 if (!empty($noticiaInfo['resumo'])) {
                     echo '<div class="mt-2 text-dark"><h2><strong>' . htmlspecialchars($noticiaInfo['resumo']) . '</strong></h2></div>';
                 }
-                echo '<div class="mb-2">';
-                echo '<p class="text-dark">' . $noticiaInfo['conteudo'] . '</p>
+                echo '<div class="me-2">' .
+                    '<p class="text-dark">' . $noticiaInfo['conteudo'] . '</p>
                 </div>';
                 if (!empty($noticiaInfo['data_edicao'])) {
                     echo '<small class="text-muted">Editado em ' . date("d/m/Y H:i", strtotime($noticiaInfo['data_edicao'])) . '</small>';

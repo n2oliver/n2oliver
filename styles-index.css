@@ -506,7 +506,7 @@ h1 {
     height: 200vh;
     background-size: cover;
     background-position: center;
-    filter: blur(20px);
+    filter: blur(4px);
     border-radius: 12px;
     margin-right: 12px;
     padding-bottom: 50px;
