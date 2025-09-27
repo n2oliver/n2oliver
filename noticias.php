@@ -81,9 +81,9 @@
     }
     $(document).ready(function() {
         $('.item').hover(function() {
-            const img = $(this).find('.recentes-imagem').css('background-image').replace('url("','').replace('")','');
+            const img = $(this).find('.recentes-imagem').css('background-image').replace('url("', 'url(').replace('")', ')');
             if (img) {
-                $('#preview').html(`<img class="w-100" src="${img}" alt="Carregando..." />`);
+                $('#preview').html(`<div class="h-100" style="background-image: ${img};" alt="Carregando..." />`);
             }
         });
     });
