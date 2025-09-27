@@ -7,8 +7,8 @@
                 <span id="noticias-span-title">Notícias</span><div class="oliver-dev-logo text-end w-100">n2oliver</div></div>
         </h1>
 
-        <?php include('./buscar-noticia.php'); ?>
-    </div>
+        <?php include_once('./buscar-noticia.php'); ?>
+
     <div id="recentes" class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px">
         
         <h1 class="text-light px-4 pt-3 pb-4 bg-primary mb-0" style="width: fit-content; min-width: 100%; position: sticky; top: 0; left: 0; z-index: 1;">
@@ -19,7 +19,7 @@
 
         <div class="d-flex mb-0 p-0">
             <?php 
-                include('./buscar-noticias.php');
+                include_once('./buscar-noticias.php');
             ?>
             <div class="flex-column">
                 <?php if (empty($noticias)) { ?>
@@ -67,10 +67,9 @@
             success: function(response) {
                 const contentDiv = document.getElementById('noticia-content');
                 if (contentDiv) {
-                    contentDiv.innerHTML = '';
-                    contentDiv.innerHTML = response;
+                    contentDiv.outerHTML = response;
                     if(e !== null) {
-                        contentDiv.scrollIntoView({ behavior: 'smooth' });
+                        document.getElementById('noticia-content').scrollIntoView({ behavior: 'smooth' });
                     }
                 }
             },
