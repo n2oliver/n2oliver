@@ -271,6 +271,9 @@ footer a:hover {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+.about-me div {
+    max-width: 100% !important;
+}
 
 .container {
     background-color: #fff;
@@ -477,4 +480,8 @@ h1 {
     background-position: center;
     border-radius: 8px;
     margin-bottom: 12px;
+}
+#preview {
+    width: fit-content;
+    height: fit-content;
 }

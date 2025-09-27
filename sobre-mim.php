@@ -53,9 +53,9 @@
                 <div class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px;">
                     <?php include('./noticias.php'); ?>
                 </div>
-                
+
                 <div class="mt-2 d-flex about-me mb-2" style="height: auto; flex-direction: row">  
-                    <div class="container d-flex my-0 quicksand main-content" style="border-bottom-left-radius: 0px; height: fit-content">
+                    <div class="container d-flex m-0 quicksand main-content" style="border-bottom-left-radius: 0px; height: fit-content">
                         <div>
                             <h1 class="w-100">Sobre o Dev</h1>
                             <div class="bg-white my-1 me-4 rounded shadow" style="background-image: url(img/oliver.jpg); background-position: center; background-size: cover; width: 128px; height: 128px; float: left; border: 2px darkslategray solid">
