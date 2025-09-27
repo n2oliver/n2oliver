@@ -32,7 +32,7 @@ try {
         <div class="px-3">
             <div data-id=' . $noticiaInfo['id'] . ' style="" class="mt-3 noticia-conteudo">';
                 if (!empty($noticiaInfo['imagem'])) {
-                    echo '<div id="imagem" alt="imagem" style="background-image: url(' . htmlspecialchars($noticiaInfo['imagem']) . ')" class="w-100 float-start me-2 my-2" ></div>';
+                    echo '<div><div id="imagem-background" alt="imagem-background" style="background-image: url(' . htmlspecialchars($noticiaInfo['imagem']) . ')" class="w-100 float-start me-2 my-2" ></div><img src="' . htmlspecialchars($noticiaInfo['imagem'])  . '" id="imagem" alt="imagem" class="w-100 float-start me-2 my-2" /></div>';
                 }
                 if (!empty($noticiaInfo['resumo'])) {
                     echo '<div class="mt-2 text-dark"><h2><strong>' . htmlspecialchars($noticiaInfo['resumo']) . '</strong></h2></div>';

@@ -489,9 +489,33 @@ h1 {
     width: 50vw;
 }
 #imagem {
-    height: 50vh;
-    background-size: cover;
+    position: relative;
+    top: -150vh;
+    background-size: 100% auto;
     background-position: center;
+    backdrop-filter: blur(.1);
     border-radius: 12px;
     margin-right: 12px;
+    background-repeat: no-repeat;
+}
+#imagem-background {
+    position: relative;
+    top: 0px;
+    height: 200vh;
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px);
+    border-radius: 12px;
+    margin-right: 12px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+@media (max-width: 768px) {
+    #imagem {
+        top: -80vh;
+    }
+    #imagem-background {
+        height: 100vh;
+    }
 }
