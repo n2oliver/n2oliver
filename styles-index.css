@@ -462,10 +462,6 @@ h1 {
     max-height: 480px;
     overflow-y: scroll;
 }
-#noticia {
-    max-height: 480px;
-    overflow-y: scroll;
-}
 #recentes, #noticia {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -491,4 +487,11 @@ h1 {
     background-size: cover;
     overflow: clip;
     width: 50vw;
+}
+#imagem {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    margin-right: 12px;
 }
