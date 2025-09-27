@@ -146,8 +146,9 @@ $APP_URL = '/jogos'; ?>
   <!-- Bootstrap Bundle (JS + Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootbox@5.5.2/bootbox.min.js"></script>
-
-  <?php include('../navbar.php'); ?>
+  <div class="col-md-8 m-auto" style="position: sticky; top: 0">
+    <?php include('../navbar.php'); ?>
+  </div>
   <script>
     const nav = document.querySelector('nav')
     nav.classList.add('col-md-8');
@@ -163,17 +164,7 @@ $APP_URL = '/jogos'; ?>
   <div id="welcomeModal" class="alert alert-primary p-1 mx-auto col-md-8"
         role="region" aria-label="Boas-vindas"
         style="box-shadow:0 2px 6px rgba(0,0,0,.08);">
-    <div class="d-flex flex-wrap align-items-start justify-content-between">
-      <div>
-        <div>
-            <script type="text/javascript">
-                aclib.runBanner({
-                    zoneId: '10445942',
-                });
-            </script>
-        </div>
-
-      </div>
+    <div class="d-flex flex-wrap align-items-start justify-content-center">
       <script type="text/javascript">
         atOptions = {
           'key' : '29929d8720c37977a6ea64b1b7db2d02',
@@ -206,20 +197,15 @@ $APP_URL = '/jogos'; ?>
     <p class="mb-2">Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos. 😄</p>
     <button type="button" class="btn btn-primary btn-sm">Começar a diversão!</button>            
   </div>
+  <div class="col-md-8 m-auto mt-3 d-flex justify-content-center">
+      <script type="text/javascript">
+          aclib.runBanner({
+              zoneId: '10445942',
+          });
+      </script>
+  </div>
   <div id="main-game" class="game-card mx-auto mt-2 col-md-8 text-center">
     <div class="row">
-      <div class="col-6">
-        <script type="text/javascript">
-          atOptions = {
-            "key" : "b5463c03cd36f2b207d3e311906ba716",
-            "format" : "iframe",
-            "height" : 250,
-            "width" : 300,
-            "params" : {}
-          };
-        </script>
-        <script type="text/javascript" src="//playedsophomore.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"></script>
-      </div>
       <div class="col-6">
         <a href="<?= $APP_URL ?>/linhaamarela/">
           <div class="bg-white row border border-light"
