@@ -461,6 +461,7 @@ h1 {
 #recentes {
     max-height: 400px;
     overflow-y: scroll;
+    z-index: 9;
 }
 #recentes, #noticia {
     -ms-overflow-style: none;
@@ -493,7 +494,7 @@ h1 {
 }
 #imagem {
     position: relative;
-    top: -150vh;
+    bottom: 180vh;
     background-size: 100% auto;
     background-position: center;
     border-radius: 12px;

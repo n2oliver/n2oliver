@@ -13,7 +13,7 @@ try {
         return;
     }
     $noticiaInfo = $noticia[0];
-    echo '<div id="noticia-content" class="border rounded shadow-sm mb-3 bg-light">' .
+    echo '<div id="noticia-content" class="pb-4 border rounded shadow-sm mb-3 bg-light">' .
         '<div class="p-3">' .
             '<h1 class="mb-1 text-dark" style="cursor:pointer;" onclick="toggleNoticiaContent(' .
             $noticiaInfo['id'] . 
@@ -32,7 +32,13 @@ try {
         <div class="px-3">
             <div data-id=' . $noticiaInfo['id'] . ' style="" class="mt-3 noticia-conteudo">';
                 if (!empty($noticiaInfo['imagem'])) {
-                    echo '<div class="me-2"><div id="imagem-background" alt="imagem-background" style="background-image: url(' . htmlspecialchars($noticiaInfo['imagem']) . ')" class="w-100 float-start me-2 my-2" ></div><div class="w-100 float-start me-2 my-2" style="overflow-y: visible; height: 0px"><img src="' . htmlspecialchars($noticiaInfo['imagem'])  . '" id="imagem" alt="imagem" class="w-100" /></div></div>';
+                    echo '<div class="me-2"
+                        style="height: fit-content; overflow: hidden;">
+                            <div id="imagem-background" alt="imagem-background" style="background-image: url(' . htmlspecialchars($noticiaInfo['imagem']) . ')" class="w-100 float-start me-2 my-2" ></div>
+                            <div id="imagem" class="w-100 float-start me-2 my-2" style="overflow-y: visible; height: 0px">
+                                <img src="' . htmlspecialchars($noticiaInfo['imagem'])  . '" alt="imagem" class="w-100" />
+                            </div>
+                        </div>';
                 }
                 if (!empty($noticiaInfo['resumo'])) {
                     echo '<div class="mt-2 text-dark"><h2><strong>' . htmlspecialchars($noticiaInfo['resumo']) . '</strong></h2></div>';
