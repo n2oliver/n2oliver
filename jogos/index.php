@@ -275,21 +275,6 @@ $APP_URL = '/jogos'; ?>
     </div>
   </div>
   <?php include("../footer.php"); ?>
-    <script>
-  (function() {
-    const p = new URLSearchParams(location.search);
-    const impressionId = p.get('IMPRESSIONID') || p.get('id');
-    if (!impressionId) return;
-
-    // valor em ponto (o proxy também normaliza)
-    const value = '0.00005';
-
-    fetch(`/conversion.php?IMPRESSIONID=${encodeURIComponent(impressionId)}&value=${encodeURIComponent(value)}`)
-      .then(r => r.json())
-      .then(j => console.log('Postback PopAds (proxy):', j))
-      .catch(e => console.error('Erro no postback (proxy):', e));
-  })();
-</script>
 </body>
   <?php include("../aads.php"); ?>
 </html>
