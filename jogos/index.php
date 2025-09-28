@@ -276,5 +276,5 @@ $APP_URL = '/jogos'; ?>
   </div>
   <?php include("../footer.php"); ?>
 </body>
-<?php include("adcash.php"); ?>
+  <?php include("../aads.php"); ?>
 </html>
