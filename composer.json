@@ -1,0 +1,15 @@
+{
+    "require": {
+        "sentry/sentry": "^3.22",
+        "symfony/http-client": "^5.4",
+        "nyholm/psr7": "^1.8"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8000"
+    }
+}
