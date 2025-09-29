@@ -35,7 +35,7 @@ $APP_URL = '/jogos'; ?>
       font-weight: 700;
       font-family: 'Ubuntu';
       font-size: 2rem;
-      background-image: linear-gradient(0deg, darkslategray, slategray, white);
+      background-image: linear-gradient(0deg, black, gray);
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
     }
@@ -47,7 +47,7 @@ $APP_URL = '/jogos'; ?>
         color: white !important;
     }
     header img {
-      filter: drop-shadow(0 0 0.2rem rgb(255, 255, 255));
+      filter: drop-shadow(0 0 0.4rem white);
     }
     .container {
       display: grid;
@@ -158,7 +158,7 @@ $APP_URL = '/jogos'; ?>
     
   <header class="mx-auto col-md-8 text-center mt-3">
     <img alt="logo" src="<?=$APP_URL?>/img/logo.png" style="height: 60px; width: auto;"/>
-    <p class="m-auto" style="max-width: 60%">Lugar de diversão com jogos simples e gratuitos direto no navegador!</p>
+    <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
   
   <div id="welcomeModal" class="alert alert-primary p-1 mx-auto col-md-8"
@@ -175,14 +175,7 @@ $APP_URL = '/jogos'; ?>
         };
       </script>
       <script type="text/javascript" src="//playedsophomore.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
-      <div class="d-flex p-1" style="background: #cfe2ff">
-        <div class="text-end">          
-          <button type="button" class="btn-close" aria-label="Fechar"
-              onclick="document.getElementById('welcomeModal')?.remove()"></button>
-        </div>
-      </div>
-    </div>
-    <div class="d-flex flex-column align-items-center justify-content-between">
+      
       <div class="flex-grow-1 text-start">
         <div class="row">
           <div class="col m-2 text-center">
@@ -190,20 +183,12 @@ $APP_URL = '/jogos'; ?>
           </div>
         </div>
       </div>
+      
+      <button type="button" class="btn-close btn bg-white" aria-label="Fechar"
+          onclick="document.getElementById('welcomeModal')?.remove()"></button>
     </div>
   </div>
-  <div class="alert alert-primary m-auto col-md-8">
-    <h5 class="mb-1">Oi, seja bem vindo!</h5>
-    <p class="mb-2">Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos. 😄</p>
-    <button type="button" class="btn btn-primary btn-sm">Começar a diversão!</button>            
-  </div>
-  <div class="col-md-8 m-auto mt-3 d-flex justify-content-center">
-      <script type="text/javascript">
-          aclib.runBanner({
-              zoneId: '10445942',
-          });
-      </script>
-  </div>
+  
   <div id="main-game" class="game-card mx-auto mt-2 col-md-8 text-center">
     <div class="row">
       <div class="col-6">
@@ -219,53 +204,16 @@ $APP_URL = '/jogos'; ?>
               </div>
             </span>
           </div>
-          </a>
-      </div>
+        </a>
+    </div>
   </div>
+  </div>
+  <div class="alert alert-primary m-auto col-md-8">
+    <h5 class="mb-1">Oi, seja bem vindo!</h5>
+    <p class="mb-2">Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos. 😄</p>
+    <button type="button" class="btn btn-primary btn-sm">Começar a diversão!</button>            
   </div>
   <main class="container m-auto col-md-8">
-    <div class="game-card">
-      <a href="<?= $APP_URL ?>/combo-memo/">
-        <div class="bg-white row mb-3 border border-light"
-          style="background: url(../img/combo-memo.png)">
-          <h2 class="rounded-left">Combo-Memo</h2>
-          <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "/jogos/combo-memo";'>
-            <p>Um divertido jogo da memória com combinações!</p>
-            <div class="link btn btn-danger my-2">Jogar
-            </div>
-          </span>
-        </div>
-      </a>
-    </div>
-
-    <div class="game-card">
-      <a href="<?= $APP_URL ?>/caca-palavras/">
-        <div class="bg-white row mb-3 border border-light"
-          style="background: url(/jogos/img/a.jpg)">
-          <h2 class="rounded-left">Caça-Palavras</h2>
-          <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "/jogos/caca-palavras";'>
-            <p>Um clássico caça-palavras para testar sua atenção e vocabulário.</p>
-            <div class="link btn btn-danger my-2">Jogar
-            </div>
-          </span>
-        </div>
-      </a>
-    </div>
-
-    <div class="game-card">
-      <a href="<?= $APP_URL ?>/palavras-cruzadas/">
-        <div class="bg-white row mb-3 border border-light"
-          style="background: url(/jogos/img/flat-crosswords.png)">
-          <h2 class="rounded-left">Palavras Cruzadas</h2>
-          <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "/jogos/palavras-cruzadas";'>
-            <p>Desafie seu conhecimento com este quebra-cabeça de palavras.</p>
-            <div class="link btn btn-danger my-2">Jogar
-            </div>
-          </span>
-        </div>
-      </a>
-    </div>
-    <!-- Adicione mais jogos aqui -->
   </main>
   <div class="container m-auto col-md-8 p-0">
     <div class="donation-section m-0">
@@ -275,6 +223,53 @@ $APP_URL = '/jogos'; ?>
     </div>
   </div>
   <?php include("../footer.php"); ?>
+  <script>
+    $.ajax({
+      url: 'obter.php',
+      method: 'GET',
+      dataType: 'json',
+      success: function(data) {
+        const container = document.querySelector('main');
+        data.forEach(game => {
+          const gameCard = document.createElement('div');
+          gameCard.className = 'game-card';
+
+          const gameLink = document.createElement('a');
+          gameLink.href = game.url;
+
+          const gameDiv = document.createElement('div');
+          gameDiv.className = 'bg-white row mb-3 border border-light';
+          gameDiv.style.background = `url(${game.imagem})`;
+
+          const gameTitle = document.createElement('h2');
+          gameTitle.className = 'rounded-left';
+          gameTitle.textContent = game.titulo;
+
+          const gameSpan = document.createElement('span');
+          gameSpan.className = 'align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2';
+          gameSpan.onclick = function() { window.location.href = game.url; };
+
+          const gameDesc = document.createElement('p');
+          gameDesc.innerHTML = game.descricao;
+
+          const playButton = document.createElement('div');
+          playButton.className = 'link btn btn-danger my-2';
+          playButton.textContent = 'Jogar';
+
+          gameSpan.appendChild(gameDesc);
+          gameSpan.appendChild(playButton);
+          gameDiv.appendChild(gameTitle);
+          gameDiv.appendChild(gameSpan);
+          gameLink.appendChild(gameDiv);
+          gameCard.appendChild(gameLink);
+          container.appendChild(gameCard);
+        });
+      },
+      error: function(error) {
+        console.error('Erro ao obter os jogos:', error);
+      }
+    });
+  </script>
 </body>
   <?php include("../aads.php"); ?>
 </html>
