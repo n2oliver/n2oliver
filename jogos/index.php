@@ -180,7 +180,21 @@ $APP_URL = '/jogos'; ?>
   
   <div id="welcomeModal" class="alert alert-primary p-1 mx-auto col-md-8"
         role="region" aria-label="Boas-vindas"
-        style="box-shadow:0 2px 6px rgba(0,0,0,.08);">
+        style="box-shadow:0 2px 6px rgba(255,255,255,.08);">
+        <section class="container m-0 n2oliver-jogos d-flex flex-column justify-content-center bg-light" style="padding:32px 16px;color:#000;text-align:center; background-image: linear-gradient(45deg, #dedede, transparent)">
+          <div class="row">
+            <div class="col-6">
+              <h1 style="font-size:2rem;margin-bottom:12px;">🎮 <strong>Diversão ilimitada!</strong></h1>
+              <p style="max-width:680px;margin:0 auto 18px;color:#000;line-height:1.5;">
+                No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
+              </p>
+            </div>
+            <div class="col-6" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+              <a href="/jogos/combo-memo/" style="padding:12px 18px;border-radius:10px;background:forestgreen;border:1px solid rgba(255,255,255,0.2);color:#dbeafc;font-weight:600;text-decoration:none;"><img src="/jogos/combo-memo/components/card/coruja.png" style="height: 24px; padding-right:4px; width: auto"/>Conhecer Combo-Memo</a>
+            </div>
+          </div>
+        </section>
+
     <div class="d-flex flex-wrap align-items-start justify-content-center">
       <script type="text/javascript">
         atOptions = {
@@ -204,26 +218,6 @@ $APP_URL = '/jogos'; ?>
       <button type="button" class="btn-close btn bg-white" aria-label="Fechar"
           onclick="document.getElementById('welcomeModal')?.remove()"></button>
     </div>
-  </div>
-  
-  <div id="main-game" class="game-card mx-auto mt-2 col-md-8 text-center">
-    <div class="row">
-      <div class="col-6">
-        <a href="<?= $APP_URL ?>/linhaamarela/">
-          <div class="bg-white row border border-light"
-            style="background: url(<?=$APP_URL?>/linhaamarela/img/fundo.png)">
-            <h2 class="rounded-left">Linha Amarela</h2> 
-            <span class="align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2" onclick='window.location.href = "#";'>
-              <p>Divirta-se eliminando os invasores, antes que eles desçam e eliminem a terra!<br>
-              <small>Um território, uma linha, um herói: você.</small></p>
-              <div class="link btn btn-danger my-2">
-                Jogar
-              </div>
-            </span>
-          </div>
-        </a>
-    </div>
-  </div>
   </div>
   <main class="container m-auto col-md-8">
   </main>
