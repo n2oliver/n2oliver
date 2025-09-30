@@ -69,7 +69,9 @@
     </script>
 
   <script src="/gtag_dispatcher.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+  <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
 </head>
 <body style="backdrop-filter: brightness(.2)">
 <?php include("../../gtagmanager.php"); ?>
@@ -84,7 +86,7 @@
   <div id="main-text" class="container" style="margin: 0 auto; margin-top: 14px; margin-bottom: 14px;">
     <h1>Caça-Palavras</h1>
     <p>Encontre as palavras escondidas na grade. Arraste com o dedo ou mouse para selecionar.</p>
-    <a href="<?= $APP_URL ?>/jogo.php" class="btn">Jogar Agora</a>
+    <a id="jogar" href="#" class="btn">Jogar Agora</a>
   </div>
   <div class="container m-auto col-md-8 text-light">
       <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
@@ -101,6 +103,22 @@
       footer.classList.add('col-md-8');
       footer.classList.add('m-auto');
       footer.classList.add('px-0');
+      document.addEventListener('DOMContentLoaded', ()=>{
+        $('#jogar').click(()=>{
+            gtag('event', 'click_jogar_agora', {
+                'event_category': 'engagement',
+                'event_label': 'Caça-Palavras - Clique no botão Jogar Agora'
+            });
+            abrirJanela('<?= $APP_URL ?>/jogo.php', 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
+        });
+        if(document.referrer == '<?=$APP_URL?>/jogos' |
+            document.referrer == '<?=$APP_URL?>/jogos/'
+        ) {
+            setTimeout(()=>{
+                document.getElementById('jogar').click();
+            }, 3000)
+        }
+      });
     </script>
 </body>
     <?php include("../../aads.php"); ?>

@@ -236,50 +236,53 @@ $APP_URL = '/jogos'; ?>
   </div>
   <?php include("../footer.php"); ?>
   <script>
-    $.ajax({
-      url: 'obter.php',
-      method: 'GET',
-      dataType: 'json',
-      success: function(data) {
-        const container = document.querySelector('main');
-        data.forEach(game => {
-          const gameCard = document.createElement('div');
-          gameCard.className = 'game-card';
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      $.ajax({
+        url: 'obter.php',
+        method: 'GET',
+        dataType: 'json',
+        success: function(data) {
+          const container = document.querySelector('main');
+          data.forEach(game => {
+            const gameCard = document.createElement('div');
+            gameCard.className = 'game-card';
 
-          const gameLink = document.createElement('a');
-          gameLink.href = game.url;
+            const gameLink = document.createElement('a');
+            gameLink.href = game.url;
 
-          const gameDiv = document.createElement('div');
-          gameDiv.className = 'bg-white row mb-3 border border-light';
-          gameDiv.style.background = `url(${game.imagem})`;
+            const gameDiv = document.createElement('div');
+            gameDiv.className = 'bg-white row mb-3 border border-light';
+            gameDiv.style.background = `url(${game.imagem})`;
 
-          const gameTitle = document.createElement('h2');
-          gameTitle.className = 'rounded-left';
-          gameTitle.textContent = game.titulo;
+            const gameTitle = document.createElement('h2');
+            gameTitle.className = 'rounded-left';
+            gameTitle.textContent = game.titulo;
 
-          const gameSpan = document.createElement('span');
-          gameSpan.className = 'align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2';
-          gameSpan.onclick = function() { window.location.href = game.url; };
+            const gameSpan = document.createElement('span');
+            gameSpan.className = 'align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2';
+            gameSpan.onclick = function() { window.location.href = game.url; };
 
-          const gameDesc = document.createElement('p');
-          gameDesc.innerHTML = game.descricao;
+            const gameDesc = document.createElement('p');
+            gameDesc.innerHTML = game.descricao;
 
-          const playButton = document.createElement('div');
-          playButton.className = 'link btn btn-danger my-2';
-          playButton.textContent = 'Jogar';
+            const playButton = document.createElement('div');
+            playButton.className = 'link btn btn-danger my-2';
+            playButton.textContent = 'Jogar';
 
-          gameSpan.appendChild(gameDesc);
-          gameSpan.appendChild(playButton);
-          gameDiv.appendChild(gameTitle);
-          gameDiv.appendChild(gameSpan);
-          gameLink.appendChild(gameDiv);
-          gameCard.appendChild(gameLink);
-          container.appendChild(gameCard);
-        });
-      },
-      error: function(error) {
-        console.error('Erro ao obter os jogos:', error);
-      }
+            gameSpan.appendChild(gameDesc);
+            gameSpan.appendChild(playButton);
+            gameDiv.appendChild(gameTitle);
+            gameDiv.appendChild(gameSpan);
+            gameLink.appendChild(gameDiv);
+            gameCard.appendChild(gameLink);
+            container.appendChild(gameCard);
+          });
+        },
+        error: function(error) {
+          console.error('Erro ao obter os jogos:', error);
+        }
+      });
     });
   </script>
 </body>

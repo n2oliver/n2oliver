@@ -60,6 +60,7 @@
   <link rel="stylesheet" href="/styles-index.css">
   <link rel="stylesheet" href="/css/footer.css">
   <link rel="stylesheet" href="/sobre-mim.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   <script type="text/javascript" data-cfasync="false" src="/popads-monetization.js"></script>
   
@@ -70,6 +71,7 @@
 
   <script src="/gtag_dispatcher.js"></script>
   <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+  <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
 </head>
 <body style="backdrop-filter: brightness(.2)">
 <?php include("../../gtagmanager.php"); ?>
@@ -84,7 +86,7 @@
   <div id="main-text" class="container" style="margin: 0 auto; margin-top: 14px; margin-bottom: 14px;">
     <h1>Palavras Cruzadas</h1>
     <p>Preencha a grade com as palavras corretas usando as dicas.</p>
-    <a href="<?= $APP_URL ?>/jogo.php" class="btn">Jogar Agora</a>
+    <a href="#" class="btn">Jogar Agora</a>
   </div>
 
   <div class="container m-auto col-md-8 text-light">
@@ -102,6 +104,15 @@
       footer.classList.add('col-md-8');
       footer.classList.add('m-auto');
       footer.classList.add('px-0');
+      document.addEventListener('DOMContentLoaded', ()=>{
+          document.querySelector('#main-text a').addEventListener('click', ()=>{
+              gtag('event', 'click_jogar_agora', {
+                  'event_category': 'engagement',
+                  'event_label': 'Palavras Cruzadas - Clique no botão Jogar Agora'
+              });
+              abrirJanela('<?= $APP_URL ?>/jogo.php', 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
+          });
+      });
     </script>
 </body>
     <?php include("../../aads.php"); ?>
