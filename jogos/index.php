@@ -61,6 +61,17 @@ $APP_URL = '/jogos'; ?>
       text-align: center;
       height: auto;
       overflow: auto;
+      flex: 1 1 100px; 
+    }
+    /* alternar: pares mais finos, ímpares mais largos */
+    .container .game-card:nth-child(odd) {
+      flex: 2 1 20%;
+      min-width: 200px;
+    }
+
+    .container .game-card:nth-child(even) {
+      flex: 1 1 30%;
+      min-width: 200px;
     }
     .game-card h2 {
       margin: 0.5rem 0;
@@ -219,7 +230,7 @@ $APP_URL = '/jogos'; ?>
           onclick="document.getElementById('welcomeModal')?.remove()"></button>
     </div>
   </div>
-  <main class="container m-auto col-md-8">
+  <main class="container d-flex m-auto col-md-8">
   </main>
   <div class="container m-auto col-md-8 p-0">
     <div class="donation-section m-0">
