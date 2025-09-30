@@ -137,6 +137,23 @@ $APP_URL = '/jogos'; ?>
   <script src="/popads-monetization.js" data-cfasync="false"></script>
   <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
   <script async src="https://ss.mrmnd.com/banner.js"></script>
+  <script>
+      !function (t, e, c, n) {
+          var s = e.createElement(c);
+          s.async = 1, s.src = 'https://scripts.claspo.io/scripts/' + n + '.js';
+          var r = e.scripts[0];
+          r.parentNode.insertBefore(s, r);
+          var f = function () {
+              f.c(arguments);
+          };
+          f.q = [];
+          f.c = function () {
+              f.q.push(arguments);
+          };
+          t['claspo'] = t['claspo'] || f;
+      }(window, document, 'script', '393828FA1F7D48D298C0B9741D9A1D29');
+    </script>
+    <script>claspo('init');</script>  
 </head>
 <body>
 <?php include("../gtagmanager.php"); ?>
@@ -207,11 +224,6 @@ $APP_URL = '/jogos'; ?>
         </a>
     </div>
   </div>
-  </div>
-  <div class="alert alert-primary m-auto col-md-8">
-    <h5 class="mb-1">Oi, seja bem vindo!</h5>
-    <p class="mb-2">Que bom que você chegou! Sinta-se à vontade para explorar nossos jogos gratuitos. 😄</p>
-    <button type="button" class="btn btn-primary btn-sm">Começar a diversão!</button>            
   </div>
   <main class="container m-auto col-md-8">
   </main>
