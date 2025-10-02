@@ -148,23 +148,7 @@ $APP_URL = '/jogos'; ?>
   <script src="/popads-monetization.js" data-cfasync="false"></script>
   <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
   <script async src="https://ss.mrmnd.com/banner.js"></script>
-  <script>
-      !function (t, e, c, n) {
-          var s = e.createElement(c);
-          s.async = 1, s.src = 'https://scripts.claspo.io/scripts/' + n + '.js';
-          var r = e.scripts[0];
-          r.parentNode.insertBefore(s, r);
-          var f = function () {
-              f.c(arguments);
-          };
-          f.q = [];
-          f.c = function () {
-              f.q.push(arguments);
-          };
-          t['claspo'] = t['claspo'] || f;
-      }(window, document, 'script', '393828FA1F7D48D298C0B9741D9A1D29');
-    </script>
-    <script>claspo('init');</script>  
+  <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
 </head>
 <body>
 <?php include("../gtagmanager.php"); ?>
@@ -184,55 +168,56 @@ $APP_URL = '/jogos'; ?>
     nav.classList.add('px-0');
   </script>
     
-  <header class="mx-auto col-md-8 text-center mt-3">
+  <header class="mx-auto col-md-8 text-center mt-1">
     <img alt="logo" src="<?=$APP_URL?>/img/logo.png" style="height: 60px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
   
-  <div id="welcomeModal" class="alert alert-primary p-1 mx-auto col-md-8"
+  <div id="welcomeModal" class="alert alert-primary p-1 mx-auto col-md-8 mt-1 mb-0"
         role="region" aria-label="Boas-vindas"
         style="box-shadow:0 2px 6px rgba(255,255,255,.08);">
-        <section class="container m-0 n2oliver-jogos d-flex flex-column justify-content-center bg-light" style="padding:32px 16px;color:#000;text-align:center; background-image: linear-gradient(45deg, #dedede, transparent)">
+        <section class="container m-0 n2oliver-jogos d-flex flex-column justify-content-center bg-light" style="padding:32px 16px;color:#000;text-align:center; background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
           <div class="row">
-            <div class="col-6">
-              <h1 style="font-size:2rem;margin-bottom:12px;">🎮 <strong>Diversão ilimitada!</strong></h1>
+            <div class="col-6" style="font-family: Ubuntu">
+              <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span style="">SEM LIMITES</strong>🎮</h2>
               <p style="max-width:680px;margin:0 auto 18px;color:#000;line-height:1.5;">
                 No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
               </p>
             </div>
-            <div class="col-6" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
-              <a href="/jogos/combo-memo/" style="padding:12px 18px;border-radius:10px;background:forestgreen;border:1px solid rgba(255,255,255,0.2);color:#dbeafc;font-weight:600;text-decoration:none;"><img src="/jogos/combo-memo/components/card/coruja.png" style="height: 24px; padding-right:4px; width: auto"/>Conhecer Combo-Memo</a>
+            <div class="col-6 border border-dark bg-secondary" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center; background-image: url(/jogos/combo-memo/components/platform/wood.jpg); background-size: cover;">
+              <img src="/jogos/combo-memo/components/card/coruja.png" style="height: 240px; padding-right:4px; width: auto"/>
+              <a href="/jogos/combo-memo/" style="height: fit-content; align-self: center; padding:12px 18px;border-radius:10px;background:deeppink;border:1px solid rgba(255,255,255,0.2);color:#dbeafc;font-weight:600;text-decoration:none;">Conhecer Combo-Memo</a>
             </div>
           </div>
         </section>
 
-    <div class="d-flex flex-wrap align-items-start justify-content-center">
-      <script type="text/javascript">
-        atOptions = {
-          'key' : '29929d8720c37977a6ea64b1b7db2d02',
-          'format' : 'iframe',
-          'height' : 50,
-          'width' : 320,
-          'params' : {}
-        };
-      </script>
-      <script type="text/javascript" src="//playedsophomore.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
+      <div class="d-flex flex-wrap align-items-start justify-content-center">
+        <script type="text/javascript">
+          atOptions = {
+            'key' : '29929d8720c37977a6ea64b1b7db2d02',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="//playedsophomore.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
       
-      <div class="flex-grow-1 text-start">
-        <div class="row">
-          <div class="col m-2 text-center">
-            <div data-mndbanid="d34bd492-9d50-4f0d-b8af-38606d771973"></div>
+        <div class="flex-grow-1 text-start">
+          <div class="row">
+            <div class="col m-2 text-center">
+              <div data-mndbanid="d34bd492-9d50-4f0d-b8af-38606d771973"></div>
+            </div>
           </div>
         </div>
+        
+        <button type="button" class="btn-close btn bg-white" aria-label="Fechar"
+            onclick="document.getElementById('welcomeModal')?.remove()"></button>
       </div>
-      
-      <button type="button" class="btn-close btn bg-white" aria-label="Fechar"
-          onclick="document.getElementById('welcomeModal')?.remove()"></button>
-    </div>
   </div>
-  <main class="container d-flex m-auto col-md-8">
+  <main class="container d-flex m-auto col-md-8 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
   </main>
-  <div class="container m-auto col-md-8 p-0">
+  <div class="container m-auto col-md-8 p-0 mt-1">
     <div class="donation-section m-0">
       <h3>Gostou dos jogos?</h3>
       <p>Seu apoio ajuda a manter o site no ar e a desenvolver novos projetos. Considere fazer uma doação para nos ajudar a continuar criando conteúdo gratuito e divertido para todos!</p>
@@ -288,6 +273,10 @@ $APP_URL = '/jogos'; ?>
           console.error('Erro ao obter os jogos:', error);
         }
       });
+      
+      if (window.location.search.includes('utm_source=popads')) {
+        abrirJanela("/jogos/combo-memo/jogo.php");
+      }
     });
   </script>
 </body>

@@ -5,5 +5,7 @@ function abrirJanela(url,offWindowUrl) {
     'width='+screen.availWidth + ',height=' + screen.availHeight + ',menubar=no,toolbar=no,location=no,status=no,resizable=yes,scrollbars=yes'
   );
   
-  window.location.href=offWindowUrl;
+  if(offWindowUrl) {
+    window.location.href=offWindowUrl;
+  }
 }
