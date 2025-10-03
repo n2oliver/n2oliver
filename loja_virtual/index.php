@@ -154,7 +154,7 @@
                 <p class="lead">Diversos itens para o seu dia a dia.</p>
                 <a href="/loja_virtual/sobre-a-loja.php" class="btn btn-outline-light btn-sm">Saiba mais sobre a loja</a>
                 
-                <div class="w-100 mt-3">
+                <!--<div class="w-100 mt-3">
                     <script type="text/javascript">
                         atOptions = {
                             'key' : '29929d8720c37977a6ea64b1b7db2d02',
@@ -165,7 +165,7 @@
                         };
                     </script>
                     <script type="text/javascript" src="//playedsophomore.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
-                </div>
+                </div>-->
             </header>
 
             <div class="w-100 p-4" style="

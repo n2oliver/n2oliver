@@ -189,17 +189,6 @@ $APP_URL = '/jogos'; ?>
         </section>
 
       <div class="d-flex flex-wrap align-items-start justify-content-center">
-        <script type="text/javascript">
-          atOptions = {
-            'key' : '29929d8720c37977a6ea64b1b7db2d02',
-            'format' : 'iframe',
-            'height' : 50,
-            'width' : 320,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//playedsophomore.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
-      
         <div class="flex-grow-1 text-start">
           <div class="row">
             <div class="col m-2 text-center">
@@ -267,7 +256,7 @@ $APP_URL = '/jogos'; ?>
           });
           setTimeout(()=>{
             if(location.href.includes('utm_source=popads')) {
-              abrirJanela('https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
+              abrirJanela('/jogos/', 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
             }
           }, 200);
         },
