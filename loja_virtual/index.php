@@ -18,23 +18,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 
     <style>
-        #product-grid {
-            align-items: auto;
-        }
         .product-card {
             border: 1px solid #eee;
-            border-radius: 8px;
+            border-radius: 0px !important;
             overflow: hidden;
             transition: box-shadow 0.3s ease, transform 0.3s ease;
             display: flex;
             flex-direction: column;
             background-color: #fff;
             color: #333;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
         }
 
         .product-card .card-img-top {
@@ -52,21 +44,26 @@
         }
 
         .product-card .card-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 500;
             margin-bottom: 0.5rem;
         }
 
         .product-card .card-text {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: #333;
             line-height: 1.5;
+            text-align: justify;
         }
 
         .product-card .card-footer {
-            background-color: #f8f9fa;
+            background-color: transparent;
             border-top: 1px solid #eee;
             padding: 0.75rem 1rem;
+        }
+
+        .product-item {
+            width: 250px;
         }
 
         .section-title {
@@ -139,41 +136,69 @@
 
   <script src="/gtag_dispatcher.js"></script>
   <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+  <script type="text/javascript" src="/js/abrir-janela.js"></script>
 </head>
 
-<body>
+<body class="m-auto">
 <?php include("../gtagmanager.php"); ?>
     <div class="row">
-        <div class="col-lg-2 px-0"></div>
-        <div class="col-sm-12 col-md-8 col-lg-8 px-0">
+        <div class="col-sm-12 col-md-10 col-lg-10 px-0">
             <?php include("../navbar.php"); ?>
         </div>
-        <div class="col-lg-2 px-0"></div>
     </div>
 
     <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8 mt-2">
+        <div class="col-lg-10 mt-2">
             <header class="store-header-new text-center">
                 <h1 class="display-4">Oliv3r Store</h1>
                 <p class="lead">Diversos itens para o seu dia a dia.</p>
                 <a href="/loja_virtual/sobre-a-loja.php" class="btn btn-outline-light btn-sm">Saiba mais sobre a loja</a>
+                
+                <div class="w-100 mt-3">
+                    <script type="text/javascript">
+                        atOptions = {
+                            'key' : '29929d8720c37977a6ea64b1b7db2d02',
+                            'format' : 'iframe',
+                            'height' : 50,
+                            'width' : 320,
+                            'params' : {}
+                        };
+                    </script>
+                    <script type="text/javascript" src="//playedsophomore.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
+                </div>
             </header>
 
-            <main class="p-4 rounded" style="background-color: #343a4069;">
-                <div class="mb-4 px-md-5">
-                    <input type="search" id="search-input" class="form-control" placeholder="🔎 Buscar produtos por nome...">
+            <div class="w-100 p-4" style="
+                height: 80vh; 
+                background-image: url(/loja_virtual/img/smartphones/61Dfzukq7KL._AC_SX679_.jpg); 
+                background-size: contain; 
+                background-position: center; 
+                background-repeat: no-repeat;
+                background-color: white;
+                text-align: right;
+                color: rgba(0,0,0,.2);
+                -webkit-text-stroke: 2px #ccc;
+                font-family: Ubuntu;
+                font-size: 3rem;
+                align-content: end;"
+                onclick="abrirJanela('https://amzn.to/42lD7gx')">
+                Xiaomi Redmi Poco X7 Pro (512GB)
+            </div>
+            <main class="p-1 rounded" style="background-color: #343a4069;">
+                <div style="position: sticky; top: 0; z-index: 9999; background-color: rgba(0,0,0,0.8)" class="m-auto p-1">
+                    <div class="mb-1 px-md-5">
+                        <input type="search" id="search-input" class="form-control" placeholder="🔎 Buscar produtos por nome...">
+                    </div>
+                    <nav class="mb-1">
+                        <ul class="nav nav-pills justify-content-center flex-wrap">
+                            <li class="nav-item"><a class="nav-link active" href="#" data-category="todos">Todos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-category="smartphones">Smartphones</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-category="livros">Livros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" data-category="cursos">Cursos</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="mb-4">
-                    <ul class="nav nav-pills justify-content-center flex-wrap">
-                        <li class="nav-item"><a class="nav-link active" href="#" data-category="todos">Todos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" data-category="destaques">Destaques</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" data-category="smartphones">Smartphones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" data-category="livros">Livros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" data-category="cursos">Cursos</a></li>
-                    </ul>
-                </nav>
-                <div id="product-grid" class="row g-4">
+                <div id="product-grid" class="row g-0" style="align-items: stretch">
                     <!-- Products will be injected here by JavaScript -->
                     <div class="col-12 text-center">
                         <div class="spinner-border text-primary" role="status">
@@ -183,22 +208,7 @@
                 </div>
             </main>
         </div>
-        <div class="col-lg-2"></div>
     </div>
-
-
-    <div class="text-light mx-auto mt-3 col-md-8 text-center">
-        Anúncios
-    </div>
-    <div class="container m-auto col-md-8 text-light">
-        <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
-      <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
-    </div>
-    <div class="m-auto col-md-8">
-        <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
-      <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
-    </div>
-    <br>
     <div class="row">
         <div class="col-sm-12 col-md-8 col-lg-8 px-0">
             <?php include('../footer.php'); ?>
@@ -213,7 +223,6 @@
             let searchTerm = '';
 
             const endpoints = {
-                'destaques': '/loja_virtual/get_destaques.php',
                 'smartphones': [
                     '/loja_virtual/get_smartphones_apple.php',
                     '/loja_virtual/get_smartphones_samsung.php',
@@ -243,18 +252,18 @@
                 }
 
                 availableProducts.forEach(product => {
-                    const buttonHtml = `<a href="${product.affiliate_link}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">COMPRAR</a>`;
+                    const buttonHtml = `<a href="#" onclick="event.preventDefault()" class="btn btn-primary">Ver Produto</a>`;
 
                     const productCard = `
-                        <div class="col-12 col-md-6 col-lg-4 product-item" data-category="${product.category}">
-                            <div class="card product-card h-100 shadow border">
+                        <div class="product-item" data-category="${product.category}" onclick="abrirJanela('${product.affiliate_link}')">
+                            <div class="card product-card h-100 border">
                                 <img alt="produto" src="${product.image_url}" class="card-img-top shadow border" alt="${product.name}">
                                 <div class="card-body">
                                     <h5 class="card-title">${product.name}</h5>
                                     <div class="card-text">${product.descricao}</div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    ${buttonHtml}
+                                    <div class="card-footer text-center">
+                                        ${buttonHtml}
+                                    </div>
                                 </div>
                             </div>
                         </div>

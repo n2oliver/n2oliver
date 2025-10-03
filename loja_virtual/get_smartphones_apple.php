@@ -23,6 +23,13 @@ $products = array(
         "affiliate_link" => "https://amzn.to/3UXGfKY", 
         "image_url" => "/loja_virtual/img/smartphones/41rfDU6FGqL.__AC_SY445_SX342_QL70_ML2_.jpg",
         "descricao" => "<p>O iPhone 13 continua sendo uma opção fantástica com um excelente custo-benefício. Equipado com o poderoso chip A15 Bionic, ele garante um desempenho ultrarrápido para todas as tarefas. Seu sistema de câmera dupla é extremamente versátil, e o modo Cinema adiciona um toque profissional aos seus vídeos, tornando-o ideal para quem busca uma experiência premium e confiável.</p>"
+    ),
+    array(
+        "id" => 4, 
+        "name" => "Apple iPhone 17 (256  GB) - Preto`", 
+        "affiliate_link" => "https://amzn.to/4nR3Z0N", 
+        "image_url" => "/loja_virtual/img/smartphones/41c7vpeEZNL._AC_SX679_.jpg",
+        "descricao" => "<p>FEITO PARA ADMIRAR. E PARA DURAR — O iPhone 17 está disponível em cinco cores deslumbrantes, inclui um brilhante ecrã de 6,3 polegadas e Ceramic Shield 2 na frente, que lhe dá o triplo da resistência a riscos.</p>"
     )
     // Adicione mais produtos conforme necessário
 );

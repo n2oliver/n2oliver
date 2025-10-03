@@ -5,7 +5,7 @@ body {
     background-color: #090909;
     background-image: url(img/bg.jpeg);
     background-attachment: fixed;
-    background-size: 100vw;
+    background-size: auto 100vh;
     background-repeat: repeat;
 }
 
@@ -14,10 +14,9 @@ h1 {
     color: white !important;
 }
 
-#products-container {
+#product-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .product {
@@ -28,9 +27,8 @@ h1 {
     width: auto;
     height: fit-content;
     background-color: #FFF;
-}
-.product {
     text-align: center;
+    height: auto;
 }
 
 .product .descricao {

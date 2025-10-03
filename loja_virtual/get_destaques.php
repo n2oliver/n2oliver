@@ -3,10 +3,14 @@
 $products = array(
     array(
         "id" => 1, 
-        "name" => "Ella Radiance Deo Colônia 100ml", 
-        "affiliate_link" => "https://www.hinode.com.br/ella-radiance-deo-colonia-100ml/p?id_consultor=68286068", 
-        "image_url" => "/loja_virtual/img/perfumes/157502-800-auto.png",
-        "descricao" => "<p>A fragrância Ella Radiance é como um dia de sol em um frasco. Com notas vibrantes de maçã verde e um toque sensual de chocolate, é um perfume perfeito para mulheres de atitude, que espalham alegria por onde passam. Uma excelente escolha para quem busca uma assinatura olfativa marcante e positiva.</p>",
+        "name" => "Smartphone Xiaomi Poco X7 Pro 5G NFC Black (Preto) 12GB RAM 512GB ROM [2412DPC0AG]",
+        "affiliate_link" => "https://amzn.to/42lD7gx",
+        "image_url" => "/loja_virtual/img/smartphones/61Dfzukq7KL._AC_SX679_.jpg",
+        "descricao" => "<p>Marca	XIAOMI<br>
+                            Sistema operacional	Android 14<br>
+                            Tamanho instalado da memória RAM	12 GB<br>
+                            Modelo da CPU	1.2GHz Cortex A8 Processor<br>
+                            Velocidade da CPU	3 GHz</p>"
     ),
     
     array(

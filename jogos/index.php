@@ -7,6 +7,10 @@ $APP_URL = '/jogos'; ?>
   <?php include('../g-tags.php'); ?>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name='admaven-placement' content=Bqja8pjw8>
+  <meta name="pushsdk" content="322d99f94878aedd7de1ac412ba0561c">
+  <meta name="af75eac4081069fbc72900cc9a43e129aefae092" content="af75eac4081069fbc72900cc9a43e129aefae092" />
+
   <title>Jogos Online | n2oliver</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -56,22 +60,10 @@ $APP_URL = '/jogos'; ?>
       background-color: transparent;
     }
     .game-card {
-      border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
-      height: auto;
       overflow: auto;
-      flex: 1 1 100px; 
-    }
-    /* alternar: pares mais finos, ímpares mais largos */
-    .container .game-card:nth-child(odd) {
-      flex: 2 1 20%;
-      min-width: 200px;
-    }
-
-    .container .game-card:nth-child(even) {
-      flex: 1 1 30%;
-      min-width: 200px;
+      flex: 1 1 200px; 
     }
     .game-card h2 {
       margin: 0.5rem 0;
@@ -139,6 +131,11 @@ $APP_URL = '/jogos'; ?>
       background: rgba(255, 255, 255, .8);
       backdrop-filter: blur(1px);
     }
+    main {
+      gap: 0 !important;
+      align-items: stretch;
+      padding: 0;
+    }
   </style>
   <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
@@ -176,7 +173,7 @@ $APP_URL = '/jogos'; ?>
   <div id="welcomeModal" class="alert alert-primary p-1 mx-auto col-md-8 mt-1 mb-0"
         role="region" aria-label="Boas-vindas"
         style="box-shadow:0 2px 6px rgba(255,255,255,.08);">
-        <section class="container m-0 n2oliver-jogos d-flex flex-column justify-content-center bg-light" style="padding:32px 16px;color:#000;text-align:center; background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
+        <section class="container m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light" style="padding:32px 16px;color:#000;text-align:center; background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
           <div class="row">
             <div class="col-6" style="font-family: Ubuntu">
               <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span style="">SEM LIMITES</strong>🎮</h2>
@@ -250,7 +247,7 @@ $APP_URL = '/jogos'; ?>
             gameTitle.textContent = game.titulo;
 
             const gameSpan = document.createElement('span');
-            gameSpan.className = 'align-content-center px-3 pt-3 mb-0 rounded w-100 mt-2';
+            gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
             gameSpan.onclick = function() { window.location.href = game.url; };
 
             const gameDesc = document.createElement('p');
@@ -268,15 +265,16 @@ $APP_URL = '/jogos'; ?>
             gameCard.appendChild(gameLink);
             container.appendChild(gameCard);
           });
+          setTimeout(()=>{
+            if(location.href.includes('utm_source=popads')) {
+              abrirJanela('https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
+            }
+          }, 200);
         },
         error: function(error) {
           console.error('Erro ao obter os jogos:', error);
         }
       });
-      
-      if (window.location.search.includes('utm_source=popads')) {
-        abrirJanela("/jogos/combo-memo/jogo.php");
-      }
     });
   </script>
 </body>

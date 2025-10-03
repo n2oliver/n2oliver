@@ -14,7 +14,7 @@ $(document).ready(function(){
             type: "GET",
             dataType: "json",
             success: function(data) {
-                data.forEach(function(product) {
+                data.inverse().forEach(function(product) {
                     if(product.unavailable) return;
                     
                     createProductCard(product).appendTo(`#${section}-container`)
