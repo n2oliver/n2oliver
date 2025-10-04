@@ -18,6 +18,9 @@
                 <a class="nav-link rounded" href="/loja_virtual/index.php"><i class="fa-solid fa-store"></i> Oliv3r Store</a>
             </li>
             <li class="nav-item nav-e">
+                <a class="nav-link rounded" href="/curso-online.php"><i class="fa-solid fa-envelope"></i> Curso Online</a>
+            </li>
+            <li class="nav-item nav-e">
                 <a class="nav-link rounded" href="/contato.php"><i class="fa-solid fa-envelope"></i> Contato</a>
             </li>
         </ul>
