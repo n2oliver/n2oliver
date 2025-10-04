@@ -88,14 +88,6 @@
     <p>Encontre as palavras escondidas na grade. Arraste com o dedo ou mouse para selecionar.</p>
     <a id="jogar" href="#" class="btn">Jogar Agora</a>
   </div>
-  <div class="container m-auto col-md-8 text-light">
-      <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
-      <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
-  </div>
-  <div class="m-auto col-md-8">
-      <script async="async" data-cfasync="false" src="//playedsophomore.com/297c1c3c46604eb55408b6261c6dd5b3/invoke.js"></script>
-      <div id="container-297c1c3c46604eb55408b6261c6dd5b3"></div>
-  </div>
   <br>
   <?php include("../../footer.php"); ?>
     <script>
