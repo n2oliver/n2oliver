@@ -256,7 +256,8 @@ $APP_URL = '/jogos'; ?>
           });
           setTimeout(()=>{
             if(location.href.includes('utm_source=popads')) {
-              abrirJanela('/jogos/', 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
+              window.open('/jogos/', '');
+              abrirJanela('/jogos/combo-memo/jogo.php', 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
             }
           }, 200);
         },
