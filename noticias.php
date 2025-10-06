@@ -17,16 +17,21 @@
                 <span id="noticias-span-title">Recentes</span></div>
         </h1>
 
-        <div class="d-flex mb-0 p-0" style="height: 400px; overflow: hidden;">
+        <div id="recentes-wrapper" class="row mb-0 p-0">
             <?php 
                 include_once('./buscar-noticias.php');
             ?>
-            <div class="flex-column" style="overflow-y: scroll">
+            
+            <div id="preview" 
+                style="background-color: rgba(0,0,0,0.5)"
+                class="col-sm-12 col-md-6">
+            </div>
+            <div class="flex-column col-sm-12 col-md-6" style="overflow-y: scroll">
                 <?php if (empty($noticias)) { ?>
                     <div class="p-3" style="width: fit-content">Nenhuma notícia encontrada.</div>
                 <?php } else { ?>
                     <?php foreach ($noticias as $noticiasInfo): ?>
-                        <div class="border rounded shadow-sm mb-1 ms-1 bg-light" style="width: fit-content; cursor: pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">
+                        <div class="border rounded shadow-sm mb-1 ms-1 bg-light" style="width: 100%; cursor: pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">
                             <div class="p-2" style="background: darkslategray">
                                 <div class="item d-flex align-items-center gap-2">
                                     <?= !empty($noticiaInfo['imagem']) ? '<div class="recentes-imagem" style="background-image: url(' . $noticiasInfo['imagem']   . ')"></div>' : '' ?>
@@ -50,8 +55,6 @@
                     <?php endforeach; ?>
                 <?php } ?>
             </div>
-            <div id="preview" style="background-image: url(<?= $noticiaInfo['imagem'] ?>)">
-            </div>
         </div>
     </div>
 </div>
@@ -59,23 +62,32 @@
 <script>
     toggleNoticiaContent(null, 6);
     function toggleNoticiaContent(e, index) {
-        $.ajax({
-            url: './buscar-noticia.php',
-            type: 'POST',
-            data: { id: index },
-            success: function(response) {
-                const contentDiv = document.getElementById('noticia-content');
-                if (contentDiv) {
-                    contentDiv.outerHTML = response;
-                    if(e !== null) {
-                        document.getElementById('noticia').scrollIntoView({ behavior: 'smooth' });
+        const elementoExiste = e && e.target;
+        console.log(elementoExiste ? e.target.localName : 'nenhum elemento');
+        if(elementoExiste && 
+            (e.target.localName != 'button' && 
+            e.target.localName != 'a' &&
+            
+            e.target.parentElement.localName != 'button' &&
+            e.target.parentElement.localName != 'a')) {
+            $.ajax({
+                url: './buscar-noticia.php',
+                type: 'POST',
+                data: { id: index },
+                success: function(response) {
+                    const contentDiv = document.getElementById('noticia-content');
+                    if (contentDiv) {
+                        contentDiv.outerHTML = response;
+                        if(e !== null) {
+                            document.getElementById('noticia').scrollIntoView({ behavior: 'smooth' });
+                        }
                     }
+                },
+                error: function() {
+                    alert('Erro ao carregar a notícia.');
                 }
-            },
-            error: function() {
-                alert('Erro ao carregar a notícia.');
-            }
-        });
+            });
+        }
     }
     $(document).ready(function() {
         let img = $(this).find('.recentes-imagem').css('background-image').replace('url("', 'url(').replace('")', ')');
