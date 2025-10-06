@@ -1,4 +1,4 @@
-# 🌐 Site Profissional - Óliver Silva Castilho
+# 🌐 Site Profissional - Óliver S. Castilho
 
 Este é o repositório do meu site profissional como desenvolvedor web e criador de jogos online. A página está publicada em:
 
@@ -58,5 +58,5 @@ docker compose watch
 
 ---
 
-© 2025 - Óliver Silva Castilho (n2oliver)  
+© 2025 - Óliver S. Castilho (n2oliver)  
 CNPJ: 60.407.027/0001-25  

@@ -22,7 +22,7 @@
                         </span>
                     </div>
                     <div class="proxima-linha-wrapper col-8 d-flex align-self-end flex-column">
-                            <div class="proxima-linha text-white rounded-pill py-0 px-3 w-100 my-3">Óliver Silva Castilho
+                            <div class="proxima-linha text-white rounded-pill py-0 px-3 w-100 my-3">Óliver S. Castilho
                                 <div class="nome-completo-osc" class="mt-4">Pronto para a próxima linha!
                                     <div class="d-flex align-content-end">
                                         <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=oliver-c-ab2748b9" target="_blank">Seguir no LinkedIn</a>

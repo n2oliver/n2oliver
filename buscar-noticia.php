@@ -31,6 +31,9 @@ try {
         </div>
         <div class="px-3">
             <div data-id=' . $noticiaInfo['id'] . ' style="" class="mt-3 noticia-conteudo">';
+                if (!empty($noticiaInfo['resumo'])) {
+                    echo '<div class="mt-2 text-dark"><h2><strong>' . htmlspecialchars($noticiaInfo['resumo']) . '</strong></h2></div>';
+                }
                 if (!empty($noticiaInfo['imagem'])) {
                     echo '<div class="me-2"
                         style="height: fit-content; overflow: hidden;">
@@ -40,10 +43,7 @@ try {
                             </div>
                         </div>';
                 }
-                if (!empty($noticiaInfo['resumo'])) {
-                    echo '<div class="mt-2 text-dark"><h2><strong>' . htmlspecialchars($noticiaInfo['resumo']) . '</strong></h2></div>';
-                }
-                echo '<div class="me-2">' .
+                echo '<div class="me-2 mt-4">' .
                     '<p class="text-dark">' . $noticiaInfo['conteudo'] . '</p>
                 </div>';
                 if (!empty($noticiaInfo['data_edicao'])) {

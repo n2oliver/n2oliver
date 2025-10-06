@@ -26,7 +26,10 @@
                 style="background-color: rgba(0,0,0,0.5)"
                 class="col-sm-12 col-md-6">
             </div>
-            <div class="flex-column col-sm-12 col-md-6" style="overflow-y: scroll">
+            <div class="flex-column col-sm-12 col-md-6" 
+                style="overflow-y: scroll; 
+                overflow-x: clip;
+                max-height: 100vh;">
                 <?php if (empty($noticias)) { ?>
                     <div class="p-3" style="width: fit-content">Nenhuma notícia encontrada.</div>
                 <?php } else { ?>
