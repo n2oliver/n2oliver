@@ -3,10 +3,10 @@
 <html lang="pt-BR">
 <head>
   <?php include('../../g-tags.php'); ?>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"/>
   <title>Palavras Cruzadas | n2oliver</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
