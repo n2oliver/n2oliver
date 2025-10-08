@@ -85,6 +85,10 @@ $APP_URL = '/jogos'; ?>
       height: auto;
       background-position: center !important;
     }
+    
+    .game-card a div:hover {
+      filter: brightness(1.5);
+    }
     .game-card a div span {
       background-color: rgba(0.0,0,0,0.5);
       background-position: top;
@@ -145,6 +149,8 @@ $APP_URL = '/jogos'; ?>
   <script src="/popads-monetization.js" data-cfasync="false"></script>
   <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
   <script async src="https://ss.mrmnd.com/banner.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
+        crossorigin="anonymous"></script>
   <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
 </head>
 <body>
@@ -228,7 +234,7 @@ $APP_URL = '/jogos'; ?>
             gameLink.href = game.url;
 
             const gameDiv = document.createElement('div');
-            gameDiv.className = 'bg-white row mb-3 border border-light';
+            gameDiv.className = 'bg-white row border border-light min-vh-100 h-100 align-content-center';
             gameDiv.style.background = `url(${game.imagem})`;
 
             const gameTitle = document.createElement('h2');

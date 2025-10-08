@@ -7,7 +7,7 @@ echo json_encode(
             'titulo' => 'Caixa de Letras',
             'descricao' => 'Desafie seu conhecimento com este quebra-cabeça com letrinhas.',
             'resumo' => '',
-            'imagem' => '/jogos/img/flat-crosswords.png'
+            'imagem' => '/jogos/img/caixa-de-letras.png'
         ],
         1 => (object) [
             'id' => 1,
