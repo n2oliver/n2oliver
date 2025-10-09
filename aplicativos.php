@@ -76,7 +76,7 @@
                         <div class="carousel-item" style="overflow-x: hidden">
                             <div class="row">
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
-                                    <img alt="palavras-cruzadas" class="title-image img-fluid" src="/jogos/img/flat-crosswords.jpg"/>
+                                    <img alt="palavras-cruzadas" class="title-image img-fluid" src="/jogos/img/flat-crosswords.png"/>
                                     <h2 class="title">
                                         <a href="/jogos/palavras-cruzadas/" role="button" class="btn btn-custom">Palavras-Cruzadas</a>
                                     </h2>
