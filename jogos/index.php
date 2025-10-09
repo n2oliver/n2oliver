@@ -191,7 +191,10 @@ $APP_URL = '/jogos'; ?>
         <div class="flex-grow-1 text-start">
           <div class="row">
             <div class="col m-2 text-center">
-              <div data-mndbanid="d34bd492-9d50-4f0d-b8af-38606d771973"></div>
+              <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
+                <iframe data-aa='2412101' src='//acceptable.a-ads.com/2412101/?size=Adaptive'
+                                  style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -255,8 +258,7 @@ $APP_URL = '/jogos'; ?>
           });
           setTimeout(()=>{
             if(location.href.includes('utm_source=popads')) {
-              window.open('/jogos/', '');
-              abrirJanela('/jogos/combo-memo/jogo.php', 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
+              abrirJanela('/jogos/', 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
             }
           }, 200);
         },
