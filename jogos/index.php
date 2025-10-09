@@ -144,10 +144,6 @@ $APP_URL = '/jogos'; ?>
         src="https://cdn.megapush.com.br/MegaPush.js">
     </script>
   <script src="/gtag_dispatcher.js"></script>
-  <script src="/popads-monetization.js" data-cfasync="false"></script>
-  <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
-  <script async src="https://ss.mrmnd.com/banner.js"></script>
-  
   <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
 </head>
 <body>

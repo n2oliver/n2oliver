@@ -59,7 +59,6 @@
   <link rel="stylesheet" href="/css/footer.css">
   <link rel="stylesheet" href="/sobre-mim.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-  <script type="text/javascript" data-cfasync="false" src="/popads-monetization.js"></script>
   
   <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
@@ -68,7 +67,6 @@
 
   <script src="/gtag_dispatcher.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
   <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
 </head>
 <body style="backdrop-filter: brightness(.2)">

@@ -126,14 +126,12 @@
     </style>
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script type="text/javascript" data-cfasync="false" src="/popads-monetization.js"></script>
     <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
         src="https://cdn.megapush.com.br/MegaPush.js">
     </script>
 
   <script src="/gtag_dispatcher.js"></script>
-  <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
   <script type="text/javascript" src="/js/abrir-janela.js"></script>
 </head>
 

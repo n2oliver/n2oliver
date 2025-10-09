@@ -20,4 +20,3 @@
         src="https://cdn.megapush.com.br/MegaPush.js">
     </script>
     <script src="/gtag_dispatcher.js"></script>
-    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
