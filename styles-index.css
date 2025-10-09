@@ -430,6 +430,7 @@ h1 {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    margin-bottom: 44px;
 }
 #preview div {
     background-position: center;

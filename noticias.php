@@ -38,7 +38,7 @@
                             <div class="p-2 noticia-card">
                                 <div class="item d-flex align-items-center gap-2">
                                     <?= !empty($noticiaInfo['imagem']) ? '<div class="recentes-imagem" style="background-image: url(' . $noticiasInfo['imagem']   . ')"></div>' : '' ?>
-                                    <div class="d-flex flex-column-reverse">
+                                    <div class="d-flex flex-column">
                                         <div class="mb-1 text-light" style="cursor:pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">
                                             <?= $noticiasInfo['titulo'] ?>
                                         </div>
@@ -120,7 +120,6 @@
         buscarNoticias(event);
     }
     function buscarNoticias(event) {
-        console.log('clicou');
         const component = $(event.target);
         const temNumero = Boolean(component.text());
         if(temNumero) pagina = component.text();
@@ -190,6 +189,7 @@
                             $('#preview').html(`<div class="h-100" style="background-image: ${img};" alt="Carregando..." />`);
                         }
                     });
+                    document.getElementById('noticias').scrollIntoView({ behavior: 'smooth' });
                 }
                         
             },
