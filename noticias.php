@@ -26,8 +26,8 @@
                 style="background-color: rgba(0,0,0,0.5)"
                 class="col-sm-12 col-md-6">
             </div>
-            <div id="noticias" class="flex-column col-sm-12 col-md-6" 
-                style="overflow-y: scroll; 
+            <div id="noticias" class="flex-column col-sm-12 col-md-6 align-self-start" 
+                style="overflow-y: auto; 
                 overflow-x: clip;
                 max-height: 100vh;">
                 <?php if (empty($noticias['results'])) { ?>
@@ -35,7 +35,7 @@
                 <?php } else { ?>
                     <?php foreach ($noticias['results'] as $noticiasInfo): ?>
                         <div class="border rounded shadow-sm mb-1 ms-1 bg-light" style="width: 100%; cursor: pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">
-                            <div class="p-2" style="background: darkslategray">
+                            <div class="p-2 noticia-card">
                                 <div class="item d-flex align-items-center gap-2">
                                     <?= !empty($noticiaInfo['imagem']) ? '<div class="recentes-imagem" style="background-image: url(' . $noticiasInfo['imagem']   . ')"></div>' : '' ?>
                                     <div class="d-flex flex-column-reverse">
@@ -163,7 +163,7 @@
                         });
                         $('#noticias').append(`
                             <div class="border rounded shadow-sm mb-1 ms-1 bg-light" style="width: 100%; cursor: pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">
-                                <div class="p-2" style="background: darkslategray">
+                                <div class="p-2 noticia-card">
                                     <div class="item d-flex align-items-center gap-2">
                                         ${ noticiasInfo['imagem'].length != 0 ? `<div class="recentes-imagem" style="background-image: url(${noticiasInfo['imagem']})"></div>` : ''}
                                         <div class="d-flex flex-column-reverse">

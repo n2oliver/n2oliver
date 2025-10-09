@@ -13,8 +13,6 @@ $APP_URL = '/jogos'; ?>
 
   <title>Jogos Online | n2oliver</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
@@ -149,8 +147,7 @@ $APP_URL = '/jogos'; ?>
   <script src="/popads-monetization.js" data-cfasync="false"></script>
   <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
   <script async src="https://ss.mrmnd.com/banner.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
-        crossorigin="anonymous"></script>
+  
   <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
 </head>
 <body>

@@ -5,12 +5,8 @@
     <title>Cobertura de Superfícies com Perdas | n2oliver</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
-     crossorigin="anonymous"></script>
      <meta name="google-adsense-account" content="ca-pub-8124594027670911">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles-calculadora-material.css" />

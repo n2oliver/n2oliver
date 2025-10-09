@@ -395,25 +395,11 @@ h1 {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
 }
-.noticia-expandida {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 0px;
-    left: 0px;
-    z-index: 9999;
-    transition: all 1s ease;
-    background-color: #fff;
-    height: fit-content;
-    padding: 0 !important;
-    overflow-y: scroll;
+.noticia-card {
+    background: darkslategray;
 }
-.noticia-expandida > div > div > .noticia-conteudo{
-    display: flex;
-    flex-direction: row;
-}
-.noticia-expandida img {
-    width: 50vw !important;
+.noticia-card:hover {
+    background: darkgreen;
 }
 .frame {
     position: sticky !important;

@@ -29,13 +29,13 @@ try {
                 }
             echo '</small>
         </div>
-        <div class="px-3">
+        <div>
             <div data-id=' . $noticiaInfo['id'] . ' style="" class="mt-3 noticia-conteudo">';
                 if (!empty($noticiaInfo['resumo'])) {
-                    echo '<div class="mt-2 text-dark"><h2><strong>' . htmlspecialchars($noticiaInfo['resumo']) . '</strong></h2></div>';
+                    echo '<div class="mt-2 text-dark px-3"><h2><strong>' . htmlspecialchars($noticiaInfo['resumo']) . '</strong></h2></div>';
                 }
                 if (!empty($noticiaInfo['imagem'])) {
-                    echo '<div class="me-2"
+                    echo '<div
                         style="height: fit-content; overflow: hidden;">
                             <div id="imagem-background" alt="imagem-background" style="background-image: url(' . htmlspecialchars($noticiaInfo['imagem']) . ')" class="w-100 float-start me-2 my-2" ></div>
                             <div id="imagem" class="w-100 float-start me-2 my-2" style="overflow-y: visible; height: 0px">
@@ -43,7 +43,7 @@ try {
                             </div>
                         </div>';
                 }
-                echo '<div class="me-2 mt-4">' .
+                echo '<div class="me-2 mt-4 px-3">' .
                     '<p class="text-dark">' . $noticiaInfo['conteudo'] . '</p>
                 </div>';
                 if (!empty($noticiaInfo['data_edicao'])) {
