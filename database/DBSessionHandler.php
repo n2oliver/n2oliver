@@ -11,8 +11,6 @@ class DBSessionHandler implements SessionHandlerInterface
             mkdir($sessionPath, 0700, true); // cria a pasta se não existir
         }
 
-        ini_set('session.save_handler', 'files');
-        ini_set('session.save_path', $sessionPath);
         $this->pdo = $pdo;
     }
 
