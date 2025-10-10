@@ -233,12 +233,18 @@ $APP_URL = '/jogos'; ?>
         dataType: 'json',
         success: function(data) {
           const container = document.querySelector('main');
+          let i = 0;
+          let links = [
+            'https://otieu.com/4/9386875',
+            'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530',
+            'https://go1.trakit25.com/offers.go?pid=51906&spaceid=11817837'
+          ]
           data.forEach(game => {
             const gameCard = document.createElement('div');
             gameCard.className = 'game-card';
 
             const gameLink = document.createElement('a');
-            gameLink.href = game.url;
+            gameLink.href = '#';
 
             const gameDiv = document.createElement('div');
             gameDiv.className = 'bg-white row border border-light min-vh-100 h-100 align-content-center';
@@ -250,7 +256,11 @@ $APP_URL = '/jogos'; ?>
 
             const gameSpan = document.createElement('span');
             gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
-            gameSpan.onclick = function() { window.location.href = game.url; };
+            gameLink.onclick = function() {               
+              setTimeout(()=>{
+                abrirJanela(game.url, links[Math.round(Math.random() * 2)]);
+              }, 200);
+            };
 
             const gameDesc = document.createElement('p');
             gameDesc.innerHTML = game.descricao;
