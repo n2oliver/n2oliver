@@ -127,7 +127,7 @@ $APP_URL = '/jogos'; ?>
     }
     #welcomeModal {
       position: relative;
-      background-color: var(--bs-alert-bg);
+      background-color: rgba(207,226,255, .4);
     }
     #adsterra-banner > div {
       background: rgba(255, 255, 255, .8);
@@ -192,8 +192,8 @@ $APP_URL = '/jogos'; ?>
               </p>
             </div>
             <div class="col-6 border border-dark bg-secondary" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center; background-image: url(/jogos/combo-memo/components/platform/wood.jpg); background-size: cover;">
-              <img src="/jogos/combo-memo/components/card/coruja.png" style="height: 240px; padding-right:4px; width: auto"/>
-              <a href="/jogos/combo-memo/" style="height: fit-content; align-self: center; padding:12px 18px;border-radius:10px;background:deeppink;border:1px solid rgba(255,255,255,0.2);color:#dbeafc;font-weight:600;text-decoration:none;">Conhecer Combo-Memo</a>
+              <img id="destaque-imagem" src="#" style="height: 240px; padding-right:4px; width: auto"/>
+              <a id="destaque-link" href="#" style="height: fit-content; align-self: center; padding:12px 18px;border-radius:10px;background:deeppink;border:1px solid rgba(255,255,255,0.2);color:#dbeafc;font-weight:600;text-decoration:none;"><span id="destaque-titulo"></span></a>
             </div>
           </div>
         </section>
@@ -245,6 +245,10 @@ $APP_URL = '/jogos'; ?>
 
             const gameLink = document.createElement('a');
             gameLink.href = '#';
+            gameLink.setAttribute('data-game-url', game.url);
+            gameLink.setAttribute('data-game-title', game.titulo);
+            gameLink.setAttribute('data-game-desc', game.descricao);
+            gameLink.setAttribute('data-game-imagem', game.imagem);
 
             const gameDiv = document.createElement('div');
             gameDiv.className = 'bg-white row border border-light min-vh-100 h-100 align-content-center';
@@ -278,7 +282,7 @@ $APP_URL = '/jogos'; ?>
             container.appendChild(gameCard);
           });
           setTimeout(()=>{
-            if(location.href.includes('utm_source=popads')) {
+            if(location.href.includes('utm_source=popads') && document.referrer === '') {
               abrirJanela('https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
             }
           }, 200);
@@ -286,6 +290,14 @@ $APP_URL = '/jogos'; ?>
         error: function(error) {
           console.error('Erro ao obter os jogos:', error);
         }
+      }).then(response => {
+        gamecards = $('.game-card');
+        gamecard = gamecards[Math.round(Math.random() * (gamecards.length - 1))];
+        const gameLink = gamecard.querySelector('a');
+        document.getElementById('destaque-imagem').src = gameLink.dataset.gameImagem;
+        document.getElementById('destaque-link').href = gameLink.dataset.gameUrl;
+        document.getElementById('destaque-titulo').textContent = gameLink.dataset.gameTitle;
+        document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${gameLink.dataset.gameTitle}`);
       });
     });
   </script>
