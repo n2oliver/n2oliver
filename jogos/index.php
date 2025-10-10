@@ -82,6 +82,7 @@ $APP_URL = '/jogos'; ?>
       align-items: end;
       height: auto;
       background-position: center !important;
+      margin: 4px;
     }
     
     .game-card a div:hover {
@@ -251,7 +252,7 @@ $APP_URL = '/jogos'; ?>
             gameLink.setAttribute('data-game-imagem', game.imagem);
 
             const gameDiv = document.createElement('div');
-            gameDiv.className = 'bg-white row border border-light min-vh-100 h-100 align-content-center';
+            gameDiv.className = 'bg-white row border border-light min-vh-50 h-max align-content-center';
             gameDiv.style.background = `url(${game.imagem})`;
 
             const gameTitle = document.createElement('h2');
@@ -281,11 +282,6 @@ $APP_URL = '/jogos'; ?>
             gameCard.appendChild(gameLink);
             container.appendChild(gameCard);
           });
-          setTimeout(()=>{
-            if(location.href.includes('utm_source=popads') && document.referrer === '') {
-              abrirJanela('https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
-            }
-          }, 200);
         },
         error: function(error) {
           console.error('Erro ao obter os jogos:', error);
@@ -295,7 +291,9 @@ $APP_URL = '/jogos'; ?>
         gamecard = gamecards[Math.round(Math.random() * (gamecards.length - 1))];
         const gameLink = gamecard.querySelector('a');
         document.getElementById('destaque-imagem').src = gameLink.dataset.gameImagem;
-        document.getElementById('destaque-link').href = gameLink.dataset.gameUrl;
+        document.getElementById('destaque-link').onclick = function() {               
+          abrirJanela(gameLink.dataset.gameUrl, 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
+        };
         document.getElementById('destaque-titulo').textContent = gameLink.dataset.gameTitle;
         document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${gameLink.dataset.gameTitle}`);
       });
