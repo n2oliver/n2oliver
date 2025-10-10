@@ -19,7 +19,7 @@
 
 <body>
 <?php include("gtagmanager.php"); ?>
-<?php include("video-background.php"); ?>
+
 
     <div class="container col-md-8 col-sm-12 col-lg-8">
         <div class="row">

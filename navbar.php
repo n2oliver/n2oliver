@@ -20,6 +20,9 @@
             <li class="nav-item nav-e">
                 <a class="nav-link rounded" href="/contato.php"><i class="fa-solid fa-envelope"></i> Contato</a>
             </li>
+            <li class="nav-item nav-e">
+                <a class="nav-link rounded" href="/sobre-mim.php"><i class="fa-solid fa-envelope"></i> Desenvolvedor</a>
+            </li>
         </ul>
     </div>
 </nav>

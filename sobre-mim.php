@@ -1,13 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <?php include("cabecalho.php"); ?>
+    <meta name='admaven-placement' content=Bqja8pjw8>
+    <meta name="pushsdk" content="322d99f94878aedd7de1ac412ba0561c">
+    <meta name="af75eac4081069fbc72900cc9a43e129aefae092" content="af75eac4081069fbc72900cc9a43e129aefae092" />
+    
+</head>
 <body class="oliver-dev">
 <?php include("../../gtagmanager.php"); ?>
-    <style>
-        .noticia-conteudo {
-            transition: 1s ease;
-            -moz-transition: 1s ease;
-            -webkit-transition: 1s ease;
-        }
-    </style>
-    <?php @include("video-background.php"); ?>
+    
     <div id="sobre-mim" class="col-md-10 col-sm-12 col-lg-10 row d-flex" style="margin: 0 auto">
         <div class="col-sm-12 col-md-12 col-lg-12 px-0 m-auto">
             <header>
@@ -49,11 +51,6 @@
                 
             <?php include("navbar.php"); ?>
             <main>
-
-                <div class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px;">
-                    <?php include('./noticias.php'); ?>
-                </div>
-
                 <div class="mt-2 d-flex about-me mb-2" style="height: auto; flex-direction: row">  
                     <div class="container d-flex m-0 quicksand main-content" style="border-bottom-left-radius: 0px; height: fit-content">
                         <div>

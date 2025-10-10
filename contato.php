@@ -5,7 +5,7 @@
 </head>
 <body class="oliver-dev">
 <?php include("gtagmanager.php"); ?>
-    <?php include("video-background.php"); ?>
+    
 
     <div class="row">
         <div class="col-lg-2 px-0"></div>

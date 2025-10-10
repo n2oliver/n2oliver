@@ -9,7 +9,7 @@
               margin-bottom: 1.5rem !important;
         }
     </style>
-    <?php @include("video-background.php"); ?>
+    
     <div class="col-md-10 col-sm-12 col-lg-10 row d-flex" style="margin: 0 auto">
         <div class="col-lg-2 px-0"></div>
         <div class="col-sm-12 col-md-12 col-lg-12 px-0">

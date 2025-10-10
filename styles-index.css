@@ -7,7 +7,6 @@ body {
 }
 body.oliver-dev {
   background-image: url(img/web-design-technology-browsing-programming-concept.jpg);
-  backdrop-filter: brightness(.3);
 }
 
 body.oliver-dev>* {

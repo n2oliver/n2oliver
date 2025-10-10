@@ -1,4 +1,11 @@
 <div>
+    <style>
+        .noticia-conteudo {
+            transition: 1s ease;
+            -moz-transition: 1s ease;
+            -webkit-transition: 1s ease;
+        }
+    </style>
     <div id="noticia" class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px">
         
         <h1 class="w-100 text-light px-4 pt-3 pb-4 bg-primary mb-0">
