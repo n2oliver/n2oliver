@@ -197,6 +197,18 @@ $APP_URL = '/jogos'; ?>
               <a id="destaque-link" href="#" style="height: fit-content; align-self: center; padding:12px 18px;border-radius:10px;background:deeppink;border:1px solid rgba(255,255,255,0.2);color:#dbeafc;font-weight:600;text-decoration:none;"><span id="destaque-titulo"></span></a>
             </div>
           </div>
+          <div class="text-center">
+            <script type="text/javascript">
+              atOptions = {
+                'key' : '29929d8720c37977a6ea64b1b7db2d02',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+              };
+            </script>
+            <script type="text/javascript" src="//playedsophomore.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
+          </div>
         </section>
 
       <div class="d-flex flex-wrap align-items-start justify-content-center">
