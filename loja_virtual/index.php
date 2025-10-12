@@ -160,19 +160,6 @@
                 <h1 class="display-4">Oliv3r Store</h1>
                 <p class="lead">Diversos itens para o seu dia a dia.</p>
                 <a href="/loja_virtual/sobre-a-loja.php" class="btn btn-outline-light btn-sm">Saiba mais sobre a loja</a>
-                
-                <!--<div class="w-100 mt-3">
-                    <script type="text/javascript">
-                        atOptions = {
-                            'key' : '29929d8720c37977a6ea64b1b7db2d02',
-                            'format' : 'iframe',
-                            'height' : 50,
-                            'width' : 320,
-                            'params' : {}
-                        };
-                    </script>
-                    <script type="text/javascript" src="//playedsophomore.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
-                </div>-->
             </header>
 
             <div class="w-100 p-4" style="

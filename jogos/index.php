@@ -197,34 +197,21 @@ $APP_URL = '/jogos'; ?>
               <a id="destaque-link" href="#" style="height: fit-content; align-self: center; padding:12px 18px;border-radius:10px;background:deeppink;border:1px solid rgba(255,255,255,0.2);color:#dbeafc;font-weight:600;text-decoration:none;"><span id="destaque-titulo"></span></a>
             </div>
           </div>
-          <div class="text-center">
-            <script type="text/javascript">
-              atOptions = {
-                'key' : '29929d8720c37977a6ea64b1b7db2d02',
-                'format' : 'iframe',
-                'height' : 50,
-                'width' : 320,
-                'params' : {}
-              };
-            </script>
-            <script type="text/javascript" src="//playedsophomore.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
-          </div>
         </section>
-
-      <div class="d-flex flex-wrap align-items-start justify-content-center">
-        <div class="flex-grow-1 text-start">
-          <div class="row">
-            <div class="col m-2 text-center">
-              <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
-                <iframe data-aa='2412101' src='//acceptable.a-ads.com/2412101/?size=Adaptive'
-                                  style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+        <div class="d-flex flex-wrap align-items-start justify-content-center">
+          <div class="flex-grow-1 text-start">
+            <div class="row">
+              <div class="col m-2 text-center">
+                <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
+                  <iframe data-aa='2412101' src='//acceptable.a-ads.com/2412101/?size=Adaptive'
+                                    style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         
-        <button type="button" class="btn-close btn bg-white" aria-label="Fechar"
-            onclick="document.getElementById('welcomeModal')?.remove()"></button>
+          <button type="button" class="btn-close btn bg-white" aria-label="Fechar"
+              onclick="document.getElementById('welcomeModal')?.remove()"></button>
       </div>
   </div>
   <main class="container d-flex m-auto col-md-8 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
@@ -239,9 +226,6 @@ $APP_URL = '/jogos'; ?>
   <?php include("../footer.php"); ?>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      if(window.location.href.indexOf('utm_source=popads')>-1) {
-        abrirJanela('/jogos/', 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
-      }
       
       $.ajax({
         url: 'obter.php',
@@ -250,11 +234,7 @@ $APP_URL = '/jogos'; ?>
         success: function(data) {
           const container = document.querySelector('main');
           let i = 0;
-          let links = [
-            'https://otieu.com/4/9386875',
-            'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530',
-            'https://go1.trakit25.com/offers.go?pid=51906&spaceid=11817837'
-          ]
+          
           data.forEach(game => {
             const gameCard = document.createElement('div');
             gameCard.className = 'game-card';
@@ -278,7 +258,7 @@ $APP_URL = '/jogos'; ?>
             gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
             gameLink.onclick = function() {               
               setTimeout(()=>{
-                abrirJanela(game.url, links[Math.round(Math.random() * 2)]);
+                abrirJanela(game.url, 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
               }, 200);
             };
 
@@ -311,6 +291,10 @@ $APP_URL = '/jogos'; ?>
         };
         document.getElementById('destaque-titulo').textContent = gameLink.dataset.gameTitle;
         document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${gameLink.dataset.gameTitle}`);
+        
+        if(window.location.href.indexOf('utm_source=popads')>-1) {
+          abrirJanela('https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
+        }
       });
     });
   </script>
