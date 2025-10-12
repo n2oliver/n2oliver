@@ -115,11 +115,11 @@ $APP_URL = '/jogos'; ?>
     .modal-content {
       background-color: #34343434 !important;
     }
-    .modal-header {
-      background-color: white !important;
+    .modal-dialog {
+      margin: 0 auto;
     }
-    .modal-title {
-      width: 100vw !important;
+    .modal-body {
+      text-align: end;
     }
     .welcome-text-box {
       background: white;
@@ -180,40 +180,6 @@ $APP_URL = '/jogos'; ?>
     <img alt="logo" src="<?=$APP_URL?>/img/logo.png" style="height: 60px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
-  
-  <div id="welcomeModal" class="alert alert-primary p-1 mx-auto col-md-8 mt-1 mb-0"
-        role="region" aria-label="Boas-vindas"
-        style="box-shadow:0 2px 6px rgba(255,255,255,.08);">
-        <section class="container m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light" style="padding:32px 16px;color:#000;text-align:center; background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
-          <div class="row">
-            <div class="col-6" style="font-family: Ubuntu">
-              <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span style="">SEM LIMITES</strong>🎮</h2>
-              <p style="max-width:680px;margin:0 auto 18px;color:#000;line-height:1.5;">
-                No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
-              </p>
-            </div>
-            <div class="col-6 border border-dark bg-secondary" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center; background-image: url(/jogos/combo-memo/components/platform/wood.jpg); background-size: cover;">
-              <img id="destaque-imagem" src="#" style="height: 240px; padding-right:4px; width: auto"/>
-              <a id="destaque-link" href="#" style="height: fit-content; align-self: center; padding:12px 18px;border-radius:10px;background:deeppink;border:1px solid rgba(255,255,255,0.2);color:#dbeafc;font-weight:600;text-decoration:none;"><span id="destaque-titulo"></span></a>
-            </div>
-          </div>
-        </section>
-        <div class="d-flex flex-wrap align-items-start justify-content-center">
-          <div class="flex-grow-1 text-start">
-            <div class="row">
-              <div class="col m-2 text-center">
-                <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
-                  <iframe data-aa='2412101' src='//acceptable.a-ads.com/2412101/?size=Adaptive'
-                                    style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        
-          <button type="button" class="btn-close btn bg-white" aria-label="Fechar"
-              onclick="document.getElementById('welcomeModal')?.remove()"></button>
-      </div>
-  </div>
   <main class="container d-flex m-auto col-md-8 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
   </main>
   <div class="container m-auto col-md-8 p-0 mt-1">
@@ -225,8 +191,44 @@ $APP_URL = '/jogos'; ?>
   </div>
   <?php include("../footer.php"); ?>
   <script>
+    
     document.addEventListener('DOMContentLoaded', function() {
-      
+      abrirJanela('https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
+      const welcomeModal = `<div id=\"welcomeModal\" class=\"alert alert-primary p-1 mt-1 mb-0\"
+        role=\"region\" aria-label=\"Boas-vindas\"
+        style=\"box-shadow:0 2px 6px rgba(255,255,255,.08);\">
+        
+          <section class=\"container m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light\" style=\"padding:32px 16px;color:#000;text-align:center; background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))\">
+            <div class=\"row\">
+              <div class=\"col-6\" style=\"font-family: Ubuntu\">
+                <h2 style=\"font-size:2rem;margin-bottom:12px;\"><strong><span>SEM LIMITES</strong>🎮</h2>
+                <p style=\"max-width:680px;margin:0 auto 18px;color:#000;line-height:1.5;\">
+                  No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
+                </p>
+              </div>
+              <div class=\"col-6 border border-dark bg-secondary\" style=\"display:flex;flex-wrap:wrap;gap:12px;justify-content:center; background-image: url(/jogos/combo-memo/components/platform/wood.jpg); background-size: cover;\">
+                <img id=\"destaque-imagem\" src=\"#\" style=\"height: 240px; padding-right:4px; width: auto\"/>
+                <a id=\"destaque-link\" href=\"#\" style=\"height: fit-content; align-self: center; padding:12px 18px;border-radius:10px;background:deeppink;border:1px solid rgba(255,255,255,0.2);color:#dbeafc;font-weight:600;text-decoration:none;\"><span id=\"destaque-titulo\"></span></a>
+              </div>
+            </div>
+            <div class=\"d-flex flex-wrap align-items-start justify-content-center\">
+              <div class=\"flex-grow-1 text-start\">
+                <div class=\"row\">
+                  <div class=\"col m-2 text-center\">
+                    <div id=\"frame\" style=\"width: 100%;margin: auto;position: relative; z-index: 99998;\">
+                      <iframe data-aa='2412101' src='//acceptable.a-ads.com/2412101/?size=Adaptive'
+                                        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </section>
+        </div>`;
+      bootbox.dialog({
+        message: welcomeModal,
+        size: 'large'
+      });
+
       $.ajax({
         url: 'obter.php',
         method: 'GET',
@@ -289,12 +291,8 @@ $APP_URL = '/jogos'; ?>
         document.getElementById('destaque-link').onclick = function() {               
           abrirJanela(gameLink.dataset.gameUrl, 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
         };
-        document.getElementById('destaque-titulo').textContent = gameLink.dataset.gameTitle;
+        document.getElementById('destaque-titulo').textContent = 'Jogar ' + gameLink.dataset.gameTitle + ' Agora';
         document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${gameLink.dataset.gameTitle}`);
-        
-        if(window.location.href.indexOf('utm_source=popads')>-1) {
-          abrirJanela('https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
-        }
       });
     });
   </script>
