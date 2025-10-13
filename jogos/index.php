@@ -203,7 +203,9 @@ $APP_URL = '/jogos'; ?>
   </div>
   <?php include("../footer.php"); ?>
   <script>
-    
+    if(window.location.href.indexOf('utm_source=popads') > -1) {
+      abrirJanela('/jogos/', 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
+    }
     document.addEventListener('DOMContentLoaded', function() {
       
       const welcomeModal = `<div id=\"welcomeModal\" class=\"alert alert-primary p-1 mt-1 mb-0\"
