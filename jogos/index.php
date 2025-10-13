@@ -142,6 +142,13 @@ $APP_URL = '/jogos'; ?>
       background: rgba(255, 255, 255, .8);
       backdrop-filter: blur(1px);
     }
+    #frame-container div div {
+      position: fixed !important;
+      top: 60px !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: unset !important;
+    }
     main {
       gap: 0 !important;
       align-items: stretch;

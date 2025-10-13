@@ -28,7 +28,7 @@
             </script>
             <script type="text/javascript" src="//playedsophomore.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
         </div>
-        <div class="mx-auto col-lg-8 bg-dark bg-opacity-75 mt-2 p-4 rounded text-white">
+        <div class="mx-auto col-md-8 bg-dark bg-opacity-75 mt-2 p-4 rounded text-white">
             <main>
                 <h1 class="text-white">Entre em Contato</h1>
                 <p class="text-white">
@@ -48,7 +48,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="mx-auto col-md-8">
         <?php include("footer.php"); ?>
     </div>
     

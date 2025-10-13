@@ -7,6 +7,9 @@ body {
 }
 body.oliver-dev {
   background-image: url(img/web-design-technology-browsing-programming-concept.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 body.oliver-dev>* {

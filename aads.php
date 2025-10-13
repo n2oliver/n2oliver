@@ -1,4 +1,4 @@
-<div style="position: absolute; z-index: 99999;">
+<div id="frame-container" style="position: absolute; z-index: 99999;">
       <input autocomplete="off" type="checkbox" id="aadsstickymgoh23bh" hidden />
       <div style="padding-top: 0; padding-bottom: auto;">
         <div style="width:100%;height:auto;position:fixed;text-align:center;font-size:0;bottom:0;left:0;right:0;margin:auto">

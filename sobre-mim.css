@@ -37,7 +37,7 @@
 }
 
 .oliver-dev-parent-wrapper {
-    background-image: linear-gradient(180deg, transparent, transparent, rgba(255, 255, 255, .8));
+    background-image: linear-gradient(180deg,  rgba(43, 43, 59, .43), transparent, transparent);
     min-width: 337px;
 }
 
@@ -89,4 +89,7 @@
     font-size: 14px!important;
     line-height: 1rem !important;
     margin: 0 !important;
+}
+#sobre-mim {
+    background-color: rgba(43,43,59,.43);
 }
