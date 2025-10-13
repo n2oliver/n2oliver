@@ -29,6 +29,7 @@ $APP_URL = '/jogos'; ?>
       padding: 0 !important;
       background: #f0f0f0;
       background-image: url(../jogos/img/quebracabecas.jpg);
+      backdrop-filter: brightness(0.4);
       overflow: auto;
     }
     header {
@@ -166,21 +167,21 @@ $APP_URL = '/jogos'; ?>
   <!-- Bootstrap Bundle (JS + Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootbox@5.5.2/bootbox.min.js"></script>
-  <div class="col-md-8 m-auto" style="position: sticky; top: 0">
+  <div class="col-md-10 m-auto" style="position: sticky; top: 0">
     <?php include('../navbar.php'); ?>
   </div>
   <script>
     const nav = document.querySelector('nav')
-    nav.classList.add('col-md-8');
+    nav.classList.add('col-md-10');
     nav.classList.add('m-auto');
     nav.classList.add('px-0');
   </script>
     
-  <header class="mx-auto col-md-8 text-center mt-1">
+  <header class="mx-auto col-md-10 text-center mt-1">
     <img alt="logo" src="<?=$APP_URL?>/img/logo.png" style="height: 60px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
-  <div class="mx-auto col-md-8" style="text-align: center; font-size: 14px; color: #555; background: white; padding: 4px; border-radius: 8px;">
+  <div class="mx-auto col-md-10" style="text-align: center; font-size: 14px; color: #555; background: white; padding: 4px; border-radius: 8px;">
     <script type="text/javascript">
       atOptions = {
         'key' : '29929d8720c37977a6ea64b1b7db2d02',
@@ -192,9 +193,9 @@ $APP_URL = '/jogos'; ?>
     </script>
     <script type="text/javascript" src="//playedsophomore.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
   </div>
-  <main class="container d-flex m-auto col-md-8 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
+  <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
   </main>
-  <div class="container m-auto col-md-8 p-0 mt-1">
+  <div class="container m-auto col-md-10 p-0 mt-1">
     <div class="donation-section m-0">
       <h3>Gostou dos jogos?</h3>
       <p>Seu apoio ajuda a manter o site no ar e a desenvolver novos projetos. Considere fazer uma doação para nos ajudar a continuar criando conteúdo gratuito e divertido para todos!</p>
@@ -207,32 +208,6 @@ $APP_URL = '/jogos'; ?>
       abrirJanela('/jogos/', 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
     }
     document.addEventListener('DOMContentLoaded', function() {
-      
-      const welcomeModal = `<div id=\"welcomeModal\" class=\"alert alert-primary p-1 mt-1 mb-0\"
-        role=\"region\" aria-label=\"Boas-vindas\"
-        style=\"box-shadow:0 2px 6px rgba(255,255,255,.08);\">
-        
-          <section class=\"container m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light\" style=\"padding:32px 16px;color:#000;text-align:center; background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))\">
-            <div class=\"d-flex flex-wrap align-items-start justify-content-center\">
-              <div class=\"row\">
-                <div class=\"col-6\" style=\"font-family: Ubuntu\">
-                  <h2 style=\"font-size:2rem;margin-bottom:12px;\"><strong><span>SEM LIMITES</strong>🎮</h2>
-                  <p style=\"max-width:680px;margin:0 auto 18px;color:#000;line-height:1.5;\">
-                    No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
-                  </p>
-                </div>
-                <div class=\"col-6 border border-dark bg-secondary\" style=\"display:flex;flex-wrap:wrap;gap:12px;justify-content:center; background-image: url(/jogos/combo-memo/components/platform/wood.jpg); background-size: cover;\">
-                  <img id=\"destaque-imagem\" src=\"#\" style=\"height: 240px; padding-right:4px; width: auto\"/>
-                  <a id=\"destaque-link\" href=\"#\" style=\"height: fit-content; align-self: center; padding:12px 18px;border-radius:10px;background:deeppink;border:1px solid rgba(255,255,255,0.2);color:#dbeafc;font-weight:600;text-decoration:none;\"><span id=\"destaque-titulo\"></span></a>
-                </div>
-              </div>
-            </section>
-          </div>`;
-      bootbox.dialog({
-        message: welcomeModal,
-        size: 'large',
-        backdrop: true
-      });
 
       $.ajax({
         url: 'obter.php',
@@ -283,6 +258,37 @@ $APP_URL = '/jogos'; ?>
             gameLink.appendChild(gameDiv);
             gameCard.appendChild(gameLink);
             container.appendChild(gameCard);
+          });
+            
+          const welcomeModal = `<div id=\"welcomeModal\" class=\"alert alert-primary p-1 mt-1 mb-0\"
+            role=\"region\" aria-label=\"Boas-vindas\"
+            style=\"box-shadow:0 2px 6px rgba(255,255,255,.08);\">
+            
+            <section class=\"container m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light\" style=\"padding:32px 16px;color:#000;text-align:center; background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))\">
+              <div class=\"d-flex flex-wrap align-items-start justify-content-center\">
+                <div class=\"row\">
+                  <div class=\"col-6\" style=\"font-family: Ubuntu\">
+                    <h2 style=\"font-size:2rem;margin-bottom:12px;\"><strong><span>SEM LIMITES</strong>🎮</h2>
+                    <p style=\"max-width:680px;margin:0 auto 18px;color:#000;line-height:1.5;\">
+                      No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
+                    </p>
+                  </div>
+                  <div class=\"col-6 border border-dark bg-secondary\" style=\"display:flex;flex-wrap:wrap;gap:12px;justify-content:center; background-image: url(/jogos/combo-memo/components/platform/wood.jpg); background-size: cover;\">
+                    <img id=\"destaque-imagem\" src=\"#\" style=\"height: 240px; padding-right:4px; width: auto\"/>
+                    <a id=\"destaque-link\" href=\"#\" style=\"height: fit-content; align-self: center; padding:12px 18px;border-radius:10px;background:deeppink;border:1px solid rgba(255,255,255,0.2);color:#dbeafc;font-weight:600;text-decoration:none;\"><span id=\"destaque-titulo\"></span></a>
+                  </div>
+                </div>
+              </section>
+            </div>`;
+          const dialog = bootbox.dialog({
+            message: welcomeModal,
+            size: 'large',
+            backdrop: true
+          })
+          dialog.init(() => {
+            setTimeout(() => {
+              document.querySelector('.modal-dialog').scrollIntoView();
+            }, 500);
           });
         },
         error: function(error) {
