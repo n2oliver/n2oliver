@@ -116,12 +116,14 @@ $APP_URL = '/jogos'; ?>
     .modal-content {
       background-color: #34343434 !important;
     }
+    .bootbox {
+      display: flex !important;
+      justify-content: center !important;
+    }
     .modal-dialog {
       overflow-y: scroll;
       height: 100vh;
       position: absolute;
-      width: 100vw !important;
-      max-width: 100vw;
     }
     .modal-body {
       text-align: end;
