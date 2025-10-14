@@ -213,7 +213,7 @@ $APP_URL = '/jogos'; ?>
     <div class="donation-section m-0">
       <h3>Gostou dos jogos?</h3>
       <p>Seu apoio ajuda a manter o site no ar e a desenvolver novos projetos. Considere fazer uma doação para nos ajudar a continuar criando conteúdo gratuito e divertido para todos!</p>
-      <p><strong>Chave PIX:</strong> silva.liver@gmail.com</p>
+      <p><strong>Chave PIX:</strong> suporte@n2oliver.com</p>
     </div>
   </div>
   <?php include("../footer.php"); ?>
