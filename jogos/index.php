@@ -150,6 +150,11 @@ $APP_URL = '/jogos'; ?>
       align-items: stretch;
       padding: 0;
     }
+    #destaque-imagem {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   </style>
   <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
@@ -204,23 +209,35 @@ $APP_URL = '/jogos'; ?>
     <script type="text/javascript" src="//playedsophomore.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
   </div>
   <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
-    <div id="welcomeModal" class="p-1 mt-1 mb-0"
-            role="region" aria-label="Boas-vindas"
-            style="box-shadow:0 2px 6px rgba(255,255,255,.08);">
-            
-            <section class="container m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light" style="padding:32px 16px;color:#000;text-align:center; background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
+    
+            <section  id="destaque-imagem" class="m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light rounded" style="padding:32px 16px;color:#000;text-align:center; background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
               <div class="d-flex flex-wrap align-items-start justify-content-center">
                 <div class="row">
-                  <div class="col-6" style="font-family: Ubuntu">
-                    <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span>SEM LIMITES</strong>🎮</h2>
-                    <p style="max-width:680px;margin:0 auto 18px;color:#000;line-height:1.5;">
-                      No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
-                    </p>
+                  <div class="col-md-6 flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+                    
+                    
+                    <div class="bg-light rounded" style="font-family: Ubuntu;">
+                      <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span>SEM LIMITES</strong>🎮</h2>
+                      <p style="max-width:680px;margin:0 auto 18px;color:#000;line-height:1.5;">
+                        No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
+                      </p>
+                    </div>
                   </div>
-                  <div class="col-6 border border-dark bg-secondary flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center; background-image: url(/jogos/combo-memo/components/platform/wood.jpg); background-size: cover;">
-                    <div>
-                      <img id="destaque-imagem" src="#" style="height: 240px; padding-right:4px; width: auto"/>
-                      <div><a id="destaque-link" href="#" style="height: fit-content; align-self: center; padding:12px 18px;border-radius:10px;background:deeppink;border:1px solid rgba(255,255,255,0.2);color:#dbeafc;font-weight:600;text-decoration:none;"><span id="destaque-titulo"></span></a></div>
+                  
+                  <div class="col-md-6">
+                    <div class="m-3">
+                      <div><a id="destaque-link" href="#"
+                        style="height: fit-content; 
+                          align-self: center; 
+                          padding:12px 18px;
+                          border-radius:10px;
+                          background:deeppink;
+                          border:1px solid rgba(255,255,255,0.2);
+                          color:#dbeafc;
+                          font-weight:600;
+                          text-decoration:none;">
+                        <span id="destaque-titulo"></span></a>
+                      </div>
                     </div>
                     <div>
                       <button class="btn btn-danger m-1" id="prev" >
@@ -229,11 +246,10 @@ $APP_URL = '/jogos'; ?>
                       <button class="btn btn-danger m-1" id="next" >
                         <i class="fa-solid fa-arrow-right"></i>
                       </button>
-                    <div>
-                  </div>
+                    </div>
+                  <div>
                 </div>
               </section>
-            </div>
   </main>
   <div class="container m-auto col-md-10 p-0 mt-1">
     <div class="donation-section m-0">
@@ -245,11 +261,11 @@ $APP_URL = '/jogos'; ?>
   <?php include("../footer.php"); ?>
   <script>
     function showGameInHighlight(game) {
-      document.getElementById('destaque-imagem').src = game.imagem;
+      document.getElementById('destaque-imagem').style.backgroundImage = 'url(' + game.imagem + ')';
       document.getElementById('destaque-link').onclick = function() {               
         abrirJanela(game.url, 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
       };
-      document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo + ' Agora';
+      document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
       document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${game.titulo}`);
     }
     if(window.location.href.indexOf('utm_source=popads') > -1) {
@@ -317,11 +333,11 @@ $APP_URL = '/jogos'; ?>
         gamecards = $('.game-card');
         gamecard = gamecards[Math.round(Math.random() * (gamecards.length - 1))];
         const gameLink = gamecard.querySelector('a');
-        document.getElementById('destaque-imagem').src = gameLink.dataset.gameImagem;
+        document.getElementById('destaque-imagem').style.backgroundImage = 'url(' + gameLink.dataset.gameImagem + ')';
         document.getElementById('destaque-link').onclick = function() {               
           abrirJanela(gameLink.dataset.gameUrl, 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
         };
-        document.getElementById('destaque-titulo').textContent = 'Jogar ' + gameLink.dataset.gameTitle + ' Agora';
+        document.getElementById('destaque-titulo').textContent = 'Jogar ' + gameLink.dataset.gameTitle;
         document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${gameLink.dataset.gameTitle}`);
 
         $('#next').click(function() {
