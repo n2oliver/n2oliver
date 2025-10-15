@@ -148,6 +148,9 @@ $APP_URL = '/jogos'; ?>
       background-position: center;
       background-repeat: no-repeat;
     }
+    #frame {
+      margin-top: 2px !important;
+    }
   </style>
   <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
