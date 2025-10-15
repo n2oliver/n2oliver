@@ -138,13 +138,6 @@ $APP_URL = '/jogos'; ?>
       background: rgba(255, 255, 255, .8);
       backdrop-filter: blur(1px);
     }
-    #frame-container div div {
-      position: fixed !important;
-      top: 60px !important;
-      left: 0 !important;
-      right: 0 !important;
-      bottom: unset !important;
-    }
     main {
       gap: 0 !important;
       align-items: stretch;
@@ -216,9 +209,10 @@ $APP_URL = '/jogos'; ?>
                   <div class="col-md-6 flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
                     
                     
-                    <div class="bg-light rounded" style="font-family: Ubuntu;">
+                    <div class="rounded" style="font-family: Ubuntu;
+                      background-color: rgba(0,0,0,.6); color: white !important; padding: 12px; text-align: center;">
                       <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span>SEM LIMITES</strong>🎮</h2>
-                      <p style="max-width:680px;margin:0 auto 18px;color:#000;line-height:1.5;">
+                      <p style="max-width:680px;margin:0 auto 18px;color: white;line-height:1.5;">
                         No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
                       </p>
                     </div>
@@ -250,6 +244,10 @@ $APP_URL = '/jogos'; ?>
                   <div>
                 </div>
               </section>
+              <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
+                <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
+                                  style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+              </div>
   </main>
   <div class="container m-auto col-md-10 p-0 mt-1">
     <div class="donation-section m-0">
@@ -263,13 +261,13 @@ $APP_URL = '/jogos'; ?>
     function showGameInHighlight(game) {
       document.getElementById('destaque-imagem').style.backgroundImage = 'url(' + game.imagem + ')';
       document.getElementById('destaque-link').onclick = function() {               
-        abrirJanela(game.url, 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
+        abrirJanela(game.url, 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
       };
       document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
       document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${game.titulo}`);
     }
     if(window.location.href.indexOf('utm_source=popads') > -1) {
-      abrirJanela('/jogos/', 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
+      abrirJanela('/jogos/', 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
     }
     document.addEventListener('DOMContentLoaded', function() {
       let gameItems = [];
@@ -305,7 +303,7 @@ $APP_URL = '/jogos'; ?>
             gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
             gameLink.onclick = function() {               
               setTimeout(()=>{
-                abrirJanela(game.url, 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
+                abrirJanela(game.url, 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
               }, 200);
             };
             gameItems.push(game);
@@ -335,7 +333,7 @@ $APP_URL = '/jogos'; ?>
         const gameLink = gamecard.querySelector('a');
         document.getElementById('destaque-imagem').style.backgroundImage = 'url(' + gameLink.dataset.gameImagem + ')';
         document.getElementById('destaque-link').onclick = function() {               
-          abrirJanela(gameLink.dataset.gameUrl, 'https://playedsophomore.com/gi0n4mh5a?key=3e3ee1063d73d79e7ad7093df4d2a530');
+          abrirJanela(gameLink.dataset.gameUrl, 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
         };
         document.getElementById('destaque-titulo').textContent = 'Jogar ' + gameLink.dataset.gameTitle;
         document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${gameLink.dataset.gameTitle}`);
@@ -362,5 +360,4 @@ $APP_URL = '/jogos'; ?>
     });
   </script>
 </body>
-  <?php include("../aads.php"); ?>
 </html>
