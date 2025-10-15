@@ -147,6 +147,9 @@ $APP_URL = '/jogos'; ?>
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      padding:32px 16px;color:#000;
+      text-align:center;
+      transition: 0.2s ease;
     }
     #frame {
       margin-top: 2px !important;
@@ -206,7 +209,7 @@ $APP_URL = '/jogos'; ?>
   </div>
   <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
     
-            <section  id="destaque-imagem" class="m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light rounded" style="padding:32px 16px;color:#000;text-align:center; background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
+            <section  id="destaque-imagem" class="m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light rounded">
               <div class="d-flex flex-wrap align-items-start justify-content-center">
                 <div class="row">
                   <div class="col-md-6 flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
@@ -340,23 +343,41 @@ $APP_URL = '/jogos'; ?>
         };
         document.getElementById('destaque-titulo').textContent = 'Jogar ' + gameLink.dataset.gameTitle;
         document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${gameLink.dataset.gameTitle}`);
-
-        $('#next').click(function() {
+        
+        let interval = setInterval(next,5000);
+        let timeout;
+        function next() {
           gameItemsIndex++;
           if(gameItemsIndex >= gameItems.length) {
             gameItemsIndex = 0;
           }
           const game = gameItems[gameItemsIndex];
           showGameInHighlight(game);
-        });
-        
-        $('#prev').click(function() {
+        }
+        function prev() {
           gameItemsIndex--;
           if(gameItemsIndex < 0) {
             gameItemsIndex = gameItems.length - 1;
           }
           const game = gameItems[gameItemsIndex];
           showGameInHighlight(game);
+        }
+        $('#next').click(()=>{
+          next();
+          clearInterval(interval);
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            interval = setInterval(next,5000);
+          }, 10000);
+        });
+        
+        $('#prev').click(()=>{
+          prev();
+          clearInterval(interval);
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            interval = setInterval(prev,5000);
+          }, 10000);
         });
       });
 
