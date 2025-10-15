@@ -16,6 +16,7 @@ $APP_URL = '/jogos'; ?>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="../styles-index.css"/>
     <link rel="stylesheet" href="../sobre-mim.css"/>
     <link rel="preload" as="image" href="/jogos/linhaamarela/img/fundo.png" />
@@ -150,9 +151,22 @@ $APP_URL = '/jogos'; ?>
       padding:32px 16px;color:#000;
       text-align:center;
       transition: 0.2s ease;
+      border-top-left-radius: 0.375rem;
+      border-top-right-radius: 0.375rem;
     }
     #frame {
       margin-top: 2px !important;
+    }
+    #progressbar {
+      background: #fff;
+      height: .4rem;
+      width: 100%;
+      border-bottom-left-radius: 0.375rem;
+      border-bottom-right-radius: 0.375rem;
+    }
+    .ui-progressbar-value {
+      background: deeppink;
+      height: .4rem;
     }
   </style>
   <script defer
@@ -165,17 +179,18 @@ $APP_URL = '/jogos'; ?>
   <script>
       (function(h,o,t,j,a,r){
           h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-          h._hjSettings={hjid:6543030,hjsv:6};
+          h._hjSettings={hjid=6543030,hjsv=6};
           a=o.getElementsByTagName('head')[0];
           r=o.createElement('script');r.async=1;
           r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
           a.appendChild(r);
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
 </head>
 <body>
 <?php include("../gtagmanager.php"); ?>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 
   <!-- Bootstrap Bundle (JS + Popper) -->
@@ -209,7 +224,7 @@ $APP_URL = '/jogos'; ?>
   </div>
   <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
     
-            <section  id="destaque-imagem" class="m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light rounded">
+            <section  id="destaque-imagem" class="m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light">
               <div class="d-flex flex-wrap align-items-start justify-content-center">
                 <div class="row">
                   <div id="game-details" class="col-md-6 flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
@@ -250,6 +265,7 @@ $APP_URL = '/jogos'; ?>
                   <div>
                 </div>
               </section>
+              <div id="progressbar"></div>
               <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
                 <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
                                   style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
@@ -266,16 +282,18 @@ $APP_URL = '/jogos'; ?>
   <script>
     function showGameInHighlight(game) {
       document.getElementById('destaque-imagem').style.backgroundImage = 'url(' + game.imagem + ')';
-      document.getElementById('destaque-link').onclick = function() {               
+      $('#destaque-link,#game-details').unbind('click').click(function(e) {
+        e.preventDefault();
         abrirJanela(game.url, 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
-      };
+      });
       document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
-      document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${game.titulo}`);
+      destaqueLink.setAttribute('aria-label', `Conhecer ${game.titulo}`);
     }
     if(window.location.href.indexOf('utm_source=popads') > -1) {
       abrirJanela('/jogos/', 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
     }
     document.addEventListener('DOMContentLoaded', function() {
+
       let gameItems = [];
       let gameItemsIndex = -1;
       $.ajax({
@@ -338,14 +356,96 @@ $APP_URL = '/jogos'; ?>
         gamecard = gamecards[Math.round(Math.random() * (gamecards.length - 1))];
         const gameLink = gamecard.querySelector('a');
         document.getElementById('destaque-imagem').style.backgroundImage = 'url(' + gameLink.dataset.gameImagem + ')';
-        $('#destaque-link,#game-details').click(function() {               
+        $('#destaque-link,#game-details').unbind('click').click(function() {               
           abrirJanela(gameLink.dataset.gameUrl, 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
         });
         document.getElementById('destaque-titulo').textContent = 'Jogar ' + gameLink.dataset.gameTitle;
         document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${gameLink.dataset.gameTitle}`);
         
-        let interval = setInterval(next,5000);
+        $( "#progressbar" ).progressbar({
+          value: 0
+        });
+
+        let interval = null;
+let progressInterval = null;
+let progress = 0;
+let duration = 15000;
+let stepTime = 200;
+let step = (stepTime / duration) * 100;
+
+function startProgress() {
+  clearInterval(progressInterval);
+  progress = 0;
+  progressInterval = setInterval(() => {
+    progress += step;
+    if (progress >= 100) {
+      progress = 100;
+      clearInterval(progressInterval);
+      next();
+      startProgress();
+    }
+    $("#progressbar").progressbar("value", progress);
+  }, stepTime);
+}
+
+function next() {
+  gameItemsIndex++;
+  if (gameItemsIndex >= gameItems.length) {
+    gameItemsIndex = 0;
+  }
+  showGameInHighlight(gameItems[gameItemsIndex]);
+  progress = 0;
+  $("#progressbar").progressbar("value", progress);
+}
+
+function prev() {
+  gameItemsIndex--;
+  if (gameItemsIndex < 0) {
+    gameItemsIndex = gameItems.length - 1;
+  }
+  showGameInHighlight(gameItems[gameItemsIndex]);
+  progress = 0;
+  $("#progressbar").progressbar("value", progress);
+}
+
+$('#next').click(() => {
+  clearInterval(progressInterval);
+  clearInterval(interval);
+  next();
+  startProgress();
+  interval = setInterval(next, duration);
+});
+
+$('#prev').click(() => {
+  clearInterval(progressInterval);
+  clearInterval(interval);
+  prev();
+  startProgress();
+  interval = setInterval(next, duration);
+});
+
+        // Inicializa o progressbar
+        $("#progressbar").progressbar({ value: 0 });
+        function startProgress() {
+          clearInterval(progressInterval);
+          progress = 0;
+
+          progressInterval = setInterval(() => {
+            progress += step;
+            if (progress >= 100) {
+              progress = 100;
+              clearInterval(progressInterval);
+              next(); // executa ação ao completar
+              startProgress(); // reinicia o ciclo
+            }
+            $("#progressbar").progressbar("value", progress);
+          }, stepTime);
+        }
+        startProgress();
+
         let timeout;
+        
+        
         function next() {
           gameItemsIndex++;
           if(gameItemsIndex >= gameItems.length) {
@@ -364,20 +464,36 @@ $APP_URL = '/jogos'; ?>
         }
         $('#next').click(()=>{
           next();
+          clearInterval(progressInterval);
+          startProgress();
+
           clearInterval(interval);
           clearTimeout(timeout);
           timeout = setTimeout(() => {
-            interval = setInterval(next,5000);
-          }, 10000);
+            interval = setInterval(next,15000);
+            progressInterval = setInterval(()=>{
+              $( "#progressbar" ).progressbar({
+                value: interval
+              });
+            }, 200);
+          }, 30000);
         });
         
         $('#prev').click(()=>{
           prev();
+          clearInterval(progressInterval);
+          startProgress();
+
           clearInterval(interval);
           clearTimeout(timeout);
           timeout = setTimeout(() => {
-            interval = setInterval(prev,5000);
-          }, 10000);
+            interval = setInterval(prev,15000);
+            progressInterval = setInterval(()=>{
+              $( "#progressbar" ).progressbar({
+                value: interval
+              });
+            }, 200);
+          }, 30000);
         });
       });
 
