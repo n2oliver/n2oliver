@@ -212,7 +212,7 @@ $APP_URL = '/jogos'; ?>
             <section  id="destaque-imagem" class="m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light rounded">
               <div class="d-flex flex-wrap align-items-start justify-content-center">
                 <div class="row">
-                  <div class="col-md-6 flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+                  <div id="game-details" class="col-md-6 flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
                     
                     
                     <div class="rounded" style="font-family: Ubuntu;
@@ -338,9 +338,9 @@ $APP_URL = '/jogos'; ?>
         gamecard = gamecards[Math.round(Math.random() * (gamecards.length - 1))];
         const gameLink = gamecard.querySelector('a');
         document.getElementById('destaque-imagem').style.backgroundImage = 'url(' + gameLink.dataset.gameImagem + ')';
-        document.getElementById('destaque-link').onclick = function() {               
+        $('#destaque-link,#game-details').click(function() {               
           abrirJanela(gameLink.dataset.gameUrl, 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
-        };
+        });
         document.getElementById('destaque-titulo').textContent = 'Jogar ' + gameLink.dataset.gameTitle;
         document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${gameLink.dataset.gameTitle}`);
         
