@@ -91,7 +91,6 @@
     toggleNoticiaContent(null, 6);
     function toggleNoticiaContent(e, index) {
         const elementoExiste = e && e.target;
-        console.log(elementoExiste ? e.target.localName : 'nenhum elemento');
         if(elementoExiste && 
             (e.target.localName != 'button' && 
             e.target.localName != 'a' &&
@@ -155,7 +154,6 @@
                         pagina = pagina + 1;
                     }
                     for(let noticiasInfo of obj.results) {
-                        console.log(noticiasInfo);
                         const dataPublicacao = noticiasInfo.data_publicacao; // ex: "2025-10-08 14:30:00"
                         const data = new Date(dataPublicacao);
 
@@ -168,7 +166,7 @@
                             hour12: false
                         });
                         $('#noticias').append(`
-                            <div class="border rounded shadow-sm mb-1 ms-1 bg-light" style="width: 100%; cursor: pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">
+                            <div id="noticia-card-parent-${noticiasInfo['id']}" class="border rounded shadow-sm mb-1 ms-1 bg-light" style="width: 100%; cursor: pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">
                                 <div class="p-2 noticia-card">
                                     <div class="item d-flex align-items-center gap-2">
                                         ${ noticiasInfo['imagem'].length != 0 ? `<div class="recentes-imagem" style="background-image: url(${noticiasInfo['imagem']})"></div>` : ''}
@@ -189,6 +187,13 @@
                                 </div>
                             </div>
                         `);
+                        $(`#noticia-card-parent-${noticiasInfo['id']}`).unbind('click').click((event)=>{
+                            let obj = { ...noticiasInfo };
+                            setTimeout(()=>{
+                                toggleNoticiaContent(event, obj.id);
+                                console.log(obj);
+                            }, 200);
+                        });
                     }
                     $('.item').hover(function() {
                         img = $(this).find('.recentes-imagem').css('background-image').replace('url("', 'url(').replace('")', ')');

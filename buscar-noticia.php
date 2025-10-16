@@ -38,9 +38,6 @@ try {
                     echo '<div
                         style="height: fit-content; overflow: hidden;">
                             <div id="imagem-background" alt="imagem-background" style="background-image: url(' . htmlspecialchars($noticiaInfo['imagem']) . ')" class="w-100 float-start me-2 my-2" ></div>
-                            <div id="imagem" class="w-100 float-start me-2 my-2" style="overflow-y: visible; height: 0px">
-                                <img src="' . htmlspecialchars($noticiaInfo['imagem'])  . '" alt="imagem" class="w-100" />
-                            </div>
                         </div>';
                 }
                 echo '<div class="me-2 mt-4 px-3">' .

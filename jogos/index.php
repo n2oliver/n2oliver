@@ -168,6 +168,9 @@ $APP_URL = '/jogos'; ?>
       background: deeppink;
       height: .4rem;
     }
+    #game-details {
+      transition: 1s ease;
+    }
   </style>
   <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
@@ -224,7 +227,7 @@ $APP_URL = '/jogos'; ?>
   </div>
   <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
     
-            <section  id="destaque-imagem" class="m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light">
+            <section  id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light">
               <div class="d-flex flex-wrap align-items-start justify-content-center">
                 <div class="row">
                   <div id="game-details" class="col-md-6 flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
@@ -232,8 +235,8 @@ $APP_URL = '/jogos'; ?>
                     
                     <div class="rounded" style="font-family: Ubuntu;
                       background-color: rgba(0,0,0,.6); color: white !important; padding: 12px; text-align: center;">
-                      <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span>SEM LIMITES</strong>🎮</h2>
-                      <p style="max-width:680px;margin:0 auto 18px;color: white;line-height:1.5;">
+                      <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
+                      <p id="game-details-content" style="max-width:680px;margin:0 auto 18px;color: white;line-height:1.5;">
                         No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
                       </p>
                     </div>
@@ -287,7 +290,8 @@ $APP_URL = '/jogos'; ?>
         abrirJanela(game.url, 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
       });
       document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
-      destaqueLink.setAttribute('aria-label', `Conhecer ${game.titulo}`);
+      document.getElementById('game-details-title').textContent = game.titulo;
+      document.getElementById('game-details-content').innerHTML = game.descricao;
     }
     if(window.location.href.indexOf('utm_source=popads') > -1) {
       abrirJanela('/jogos/', 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
@@ -361,7 +365,12 @@ $APP_URL = '/jogos'; ?>
         });
         document.getElementById('destaque-titulo').textContent = 'Jogar ' + gameLink.dataset.gameTitle;
         document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${gameLink.dataset.gameTitle}`);
-        
+        setTimeout(()=>{
+          document.getElementById('game-details-title').textContent = gameLink.dataset.gameTitle;
+          document.getElementById('game-details-content').innerHTML = gameLink.dataset.gameDesc;
+          
+          gameItemsIndex = gameItems.indexOf(gamecard);
+        }, 7000);
         $( "#progressbar" ).progressbar({
           value: 0
         });
