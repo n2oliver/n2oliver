@@ -153,6 +153,8 @@ $APP_URL = '/jogos'; ?>
       transition: 0.2s ease;
       border-top-left-radius: 0.375rem;
       border-top-right-radius: 0.375rem;
+      height: 300px;
+      min-height: fit-content;
     }
     #frame {
       margin-top: 2px !important;
