@@ -9,7 +9,7 @@
 </footer>
 <div class="gtranslate_wrapper"></div>
 <script>
-window.gtranslateSettings = {"default_language":"pt","native_language_names":true,"languages":["pt","fr","it","es","en","zh-TW","zh-CN","nl"],"wrapper_selector":".gtranslate_wrapper"}
+window.gtranslateSettings = {"default_language":"pt","native_language_names":true,"languages":["pt","fr","it","es","en","nl","zh-TW","zh-CN","ja"],"wrapper_selector":".gtranslate_wrapper"}
 
 </script>
 <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
