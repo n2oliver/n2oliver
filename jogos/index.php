@@ -1,6 +1,38 @@
 <?php 
 #include('/conversion.php');
-$APP_URL = '/jogos'; ?>
+$APP_URL = '/jogos';
+$aid = '4d3a91b666f691014aaf3dd1a7a854e801b3b935'; // seu AID PopAds
+$urlDestino = 'https://n2oliver.com/jogos/'; // página principal
+$valorConversao = 0.0005; // valor simbólico da conversão
+//-------------------------------------------------
+
+$impressionid = $_GET['impressionid'] ?? null;
+
+if ($impressionid) {
+    // Testa se a página principal carrega com sucesso
+    $ch = curl_init($urlDestino);
+    curl_setopt_array($ch, [
+        CURLOPT_NOBODY => true,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT => 5
+    ]);
+    curl_exec($ch);
+    $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    // Se a página respondeu com HTTP 200 → postback para o PopAds
+    if ($status == 200) {
+        $postbackUrl = "http://serve.popads.net/cpixel.php?s2s=1&aid={$aid}&id={$impressionid}&value={$valorConversao}";
+        @file_get_contents($postbackUrl);
+
+        // (opcional) registrar em log local
+        file_put_contents(__DIR__.'/impressões_validas.log', date('Y-m-d H:i:s')." | {$impressionid} | HTTP {$status}\n", FILE_APPEND);
+    } else {
+        // (opcional) registrar falhas
+        file_put_contents(__DIR__.'/falhas.log', date('Y-m-d H:i:s')." | {$impressionid} | HTTP {$status}\n", FILE_APPEND);
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -180,17 +212,6 @@ $APP_URL = '/jogos'; ?>
     </script>
   <script src="/gtag_dispatcher.js"></script>
   <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
-  <!-- Hotjar Tracking Code for n2oliver.com -->
-  <script>
-      (function(h,o,t,j,a,r){
-          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-          h._hjSettings={hjid=6543030,hjsv=6};
-          a=o.getElementsByTagName('head')[0];
-          r=o.createElement('script');r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
 </head>
