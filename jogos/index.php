@@ -45,10 +45,10 @@ if ($impressionid) {
 
   <title>Jogos Online | n2oliver</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link href="/css/fonts/ubuntu/css2.css?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
+    <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/jquery-ui/jquery-ui.css">
     <link rel="stylesheet" href="../styles-index.css"/>
     <link rel="stylesheet" href="../sobre-mim.css"/>
     <link rel="preload" as="image" href="/jogos/linhaamarela/img/fundo.png" />
@@ -208,20 +208,20 @@ if ($impressionid) {
   </style>
   <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
-        src="https://cdn.megapush.com.br/MegaPush.js">
+        src="/js/megapush/MegaPush.js">
     </script>
   <script src="/gtag_dispatcher.js"></script>
   <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <script src="/js/jquery/jquery-3.7.1.min.js"></script>
+  <script src="/js/jquery-ui/jquery-ui.js"></script>
 </head>
 <body>
 <?php include("../gtagmanager.php"); ?>
 
 
   <!-- Bootstrap Bundle (JS + Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootbox@5.5.2/bootbox.min.js"></script>
+  <script src="/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="/js/bootbox/bootbox.min.js"></script>
   <div class="col-md-10 m-auto" style="position: sticky; top: 0">
     <?php include('../navbar.php'); ?>
   </div>
