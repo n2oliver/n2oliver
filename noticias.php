@@ -16,6 +16,9 @@
 
         <?php include_once('./buscar-noticia.php'); ?>
 
+    <div class="px-3 text-center mb-3">
+        <a href="https://beta.publishers.adsterra.com/referral/JwWiKrYdak" rel="nofollow"><img alt="banner" src="/img/PNG%20468x60%20px.png" /></a>
+    </div>
     <div id="recentes" class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px">
         
         <h1 class="text-light px-4 pt-3 pb-4 bg-primary mb-0" style="width: fit-content; min-width: 100%; position: sticky; top: 0; left: 0; z-index: 1;">
