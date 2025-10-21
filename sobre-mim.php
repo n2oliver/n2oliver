@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 <div class="px-3 text-center">
-                    <a href="https://beta.publishers.adsterra.com/referral/JwWiKrYdak" rel="nofollow"><img alt="banner" src="/img/PNG%20468x60%20px.png" /></a>
+                    <a href="https://beta.publishers.adsterra.com/referral/JwWiKrYdak" rel="nofollow"><img alt="banner" src="/img/PNG-160x90-px.png" /></a>
                 </div>
                 <div class="row px-3 main-content">
                     <div class="d-flex about-me px-0 d-none" style="

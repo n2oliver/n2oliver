@@ -298,7 +298,7 @@ if ($impressionid) {
               </div>
   </main>
   <div class="container m-auto col-md-10 p-0 mt-1">
-    <a href="https://aads.com/advertise/?partner=2414063"><img src="https://aads.com/a_ads_banners/gif/english/468x60/simple_v1.gif" alt="Advertise with Anonymous Ads" width="468px" height="60px" /></a>
+    <a href="https://aads.com/advertise/?partner=2414063"><img src="https://aads.com/a_ads_banners/gif/english/320x50/simple_v1.gif" alt="Advertise with Anonymous Ads" width="320px" height="50px" /></a>
   </div>
   <div class="container m-auto col-md-10 p-0 mt-1">
     <div class="donation-section m-0">
