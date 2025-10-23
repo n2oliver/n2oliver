@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <?php include("cabecalho.php"); ?>
+    <?php
+    $meta_title = 'Sobre o Desenvolvedor — n2oliver';
+    $meta_description = 'Conheça Óliver S. Castilho — desenvolvedor de software com experiência em projetos web, jogos e ferramentas digitais.';
+    $meta_image = '/img/oliver.jpg';
+    $canonical = (isset($_SERVER['HTTP_HOST']) ? (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] : 'https://n2oliver.com/sobre-mim.php');
+    include("cabecalho.php"); ?>
     <meta name='admaven-placement' content=Bqja8pjw8>
     <meta name="pushsdk" content="322d99f94878aedd7de1ac412ba0561c">
     <meta name="af75eac4081069fbc72900cc9a43e129aefae092" content="af75eac4081069fbc72900cc9a43e129aefae092" />

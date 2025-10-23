@@ -263,7 +263,7 @@
                     const productCard = `
                         <div class="product-item" data-category="${product.category}" onclick="abrirJanela('${product.affiliate_link}')">
                             <div class="card product-card h-100 border">
-                                <img alt="produto" src="${product.image_url}" class="card-img-top shadow border" alt="${product.name}">
+                                <img src="${product.image_url}" class="card-img-top shadow border" alt="${product.name}" loading="lazy">
                                 <div class="card-body">
                                     <h5 class="card-title">${product.name}</h5>
                                     <div class="card-text">${product.descricao}</div>

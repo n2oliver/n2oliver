@@ -36,14 +36,14 @@ if ($impressionid) {
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <?php include('../g-tags.php'); ?>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name='admaven-placement' content=Bqja8pjw8>
-  <meta name="pushsdk" content="322d99f94878aedd7de1ac412ba0561c">
-  <meta name="af75eac4081069fbc72900cc9a43e129aefae092" content="af75eac4081069fbc72900cc9a43e129aefae092" />
-
-  <title>Jogos Online | n2oliver</title>
+  <?php
+  // Per-page SEO meta for jogos index
+  $meta_title = 'Jogos Online — n2oliver';
+  $meta_description = 'Jogos online gratuitos: Linha Amarela, Combo-Memo e outros títulos desenvolvidos por n2oliver.';
+  $meta_image = '/jogos/img/logo.png';
+  $canonical = (isset($_SERVER['HTTP_HOST']) ? (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] : 'https://n2oliver.com/jogos/');
+  include('../cabecalho.php');
+  ?>
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
     <link href="/css/fonts/ubuntu/css2.css?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
     <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">

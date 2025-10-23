@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <?php include('g-tags.php'); ?>
     <title>Cobertura de Superfícies com Perdas | n2oliver</title>

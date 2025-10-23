@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <?php include("cabecalho.php"); ?>
+    <?php
+    $meta_title = 'Contato — n2oliver';
+    $meta_description = 'Entre em contato com n2oliver para projetos, parcerias ou suporte. Envie um e-mail para suporte@n2oliver.com.';
+    $meta_image = '/img/n2.jpg';
+    $canonical = (isset($_SERVER['HTTP_HOST']) ? (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] : 'https://n2oliver.com/contato.php');
+    include("cabecalho.php"); ?>
 </head>
 <body class="oliver-dev">
 <?php include("gtagmanager.php"); ?>
