@@ -459,6 +459,7 @@ h1 {
     margin-right: 12px;
     padding-bottom: 50px;
     padding-top: 50px;
+    color: light-dark(black, white);
 }
 
 

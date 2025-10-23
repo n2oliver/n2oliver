@@ -6,20 +6,20 @@
             -webkit-transition: 1s ease;
         }
     </style>
-    <div id="noticia" class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px">
+    <h1 class="w-100 text-light px-4 pt-3 pb-4 bg-primary mb-0">
+        <div class="d-flex justify-content-start align-items-center">
+            <i class="fa fa-pager p-2"></i>
+            <span id="noticias-span-title">Notícias</span><div class="oliver-dev-logo text-end w-100">n2oliver</div></div>
+    </h1>
+    <div id="noticia" class="d-flex mb-0 p-0 shadow rounded quicksand row align-items-stretch" style="border-bottom-right-radius: 0px">
+        <div class="px-0" style="height: fit-content; overflow: hidden;">
+            <div id="imagem-background" alt="imagem-background" class="w-100 float-start me-2 my-2" ></div>
+        </div>
         
-        <h1 class="w-100 text-light px-4 pt-3 pb-4 bg-primary mb-0">
-            <div class="d-flex justify-content-start align-items-center">
-                <i class="fa fa-pager p-2"></i>
-                <span id="noticias-span-title">Notícias</span><div class="oliver-dev-logo text-end w-100">n2oliver</div></div>
-        </h1>
+        <div id="noticia-content" class="pb-4 border rounded shadow-sm mb-3 mx-0 bg-light col-md-8">
+        </div>
 
-        <?php include_once('./buscar-noticia.php'); ?>
-
-    <div class="px-3 text-center mb-3">
-        <a href="https://beta.publishers.adsterra.com/referral/JwWiKrYdak" rel="nofollow"><img alt="banner" src="/img/PNG-160x90-px.png" /></a>
-    </div>
-    <div id="recentes" class="d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px">
+    <div id="recentes" class="d-flex flex-column mb-0 p-0 mx-0 shadow rounded quicksand col-md-4" style="border-bottom-right-radius: 0px">
         
         <h1 class="text-light px-4 pt-3 pb-4 bg-primary mb-0" style="width: fit-content; min-width: 100%; position: sticky; top: 0; left: 0; z-index: 1;">
             <div class="d-flex justify-content-start align-items-center">
@@ -28,15 +28,11 @@
         </h1>
 
         <div id="recentes-wrapper" class="row mb-0 p-0">
+            
             <?php 
                 include_once('./buscar-noticias.php');
             ?>
-            
-            <div id="preview" 
-                style="background-color: rgba(0,0,0,0.5)"
-                class="col-sm-12 col-md-6">
-            </div>
-            <div id="noticias" class="flex-column col-sm-12 col-md-6 align-self-start" 
+            <div id="noticias" class="align-self-start" 
                 style="overflow-y: auto; 
                 overflow-x: clip;
                 max-height: 100vh;">
@@ -92,6 +88,27 @@
 
 <script>
     toggleNoticiaContent(null, 6);
+    function setContent(index) {
+        const obj = {id: index};
+        $.ajax({
+            url: './buscar-noticia.php',
+            type: 'POST',
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            data: JSON.stringify(obj),
+            success: function(response) {
+                const contentDiv = document.getElementById('noticia-content');
+                if (contentDiv) {
+                    contentDiv.innerHTML = response.conteudo;
+                    $("#imagem-background").css("background-image", "url(" + response.imagem + ")");
+                    $("#imagem-background").html(response.titulo);
+                }
+            },
+            error: function(xhr) {
+                alert('Erro ao carregar a notícia.');
+            }
+        });
+    }
     function toggleNoticiaContent(e, index) {
         const elementoExiste = e && e.target;
         if(elementoExiste && 
@@ -100,23 +117,13 @@
             
             e.target.parentElement.localName != 'button' &&
             e.target.parentElement.localName != 'a')) {
-            $.ajax({
-                url: './buscar-noticia.php',
-                type: 'POST',
-                data: { id: index },
-                success: function(response) {
-                    const contentDiv = document.getElementById('noticia-content');
-                    if (contentDiv) {
-                        contentDiv.outerHTML = response;
-                        if(e !== null) {
-                            document.getElementById('noticia').scrollIntoView({ behavior: 'smooth' });
-                        }
-                    }
-                },
-                error: function() {
-                    alert('Erro ao carregar a notícia.');
-                }
-            });
+                
+            setContent(index);
+            if(e !== null) {
+                document.getElementById('noticia').scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            setContent(index);
         }
     }
     function avancar(event) {
@@ -198,12 +205,6 @@
                             }, 200);
                         });
                     }
-                    $('.item').hover(function() {
-                        img = $(this).find('.recentes-imagem').css('background-image').replace('url("', 'url(').replace('")', ')');
-                        if (img) {
-                            $('#preview').html(`<div class="h-100" style="background-image: ${img};" alt="Carregando..." />`);
-                        }
-                    });
                     document.getElementById('noticias').scrollIntoView({ behavior: 'smooth' });
                 }
                         
@@ -214,14 +215,6 @@
         });
     }
     $(document).ready(function() {
-        let img = $(this).find('.recentes-imagem').css('background-image').replace('url("', 'url(').replace('")', ')');
-        $('#preview').html(`<div class="h-100" style="background-image: ${img};" alt="Carregando..." />`);
-        $('.item').hover(function() {
-            img = $(this).find('.recentes-imagem').css('background-image').replace('url("', 'url(').replace('")', ')');
-            if (img) {
-                $('#preview').html(`<div class="h-100" style="background-image: ${img};" alt="Carregando..." />`);
-            }
-        });
         $('#page-buttons .btn').click(buscarNoticias);
     });
 </script>
