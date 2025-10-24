@@ -18,9 +18,6 @@ try {
     $noticiaInfo = $noticia[0];
     echo json_encode((object) array('conteudo' => '<div>
             <div data-id=' . $noticiaInfo['id'] . ' style="" class="noticia-conteudo">' .
-                (!empty($noticiaInfo['resumo']) ?
-                    '<div class="mt-2 text-light px-3 py-3" style="background-color: darkslategray"><h2><strong>' . htmlspecialchars($noticiaInfo['resumo']) . '</strong></h2></div>'
-                : '') .
                 (!empty($noticiaInfo['imagem']) ?
                     '<script>$("#imagem-background").css("background-image", "url(' . htmlspecialchars($noticiaInfo['imagem']) . ')");</script>'
                 : '') .
@@ -47,7 +44,10 @@ try {
                     '— <em>' . htmlspecialchars($noticiaInfo['categoria']) . '</em>'
                 : '') .
             '</small>
-        </div>'));
+        </div>',
+        'resumo' => (!empty($noticiaInfo['resumo']) ?
+                    '<div class="mt-2 text-light px-3 py-3 col-md-6" style="background-color: darkslategray"><h2><strong>' . htmlspecialchars($noticiaInfo['resumo']) . '</strong></h2></div>'
+                : '')));
 } catch (Exception $e) {
     die("Erro ao carregar notícias: " . $e->getMessage());
 }

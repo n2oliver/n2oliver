@@ -87,7 +87,7 @@
 </div>
 
 <script>
-    toggleNoticiaContent(null, 6);
+    toggleNoticiaContent(null, 8);
     function setContent(index) {
         const obj = {id: index};
         $.ajax({
@@ -102,6 +102,7 @@
                     contentDiv.innerHTML = response.conteudo;
                     $("#imagem-background").css("background-image", "url(" + response.imagem + ")");
                     $("#imagem-background").html(response.titulo);
+                    $("#imagem-background").append(response.resumo);
                 }
             },
             error: function(xhr) {
