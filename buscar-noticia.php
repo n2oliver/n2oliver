@@ -17,9 +17,9 @@ try {
     $noticia = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $noticiaInfo = $noticia[0];
     echo json_encode((object) array('conteudo' => '<div>
-            <div data-id=' . $noticiaInfo['id'] . ' style="" class="mt-3 noticia-conteudo">' .
+            <div data-id=' . $noticiaInfo['id'] . ' style="" class="noticia-conteudo">' .
                 (!empty($noticiaInfo['resumo']) ?
-                    '<div class="mt-2 text-dark px-3"><h2><strong>' . htmlspecialchars($noticiaInfo['resumo']) . '</strong></h2></div>'
+                    '<div class="mt-2 text-light px-3 py-3" style="background-color: darkslategray"><h2><strong>' . htmlspecialchars($noticiaInfo['resumo']) . '</strong></h2></div>'
                 : '') .
                 (!empty($noticiaInfo['imagem']) ?
                     '<script>$("#imagem-background").css("background-image", "url(' . htmlspecialchars($noticiaInfo['imagem']) . ')");</script>'
