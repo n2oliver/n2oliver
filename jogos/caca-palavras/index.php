@@ -108,7 +108,7 @@
           value: 0.0004
         });
         $('#jogar').click(()=>{
-            abrirJanela('<?= $APP_URL ?>/jogo.php', 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
+            abrirJanela('<?= $APP_URL ?>/jogo.php', 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
             gtag("event", "close_convert_lead", {
               currency: "USD",
               value: 0.0004

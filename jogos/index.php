@@ -313,14 +313,14 @@ if ($impressionid) {
       document.getElementById('destaque-imagem').style.backgroundImage = 'url(' + game.imagem + ')';
       $('#destaque-link,#game-details').unbind('click').click(function(e) {
         e.preventDefault();
-        abrirJanela(game.url, 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
+        abrirJanela(game.url, 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
       });
       document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
       document.getElementById('game-details-title').textContent = game.titulo;
       document.getElementById('game-details-content').innerHTML = game.descricao;
     }
     if(window.location.href.indexOf('utm_source=popads') > -1) {
-      abrirJanela('/jogos/', 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f',{showMenu: true});
+      abrirJanela('/jogos/', 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f',{showMenu: true});
     }
     document.addEventListener('DOMContentLoaded', function() {
 
@@ -357,7 +357,7 @@ if ($impressionid) {
             gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
             gameLink.onclick = function() {               
               setTimeout(()=>{
-                abrirJanela(game.url, 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
+                abrirJanela(game.url, 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
               }, 200);
             };
             gameItems.push(game);
@@ -387,7 +387,7 @@ if ($impressionid) {
         const gameLink = gamecard.querySelector('a');
         document.getElementById('destaque-imagem').style.backgroundImage = 'url(' + gameLink.dataset.gameImagem + ')';
         $('#destaque-link,#game-details').unbind('click').click(function() {               
-          abrirJanela(gameLink.dataset.gameUrl, 'https://playedsophomore.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
+          abrirJanela(gameLink.dataset.gameUrl, 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
         });
         document.getElementById('destaque-titulo').textContent = 'Jogar ' + gameLink.dataset.gameTitle;
         document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${gameLink.dataset.gameTitle}`);
