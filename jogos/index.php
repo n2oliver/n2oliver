@@ -46,7 +46,6 @@ if ($impressionid) {
   ?>
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
     <link href="/css/fonts/ubuntu/css2.css?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
-    <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="/css/font-awesome/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="/css/jquery-ui/jquery-ui.css">
     <link rel="stylesheet" href="../styles-index.css"/>
@@ -204,6 +203,11 @@ if ($impressionid) {
     }
     #game-details {
       transition: 1s ease;
+    }    
+    .noticia-conteudo {
+        transition: 1s ease;
+        -moz-transition: 1s ease;
+        -webkit-transition: 1s ease;
     }
   </style>
   <script defer
@@ -220,7 +224,6 @@ if ($impressionid) {
 
 
   <!-- Bootstrap Bundle (JS + Popper) -->
-  <script src="/js/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="/js/bootbox/bootbox.min.js"></script>
   <div class="col-md-10 m-auto" style="position: sticky; top: 0">
     <?php include('../navbar.php'); ?>
@@ -295,6 +298,10 @@ if ($impressionid) {
               <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
                 <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
                                   style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+              </div>
+              
+              <div class="container m-auto mt-1 d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px;">
+                  <?php include('./../noticias.php'); ?>
               </div>
   </main>
   <div class="container m-auto col-md-10 p-0 mt-1">

@@ -9,7 +9,7 @@
     <h1 class="w-100 text-light px-4 pt-3 pb-4 bg-primary mb-0">
         <div class="d-flex justify-content-start align-items-center">
             <i class="fa fa-pager p-2"></i>
-            <span id="noticias-span-title">Notícias</span><div class="oliver-dev-logo text-end w-100">n2oliver</div></div>
+            <span id="noticias-span-title">Notícias</span><div class="oliver-dev-logo text-end w-50">n2oliver</div></div>
     </h1>
     <div id="noticia" class="d-flex mb-0 p-0 shadow rounded quicksand row align-items-stretch" style="border-bottom-right-radius: 0px">
         <div class="px-0" style="height: fit-content; overflow: hidden;">
@@ -17,7 +17,7 @@
         </div>
         
         <div id="noticia-content" class="pb-4 border rounded shadow-sm mb-3 mx-0 bg-light col-md-8">
-        </div>
+    </div>
 
     <div id="recentes" class="d-flex flex-column mb-0 p-0 mx-0 shadow rounded quicksand col-md-4" style="border-bottom-right-radius: 0px">
         
@@ -71,7 +71,7 @@
             </div>
             <span id="page-buttons">
                 <script>
-                    let pagina = <?= $noticias['page'] ?>;
+                    let pagina = "<?= $noticias['page'] ?>" || 0;
                 </script>
                 <?php
                 for($i = 0; $i <= $noticias['pages'] + 1; $i++) { ?>
@@ -91,7 +91,7 @@
     function setContent(index) {
         const obj = {id: index};
         $.ajax({
-            url: './buscar-noticia.php',
+            url: './../buscar-noticia.php',
             type: 'POST',
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
@@ -145,7 +145,7 @@
             .prop('disabled', false);
         
         $.ajax({
-            url: './buscar-noticias.php',
+            url: './../buscar-noticias.php',
             type: 'POST',
             data: { page: pagina },
             success: (data) => {
@@ -206,7 +206,9 @@
                             }, 200);
                         });
                     }
-                    document.getElementById('noticias').scrollIntoView({ behavior: 'smooth' });
+                    if(event.target) {
+                        document.getElementById('noticias').scrollIntoView({ behavior: 'smooth' });
+                    }
                 }
                         
             },
@@ -215,7 +217,9 @@
             }
         });
     }
-    $(document).ready(function() {
+    $(document).ready(function(event) {
+        pagina = pagina + 1;
+        buscarNoticias(event);
         $('#page-buttons .btn').click(buscarNoticias);
     });
 </script>

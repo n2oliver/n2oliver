@@ -7,17 +7,26 @@
   <span><a href="mailto:suporte@n2oliver.com">suporte@n2oliver.com</a></span>
   <span class="footer-text-small">CNPJ 60.407.027/0001-25</span>
 </footer>
-<div class="gtranslate_wrapper"></div>
-<script>
-window.gtranslateSettings = {"default_language":"pt","native_language_names":true,"languages":["pt","fr","it","es","en","nl","zh-TW","zh-CN","ja","ro","ru","sr"],"wrapper_selector":".gtranslate_wrapper"}
-
-</script>
+<script>window.gtranslateSettings = {"default_language":"pt","native_language_names":true,"detect_browser_language":true,"languages":["pt","fr","it","es","en","ru","ro","sr","zh-CN","zh-TW","ja","nl"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"inline"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
-<script>
-</script>
+
     <style>
       .gtranslate_wrapper {
         z-index: 9999 !important;
+        color: black !important;
+        display: flex;
+        align-items: center;
       }
+      .gt_container--hich1m .gt_switcher .gt_option, .gt_container--hich1m .gt_switcher .gt_selected {
+        background: transparent !important;
+        background-color: transparent !important;
+      }
+      .gt_container--hich1m .gt_switcher .gt_selected a:hover {
+        background-color: rgba(0, 0, 0, 0.1) !important;
+      }
+      .gt_container--hich1m .gt_switcher .gt_option a:hover {
+        background-color: rgba(0, 0, 0, 0.1) !important;
+      }
+
     </style>
 </div>

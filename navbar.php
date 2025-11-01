@@ -1,28 +1,31 @@
-<nav class="navbar light navbar-expand-lg navbar-dark py-0 mx-0">
-    <a class="navbar-brand rounded" style="-webkit-text-stroke: 1px white" href="/"><img alt="logomarca" src="/img/n2.jpg" width="32" class="rounded"><span>oliver</span></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand rounded" href="/">
+      <img src="/img/n2.jpg" width="32" class="rounded">
+      oliver
+    </a>
+
+    <!-- GTranslate wrapper visualmente à direita -->
+    <div class="gtranslate_wrapper ms-auto me-2 d-flex align-items-center"></div>
+
+    <!-- Botão hamburger -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
+    <!-- Navbar links -->
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item active nav-a">
-                <a class="nav-link rounded" href="/"><i class="fa-solid fa-user"></i> Notícias</a>
-            </li>
-            <li class="nav-item nav-b">
-                <a class="nav-link rounded" href="/aplicativos.php"><i class="fa-solid fa-hand-pointer"></i> Aplicativos</a>
-            </li>
-            <li class="nav-item nav-c">
-                <a class="nav-link rounded" href="/jogos/index.php"><i class="fa-solid fa-puzzle-piece"></i> Jogos Online</a>
-            </li>
-            <li class="nav-item nav-d">
-                <a class="nav-link rounded" href="/loja_virtual/index.php"><i class="fa-solid fa-store"></i> Oliv3r Store</a>
-            </li>
-            <li class="nav-item nav-e">
-                <a class="nav-link rounded" href="/contato.php"><i class="fa-solid fa-envelope"></i> Contato</a>
-            </li>
-            <li class="nav-item nav-e">
-                <a class="nav-link rounded" href="/sobre-mim.php"><i class="fa-solid fa-envelope"></i> Desenvolvedor</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="/"><i class="fa-solid fa-home"></i> Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="/aplicativos.php"><i class="fa-solid fa-hand-pointer"></i> Aplicativos</a></li>
+            <li class="nav-item"><a class="nav-link" href="/jogos/index.php"><i class="fa-solid fa-puzzle-piece"></i> Jogos</a></li>
+            <li class="nav-item"><a class="nav-link" href="/loja_virtual/index.php"><i class="fa-solid fa-store"></i> Oliv3r Store</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contato.php"><i class="fa-solid fa-envelope"></i> Contato</a></li>
         </ul>
     </div>
+
+  </div>
 </nav>
