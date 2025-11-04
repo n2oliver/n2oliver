@@ -1,16 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const allWords = [
-        // Tecnologia
-        'html', 'css', 'javascript', 'php', 'jogo', 'web', 
-        'programacao', 'computador', 'tecnologia', 'internet', 'codigo', 'software', 
-        'rede', 'algoritmo', 'dados', 'nuvem', 'api', 'framework', 'linguagem',
-        
-        // Cotidiano
-        'casa', 'carro', 'familia', 'amor', 'amigo', 'escola', 'trabalho', 'cidade', 
-        'brasil', 'festa', 'musica', 'filme', 'praia', 'sol', 'chuva', 'comida', 'agua', 
-        'felicidade', 'viagem', 'natureza', 'animal', 'livro', 'esporte', 'arte',
-        'coracao', 'tempo', 'dinheiro', 'saude', 'sonho'
-    ];
+    // Word lists per language. We'll detect the current language from <html lang="..">
+    const wordsByLang = {
+        pt: [
+            'html','css','javascript','php','jogo','web','programacao','computador','tecnologia','internet','codigo','software',
+            'rede','algoritmo','dados','nuvem','api','framework','linguagem',
+            'casa','carro','familia','amor','amigo','escola','trabalho','cidade','brasil','festa','musica','filme','praia','sol','chuva','comida','agua',
+            'felicidade','viagem','natureza','animal','livro','esporte','arte','coracao','tempo','dinheiro','saude','sonho'
+        ],
+        en: [
+            'html','css','javascript','php','game','web','programming','computer','technology','internet','code','software',
+            'network','algorithm','data','cloud','api','framework','language',
+            'house','car','family','love','friend','school','work','city','brazil','party','music','movie','beach','sun','rain','food','water',
+            'happiness','travel','nature','animal','book','sport','art','heart','time','money','health','dream'
+        ]
+    };
     let words = [];
     const gridSize = 12;
     const gridElement = document.getElementById('word-search-grid');
@@ -24,7 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let foundWords = [];
 
     function init() {
-        words = shuffleArray ([...allWords]).slice(0, 8);
+        const lang = (document.documentElement.lang || navigator.language || 'pt').split('-')[0];
+        const pool = wordsByLang[lang] || wordsByLang.pt;
+        // pick candidate words, but only show words that we actually managed to place
+        const candidates = shuffleArray([...pool]).slice(0, 12); // pick a few more to try placing
         grid = [];
         foundWords = [];
         selection = [];
@@ -33,13 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         wordListElement.innerHTML = '';
         gridElement.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 
-        words.forEach(word => {
-            const li = document.createElement('li');
-            li.textContent = word;
-            li.id = `word-${word}`;
-            wordListElement.appendChild(li);
-        });
-
+        // initialize empty grid
         for (let i = 0; i < gridSize; i++) {            
             grid[i] = [];
             for (let j = 0; j < gridSize; j++) {
@@ -47,10 +47,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        words.forEach(word => {
-            placeWord(word.toUpperCase());
-        });
+        // Try to place words and only keep those successfully placed
+        const placedWords = [];
+        for (let k = 0; k < candidates.length && placedWords.length < 8; k++) {
+            const w = candidates[k];
+            const ok = placeWord(w.toUpperCase());
+            if (ok) placedWords.push(w);
+        }
 
+        words = placedWords;
+
+        words.forEach(word => {
+            const li = document.createElement('li');
+            li.textContent = word;
+            li.id = `word-${word}`;
+            wordListElement.appendChild(li);
+        });
         fillEmptyCells();
         renderGrid();
     }
@@ -106,7 +118,7 @@ function placeWord(word) {
                 placed = true;
             }
         }
-        return;
+        return placed;
     }
 
     // Para as demais palavras, tenta cruzar com as já existentes
@@ -146,12 +158,14 @@ function placeWord(word) {
                                 let placeY = startY + i * direction.y;
                                 grid[placeY][placeX] = word[i];
                             }
-                            return;
+                            return true;
                         }
                     }
                 }
             }
         }
+    // could not place the word
+    return false;
     }
 }
 
@@ -303,4 +317,15 @@ function placeWord(word) {
     restartButton.addEventListener('click', init);
 
     init();
+    // Observe <html lang="..."> changes (gtranslate/gtranslate-like widgets usually set this)
+    const htmlObserver = new MutationObserver(mutations => {
+        for (const m of mutations) {
+            if (m.attributeName === 'lang') {
+                // Re-init with new language
+                init();
+                break;
+            }
+        }
+    });
+    htmlObserver.observe(document.documentElement, { attributes: true });
 });

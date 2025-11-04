@@ -6,36 +6,61 @@ document.addEventListener('DOMContentLoaded', () => {
     const restartButton = document.getElementById('restart-button');
     const messageContainer = document.getElementById('message-container');
 
-    // Banco de palavras e dicas
-    const allWords = [
-        { word: "CASA", clue: "Onde você mora." },
-        { word: "SALA", clue: "Cômodo para receber visitas." },
-        { word: "AR", clue: "Você respira." },
-        { word: "SOL", clue: "Estrela do sistema solar." },
-        { word: "LAR", clue: "Sinônimo de casa." },
-        { word: "LIVRO", clue: "Objeto usado para leitura." },
-        { word: "ESCOLA", clue: "Local de aprendizado." },
-        { word: "FESTA", clue: "Evento de comemoração." },
-        { word: "AMIGO", clue: "Pessoa próxima e querida." },
-        { word: "ARTE", clue: "Expressão criativa." },
-        { word: "COMIDA", clue: "Algo que você come." },
-        { word: "CARRO", clue: "Meio de transporte." },
-        { word: "RIO", clue: "Curso de água." },
-        { word: "CÉU", clue: "Onde estão as nuvens." },
-        { word: "DADO", clue: "Objeto usado em jogos de sorte." }
-    ];
+    // Banco de palavras e dicas por idioma
+    const wordsByLang = {
+        pt: [
+            { word: "CASA", clue: "Onde você mora." },
+            { word: "SALA", clue: "Cômodo para receber visitas." },
+            { word: "AR", clue: "Você respira." },
+            { word: "SOL", clue: "Estrela do sistema solar." },
+            { word: "LAR", clue: "Sinônimo de casa." },
+            { word: "LIVRO", clue: "Objeto usado para leitura." },
+            { word: "ESCOLA", clue: "Local de aprendizado." },
+            { word: "FESTA", clue: "Evento de comemoração." },
+            { word: "AMIGO", clue: "Pessoa próxima e querida." },
+            { word: "ARTE", clue: "Expressão criativa." },
+            { word: "COMIDA", clue: "Algo que você come." },
+            { word: "CARRO", clue: "Meio de transporte." },
+            { word: "RIO", clue: "Curso de água." },
+            { word: "CÉU", clue: "Onde estão as nuvens." },
+            { word: "DADO", clue: "Objeto usado em jogos de sorte." }
+        ],
+        en: [
+            { word: "HOUSE", clue: "Where you live." },
+            { word: "ROOM", clue: "A room for guests." },
+            { word: "AIR", clue: "You breathe it." },
+            { word: "SUN", clue: "Star of the solar system." },
+            { word: "HOME", clue: "Synonym of house." },
+            { word: "BOOK", clue: "Object used for reading." },
+            { word: "SCHOOL", clue: "Place for learning." },
+            { word: "PARTY", clue: "A celebration event." },
+            { word: "FRIEND", clue: "A close and dear person." },
+            { word: "ART", clue: "Creative expression." },
+            { word: "FOOD", clue: "Something you eat." },
+            { word: "CAR", clue: "Means of transport." },
+            { word: "RIVER", clue: "A course of water." },
+            { word: "SKY", clue: "Where the clouds are." },
+            { word: "DICE", clue: "Object used in games of chance." }
+        ]
+    };
+
+    function currentWordPool() {
+        const lang = (document.documentElement.lang || navigator.language || 'pt').split('-')[0];
+        return wordsByLang[lang] || wordsByLang.pt;
+    }
 
     let grid = [];
     const gridSize = 10;
     let crosswordData = [];
 
     function getRandomWords(n) {
-        const shuffled = allWords.slice().sort(() => Math.random() - 0.5);
+        const pool = currentWordPool();
+        const shuffled = pool.slice().sort(() => Math.random() - 0.5);
         return shuffled.slice(0, n);
     }
 
     function generateCrosswordData() {
-    const numWords = 5; // Menos palavras para melhor separação
+        const numWords = 5; // Menos palavras para melhor separação
     const selected = getRandomWords(numWords);
     const crosswordData = [];
 
@@ -284,4 +309,15 @@ crosswordData.forEach(entry => {
     restartButton.addEventListener('click', init);
 
     init();
+
+    // Observe <html lang> changes (gtranslate sets this) and re-init when it changes
+    const langObserver = new MutationObserver(mutations => {
+        for (const m of mutations) {
+            if (m.attributeName === 'lang') {
+                init();
+                break;
+            }
+        }
+    });
+    langObserver.observe(document.documentElement, { attributes: true });
 });
