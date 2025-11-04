@@ -214,6 +214,7 @@ if ($impressionid) {
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
         src="/js/megapush/MegaPush.js">
     </script>
+  <script data-cfasync="false" src="/popads-monetization.js"></script>
   <script src="/gtag_dispatcher.js"></script>
   <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
   <script src="/js/jquery/jquery-3.7.1.min.js"></script>
