@@ -141,13 +141,6 @@ if ($impressionid) {
       margin-top: 2rem;
       text-align: center;
       color: #343a40;
-      overflow: scroll;
-      height: 120px;
-      transition: 1s ease;
-      -moz-transition: 1s ease;
-      -webkit-transition: 1s ease;
-    }
-    .donation-section:hover, .donation-section:active {
       overflow: auto;
       height: auto;
     }
@@ -235,7 +228,7 @@ if ($impressionid) {
 
   <!-- Bootstrap Bundle (JS + Popper) -->
   <script src="/js/bootbox/bootbox.min.js"></script>
-  <div class="col-md-10 m-auto" style="position: sticky; top: 0">
+  <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
     <?php include('../navbar.php'); ?>
   </div>
   <script>
@@ -329,10 +322,10 @@ if ($impressionid) {
                             <ul class="text-start" style="list-style-type: none; padding-left: 0;">
                               <b>OLIVER SILVA CASTILHO</b>
                               <li>Account number: 889213783-6</li>
-                              <li>ACH Routing number:026073150</li>
-                              <li>WIRE Transfer Routing Number:026073008</li>
-                              <li>Bank name:Community Federal Savings Bank</li>
-                              <li>Bank Address:5 Penn Plaza, New York, NY 10001</li>
+                              <li>ACH Routing number: 026073150</li>
+                              <li>WIRE Transfer Routing Number: 026073008</li>
+                              <li>Bank name: Community Federal Savings Bank</li>
+                              <li>Bank Address: 5 Penn Plaza, New York, NY 10001</li>
                             </ul>
                             
                         </span><br>
