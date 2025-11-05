@@ -44,8 +44,243 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     };
 
+    // Auto-translated word banks for additional languages
+    wordsByLang.es = [
+        { word: "CASA", clue: "Donde vives." },
+        { word: "SALA", clue: "Habitación para invitados." },
+        { word: "AR", clue: "Lo respiras." },
+        { word: "SOL", clue: "Estrella del sistema solar." },
+        { word: "LAR", clue: "Sinónimo de casa." },
+        { word: "LIVRO", clue: "Objeto usado para lectura." },
+        { word: "ESCOLA", clue: "Lugar de aprendizaje." },
+        { word: "FESTA", clue: "Evento de celebración." },
+        { word: "AMIGO", clue: "Persona cercana y querida." },
+        { word: "ARTE", clue: "Expresión creativa." },
+        { word: "COMIDA", clue: "Algo que comes." },
+        { word: "CARRO", clue: "Medio de transporte." },
+        { word: "RIO", clue: "Curso de agua." },
+        { word: "CÉU", clue: "Donde están las nubes." },
+        { word: "DADO", clue: "Objeto usado en juegos de azar." }
+    ];
+    wordsByLang.fr = [
+        { word: "MAISON", clue: "Où vous habitez." },
+        { word: "SALLE", clue: "Pièce pour recevoir des invités." },
+        { word: "AIR", clue: "Vous le respirez." },
+        { word: "SOLEIL", clue: "Étoile du système solaire." },
+        { word: "FOYER", clue: "Synonyme de maison." },
+        { word: "LIVRE", clue: "Objet utilisé pour la lecture." },
+        { word: "ÉCOLE", clue: "Lieu d'apprentissage." },
+        { word: "FÊTE", clue: "Événement de célébration." },
+        { word: "AMI", clue: "Personne proche et chère." },
+        { word: "ART", clue: "Expression créative." },
+        { word: "NOURRITURE", clue: "Quelque chose que vous mangez." },
+        { word: "VOITURE", clue: "Moyen de transport." },
+        { word: "RIVIÈRE", clue: "Cours d'eau." },
+        { word: "CIEL", clue: "Où sont les nuages." },
+        { word: "DÉ", clue: "Objet utilisé dans les jeux de hasard." }
+    ];
+    wordsByLang.it = [
+        { word: "CASA", clue: "Dove vivi." },
+        { word: "SALA", clue: "Stanza per gli ospiti." },
+        { word: "ARIA", clue: "La respiri." },
+        { word: "SOLE", clue: "Stella del sistema solare." },
+        { word: "FAMIGLIA", clue: "Sinonimo di casa (contexto: lar/home)." },
+        { word: "LIBRO", clue: "Oggetto usato per leggere." },
+        { word: "SCUOLA", clue: "Luogo di apprendimento." },
+        { word: "FESTA", clue: "Evento di celebrazione." },
+        { word: "AMICO", clue: "Persona vicina e cara." },
+        { word: "ARTE", clue: "Espressione creativa." },
+        { word: "CIBO", clue: "Qualcosa che mangi." },
+        { word: "AUTO", clue: "Mezzo di trasporto." },
+        { word: "FIUME", clue: "Corso d'acqua." },
+        { word: "CIELO", clue: "Dove sono le nuvole." },
+        { word: "DADO", clue: "Oggetto usato nei giochi di fortuna." }
+    ];
+    wordsByLang.ru = [
+        { word: "ДОМ", clue: "Где вы живете." },
+        { word: "КОМНАТА", clue: "Комната для гостей." },
+        { word: "ВОЗДУХ", clue: "Вы его вдыхаете." },
+        { word: "СОЛНЦЕ", clue: "Звезда нашей системы." },
+        { word: "ДОМ", clue: "Синоним жилья." },
+        { word: "КНИГА", clue: "Предмет для чтения." },
+        { word: "ШКОЛА", clue: "Место обучения." },
+        { word: "ВЕЧЕРИНКА", clue: "Мероприятие для празднования." },
+        { word: "ДРУГ", clue: "Близкий и дорогой человек." },
+        { word: "ИСКУССТВО", clue: "Творческое выражение." },
+        { word: "ЕДА", clue: "То, что вы едите." },
+        { word: "МАШИНА", clue: "Транспортное средство." },
+        { word: "РЕКА", clue: "Поток воды." },
+        { word: "НЕБО", clue: "Где облака." },
+        { word: "КУБИК", clue: "Предмет для азартных игр." }
+    ];
+    wordsByLang.ro = [
+        { word: "CASA", clue: "Unde locuiești." },
+        { word: "CAMERĂ", clue: "Cameră pentru oaspeți." },
+        { word: "AER", clue: "Îl respiri." },
+        { word: "SOARE", clue: "Steaua sistemului solar." },
+        { word: "CĂMIN", clue: "Sinonim pentru casă." },
+        { word: "CARTE", clue: "Obiect folosit la citit." },
+        { word: "ȘCOALĂ", clue: "Loc de învățare." },
+        { word: "PETRECERE", clue: "Eveniment de sărbătoare." },
+        { word: "PRIETEN", clue: "Persoană apropiată și dragă." },
+        { word: "ARTĂ", clue: "Exprimare creativă." },
+        { word: "MÂNCARE", clue: "Ceva ce mănânci." },
+        { word: "MAȘINĂ", clue: "Mijloc de transport." },
+        { word: "RÂU", clue: "Curs de apă." },
+        { word: "CER", clue: "Unde sunt norii." },
+        { word: "ZAR", clue: "Obiect folosit în jocuri de noroc." }
+    ];
+    wordsByLang.sr = [
+        { word: "КУЋА", clue: "Где живите." },
+        { word: "СОБА", clue: "Соба за госте." },
+        { word: "ВАЗДУХ", clue: "Удишете га." },
+        { word: "СУНЦЕ", clue: "Звезда у сунчевом систему." },
+        { word: "ТОПЛИ КУЋНИ ДОМ", clue: "Синоним за кућу." },
+        { word: "КЊИГА", clue: "Предмет за читање." },
+        { word: "ШКОЛА", clue: "Место учења." },
+        { word: "ЖУРКА", clue: "Догађај славља." },
+        { word: "ПРИЈАТЕЉ", clue: "Блиска и драга особа." },
+        { word: "УМЕТНОСТ", clue: "Креативни израз." },
+        { word: "ХРАНА", clue: "Нешто што једете." },
+        { word: "АУТО", clue: "Средство превоза." },
+        { word: "РЕКА", clue: "Ток воде." },
+        { word: "НЕБО", clue: "Где су облаци." },
+        { word: "КОЦКА", clue: "Предмет за игре на срећу." }
+    ];
+    wordsByLang.zh = [
+        { word: "家", clue: "你居住的地方。" },
+        { word: "房间", clue: "接待客人的房间。" },
+        { word: "空气", clue: "你呼吸的东西。" },
+        { word: "太阳", clue: "太阳系的恒星。" },
+        { word: "家园", clue: "家的同义词。" },
+        { word: "书", clue: "用来阅读的物品。" },
+        { word: "学校", clue: "学习的地方。" },
+        { word: "派对", clue: "庆祝活动。" },
+        { word: "朋友", clue: "亲近而珍贵的人。" },
+        { word: "艺术", clue: "创造性的表达。" },
+        { word: "食物", clue: "你吃的东西。" },
+        { word: "汽车", clue: "交通工具。" },
+        { word: "河", clue: "水的流动。" },
+        { word: "天空", clue: "云所在的地方。" },
+        { word: "骰子", clue: "用于赌博的物品。" }
+    ];
+    wordsByLang.ja = [
+        { word: "家", clue: "あなたが住んでいる場所。" },
+        { word: "部屋", clue: "客を迎えるための部屋。" },
+        { word: "空気", clue: "あなたが呼吸するもの。" },
+        { word: "太陽", clue: "太陽系の恒星。" },
+        { word: "家", clue: "家の同義語。" },
+        { word: "本", clue: "読むための物。" },
+        { word: "学校", clue: "学ぶ場所。" },
+        { word: "パーティー", clue: "祝賀のイベント。" },
+        { word: "友達", clue: "親しい大切な人。" },
+        { word: "芸術", clue: "創造的な表現。" },
+        { word: "食べ物", clue: "あなたが食べるもの。" },
+        { word: "車", clue: "移動の手段。" },
+        { word: "川", clue: "水の流れ。" },
+        { word: "空", clue: "雲がある場所。" },
+        { word: "サイコロ", clue: "ゲームで使う物。" }
+    ];
+    wordsByLang.nl = [
+        { word: "HUIS", clue: "Waar je woont." },
+        { word: "KAMER", clue: "Kamer om gasten te ontvangen." },
+        { word: "LUCHT", clue: "Dat adem je in." },
+        { word: "ZON", clue: "Ster van het zonnestelsel." },
+        { word: "HUIS", clue: "Synoniem voor thuis." },
+        { word: "BOEK", clue: "Object gebruikt om te lezen." },
+        { word: "SCHOOL", clue: "Plaats om te leren." },
+        { word: "FEEST", clue: "Een vieringsevenement." },
+        { word: "VRIEND", clue: "Iemand dichtbij en dierbaar." },
+        { word: "KUNST", clue: "Creatieve uitdrukking." },
+        { word: "ETEN", clue: "Iets dat je eet." },
+        { word: "AUTO", clue: "Vervoermiddel." },
+        { word: "RIVIER", clue: "Waterloop." },
+        { word: "HEMEL", clue: "Waar de wolken zijn." },
+        { word: "DOBBELSTEEN", clue: "Object gebruikt in kansspelen." }
+    ];
+    wordsByLang.bn = [
+        { word: "বাড়ি", clue: "আপনি যেখানে থাকেন।" },
+        { word: "ঘর", clue: "অতিথিদের জন্য রুম।" },
+        { word: "বাতাস", clue: "আপনি যা শ্বাস নেন।" },
+        { word: "সূর্য", clue: "সৌরজগতের তারা।" },
+        { word: "বাড়ি", clue: "বাড়ির সমার্থক।" },
+        { word: "বই", clue: "পড়ার জন্য ব্যবহৃত বস্তু।" },
+        { word: "স্কুল", clue: "শেখার স্থান।" },
+        { word: "পার্টি", clue: "উল্লাসের অনুষ্ঠান।" },
+        { word: "বন্ধু", clue: "ঘনিষ্ঠ এবং প্রিয় মানুষ।" },
+        { word: "শিল্প", clue: "সৃজনশীল প্রকাশ।" },
+        { word: "খাদ্য", clue: "আপনি যা খান।" },
+        { word: "গাড়ি", clue: "পরিবহনের মাধ্যম।" },
+        { word: "নদী", clue: "জলপ্রবাহ।" },
+        { word: "আকাশ", clue: "মেঘ যেখানে আছে।" },
+        { word: "পাঁচিক", clue: "জুয়া খেলার জন্য বস্তু।" }
+    ];
+    wordsByLang.id = [
+        { word: "RUMAH", clue: "Tempat Anda tinggal." },
+        { word: "RUANG", clue: "Ruang untuk tamu." },
+        { word: "UDARA", clue: "Yang Anda hirup." },
+        { word: "MATAHARI", clue: "Bintang sistem tata surya." },
+        { word: "RUMAH", clue: "Sinonim rumah." },
+        { word: "BUKU", clue: "Benda untuk dibaca." },
+        { word: "SEKOLAH", clue: "Tempat belajar." },
+        { word: "PESTA", clue: "Acara perayaan." },
+        { word: "TEMAN", clue: "Orang dekat dan tercinta." },
+        { word: "SENI", clue: "Ekspresi kreatif." },
+        { word: "MAKANAN", clue: "Sesutu yang Anda makan." },
+        { word: "MOBIL", clue: "Alat transportasi." },
+        { word: "SUNGai", clue: "Aliran air." },
+        { word: "LANGIT", clue: "Tempat awan berada." },
+        { word: "DADU", clue: "Benda yang dipakai dalam permainan untung-untungan." }
+    ];
+    wordsByLang.ur = [
+        { word: "گھر", clue: "جہاں آپ رہتے ہیں۔" },
+        { word: "کمرہ", clue: "مہمانوں کے لیے کمرہ۔" },
+        { word: "ہوا", clue: "آپ اسے سانس لیتے ہیں۔" },
+        { word: "سورج", clue: "شمسی نظام کا ستارہ۔" },
+        { word: "گھر", clue: "گھر کا مترادف۔" },
+        { word: "کتاب", clue: "پڑھنے کے لیے استعمال شے۔" },
+        { word: "اسکول", clue: "سیکھنے کی جگہ۔" },
+        { word: "تقریب", clue: "تقریبِ جشن۔" },
+        { word: "دوست", clue: "قریب اور عزیز شخص۔" },
+        { word: "فن", clue: "تخلیقی اظہار۔" },
+        { word: "خوراک", clue: "وہ چیز جو آپ کھاتے ہیں۔" },
+        { word: "گاڑی", clue: "نقل و حمل کا ذریعہ۔" },
+        { word: "دریا", clue: "پانی کا بہاؤ۔" },
+        { word: "آسمان", clue: "جہاں بادل ہوتے ہیں۔" },
+        { word: "پانسہ", clue: "قسمتی کھیلوں میں استعمال شے۔" }
+    ];
+
+    // Provide fallbacks for other languages supported by the gtranslate widget.
+    // If we don't have a translated set, fall back to Portuguese list to avoid showing empty content.
+    const extraLangFallbacks = ['fr','it','es','ru','ro','sr','zh','ja','nl','bn','id','ur'];
+    extraLangFallbacks.forEach(code => { if (!wordsByLang[code]) wordsByLang[code] = wordsByLang.pt; });
+
     function currentWordPool() {
-        const lang = (document.documentElement.lang || navigator.language || 'pt').split('-')[0];
+        function getCookie(name) {
+            const match = document.cookie.match(new RegExp('(^|;)\\s*' + name + '=([^;]+)'));
+            return match ? decodeURIComponent(match[2]) : null;
+        }
+
+        function detectLang() {
+            const htmlLang = (document.documentElement.lang || '').split('-')[0];
+            if (htmlLang) return htmlLang;
+            const nav = (navigator.language || navigator.userLanguage || '').split('-')[0];
+            if (nav) return nav;
+            const cookieNames = ['googtrans', '__gt_lang', 'gtranslate_lang'];
+            for (const name of cookieNames) {
+                const val = getCookie(name);
+                if (val) {
+                    if (val.indexOf('/') !== -1) {
+                        const parts = val.split('/').filter(Boolean);
+                        if (parts.length) return parts[parts.length - 1].split('-')[0];
+                    }
+                    return val.split('-')[0];
+                }
+            }
+            return 'pt';
+        }
+
+        const lang = detectLang();
         return wordsByLang[lang] || wordsByLang.pt;
     }
 
@@ -320,4 +555,22 @@ crosswordData.forEach(entry => {
         }
     });
     langObserver.observe(document.documentElement, { attributes: true });
+    // Poll cookie-based changes too (some translation widgets set cookies only)
+    let _lastLang = (document.documentElement.lang || navigator.language || 'pt').split('-')[0];
+    setInterval(() => {
+        const cookieMatch = document.cookie.match(/(^|;)\s*(googtrans|__gt_lang|gtranslate_lang)=([^;]+)/);
+        let cookieLang = null;
+        if (cookieMatch) {
+            const v = decodeURIComponent(cookieMatch[3]);
+            if (v.indexOf('/') !== -1) {
+                const parts = v.split('/').filter(Boolean);
+                if (parts.length) cookieLang = parts[parts.length - 1].split('-')[0];
+            } else cookieLang = v.split('-')[0];
+        }
+        const now = cookieLang || (document.documentElement.lang || navigator.language || 'pt').split('-')[0];
+        if (now !== _lastLang) {
+            _lastLang = now;
+            init();
+        }
+    }, 1000);
 });
