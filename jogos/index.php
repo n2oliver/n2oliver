@@ -300,20 +300,24 @@ if ($impressionid) {
                 <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
                                   style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
               </div>
-              
+              <div class="container m-auto col-md-10 p-0 mt-1">
+                <div class="donation-section m-0 row">
+                  <div class="col-md-6">
+                    <h3>Gostou dos jogos?</h3>
+                  </div>
+                  <div class="col-md-6 notranslate" translate="no">
+                    <p>Você pode contribuir nos ajudando a desenvolver novos projetos. Envie sua contribuição pelos seguintes canais!</p>
+                    <p><strong>Chave PIX:</strong> suporte@n2oliver.com<br>
+                      <strong>Bitcoin (LN):</strong> warybongo30@walletofsatoshi.com<br></p>
+                  </div>
+                </div>
+              </div>
               <div class="container m-auto mt-1 d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px;">
                   <?php include('./../noticias.php'); ?>
               </div>
   </main>
   <div class="container m-auto col-md-10 p-0 mt-1">
     <a href="https://aads.com/advertise/?partner=2414063"><img src="https://aads.com/a_ads_banners/gif/english/320x50/simple_v1.gif" alt="Advertise with Anonymous Ads" width="320px" height="50px" /></a>
-  </div>
-  <div class="container m-auto col-md-10 p-0 mt-1">
-    <div class="donation-section m-0">
-      <h3>Gostou dos jogos?</h3>
-      <p>Seu apoio ajuda a manter o site no ar e a desenvolver novos projetos. Considere fazer uma doação para nos ajudar a continuar criando conteúdo gratuito e divertido para todos!</p>
-      <p><strong>Chave PIX:</strong> suporte@n2oliver.com</p>
-    </div>
   </div>
   <?php include("../footer.php"); ?>
   <script>
