@@ -141,6 +141,15 @@ if ($impressionid) {
       margin-top: 2rem;
       text-align: center;
       color: #343a40;
+      overflow: scroll;
+      height: 120px;
+      transition: 1s ease;
+      -moz-transition: 1s ease;
+      -webkit-transition: 1s ease;
+    }
+    .donation-section:hover, .donation-section:active {
+      overflow: auto;
+      height: auto;
     }
     .success {
       background: linear-gradient(135deg,#54a554,#77f554);
@@ -300,15 +309,35 @@ if ($impressionid) {
                 <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
                                   style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
               </div>
-              <div class="container m-auto col-md-10 p-0 mt-1">
+              <div class="container m-auto p-0 mt-1">
                 <div class="donation-section m-0 row">
                   <div class="col-md-6">
                     <h3>Gostou dos jogos?</h3>
+                    <p><i class="fas fa-donate"></i>&nbsp;Você pode contribuir nos ajudando a desenvolver novos projetos. Envie sua contribuição pelos seguintes canais!</p>
+                    <p>
+                      <small>
+                        <strong>Chave PIX:</strong> <span class="notranslate" translate="no"> suporte@n2oliver.com</span><br>
+                        <strong>Bitcoin (LN):</strong> <span class="notranslate" translate="no"> warybongo30@walletofsatoshi.com</span><br>
+                      </small>
+                    </p>
                   </div>
-                  <div class="col-md-6 notranslate" translate="no">
-                    <p>Você pode contribuir nos ajudando a desenvolver novos projetos. Envie sua contribuição pelos seguintes canais!</p>
-                    <p><strong>Chave PIX:</strong> suporte@n2oliver.com<br>
-                      <strong>Bitcoin (LN):</strong> warybongo30@walletofsatoshi.com<br></p>
+                  <div class="col-md-6">
+                    <p>
+                      <small>
+                        <strong>Global Account:</strong> 
+                        <span class="notranslate" translate="no"> 
+                            <ul class="text-start" style="list-style-type: none; padding-left: 0;">
+                              <b>OLIVER SILVA CASTILHO</b>
+                              <li>Account number: 889213783-6</li>
+                              <li>ACH Routing number:026073150</li>
+                              <li>WIRE Transfer Routing Number:026073008</li>
+                              <li>Bank name:Community Federal Savings Bank</li>
+                              <li>Bank Address:5 Penn Plaza, New York, NY 10001</li>
+                            </ul>
+                            
+                        </span><br>
+                      </small>
+                    </p>
                   </div>
                 </div>
               </div>
