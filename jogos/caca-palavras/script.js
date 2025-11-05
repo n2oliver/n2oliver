@@ -13,84 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'house','car','family','love','friend','school','work','city','brazil','party','music','movie','beach','sun','rain','food','water',
             'happiness','travel','nature','animal','book','sport','art','heart','time','money','health','dream'
         ]
-        ,
-        es: [
-            'html','css','javascript','php','juego','web','programacion','computadora','tecnologia','internet','codigo','software',
-            'red','algoritmo','datos','nube','api','framework','lenguaje',
-            'casa','coche','familia','amor','amigo','escuela','trabajo','ciudad','brasil','fiesta','musica','pelicula','playa','sol','lluvia','comida','agua',
-            'felicidad','viaje','naturaleza','animal','libro','deporte','arte','corazon','tiempo','dinero','salud','sueño'
-        ],
-        fr: [
-            'html','css','javascript','php','jeu','web','programmation','ordinateur','technologie','internet','code','logiciel',
-            'reseau','algorithme','donnees','nuage','api','framework','langage',
-            'maison','voiture','famille','amour','ami','ecole','travail','ville','bresil','fete','musique','film','plage','soleil','pluie','nourriture','eau',
-            'bonheur','voyage','nature','animal','livre','sport','art','coeur','temps','argent','sante','reve'
-        ],
-        it: [
-            'html','css','javascript','php','gioco','web','programmazione','computer','tecnologia','internet','codice','software',
-            'rete','algoritmo','dati','cloud','api','framework','linguaggio',
-            'casa','auto','famiglia','amore','amico','scuola','lavoro','citta','brasile','festa','musica','film','spiaggia','sole','pioggia','cibo','acqua',
-            'felicita','viaggio','natura','animale','libro','sport','arte','cuore','tempo','denaro','salute','sogno'
-        ],
-        ru: [
-            'html','css','javascript','php','игра','веб','программирование','компьютер','технология','интернет','код','программное обеспечение',
-            'сеть','алгоритм','данные','облако','api','фреймворк','язык',
-            'дом','машина','семья','любовь','друг','школа','работа','город','бразилия','вечеринка','музыка','фильм','пляж','солнце','дождь','еда','вода',
-            'счастье','путешествие','природа','животное','книга','спорт','искусство','сердце','время','деньги','здоровье','сон'
-        ],
-        ro: [
-            'html','css','javascript','php','joc','web','programare','calculator','tehnologie','internet','cod','software',
-            'retea','algoritm','date','nor','api','framework','limbaj',
-            'casa','masina','familie','dragoste','prieten','scoala','munca','oras','brazilia','petrecere','muzica','film','plaja','soare','ploaie','mancare','apa',
-            'fericire','calatorie','natura','animal','carte','sport','arta','inima','timp','bani','sanatate','vis'
-        ],
-        sr: [
-            'html','css','javascript','php','игра','веб','програмiranje','рачунар','технологија','интернет','код','софтвер',
-            'мрежа','алгоритам','подаци','облак','api','фрејмворк','језик',
-            'кућа','аутомобил','породица','љубав','пријатељ','школа','посао','град','бразил','забава','музика','филм','плажа','сунце','киша','храна','вода',
-            'срећа','путовање','природа','животиња','књига','спорт','уметност','срце','време','новац','здравље','снови'
-        ],
-        zh: [
-            'html','css','javascript','php','游戏','网页','编程','电脑','技术','互联网','代码','软件',
-            '网络','算法','数据','云','api','框架','语言',
-            '家','车','家庭','爱','朋友','学校','工作','城市','巴西','派对','音乐','电影','海滩','太阳','雨','食物','水',
-            '幸福','旅行','自然','动物','书','运动','艺术','心','时间','钱','健康','梦'
-        ],
-        ja: [
-            'html','css','javascript','php','ゲーム','ウェブ','プログラミング','コンピュータ','技術','インターネット','コード','ソフトウェア',
-            'ネットワーク','アルゴリズム','データ','クラウド','api','フレームワーク','言語',
-            '家','車','家族','愛','友達','学校','仕事','都市','ブラジル','パーティー','音楽','映画','ビーチ','太陽','雨','食べ物','水',
-            '幸福','旅行','自然','動物','本','スポーツ','芸術','心','時間','お金','健康','夢'
-        ],
-        nl: [
-            'html','css','javascript','php','spel','web','programmering','computer','technologie','internet','code','software',
-            'netwerk','algoritme','data','cloud','api','framework','taal',
-            'huis','auto','familie','liefde','vriend','school','werk','stad','brazilie','feest','muziek','film','strand','zon','regen','eten','water',
-            'geluk','reis','natuur','dier','boek','sport','kunst','hart','tijd','geld','gezondheid','droom'
-        ],
-        bn: [
-            'html','css','javascript','php','গেম','ওয়েব','প্রোগ্রামিং','কম্পিউটার','প্রযুক্তি','ইন্টারনেট','কোড','সফটওয়্যার',
-            'নেটওয়ার্ক','অ্যালগরিদম','ডেটা','ক্লাউড','api','ফ্রেমওয়ার্ক','ভাষা',
-            'বাড়ি','গাড়ি','পরিবার','ভালোবাসা','বন্ধু','স্কুল','কাজ','শহর','ব্রাজিল','পার্টি','সঙ্গীত','চলচ্চিত্র','সমুদ্রতট','সূর্য','বৃষ্টি','খাবার','পানি',
-            'সুখ','ভ্রমণ','প্রকৃতি','প্রাণী','বই','ক্রীড়া','শিল্প','হৃদয়','সময়','টাকা','স্বাস্থ্য','স্বপ্ন'
-        ],
-        id: [
-            'html','css','javascript','php','permainan','web','pemrograman','komputer','teknologi','internet','kode','perangkat lunak',
-            'jaringan','algoritma','data','awan','api','framework','bahasa',
-            'rumah','mobil','keluarga','cinta','teman','sekolah','pekerjaan','kota','brasil','pesta','musik','film','pantai','matahari','hujan','makanan','air',
-            'kebahagiaan','perjalanan','alam','hewan','buku','olahraga','seni','hati','waktu','uang','kesehatan','mimpi'
-        ],
-        ur: [
-            'html','css','javascript','php','گیم','ویب','پروگرامنگ','کمپیوٹر','ٹیکنالوجی','انٹرنیٹ','کوڈ','سافٹ ویئر',
-            'نیٹ ورک','الگورتھم','ڈیٹا','کلاؤڈ','api','فریم ورک','زبان',
-            'گھر','گاڑی','خاندان','محبت','دوست','اسکول','کام','شہر','برازیل','تقریب','موسیقی','فلم','ساحل','سورج','بارش','خوراک','پانی',
-            'خوشی','سفر','قدرت','جانور','کتاب','کھیل','فن','دل','وقت','پیسہ','صحت','خواب'
-        ]
     };
-    // Provide fallbacks for other languages supported by the gtranslate widget.
-    // If we don't have a translated set, fall back to Portuguese list to avoid showing empty content.
-    const extraLangFallbacks = ['fr','it','es','ru','ro','sr','zh','ja','nl','bn','id','ur'];
-    extraLangFallbacks.forEach(code => { if (!wordsByLang[code]) wordsByLang[code] = wordsByLang.pt; });
     let words = [];
     const gridSize = 12;
     const gridElement = document.getElementById('word-search-grid');
@@ -103,46 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let selection = [];
     let foundWords = [];
 
-    function getCookie(name) {
-        const match = document.cookie.match(new RegExp('(^|;)\\s*' + name + '=([^;]+)'));
-        return match ? decodeURIComponent(match[2]) : null;
-    }
-
-    function detectLang() {
-        // Prefer <html lang>
-        const htmlLang = (document.documentElement.lang || '').split('-')[0];
-        if (htmlLang) return htmlLang;
-        // Fallback to navigator
-        const nav = (navigator.language || navigator.userLanguage || '').split('-')[0];
-        if (nav) return nav;
-        // Check common gtranslate cookies
-        const cookieNames = ['googtrans', '__gt_lang', 'gtranslate_lang'];
-        for (const name of cookieNames) {
-            const val = getCookie(name);
-            if (val) {
-                // googtrans often contains "/en/pt" or "/pt/en" - pick the last segment if so
-                if (val.indexOf('/') !== -1) {
-                    const parts = val.split('/').filter(Boolean);
-                    if (parts.length) return parts[parts.length - 1].split('-')[0];
-                }
-                return val.split('-')[0];
-            }
-        }
-        return 'pt';
-    }
-
-    // poll cookie-based language changes (some widgets don't update <html lang>)
-    let _lastDetectedLang = detectLang();
-    setInterval(() => {
-        const now = detectLang();
-        if (now !== _lastDetectedLang) {
-            _lastDetectedLang = now;
-            init();
-        }
-    }, 1000);
-
     function init() {
-        const lang = detectLang();
+        const lang = (document.documentElement.lang || navigator.language || 'pt').split('-')[0];
         const pool = wordsByLang[lang] || wordsByLang.pt;
         // pick candidate words, but only show words that we actually managed to place
         const candidates = shuffleArray([...pool]).slice(0, 12); // pick a few more to try placing
