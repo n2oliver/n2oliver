@@ -200,25 +200,24 @@ function placeWord(word) {
         { x: 0, y: -1 }   // Vertical (^)
     ];
 
-    // Verifica se é a primeira palavra (grade vazia)
+    // Se for a primeira palavra (grade vazia)
     if (grid.flat().every(cell => cell === '')) {
         let placed = false;
         let attempts = 0;
         while (!placed && attempts < 100) {
             attempts++;
             const direction = directions[Math.floor(Math.random() * directions.length)];
-            let startX = Math.floor(Math.random() * gridSize);
-            let startY = Math.floor(Math.random() * gridSize);
-
-            let endX = startX + (word.length - 1) * direction.x;
-            let endY = startY + (word.length - 1) * direction.y;
+            const startX = Math.floor(Math.random() * gridSize);
+            const startY = Math.floor(Math.random() * gridSize);
+            const endX = startX + (word.length - 1) * direction.x;
+            const endY = startY + (word.length - 1) * direction.y;
 
             if (endX < 0 || endX >= gridSize || endY < 0 || endY >= gridSize) continue;
 
             let canPlace = true;
             for (let i = 0; i < word.length; i++) {
-                let checkX = startX + i * direction.x;
-                let checkY = startY + i * direction.y;
+                const checkX = startX + i * direction.x;
+                const checkY = startY + i * direction.y;
                 if (grid[checkY][checkX] !== '' && grid[checkY][checkX] !== word[i]) {
                     canPlace = false;
                     break;
@@ -226,8 +225,8 @@ function placeWord(word) {
             }
             if (canPlace) {
                 for (let i = 0; i < word.length; i++) {
-                    let placeX = startX + i * direction.x;
-                    let placeY = startY + i * direction.y;
+                    const placeX = startX + i * direction.x;
+                    const placeY = startY + i * direction.y;
                     grid[placeY][placeX] = word[i];
                 }
                 placed = true;
@@ -236,17 +235,17 @@ function placeWord(word) {
         return placed;
     }
 
-    // Para as demais palavras, tenta cruzar com as já existentes
+    // Para as demais palavras, tenta cruzar com as existentes
     for (let letterIdx = 0; letterIdx < word.length; letterIdx++) {
-        let letter = word[letterIdx];
+        const letter = word[letterIdx];
         for (let y = 0; y < gridSize; y++) {
             for (let x = 0; x < gridSize; x++) {
                 if (grid[y][x] === letter) {
                     for (const direction of directions) {
-                        let startX = x - letterIdx * direction.x;
-                        let startY = y - letterIdx * direction.y;
-                        let endX = startX + (word.length - 1) * direction.x;
-                        let endY = startY + (word.length - 1) * direction.y;
+                        const startX = x - letterIdx * direction.x;
+                        const startY = y - letterIdx * direction.y;
+                        const endX = startX + (word.length - 1) * direction.x;
+                        const endY = startY + (word.length - 1) * direction.y;
 
                         if (
                             startX < 0 || startY < 0 ||
@@ -257,8 +256,8 @@ function placeWord(word) {
 
                         let canPlace = true;
                         for (let i = 0; i < word.length; i++) {
-                            let checkX = startX + i * direction.x;
-                            let checkY = startY + i * direction.y;
+                            const checkX = startX + i * direction.x;
+                            const checkY = startY + i * direction.y;
                             if (
                                 grid[checkY][checkX] !== '' &&
                                 grid[checkY][checkX] !== word[i]
@@ -267,10 +266,11 @@ function placeWord(word) {
                                 break;
                             }
                         }
+
                         if (canPlace) {
                             for (let i = 0; i < word.length; i++) {
-                                let placeX = startX + i * direction.x;
-                                let placeY = startY + i * direction.y;
+                                const placeX = startX + i * direction.x;
+                                const placeY = startY + i * direction.y;
                                 grid[placeY][placeX] = word[i];
                             }
                             return true;
@@ -279,10 +279,12 @@ function placeWord(word) {
                 }
             }
         }
-    // could not place the word
-    return false;
     }
+
+    // Só retorna false após tentar todas as possibilidades
+    return false;
 }
+
 
 // ...existing code...
 
