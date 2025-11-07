@@ -7,7 +7,9 @@
   <span><a href="mailto:suporte@n2oliver.com">suporte@n2oliver.com</a></span>
   <span class="footer-text-small">CNPJ 60.407.027/0001-25</span>
 </footer>
-<script>window.gtranslateSettings = {"default_language":"pt","native_language_names":true,"detect_browser_language":true,"languages":["pt","fr","it","es","en","ru","ro","sr","zh-CN","zh-TW","ja","nl", "bn", "id", "ur", "el"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"inline"}</script>
+<script>
+window.gtranslateSettings = {"default_language":"pt","native_language_names":true,"detect_browser_language":true,"languages":["pt","fr","it","es","en","ru","ro","sr","zh-CN","zh-TW","ja","nl", "bn", "id", "ur", "el"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"inline"}
+</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
 
     <style>

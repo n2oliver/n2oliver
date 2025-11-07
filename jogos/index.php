@@ -221,6 +221,7 @@ if ($impressionid) {
   <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
   <script src="/js/jquery/jquery-3.7.1.min.js"></script>
   <script src="/js/jquery-ui/jquery-ui.js"></script>
+  <script src="/js/autotranslate.js"></script>
 </head>
 <body>
 <?php include("../gtagmanager.php"); ?>
@@ -354,7 +355,7 @@ if ($impressionid) {
       document.getElementById('game-details-content').innerHTML = game.descricao;
     }
     if(window.location.href.indexOf('utm_source=popads') > -1) {
-      abrirJanela('/jogos/', 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f',{showMenu: true});
+      abrirJanela('https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
     }
     document.addEventListener('DOMContentLoaded', function() {
 
