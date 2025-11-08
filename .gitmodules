@@ -4,9 +4,9 @@
 [submodule "jogos/linhaamarela"]
 	path = jogos/linhaamarela
 	url = https://github.com/n2oliver/linhaamarela
-[submodule "loja_virtual"]
-	path = loja_virtual
-	url = https://github.com/n2oliver/loja_virtual
+[submodule "lojavirtual"]
+	path = lojavirtual
+	url = https://github.com/n2oliver/lojavirtual
 [submodule "jogos/quebra-palavras"]
 	path = jogos/quebra-palavras
 	url = https://github.com/n2oliver/quebra-palavras.git

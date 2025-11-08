@@ -70,9 +70,9 @@
                         <div class="carousel-item">
                             <div class="row">
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
-                                <img alt="loja_virtual" class="title-image img-fluid" src="img/loja_virtual.jpg"/>
+                                <img alt="lojavirtual" class="title-image img-fluid" src="img/lojavirtual.jpg"/>
                                     <h2 class="title">
-                                        <a href="/loja_virtual/" role="button" class="btn btn-custom">Loja Virtual</a>
+                                        <a href="/lojavirtual/" role="button" class="btn btn-custom">Loja Virtual</a>
                                     </h2>
                                 </div>
                             </div>
@@ -164,7 +164,7 @@
                         <p>A Oliv3r Store é um espaço de afiliados onde apresento uma curadoria pessoal de produtos que uso e recomendo. O foco é oferecer valor real, com descrições originais e uma seleção cuidadosa de tecnologia, livros e cursos, alinhados aos temas de desenvolvimento e bem-estar do site.</p>
                         
                         <div class="text-center">
-                            <a href="/loja_virtual/"><button class="btn btn-primary"><strong>Acessar</strong></button></a>
+                            <a href="/lojavirtual/"><button class="btn btn-primary"><strong>Acessar</strong></button></a>
                         </div>
                     </div>
                 </div>

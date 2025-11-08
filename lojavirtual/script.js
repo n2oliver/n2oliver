@@ -10,7 +10,7 @@ const sections = [
 $(document).ready(function(){
     for(let section of sections) 
         $.ajax({
-            url: "/loja_virtual/get_" + section + ".php",
+            url: "/lojavirtual/get_" + section + ".php",
             type: "GET",
             dataType: "json",
             success: function(data) {

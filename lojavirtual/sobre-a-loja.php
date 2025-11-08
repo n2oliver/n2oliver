@@ -36,7 +36,7 @@
             <header class="store-header-new text-center mb-4">
                 <h1 class="display-4">Sobre a Oliv3r Store</h1>
                 <p class="lead">Entenda o propósito da nossa curadoria de produtos.</p>
-                <a href="/loja_virtual/" class="btn btn-outline-light btn-sm">Voltar para a Loja</a>
+                <a href="/lojavirtual/" class="btn btn-outline-light btn-sm">Voltar para a Loja</a>
             </header>
 
             <main class="p-4 rounded bg-light">

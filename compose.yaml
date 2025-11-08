@@ -33,7 +33,7 @@ services:
       - ./jogos/combo-memo/:/var/www/html/jogos/combo-memo/
       - ./jogos/caca-palavras/:/var/www/html/jogos/caca-palavras/
       - ./jogos/palavras-cruzadas/:/var/www/html/jogos/palavras-cruzadas/
-      - ./loja_virtual/:/var/www/html/loja_virtual/
+      - ./lojavirtual/:/var/www/html/lojavirtual/
     environment:
       ENVIRONMENT: ${ENVIRONMENT}
       DB_HOST: ${DB_HOST}

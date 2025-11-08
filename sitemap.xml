@@ -28,16 +28,16 @@
   </url>
 
   <!-- Loja Virtual -->
-  <url><loc>https://n2oliver.com/loja_virtual/</loc></url>
-  <url><loc>https://n2oliver.com/loja_virtual/get_cursos.php</loc></url>
-  <url><loc>https://n2oliver.com/loja_virtual/get_livros.php</loc></url>
-  <url><loc>https://n2oliver.com/loja_virtual/get_destaques.php</loc></url>
-  <url><loc>https://n2oliver.com/loja_virtual/get_perfumes_femininos.php</loc></url>
-  <url><loc>https://n2oliver.com/loja_virtual/get_perfumes_masculinos.php</loc></url>
-  <url><loc>https://n2oliver.com/loja_virtual/get_smartphones_apple.php</loc></url>
-  <url><loc>https://n2oliver.com/loja_virtual/get_smartphones_motorola.php</loc></url>
-  <url><loc>https://n2oliver.com/loja_virtual/get_smartphones_samsung.php</loc></url>
-  <url><loc>https://n2oliver.com/loja_virtual/get_smartphones_xiaomi.php</loc></url>
+  <url><loc>https://n2oliver.com/lojavirtual/</loc></url>
+  <url><loc>https://n2oliver.com/lojavirtual/get_cursos.php</loc></url>
+  <url><loc>https://n2oliver.com/lojavirtual/get_livros.php</loc></url>
+  <url><loc>https://n2oliver.com/lojavirtual/get_destaques.php</loc></url>
+  <url><loc>https://n2oliver.com/lojavirtual/get_perfumes_femininos.php</loc></url>
+  <url><loc>https://n2oliver.com/lojavirtual/get_perfumes_masculinos.php</loc></url>
+  <url><loc>https://n2oliver.com/lojavirtual/get_smartphones_apple.php</loc></url>
+  <url><loc>https://n2oliver.com/lojavirtual/get_smartphones_motorola.php</loc></url>
+  <url><loc>https://n2oliver.com/lojavirtual/get_smartphones_samsung.php</loc></url>
+  <url><loc>https://n2oliver.com/lojavirtual/get_smartphones_xiaomi.php</loc></url>
 
   <!-- Jogos -->
   <url><loc>https://n2oliver.com/jogos/</loc></url>
