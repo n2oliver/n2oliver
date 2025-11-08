@@ -355,7 +355,7 @@ if ($impressionid) {
       document.getElementById('game-details-content').innerHTML = game.descricao;
     }
     if(window.location.href.indexOf('utm_source=popads') > -1) {
-      abrirJanela('https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
+      abrirJanela('/jogos/', 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f',{showMenu: true});
     }
     document.addEventListener('DOMContentLoaded', function() {
 
