@@ -255,8 +255,6 @@ if ($impressionid) {
     </script>
     <script type="text/javascript" src="//laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
   </div>
-  <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
-    
             <section  id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light">
               <div class="d-flex flex-wrap align-items-start justify-content-center">
                 <div class="row">
@@ -298,6 +296,8 @@ if ($impressionid) {
                   <div>
                 </div>
               </section>
+  <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
+    
               <div id="progressbar"></div>
               <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
                 <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
@@ -337,6 +337,7 @@ if ($impressionid) {
               </div>
               <div class="container m-auto mt-1 d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px;">
                   <?php include('./../noticias.php'); ?>
+                  <a href="https://www.popads.net/users/refer/3587213"><img src="http://banners.popads.net/468x60.gif" alt="PopAds.net - The Best Popunder Adnetwork" /></a>
               </div>
   </main>
   <div class="container m-auto col-md-10 p-0 mt-1">

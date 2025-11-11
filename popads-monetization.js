@@ -3,14 +3,15 @@
   var z = window,
       c = "d291c0275255955f30328d38291dc016",
       b = [
-        ["siteId", 527-274-241+443+5215269],
-        ["minBid", 0.0001],            // mínimo para manter fill rate
-        ["popundersPerIP", "1"],       // 1 popunder por IP/dia
-        ["delayBetween", 40],          // 40s de delay entre popunders
-        ["default", false],            // popunders automáticos desativados
-        ["defaultPerDay", 0],
-        ["topmostLayer", "auto"]
+        ["siteId", 5215724],
+        ["minBid", 0.0001],           // mantém alto fill rate
+        ["popundersPerIP", 5],        // até 5 popunders por IP / 24h
+        ["delayBetween", 15],         // 15s entre popunders na sessão
+        ["default", false],           // só abre com interação
+        ["defaultPerDay", 0],         // não força exibição automática
+        ["topmostLayer", false]       // evita sobreposição excessiva
       ],
+
       v = [
         "d3d3LmJldHRlcmFkc3lzdGVtLmNvbS9kZW1iZWQubWluLmNzcw==",
         "ZDJrazBvM2ZyN2VkMDEuY2xvdWRmcm9udC5uZXQvRlcvenhpdmVseWpzLm1pbi5qcw=="
