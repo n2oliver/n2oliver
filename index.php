@@ -13,7 +13,7 @@
     
 </head>
 <body class="oliver-dev">
-<?php include("../../gtagmanager.php"); ?>
+<?php include("./gtagmanager.php"); ?>
     
     <?php include('./sobre-mim.php'); ?>
     

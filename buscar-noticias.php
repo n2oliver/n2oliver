@@ -1,6 +1,6 @@
 <?php
-include_once('./load-env.php');
-include_once('./database/connectdb.php');
+include_once('load-env.php');
+include_once('database/connectdb.php');
 try {
     $page = !empty($_POST['page']) ? $_POST['page'] : 1;
     if (empty($page)) {

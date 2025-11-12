@@ -177,12 +177,12 @@
                             hour12: false
                         });
                         $('#noticias').append(`
-                            <div id="noticia-card-parent-${noticiasInfo['id']}" class="border rounded shadow-sm mb-1 ms-1 bg-light" style="width: 100%; cursor: pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">
+                            <div id="noticia-card-parent-${noticiasInfo['id']}" class="border rounded shadow-sm mb-1 ms-1 bg-light" style="width: 100%; cursor: pointer;" onclick="toggleNoticiaContent(event, ${ noticiasInfo['id'] })">
                                 <div class="p-2 noticia-card">
                                     <div class="item d-flex align-items-center gap-2">
                                         ${ noticiasInfo['imagem'].length != 0 ? `<div class="recentes-imagem" style="background-image: url(${noticiasInfo['imagem']})"></div>` : ''}
                                         <div class="d-flex flex-column">
-                                            <div class="mb-1 text-light" style="cursor:pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">
+                                            <div class="mb-1 text-light" style="cursor:pointer;" onclick="toggleNoticiaContent(event, ${ noticiasInfo['id'] })">
                                                 ${ noticiasInfo['titulo'] }
                                             </div>
 
@@ -218,7 +218,6 @@
         });
     }
     $(document).ready(function(event) {
-        pagina = pagina + 1;
         buscarNoticias(event);
         $('#page-buttons .btn').click(buscarNoticias);
     });
