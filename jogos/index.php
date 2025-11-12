@@ -243,103 +243,105 @@ if ($impressionid) {
     <img alt="logo" src="<?=$APP_URL?>/img/logo.png" style="height: 60px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
-  <div class="mx-auto col-md-10" style="text-align: center; font-size: 14px; color: #555; background: white; padding: 4px; border-radius: 8px;">
-    <script type="text/javascript">
-        atOptions = {
-            'key' : '29929d8720c37977a6ea64b1b7db2d02',
-            'format' : 'iframe',
-            'height' : 50,
-            'width' : 320,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="//laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
+  <div class="mx-auto col-md-10" style="text-align: center; font-size: 14px; color: #555; padding: 4px; border-radius: 8px;">
+      <script type="text/javascript">
+          atOptions = {
+              'key' : '29929d8720c37977a6ea64b1b7db2d02',
+              'format' : 'iframe',
+              'height' : 50,
+              'width' : 320,
+              'params' : {}
+          };
+      </script>
+      <script type="text/javascript" src="//laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
   </div>
-            <section  id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light">
-              <div class="d-flex flex-wrap align-items-start justify-content-center">
-                <div class="row">
-                  <div id="game-details" class="col-md-6 flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
-                    
-                    
-                    <div class="rounded" style="font-family: Ubuntu;
-                      background-color: rgba(0,0,0,.6); color: white !important; padding: 12px; text-align: center;">
-                      <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
-                      <p id="game-details-content" style="max-width:680px;margin:0 auto 18px;color: white;line-height:1.5;">
-                        No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div class="col-md-6">
-                    <div class="m-3">
-                      <div><a id="destaque-link" href="#"
-                        style="height: fit-content; 
-                          align-self: center; 
-                          padding:12px 18px;
-                          border-radius:10px;
-                          background:deeppink;
-                          border:1px solid rgba(255,255,255,0.2);
-                          color:#dbeafc;
-                          font-weight:600;
-                          text-decoration:none;">
-                        <span id="destaque-titulo"></span></a>
-                      </div>
-                    </div>
-                    <div>
-                      <button class="btn btn-danger m-1" id="prev" >
-                        <i class="fa-solid fa-arrow-left"></i>
-                      </button>
-                      <button class="btn btn-danger m-1" id="next" >
-                        <i class="fa-solid fa-arrow-right"></i>
-                      </button>
-                    </div>
-                  <div>
-                </div>
-              </section>
   <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
+
     
-              <div id="progressbar"></div>
-              <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
-                <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
-                                  style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
-              </div>
-              <div class="container m-auto p-0 mt-1">
-                <div class="donation-section m-0 row">
-                  <div class="col-md-6">
-                    <h3>Gostou dos jogos?</h3>
-                    <p><i class="fas fa-donate"></i>&nbsp;Você pode contribuir nos ajudando a desenvolver novos projetos. Envie sua contribuição pelos seguintes canais!</p>
-                    <p>
-                      <small>
-                        <strong>Chave PIX:</strong> <span class="notranslate" translate="no"> suporte@n2oliver.com</span><br>
-                        <strong>Bitcoin (LN):</strong> <span class="notranslate" translate="no"> warybongo30@walletofsatoshi.com</span><br>
-                      </small>
-                    </p>
-                  </div>
-                  <div class="col-md-6">
-                    <p>
-                      <small>
-                        <strong>Global Account:</strong> 
-                        <span class="notranslate" translate="no"> 
-                            <ul class="text-start" style="list-style-type: none; padding-left: 0;">
-                              <b>OLIVER SILVA CASTILHO</b>
-                              <li>Account number: 889213783-6</li>
-                              <li>ACH Routing number: 026073150</li>
-                              <li>WIRE Transfer Routing Number: 026073008</li>
-                              <li>Bank name: Community Federal Savings Bank</li>
-                              <li>Bank Address: 5 Penn Plaza, New York, NY 10001</li>
-                            </ul>
-                            
-                        </span><br>
-                      </small>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="container m-auto mt-1 d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px;">
-                  <?php include('./../noticias.php'); ?>
-                  <a href="https://www.popads.net/users/refer/3587213"><img src="http://banners.popads.net/468x60.gif" alt="PopAds.net - The Best Popunder Adnetwork" /></a>
-              </div>
+  <section  id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light">
+    <div class="d-flex flex-wrap align-items-start justify-content-center">
+      <div class="row">
+        <div id="game-details" class="col-md-6 flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+          
+          
+          <div class="rounded" style="font-family: Ubuntu;
+            background-color: rgba(0,0,0,.6); color: white !important; padding: 12px; text-align: center;">
+            <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
+            <p id="game-details-content" style="max-width:680px;margin:0 auto 18px;color: white;line-height:1.5;">
+              No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
+            </p>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="m-3">
+            <div><a id="destaque-link" href="#"
+              style="height: fit-content; 
+                align-self: center; 
+                padding:12px 18px;
+                border-radius:10px;
+                background:deeppink;
+                border:1px solid rgba(255,255,255,0.2);
+                color:#dbeafc;
+                font-weight:600;
+                text-decoration:none;">
+              <span id="destaque-titulo"></span></a>
+            </div>
+          </div>
+          <div>
+            <button class="btn btn-danger m-1" id="prev" >
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="btn btn-danger m-1" id="next" >
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        <div>
+      </div>
+    </section>
+
+    <div id="progressbar"></div>
+    <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
+      <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
+                        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+    </div>
+    <div class="container m-auto p-0 mt-1">
+      <div class="donation-section m-0 row">
+        <div class="col-md-6">
+          <h3>Gostou dos jogos?</h3>
+          <p><i class="fas fa-donate"></i>&nbsp;Você pode contribuir nos ajudando a desenvolver novos projetos. Envie sua contribuição pelos seguintes canais!</p>
+          <p>
+            <small>
+              <strong>Chave PIX:</strong> <span class="notranslate" translate="no"> suporte@n2oliver.com</span><br>
+              <strong>Bitcoin (LN):</strong> <span class="notranslate" translate="no"> warybongo30@walletofsatoshi.com</span><br>
+            </small>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p>
+            <small>
+              <strong>Global Account:</strong> 
+              <span class="notranslate" translate="no"> 
+                  <ul class="text-start" style="list-style-type: none; padding-left: 0;">
+                    <b>OLIVER SILVA CASTILHO</b>
+                    <li>Account number: 889213783-6</li>
+                    <li>ACH Routing number: 026073150</li>
+                    <li>WIRE Transfer Routing Number: 026073008</li>
+                    <li>Bank name: Community Federal Savings Bank</li>
+                    <li>Bank Address: 5 Penn Plaza, New York, NY 10001</li>
+                  </ul>
+                  
+              </span><br>
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
   </main>
+  <div class="container col-md-10 m-auto mt-1 d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px;">
+      <?php include('./../noticias.php'); ?>
+      <a href="https://www.popads.net/users/refer/3587213"><img src="http://banners.popads.net/250x250.gif" alt="PopAds.net - The Best Popunder Adnetwork" /></a>
+  </div>
   <div class="container m-auto col-md-10 p-0 mt-1">
     <a href="https://aads.com/advertise/?partner=2414063"><img src="https://aads.com/a_ads_banners/gif/english/320x50/simple_v1.gif" alt="Advertise with Anonymous Ads" width="320px" height="50px" /></a>
   </div>
