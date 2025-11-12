@@ -139,7 +139,8 @@
     function buscarNoticias(event) {
         const component = $(event.target);
         const temNumero = Boolean(component.text());
-        if(temNumero) pagina = component.text();
+        pagina = temNumero ? component.text() : 
+            event.target ? pagina : 1;
         $('#page-buttons .btn:not(#voltar):not(#avancar)')
             .removeClass('disabled')
             .prop('disabled', false);
