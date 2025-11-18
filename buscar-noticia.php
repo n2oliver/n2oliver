@@ -17,6 +17,7 @@ try {
     $noticia = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $noticiaInfo = $noticia[0];
     echo json_encode((object) array('conteudo' => '<div>
+            <div id="imagem-background" alt="imagem-background" class="w-100 float-start me-2 my-2" ></div>
             <div data-id=' . $noticiaInfo['id'] . ' style="" class="noticia-conteudo">' .
                 (!empty($noticiaInfo['imagem']) ?
                     '<script>$("#imagem-background").css("background-image", "url(' . htmlspecialchars($noticiaInfo['imagem']) . ')");</script>'

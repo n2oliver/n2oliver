@@ -206,11 +206,6 @@ if ($impressionid) {
     #game-details {
       transition: 1s ease;
     }    
-    .noticia-conteudo {
-        transition: 1s ease;
-        -moz-transition: 1s ease;
-        -webkit-transition: 1s ease;
-    }
   </style>
   <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
@@ -338,11 +333,8 @@ if ($impressionid) {
       </div>
     </div>
   </main>
-  <div class="container col-md-10 m-auto mt-1 d-flex flex-column mb-0 p-0 shadow rounded quicksand" style="border-bottom-right-radius: 0px;">
-      <?php include('./../noticias.php'); ?>
-      <a href="https://www.popads.net/users/refer/3587213"><img src="http://banners.popads.net/250x250.gif" alt="PopAds.net - The Best Popunder Adnetwork" /></a>
-  </div>
   <div class="container m-auto col-md-10 p-0 mt-1">
+    <a href="https://www.popads.net/users/refer/3587213"><img src="http://banners.popads.net/250x250.gif" alt="PopAds.net - The Best Popunder Adnetwork" /></a>
     <a href="https://aads.com/advertise/?partner=2414063"><img src="https://aads.com/a_ads_banners/gif/english/320x50/simple_v1.gif" alt="Advertise with Anonymous Ads" width="320px" height="50px" /></a>
   </div>
   <?php include("../footer.php"); ?>
