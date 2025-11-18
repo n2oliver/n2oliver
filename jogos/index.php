@@ -47,7 +47,7 @@ if ($impressionid) {
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
     <link href="/css/fonts/ubuntu/css2.css?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
     <link href="/css/font-awesome/all.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/css/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="/css/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../styles-index.css"/>
     <link rel="stylesheet" href="../sobre-mim.css"/>
     <link rel="preload" as="image" href="/jogos/linhaamarela/img/fundo.png" />
@@ -215,7 +215,7 @@ if ($impressionid) {
   <script src="/gtag_dispatcher.js"></script>
   <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
   <script src="/js/jquery/jquery-3.7.1.min.js"></script>
-  <script src="/js/jquery-ui/jquery-ui.js"></script>
+  <script src="/js/jquery-ui/jquery-ui.min.js"></script>
   <script src="/js/autotranslate.js"></script>
 </head>
 <body>
