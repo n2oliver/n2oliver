@@ -296,7 +296,7 @@ if ($impressionid) {
     </section>
 
     <div id="progressbar"></div>
-    <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
+    <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;">
       <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
                         style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
     </div>
@@ -351,6 +351,7 @@ if ($impressionid) {
     }
     if(window.location.href.indexOf('utm_source=popads') > -1) {
       abrirJanela('/jogos/', 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f',{showMenu: true});
+      abrirJanela('/noticias.php', undefined, {showMenu: true});
     }
     document.addEventListener('DOMContentLoaded', function() {
 
