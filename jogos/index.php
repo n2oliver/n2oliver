@@ -45,7 +45,9 @@ if ($impressionid) {
   include('../cabecalho.php');
   ?>
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
-    <link href="/css/font-awesome/all.min.css" rel="stylesheet" blocking="render"/>
+    <link rel="preload" onload="this.rel='stylesheet'" as="style" href="/css/font-awesome/all.min.css" blocking="render"/>
+    <noscript><link rel="stylesheet" href="/css/font-awesome/all.min.css"></noscript>
+
     <link rel="stylesheet" href="/css/jquery-ui/jquery-ui.min.css" blocking="render"/>
     <link rel="stylesheet" href="../styles-index.css" blocking="render"/>
     <link rel="stylesheet" href="../sobre-mim.css" blocking="render"/>
@@ -210,18 +212,18 @@ if ($impressionid) {
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
         src="/js/megapush/MegaPush.js">
     </script>
-  <script data-cfasync="false" src="/popads-monetization.js" blocking="render"></script>
-  <script src="/gtag_dispatcher.js" blocking="render"></script>
-  <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js" blocking="render"></script>
-  <script src="/js/jquery-ui/jquery-ui.min.js" blocking="render"></script>
-  <script src="/js/autotranslate.js" blocking="render"></script>
+  <script data-cfasync="false" src="/popads-monetization.js" blocking="render" defer></script>
+  <script src="/gtag_dispatcher.js" blocking="render" async></script>
+  <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js" blocking="render" async></script>
+  <script src="/js/jquery-ui/jquery-ui.min.js" blocking="render" async></script>
+  <script src="/js/autotranslate.js" blocking="render" async></script>
 </head>
 <body>
 <?php include("../gtagmanager.php"); ?>
 
 
   <!-- Bootstrap Bundle (JS + Popper) -->
-  <script src="/js/bootbox/bootbox.min.js" blocking="render"></script>
+  <script src="/js/bootbox/bootbox.min.js" blocking="render" defer></script>
   <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
     <?php include('../navbar.php'); ?>
   </div>
