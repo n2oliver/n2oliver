@@ -14,9 +14,6 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->setAttribute(PDO::ATTR_ORACLE_NULLS, PDO::NULL_EMPTY_STRING);
     $handler = new DBSessionHandler($pdo);
-    if(getenv('ENVIRONMENT') === 'development') {
-        session_set_save_handler($handler, true);
-    }
     session_start();
 } catch (PDOException $e) {
     echo "Erro ao conectar ao banco!" . "<br>". __DIR__ ."<br>" . $e;
