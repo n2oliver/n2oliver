@@ -48,13 +48,4 @@ services:
       SMTP_PORT: ${SMTP_PORT}
     extra_hosts:
       - "host.docker.internal:host-gateway"
-  db:
-    image: mysql:8
-    container_name: database
-    environment:
-      MYSQL_ROOT_PASSWORD: ${DB_PASS}
-      MYSQL_DATABASE: ${DB_NAME}
-      MYSQL_PASSWORD: ${DB_PASS}
-    ports:
-      - "3306:3306"
 
