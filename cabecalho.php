@@ -19,12 +19,12 @@
     <meta name="robots" content="<?= htmlspecialchars($meta_robots, ENT_QUOTES|ENT_HTML5) ?>">
     <link rel="canonical" href="<?= htmlspecialchars($canonical, ENT_QUOTES|ENT_HTML5) ?>" />
     <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="/css/fonts/ubuntu/css2.css?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" blocking="render" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"/>
-    <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="/js/bootstrap/bootstrap.bundle.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+    <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet" blocking="render" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" blocking="render"></script>
+    <script src="/js/bootstrap/bootstrap.bundle.min.js" blocking="render"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" blocking="render"/>
     <link rel="stylesheet" href="/styles-index.css"/>
     <link rel="stylesheet" href="/sobre-mim.css"/>
     <style>
@@ -34,7 +34,7 @@
             -webkit-transition: 1s ease;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/js/jquery/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" blocking="render"></script>
    
     <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
