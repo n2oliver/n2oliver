@@ -1,6 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0" 
-style="background-image: url(/img/theme-image-natal.png);
-        background-blend-mode: color-dodge;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 col-md-10 m-auto px-0" 
+style="background-image: url(/img/theme-image-natal.png);">
   <div class="container-fluid">
 
     <!-- Logo -->

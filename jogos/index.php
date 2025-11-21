@@ -225,12 +225,6 @@ if ($impressionid) {
   <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
     <?php include('../navbar.php'); ?>
   </div>
-  <script>
-    const nav = document.querySelector('nav')
-    nav.classList.add('col-md-10');
-    nav.classList.add('m-auto');
-    nav.classList.add('px-0');
-  </script>
     
   <header class="mx-auto col-md-10 text-center mt-1">
     <img alt="logo" src="<?=$APP_URL?>/img/logo.png" style="height: 60px; width: auto;"/>
@@ -251,7 +245,8 @@ if ($impressionid) {
   <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
 
     
-  <section  id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light">
+  <section  id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light"
+        alt="">
     <div class="d-flex flex-wrap align-items-start justify-content-center">
       <div class="row">
         <div id="game-details" class="col-md-6 flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
@@ -338,11 +333,8 @@ if ($impressionid) {
   <?php include("../footer.php"); ?>
   <script>
     function showGameInHighlight(game) {
-      let destaqueImagem = document.getElementById('destaque-imagem');
+      let destaqueImagem = document.getElementById("destaque-imagem");
       destaqueImagem.style.backgroundImage = 'url(' + game.imagem + ')';
-      destaqueImagem.alt = "";
-      destaqueImagem.fetchPriority = "high";
-      destaqueImagem.decoding = "async";
       
       $('#destaque-link,#game-details').unbind('click').click(function(e) {
         e.preventDefault();
@@ -418,19 +410,8 @@ if ($impressionid) {
       }).then(response => {
         gamecards = $('.game-card');
         gamecard = gamecards[Math.round(Math.random() * (gamecards.length - 1))];
-        const gameLink = gamecard.querySelector('a');
-        let destaqueImagem = document.getElementById('destaque-imagem');
-        destaqueImagem.style.backgroundImage = 'url(' + gameLink.dataset.gameImagem + ')';
-        destaqueImagem.alt = "";
-        destaqueImagem.fetchPriority = "high";
-        destaqueImagem.decoding = "async";
-        
-        $('#destaque-link,#game-details').unbind('click').click(function() {               
-          abrirJanela(gameLink.dataset.gameUrl, 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
-        });
-        document.getElementById('destaque-titulo').textContent = 'Jogar ' + gameLink.dataset.gameTitle;
-        document.getElementById('destaque-link').setAttribute('aria-label', `Conhecer ${gameLink.dataset.gameTitle}`);
-        setTimeout(()=>{
+        const gameLink = gamecard.querySelector('a');        
+        setTimeout(() => {
           document.getElementById('game-details-title').textContent = gameLink.dataset.gameTitle;
           document.getElementById('game-details-content').innerHTML = gameLink.dataset.gameDesc;
           
@@ -438,7 +419,14 @@ if ($impressionid) {
         }, 7000);
         $( "#progressbar" ).progressbar({
           value: 0
-        });
+        }); // Este fechava o .then()
+
+        // Encontra o índice do primeiro jogo a ser exibido
+        gameItemsIndex = Array.from(gamecards).indexOf(gamecard);
+        // Exibe o primeiro jogo no destaque
+        if (gameItemsIndex !== -1) {
+          showGameInHighlight(gameItems[gameItemsIndex]);
+        }
 
         let interval = null;
 let progressInterval = null;
