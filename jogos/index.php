@@ -44,13 +44,11 @@ if ($impressionid) {
   $canonical = (isset($_SERVER['HTTP_HOST']) ? (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] : 'https://n2oliver.com/jogos/');
   include('../cabecalho.php');
   ?>
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
-    <link rel="preload" onload="this.rel='stylesheet'" as="style" href="/css/font-awesome/all.min.css" blocking="render"/>
-    <noscript><link rel="stylesheet" href="/css/font-awesome/all.min.css"></noscript>
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/n2-ico.jpg"/>
 
-    <link rel="stylesheet" href="/css/jquery-ui/jquery-ui.min.css" blocking="render"/>
-    <link rel="stylesheet" href="../styles-index.css" blocking="render"/>
-    <link rel="stylesheet" href="../sobre-mim.css" blocking="render"/>
+    <link rel="stylesheet" href="/css/jquery-ui/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../styles-index.css" />
+    <link rel="stylesheet" href="../sobre-mim.css" />
     <link rel="preload" as="image" href="/jogos/linhaamarela/img/fundo.png" />
     <link rel="preload" as="image" href="<?=$APP_URL?>/img/logo.png" />
     <link rel="preload" as="image" href="../img/combo-memo.png" />
@@ -212,18 +210,18 @@ if ($impressionid) {
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
         src="/js/megapush/MegaPush.js">
     </script>
-  <script data-cfasync="false" src="/popads-monetization.js" blocking="render" defer></script>
-  <script src="/gtag_dispatcher.js" blocking="render" async></script>
-  <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js" blocking="render" async></script>
-  <script src="/js/jquery-ui/jquery-ui.min.js" blocking="render" async></script>
-  <script src="/js/autotranslate.js" blocking="render" async></script>
+  <script data-cfasync="false" src="/popads-monetization.js"  defer></script>
+  <script src="/gtag_dispatcher.js"  async></script>
+  <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"  async></script>
+  <script src="/js/jquery-ui/jquery-ui.min.js"  async></script>
+  <script src="/js/autotranslate.js"  async></script>
 </head>
 <body>
 <?php include("../gtagmanager.php"); ?>
 
 
   <!-- Bootstrap Bundle (JS + Popper) -->
-  <script src="/js/bootbox/bootbox.min.js" blocking="render" defer></script>
+  <script src="/js/bootbox/bootbox.min.js"  defer></script>
   <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
     <?php include('../navbar.php'); ?>
   </div>
@@ -340,7 +338,12 @@ if ($impressionid) {
   <?php include("../footer.php"); ?>
   <script>
     function showGameInHighlight(game) {
-      document.getElementById('destaque-imagem').style.backgroundImage = 'url(' + game.imagem + ')';
+      let destaqueImagem = document.getElementById('destaque-imagem');
+      destaqueImagem.style.backgroundImage = 'url(' + game.imagem + ')';
+      destaqueImagem.alt = "";
+      destaqueImagem.fetchPriority = "high";
+      destaqueImagem.decoding = "async";
+      
       $('#destaque-link,#game-details').unbind('click').click(function(e) {
         e.preventDefault();
         abrirJanela(game.url, 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
@@ -416,7 +419,12 @@ if ($impressionid) {
         gamecards = $('.game-card');
         gamecard = gamecards[Math.round(Math.random() * (gamecards.length - 1))];
         const gameLink = gamecard.querySelector('a');
-        document.getElementById('destaque-imagem').style.backgroundImage = 'url(' + gameLink.dataset.gameImagem + ')';
+        let destaqueImagem = document.getElementById('destaque-imagem');
+        destaqueImagem.style.backgroundImage = 'url(' + gameLink.dataset.gameImagem + ')';
+        destaqueImagem.alt = "";
+        destaqueImagem.fetchPriority = "high";
+        destaqueImagem.decoding = "async";
+        
         $('#destaque-link,#game-details').unbind('click').click(function() {               
           abrirJanela(gameLink.dataset.gameUrl, 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
         });

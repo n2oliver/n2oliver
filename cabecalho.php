@@ -18,20 +18,20 @@
     <meta name="description" content="<?= htmlspecialchars($meta_description, ENT_QUOTES|ENT_HTML5) ?>">
     <meta name="robots" content="<?= htmlspecialchars($meta_robots, ENT_QUOTES|ENT_HTML5) ?>">
     <link rel="canonical" href="<?= htmlspecialchars($canonical, ENT_QUOTES|ENT_HTML5) ?>" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/n2.jpg"/>
-    <link rel="preload" onload="this.rel='stylesheet'" as="style" href="/css/fonts/ubuntu/css2.css?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" blocking="render" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/n2-ico.jpg"/>
+    <link rel="preload" onload="this.rel='stylesheet'" as="style" href="/css/fonts/ubuntu/css2.css?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"  rel="stylesheet">
     <noscript><link rel="stylesheet" href="/css/fonts/ubuntu/css2.css?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"></noscript>
 
     <link rel="preload" onload="this.rel='stylesheet'" as="style" href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"/>
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"></noscript>
 
-    <link rel="preload" onload="this.rel='stylesheet'" as="style" href="/css/bootstrap/bootstrap.min.css" rel="stylesheet" blocking="render" />
+    <link rel="preload" onload="this.rel='stylesheet'" as="style" href="/css/bootstrap/bootstrap.min.css" rel="stylesheet"  />
     <noscript><link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css"></noscript>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" blocking="render" async></script>
-    <script src="/js/bootstrap/bootstrap.bundle.min.js" blocking="render" async></script>
-    <link rel="preload" onload="this.rel='stylesheet'" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" blocking="render"/>
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"  async></script>
+    <script src="/js/bootstrap/bootstrap.bundle.min.js"  async></script>
+    <link rel="preload" onload="this.rel='stylesheet'" as="style" href="/css/font-awesome/all.min.css" rel="stylesheet" />
+    <noscript><link rel="stylesheet" href="/css/font-awesome/all.min.css"></noscript>
 
     <link rel="stylesheet" href="/styles-index.css"/>
     <link rel="stylesheet" href="/sobre-mim.css"/>
@@ -42,7 +42,7 @@
             -webkit-transition: 1s ease;
         }
     </style>
-    <script src="/js/jquery/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" blocking="render"></script>
+    <script src="/js/jquery/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" ></script>
    
     <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
