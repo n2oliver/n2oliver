@@ -232,7 +232,13 @@ if ($impressionid) {
   </header>
   <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
 
-    
+  <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;">
+    <iframe data-aa='2417696' src='//acceptable.a-ads.com/2417696/?size=Adaptive'
+                      style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+    <div style="width: 70%;margin:auto;position: absolute;left: 0;right: 0">
+      <a target="_blank" style="display:inline-block;font-size: 13px;color: #263238;padding: 4px 10px;background: #F8F8F9;text-decoration: none; border-radius: 0 0 4px 4px;" id="frame-link" href="https://aads.com/campaigns/new/?source_id=2417696&source_type=ad_unit&partner=2417696">Advertise here</a>
+    </div>
+  </div>
   <section  id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light"
         alt="">
     <div class="d-flex flex-wrap align-items-start justify-content-center">
@@ -336,7 +342,6 @@ if ($impressionid) {
     }
     if(window.location.href.indexOf('utm_source=popads') > -1) {
       abrirJanela('/jogos/', 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f',{showMenu: true});
-      abrirJanela('/noticias.php', '/jogos/', {showMenu: true});
     }
     document.addEventListener('DOMContentLoaded', function() {
 
