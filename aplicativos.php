@@ -19,19 +19,6 @@
         <div class="col-lg-2 px-0"></div>
     </div>
     <div class="row">
-        
-        <div class="mx-auto col-md-8" style="text-align: center; font-size: 14px; color: #555; padding: 4px; border-radius: 8px;">
-            <script type="text/javascript">
-                atOptions = {
-                    'key' : '29929d8720c37977a6ea64b1b7db2d02',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                };
-            </script>
-            <script type="text/javascript" src="//laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
-        </div>
         <div class="mx-auto col-md-8 col-lg-8 portifolio bg-dark bg-opacity-75 mt-2 mx-auto p-3 rounded shadow">
             <div class="row" style="height: fit-content">
                 <div id="carouselControls" class="carousel slide carousel-fade d-flex align-items-center p-0" data-bs-ride="carousel">

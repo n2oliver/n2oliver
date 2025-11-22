@@ -212,7 +212,7 @@ if ($impressionid) {
     </script>
   <script data-cfasync="false" src="/popads-monetization.js"  defer></script>
   <script src="/gtag_dispatcher.js"  async></script>
-  <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"  async></script>
+  <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
   <script src="/js/jquery-ui/jquery-ui.min.js"  async></script>
   <script src="/js/autotranslate.js"  async></script>
 </head>
@@ -230,18 +230,6 @@ if ($impressionid) {
     <img alt="logo" src="<?=$APP_URL?>/img/logo.png" style="height: 60px; width: auto;"/>
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
-  <div class="mx-auto col-md-10" style="text-align: center; font-size: 14px; color: #555; padding: 4px; border-radius: 8px;">
-      <script type="text/javascript">
-          atOptions = {
-              'key' : '29929d8720c37977a6ea64b1b7db2d02',
-              'format' : 'iframe',
-              'height' : 50,
-              'width' : 320,
-              'params' : {}
-          };
-      </script>
-      <script type="text/javascript" src="//laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
-  </div>
   <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
 
     
@@ -327,10 +315,12 @@ if ($impressionid) {
     </div>
   </main>
   <div class="container m-auto col-md-10 p-0 mt-1">
-    <a href="https://www.popads.net/users/refer/3587213"><img src="http://banners.popads.net/250x250.gif" alt="PopAds.net - The Best Popunder Adnetwork" /></a>
+    <a href="https://www.popads.net/users/refer/3587213"><img src="https://banners.popads.net/250x250.gif" alt="PopAds.net - The Best Popunder Adnetwork" /></a>
     <a href="https://aads.com/advertise/?partner=2414063"><img src="https://aads.com/a_ads_banners/gif/english/320x50/simple_v1.gif" alt="Advertise with Anonymous Ads" width="320px" height="50px" /></a>
   </div>
-  <?php include("../footer.php"); ?>
+  <div class="container m-auto col-md-10 p-0 mt-1">
+    <?php include("../footer.php"); ?>
+  </div>
   <script>
     function showGameInHighlight(game) {
       let destaqueImagem = document.getElementById("destaque-imagem");
@@ -346,7 +336,7 @@ if ($impressionid) {
     }
     if(window.location.href.indexOf('utm_source=popads') > -1) {
       abrirJanela('/jogos/', 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f',{showMenu: true});
-      abrirJanela('/noticias.php', undefined, {showMenu: true});
+      abrirJanela('/noticias.php', '/jogos/', {showMenu: true});
     }
     document.addEventListener('DOMContentLoaded', function() {
 

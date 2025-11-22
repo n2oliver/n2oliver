@@ -21,18 +21,6 @@
     </div>
 
     <div class="row">
-        <div class="mx-auto col-md-8" style="text-align: center; font-size: 14px; color: #555; padding: 4px; border-radius: 8px;">
-            <script type="text/javascript">
-                atOptions = {
-                    'key' : '29929d8720c37977a6ea64b1b7db2d02',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                };
-            </script>
-            <script type="text/javascript" src="//laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
-        </div>
         <div class="mx-auto col-md-8 bg-dark bg-opacity-75 mt-2 p-4 rounded text-white">
             <main>
                 <h1 class="text-white">Entre em Contato</h1>
