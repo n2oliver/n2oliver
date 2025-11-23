@@ -174,7 +174,7 @@
             </div>
             <div class="w-100 p-4" style="
                 height: 80vh; 
-                background-image: url(/lojavirtual/img/smartphones/61Dfzukq7KL._AC_SX679_.jpg); 
+                background-image: url(/jogos/img/logo.png); 
                 background-size: contain; 
                 background-position: center; 
                 background-repeat: no-repeat;
@@ -185,8 +185,8 @@
                 font-family: Ubuntu;
                 font-size: 3rem;
                 align-content: end;"
-                onclick="abrirJanela('https://amzn.to/42lD7gx')">
-                Xiaomi Redmi Poco X7 Pro (512GB)
+                onclick="abrirJanela('https://go.hotmart.com/W101392320U')">
+                Acesse n2oliver jogos e se divirta
             </div>
             <main class="p-1 rounded" style="background-color: #343a4069;">
                 <div style="position: sticky; top: 0; z-index: 9999; background-color: rgba(0,0,0,0.8)" class="m-auto p-1">

@@ -10,10 +10,17 @@ $products = array(
     ),
     array(
         "id" => 2, 
-        "name" => "POCO C65 8GB+256GB NFC MediaTek Helio G85 Octa Core",
-        "affiliate_link" => "https://amzn.to/450H4XX",
-        "image_url" => "/lojavirtual/img/smartphones/514hAJCEjRL._AC_SX569_.jpg",
-        "descricao" => "<p>O POCO C65 foi feito para quem ama jogos e vídeos. Sua tela de 6.74 polegadas com 90Hz de atualização garante uma experiência visual suave e imersiva. A bateria gigante de 5000mAh aguenta horas de uso intenso, e a câmera tripla de 50MP com IA captura ótimas fotos em qualquer situação. Um verdadeiro campeão de performance na sua faixa de preço.</p>"
+        "name" => "Smartphone Xiaomi POCO X6 Pro 5G 12 GB+512 GB Preto [2311DRK48G]",
+        "affiliate_link" => "https://amzn.to/4pvHMpf",
+        "image_url" => "/lojavirtual/img/smartphones/71AuNiKey2L._AC_SY879_.jpg",
+        "descricao" => "<p>Sistema operacional	Android 14<br>
+                            Memória RAM instalada	12 GB<br>
+                            Modelo da CPU	Mediatek Dimensity 8000<br>
+                            Velocidade da CPU	3,35 GHz<br>
+                            Capacidade de armazenamento da memória	512 GB<br>
+                            Contagem de slots do cartão SIM	Dual SIM<br>
+                            Tipo de conector	USB tipo C<br>
+                            Fator de forma	Barra</p>"
     ),
     array(
         "id" => 3, 

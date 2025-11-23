@@ -80,10 +80,10 @@ $products = array(
     ),
     array(
         "id" => 12, 
-        "name" => "Guia da Confeitaria", 
-        "affiliate_link" => "https://go.hotmart.com/X90535566R", 
-        "image_url" => "/lojavirtual/img/cursos/guia-da-confeitaria.jpg",
-        "descricao" => "O guia definitivo para quem ama confeitaria. Aprenda receitas, técnicas e segredos dos grandes mestres para criar doces e sobremesas incríveis."
+        "name" => "Documentos Editáveis para Profissionais da Beleza e Estética", 
+        "affiliate_link" => "https://go.hotmart.com/H93286113P", 
+        "image_url" => "/lojavirtual/img/cursos/Designsemnome.png",
+        "descricao" => "Desbloqueie seu Potencial na Beleza ou Estética com Nossos Recursos e Documentos Editáveis para Profissionais do Ramo! Potencialize sua carreira na estética e beleza com acesso a uma riqueza de documentos e termos, abrangendo tratamentos, procedimentos, contratos e muito mais."
     )
 
     // Adicione mais produtos conforme necessário
