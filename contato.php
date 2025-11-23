@@ -32,7 +32,7 @@
                 <h3>Informações de Contato</h3>
                 <p class="text-white">
                     <strong>E-mail:</strong>
-                    <a href="mailto:suporte@n2oliver.com" class="text-white">suporte@n2oliver.com</a>
+                    <a href="mailto:suporte@n2oliver.com" class="text-white" style="margin: 10px">suporte@n2oliver.com</a>
                 </p>
                 <p class="text-white">
                     Você também pode me encontrar nas redes sociais listadas no rodapé.

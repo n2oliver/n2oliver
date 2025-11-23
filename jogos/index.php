@@ -108,6 +108,12 @@ if ($impressionid) {
     }
     .game-card .link {
       text-align: center;
+      background-color: #E70D65;
+      font-weight: 700;
+      color: #FFFFFF
+    }
+    .game-card .link:hover, #destaque-link:hover {
+      background-color: #F11E52;
     }
     .game-card a div {
       padding: 10px;
@@ -117,7 +123,7 @@ if ($impressionid) {
       margin: 4px;
     }
     
-    .game-card a div:hover {
+    .game-card a div:hover, #destaque-link:hover {
       filter: brightness(1.5);
     }
     .game-card a div span {
@@ -204,7 +210,18 @@ if ($impressionid) {
     }
     #game-details {
       transition: 1s ease;
-    }    
+    }
+    #destaque-link {
+      height: fit-content; 
+      align-self: center; 
+      padding:12px 18px;
+      border-radius:10px;
+      background:#E70D65;
+      border:1px solid rgba(255,255,255,0.2);
+      color:#dbeafc;
+      font-weight:600;
+      text-decoration:none;
+    }
   </style>
   <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
@@ -251,7 +268,7 @@ if ($impressionid) {
   <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
 
   <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;">
-    <iframe data-aa='2417696' src='//acceptable.a-ads.com/2417696/?size=Adaptive'
+    <iframe title="aads-2417696" data-aa='2417696' src='//acceptable.a-ads.com/2417696/?size=Adaptive'
                       style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
     <div style="width: 70%;margin:auto;position: absolute;left: 0;right: 0">
       <a target="_blank" style="display:inline-block;font-size: 13px;color: #263238;padding: 4px 10px;background: #F8F8F9;text-decoration: none; border-radius: 0 0 4px 4px;" id="frame-link" href="https://aads.com/campaigns/new/?source_id=2417696&source_type=ad_unit&partner=2417696">Advertise here</a>
@@ -275,24 +292,15 @@ if ($impressionid) {
         
         <div class="col-md-6">
           <div class="m-3">
-            <div><a id="destaque-link" href="#"
-              style="height: fit-content; 
-                align-self: center; 
-                padding:12px 18px;
-                border-radius:10px;
-                background:deeppink;
-                border:1px solid rgba(255,255,255,0.2);
-                color:#dbeafc;
-                font-weight:600;
-                text-decoration:none;">
+            <div><a id="destaque-link" href="#">
               <span id="destaque-titulo"></span></a>
             </div>
           </div>
           <div>
-            <button class="btn btn-danger m-1" id="prev" >
+            <button class="btn btn-danger m-1" id="prev" arialabel="Aria Left" >
               <i class="fa-solid fa-arrow-left"></i>
             </button>
-            <button class="btn btn-danger m-1" id="next" >
+            <button class="btn btn-danger m-1" id="next" arialabel="Aria Right" >
               <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
@@ -300,7 +308,11 @@ if ($impressionid) {
       </div>
     </section>
 
-    <div id="progressbar"></div>
+    <div id="progressbar" role="progressbar" title="progressbar"></div>
+    <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;">
+      <iframe title="aads-2410752" data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
+                        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+    </div>
     <div class="container m-auto p-0 mt-1">
       <div class="donation-section m-0 row">
         <div class="col-md-6">
@@ -315,20 +327,20 @@ if ($impressionid) {
         </div>
         <div class="col-md-6">
           <p>
-            <small>
+            
               <strong>Global Account:</strong> 
               <span class="notranslate" translate="no"> 
+                  <p><small><b>OLIVER SILVA CASTILHO</b></small></p>
                   <ul class="text-start" style="list-style-type: none; padding-left: 0;">
-                    <b>OLIVER SILVA CASTILHO</b>
-                    <li>Account number: 889213783-6</li>
-                    <li>ACH Routing number: 026073150</li>
-                    <li>WIRE Transfer Routing Number: 026073008</li>
-                    <li>Bank name: Community Federal Savings Bank</li>
-                    <li>Bank Address: 5 Penn Plaza, New York, NY 10001</li>
+                    <li><small>Account number: 889213783-6</small></li>
+                    <li><small>ACH Routing number: 026073150</small></li>
+                    <li><small>WIRE Transfer Routing Number: 026073008</small></li>
+                    <li><small>Bank name: Community Federal Savings Bank</small></li>
+                    <li><small>Bank Address: 5 Penn Plaza, New York, NY 10001</small></li>
                   </ul>
                   
               </span><br>
-            </small>
+            
           </p>
         </div>
       </div>
@@ -401,7 +413,7 @@ if ($impressionid) {
             gameDesc.innerHTML = game.descricao;
 
             const playButton = document.createElement('div');
-            playButton.className = 'link btn btn-danger my-2';
+            playButton.className = 'link btn my-2';
             playButton.textContent = 'Jogar';
 
             gameSpan.appendChild(gameDesc);

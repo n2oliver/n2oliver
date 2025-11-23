@@ -4,7 +4,7 @@ style="background-image: url(/img/theme-image-natal.png);">
 
     <!-- Logo -->
     <a class="navbar-brand rounded" href="/">
-      <img src="/img/n2-ico.jpg" width="32" class="rounded">
+      <img src="/img/n2-ico.jpg" width="32" class="rounded" alt="logo">
       oliver
     </a>
 
