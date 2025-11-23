@@ -155,25 +155,23 @@
     </div>
 
     <div class="row">
-        <div class="mx-auto col-md-8" style="text-align: center; font-size: 14px; color: #555; padding: 4px; border-radius: 8px;">
-            <script type="text/javascript">
-                atOptions = {
-                    'key' : '29929d8720c37977a6ea64b1b7db2d02',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                };
-            </script>
-            <script type="text/javascript" src="//laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
-        </div>
+        
+            
         <div class="col-lg-10 mt-2">
             <header class="store-header-new text-center">
                 <h1 class="display-4">Oliv3r Store</h1>
                 <p class="lead">Diversos itens para o seu dia a dia.</p>
                 <a href="/lojavirtual/sobre-a-loja.php" class="btn btn-outline-light btn-sm">Saiba mais sobre a loja</a>
             </header>
-
+            <div class="mx-auto w-100 text-center" style="font-size: 14px; color: #555; padding: 4px; border-radius: 8px;">
+                <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;">
+                    <iframe title="aads-2417696" data-aa='2417696' src='//acceptable.a-ads.com/2417696/?size=Adaptive'
+                                    style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+                    <div style="width: 70%;margin:auto;position: absolute;left: 0;right: 0">
+                    <a target="_blank" style="display:inline-block;font-size: 13px;color: #263238;padding: 4px 10px;background: #F8F8F9;text-decoration: none; border-radius: 0 0 4px 4px;" id="frame-link" href="https://aads.com/campaigns/new/?source_id=2417696&source_type=ad_unit&partner=2417696">Advertise here</a>
+                    </div>
+                </div>
+            </div>
             <div class="w-100 p-4" style="
                 height: 80vh; 
                 background-image: url(/lojavirtual/img/smartphones/61Dfzukq7KL._AC_SX679_.jpg); 
