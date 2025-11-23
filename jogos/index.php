@@ -244,7 +244,7 @@ if ($impressionid) {
     <div style="position: absolute; z-index: 99999">
       <input autocomplete="off" type="checkbox" id="aadsstickymibu4v2b" hidden />
       <div style="padding-top: 0; padding-bottom: 0;">
-        <div style="width:15%;height:100%;position:fixed;text-align:center;font-size:0;top:50%;transform:translateY(-50%);right:0;min-width:100px">
+        <div style="width:15%;height: 100vh;position:fixed;text-align:center;font-size:0;top:0px;right:0;min-width:100px">
           <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;height:100%; display: flex;flex-direction: column; justify-content: center">
             <div style="width: 100%;text-align:center;">
               <a style="display:inline-block;font-size: 13px;color: #263238;padding: 4px 10px;background: #F8F8F9;text-decoration: none; border-radius: 4px 4px 0 0;"
