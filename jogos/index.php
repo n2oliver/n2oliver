@@ -309,10 +309,6 @@ if ($impressionid) {
     </section>
 
     <div id="progressbar" role="progressbar" title="progressbar"></div>
-    <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;">
-      <iframe title="aads-2410752" data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
-                        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
-    </div>
     <div class="container m-auto p-0 mt-1">
       <div class="donation-section m-0 row">
         <div class="col-md-6">
