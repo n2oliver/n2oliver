@@ -174,8 +174,8 @@
             </div>
             <div class="w-100 p-4" style="
                 height: 80vh; 
-                background-image: url(/jogos/img/logo.png); 
-                background-size: contain; 
+                background-image: url(/jogos/img/quebracabecas.jpg); 
+                background-size: 100% auto; 
                 background-position: center; 
                 background-repeat: no-repeat;
                 background-color: white;

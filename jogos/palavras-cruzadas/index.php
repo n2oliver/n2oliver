@@ -65,7 +65,7 @@
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
         src="https://cdn.megapush.com.br/MegaPush.js">
     </script>
-<script data-cfasync="false" src="/popads-monetization.js"></script>
+<!--<script data-cfasync="false" src="/popads-monetization.js"></script>-->
   <script src="/gtag_dispatcher.js"></script>
   <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
   <!-- Hotjar Tracking Code for n2oliver.com -->

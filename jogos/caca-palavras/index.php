@@ -64,7 +64,7 @@
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
         src="https://cdn.megapush.com.br/MegaPush.js">
     </script>
-<script data-cfasync="false" src="/popads-monetization.js"></script>
+<!--<script data-cfasync="false" src="/popads-monetization.js"></script>-->
   <script src="/gtag_dispatcher.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>

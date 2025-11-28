@@ -12,7 +12,7 @@ $meta_title = 'Notícias — n2oliver';
             backdrop-filter: brightness(.64);
         }
     </style>
-    <script src="/popads-monetization.js"></script>
+    <!--<script src="/popads-monetization.js"></script>-->
 </head>
 <body>
     
