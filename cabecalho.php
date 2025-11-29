@@ -25,13 +25,10 @@
     <link rel="preload" onload="this.rel='stylesheet'" as="style" href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"/>
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"></noscript>
 
-    <link rel="preload" onload="this.rel='stylesheet'" as="style" href="/css/bootstrap/bootstrap.min.css" rel="stylesheet"  />
-    <noscript><link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css"></noscript>
-
+    <?php include(__DIR__ . '/css/bootstrap/bootstrap.min.php'); ?>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"  async></script>
     <script src="/js/bootstrap/bootstrap.bundle.min.js"  async></script>
-    <link rel="preload" onload="this.rel='stylesheet'" as="style" href="/css/font-awesome/all.min.css" rel="stylesheet" />
-    <noscript><link rel="stylesheet" href="/css/font-awesome/all.min.css"></noscript>
+    <?php include(__DIR__ . '/css/font-awesome/all.min.php') ?>
 
     <link rel="stylesheet" href="/styles-index.css"/>
     <link rel="stylesheet" href="/sobre-mim.css"/>
@@ -42,13 +39,13 @@
             -webkit-transition: 1s ease;
         }
     </style>
-    <script src="/js/jquery/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" ></script>
+    <?php include(__DIR__ . '/js/jquery/jquery-3.7.1.min.php'); ?>
    
     <script defer
         data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
         src="https://cdn.megapush.com.br/MegaPush.js">
     </script>
-    <script src="/gtag_dispatcher.js"></script>
+    <?php include(__DIR__ . '/gtag_dispatcher.php'); ?>
     <!-- Hotjar Tracking Code for n2oliver.com -->
     <script>
         (function(h,o,t,j,a,r){
