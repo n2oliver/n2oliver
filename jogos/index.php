@@ -366,14 +366,14 @@ if ($impressionid) {
       
       $('#destaque-link,#game-details').unbind('click').click(function(e) {
         e.preventDefault();
-        abrirJanela(game.url, 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
+        abrirJanela(game.url, 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb');
       });
       document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
       document.getElementById('game-details-title').textContent = game.titulo;
       document.getElementById('game-details-content').innerHTML = game.descricao;
     }
     if(window.location.href.indexOf('utm_source=popads') > -1) {
-      abrirJanela('/jogos/', 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f',{showMenu: true});
+      abrirJanela('/jogos/', 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb',{showMenu: true});
     }
     document.addEventListener('DOMContentLoaded', function() {
 
@@ -410,7 +410,7 @@ if ($impressionid) {
             gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
             gameLink.onclick = function() {               
               setTimeout(()=>{
-                abrirJanela(game.url, 'https://laxativethem.com/f8gjmtsq8?key=9d80849d2d1385a6c616fd86b50dcf7f');
+                abrirJanela(game.url, 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb');
               }, 200);
             };
             gameItems.push(game);
