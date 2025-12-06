@@ -22,7 +22,6 @@
   window.gtranslateSettings = {
     "default_language": "pt",
     "native_language_names": true,
-    "detect_browser_language": true,
     "languages": [
       "pt","fr","it","es","en","ru","ro","sr","zh-CN","zh-TW",
       "ja","nl","bn","id","ur","el"
