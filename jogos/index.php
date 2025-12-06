@@ -397,7 +397,13 @@ if ($impressionid) {
         abrirJanela(game.url, 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb');
       });
       if (window.location.href.indexOf('utm_source=popads') > -1) {
-        abrirJanela('https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb','/jogos/', {
+        let url = new URL(window.location.href);
+        url.searchParams.delete('utm_source');
+        url.searchParams.delete('utm_medium');
+        url.searchParams.delete('utm_campaign');
+        history.replaceState({}, '', url.href);
+
+        abrirJanela('https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb',undefined, {
           showMenu: true
         });
       }
