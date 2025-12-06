@@ -264,11 +264,6 @@ if ($impressionid) {
   <script src="/gtag_dispatcher.js" async></script>
   <script type="text/javascript" data-cfasync="false" src="/js/abrir-janela.js"></script>
   <script src="/js/jquery-ui/jquery-ui.min.js" async></script>
-  <script src="/js/autotranslate.js" async></script>
-  <script
-    type="text/javascript"
-    src="//laxativethem.com/f0/b1/79/f0b17922dcf7861be67a02cba8a9b7ee.js"
-  ></script>
 </head>
 
 <body>
@@ -402,9 +397,13 @@ if ($impressionid) {
         url.searchParams.delete('utm_medium');
         url.searchParams.delete('utm_campaign');
         history.replaceState({}, '', url.href);
-
+        
         abrirJanela('https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb',undefined, {
           showMenu: true
+        });
+        $(document).click(()=>{
+          window.open('https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb', '_blank');
+          $(document).unbind('click');
         });
       }
       document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;

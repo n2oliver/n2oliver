@@ -46,17 +46,6 @@
         src="https://cdn.megapush.com.br/MegaPush.js">
     </script>
     <?php include(__DIR__ . '/gtag_dispatcher.php'); ?>
-    <!-- Hotjar Tracking Code for n2oliver.com -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:6543030,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:title" content="<?= htmlspecialchars($meta_title, ENT_QUOTES|ENT_HTML5) ?>">
