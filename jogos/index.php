@@ -396,6 +396,11 @@ if ($impressionid) {
         e.preventDefault();
         abrirJanela(game.url, 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb');
       });
+      if (window.location.href.indexOf('utm_source=popads') > -1) {
+        abrirJanela('https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb','/jogos/', {
+          showMenu: true
+        });
+      }
       document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
       document.getElementById('game-details-title').textContent = game.titulo;
       document.getElementById('game-details-content').innerHTML = game.descricao;
