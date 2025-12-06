@@ -391,24 +391,38 @@ if ($impressionid) {
         e.preventDefault();
         abrirJanela(game.url, 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb');
       });
+      
+
+      document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
+      document.getElementById('game-details-title').textContent = game.titulo;
+      document.getElementById('game-details-content').innerHTML = game.descricao;
       if (window.location.href.indexOf('utm_source=popads') > -1) {
+
+        // Remove UTMs conforme seu código
         let url = new URL(window.location.href);
         url.searchParams.delete('utm_source');
         url.searchParams.delete('utm_medium');
         url.searchParams.delete('utm_campaign');
         history.replaceState({}, '', url.href);
-        
-        abrirJanela('https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb',undefined, {
-          showMenu: true
-        });
-        $(document).click(()=>{
-          window.open('https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb', '_blank');
+
+        const adUrl = 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb';
+
+        // 1) Teste de popup bloqueado ANTES de chamar abrirJanela()
+        let popup = window.open(adUrl, '_blank');
+
+        if (!popup) {
+          // 2) Bloqueou → redireciona (não chama abrirJanela)
+          window.location.href = adUrl;
+          return;
+        }
+
+        // 4) Clique extra para abrir ad novamente (com fallback)
+        $(document).click(() => {
+          let p = window.open(adUrl, '_blank');
+          if (!p) window.location.href = adUrl;
           $(document).unbind('click');
         });
       }
-      document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
-      document.getElementById('game-details-title').textContent = game.titulo;
-      document.getElementById('game-details-content').innerHTML = game.descricao;
     }
     document.addEventListener('DOMContentLoaded', function() {
 
