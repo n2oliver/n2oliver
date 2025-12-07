@@ -11,7 +11,7 @@
   <a href="/contato.php">Contato</a>
 
   <span>
-    <a href="mailto:suporte@n2oliver.com">suporte@n2oliver.com</a>
+    <a href="mailto:suporte@n2oliver.com" style="margin-left: 10px">suporte@n2oliver.com</a>
   </span>
 
   <span class="footer-text-small">

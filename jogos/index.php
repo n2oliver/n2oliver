@@ -171,27 +171,6 @@ if ($impressionid) {
     .success {
       background: linear-gradient(135deg, #54a554, #77f554);
     }
-
-    .modal-content {
-      background-color: #34343434 !important;
-    }
-
-    .bootbox {
-      display: flex !important;
-      justify-content: center !important;
-    }
-
-    .modal-dialog {
-      overflow-y: scroll;
-      height: 100vh;
-      position: absolute;
-    }
-
-    .modal-body {
-      text-align: end;
-      margin: 0 auto;
-    }
-
     .welcome-text-box {
       background: white;
       padding: 1rem;
@@ -249,9 +228,9 @@ if ($impressionid) {
       align-self: center;
       padding: 12px 18px;
       border-radius: 10px;
-      background: #E70D65;
+      background: #9E0040;
       border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #dbeafc;
+      color: #FFFFFF;
       font-weight: 600;
       text-decoration: none;
     }
@@ -284,7 +263,7 @@ if ($impressionid) {
             </svg>
           </label>
           <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;height:100%; display: flex;flex-direction: column; justify-content: center">
-                        <iframe data-aa=2417696 src=//acceptable.a-ads.com/2417696/?size=Adaptive style='border:0; padding:0; width:70%; height:70%; overflow:hidden; margin: 0 auto'></iframe>
+                        <iframe title="aads-2417696" data-aa=2417696 src=//acceptable.a-ads.com/2417696/?size=Adaptive style='border:0; padding:0; width:70%; height:70%; overflow:hidden; margin: 0 auto'></iframe>
                     </div>
         </div>
         <style>
@@ -324,10 +303,10 @@ if ($impressionid) {
               </div>
             </div>
             <div>
-              <button class="btn btn-danger m-1" style="display: none" id="prev" arialabel="Aria Left">
+              <button class="btn btn-danger m-1" style="display: none" id="prev" aria-label="Aria Left">
                 <i class="fa-solid fa-arrow-left"></i>
               </button>
-              <button class="btn btn-danger m-1" id="next" style="display: none" arialabel="Aria Right">
+              <button class="btn btn-danger m-1" id="next" style="display: none" aria-label="Aria Right">
                 <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
@@ -335,7 +314,7 @@ if ($impressionid) {
             </div>
 
             <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;">
-              <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
+              <iframe title="aads-2410752" data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
                                 style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
             </div>
     </section>
@@ -412,16 +391,34 @@ if ($impressionid) {
 
         if (!popup) {
           // 2) Bloqueou → redireciona (não chama abrirJanela)
-          window.location.href = adUrl;
-          return;
+          bootbox.confirm({
+            title: "Pop-up bloqueado",
+            message: "Para uma melhor experiência, você precisa permitir pop-ups e redirecionamentos para este site nas configurações do site (botão ao lado do endereço URL).",
+            buttons: {
+                confirm: {
+                    label: 'OK',
+                    className: 'btn-primary'
+                },
+                cancel: {
+                    label: 'Cancelar',
+                    className: 'btn-secondary'
+                }
+            },
+            closeButton: false,
+            centerVertical: true,
+            callback: function(result) {
+                if(result) { 
+                  $(document).click(() => {
+                    let p = window.open(adUrl, '_blank');
+                    if (!p) window.location.href = adUrl;
+                    $(document).unbind('click');
+                  });
+                } else {
+                  window.location.href = adUrl;
+                }
+            }
+          });
         }
-
-        // 4) Clique extra para abrir ad novamente (com fallback)
-        $(document).click(() => {
-          let p = window.open(adUrl, '_blank');
-          if (!p) window.location.href = adUrl;
-          $(document).unbind('click');
-        });
       }
     }
     document.addEventListener('DOMContentLoaded', function() {
