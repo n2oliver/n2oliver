@@ -390,50 +390,52 @@ if ($impressionid) {
       document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
       document.getElementById('game-details-title').textContent = game.titulo;
       document.getElementById('game-details-content').innerHTML = game.descricao;
-      if (window.location.href.indexOf('utm_source=popads') > -1) {
 
-        // Remove UTMs conforme seu código
-        let url = new URL(window.location.href);
-        url.searchParams.delete('utm_source');
-        url.searchParams.delete('utm_medium');
-        url.searchParams.delete('utm_campaign');
-        history.replaceState({}, '', url.href);
+      // Remove UTMs conforme seu código
+      let url = new URL(window.location.href);
+      url.searchParams.delete('utm_source');
+      url.searchParams.delete('utm_medium');
+      url.searchParams.delete('utm_campaign');
+      history.replaceState({}, '', url.href);
 
-        const adUrl = 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb';
+      const adUrl = 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb';
 
-        // 1) Teste de popup bloqueado ANTES de chamar abrirJanela()
-        let popup = window.open(adUrl, '_blank');
+      // 1) Teste de popup bloqueado ANTES de chamar abrirJanela()
+      let popup = window.open(adUrl, '_blank');
 
-        if (!popup) {
-          // 2) Bloqueou → redireciona (não chama abrirJanela)
-          bootbox.confirm({
-            title: "Pop-up bloqueado",
-            message: "Para uma melhor experiência, você precisa permitir pop-ups e redirecionamentos para este site nas configurações do site (botão ao lado do endereço URL).",
-            buttons: {
-                confirm: {
-                    label: 'OK',
-                    className: 'btn-primary'
-                },
-                cancel: {
-                    label: 'Cancelar',
-                    className: 'btn-secondary'
-                }
-            },
-            closeButton: false,
-            centerVertical: true,
-            callback: function(result) {
-                if(result) { 
-                  $(document).click(() => {
-                    let p = window.open(adUrl, '_blank');
-                    if (!p) window.location.href = adUrl;
-                    $(document).unbind('click');
-                  });
-                } else {
-                  window.location.href = adUrl;
-                }
+      if (!popup) {
+        // 2) Bloqueou → redireciona (não chama abrirJanela)
+        bootbox.confirm({
+          title: "Pop-up bloqueado",
+          message: "Para uma melhor experiência, você precisa permitir pop-ups e redirecionamentos para este site nas configurações do site (botão ao lado do endereço URL).",
+          buttons: {
+              confirm: {
+                  label: 'OK',
+                  className: 'btn-primary'
+              },
+              cancel: {
+                  label: 'Cancelar',
+                  className: 'btn-secondary'
+              }
+          },
+          closeButton: false,
+          centerVertical: true,
+          callback: function(result) {
+          
+            if (window.location.href.indexOf('utm_source=popads') > -1) {
+              if(result) { 
+                $(document).click(() => {
+                  let p = window.open(adUrl, '_blank');
+                  if (!p) window.location.href = adUrl;
+                  $(document).unbind('click');
+                });
+              } else {
+                window.location.href = adUrl;
+              }
+              
             }
-          });
-        }
+          }
+        });
       }
     }
     document.addEventListener('DOMContentLoaded', function() {
