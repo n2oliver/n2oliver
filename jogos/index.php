@@ -391,7 +391,10 @@ if ($impressionid) {
       document.getElementById('game-details-title').textContent = game.titulo;
       document.getElementById('game-details-content').innerHTML = game.descricao;
 
-      // Remove UTMs conforme seu código
+      
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+// Remove UTMs conforme seu código
       let url = new URL(window.location.href);
       url.searchParams.delete('utm_source');
       url.searchParams.delete('utm_medium');
@@ -421,25 +424,12 @@ if ($impressionid) {
           closeButton: false,
           centerVertical: true,
           callback: function(result) {
-          
-            if (window.location.href.indexOf('utm_source=popads') > -1) {
-              if(result) { 
-                $(document).click(() => {
-                  let p = window.open(adUrl, '_blank');
-                  if (!p) window.location.href = adUrl;
-                  $(document).unbind('click');
-                });
-              } else {
-                window.location.href = adUrl;
-              }
-              
+            if(!result) {
+              window.location.href = adUrl;
             }
           }
         });
       }
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-
       let gameItems = [];
       let gameItemsIndex = -1;
       $.ajax({
