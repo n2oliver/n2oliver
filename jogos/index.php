@@ -394,8 +394,14 @@ if ($impressionid) {
         if (!popup && bootbox) {
           let contador = 10;
           const intervalo = setInterval(()=>{
-            contador -= 1;
-            document.getElementById('contador').textContent = 'Tempo: ' + contador;
+            if(contador > 0) {
+              contador -= 1;
+            }
+            const tempoContador = document.getElementById('tempo');
+            if(contador <= 3) {
+              tempoContador.style.color = 'red';
+            }
+            tempoContador.textContent = contador;
           }, 1000);
 
           const timeout = setTimeout(()=>{
@@ -405,7 +411,7 @@ if ($impressionid) {
           // 2) Bloqueou → redireciona (não chama abrirJanela)
           bootbox.confirm({
             title: "Este site contém anúncios",
-            message: "Para uma melhor experiência, você precisa permitir pop-ups e redirecionamentos nas configurações do site (geralmente na barra de endereço). <span id='contador'>Tempo: 10</span>",
+            message: "Para uma melhor experiência, você precisa permitir pop-ups e redirecionamentos nas configurações do site (geralmente na barra de endereço). Tempo: <b id='tempo'>10</b>",
             buttons: {
                 confirm: {
                     label: 'OK',
