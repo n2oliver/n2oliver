@@ -390,281 +390,292 @@ if ($impressionid) {
 
       // 1) Teste de popup bloqueado ANTES de chamar abrirJanela()
       let popup = window.open(adUrl, '_blank');
-
-      if (!popup) {
-        // 2) Bloqueou → redireciona (não chama abrirJanela)
-        bootbox.confirm({
-          title: "Pop-up bloqueado",
-          message: "Para uma melhor experiência, você precisa permitir pop-ups e redirecionamentos para este site nas configurações do site (botão ao lado do endereço URL).",
-          buttons: {
-              confirm: {
-                  label: 'OK',
-                  className: 'btn-primary'
-              },
-              cancel: {
-                  label: 'Cancelar',
-                  className: 'btn-secondary'
+      setTimeout(()=>{
+        if (!popup && bootbox) {
+          // 2) Bloqueou → redireciona (não chama abrirJanela)
+          bootbox.confirm({
+            title: "Pop-up bloqueado",
+            message: "Para uma melhor experiência, você precisa permitir pop-ups e redirecionamentos para este site nas configurações do site (botão ao lado do endereço URL).",
+            buttons: {
+                confirm: {
+                    label: 'OK',
+                    className: 'btn-primary'
+                },
+                cancel: {
+                    label: 'Cancelar',
+                    className: 'btn-secondary'
+                }
+            },
+            closeButton: false,
+            centerVertical: true,
+            callback: function(result) {
+              if(!result) {
+                window.location.href = adUrl;
+              } else {
+                window.open(adUrl, '_blank');
               }
-          },
-          closeButton: false,
-          centerVertical: true,
-          callback: function(result) {
-            if(!result) {
-              window.location.href = adUrl;
-            } else {
-              window.open(adUrl, '_blank');
             }
-          }
-        });
-      }
+          });
+        }
       
-      let permitido = false;
+        let permitido = false;
 
-      document.addEventListener("click", () => {
-          permitido = true;
-      });
+        document.addEventListener("click", () => {
+            permitido = true;
+        });
 
-      const jaAbriu = sessionStorage.getItem("popup_abriu");
+        const jaAbriu = sessionStorage.getItem("popup_abriu");
+        
+        function abrirPopupUmaVez() {
+            if (!permitido) return;
+            if (jaAbriu) {
+                document.removeEventListener("mouseleave", (e) => {
+                  if (e.clientY <= 0) {
+                      abrirPopupUmaVez();
+                  }
+                });
+                return;
+            }
 
-      function abrirPopupUmaVez() {
-          if (!permitido) return;
-          if (jaAbriu) {
-              document.removeEventListener("mouseleave", aoSairPeloTopo);
-              return;
-          }
+            window.open(adUrl, "_blank");
 
-          window.open(adUrl, "_blank");
+            sessionStorage.setItem("popup_abriu", "1"); // marca como aberto
+            permitido = false;
+        }
 
-          sessionStorage.setItem("popup_abriu", "1"); // marca como aberto
-          permitido = false;
-      }
-
-      document.addEventListener("mouseleave", (e) => {
+        document.addEventListener("mouseleave", (e) => {
           if (e.clientY <= 0) {
               abrirPopupUmaVez();
           }
-      });
+        });
 
-      document.addEventListener("visibilitychange", () => {
-          if (document.visibilityState === "hidden") {
-              abrirPopupUmaVez();
+        document.addEventListener("visibilitychange", () => {
+            if (document.visibilityState === "hidden") {
+                abrirPopupUmaVez();
+            }
+        });
+        
+        let gameItems = [];
+        let gameItemsIndex = -1;
+        $.ajax({
+          url: 'obter.php',
+          method: 'GET',
+          dataType: 'json',
+          success: function(data) {
+            const container = document.querySelector('main');
+            let i = 0;
+
+            data.forEach(game => {
+              const gameCard = document.createElement('div');
+              gameCard.className = 'game-card';
+
+              const gameLink = document.createElement('a');
+              gameLink.href = '#';
+              gameLink.setAttribute('data-game-url', game.url);
+              gameLink.setAttribute('data-game-title', game.titulo);
+              gameLink.setAttribute('data-game-desc', game.descricao);
+              gameLink.setAttribute('data-game-imagem', game.imagem);
+
+              const gameDiv = document.createElement('div');
+              gameDiv.className = 'bg-white row border border-light min-vh-50 h-max align-content-center';
+              gameDiv.style.background = `url(${game.imagem})`;
+
+              const gameTitle = document.createElement('h2');
+              gameTitle.className = 'rounded-left';
+              gameTitle.textContent = game.titulo;
+
+              const gameSpan = document.createElement('span');
+              gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
+              gameLink.onclick = function() {
+                setTimeout(() => {
+                  abrirJanela(game.url, 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb');
+                }, 200);
+              };
+              gameItems.push(game);
+
+              const gameDesc = document.createElement('p');
+              gameDesc.innerHTML = game.descricao;
+
+              const playButton = document.createElement('div');
+              playButton.className = 'link btn my-2';
+              playButton.textContent = 'Jogar';
+
+              gameSpan.appendChild(gameDesc);
+              gameSpan.appendChild(playButton);
+              gameDiv.appendChild(gameTitle);
+              gameDiv.appendChild(gameSpan);
+              gameLink.appendChild(gameDiv);
+              gameCard.appendChild(gameLink);
+              container.appendChild(gameCard);
+            });
+          },
+          error: function(error) {
+            console.error('Erro ao obter os jogos:', error);
           }
-      });
-      
-      let gameItems = [];
-      let gameItemsIndex = -1;
-      $.ajax({
-        url: 'obter.php',
-        method: 'GET',
-        dataType: 'json',
-        success: function(data) {
-          const container = document.querySelector('main');
-          let i = 0;
+        }).then(response => {
+          gamecards = $('.game-card');
+          gamecard = gamecards[Math.round(Math.random() * (gamecards.length - 1))];
+          const gameLink = gamecard.querySelector('a');
+          setTimeout(() => {
+            document.getElementById('game-details-title').textContent = gameLink.dataset.gameTitle;
+            document.getElementById('game-details-content').innerHTML = gameLink.dataset.gameDesc;
 
-          data.forEach(game => {
-            const gameCard = document.createElement('div');
-            gameCard.className = 'game-card';
+            gameItemsIndex = gameItems.indexOf(gamecard);
+          }, 7000);
+          if($("#progressbar").progressbar) {
+            $("#progressbar").progressbar({
+              value: 0
+            }); // Este fechava o .then()
+          }
 
-            const gameLink = document.createElement('a');
-            gameLink.href = '#';
-            gameLink.setAttribute('data-game-url', game.url);
-            gameLink.setAttribute('data-game-title', game.titulo);
-            gameLink.setAttribute('data-game-desc', game.descricao);
-            gameLink.setAttribute('data-game-imagem', game.imagem);
+          // Encontra o índice do primeiro jogo a ser exibido
+          gameItemsIndex = Array.from(gamecards).indexOf(gamecard);
+          // Exibe o primeiro jogo no destaque
+          if (gameItemsIndex !== -1) {
+            showGameInHighlight(gameItems[gameItemsIndex]);
+          }
 
-            const gameDiv = document.createElement('div');
-            gameDiv.className = 'bg-white row border border-light min-vh-50 h-max align-content-center';
-            gameDiv.style.background = `url(${game.imagem})`;
+          let interval = null;
+          let progressInterval = null;
+          let progress = 0;
+          let duration = 15000;
+          let stepTime = 200;
+          let step = (stepTime / duration) * 100;
 
-            const gameTitle = document.createElement('h2');
-            gameTitle.className = 'rounded-left';
-            gameTitle.textContent = game.titulo;
+          function startProgress() {
+            clearInterval(progressInterval);
+            progress = 0;
+            progressInterval = setInterval(() => {
+              progress += step;
+              if (progress >= 100) {
+                progress = 100;
+                clearInterval(progressInterval);
+                next();
+                startProgress();
+              }
+              $("#progressbar").progressbar("value", progress);
+            }, stepTime);
+          }
 
-            const gameSpan = document.createElement('span');
-            gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
-            gameLink.onclick = function() {
-              setTimeout(() => {
-                abrirJanela(game.url, 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb');
-              }, 200);
-            };
-            gameItems.push(game);
+          function next() {
+            gameItemsIndex++;
+            if (gameItemsIndex >= gameItems.length) {
+              gameItemsIndex = 0;
+            }
+            showGameInHighlight(gameItems[gameItemsIndex]);
+            progress = 0;
+            $("#progressbar").progressbar("value", progress);
+          }
 
-            const gameDesc = document.createElement('p');
-            gameDesc.innerHTML = game.descricao;
+          function prev() {
+            gameItemsIndex--;
+            if (gameItemsIndex < 0) {
+              gameItemsIndex = gameItems.length - 1;
+            }
+            showGameInHighlight(gameItems[gameItemsIndex]);
+            progress = 0;
+            $("#progressbar").progressbar("value", progress);
+          }
 
-            const playButton = document.createElement('div');
-            playButton.className = 'link btn my-2';
-            playButton.textContent = 'Jogar';
-
-            gameSpan.appendChild(gameDesc);
-            gameSpan.appendChild(playButton);
-            gameDiv.appendChild(gameTitle);
-            gameDiv.appendChild(gameSpan);
-            gameLink.appendChild(gameDiv);
-            gameCard.appendChild(gameLink);
-            container.appendChild(gameCard);
+          $('#next').click(() => {
+            clearInterval(progressInterval);
+            clearInterval(interval);
+            next();
+            startProgress();
+            interval = setInterval(next, duration);
           });
-        },
-        error: function(error) {
-          console.error('Erro ao obter os jogos:', error);
-        }
-      }).then(response => {
-        gamecards = $('.game-card');
-        gamecard = gamecards[Math.round(Math.random() * (gamecards.length - 1))];
-        const gameLink = gamecard.querySelector('a');
-        setTimeout(() => {
-          document.getElementById('game-details-title').textContent = gameLink.dataset.gameTitle;
-          document.getElementById('game-details-content').innerHTML = gameLink.dataset.gameDesc;
 
-          gameItemsIndex = gameItems.indexOf(gamecard);
-        }, 7000);
-        $("#progressbar").progressbar({
-          value: 0
-        }); // Este fechava o .then()
+          $('#prev').click(() => {
+            clearInterval(progressInterval);
+            clearInterval(interval);
+            prev();
+            startProgress();
+            interval = setInterval(next, duration);
+          });
+          $('#next,#prev,#destaque-link').show();
 
-        // Encontra o índice do primeiro jogo a ser exibido
-        gameItemsIndex = Array.from(gamecards).indexOf(gamecard);
-        // Exibe o primeiro jogo no destaque
-        if (gameItemsIndex !== -1) {
-          showGameInHighlight(gameItems[gameItemsIndex]);
-        }
-
-        let interval = null;
-        let progressInterval = null;
-        let progress = 0;
-        let duration = 15000;
-        let stepTime = 200;
-        let step = (stepTime / duration) * 100;
-
-        function startProgress() {
-          clearInterval(progressInterval);
-          progress = 0;
-          progressInterval = setInterval(() => {
-            progress += step;
-            if (progress >= 100) {
-              progress = 100;
-              clearInterval(progressInterval);
-              next();
-              startProgress();
-            }
-            $("#progressbar").progressbar("value", progress);
-          }, stepTime);
-        }
-
-        function next() {
-          gameItemsIndex++;
-          if (gameItemsIndex >= gameItems.length) {
-            gameItemsIndex = 0;
+          if($("#progressbar").progressbar) {
+            // Inicializa o progressbar
+            $("#progressbar").progressbar({
+              value: 0
+            });
           }
-          showGameInHighlight(gameItems[gameItemsIndex]);
-          progress = 0;
-          $("#progressbar").progressbar("value", progress);
-        }
 
-        function prev() {
-          gameItemsIndex--;
-          if (gameItemsIndex < 0) {
-            gameItemsIndex = gameItems.length - 1;
-          }
-          showGameInHighlight(gameItems[gameItemsIndex]);
-          progress = 0;
-          $("#progressbar").progressbar("value", progress);
-        }
+          function startProgress() {
+            clearInterval(progressInterval);
+            progress = 0;
 
-        $('#next').click(() => {
-          clearInterval(progressInterval);
-          clearInterval(interval);
-          next();
-          startProgress();
-          interval = setInterval(next, duration);
-        });
-
-        $('#prev').click(() => {
-          clearInterval(progressInterval);
-          clearInterval(interval);
-          prev();
-          startProgress();
-          interval = setInterval(next, duration);
-        });
-        $('#next,#prev,#destaque-link').show();
-
-        // Inicializa o progressbar
-        $("#progressbar").progressbar({
-          value: 0
-        });
-
-        function startProgress() {
-          clearInterval(progressInterval);
-          progress = 0;
-
-          progressInterval = setInterval(() => {
-            progress += step;
-            if (progress >= 100) {
-              progress = 100;
-              clearInterval(progressInterval);
-              next(); // executa ação ao completar
-              startProgress(); // reinicia o ciclo
-            }
-            $("#progressbar").progressbar("value", progress);
-          }, stepTime);
-        }
-        startProgress();
-
-        let timeout;
-
-
-        function next() {
-          gameItemsIndex++;
-          if (gameItemsIndex >= gameItems.length) {
-            gameItemsIndex = 0;
-          }
-          const game = gameItems[gameItemsIndex];
-          showGameInHighlight(game);
-        }
-
-        function prev() {
-          gameItemsIndex--;
-          if (gameItemsIndex < 0) {
-            gameItemsIndex = gameItems.length - 1;
-          }
-          const game = gameItems[gameItemsIndex];
-          showGameInHighlight(game);
-        }
-        $('#next').click(() => {
-          next();
-          clearInterval(progressInterval);
-          startProgress();
-
-          clearInterval(interval);
-          clearTimeout(timeout);
-          timeout = setTimeout(() => {
-            interval = setInterval(next, 15000);
             progressInterval = setInterval(() => {
-              $("#progressbar").progressbar({
-                value: interval
-              });
-            }, 200);
-          }, 30000);
+              progress += step;
+              if (progress >= 100) {
+                progress = 100;
+                clearInterval(progressInterval);
+                next(); // executa ação ao completar
+                startProgress(); // reinicia o ciclo
+              }
+              $("#progressbar").progressbar("value", progress);
+            }, stepTime);
+          }
+          
+          if($("#progressbar").progressbar) {
+            startProgress();
+          }
+          let timeout;
+
+
+          function next() {
+            gameItemsIndex++;
+            if (gameItemsIndex >= gameItems.length) {
+              gameItemsIndex = 0;
+            }
+            const game = gameItems[gameItemsIndex];
+            showGameInHighlight(game);
+          }
+
+          function prev() {
+            gameItemsIndex--;
+            if (gameItemsIndex < 0) {
+              gameItemsIndex = gameItems.length - 1;
+            }
+            const game = gameItems[gameItemsIndex];
+            showGameInHighlight(game);
+          }
+          $('#next').click(() => {
+            next();
+            clearInterval(progressInterval);
+            startProgress();
+
+            clearInterval(interval);
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+              interval = setInterval(next, 15000);
+              progressInterval = setInterval(() => {
+                $("#progressbar").progressbar({
+                  value: interval
+                });
+              }, 200);
+            }, 30000);
+          });
+
+          $('#prev').click(() => {
+            prev();
+            clearInterval(progressInterval);
+            startProgress();
+
+            clearInterval(interval);
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+              interval = setInterval(prev, 15000);
+              progressInterval = setInterval(() => {
+                $("#progressbar").progressbar({
+                  value: interval
+                });
+              }, 200);
+            }, 30000);
+          });
         });
 
-        $('#prev').click(() => {
-          prev();
-          clearInterval(progressInterval);
-          startProgress();
-
-          clearInterval(interval);
-          clearTimeout(timeout);
-          timeout = setTimeout(() => {
-            interval = setInterval(prev, 15000);
-            progressInterval = setInterval(() => {
-              $("#progressbar").progressbar({
-                value: interval
-              });
-            }, 200);
-          }, 30000);
-        });
-      });
-
+      }, 1000)
     });
   </script>
 </body>
