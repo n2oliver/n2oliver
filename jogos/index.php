@@ -418,6 +418,39 @@ if ($impressionid) {
         });
       }
       
+      let permitido = false;
+
+      document.addEventListener("click", () => {
+          permitido = true;
+      });
+
+      const jaAbriu = sessionStorage.getItem("popup_abriu");
+
+      function abrirPopupUmaVez() {
+          if (!permitido) return;
+          if (jaAbriu) {
+              document.removeEventListener("mouseleave", aoSairPeloTopo);
+              return;
+          }
+
+          window.open(adUrl, "_blank");
+
+          sessionStorage.setItem("popup_abriu", "1"); // marca como aberto
+          permitido = false;
+      }
+
+      document.addEventListener("mouseleave", (e) => {
+          if (e.clientY <= 0) {
+              abrirPopupUmaVez();
+          }
+      });
+
+      document.addEventListener("visibilitychange", () => {
+          if (document.visibilityState === "hidden") {
+              abrirPopupUmaVez();
+          }
+      });
+      
       let gameItems = [];
       let gameItemsIndex = -1;
       $.ajax({
