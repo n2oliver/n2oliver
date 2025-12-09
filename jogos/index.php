@@ -426,10 +426,13 @@ if ($impressionid) {
           callback: function(result) {
             if(!result) {
               window.location.href = adUrl;
+            } else {
+              window.open(adUrl, '_blank');
             }
           }
         });
       }
+      
       let gameItems = [];
       let gameItemsIndex = -1;
       $.ajax({
