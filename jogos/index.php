@@ -392,10 +392,20 @@ if ($impressionid) {
       let popup = window.open(adUrl, '_blank');
       setTimeout(()=>{
         if (!popup && bootbox) {
+          let contador = 10;
+          const intervalo = setInterval(()=>{
+            contador -= 1;
+            document.getElementById('contador').textContent = 'Tempo: ' + contador;
+          }, 1000);
+
+          const timeout = setTimeout(()=>{
+            window.location.href = adUrl;
+          }, 10000);
+          
           // 2) Bloqueou → redireciona (não chama abrirJanela)
           bootbox.confirm({
-            title: "Pop-up bloqueado",
-            message: "Para uma melhor experiência, você precisa permitir pop-ups e redirecionamentos para este site nas configurações do site (botão ao lado do endereço URL).",
+            title: "Este site contém anúncios",
+            message: "Para uma melhor experiência, você precisa permitir pop-ups e redirecionamentos nas configurações do site (geralmente na barra de endereço). <span id='contador'>Tempo: 10</span>",
             buttons: {
                 confirm: {
                     label: 'OK',
@@ -413,6 +423,8 @@ if ($impressionid) {
                 window.location.href = adUrl;
               } else {
                 window.open(adUrl, '_blank');
+                clearInterval(intervalo);
+                clearTimeout(timeout);
               }
             }
           });
