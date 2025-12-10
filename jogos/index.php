@@ -321,6 +321,21 @@ if ($impressionid) {
     </section>
 
     <div id="progressbar" role="progressbar" title="progressbar"></div>
+    <div class="w-100 mt-1">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '29929d8720c37977a6ea64b1b7db2d02',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+      </script>
+      <script
+        type="text/javascript"
+        src="//laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"
+      ></script>
+    </div>
   </main>
   <div class="container m-auto p-0 mt-1">
     <div class="donation-section m-0 row">
