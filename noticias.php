@@ -75,29 +75,28 @@ $meta_title = 'Notícias — n2oliver';
                         <?php } else { 
                             $i = 0;
                             ?>
+                            <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
+                                crossorigin="anonymous"></script>
+                            <ins class="adsbygoogle"
+                                style="display:block"
+                                data-ad-format="fluid"
+                                data-ad-layout-key="-fb+5w+4e-db+86"
+                                data-ad-client="ca-pub-8124594027670911"
+                                data-ad-slot="1424347945"></ins>
+                            <script>
+                                document.addEventListener('DOMContentLoaded', ()=>{
+                                    setTimeout(()=>{
+                                        try {
+                                            if($('ins').children().length < 1)
+                                                (adsbygoogle = window.adsbygoogle || []).push({});
+                                        } catch (e) {
+                                            console.warn("AdSense Error:", e);
+                                        }
+                                    }, 500)
+                                });
+                            </script>
                             <?php 
-                                foreach ($noticias['results'] as $noticiasInfo) { 
-                                    $i++;
-                                    if($i == 2) { ?>
-                                        <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
-                                            crossorigin="anonymous"></script>
-                                        <ins class="adsbygoogle"
-                                            style="display:block"
-                                            data-ad-format="fluid"
-                                            data-ad-layout-key="-fb+5w+4e-db+86"
-                                            data-ad-client="ca-pub-8124594027670911"
-                                            data-ad-slot="1424347945"></ins>
-                                        <script>
-                                            document.addEventListener('DOMContentLoaded', ()=>{
-                                                try {
-                                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                                } catch (e) {
-                                                    console.warn("AdSense Error:", e);
-                                                }
-                                            });
-                                        </script>
-                                    <?php }
-                                    ?>
+                                foreach ($noticias['results'] as $noticiasInfo) { ?>
                                     <div class="border rounded shadow-sm mb-1 ms-1 bg-light" style="width: 100%; cursor: pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">
                                         <div class="p-2 noticia-card">
                                             <div class="item d-flex align-items-center gap-2">

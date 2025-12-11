@@ -341,7 +341,8 @@ if ($impressionid) {
         window.addEventListener("load", () => {
           setTimeout(() => {
             try {
-              (adsbygoogle = window.adsbygoogle || []).push({});
+              if($('ins').children().length < 1)
+                  (adsbygoogle = window.adsbygoogle || []).push({});
             } catch (e) {
               console.warn("AdSense Error:", e);
             }
