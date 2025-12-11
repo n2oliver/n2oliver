@@ -72,30 +72,54 @@ $meta_title = 'Notícias — n2oliver';
                         max-height: 100vh;">
                         <?php if (empty($noticias['results'])) { ?>
                             <div class="p-3" style="width: fit-content">Nenhuma notícia encontrada.</div>
-                        <?php } else { ?>
-                            <?php foreach ($noticias['results'] as $noticiasInfo): ?>
-                                <div class="border rounded shadow-sm mb-1 ms-1 bg-light" style="width: 100%; cursor: pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">
-                                    <div class="p-2 noticia-card">
-                                        <div class="item d-flex align-items-center gap-2">
-                                            <?= !empty($noticiaInfo['imagem']) ? '<div class="recentes-imagem" style="background-image: url(' . $noticiasInfo['imagem']   . ')"></div>' : '' ?>
-                                            <div class="d-flex flex-column">
-                                                <div class="mb-1 text-light" style="cursor:pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">
-                                                    <?= $noticiasInfo['titulo'] ?>
-                                                </div>
+                        <?php } else { 
+                            $i = 0;
+                            ?>
+                            <?php 
+                                foreach ($noticias['results'] as $noticiasInfo) { 
+                                    $i++;
+                                    if($i == 2) { ?>
+                                        <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
+                                            crossorigin="anonymous"></script>
+                                        <ins class="adsbygoogle"
+                                            style="display:block"
+                                            data-ad-format="fluid"
+                                            data-ad-layout-key="-fb+5w+4e-db+86"
+                                            data-ad-client="ca-pub-8124594027670911"
+                                            data-ad-slot="1424347945"></ins>
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', ()=>{
+                                                try {
+                                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                                } catch (e) {
+                                                    console.warn("AdSense Error:", e);
+                                                }
+                                            });
+                                        </script>
+                                    <?php }
+                                    ?>
+                                    <div class="border rounded shadow-sm mb-1 ms-1 bg-light" style="width: 100%; cursor: pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">
+                                        <div class="p-2 noticia-card">
+                                            <div class="item d-flex align-items-center gap-2">
+                                                <?= !empty($noticiaInfo['imagem']) ? '<div class="recentes-imagem" style="background-image: url(' . $noticiasInfo['imagem']   . ')"></div>' : '' ?>
+                                                <div class="d-flex flex-column">
+                                                    <div class="mb-1 text-light" style="cursor:pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">
+                                                        <?= $noticiasInfo['titulo'] ?>
+                                                    </div>
 
-                                                <small class="text-light">
-                                                    Publicado em <?= date("d/m/Y H:i", strtotime($noticiasInfo['data_publicacao'])) ?>
-                                                    por <?= htmlspecialchars($noticiasInfo['autor']) ?>
-                                                    <?php if (!empty($noticiasInfo['categoria'])): ?>
-                                                        — <em><?= htmlspecialchars($noticiasInfo['categoria']) ?></em>
-                                                    <?php endif; ?>
-                                                </small>
+                                                    <small class="text-light">
+                                                        Publicado em <?= date("d/m/Y H:i", strtotime($noticiasInfo['data_publicacao'])) ?>
+                                                        por <?= htmlspecialchars($noticiasInfo['autor']) ?>
+                                                        <?php if (!empty($noticiasInfo['categoria'])): ?>
+                                                            — <em><?= htmlspecialchars($noticiasInfo['categoria']) ?></em>
+                                                        <?php endif; ?>
+                                                    </small>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                            <?php endforeach; ?>
+                            <?php } ?>
                         <?php } ?>
                     </div>
                 </div>

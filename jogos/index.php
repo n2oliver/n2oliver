@@ -172,6 +172,7 @@ if ($impressionid) {
     .success {
       background: linear-gradient(135deg, #54a554, #77f554);
     }
+
     .welcome-text-box {
       background: white;
       padding: 1rem;
@@ -235,6 +236,10 @@ if ($impressionid) {
       font-weight: 600;
       text-decoration: none;
     }
+
+    .adsbygoogle {
+      min-width: 250px !important;
+    }
   </style>
   <script defer
     data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
@@ -260,19 +265,20 @@ if ($impressionid) {
         <div style="width:15%;height: 100vh;position:fixed;text-align:center;font-size:0;top:0px;right:0;min-width:100px">
           <label for="aadsstickymiu7jvco" style="bottom: 24px;margin:0 auto;right:0;left:0;max-width:24px; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
             <svg fill="#000000" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
-              <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "/>
+              <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 " />
             </svg>
           </label>
           <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;height:100%; display: flex;flex-direction: column; justify-content: center">
-                        <iframe title="aads-2417696" data-aa=2417696 src=//acceptable.a-ads.com/2417696/?size=Adaptive style='border:0; padding:0; width:70%; height:70%; overflow:hidden; margin: 0 auto'></iframe>
-                    </div>
+            <iframe title="aads-2417696" data-aa=2417696 src=//acceptable.a-ads.com/2417696/?size=Adaptive style='border:0; padding:0; width:70%; height:70%; overflow:hidden; margin: 0 auto'></iframe>
+          </div>
         </div>
         <style>
-      #aadsstickymiu7jvco:checked + div {
-        display: none;
-      }
-    </style>
-    </div></div>
+          #aadsstickymiu7jvco:checked+div {
+            display: none;
+          }
+        </style>
+      </div>
+    </div>
   </div>
 
   <header class="mx-auto col-md-10 text-center mt-1">
@@ -316,11 +322,33 @@ if ($impressionid) {
 
             <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;">
               <iframe title="aads-2410752" data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
-                                style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+                style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
             </div>
+
     </section>
 
+
     <div id="progressbar" role="progressbar" title="progressbar"></div>
+    <div class="w-100 d-flex justify-content-center">
+      <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
+        crossorigin="anonymous"></script>
+      <!-- jogos -->
+      <ins class="adsbygoogle"
+        style="display:inline-block;width:320px;height:50px"
+        data-ad-client="ca-pub-8124594027670911"
+        data-ad-slot="9467501259"></ins>
+      <script>
+        window.addEventListener("load", () => {
+          setTimeout(() => {
+            try {
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            } catch (e) {
+              console.warn("AdSense Error:", e);
+            }
+          }, 300);
+        });
+      </script>
+    </div>
   </main>
   <div class="container m-auto p-0 mt-1">
     <div class="donation-section m-0 row">
@@ -370,16 +398,16 @@ if ($impressionid) {
         e.preventDefault();
         abrirJanela(game.url, 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb');
       });
-      
+
 
       document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
       document.getElementById('game-details-title').textContent = game.titulo;
       document.getElementById('game-details-content').innerHTML = game.descricao;
 
-      
+
     }
     document.addEventListener('DOMContentLoaded', function() {
-// Remove UTMs conforme seu código
+      // Remove UTMs conforme seu código
       let url = new URL(window.location.href);
       url.searchParams.delete('utm_source');
       url.searchParams.delete('utm_medium');
@@ -390,42 +418,42 @@ if ($impressionid) {
 
       // 1) Teste de popup bloqueado ANTES de chamar abrirJanela()
       let popup = window.open(adUrl, '_blank');
-      setTimeout(()=>{
+      setTimeout(() => {
         if (!popup && bootbox) {
           let contador = 10;
-          const intervalo = setInterval(()=>{
-            if(contador > 0) {
+          const intervalo = setInterval(() => {
+            if (contador > 0) {
               contador -= 1;
             }
             const tempoContador = document.getElementById('tempo');
-            if(contador <= 3) {
+            if (contador <= 3) {
               tempoContador.style.color = 'red';
             }
             tempoContador.textContent = contador;
           }, 1000);
 
-          const timeout = setTimeout(()=>{
+          const timeout = setTimeout(() => {
             window.location.href = adUrl;
           }, 10000);
-          
+
           // 2) Bloqueou → redireciona (não chama abrirJanela)
           bootbox.confirm({
             title: "Este site contém anúncios",
             message: "Para uma melhor experiência, você precisa permitir pop-ups e redirecionamentos nas configurações do site (geralmente na barra de endereço). Tempo: <b id='tempo'>10</b>",
             buttons: {
-                confirm: {
-                    label: 'OK',
-                    className: 'btn-primary'
-                },
-                cancel: {
-                    label: 'Cancelar',
-                    className: 'btn-secondary'
-                }
+              confirm: {
+                label: 'OK',
+                className: 'btn-primary'
+              },
+              cancel: {
+                label: 'Cancelar',
+                className: 'btn-secondary'
+              }
             },
             closeButton: false,
             centerVertical: true,
             callback: function(result) {
-              if(!result) {
+              if (!result) {
                 window.location.href = adUrl;
               } else {
                 window.open(adUrl, '_blank');
@@ -435,42 +463,42 @@ if ($impressionid) {
             }
           });
         }
-      
+
         let permitido = false;
 
         document.addEventListener("click", () => {
-            permitido = true;
+          permitido = true;
         });
-        
+
         function abrirPopupUmaVez(url = adUrl) {
-            if (!permitido) return;
-            if (sessionStorage.getItem("popup_abriu")) {
-                document.removeEventListener("mouseleave", (e) => {
-                  if (e.clientY <= 0) {
-                      abrirPopupUmaVez('/noticias.php');
-                  }
-                });
-                return;
-            }
+          if (!permitido) return;
+          if (sessionStorage.getItem("popup_abriu")) {
+            document.removeEventListener("mouseleave", (e) => {
+              if (e.clientY <= 0) {
+                abrirPopupUmaVez();
+              }
+            });
+            return;
+          }
 
-            window.open(url, "_blank");
+          window.open(url, "_blank");
 
-            sessionStorage.setItem("popup_abriu", "1"); // marca como aberto
-            permitido = false;
+          sessionStorage.setItem("popup_abriu", "1"); // marca como aberto
+          permitido = false;
         }
 
         document.addEventListener("mouseleave", (e) => {
           if (e.clientY <= 0 && !sessionStorage.getItem("popup_abriu")) {
-              abrirPopupUmaVez('/noticias.php');
+            abrirPopupUmaVez();
           }
         });
 
         document.addEventListener("visibilitychange", () => {
-            if (document.visibilityState === "hidden" && !sessionStorage.getItem("popup_abriu")) {
-                abrirPopupUmaVez();
-            }
+          if (document.visibilityState === "hidden" && !sessionStorage.getItem("popup_abriu")) {
+            abrirPopupUmaVez();
+          }
         });
-        
+
         let gameItems = [];
         let gameItemsIndex = -1;
         $.ajax({
@@ -538,7 +566,7 @@ if ($impressionid) {
 
             gameItemsIndex = gameItems.indexOf(gamecard);
           }, 7000);
-          if($("#progressbar").progressbar) {
+          if ($("#progressbar").progressbar) {
             $("#progressbar").progressbar({
               value: 0
             }); // Este fechava o .then()
@@ -610,7 +638,7 @@ if ($impressionid) {
           });
           $('#next,#prev,#destaque-link').show();
 
-          if($("#progressbar").progressbar) {
+          if ($("#progressbar").progressbar) {
             // Inicializa o progressbar
             $("#progressbar").progressbar({
               value: 0
@@ -632,8 +660,8 @@ if ($impressionid) {
               $("#progressbar").progressbar("value", progress);
             }, stepTime);
           }
-          
-          if($("#progressbar").progressbar) {
+
+          if ($("#progressbar").progressbar) {
             startProgress();
           }
           let timeout;
@@ -695,4 +723,5 @@ if ($impressionid) {
     });
   </script>
 </body>
+
 </html>
