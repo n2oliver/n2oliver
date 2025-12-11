@@ -40,6 +40,29 @@ $meta_title = 'Notícias — n2oliver';
                 </h1>
 
                 <div id="recentes-wrapper" class="row mb-0 p-0">
+                    <script type="text/javascript">
+                        function waitForEl(selector, callback){
+                            var poller1 = setInterval(function(){
+                                $jObject = jQuery(selector);
+                                if($jObject.length < 1){
+                                    return;
+                                }
+                                clearInterval(poller1);
+                                callback($jObject)
+                            },100);
+                        }
+                        atOptions = {
+                            'key' : '29929d8720c37977a6ea64b1b7db2d02',
+                            'format' : 'iframe',
+                            'height' : 50,
+                            'width' : 320,
+                            'params' : {}
+                        };
+                        </script>
+                        <script
+                        type="text/javascript"
+                        src="//laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"
+                        ></script>
                     <?php 
                         include_once('./buscar-noticias.php');
                     ?>

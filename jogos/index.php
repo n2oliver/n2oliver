@@ -321,21 +321,6 @@ if ($impressionid) {
     </section>
 
     <div id="progressbar" role="progressbar" title="progressbar"></div>
-    <div class="w-100 mt-1">
-      <script type="text/javascript">
-        atOptions = {
-          'key' : '29929d8720c37977a6ea64b1b7db2d02',
-          'format' : 'iframe',
-          'height' : 50,
-          'width' : 320,
-          'params' : {}
-        };
-      </script>
-      <script
-        type="text/javascript"
-        src="//laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"
-      ></script>
-    </div>
   </main>
   <div class="container m-auto p-0 mt-1">
     <div class="donation-section m-0 row">
@@ -456,34 +441,32 @@ if ($impressionid) {
         document.addEventListener("click", () => {
             permitido = true;
         });
-
-        const jaAbriu = sessionStorage.getItem("popup_abriu");
         
-        function abrirPopupUmaVez() {
+        function abrirPopupUmaVez(url = adUrl) {
             if (!permitido) return;
-            if (jaAbriu) {
+            if (sessionStorage.getItem("popup_abriu")) {
                 document.removeEventListener("mouseleave", (e) => {
                   if (e.clientY <= 0) {
-                      abrirPopupUmaVez();
+                      abrirPopupUmaVez('/noticias.php');
                   }
                 });
                 return;
             }
 
-            window.open(adUrl, "_blank");
+            window.open(url, "_blank");
 
             sessionStorage.setItem("popup_abriu", "1"); // marca como aberto
             permitido = false;
         }
 
         document.addEventListener("mouseleave", (e) => {
-          if (e.clientY <= 0) {
-              abrirPopupUmaVez();
+          if (e.clientY <= 0 && !sessionStorage.getItem("popup_abriu")) {
+              abrirPopupUmaVez('/noticias.php');
           }
         });
 
         document.addEventListener("visibilitychange", () => {
-            if (document.visibilityState === "hidden") {
+            if (document.visibilityState === "hidden" && !sessionStorage.getItem("popup_abriu")) {
                 abrirPopupUmaVez();
             }
         });
@@ -712,5 +695,4 @@ if ($impressionid) {
     });
   </script>
 </body>
-
 </html>
