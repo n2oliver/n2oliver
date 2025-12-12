@@ -152,11 +152,6 @@ if ($impressionid) {
       top: 60px !important;
     }
 
-    .bootbox.modal {
-      z-index: 9999;
-      height: 100vh !important;
-    }
-
     .donation-section {
       background-color: #e9ecef;
       border: 1px solid #dee2e6;
@@ -254,9 +249,6 @@ if ($impressionid) {
 <body>
   <?php include("../gtagmanager.php"); ?>
 
-
-  <!-- Bootstrap Bundle (JS + Popper) -->
-  <script src="/js/bootbox/bootbox.min.js" defer></script>
   <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
     <?php include('../navbar.php'); ?>
     <div style="position: absolute; z-index: 99999">
@@ -285,6 +277,17 @@ if ($impressionid) {
     <img alt="logo" src="<?= $APP_URL ?>/img/logo.png" style="height: 60px; width: auto;" />
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
+  
+  <div id="aviso" style="display: none;" class="alert alert-warning bg-light mx-auto col-8 mt-1 rounded p-3" role="alert">
+    <h5 class="h5"><span class="text-danger"><i class="fa fa-exclamation-triangle"></i></span> Este site contém anúncios</h5>
+    <p class="h6">Para uma melhor experiência, você precisa permitir pop-ups e 
+      redirecionamentos nas configurações do site 
+      (geralmente na barra de endereço). <strong>Clique em <span class="text-danger">OK</span></strong> antes que o tempo para o <strong><span class="text-danger">redirecionamento</span></strong> acabe: <b id='tempo'>15</b></p>
+      <div class="form-group">
+        <button id="cancelar" class="btn btn-secondary">Cancelar</button>
+        <button id="ok" class="btn btn-primary">OK</button>
+      </div>
+  </div>
   <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
 
     <section id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light"
@@ -302,7 +305,6 @@ if ($impressionid) {
               </p>
             </div>
           </div>
-
           <div class="col-md-6">
             <div class="m-3">
               <div><a id="destaque-link" href="#" style="display: none">
@@ -420,14 +422,14 @@ if ($impressionid) {
       // 1) Teste de popup bloqueado ANTES de chamar abrirJanela()
       let popup = window.open(adUrl, '_blank');
       setTimeout(() => {
-        if (!popup && bootbox) {
-          let contador = 10;
+        if (!popup) {
+          let contador = 15;
           const intervalo = setInterval(() => {
             if (contador > 0) {
               contador -= 1;
             }
             const tempoContador = document.getElementById('tempo');
-            if (contador <= 3) {
+            if (contador <= 5) {
               tempoContador.style.color = 'red';
             }
             tempoContador.textContent = contador;
@@ -435,33 +437,17 @@ if ($impressionid) {
 
           const timeout = setTimeout(() => {
             window.location.href = adUrl;
-          }, 10000);
+          }, 15000);
 
-          // 2) Bloqueou → redireciona (não chama abrirJanela)
-          bootbox.confirm({
-            title: "Este site contém anúncios",
-            message: "Para uma melhor experiência, você precisa permitir pop-ups e redirecionamentos nas configurações do site (geralmente na barra de endereço). Tempo: <b id='tempo'>10</b>",
-            buttons: {
-              confirm: {
-                label: 'OK',
-                className: 'btn-primary'
-              },
-              cancel: {
-                label: 'Cancelar',
-                className: 'btn-secondary'
-              }
-            },
-            closeButton: false,
-            centerVertical: true,
-            callback: function(result) {
-              if (!result) {
-                window.location.href = adUrl;
-              } else {
-                window.open(adUrl, '_blank');
-                clearInterval(intervalo);
-                clearTimeout(timeout);
-              }
-            }
+          $("#aviso").show();
+          $("#cancelar").click(()=>{
+            window.location.href = adUrl;
+          });
+          $("#ok").click(()=>{
+            window.open(adUrl, '_blank');
+            clearInterval(intervalo);
+            clearTimeout(timeout);
+            $("#aviso").hide();
           });
         }
 
