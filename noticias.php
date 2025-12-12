@@ -40,29 +40,6 @@ $meta_title = 'Notícias — n2oliver';
                 </h1>
 
                 <div id="recentes-wrapper" class="row mb-0 p-0">
-                    <script type="text/javascript">
-                        function waitForEl(selector, callback){
-                            var poller1 = setInterval(function(){
-                                $jObject = jQuery(selector);
-                                if($jObject.length < 1){
-                                    return;
-                                }
-                                clearInterval(poller1);
-                                callback($jObject)
-                            },100);
-                        }
-                        atOptions = {
-                            'key' : '29929d8720c37977a6ea64b1b7db2d02',
-                            'format' : 'iframe',
-                            'height' : 50,
-                            'width' : 320,
-                            'params' : {}
-                        };
-                        </script>
-                        <script
-                        type="text/javascript"
-                        src="//laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"
-                        ></script>
                     <?php 
                         include_once('./buscar-noticias.php');
                     ?>
@@ -72,29 +49,7 @@ $meta_title = 'Notícias — n2oliver';
                         max-height: 100vh;">
                         <?php if (empty($noticias['results'])) { ?>
                             <div class="p-3" style="width: fit-content">Nenhuma notícia encontrada.</div>
-                        <?php } else { 
-                            $i = 0;
-                            ?>
-                            <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
-                                crossorigin="anonymous"></script>
-                            <ins class="adsbygoogle"
-                                style="display:block"
-                                data-ad-format="fluid"
-                                data-ad-layout-key="-fb+5w+4e-db+86"
-                                data-ad-client="ca-pub-8124594027670911"
-                                data-ad-slot="1424347945"></ins>
-                            <script>
-                                document.addEventListener('DOMContentLoaded', ()=>{
-                                    setTimeout(()=>{
-                                        try {
-                                            if($('ins').children().length < 1)
-                                                (adsbygoogle = window.adsbygoogle || []).push({});
-                                        } catch (e) {
-                                            console.warn("AdSense Error:", e);
-                                        }
-                                    }, 500)
-                                });
-                            </script>
+                        <?php } else { ?>
                             <?php 
                                 foreach ($noticias['results'] as $noticiasInfo) { ?>
                                     <div class="border rounded shadow-sm mb-1 ms-1 bg-light" style="width: 100%; cursor: pointer;" onclick="toggleNoticiaContent(event, <?= $noticiasInfo['id'] ?>)">

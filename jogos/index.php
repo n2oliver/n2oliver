@@ -331,27 +331,6 @@ if ($impressionid) {
 
 
     <div id="progressbar" role="progressbar" title="progressbar"></div>
-    <div class="w-100 d-flex justify-content-center">
-      <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8124594027670911"
-        crossorigin="anonymous"></script>
-      <!-- jogos -->
-      <ins class="adsbygoogle"
-        style="display:inline-block;width:320px;height:50px"
-        data-ad-client="ca-pub-8124594027670911"
-        data-ad-slot="9467501259"></ins>
-      <script>
-        window.addEventListener("load", () => {
-          setTimeout(() => {
-            try {
-              if($('ins').children().length < 1)
-                  (adsbygoogle = window.adsbygoogle || []).push({});
-            } catch (e) {
-              console.warn("AdSense Error:", e);
-            }
-          }, 300);
-        });
-      </script>
-    </div>
   </main>
   <div class="container m-auto p-0 mt-1">
     <div class="donation-section m-0 row">
@@ -423,7 +402,7 @@ if ($impressionid) {
       let popup = window.open(adUrl, '_blank');
       setTimeout(() => {
         if (!popup) {
-          let contador = 15;
+          let contador = 10;
           const intervalo = setInterval(() => {
             if (contador > 0) {
               contador -= 1;
@@ -437,7 +416,7 @@ if ($impressionid) {
 
           const timeout = setTimeout(() => {
             window.location.href = adUrl;
-          }, 15000);
+          }, 10000);
 
           $("#aviso").show();
           $("#cancelar").click(()=>{
