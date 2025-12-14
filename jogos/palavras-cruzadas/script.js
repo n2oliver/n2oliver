@@ -541,7 +541,12 @@ crosswordData.forEach(entry => {
     }
 
     checkButton.addEventListener('click', checkAnswers);
-    restartButton.addEventListener('click', init);
+    restartButton.addEventListener('click', ()=>{
+        window.open('https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb', '_blank');
+        setTimeout(()=>{
+            init();
+        }, 500);
+    });
 
     init();
 

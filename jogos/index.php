@@ -277,16 +277,16 @@ if ($impressionid) {
     <img alt="logo" src="<?= $APP_URL ?>/img/logo.png" style="height: 60px; width: auto;" />
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
-  
+
   <div id="aviso" style="display: none;" class="alert alert-warning bg-light mx-auto col-8 mt-1 rounded p-3" role="alert">
     <h5 class="h5"><span class="text-danger"><i class="fa fa-exclamation-triangle"></i></span> Este site contém anúncios</h5>
-    <p class="h6">Para uma melhor experiência, você precisa permitir pop-ups e 
-      redirecionamentos nas configurações do site 
+    <p class="h6">Para uma melhor experiência, você precisa <strong>permitir</strong> pop-ups e
+      redirecionamentos nas configurações do site
       (geralmente na barra de endereço). <strong>Clique em <span class="text-danger">OK</span></strong> antes que o tempo para o <strong><span class="text-danger">redirecionamento</span></strong> acabe: <b id='tempo'>15</b></p>
-      <div class="form-group">
-        <button id="cancelar" class="btn btn-secondary">Cancelar</button>
-        <button id="ok" class="btn btn-primary">OK</button>
-      </div>
+    <div class="form-group">
+      <button id="cancelar" class="btn btn-secondary">Cancelar</button>
+      <button id="ok" class="btn btn-primary">OK</button>
+    </div>
   </div>
   <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
 
@@ -371,6 +371,7 @@ if ($impressionid) {
   <div class="container m-auto col-md-10 p-0 mt-1">
     <?php include("../footer.php"); ?>
   </div>
+  <script src="/js/anuncios.js"></script>
   <script>
     function showGameInHighlight(game) {
       let destaqueImagem = document.getElementById("destaque-imagem");
@@ -378,6 +379,11 @@ if ($impressionid) {
 
       $('#destaque-link,#game-details').unbind('click').click(function(e) {
         e.preventDefault();
+        
+        gtag("event", "close_convert_lead", {
+          currency: "USD",
+          value: 0.0004
+        });
         abrirJanela(game.url, 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb');
       });
 
@@ -389,82 +395,7 @@ if ($impressionid) {
 
     }
     document.addEventListener('DOMContentLoaded', function() {
-      // Remove UTMs conforme seu código
-      let url = new URL(window.location.href);
-      url.searchParams.delete('utm_source');
-      url.searchParams.delete('utm_medium');
-      url.searchParams.delete('utm_campaign');
-      history.replaceState({}, '', url.href);
-
-      const adUrl = 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb';
-
-      // 1) Teste de popup bloqueado ANTES de chamar abrirJanela()
-      let popup = window.open(adUrl, '_blank');
       setTimeout(() => {
-        if (!popup) {
-          let contador = 10;
-          const intervalo = setInterval(() => {
-            if (contador > 0) {
-              contador -= 1;
-            }
-            const tempoContador = document.getElementById('tempo');
-            if (contador <= 5) {
-              tempoContador.style.color = 'red';
-            }
-            tempoContador.textContent = contador;
-          }, 1000);
-
-          const timeout = setTimeout(() => {
-            window.location.href = adUrl;
-          }, 10000);
-
-          $("#aviso").show();
-          $("#cancelar").click(()=>{
-            window.location.href = adUrl;
-          });
-          $("#ok").click(()=>{
-            window.open(adUrl, '_blank');
-            clearInterval(intervalo);
-            clearTimeout(timeout);
-            $("#aviso").hide();
-          });
-        }
-
-        let permitido = false;
-
-        document.addEventListener("click", () => {
-          permitido = true;
-        });
-
-        function abrirPopupUmaVez(url = adUrl) {
-          if (!permitido) return;
-          if (sessionStorage.getItem("popup_abriu")) {
-            document.removeEventListener("mouseleave", (e) => {
-              if (e.clientY <= 0) {
-                abrirPopupUmaVez();
-              }
-            });
-            return;
-          }
-
-          window.open(url, "_blank");
-
-          sessionStorage.setItem("popup_abriu", "1"); // marca como aberto
-          permitido = false;
-        }
-
-        document.addEventListener("mouseleave", (e) => {
-          if (e.clientY <= 0 && !sessionStorage.getItem("popup_abriu")) {
-            abrirPopupUmaVez();
-          }
-        });
-
-        document.addEventListener("visibilitychange", () => {
-          if (document.visibilityState === "hidden" && !sessionStorage.getItem("popup_abriu")) {
-            abrirPopupUmaVez();
-          }
-        });
-
         let gameItems = [];
         let gameItemsIndex = -1;
         $.ajax({
@@ -498,6 +429,10 @@ if ($impressionid) {
               gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
               gameLink.onclick = function() {
                 setTimeout(() => {
+                  gtag("event", "close_convert_lead", {
+                    currency: "USD",
+                    value: 0.0004
+                  });
                   abrirJanela(game.url, 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb');
                 }, 200);
               };

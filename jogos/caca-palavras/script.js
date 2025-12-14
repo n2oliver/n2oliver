@@ -431,7 +431,12 @@ function placeWord(word) {
     gridElement.addEventListener('touchstart', handleStartSelection, { passive: false });
     gridElement.addEventListener('touchmove', handleMoveSelection, { passive: false });
     gridElement.addEventListener('touchend', handleEndSelection);
-    restartButton.addEventListener('click', init);
+    restartButton.addEventListener('click', () => {
+        window.open('https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb', '_blank');
+        setTimeout(()=>{
+            init();
+        }, 500);
+    });
 
     init();
     // Observe <html lang="..."> changes (gtranslate/gtranslate-like widgets usually set this)

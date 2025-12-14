@@ -13,18 +13,7 @@
                 <div class="proxima-linha-wrapper col-8 d-flex align-self-end flex-column">
                         <div class="proxima-linha text-white rounded-pill py-0 px-3 w-100 my-3">Óliver S. Castilho
                             <div class="nome-completo-osc" class="mt-4">Pronto para a próxima linha!
-                                <div class="d-flex align-content-end">
-                                    <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=oliver-c-ab2748b9" target="_blank">Seguir no LinkedIn</a>
-                                    <a style="font-size: 24px; color: white; background-image: linear-gradient(green, lightgreen, green)" class="px-1 rounded-circle mx-1 align-content-center" href="https://wa.me/5521986695629?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" target="_blank" rel="noopener noreferrer">
-                                        <i class="fa-brands fa-whatsapp"></i>
-                                    </a>
-                                    <a style="font-size: 24px; color: white; background-image: linear-gradient(magenta, pink, magenta)" class="px-1 rounded-circle mx-1 align-content-center" href="https://www.instagram.com/n2oliver/" target="_blank" rel="noopener noreferrer">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </a>
-                                    <a style="font-size: 24px; color: white; background-image: linear-gradient(black, gray, black)" class="px-1 rounded-circle mx-1 align-content-center" href="https://github.com/n2oliver" target="_blank" rel="noopener noreferrer">
-                                        <i class="fa-brands fa-github"></i>
-                                    </a>
-                                </div>
+                                <?php include(__DIR__ . '/social-media.php'); ?>
                             </div>
                         </div>    
                     <div class="d-flex w-100 align-self-end justify-content-between" style="height: fit-content">

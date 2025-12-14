@@ -17,6 +17,17 @@ $meta_title = 'Notícias — n2oliver';
 <body>
     
     <?php include('./navbar.php'); ?>
+    
+    <div id="aviso" style="display: none;" class="alert alert-warning bg-light mx-auto col-8 mt-1 rounded p-3" role="alert">
+        <h5 class="h5"><span class="text-danger"><i class="fa fa-exclamation-triangle"></i></span> Este site contém anúncios</h5>
+        <p class="h6">Para uma melhor experiência, você precisa permitir pop-ups e
+        redirecionamentos nas configurações do site
+        (geralmente na barra de endereço). <strong>Clique em <span class="text-danger">OK</span></strong> antes que o tempo para o <strong><span class="text-danger">redirecionamento</span></strong> acabe: <b id='tempo'>15</b></p>
+        <div class="form-group">
+        <button id="cancelar" class="btn btn-secondary">Cancelar</button>
+        <button id="ok" class="btn btn-primary">OK</button>
+        </div>
+    </div>
     <div>
         <h1 class="w-100 text-light px-4 pt-3 pb-4 bg-primary mb-0">
             <div class="d-flex justify-content-between align-items-center">
@@ -40,6 +51,8 @@ $meta_title = 'Notícias — n2oliver';
                 </h1>
 
                 <div id="recentes-wrapper" class="row mb-0 p-0">
+                    
+                    <script src="/js/anuncios.js"></script>
                     <?php 
                         include_once('./buscar-noticias.php');
                     ?>

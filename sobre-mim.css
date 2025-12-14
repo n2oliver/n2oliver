@@ -71,25 +71,6 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
-
-.libutton {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 7px;
-    text-align: center;
-    outline: none;
-    text-decoration: none !important;
-    color: #ffffff !important;
-    width: 150px;
-    height: 32px;
-    border-radius: 16px;
-    background-image: linear-gradient(#0A66C2, cyan, #0A66C2);
-    font-family: "SF Pro Text", Helvetica, sans-serif;
-    font-size: 14px!important;
-    line-height: 1rem !important;
-    margin: 0 !important;
-}
 #sobre-mim {
     background-color: rgba(43,43,59,.43);
 }

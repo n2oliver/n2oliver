@@ -2,6 +2,9 @@
 
 <footer class="site-footer mt-2 m-auto">
   <a href="/"><span class="oliver-dev-logo footer-logo">n2oliver</span></a>
+  <div class="d-flex justify-content-center">
+    <?php include(__DIR__ . '/social-media.php'); ?>
+  </div>
   
   <span class="footer-text-small">
     Todos os direitos reservados - n2oliver - 2025
@@ -9,7 +12,6 @@
 
   <a href="/politica-de-privacidade.html">Política de Privacidade</a>
   <a href="/contato.php">Contato</a>
-
   <span>
     <a href="mailto:suporte@n2oliver.com" style="margin-left: 10px">suporte@n2oliver.com</a>
   </span>

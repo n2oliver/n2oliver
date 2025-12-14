@@ -10,6 +10,16 @@
     <meta name='admaven-placement' content=Bqja8pjw8>
     <meta name="pushsdk" content="322d99f94878aedd7de1ac412ba0561c">
     <meta name="af75eac4081069fbc72900cc9a43e129aefae092" content="af75eac4081069fbc72900cc9a43e129aefae092" />
+    <style>
+        .proxima-linha .social-media-icon {
+            padding-right: .25rem !important;
+            padding-left: .25rem !important;
+        }
+        .proxima-linha .fa-brands {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+    </style>
 </head>
 <body class="oliver-dev">
 <?php include("./gtagmanager.php"); ?>

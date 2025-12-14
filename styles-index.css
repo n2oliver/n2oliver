@@ -120,23 +120,13 @@ footer {
     width: 100%;
 }
 
-footer a {
-    color: #e0e0e0;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: #9c006c;
-}
-
 /* Button Styles */
 .btn-primary {
     border: none;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: ease 0.3s;
 }
 
 .btn-custom {
