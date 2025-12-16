@@ -379,12 +379,15 @@ if ($impressionid) {
 
       $('#destaque-link,#game-details').unbind('click').click(function(e) {
         e.preventDefault();
+        window.open('https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746', '_blank');
         
-        gtag("event", "close_convert_lead", {
-          currency: "USD",
-          value: 0.0004
-        });
-        abrirJanela(game.url, 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb');
+        setTimeout(()=>{          
+          gtag("event", "close_convert_lead", {
+            currency: "USD",
+            value: 0.0004
+          });
+          abrirJanela(game.url, 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb');
+        }, 200);
       });
 
 
@@ -428,6 +431,7 @@ if ($impressionid) {
               const gameSpan = document.createElement('span');
               gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
               gameLink.onclick = function() {
+                window.open('https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746', '_blank');
                 setTimeout(() => {
                   gtag("event", "close_convert_lead", {
                     currency: "USD",

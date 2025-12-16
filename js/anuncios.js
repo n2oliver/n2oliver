@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const adUrl = 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb';
+    const adUrl2 = 'https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746';
 
     // 1) Teste de popup bloqueado ANTES de chamar abrirJanela()
     let popup = window.open(adUrl, '_blank');
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 currency: "USD",
                 value: 0.0004
             });
+            window.open(adUrl2, '_blank')
         }
 
         let permitido = false;
@@ -77,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 value: 0.0004
             });
             window.open(url, "_blank");
+            window.open(adUrl2, '_blank');
 
             sessionStorage.setItem("popup_abriu", "1"); // marca como aberto
             permitido = false;
