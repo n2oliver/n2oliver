@@ -3,8 +3,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const adUrl = 'https://laxativethem.com/ffga4c7z4?key=9b0193dfd0a136a88071da78968c41eb';
     const adUrl2 = 'https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746';
 
-    // 1) Teste de popup bloqueado ANTES de chamar abrirJanela()
     let popup = window.open(adUrl, '_blank');
+    // 1) Teste de popup bloqueado ANTES de chamar abrirJanela()
+    let permitido = false;
+    function abrirPopupUmaVez(url = adUrl) {
+        if (!permitido) return;
+        if (sessionStorage.getItem("popup_abriu")) {
+            document.removeEventListener("mouseleave", (e) => {
+                if (e.clientY <= 0 && !sessionStorage.getItem("popup_abriu")) {
+                    gtag("event", "close_convert_lead", {
+                        currency: "USD",
+                        value: 0.0004
+                    });
+                    abrirPopupUmaVez();
+                }
+            });
+            return;
+        }
+
+        gtag("event", "close_convert_lead", {
+            currency: "USD",
+            value: 0.0004
+        });
+        window.open(url, "_blank");
+        
+        if (location.search.toLowerCase().includes('utm_source=popads')) {
+            window.open(adUrl2, '_blank');
+        }
+
+        sessionStorage.setItem("popup_abriu", "1"); // marca como aberto
+        permitido = false;
+    }
+
     setTimeout(() => {
         if (!popup) {
             let contador = 10;
@@ -46,44 +76,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 $("#aviso").hide();
             });
         } else {
-            gtag("event", "close_convert_lead", {
-                currency: "USD",
-                value: 0.0004
-            });
-            window.open(adUrl2, '_blank')
-        }
 
-        let permitido = false;
+            if (location.search.toLowerCase().includes('utm_source=popads')) {
+                gtag("event", "close_convert_lead", {
+                    currency: "USD",
+                    value: 0.0004
+                });
+                window.open(adUrl2, '_blank')
+            }
+        }
 
         document.addEventListener("click", () => {
             permitido = true;
         });
-
-        function abrirPopupUmaVez(url = adUrl) {
-            if (!permitido) return;
-            if (sessionStorage.getItem("popup_abriu")) {
-                document.removeEventListener("mouseleave", (e) => {
-                    if (e.clientY <= 0 && !sessionStorage.getItem("popup_abriu")) {
-                        gtag("event", "close_convert_lead", {
-                            currency: "USD",
-                            value: 0.0004
-                        });
-                        abrirPopupUmaVez();
-                    }
-                });
-                return;
-            }
-
-            gtag("event", "close_convert_lead", {
-                currency: "USD",
-                value: 0.0004
-            });
-            window.open(url, "_blank");
-            window.open(adUrl2, '_blank');
-
-            sessionStorage.setItem("popup_abriu", "1"); // marca como aberto
-            permitido = false;
-        }
 
         document.addEventListener("mouseleave", (e) => {
             if (e.clientY <= 0 && !sessionStorage.getItem("popup_abriu")) {

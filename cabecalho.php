@@ -12,7 +12,7 @@
     $meta_robots = isset($meta_robots) ? $meta_robots : 'index,follow';
     ?>
     <title><?= htmlspecialchars($meta_title, ENT_QUOTES|ENT_HTML5) ?></title>
-    <meta name="7searchppc" content="7c9ad8c74aa926e3ad0ac62e7850b50c"/>
+    <meta name="7searchppc" content="eaa599b68df06e77def4d2f3b0228830"/>
     <meta name="bitmedia-site-verification" content="8c13cdb5118fd60e78d535bda02f0242" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

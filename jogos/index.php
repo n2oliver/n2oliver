@@ -247,6 +247,7 @@ if ($impressionid) {
 </head>
 
 <body>
+  <script async src="https://appsha-pnd.ctengine.io/js/script.js?wkey=97NjKiTr7b"></script>
   <?php include("../gtagmanager.php"); ?>
 
   <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
