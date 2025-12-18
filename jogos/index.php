@@ -247,7 +247,6 @@ if ($impressionid) {
 </head>
 
 <body>
-  <script async src="https://appsha-pnd.ctengine.io/js/script.js?wkey=97NjKiTr7b"></script>
   <?php include("../gtagmanager.php"); ?>
 
   <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
@@ -332,6 +331,21 @@ if ($impressionid) {
 
 
     <div id="progressbar" role="progressbar" title="progressbar"></div>
+    <div class="w-100 justify-content-center d-flex">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '29929d8720c37977a6ea64b1b7db2d02',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+      </script>
+      <script
+        type="text/javascript"
+        src="https://laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"
+      ></script>
+    </div>
   </main>
   <div class="container m-auto p-0 mt-1">
     <div class="donation-section m-0 row">
@@ -372,7 +386,6 @@ if ($impressionid) {
   <div class="container m-auto col-md-10 p-0 mt-1">
     <?php include("../footer.php"); ?>
   </div>
-  <script src="/js/anuncios.js"></script>
   <script>
     function showGameInHighlight(game) {
       let destaqueImagem = document.getElementById("destaque-imagem");

@@ -21,10 +21,10 @@ style="background-image: url(/img/theme-image-natal.png);">
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="/"><i class="fa-solid fa-home"></i> Início</a></li>
-            <li class="nav-item"><a class="nav-link" href="/noticias.php"><i class="fa-solid fa-newspaper"></i> Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="/noticias.php"><i class="fa-solid fa-newspaper"></i> Notícias</a></li>
             <li class="nav-item"><a class="nav-link" href="/aplicativos.php"><i class="fa-solid fa-hand-pointer"></i> Aplicativos</a></li>
             <li class="nav-item"><a class="nav-link" href="/jogos/index.php"><i class="fa-solid fa-puzzle-piece"></i> Jogos</a></li>
-            <li class="nav-item"><a class="nav-link" href="/lojavirtual/index.php"><i class="fa-solid fa-store"></i> Oliv3r Store</a></li>
+            <li class="nav-item"><a class="nav-link" href="/lojavirtual/index.php"><i class="fa-solid fa-store"></i> Loja Virtual</a></li>
             <li class="nav-item"><a class="nav-link" href="/contato.php"><i class="fa-solid fa-envelope"></i> Contato</a></li>
         </ul>
     </div>

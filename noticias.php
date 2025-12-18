@@ -52,7 +52,6 @@ $meta_title = 'Notícias — n2oliver';
 
                 <div id="recentes-wrapper" class="row mb-0 p-0">
                     
-                    <script src="/js/anuncios.js"></script>
                     <?php 
                         include_once('./buscar-noticias.php');
                     ?>

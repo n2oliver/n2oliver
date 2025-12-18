@@ -147,6 +147,7 @@
 </head>
 
 <body class="m-auto">
+    <script async src="https://appsha-pnd.ctengine.io/js/script.js?wkey=97NjKiTr7b"></script>
 <?php include("../gtagmanager.php"); ?>
     <div class="row">
         <div class="col-sm-12 col-md-10 col-lg-10 px-0">
