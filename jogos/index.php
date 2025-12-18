@@ -61,8 +61,10 @@ if ($impressionid) {
       padding: 0 !important;
       background: #f0f0f0;
       background-image: url(../jogos/img/quebracabecas.jpg);
-      backdrop-filter: brightness(0.4);
       overflow: auto;
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
     }
 
     header {
@@ -186,9 +188,6 @@ if ($impressionid) {
     }
 
     #destaque-imagem {
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
       padding: 32px 16px;
       color: #000;
       text-align: center;
@@ -197,6 +196,7 @@ if ($impressionid) {
       border-top-right-radius: 0.375rem;
       height: 300px;
       min-height: fit-content;
+      backdrop-filter: brightness(0.4);
     }
 
     #frame {
@@ -288,9 +288,9 @@ if ($impressionid) {
       <button id="ok" class="btn btn-primary">OK</button>
     </div>
   </div>
-  <main class="container d-flex m-auto col-md-10 mt-1" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))">
+  <main class="container d-flex m-auto col-md-10 mt-1">
 
-    <section id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center bg-light"
+    <section id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
       alt="">
       <div class="d-flex flex-wrap align-items-start justify-content-center">
         <div class="row">
@@ -346,6 +346,7 @@ if ($impressionid) {
         src="https://laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"
       ></script>
     </div>
+    <div id="jogos" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))"></div>
   </main>
   <div class="container m-auto p-0 mt-1">
     <div class="donation-section m-0 row">
@@ -388,7 +389,7 @@ if ($impressionid) {
   </div>
   <script>
     function showGameInHighlight(game) {
-      let destaqueImagem = document.getElementById("destaque-imagem");
+      let destaqueImagem = document.querySelector("body");
       destaqueImagem.style.backgroundImage = 'url(' + game.imagem + ')';
 
       $('#destaque-link,#game-details').unbind('click').click(function(e) {
@@ -400,7 +401,7 @@ if ($impressionid) {
             currency: "USD",
             value: 0.0004
           });
-          abrirJanela(game.url, 'https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4');
+          abrirJanela('https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4', game.url);
         }, 200);
       });
 
@@ -420,7 +421,7 @@ if ($impressionid) {
           method: 'GET',
           dataType: 'json',
           success: function(data) {
-            const container = document.querySelector('main');
+            const container = document.getElementById('jogos');
             let i = 0;
 
             data.forEach(game => {
@@ -451,7 +452,7 @@ if ($impressionid) {
                     currency: "USD",
                     value: 0.0004
                   });
-                  abrirJanela(game.url, 'https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4');
+                  abrirJanela('https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4', game.url);
                 }, 200);
               };
               gameItems.push(game);
