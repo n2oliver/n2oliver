@@ -332,20 +332,7 @@ if ($impressionid) {
 
 
     <div id="progressbar" role="progressbar" title="progressbar"></div>
-    <div class="w-100 justify-content-center d-flex">
-      <script type="text/javascript">
-        atOptions = {
-          'key' : '29929d8720c37977a6ea64b1b7db2d02',
-          'format' : 'iframe',
-          'height' : 50,
-          'width' : 320,
-          'params' : {}
-        };
-      </script>
-      <script
-        type="text/javascript"
-        src="https://laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"
-      ></script>
+    <div id="banner-ad" class="w-100 justify-content-center d-flex">
     </div>
     <div id="jogos" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))"></div>
   </main>

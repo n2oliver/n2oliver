@@ -28,4 +28,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // Primeira interação do usuário dispara o smartlink
   document.addEventListener('click', abrirSmartlinkUmaVez, { once: true });
 
+  setTimeout(() => {
+
+    // Configuração do banner
+    window.atOptions = {
+      key: '29929d8720c37977a6ea64b1b7db2d02',
+      format: 'iframe',
+      height: 50,
+      width: 320,
+      params: {}
+    };
+
+    // Cria o script do anúncio
+    const adScript = document.createElement('script');
+    adScript.type = 'text/javascript';
+    adScript.src = 'https://laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js';
+
+    // Insere o anúncio no container
+    document.getElementById('banner-ad').appendChild(adScript);
+
+  }, 10000);
 });
