@@ -33,7 +33,7 @@
 
         gtag('config', 'G-0T82Y59VYL');
     </script>
-    <title>Home — n2oliver</title>
+    <title>Dev — n2oliver</title>
     <meta name="7searchppc" content="eaa599b68df06e77def4d2f3b0228830" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -121,6 +121,8 @@
 </head>
 
 <body class="oliver-dev">
+    <script async src="https://appsha-pnd.ctengine.io/js/script.js?wkey=97NjKiTr7b"></script>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJNPSQS"
             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -178,41 +180,7 @@
                 </div>
             </header>
 
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 w-100 m-auto px-0" 
-                style="background-image: url(/img/theme-image-natal.png);">
-                <div class="container-fluid">
-
-                <div class="d-flex w-100 justify-content-between">
-                    <!-- Logo -->
-                    <a class="navbar-brand rounded" href="/">
-                    <img src="/img/n2-ico.jpg" width="32" class="rounded" alt="logo">oliver
-                    </a>
-
-                
-                    <!-- Botão hamburger -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <!-- Navbar links -->
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="/"><i class="fa-solid fa-home"></i> Início</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/noticias.php"><i class="fa-solid fa-newspaper"></i> Notícias</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/aplicativos.php"><i class="fa-solid fa-hand-pointer"></i> Aplicativos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/jogos/index.php"><i class="fa-solid fa-puzzle-piece"></i> Jogos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/lojavirtual/index.php"><i class="fa-solid fa-store"></i> Loja Virtual</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/contato.php"><i class="fa-solid fa-envelope"></i> Contato</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                    <!-- GTranslate wrapper visualmente à direita -->
-                    <div class="gtranslate_wrapper ms-auto me-2 d-flex align-items-center"></div>
-
-
-                </div>
-                </nav>
+            <?php include('navbar.php'); ?>
             <main>
                 <div class="mt-2 d-flex about-me mb-2" style="height: auto; flex-direction: row">
                     <div class="container d-flex m-0 quicksand main-content" style="border-bottom-left-radius: 0px; height: fit-content">

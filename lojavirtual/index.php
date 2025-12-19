@@ -175,25 +175,22 @@
             </div>
             <div class="w-100 p-4" style="
                 height: 80vh; 
-                background-image: url(/jogos/img/quebracabecas.jpg); 
+                background-image: url(/lojavirtual/img/ai-loja.png); 
                 background-size: 100% auto; 
                 background-position: center; 
                 background-repeat: no-repeat;
                 background-color: white;
                 text-align: right;
-                color: rgba(0,0,0,.2);
-                -webkit-text-stroke: 2px #ccc;
+                color: #fff;
+                -webkit-text-stroke: 2px #000;
                 font-family: Ubuntu;
                 font-size: 3rem;
                 align-content: end;"
                 onclick="abrirJanela('https://go.hotmart.com/W101392320U')">
-                Acesse n2oliver jogos e se divirta
+                Encontre aquilo que você precisa
             </div>
             <main class="p-1 rounded" style="background-color: #343a4069;">
                 <div style="position: sticky; top: 0; z-index: 9999; background-color: rgba(0,0,0,0.8)" class="m-auto p-1">
-                    <div class="mb-1 px-md-5">
-                        <input type="search" id="search-input" class="form-control" placeholder="🔎 Buscar produtos por nome...">
-                    </div>
                     <nav class="mb-1">
                         <ul class="nav nav-pills justify-content-center flex-wrap">
                             <li class="nav-item"><a class="nav-link active" href="#" data-category="todos">Todos</a></li>
@@ -202,6 +199,9 @@
                             <li class="nav-item"><a class="nav-link" href="#" data-category="cursos">Cursos</a></li>
                         </ul>
                     </nav>
+                    <div class="mb-1 px-md-5">
+                        <input type="search" id="search-input" class="form-control" placeholder="🔎 Buscar produtos por nome...">
+                    </div>
                 </div>
                 <div id="product-grid" class="row g-0" style="align-items: stretch">
                     <!-- Products will be injected here by JavaScript -->

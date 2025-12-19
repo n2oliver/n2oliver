@@ -1,456 +1,643 @@
+<?php
+#include('/conversion.php');
+$APP_URL = '/jogos';
+$aid = getenv('AID_POPADS'); // seu AID PopAds
+$urlDestino = 'https://n2oliver.com/jogos/'; // página principal
+$valorConversao = 0.0005; // valor simbólico da conversão
+//-------------------------------------------------
+
+$impressionid = $_GET['impressionid'] ?? null;
+
+if ($impressionid) {
+  // Testa se a página principal carrega com sucesso
+  $ch = curl_init($urlDestino);
+  curl_setopt_array($ch, [
+    CURLOPT_NOBODY => true,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT => 5
+  ]);
+  curl_exec($ch);
+  $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+  curl_close($ch);
+
+  // Se a página respondeu com HTTP 200 → postback para o PopAds
+  if ($status == 200) {
+    $postbackUrl = "http://serve.popads.net/cpixel.php?s2s=1&aid={$aid}&id={$impressionid}&value={$valorConversao}";
+    @file_get_contents($postbackUrl);
+
+    // (opcional) registrar em log local
+    file_put_contents(__DIR__ . '/impressões_validas.log', date('Y-m-d H:i:s') . " | {$impressionid} | HTTP {$status}\n", FILE_APPEND);
+  } else {
+    // (opcional) registrar falhas
+    file_put_contents(__DIR__ . '/falhas.log', date('Y-m-d H:i:s') . " | {$impressionid} | HTTP {$status}\n", FILE_APPEND);
+  }
+}
+?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta name="ppck-ver" content="000c80d7f01a489de608a79f78bc907c" />
-    <meta name="mnd-ver" content="douqkeewbmo0phom6vlkwg" />
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-TJNPSQS');
-    </script>
-    <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
+  <?php
+  // Per-page SEO meta for jogos index
+  $meta_title = 'Jogos Online — n2oliver';
+  $meta_description = 'Jogos online gratuitos: Linha Amarela, Combo-Memo e outros títulos desenvolvidos por n2oliver.';
+  $meta_image = 'jogos/img/logo.png';
+  $canonical = (isset($_SERVER['HTTP_HOST']) ? (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] : 'https://n2oliver.com/jogos/');
+  include('cabecalho.php');
+  ?>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/n2-ico.jpg" />
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+  <link rel="stylesheet" href="css/jquery-ui/jquery-ui.min.css" />
+  <link rel="stylesheet" href="styles-index.css" />
+  <link rel="stylesheet" href="sobre-mim.css" />
+  <link rel="preload" as="image" href="jogos/linhaamarela/img/fundo.png" />
+  <link rel="preload" as="image" href="<?= $APP_URL ?>/img/logo.png" />
+  <link rel="preload" as="image" href="img/combo-memo.png" />
+  <link rel="preload" as="image" href="jogos/img/flat-crosswords.png" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0 !important;
+      background: #f0f0f0;
+      background-image: url(/jogos/img/quebracabecas.jpg);
+      overflow: auto;
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
+    }
 
-        gtag('config', 'G-0T82Y59VYL');
-    </script>
-    <title>Home — n2oliver</title>
-    <meta name="7searchppc" content="eaa599b68df06e77def4d2f3b0228830" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer-when-downgrade" />
-    <meta name="description" content="n2oliver — notícias, jogos e recursos sobre tecnologia.">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://n2oliver.com/" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/n2-ico.jpg" />
-    <link rel="preload" onload="this.rel='stylesheet'" as="style" href="/css/fonts/ubuntu/css2.css?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <noscript>
-        <link rel="stylesheet" href="/css/fonts/ubuntu/css2.css?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
-    </noscript>
+    header {
+      text-align: center;
+      padding: .2rem;
+      font-weight: 700;
+      font-family: 'Ubuntu';
+      font-size: 2rem;
+      background-image: linear-gradient(0deg, black, gray);
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
 
-    <link rel="preload" onload="this.rel='stylesheet'" as="style" href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap">
-    </noscript>
+    header h1 {
+      color: #fff !important;
+    }
 
-    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" async></script>
-    <script src="/js/bootstrap/bootstrap.bundle.min.js" async></script>
-    <link rel="stylesheet" href="/css/font-awesome/all.min.css" />
+    header p {
+      font-size: 12px;
+      color: white !important;
+    }
 
-    <link rel="stylesheet" href="/styles-index.css" />
-    <link rel="stylesheet" href="/sobre-mim.css" />
-    <style>
-        .noticia-conteudo {
-            transition: 1s ease;
-            -moz-transition: 1s ease;
-            -webkit-transition: 1s ease;
-        }
-    </style>
-    <script src="/js/jquery/jquery-3.7.1.min.js"></script>
+    header img {
+      filter: drop-shadow(0 0 0.4rem white);
+    }
 
-    <script defer
-        data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
-        src="https://cdn.megapush.com.br/MegaPush.js">
-    </script>
-    <script src="/gtag_dispatcher.js"></script>
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Home — n2oliver">
-    <meta property="og:description" content="n2oliver — notícias, jogos e recursos sobre tecnologia.">
-    <meta property="og:image" content="/img/n2.jpg">
-    <meta property="og:url" content="https://n2oliver.com">
+    .container {
+      display: grid;
+      gap: .2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      background-color: transparent;
+    }
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Home — n2oliver">
-    <meta name="twitter:description" content="n2oliver — notícias, jogos e recursos sobre tecnologia.">
-    <meta name="twitter:image" content="https://n2oliver.com/img/n2.png">
+    .game-card {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      overflow: auto;
+      flex: 1 1 200px;
+    }
 
-    <!-- JSON-LD structured data (Website / Organization) -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "Home — n2oliver",
-            "url": "https://n2oliver.com",
-            "publisher": {
-                "@type": "Organization",
-                "name": "n2oliver",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://n2oliver.com/img/n2.png"
-                }
-            }
-        }
-    </script>
+    .game-card h2 {
+      margin: 0.5rem 0;
+      font-family: 'Ubuntu';
+      -webkit-text-stroke: 1px #000;
+      color: yellow;
+      text-shadow: 3px 3px 3px darkslategray;
+    }
 
-    <meta name='admaven-placement' content=Bqja8pjw8>
-    <meta name="pushsdk" content="322d99f94878aedd7de1ac412ba0561c">
-    <meta name="af75eac4081069fbc72900cc9a43e129aefae092" content="af75eac4081069fbc72900cc9a43e129aefae092" />
-    <style>
-        .proxima-linha .social-media-icon {
-            padding-right: .25rem !important;
-            padding-left: .25rem !important;
-        }
+    .game-card a {
+      text-decoration: none;
+      font-family: 'Ubuntu';
+    }
 
-        .proxima-linha .fa-brands {
-            padding-right: 0 !important;
-            padding-left: 0 !important;
-        }
-    </style>
+    .game-card .link {
+      text-align: center;
+      background-color: #E70D65;
+      font-weight: 700;
+      color: #FFFFFF
+    }
+
+    .game-card .link:hover,
+    #destaque-link:hover {
+      background-color: #F11E52;
+    }
+
+    .game-card a div {
+      padding: 10px;
+      align-items: end;
+      height: auto;
+      background-position: center !important;
+      margin: 4px;
+    }
+
+    .game-card a div:hover,
+    #destaque-link:hover {
+      filter: brightness(1.5);
+    }
+
+    .game-card a div span {
+      background-color: rgba(0.0, 0, 0, 0.5);
+      background-position: top;
+      color: white;
+      font-weight: bold;
+    }
+
+    .intr-in {
+      top: 60px !important;
+    }
+
+    .donation-section {
+      background-color: #e9ecef;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 2rem;
+      text-align: center;
+      color: #343a40;
+      overflow: auto;
+      height: auto;
+    }
+
+    .success {
+      background: linear-gradient(135deg, #54a554, #77f554);
+    }
+
+    .welcome-text-box {
+      background: white;
+      padding: 1rem;
+      border-radius: 14px;
+    }
+
+    #adsterra-banner>div {
+      background: rgba(255, 255, 255, .8);
+      backdrop-filter: blur(1px);
+    }
+
+    main {
+      gap: 0 !important;
+      align-items: stretch;
+      padding: 0;
+    }
+
+    #destaque-imagem {
+      padding: 32px 16px;
+      color: #000;
+      text-align: center;
+      transition: 0.2s ease;
+      border-top-left-radius: 0.375rem;
+      border-top-right-radius: 0.375rem;
+      height: 300px;
+      min-height: fit-content;
+      backdrop-filter: brightness(0.4);
+    }
+
+    #frame {
+      margin-top: 2px !important;
+    }
+
+    #progressbar {
+      background: #fff;
+      height: .4rem;
+      width: 100%;
+      border-bottom-left-radius: 0.375rem;
+      border-bottom-right-radius: 0.375rem;
+    }
+
+    .ui-progressbar-value {
+      background: deeppink;
+      height: .4rem;
+    }
+
+    #game-details {
+      transition: 1s ease;
+    }
+
+    #destaque-link {
+      height: fit-content;
+      align-self: center;
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: #9E0040;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #FFFFFF;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .adsbygoogle {
+      min-width: 250px !important;
+    }
+  </style>
+  <script defer
+    data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
+    src="js/megapush/MegaPush.js">
+  </script>
+  <!--<script data-cfasync="false" src="popads-monetization.js"  defer></script>-->
+  <script src="gtag_dispatcher.js" async></script>
+  <script type="text/javascript" data-cfasync="false" src="js/abrir-janela.js"></script>
+  <script src="js/jquery-ui/jquery-ui.min.js" async></script>
 </head>
 
-<body class="oliver-dev">
-    <script async src="https://appsha-pnd.ctengine.io/js/script.js?wkey=97NjKiTr7b"></script>
+<body>
+  <script src="js/anuncios.js"></script>
+  <?php include("gtagmanager.php"); ?>
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJNPSQS"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-
-    <div id="sobre-mim" class="col-md-10 col-sm-12 col-lg-10 row d-flex" style="margin: 0 auto">
-        <div class="col-sm-12 col-md-12 col-lg-12 px-0 m-auto">
-            <header>
-                <div class="row pb-3 oliver-dev-parent-wrapper main-content">
-                    <div class="col-12 height-0">
-                        <span class="oliver-dev-logo" style="font-size: 72px; position: relative">n2oliver</span><br>
-                        <span class="desenvolvedor-de-software">
-                            Desenvolvedor de Software
-                        </span>
-                    </div>
-                    <div class="proxima-linha-wrapper col-8 d-flex align-self-end flex-column">
-                        <div class="proxima-linha text-white rounded-pill py-0 px-3 w-100 my-3">Óliver S. Castilho
-                            <div class="nome-completo-osc" class="mt-4">Pronto para a próxima linha!
-                                <style>
-                                    .social-media-icon {
-                                        font-size: 24px;
-                                        color: white;
-                                        background-image: linear-gradient(green, lightgreen, green)
-                                    }
-
-                                    .libutton:hover,
-                                    .social-media-icon:hover {
-                                        color: white !important;
-                                    }
-                                </style>
-                                <div class="d-flex align-content-end">
-                                    <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=oliver-c-ab2748b9" target="_blank">Seguir no LinkedIn</a>
-                                    <a class="social-media-icon px-2 rounded-circle mx-1 align-content-center" href="https://wa.me/5521986695629?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" target="_blank" rel="noopener noreferrer">
-                                        <i class="fa-brands fa-whatsapp"></i>
-                                    </a>
-                                    <a style="background-image: linear-gradient(magenta, pink, magenta)" class="social-media-icon px-2 rounded-circle mx-1 align-content-center" href="https://www.instagram.com/n2oliver/" target="_blank" rel="noopener noreferrer">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </a>
-                                    <a style="background-image: linear-gradient(black, gray, black)" class="social-media-icon px-2 rounded-circle mx-1 align-content-center" href="https://github.com/n2oliver" target="_blank" rel="noopener noreferrer">
-                                        <i class="fa-brands fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex w-100 align-self-end justify-content-between" style="height: fit-content">
-                            <div></div>
-                            <div class="sob-demanda text-white rounded-pill py-0 px-3">Software sob<br>demanda<div style="position: fixed; transform: translateY(-28px) scale(200%); right: 8px">⏎</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="notebook col-4 bg-transparent">
-
-                    </div>
-                </div>
-            </header>
-
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 w-100 m-auto px-0" 
-                style="background-image: url(/img/theme-image-natal.png);">
-                <div class="container-fluid">
-
-                <div class="d-flex w-100 justify-content-between">
-                    <!-- Logo -->
-                    <a class="navbar-brand rounded" href="/">
-                    <img src="/img/n2-ico.jpg" width="32" class="rounded" alt="logo">oliver
-                    </a>
-
-                
-                    <!-- Botão hamburger -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <!-- Navbar links -->
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="/"><i class="fa-solid fa-home"></i> Início</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/noticias.php"><i class="fa-solid fa-newspaper"></i> Notícias</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/aplicativos.php"><i class="fa-solid fa-hand-pointer"></i> Aplicativos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/jogos/index.php"><i class="fa-solid fa-puzzle-piece"></i> Jogos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/lojavirtual/index.php"><i class="fa-solid fa-store"></i> Loja Virtual</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/contato.php"><i class="fa-solid fa-envelope"></i> Contato</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                    <!-- GTranslate wrapper visualmente à direita -->
-                    <div class="gtranslate_wrapper ms-auto me-2 d-flex align-items-center"></div>
-
-
-                </div>
-                </nav>
-            <main>
-                <div class="mt-2 d-flex about-me mb-2" style="height: auto; flex-direction: row">
-                    <div class="container d-flex m-0 quicksand main-content" style="border-bottom-left-radius: 0px; height: fit-content">
-                        <div>
-                            <h1 class="w-100">Sobre o Dev</h1>
-                            <div class="bg-white my-1 me-4 rounded shadow" style="background-image: url(img/oliver.jpg); background-position: center; background-size: cover; width: 128px; height: 128px; float: left; border: 2px darkslategray solid">
-                            </div>
-                            <p class="text-start">Se você precisa de um desenvolvedor experiente, e conhecedor de diversas técnicas de programação e marketing digital, Óliver Silva pode te ajudar. Com mais de 15 anos de experiência na área de desenvolvimento de software, ele demonstrou habilidades excepcionais em diversas linguagens de programação e frameworks, contribuindo para vários projetos de alta complexidade e excelentes benefícios aos seus usuários.</p>
-                        </div>
-                        <div class="col-6">
-                            <h1 class="w-100 text-center">Experiência e Habilidades</h1>
-                            <p>Com uma vasta experiência no desenvolvimento de software, Óliver tem um profundo conhecimento em design de sistemas, desenvolvimento front-end e back-end, e é proficiente em várias tecnologias modernas. Sua dedicação e paixão pela tecnologia o impulsionam a se manter atualizado com as últimas tendências do mercado.
-                            </p>
-                        </div>
-                        <div class="col-6">
-                            <h1>Junte-se a mim no <strong>TikTok</strong></h1>
-                            <a target="_blank" href="https://vm.tiktok.com/ZMHn4DwAU62Ye-4irF2/">
-                                <img src="/img/tiktok.png" alt="banner" style="width:60%; margin-bottom:15px;" />
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="px-3 text-center">
-                    <a href="https://beta.publishers.adsterra.com/referral/JwWiKrYdak" rel="nofollow"><img alt="banner" src="/img/PNG-160x90-px.png" /></a>
-                </div>
-                <div class="row px-3 main-content">
-                    <div class="d-flex about-me px-0 d-none" style="
-                        width: 100%;
-                        width: -moz-available;          /* For Mozzila */
-                        width: -webkit-fill-available;  /* For Chrome */
-                        width: stretch;
-                        justify-content: center">
-                        <div class="container d-flex flex-column px-0 mx-0" style="border-top-left-radius: 0px; border-top-right-radius: 0px">
-                            <h1>Jogos - Em desenvolvimento</h1>
-                            <p>Lugar para compra de jogos.</p>
-
-                        </div>
-                    </div>
-                    <div class="row px-0">
-                        <div class="icon-box" tabindex="0" role="region" aria-label="Seção com ícones roláveis">
-                            <div class="icon-item" title="Especialista em desenvolvimento web com foco em performance, usabilidade e código limpo.">
-                                <i class="fas fa-user-tie"></i>
-                                <span>Desenvolvedor Experiente</span>
-                                <div class="tooltip">Especialista em desenvolvimento web com foco em performance, usabilidade e código limpo.</div>
-                            </div>
-                            <div class="icon-item" title="Construção de sistemas, sites e ferramentas com foco em performance e usabilidade.">
-                                <i class="fas fa-laptop-code"></i>
-                                <span>Programação</span>
-                                <div class="tooltip">Construção de sistemas, sites e ferramentas com foco em performance e usabilidade.</div>
-                            </div>
-                            <div class="icon-item" title="Criatividade, dados e alcance: tudo para sua marca crescer no digital.">
-                                <i class="fas fa-bullhorn"></i>
-                                <span>Marketing Digital</span>
-                                <div class="tooltip">Criatividade, dados e alcance: tudo para sua marca crescer no digital.</div>
-                            </div>
-                            <div class="icon-item" title="Experiência sólida em desenvolvimento web, design e tecnologia.">
-                                <i class="fas fa-calendar-alt"></i>
-                                <span>Mais de 15 Anos de Experiência</span>
-                                <div class="tooltip">Experiência sólida em desenvolvimento web, design e tecnologia.</div>
-                            </div>
-                            <div class="icon-item" title="Domínio de tecnologias como HTML, CSS, JavaScript, PHP, React, Laravel e mais.">
-                                <i class="fas fa-code-branch"></i>
-                                <span>Linguagens & Frameworks</span>
-                                <div class="tooltip">Domínio de tecnologias como HTML, CSS, JavaScript, PHP, React, Laravel e mais.</div>
-                            </div>
-
-                            <div class="icon-item" title="Do front ao back, escrevo com as ferramentas certas para cada desafio.">
-                                <i class="fas fa-cogs"></i>
-                                <span>Design de Sistemas</span>
-                                <div class="tooltip">Do front ao back, escrevo com as ferramentas certas para cada desafio.</div>
-                            </div>
-                            <div class="icon-item" title="Interfaces modernas, responsivas e centradas na experiência do usuário.">
-                                <i class="fas fa-desktop"></i>
-                                <span>Desenvolvimento Front-end</span>
-                                <div class="tooltip">Interfaces modernas, responsivas e centradas na experiência do usuário.</div>
-                            </div>
-                            <div class="icon-item" title="APIs robustas, integrações eficientes e bancos de dados bem estruturados.">
-                                <i class="fas fa-server"></i>
-                                <span>Desenvolvimento Back-end</span>
-                                <div class="tooltip">APIs robustas, integrações eficientes e bancos de dados bem estruturados.</div>
-                            </div>
-                            <div class="icon-item" title="Trabalho com ferramentas atuais para soluções rápidas, seguras e escaláveis.">
-                                <i class="fas fa-laptop-code"></i>
-                                <span>Tecnologias Modernas</span>
-                                <div class="tooltip">Trabalho com ferramentas atuais para soluções rápidas, seguras e escaláveis.</div>
-                            </div>
-                            <div class="icon-item" title="Antenado nas tendências que movem o design, o código e a experiência digital.">
-                                <i class="fas fa-chart-line"></i>
-                                <span>Últimas Tendências</span>
-                                <div class="tooltip">Antenado nas tendências que movem o design, o código e a experiência digital.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container mt-2 d-inline-flex flex-column">
-                        <div class="align-content-center" style="border: gray solid 2px; background-image: url(img/web-design-technology-browsing-programming-concept.jpg); background-position: center; background-size: cover; background-attachment: fixed;">
-                            <div class="container mx-auto" style="width: fit-content; background-color: rgba(255, 255, 255, .8)">
-                                <p class="my-2" style="text-align: center">Conheça o meu portfólio
-                                    clicando no link abaixo:<br /><a class="btn btn-primary" href="aplicativos.php">Conhecer portfólio</a></p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </main>
-            <link rel="stylesheet" href="/css/footer.css" />
-
-            <footer class="site-footer mt-2 m-auto">
-                <a href="/"><span class="oliver-dev-logo footer-logo">n2oliver</span></a>
-                <div class="d-flex justify-content-center">
-                    <style>
-                        .social-media-icon {
-                            font-size: 24px;
-                            color: white;
-                            background-image: linear-gradient(green, lightgreen, green)
-                        }
-
-                        .libutton:hover,
-                        .social-media-icon:hover {
-                            color: white !important;
-                        }
-                    </style>
-                    <div class="d-flex align-content-end">
-                        <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=oliver-c-ab2748b9" target="_blank">Seguir no LinkedIn</a>
-                        <a class="social-media-icon px-2 rounded-circle mx-1 align-content-center" href="https://wa.me/5521986695629?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                        <a style="background-image: linear-gradient(magenta, pink, magenta)" class="social-media-icon px-2 rounded-circle mx-1 align-content-center" href="https://www.instagram.com/n2oliver/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a style="background-image: linear-gradient(black, gray, black)" class="social-media-icon px-2 rounded-circle mx-1 align-content-center" href="https://github.com/n2oliver" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <span class="footer-text-small">
-                    Todos os direitos reservados - n2oliver - 2025
-                </span>
-
-                <a href="/politica-de-privacidade.html">Política de Privacidade</a>
-                <a href="/contato.php">Contato</a>
-                <span>
-                    <a href="mailto:suporte@n2oliver.com" style="margin-left: 10px">suporte@n2oliver.com</a>
-                </span>
-
-                <span class="footer-text-small">
-                    CNPJ 60.407.027/0001-25
-                </span>
-            </footer>
-            <script>
-                window.gtranslateSettings = {
-                    "default_language": "pt",
-                    "native_language_names": true,
-                    "languages": [
-                        "pt", "fr", "it", "es", "en", "ru", "ro", "sr", "zh-CN", "zh-TW",
-                        "ja", "nl", "bn", "id", "ur", "el", "ar", "tr", "lv"
-                    ],
-                    "wrapper_selector": ".gtranslate_wrapper",
-                    "switcher_horizontal_position": "inline"
-                }
-            </script>
-            <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
-
-            <style>
-                .gtranslate_wrapper {
-                    z-index: 9999 !important;
-                    color: black !important;
-                    display: flex;
-                    align-items: center;
-                }
-
-                .gt_container--hich1m .gt_switcher .gt_option,
-                .gt_container--hich1m .gt_switcher .gt_selected {
-                    background: transparent !important;
-                }
-
-                .gt_container--hich1m .gt_switcher .gt_selected a:hover,
-                .gt_container--hich1m .gt_switcher .gt_option a:hover {
-                    background-color: rgba(0, 0, 0, 0.1) !important;
-                }
-            </style>
-
-        </div>
-    </div>
-
-    <script>
-        $(document).ready(() => {
-            $('.nav-item').removeClass('active');
-            $('.nav-item:contains("Sobre mim")').addClass("active");
-            $('.icon-item').on('touchstart', (event) => atualizarIconItens(event.target));
-            $('.icon-item').on('click', (event) => atualizarIconItens(event.target));
-            $('.icon-item').on('mouseover', (event) => atualizarIconItens(event.target));
-        });
-
-        function atualizarIconItens(target) {
-            for (let iconItem of target.closest(".icon-box").querySelectorAll(".icon-item")) {
-                iconItem.classList.remove("hover");
-            }
-            target.closest(".icon-item").classList.add("hover");
-        }
-    </script>
-</body>
-<div id="frame-container" style="position: absolute; z-index: 99999;">
-    <input autocomplete="off" type="checkbox" id="aadsstickymgoh23bh" hidden />
-    <div style="padding-top: 0; padding-bottom: auto;">
-        <div style="width:100%;height:auto;position:fixed;text-align:center;font-size:0;bottom:0;left:0;right:0;margin:auto">
-            <label for="aadsstickymgoh23bh" style="top: 50%;transform: translateY(-50%);right:24px;; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
-                <svg fill="#000000" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
-                    <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 " />
-                </svg>
-            </label>
-            <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998; background: rgba(0, 0, 0, 0.50);"><iframe data-aa=2410752 src=//acceptable.a-ads.com/2410752/?size=Adaptive style='border:0; padding:0; width:70%; height:auto; overflow:hidden; margin: auto'></iframe></div>
+  <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
+    <?php include('navbar.php'); ?>
+    <div style="position: absolute; z-index: 99999">
+      <input autocomplete="off" type="checkbox" id="aadsstickymiu7jvco" hidden />
+      <div style="padding-top: 0; padding-bottom: 0;">
+        <div style="width:15%;height: 100vh;position:fixed;text-align:center;font-size:0;top:60px;right:0;min-width:100px">
+          <label for="aadsstickymiu7jvco" style="top: -24px;margin:0 auto;right:0;left:0;max-width:24px; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
+            <svg fill="#000000" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
+              <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 " />
+            </svg>
+          </label>
+          <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;height:100%; display: flex;flex-direction: column; justify-content: start">
+            <iframe title="aads-2417696" data-aa=2417696 src=//acceptable.a-ads.com/2417696/?size=Adaptive style='border:0; padding:0; width:70%; height:70%; overflow:hidden; margin: 0 auto'></iframe>
+          </div>
         </div>
         <style>
-            #aadsstickymgoh23bh:checked+div {
-                display: none;
-            }
+          #aadsstickymiu7jvco:checked+div {
+            display: none;
+          }
         </style>
+      </div>
     </div>
-</div>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        $('.frame').click((e) => {
-            e.target.style.display = 'none';
-        });
-    });
-</script>
-<style>
-    iframe[id^="container-"] {
-        z-index: 9999 !important;
-        display: inline-flex;
-        box-sizing: 0 !important;
-    }
-</style>
+  </div>
 
+  <header class="mx-auto col-md-10 text-center mt-1">
+    <img alt="logo" src="<?= $APP_URL ?>/img/logo.png" style="height: 60px; width: auto;" />
+    <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
+  </header>
+
+  <div id="aviso" style="display: none;" class="alert alert-warning bg-light mx-auto col-8 mt-1 rounded p-3" role="alert">
+    <h5 class="h5"><span class="text-danger"><i class="fa fa-exclamation-triangle"></i></span> Este site contém anúncios</h5>
+    <p class="h6">Para uma melhor experiência, você precisa <strong>permitir</strong> pop-ups e
+      redirecionamentos nas configurações do site
+      (geralmente na barra de endereço). <strong>Clique em <span class="text-danger">OK</span></strong> antes que o tempo para o <strong><span class="text-danger">redirecionamento</span></strong> acabe: <b id='tempo'>15</b></p>
+    <div class="form-group">
+      <button id="cancelar" class="btn btn-secondary">Cancelar</button>
+      <button id="ok" class="btn btn-primary">OK</button>
+    </div>
+  </div>
+  <main class="container d-flex m-auto col-md-10 mt-1">
+
+    <section id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
+      alt="">
+      <div class="d-flex flex-wrap align-items-start justify-content-center">
+
+        <div class="row">
+          <div id="game-details" class="col-md-6 flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+
+
+            <div class="rounded" style="font-family: Ubuntu;
+            background-color: rgba(0,0,0,.6); color: white !important; padding: 12px; text-align: center;">
+              <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
+              <div id="thumbnail" style="height: 250px; width: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url(img/n2.jpg)"></div>
+              <p id="game-details-content" style="max-width:680px;margin:0 auto 18px;color: white;line-height:1.5;">
+                No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="m-3">
+            </div>
+              
+            <div id="frame" class="m-3" style="width: 100%;position: relative; z-index: 1;">
+              <iframe title="aads-2410752" data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
+                style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+            </div>
+            <div class="d-flex justify-content-center w-100">
+              <button class="btn btn-danger m-1" style="display: none" id="prev" aria-label="Aria Left">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <a id="destaque-link" href="#jogos" style="display: none">
+                <span id="destaque-titulo">Ver Jogos</span>
+              </a>
+              <button class="btn btn-danger m-1" id="next" style="display: none" aria-label="Aria Right">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          <div>
+        </div>
+
+
+    </section>
+
+
+    <div id="progressbar" role="progressbar" title="progressbar"></div>
+    <div id="banner-ad" class="w-100 justify-content-center d-flex" style="min-height:50px">
+    </div>
+    <div id="jogos" class="d-flex justify-content-center row" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))"></div>
+  </main>
+  <div class="container m-auto p-0 mt-1">
+    <div class="donation-section m-0 row">
+      <div class="col-md-6">
+        <h3>Gostou dos jogos?</h3>
+        <p><i class="fas fa-donate"></i>&nbsp;Você pode contribuir nos ajudando a desenvolver novos projetos. Envie sua contribuição pelos seguintes canais!</p>
+        <p>
+          <small>
+            <strong>Chave PIX:</strong> <span class="notranslate" translate="no"> suporte@n2oliver.com</span><br>
+            <strong>Bitcoin (LN):</strong> <span class="notranslate" translate="no"> warybongo30@walletofsatoshi.com</span><br>
+          </small>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p>
+
+          <strong>Global Account:</strong>
+          <span class="notranslate" translate="no">
+            <p><small><b>OLIVER SILVA CASTILHO</b></small></p>
+            <ul class="text-start" style="list-style-type: none; padding-left: 0;">
+              <li><small>Account number: 889213783-6</small></li>
+              <li><small>ACH Routing number: 026073150</small></li>
+              <li><small>WIRE Transfer Routing Number: 026073008</small></li>
+              <li><small>Bank name: Community Federal Savings Bank</small></li>
+              <li><small>Bank Address: 5 Penn Plaza, New York, NY 10001</small></li>
+            </ul>
+
+          </span><br>
+
+        </p>
+      </div>
+      <div class="container col-md-12 m-auto p-0 mt-1">
+        <a href="https://www.popads.net/users/refer/3587213"><img src="https://banners.popads.net/250x250.gif" alt="PopAds.net - The Best Popunder Adnetwork" /></a>
+        <a href="https://aads.com/advertise/?partner=2414063"><img src="https://aads.com/a_ads_banners/gif/english/320x50/simple_v1.gif" alt="Advertise with Anonymous Ads" width="320px" height="50px" /></a>
+      </div>
+    </div>
+  </div>
+  <div class="container m-auto col-md-10 p-0 mt-1">
+    <?php include("footer.php"); ?>
+  </div>
+  <script>
+    function showGameInHighlight(game) {
+      let destaqueImagem = document.querySelector("body");
+      let thumbnail = document.getElementById("thumbnail");
+      destaqueImagem.style.backgroundImage = 'url(' + game.imagem + ')';
+      thumbnail.style.backgroundImage = 'url(' + game.imagem + ')';
+      thumbnail.style.height = "250px";
+      document.getElementById('destaque-link').href = "#";
+
+      $('#destaque-link,#game-details').unbind('click').click(function(e) {
+        e.preventDefault();
+        window.open('https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746', '_blank');
+        
+        setTimeout(()=>{          
+          gtag("event", "close_convert_lead", {
+            currency: "USD",
+            value: 0.0004
+          });
+          abrirJanela('https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4', game.url);
+        }, 200);
+      });
+
+
+      document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
+      document.getElementById('game-details-title').textContent = game.titulo;
+      document.getElementById('game-details-content').innerHTML = game.descricao;
+
+
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(() => {
+        let gameItems = [];
+        let gameItemsIndex = -1;
+        $.ajax({
+          url: 'jogos/obter.php',
+          method: 'GET',
+          dataType: 'json',
+          success: function(data) {
+            const container = document.getElementById('jogos');
+            let i = 0;
+
+            data.forEach(game => {
+              const gameCard = document.createElement('div');
+              gameCard.className = 'game-card';
+
+              const gameLink = document.createElement('a');
+              gameLink.href = '#';
+              gameLink.setAttribute('data-game-url', game.url);
+              gameLink.setAttribute('data-game-title', game.titulo);
+              gameLink.setAttribute('data-game-desc', game.descricao);
+              gameLink.setAttribute('data-game-imagem', game.imagem);
+
+              const gameDiv = document.createElement('div');
+              gameDiv.className = 'bg-white row border border-light min-vh-50 h-max align-content-center';
+              gameDiv.style.background = `url(${game.imagem})`;
+
+              const gameTitle = document.createElement('h2');
+              gameTitle.className = 'rounded-left';
+              gameTitle.textContent = game.titulo;
+
+              const gameSpan = document.createElement('span');
+              gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
+              gameLink.onclick = function() {
+                window.open('https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746', '_blank');
+                setTimeout(() => {
+                  gtag("event", "close_convert_lead", {
+                    currency: "USD",
+                    value: 0.0004
+                  });
+                  abrirJanela('https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4', game.url);
+                }, 200);
+              };
+              gameItems.push(game);
+
+              const gameDesc = document.createElement('p');
+              gameDesc.innerHTML = game.descricao;
+
+              const playButton = document.createElement('div');
+              playButton.className = 'link btn my-2';
+              playButton.textContent = 'Jogar';
+
+              gameSpan.appendChild(gameDesc);
+              gameSpan.appendChild(playButton);
+              gameDiv.appendChild(gameTitle);
+              gameDiv.appendChild(gameSpan);
+              gameLink.appendChild(gameDiv);
+              gameCard.appendChild(gameLink);
+              container.appendChild(gameCard);
+            });
+          },
+          error: function(error) {
+            console.error('Erro ao obter os jogos:', error);
+          }
+        }).then(response => {
+          gamecards = $('.game-card');
+          gamecard = gamecards[Math.round(Math.random() * (gamecards.length - 1))];
+          const gameLink = gamecard.querySelector('a');
+          // Encontra o índice do primeiro jogo a ser exibido
+          gameItemsIndex = Array.from(gamecards).indexOf(gamecard);
+          setTimeout(() => {
+            document.getElementById('game-details-title').textContent = gameLink.dataset.gameTitle;
+            document.getElementById('game-details-content').innerHTML = gameLink.dataset.gameDesc;
+            document.getElementById('destaque-link').href = "#";
+            gameItemsIndex = gameItems.indexOf(gamecard);
+            if ($("#progressbar").progressbar) {
+              $("#progressbar").progressbar({
+                value: 0
+              }); // Este fechava o .then()
+            }
+
+            // Exibe o primeiro jogo no destaque
+            if (gameItemsIndex !== -1) {
+              showGameInHighlight(gameItems[gameItemsIndex]);
+            }
+          
+          }, 15000);
+
+          let interval = null;
+          let progressInterval = null;
+          let progress = 0;
+          let duration = 15000;
+          let stepTime = 200;
+          let step = (stepTime / duration) * 100;
+
+          function startProgress() {
+            clearInterval(progressInterval);
+            progress = 0;
+            progressInterval = setInterval(() => {
+              progress += step;
+              if (progress >= 100) {
+                progress = 100;
+                clearInterval(progressInterval);
+                next();
+                startProgress();
+              }
+              $("#progressbar").progressbar("value", progress);
+            }, stepTime);
+          }
+
+          function next() {
+            gameItemsIndex++;
+            if (gameItemsIndex >= gameItems.length) {
+              gameItemsIndex = 0;
+            }
+            showGameInHighlight(gameItems[gameItemsIndex]);
+            progress = 0;
+            $("#progressbar").progressbar("value", progress);
+          }
+
+          function prev() {
+            gameItemsIndex--;
+            if (gameItemsIndex < 0) {
+              gameItemsIndex = gameItems.length - 1;
+            }
+            showGameInHighlight(gameItems[gameItemsIndex]);
+            progress = 0;
+            $("#progressbar").progressbar("value", progress);
+          }
+
+          $('#next').click(() => {
+            clearInterval(progressInterval);
+            clearInterval(interval);
+            next();
+            startProgress();
+            interval = setInterval(next, duration);
+          });
+
+          $('#prev').click(() => {
+            clearInterval(progressInterval);
+            clearInterval(interval);
+            prev();
+            startProgress();
+            interval = setInterval(next, duration);
+          });
+          $('#next,#prev,#destaque-link').show();
+
+          if ($("#progressbar").progressbar) {
+            // Inicializa o progressbar
+            $("#progressbar").progressbar({
+              value: 0
+            });
+          }
+
+          function startProgress() {
+            clearInterval(progressInterval);
+            progress = 0;
+
+            progressInterval = setInterval(() => {
+              progress += step;
+              if (progress >= 100) {
+                progress = 100;
+                clearInterval(progressInterval);
+                next(); // executa ação ao completar
+                startProgress(); // reinicia o ciclo
+              }
+              $("#progressbar").progressbar("value", progress);
+            }, stepTime);
+          }
+
+          if ($("#progressbar").progressbar) {
+            startProgress();
+          }
+          let timeout;
+
+
+          function next() {
+            gameItemsIndex++;
+            if (gameItemsIndex >= gameItems.length) {
+              gameItemsIndex = 0;
+            }
+            const game = gameItems[gameItemsIndex];
+            showGameInHighlight(game);
+          }
+
+          function prev() {
+            gameItemsIndex--;
+            if (gameItemsIndex < 0) {
+              gameItemsIndex = gameItems.length - 1;
+            }
+            const game = gameItems[gameItemsIndex];
+            showGameInHighlight(game);
+          }
+          $('#next').click(() => {
+            next();
+            clearInterval(progressInterval);
+            startProgress();
+
+            clearInterval(interval);
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+              interval = setInterval(next, 15000);
+              progressInterval = setInterval(() => {
+                $("#progressbar").progressbar({
+                  value: interval
+                });
+              }, 200);
+            }, 30000);
+          });
+
+          $('#prev').click(() => {
+            prev();
+            clearInterval(progressInterval);
+            startProgress();
+
+            clearInterval(interval);
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+              interval = setInterval(prev, 15000);
+              progressInterval = setInterval(() => {
+                $("#progressbar").progressbar({
+                  value: interval
+                });
+              }, 200);
+            }, 30000);
+          });
+        });
+
+      }, 1000)
+    });
+  </script>
+</body>
 
 </html>
