@@ -332,9 +332,9 @@ if ($impressionid) {
 
 
     <div id="progressbar" role="progressbar" title="progressbar"></div>
-    <div id="banner-ad" class="w-100 justify-content-center d-flex">
+    <div id="banner-ad" class="w-100 justify-content-center d-flex" style="min-height:50px">
     </div>
-    <div id="jogos" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))"></div>
+    <div id="jogos" class="d-flex justify-content-center row" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))"></div>
   </main>
   <div class="container m-auto p-0 mt-1">
     <div class="donation-section m-0 row">
