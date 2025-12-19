@@ -1,109 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const adUrl = 'https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4';
-    const adUrl2 = 'https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746';
+  const SMARTLINK_1 = 'https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4';
+  const SMARTLINK_2 = 'https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746';
 
-    let popup = window.open(adUrl, '_blank');
-    // 1) Teste de popup bloqueado ANTES de chamar abrirJanela()
-    let permitido = false;
-    function abrirPopupUmaVez(url = adUrl) {
-        if (!permitido) return;
-        if (sessionStorage.getItem("popup_abriu")) {
-            document.removeEventListener("mouseleave", (e) => {
-                if (e.clientY <= 0 && !sessionStorage.getItem("popup_abriu")) {
-                    gtag("event", "close_convert_lead", {
-                        currency: "USD",
-                        value: 0.0004
-                    });
-                    abrirPopupUmaVez();
-                }
-            });
-            return;
-        }
+  function abrirSmartlinkUmaVez() {
+    if (sessionStorage.getItem('smartlink_aberto')) return;
 
-        gtag("event", "close_convert_lead", {
-            currency: "USD",
-            value: 0.0004
-        });
-        window.open(url, "_blank");
-        
-        if (location.search.toLowerCase().includes('utm_source=popads')) {
-            window.open(adUrl2, '_blank');
-        }
-
-        sessionStorage.setItem("popup_abriu", "1"); // marca como aberto
-        permitido = false;
+    // Evento GA (opcional, mantido)
+    if (typeof gtag === 'function') {
+      gtag('event', 'smartlink_open', {
+        currency: 'USD',
+        value: 0.0004
+      });
     }
 
-    setTimeout(() => {
-        if (!popup) {
-            let contador = 10;
-            const intervalo = setInterval(() => {
-                if (contador > 0) {
-                    contador -= 1;
-                }
-                const tempoContador = document.getElementById('tempo');
-                if (contador <= 5) {
-                    tempoContador.style.color = 'red';
-                }
-                tempoContador.textContent = contador;
-            }, 1000);
+    // Abre smartlink principal
+    window.open(SMARTLINK_1, '_blank');
 
-            const timeout = setTimeout(() => {
-                gtag("event", "close_convert_lead", {
-                    currency: "USD",
-                    value: 0.0004
-                });
-                window.location.href = adUrl;
-            }, 10000);
+    // Se veio do PopAds, abre o segundo link
+    if (location.search.toLowerCase().includes('utm_source=popads')) {
+      window.open(SMARTLINK_2, '_blank');
+    }
 
-            $("#aviso").show();
-            $("#cancelar").click(() => {
-                gtag("event", "close_convert_lead", {
-                    currency: "USD",
-                    value: 0.0004
-                });
-                window.location.href = adUrl;
-            });
-            $("#ok").click(() => {
-                gtag("event", "close_convert_lead", {
-                    currency: "USD",
-                    value: 0.0004
-                });
-                window.open(adUrl, '_blank');
-                clearInterval(intervalo);
-                clearTimeout(timeout);
-                $("#aviso").hide();
-            });
-        } else {
+    sessionStorage.setItem('smartlink_aberto', '1');
+  }
 
-            if (location.search.toLowerCase().includes('utm_source=popads')) {
-                gtag("event", "close_convert_lead", {
-                    currency: "USD",
-                    value: 0.0004
-                });
-                window.open(adUrl2, '_blank')
-            }
-        }
+  // Primeira interação do usuário dispara o smartlink
+  document.addEventListener('click', abrirSmartlinkUmaVez, { once: true });
 
-        document.addEventListener("click", () => {
-            permitido = true;
-        });
-
-        document.addEventListener("mouseleave", (e) => {
-            if (e.clientY <= 0 && !sessionStorage.getItem("popup_abriu")) {
-                gtag("event", "close_convert_lead", {
-                    currency: "USD",
-                    value: 0.0004
-                });
-                abrirPopupUmaVez();
-            }
-        });
-
-        document.addEventListener("visibilitychange", () => {
-            if (document.visibilityState === "hidden" && !sessionStorage.getItem("popup_abriu")) {
-                abrirPopupUmaVez();
-            }
-        });
-    });
-})
+});

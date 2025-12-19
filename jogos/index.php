@@ -247,6 +247,7 @@ if ($impressionid) {
 </head>
 
 <body>
+  <script src="/js/anuncios.js"></script>
   <?php include("../gtagmanager.php"); ?>
 
   <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
