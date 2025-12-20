@@ -1,8 +1,9 @@
+const SMARTLINK_1 = 'https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4';
+const SMARTLINK_2 = 'https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746';
+
 document.addEventListener('DOMContentLoaded', () => {
 
-  const SMARTLINK_1 = 'https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4';
-  const SMARTLINK_2 = 'https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746';
-
+  
   function abrirSmartlinkUmaVez() {
     if (sessionStorage.getItem('smartlink_aberto')) return;
 
@@ -28,9 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Primeira interação do usuário dispara o smartlink
   document.addEventListener('click', abrirSmartlinkUmaVez, { once: true });
 
-  setTimeout(() => {
-    $('#ads').slideUp("slow", ()=>{
-      $(this).hide();
-    });
-  }, 15000); 
+  function esconderAutomaticamente() {
+
+    setTimeout(() => {
+      $('#ads').slideUp("slow", ()=>{
+        $(this).hide();
+        $('#botao-anuncios').unbind('click').on('click', ()=>{
+          $('#ads').slideDown("slow", ()=>{
+            $(this).show();
+            esconderAutomaticamente();
+          });
+        });
+      });
+    }, 15000); 
+  }
+  esconderAutomaticamente();
 });

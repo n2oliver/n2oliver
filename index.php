@@ -255,6 +255,16 @@ if ($impressionid) {
 
 <body>
   <script src="js/anuncios.js"></script>
+  <script>
+    if (!sessionStorage.getItem('smartlink_aberto')) {
+      setTimeout(()=>{
+        let anuncioAbriu = window.open(SMARTLINK_1, '_blank');
+        window.open(SMARTLINK_2, '_blank');
+        if(!anuncioAbriu) return;
+        sessionStorage.setItem('smartlink_aberto', '1');
+      }, 5000);
+    }
+  </script>
   <?php include("gtagmanager.php"); ?>
 
   <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
@@ -281,8 +291,12 @@ if ($impressionid) {
     </div>
     
   </div>
-
-      <div id="ads" class="col-md-10 m-auto p-0 mt-1">
+    <div id="restaurar-ads" class="col-md-10 m-auto d-flex justify-content-center">
+      <div id="botao-anuncios" style="width: fit-content; cursor: pointer" class="px-4 bg-light rounded">
+        links patrocinados
+      </div>
+    </div>
+      <div id="ads" class="col-md-10 m-auto p-4 mt-1" style="background-color: rgba(255, 255, 255, .7);">
         <div class="row w-100">
           <script type="text/javascript">
             atOptions = {
