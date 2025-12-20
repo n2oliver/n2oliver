@@ -679,10 +679,6 @@ if ($impressionid) {
       }, 1000)
     });
   </script>
-  <script
-    type="text/javascript"
-    src="https://laxativethem.com/af/e7/3c/afe73c790e73cadb95ef255203cc5f61.js"
-  ></script>
 </body>
 
 </html>
