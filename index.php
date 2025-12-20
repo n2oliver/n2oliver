@@ -235,6 +235,9 @@ if ($impressionid) {
     .adsbygoogle {
       min-width: 250px !important;
     }
+    #ads > div > iframe, #atContainer-b5463c03cd36f2b207d3e311906ba716 {
+      width: fit-content !important;
+    }
   </style>
   <script defer
     data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
@@ -244,6 +247,10 @@ if ($impressionid) {
   <script src="gtag_dispatcher.js" async></script>
   <script type="text/javascript" data-cfasync="false" src="js/abrir-janela.js"></script>
   <script src="js/jquery-ui/jquery-ui.min.js" async></script>
+  <script
+    type="text/javascript"
+    src="https://laxativethem.com/f0/b1/79/f0b17922dcf7861be67a02cba8a9b7ee.js"
+  ></script>
 </head>
 
 <body>
@@ -272,8 +279,32 @@ if ($impressionid) {
         </style>
       </div>
     </div>
+    
   </div>
 
+      <div id="ads" class="col-md-10 m-auto p-0 mt-1">
+        <div class="row w-100">
+          <script type="text/javascript">
+            atOptions = {
+              'key' : 'b5463c03cd36f2b207d3e311906ba716',
+              'format' : 'iframe',
+              'height' : 250,
+              'width' : 300,
+              'params' : {}
+            };
+          </script>
+          <script
+            type="text/javascript"
+            src="https://laxativethem.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"
+          ></script>
+          
+          <a href="https://www.popads.net/users/refer/3587213" style="width: auto"><img src="https://banners.popads.net/250x250.gif" alt="PopAds.net - The Best Popunder Adnetwork" /></a>
+          
+          <div class="w-100 d-flex justify-content-center">
+            <a href="https://aads.com/advertise/?partner=2414063" class="mt-2"><img src="https://aads.com/a_ads_banners/gif/english/320x50/simple_v1.gif" alt="Advertise with Anonymous Ads" width="320px" height="50px" /></a>
+          </div>
+        </div>
+      </div>
   <header class="mx-auto col-md-10 text-center mt-1">
     <img alt="logo" src="<?= $APP_URL ?>/img/logo.png" style="height: 60px; width: auto;" />
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
@@ -335,11 +366,11 @@ if ($impressionid) {
 
 
     <div id="progressbar" role="progressbar" title="progressbar"></div>
-    <div id="banner-ad" class="w-100 justify-content-center d-flex" style="min-height:50px">
+    <div id="banner-ad" class="w-100 justify-content-center d-flex" style="min-height:0px">
     </div>
     <div id="jogos" class="d-flex justify-content-center row" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))"></div>
   </main>
-  <div class="container m-auto p-0 mt-1">
+  <div class="container m-auto p-0 mt-1 col-md-10">
     <div class="donation-section m-0 row">
       <div class="col-md-6">
         <h3>Gostou dos jogos?</h3>
@@ -368,10 +399,6 @@ if ($impressionid) {
           </span><br>
 
         </p>
-      </div>
-      <div class="container col-md-12 m-auto p-0 mt-1">
-        <a href="https://www.popads.net/users/refer/3587213"><img src="https://banners.popads.net/250x250.gif" alt="PopAds.net - The Best Popunder Adnetwork" /></a>
-        <a href="https://aads.com/advertise/?partner=2414063"><img src="https://aads.com/a_ads_banners/gif/english/320x50/simple_v1.gif" alt="Advertise with Anonymous Ads" width="320px" height="50px" /></a>
       </div>
     </div>
   </div>
@@ -638,6 +665,10 @@ if ($impressionid) {
       }, 1000)
     });
   </script>
+  <script
+    type="text/javascript"
+    src="https://laxativethem.com/af/e7/3c/afe73c790e73cadb95ef255203cc5f61.js"
+  ></script>
 </body>
 
 </html>
