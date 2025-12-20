@@ -292,7 +292,7 @@ if ($impressionid) {
     
   </div>
     <div id="restaurar-ads" class="col-md-10 m-auto d-flex justify-content-center">
-      <div id="botao-anuncios" style="width: fit-content; cursor: pointer" class="px-4 bg-light rounded">
+      <div id="botao-anuncios" style="width: fit-content; cursor: pointer" class="px-4 bg-light rounded-bottom">
         links patrocinados
       </div>
     </div>
