@@ -255,16 +255,6 @@ if ($impressionid) {
 
 <body>
   <script src="js/anuncios.js"></script>
-  <script>
-    if (!sessionStorage.getItem('smartlink_aberto')) {
-      setTimeout(()=>{
-        let anuncioAbriu = window.open(SMARTLINK_1, '_blank');
-        window.open(SMARTLINK_2, '_blank');
-        if(!anuncioAbriu) return;
-        sessionStorage.setItem('smartlink_aberto', '1');
-      }, 5000);
-    }
-  </script>
   <?php include("gtagmanager.php"); ?>
 
   <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
@@ -449,6 +439,14 @@ if ($impressionid) {
 
     }
     document.addEventListener('DOMContentLoaded', function() {
+      if (!sessionStorage.getItem('smartlink_aberto')) {
+        setTimeout(()=>{
+          let anuncioAbriu = window.open(SMARTLINK_1, '_blank');
+          window.open(SMARTLINK_2, '_blank');
+          if(!anuncioAbriu) return;
+          sessionStorage.setItem('smartlink_aberto', '1');
+        }, 3000);
+      }
       setTimeout(() => {
         let gameItems = [];
         let gameItemsIndex = -1;
