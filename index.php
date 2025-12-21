@@ -440,12 +440,11 @@ if ($impressionid) {
     }
     document.addEventListener('DOMContentLoaded', function() {
       if (!sessionStorage.getItem('smartlink_aberto')) {
-        setTimeout(()=>{
-          let anuncioAbriu = window.open(SMARTLINK_1, '_blank');
-          window.open(SMARTLINK_2, '_blank');
-          if(!anuncioAbriu) return;
-          sessionStorage.setItem('smartlink_aberto', '1');
-        }, 3000);
+        const params = 'width='+ ((screen.availWidth / 2).toFixed(0)) + ',height=' + ((screen.availHeight / 2).toFixed(0)) + ',resizable=yes,scrollbars=yes';
+        let anuncioAbriu = window.open(SMARTLINK_1, '_blank', params);
+        window.open(SMARTLINK_2, '_blank', params);
+        if(!anuncioAbriu) return;
+        sessionStorage.setItem('smartlink_aberto', '1');
       }
       setTimeout(() => {
         let gameItems = [];
