@@ -194,8 +194,7 @@ if ($impressionid) {
       transition: 0.2s ease;
       border-top-left-radius: 0.375rem;
       border-top-right-radius: 0.375rem;
-      height: 300px;
-      min-height: fit-content;
+      height: fit-content;
       backdrop-filter: brightness(0.4);
     }
 
@@ -406,6 +405,12 @@ if ($impressionid) {
     <?php include("footer.php"); ?>
   </div>
   <script>
+    function scroll(element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      })
+    }
     function showGameInHighlight(game) {
       let destaqueImagem = document.querySelector("body");
       let thumbnail = document.getElementById("thumbnail");
@@ -413,6 +418,7 @@ if ($impressionid) {
       thumbnail.style.backgroundImage = 'url(' + game.imagem + ')';
       thumbnail.style.height = "250px";
       document.getElementById('destaque-link').href = "#";
+      $('#game-details').unbind('click',()=>{scroll(document.getElementById('game-details-content'))});
 
       $('#destaque-link,#game-details').unbind('click').click(function(e) {
         e.preventDefault();
@@ -431,17 +437,20 @@ if ($impressionid) {
       document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
       document.getElementById('game-details-title').textContent = game.titulo;
       document.getElementById('game-details-content').innerHTML = game.descricao;
-
-
     }
     document.addEventListener('DOMContentLoaded', function() {
       if (!sessionStorage.getItem('smartlink_aberto')) {
         const params = 'width='+ ((screen.availWidth / 2).toFixed(0)) + ',height=' + ((screen.availHeight / 2).toFixed(0)) + ',resizable=yes,scrollbars=yes';
         let anuncioAbriu = window.open(SMARTLINK_1, '_blank', params);
         window.open(SMARTLINK_2, '_blank', params);
-        if(!anuncioAbriu) return;
-        sessionStorage.setItem('smartlink_aberto', '1');
+        if(anuncioAbriu) {
+          sessionStorage.setItem('smartlink_aberto', '1');
+        }
       }
+      $('#game-details').click(()=>{
+        scroll(document.getElementById('game-details-content'))
+      });
+
       setTimeout(() => {
         let gameItems = [];
         let gameItemsIndex = -1;
