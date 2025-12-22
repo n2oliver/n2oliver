@@ -427,15 +427,6 @@ if ($impressionid) {
       document.getElementById('game-details-content').innerHTML = game.descricao;
     }
     document.addEventListener('DOMContentLoaded', function() {
-      if (!sessionStorage.getItem('smartlink_aberto')) {
-        const params1 = 'width='+ ((screen.availWidth / 2).toFixed(0)) + ',height=' + ((screen.availHeight / 2).toFixed(0)) + ',resizable=yes,scrollbars=yes';
-        const params2 = 'width='+ ((screen.availWidth / 3).toFixed(0)) + ',height=' + ((screen.availHeight / 3).toFixed(0)) + ',resizable=yes,scrollbars=yes';
-        let anuncioAbriu = window.open(SMARTLINK_2, '_blank', params2);
-        window.open(SMARTLINK_1, '_blank', params1);
-        if(anuncioAbriu) {
-          sessionStorage.setItem('smartlink_aberto', '1');
-        }
-      }
       $('#game-details').click(()=>{
         scroll(document.getElementById('game-details-content'))
       });
