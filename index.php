@@ -283,22 +283,10 @@ if ($impressionid) {
     </div>
       <div id="ads" class="col-md-10 m-auto p-4 mt-1" style="background-color: rgba(255, 255, 255, .7);">
         <div class="row w-100">
-          <script type="text/javascript">
-            atOptions = {
-              'key' : 'b5463c03cd36f2b207d3e311906ba716',
-              'format' : 'iframe',
-              'height' : 250,
-              'width' : 300,
-              'params' : {}
-            };
-          </script>
-          <script
-            type="text/javascript"
-            src="https://laxativethem.com/b5463c03cd36f2b207d3e311906ba716/invoke.js"
-          ></script>
-          
-          <a href="https://www.popads.net/users/refer/3587213" style="width: auto"><img src="https://banners.popads.net/250x250.gif" alt="PopAds.net - The Best Popunder Adnetwork" /></a>
-          
+          <div id="frame" style="width: 320px;margin: auto;z-index: 99998;height: auto">
+            <iframe data-aa='2421579' src='//ad.a-ads.com/2421579/?size=320x50'
+                              style='border:0; padding:0; width:320px; height:50px; overflow:hidden;display: block;margin: auto'></iframe>
+          </div>
           <div class="w-100 d-flex justify-content-center">
             <a href="https://aads.com/advertise/?partner=2414063" class="mt-2"><img src="https://aads.com/a_ads_banners/gif/english/320x50/simple_v1.gif" alt="Advertise with Anonymous Ads" width="320px" height="50px" /></a>
           </div>
@@ -440,9 +428,10 @@ if ($impressionid) {
     }
     document.addEventListener('DOMContentLoaded', function() {
       if (!sessionStorage.getItem('smartlink_aberto')) {
-        const params = 'width='+ ((screen.availWidth / 2).toFixed(0)) + ',height=' + ((screen.availHeight / 2).toFixed(0)) + ',resizable=yes,scrollbars=yes';
-        let anuncioAbriu = window.open(SMARTLINK_1, '_blank', params);
-        window.open(SMARTLINK_2, '_blank', params);
+        const params1 = 'width='+ ((screen.availWidth / 2).toFixed(0)) + ',height=' + ((screen.availHeight / 2).toFixed(0)) + ',resizable=yes,scrollbars=yes';
+        const params2 = 'width='+ ((screen.availWidth / 3).toFixed(0)) + ',height=' + ((screen.availHeight / 3).toFixed(0)) + ',resizable=yes,scrollbars=yes';
+        let anuncioAbriu = window.open(SMARTLINK_2, '_blank', params2);
+        window.open(SMARTLINK_1, '_blank', params1);
         if(anuncioAbriu) {
           sessionStorage.setItem('smartlink_aberto', '1');
         }
