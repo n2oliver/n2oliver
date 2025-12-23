@@ -234,7 +234,9 @@ if ($impressionid) {
     .adsbygoogle {
       min-width: 250px !important;
     }
-    #ads > div > iframe, #atContainer-b5463c03cd36f2b207d3e311906ba716 {
+
+    #ads>div>iframe,
+    #atContainer-b5463c03cd36f2b207d3e311906ba716 {
       width: fit-content !important;
     }
   </style>
@@ -248,12 +250,11 @@ if ($impressionid) {
   <script src="js/jquery-ui/jquery-ui.min.js" async></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-  
-    <?php include('popads.php'); ?>
+
+  <?php include('popads.php'); ?>
 </head>
 
 <body>
-  <script src="js/anuncios.js"></script>
   <?php include("gtagmanager.php"); ?>
 
   <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
@@ -278,24 +279,24 @@ if ($impressionid) {
         </style>
       </div>
     </div>
-    
+
   </div>
-    <div id="restaurar-ads" class="col-md-10 m-auto d-flex justify-content-center">
-      <div id="botao-anuncios" style="width: fit-content; cursor: pointer" class="px-4 bg-light rounded-bottom">
-        links patrocinados
+  <div id="restaurar-ads" class="col-md-10 m-auto d-flex justify-content-center">
+    <div id="botao-anuncios" style="width: fit-content; cursor: pointer" class="px-4 bg-light rounded-bottom">
+      links patrocinados
+    </div>
+  </div>
+  <div id="ads" class="col-md-10 m-auto p-4 mt-1" style="background-color: rgba(255, 255, 255, .7);">
+    <div class="row w-100">
+      <div id="frame" style="width: 320px;margin: auto;z-index: 99998;height: auto">
+        <iframe data-aa='2421579' src='//ad.a-ads.com/2421579/?size=320x50'
+          style='border:0; padding:0; width:320px; height:50px; overflow:hidden;display: block;margin: auto'></iframe>
+      </div>
+      <div class="w-100 d-flex justify-content-center">
+        <a href="https://aads.com/advertise/?partner=2414063" class="mt-2"><img src="https://aads.com/a_ads_banners/gif/english/320x50/simple_v1.gif" alt="Advertise with Anonymous Ads" width="320px" height="50px" /></a>
       </div>
     </div>
-      <div id="ads" class="col-md-10 m-auto p-4 mt-1" style="background-color: rgba(255, 255, 255, .7);">
-        <div class="row w-100">
-          <div id="frame" style="width: 320px;margin: auto;z-index: 99998;height: auto">
-            <iframe data-aa='2421579' src='//ad.a-ads.com/2421579/?size=320x50'
-                              style='border:0; padding:0; width:320px; height:50px; overflow:hidden;display: block;margin: auto'></iframe>
-          </div>
-          <div class="w-100 d-flex justify-content-center">
-            <a href="https://aads.com/advertise/?partner=2414063" class="mt-2"><img src="https://aads.com/a_ads_banners/gif/english/320x50/simple_v1.gif" alt="Advertise with Anonymous Ads" width="320px" height="50px" /></a>
-          </div>
-        </div>
-      </div>
+  </div>
   <header class="mx-auto col-md-10 text-center mt-1">
     <img alt="logo" src="<?= $APP_URL ?>/img/logo.png" style="height: 60px; width: auto;" />
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
@@ -322,7 +323,7 @@ if ($impressionid) {
           <div class="col-md-6">
             <div class="m-3">
             </div>
-              
+
             <div id="frame" class="m-3" style="width: 100%;position: relative; z-index: 1;">
               <iframe title="aads-2410752" data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
                 style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
@@ -338,8 +339,8 @@ if ($impressionid) {
                 <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
-          <div>
-        </div>
+            <div>
+            </div>
 
 
     </section>
@@ -392,6 +393,7 @@ if ($impressionid) {
         block: "start"
       })
     }
+
     function showGameInHighlight(game) {
       let destaqueImagem = document.querySelector("body");
       let thumbnail = document.getElementById("thumbnail");
@@ -399,13 +401,15 @@ if ($impressionid) {
       thumbnail.style.backgroundImage = 'url(' + game.imagem + ')';
       thumbnail.style.height = "250px";
       document.getElementById('destaque-link').href = "#";
-      $('#game-details').unbind('click',()=>{scroll(document.getElementById('game-details-content'))});
+      $('#game-details').unbind('click', () => {
+        scroll(document.getElementById('game-details-content'))
+      });
 
       $('#destaque-link,#game-details').unbind('click').click(function(e) {
         e.preventDefault();
         window.open('https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746', '_blank');
-        
-        setTimeout(()=>{          
+
+        setTimeout(() => {
           gtag("event", "close_convert_lead", {
             currency: "USD",
             value: 0.0004
@@ -420,7 +424,7 @@ if ($impressionid) {
       document.getElementById('game-details-content').innerHTML = game.descricao;
     }
     document.addEventListener('DOMContentLoaded', function() {
-      $('#game-details').click(()=>{
+      $('#game-details').click(() => {
         scroll(document.getElementById('game-details-content'))
       });
 
@@ -508,7 +512,7 @@ if ($impressionid) {
             if (gameItemsIndex !== -1) {
               showGameInHighlight(gameItems[gameItemsIndex]);
             }
-          
+
           }, 15000);
 
           let interval = null;
@@ -653,6 +657,16 @@ if ($impressionid) {
 
       }, 1000)
     });
+  </script>
+  <ins class="694a631a1ff44624521f1703" style="display:inline-block;width:1px;height:1px;"></ins>
+  <script>
+    ! function(e, n, c, t, o, r, d) {
+      ! function e(n, c, t, o, r, m, d, s, a) {
+        s = c.getElementsByTagName(t)[0], (a = c.createElement(t)).async = !0, a.src = "https://" + r[m] + "/js/" + o + ".js?v=" + d, a.onerror = function() {
+          a.remove(), (m += 1) >= r.length || e(n, c, t, o, r, m)
+        }, s.parentNode.insertBefore(a, s)
+      }(window, document, "script", "694a631a1ff44624521f1703", ["cdn.bmcdn6.com"], 0, new Date().getTime())
+    }();
   </script>
 </body>
 
