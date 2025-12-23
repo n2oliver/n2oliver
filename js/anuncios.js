@@ -6,11 +6,21 @@ const params2 = 'width='+ ((screen.availWidth / 3).toFixed(0)) + ',height=' + ((
 let anuncioAbriu;
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (window.location.href.indexOf('utm_source=popads') != -1 && !sessionStorage.getItem('smartlink_aberto')) {
+  if (!sessionStorage.getItem('smartlink_aberto')) {
     anuncioAbriu = window.open(SMARTLINK_2, '_blank', params2);
     window.open(SMARTLINK_1, '_blank', params1);
     if(anuncioAbriu) {
       sessionStorage.setItem('smartlink_aberto', '1');
+    } else {
+      Toastify({
+          text: 'Para manter o acesso, é necessário permitir anúncios',
+          duration: 3000,
+          style: {
+            background: "linear-gradient(to right, yellow)",
+            color: "#b09b00",
+            fontWeight: "700"
+          },
+      }).showToast();
     }
   }
   function abrirSmartlinkUmaVez() {
@@ -41,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function esconderAutomaticamente() {
 
     setTimeout(() => {
-      if(window.location.href.indexOf('utm_source=popads') != -1 && !sessionStorage.getItem('smartlink_aberto') && !anuncioAbriu) {
+      if(!sessionStorage.getItem('smartlink_aberto') && !anuncioAbriu) {
         anuncioAbriu = window.open(SMARTLINK_2, '_blank', params2);
         window.open(SMARTLINK_1, '_blank', params1);
         if(anuncioAbriu) {

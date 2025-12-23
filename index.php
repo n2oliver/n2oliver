@@ -246,6 +246,8 @@ if ($impressionid) {
   <script src="gtag_dispatcher.js" async></script>
   <script type="text/javascript" data-cfasync="false" src="js/abrir-janela.js"></script>
   <script src="js/jquery-ui/jquery-ui.min.js" async></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 
 <body>
@@ -296,17 +298,6 @@ if ($impressionid) {
     <img alt="logo" src="<?= $APP_URL ?>/img/logo.png" style="height: 60px; width: auto;" />
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
-
-  <div id="aviso" style="display: none;" class="alert alert-warning bg-light mx-auto col-8 mt-1 rounded p-3" role="alert">
-    <h5 class="h5"><span class="text-danger"><i class="fa fa-exclamation-triangle"></i></span> Este site contém anúncios</h5>
-    <p class="h6">Para uma melhor experiência, você precisa <strong>permitir</strong> pop-ups e
-      redirecionamentos nas configurações do site
-      (geralmente na barra de endereço). <strong>Clique em <span class="text-danger">OK</span></strong> antes que o tempo para o <strong><span class="text-danger">redirecionamento</span></strong> acabe: <b id='tempo'>15</b></p>
-    <div class="form-group">
-      <button id="cancelar" class="btn btn-secondary">Cancelar</button>
-      <button id="ok" class="btn btn-primary">OK</button>
-    </div>
-  </div>
   <main class="container d-flex m-auto col-md-10 mt-1">
 
     <section id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
