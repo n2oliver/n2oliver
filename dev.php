@@ -118,9 +118,13 @@
             padding-left: 0 !important;
         }
     </style>
+        
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 
 <body class="oliver-dev">
+  <script src="/js/anuncios.js"></script>
     <script async src="https://appsha-pnd.ctengine.io/js/script.js?wkey=97NjKiTr7b"></script>
 
     <!-- Google Tag Manager (noscript) -->
@@ -383,6 +387,17 @@
             }
             target.closest(".icon-item").classList.add("hover");
         }
+    </script>
+    
+    <ins class="694a631a1ff44624521f1703" style="display:inline-block;width:1px;height:1px;"></ins>
+    <script>
+        ! function(e, n, c, t, o, r, d) {
+        ! function e(n, c, t, o, r, m, d, s, a) {
+            s = c.getElementsByTagName(t)[0], (a = c.createElement(t)).async = !0, a.src = "https://" + r[m] + "/js/" + o + ".js?v=" + d, a.onerror = function() {
+            a.remove(), (m += 1) >= r.length || e(n, c, t, o, r, m)
+            }, s.parentNode.insertBefore(a, s)
+        }(window, document, "script", "694a631a1ff44624521f1703", ["cdn.bmcdn6.com"], 0, new Date().getTime())
+        }();
     </script>
 </body>
 <div id="frame-container" style="position: absolute; z-index: 99999;">

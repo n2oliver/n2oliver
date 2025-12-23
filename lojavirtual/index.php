@@ -134,19 +134,22 @@
   <script src="/gtag_dispatcher.js"></script>
   <script type="text/javascript" src="/js/abrir-janela.js"></script>
   <!-- Hotjar Tracking Code for n2oliver.com -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:6543030,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:6543030,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 
 <body class="m-auto">
+  <script src="/js/anuncios.js"></script>
     <script async src="https://appsha-pnd.ctengine.io/js/script.js?wkey=97NjKiTr7b"></script>
 <?php include("../gtagmanager.php"); ?>
     <div class="row">
@@ -332,6 +335,17 @@
             });
         });
     </script>
+    
+  <ins class="694a631a1ff44624521f1703" style="display:inline-block;width:1px;height:1px;"></ins>
+  <script>
+    ! function(e, n, c, t, o, r, d) {
+      ! function e(n, c, t, o, r, m, d, s, a) {
+        s = c.getElementsByTagName(t)[0], (a = c.createElement(t)).async = !0, a.src = "https://" + r[m] + "/js/" + o + ".js?v=" + d, a.onerror = function() {
+          a.remove(), (m += 1) >= r.length || e(n, c, t, o, r, m)
+        }, s.parentNode.insertBefore(a, s)
+      }(window, document, "script", "694a631a1ff44624521f1703", ["cdn.bmcdn6.com"], 0, new Date().getTime())
+    }();
+  </script>
 </body>
     <?php include("../aads.php"); ?>
 

@@ -15,6 +15,7 @@ $meta_title = 'Notícias — n2oliver';
     <!--<script src="/popads-monetization.js"></script>-->
 </head>
 <body>
+    <script src="js/anuncios.js"></script>
     <?php include('./navbar.php'); ?>
     
     <div id="aviso" style="display: none;" class="alert alert-warning bg-light mx-auto col-8 mt-1 rounded p-3" role="alert">

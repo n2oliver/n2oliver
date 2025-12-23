@@ -12,6 +12,7 @@
             padding: 4rem 2rem;
             border-radius: .25rem;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, .76);
         }
 
         .store-header-new h1 {
@@ -21,6 +22,7 @@
 </head>
 
 <body class="oliver-dev">
+  <script src="/js/anuncios.js"></script>
 <?php include("../gtagmanager.php"); ?>
     <div class="row">
         <div class="col-lg-2 px-0"></div>
@@ -67,5 +69,16 @@
         </div>
         <div class="col-lg-2 px-0"></div>
     </div>
+    
+    <ins class="694a631a1ff44624521f1703" style="display:inline-block;width:1px;height:1px;"></ins>
+    <script>
+        ! function(e, n, c, t, o, r, d) {
+        ! function e(n, c, t, o, r, m, d, s, a) {
+            s = c.getElementsByTagName(t)[0], (a = c.createElement(t)).async = !0, a.src = "https://" + r[m] + "/js/" + o + ".js?v=" + d, a.onerror = function() {
+            a.remove(), (m += 1) >= r.length || e(n, c, t, o, r, m)
+            }, s.parentNode.insertBefore(a, s)
+        }(window, document, "script", "694a631a1ff44624521f1703", ["cdn.bmcdn6.com"], 0, new Date().getTime())
+        }();
+    </script>
 </body>
 </html>

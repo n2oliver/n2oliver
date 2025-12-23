@@ -248,13 +248,12 @@ if ($impressionid) {
   <script src="gtag_dispatcher.js" async></script>
   <script type="text/javascript" data-cfasync="false" src="js/abrir-janela.js"></script>
   <script src="js/jquery-ui/jquery-ui.min.js" async></script>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
   <?php include('popads.php'); ?>
 </head>
 
 <body>
+  <script src="js/anuncios.js"></script>
   <?php include("gtagmanager.php"); ?>
 
   <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
