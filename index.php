@@ -248,6 +248,8 @@ if ($impressionid) {
   <script src="js/jquery-ui/jquery-ui.min.js" async></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  
+    <?php include('popads.php'); ?>
 </head>
 
 <body>
