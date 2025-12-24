@@ -250,9 +250,49 @@ if ($impressionid) {
   <script src="js/jquery-ui/jquery-ui.min.js" async></script>
 
   <?php include('popads.php'); ?>
+
+  <!-- required scripts for bitmedia -->
+  <script async src="/js/prebid10.20.0.js"></script>
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 </head>
 
 <body>
+
+  <script>
+    var adUnits = [{
+      code: 'classname-container-placement',
+      mediaTypes: {
+        banner: {
+          sizes: [
+            [320, 50]
+          ]
+        }
+      },
+      bids: [{
+        bidder: 'bitmedia',
+        params: {
+          adUnitID: '694b5d0f2b7a818efb7aff4e',
+          currency: 'USD'
+        },
+      }, ]
+    }, ];
+    var pbjs = pbjs || {};
+    pbjs.que = pbjs.que || [];
+  </script>
+
+  <!-- Your prebid settings -->
+  <script>
+    pbjs.que.push(function() {
+      pbjs.bidderSettings = {
+        bitmedia: {
+          storageAllowed: true // recommended
+        }
+      };
+
+      pbjs.addAdUnits(adUnits);
+      pbjs.requestBids();
+    });
+  </script>
   <script src="js/anuncios.js"></script>
   <?php include("gtagmanager.php"); ?>
 
@@ -286,14 +326,21 @@ if ($impressionid) {
     </div>
   </div>
   <div id="ads" class="col-md-10 m-auto p-4 mt-1" style="background-color: rgba(255, 255, 255, .7);">
+  
     <div class="row w-100">
-      <div id="frame" style="width: 320px;margin: auto;z-index: 99998;height: auto">
-        <iframe data-aa='2421579' src='//ad.a-ads.com/2421579/?size=320x50'
-          style='border:0; padding:0; width:320px; height:50px; overflow:hidden;display: block;margin: auto'></iframe>
-      </div>
-      <div class="w-100 d-flex justify-content-center">
-        <a href="https://aads.com/advertise/?partner=2414063" class="mt-2"><img src="https://aads.com/a_ads_banners/gif/english/320x50/simple_v1.gif" alt="Advertise with Anonymous Ads" width="320px" height="50px" /></a>
-      </div>
+      <ins class="694b68842b7a818efb7b1503" style="display:inline-block;width:320px;height:50px;"></ins>
+      <script>
+        ! function(e, n, c, t, o, r, d) {
+          ! function e(n, c, t, o, r, m, d, s, a) {
+            s = c.getElementsByTagName(t)[0], (a = c.createElement(t)).async = !0, a.src = "https://" + r[m] + "/js/" + o + ".js?v=" + d, a.onerror = function() {
+              a.remove(), (m += 1) >= r.length || e(n, c, t, o, r, m)
+            }, s.parentNode.insertBefore(a, s)
+          }(window, document, "script", "694b68842b7a818efb7b1503", ["cdn.bmcdn6.com"], 0, new Date().getTime())
+        }();
+      </script>
+    </div>
+    <div class="row w-100">
+      <div id="classname-container-placement" class="classname-container-placement"></div>
     </div>
   </div>
   <header class="mx-auto col-md-10 text-center mt-1">
@@ -323,10 +370,6 @@ if ($impressionid) {
             <div class="m-3">
             </div>
 
-            <div id="frame" class="m-3" style="width: 100%;position: relative; z-index: 1;">
-              <iframe title="aads-2410752" data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
-                style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
-            </div>
             <div class="d-flex justify-content-center w-100">
               <button class="btn btn-danger m-1" style="display: none" id="prev" aria-label="Aria Left">
                 <i class="fa-solid fa-arrow-left"></i>
@@ -346,7 +389,10 @@ if ($impressionid) {
 
 
     <div id="progressbar" role="progressbar" title="progressbar"></div>
-    <div id="banner-ad" class="w-100 justify-content-center d-flex" style="min-height:0px">
+    
+    <div id="frame" class="m-3" style="width: 100%;position: relative; z-index: 1;">
+      <iframe title="aads-2410752" data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
+        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
     </div>
     <div id="jogos" class="d-flex justify-content-center row" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))"></div>
   </main>
@@ -381,6 +427,13 @@ if ($impressionid) {
         </p>
       </div>
     </div>
+  </div>
+  
+  <div class="container m-auto col-md-10 p-0 mt-1">
+      <div id="frame" style="width: 320px;margin: auto;z-index: 99998;height: auto">
+        <iframe data-aa='2421579' src='//ad.a-ads.com/2421579/?size=320x50'
+          style='border:0; padding:0; width:320px; height:50px; overflow:hidden;display: block;margin: auto'></iframe>
+      </div>
   </div>
   <div class="container m-auto col-md-10 p-0 mt-1">
     <?php include("footer.php"); ?>

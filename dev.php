@@ -124,6 +124,7 @@
 </head>
 
 <body class="oliver-dev">
+  <?php include("gtagmanager.php"); ?>
   <script src="/js/anuncios.js"></script>
     <script async src="https://appsha-pnd.ctengine.io/js/script.js?wkey=97NjKiTr7b"></script>
 

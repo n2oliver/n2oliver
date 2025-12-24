@@ -1,0 +1,13 @@
+{
+  "version": "10.20.0",
+  "modules": [
+    "bitmediaBidAdapter",
+    "consentManagementGpp",
+    "consentManagementTcf",
+    "gppControl_usnat",
+    "gppControl_usstates",
+    "gptPreAuction",
+    "storageControl",
+    "tcfControl"
+  ]
+}

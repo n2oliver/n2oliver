@@ -12,9 +12,11 @@ $meta_title = 'Notícias — n2oliver';
             backdrop-filter: brightness(.64);
         }
     </style>
+    <script src="gtag_dispatcher.js" async></script>
     <!--<script src="/popads-monetization.js"></script>-->
 </head>
 <body>
+    <?php include("gtagmanager.php"); ?>
     <script src="js/anuncios.js"></script>
     <?php include('./navbar.php'); ?>
     

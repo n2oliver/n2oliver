@@ -19,6 +19,7 @@
             font-weight: 700;
         }
     </style>
+    <script src="/gtag_dispatcher.js" async></script>
 </head>
 
 <body class="oliver-dev">

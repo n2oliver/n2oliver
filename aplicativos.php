@@ -7,6 +7,7 @@
     $meta_image = '/img/linhaamarela.jpg';
     $canonical = (isset($_SERVER['HTTP_HOST']) ? (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] : 'https://n2oliver.com/aplicativos.php');
     include("cabecalho.php"); ?>
+    <script src="gtag_dispatcher.js" async></script>
 </head>
 
 <body class="oliver-dev">
