@@ -250,49 +250,21 @@ if ($impressionid) {
   <script src="js/jquery-ui/jquery-ui.min.js" async></script>
 
   <?php include('popads.php'); ?>
-
-  <!-- required scripts for bitmedia -->
-  <script async src="/js/prebid10.20.0.js"></script>
-  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+  <style>
+    .raster {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      background-image: url(/img/icons8-cursor-50.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 999999;
+    }
+  </style>
 </head>
 
 <body>
-
-  <script>
-    var adUnits = [{
-      code: 'classname-container-placement',
-      mediaTypes: {
-        banner: {
-          sizes: [
-            [320, 50]
-          ]
-        }
-      },
-      bids: [{
-        bidder: 'bitmedia',
-        params: {
-          adUnitID: '694b5d0f2b7a818efb7aff4e',
-          currency: 'USD'
-        },
-      }, ]
-    }, ];
-    var pbjs = pbjs || {};
-    pbjs.que = pbjs.que || [];
-  </script>
-
-  <!-- Your prebid settings -->
-  <script>
-    pbjs.que.push(function() {
-      pbjs.bidderSettings = {
-        bitmedia: {
-          storageAllowed: true // recommended
-        }
-      };
-
-      pbjs.addAdUnits(adUnits);
-      pbjs.requestBids();
-    });
-  </script>
   <script src="js/anuncios.js"></script>
   <?php include("gtagmanager.php"); ?>
 
@@ -320,29 +292,6 @@ if ($impressionid) {
     </div>
 
   </div>
-  <div id="restaurar-ads" class="col-md-10 m-auto d-flex justify-content-center">
-    <div id="botao-anuncios" style="width: fit-content; cursor: pointer" class="px-4 bg-light rounded-bottom">
-      links patrocinados
-    </div>
-  </div>
-  <div id="ads" class="col-md-10 m-auto p-4 mt-1" style="background-color: rgba(255, 255, 255, .7);">
-  
-    <div class="row w-100">
-      <ins class="694b68842b7a818efb7b1503" style="display:inline-block;width:320px;height:50px;"></ins>
-      <script>
-        ! function(e, n, c, t, o, r, d) {
-          ! function e(n, c, t, o, r, m, d, s, a) {
-            s = c.getElementsByTagName(t)[0], (a = c.createElement(t)).async = !0, a.src = "https://" + r[m] + "/js/" + o + ".js?v=" + d, a.onerror = function() {
-              a.remove(), (m += 1) >= r.length || e(n, c, t, o, r, m)
-            }, s.parentNode.insertBefore(a, s)
-          }(window, document, "script", "694b68842b7a818efb7b1503", ["cdn.bmcdn6.com"], 0, new Date().getTime())
-        }();
-      </script>
-    </div>
-    <div class="row w-100">
-      <div id="classname-container-placement" class="classname-container-placement"></div>
-    </div>
-  </div>
   <header class="mx-auto col-md-10 text-center mt-1">
     <img alt="logo" src="<?= $APP_URL ?>/img/logo.png" style="height: 60px; width: auto;" />
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
@@ -354,35 +303,33 @@ if ($impressionid) {
       <div class="d-flex flex-wrap align-items-start justify-content-center">
 
         <div class="row">
-          <div id="game-details" class="col-md-6 flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+          <div id="game-details" class="flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
 
 
             <div class="rounded" style="font-family: Ubuntu;
             background-color: rgba(0,0,0,.6); color: white !important; padding: 12px; text-align: center;">
               <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
               <div id="thumbnail" style="height: 250px; width: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url(img/n2.jpg)"></div>
+              
+
+              <div class="d-flex justify-content-center w-100 p-2">
+                <button class="btn btn-danger m-1" style="display: none" id="prev" aria-label="Aria Left">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <a id="destaque-link" href="#jogos" style="display: none">
+                  <span id="destaque-titulo">Ver Jogos</span>
+                </a>
+                <button class="btn btn-danger m-1" id="next" style="display: none" aria-label="Aria Right">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
               <p id="game-details-content" style="max-width:680px;margin:0 auto 18px;color: white;line-height:1.5;">
                 No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
               </p>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="m-3">
-            </div>
-
-            <div class="d-flex justify-content-center w-100">
-              <button class="btn btn-danger m-1" style="display: none" id="prev" aria-label="Aria Left">
-                <i class="fa-solid fa-arrow-left"></i>
-              </button>
-              <a id="destaque-link" href="#jogos" style="display: none">
-                <span id="destaque-titulo">Ver Jogos</span>
-              </a>
-              <button class="btn btn-danger m-1" id="next" style="display: none" aria-label="Aria Right">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div>
-            <div>
-            </div>
+        </div>
+      </div>
 
 
     </section>
@@ -453,11 +400,11 @@ if ($impressionid) {
       thumbnail.style.backgroundImage = 'url(' + game.imagem + ')';
       thumbnail.style.height = "250px";
       document.getElementById('destaque-link').href = "#";
-      $('#game-details').unbind('click', () => {
+      $('#thumbnail').unbind('click', () => {
         scroll(document.getElementById('game-details-content'))
       });
 
-      $('#destaque-link,#game-details').unbind('click').click(function(e) {
+      $('#destaque-link,#thumbnail').unbind('click').click(function(e) {
         e.preventDefault();
         window.open('https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746', '_blank');
 
@@ -476,7 +423,7 @@ if ($impressionid) {
       document.getElementById('game-details-content').innerHTML = game.descricao;
     }
     document.addEventListener('DOMContentLoaded', function() {
-      $('#game-details').click(() => {
+      $('#thumbnail').click(() => {
         scroll(document.getElementById('game-details-content'))
       });
 
@@ -709,16 +656,6 @@ if ($impressionid) {
 
       }, 1000)
     });
-  </script>
-  <ins class="694a631a1ff44624521f1703" style="display:inline-block;width:1px;height:1px;"></ins>
-  <script>
-    ! function(e, n, c, t, o, r, d) {
-      ! function e(n, c, t, o, r, m, d, s, a) {
-        s = c.getElementsByTagName(t)[0], (a = c.createElement(t)).async = !0, a.src = "https://" + r[m] + "/js/" + o + ".js?v=" + d, a.onerror = function() {
-          a.remove(), (m += 1) >= r.length || e(n, c, t, o, r, m)
-        }, s.parentNode.insertBefore(a, s)
-      }(window, document, "script", "694a631a1ff44624521f1703", ["cdn.bmcdn6.com"], 0, new Date().getTime())
-    }();
   </script>
 </body>
 
