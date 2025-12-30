@@ -1,4 +1,8 @@
 <?php
+include('load-env.php');
+include('database/connectdb.php');
+include('repositories/LoginRepository.php');
+include('repositories/UsuarioRepository.php');
 #include('/conversion.php');
 $APP_URL = '/jogos';
 $aid = getenv('AID_POPADS'); // seu AID PopAds
@@ -303,7 +307,9 @@ if ($impressionid) {
       <div class="d-flex flex-wrap align-items-start justify-content-center">
 
         <div class="row">
-          <div id="game-details" class="flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+          
+          <?php include("login.php"); ?>
+          <div id="game-details" class="col-md-6 col-lg-8 flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
 
 
             <div class="rounded" style="font-family: Ubuntu;
@@ -423,6 +429,10 @@ if ($impressionid) {
       document.getElementById('game-details-content').innerHTML = game.descricao;
     }
     document.addEventListener('DOMContentLoaded', function() {
+      const appUrl = '/';
+      const login = new Login(appUrl);
+      login.setup(login, appUrl);
+
       $('#thumbnail').click(() => {
         scroll(document.getElementById('game-details-content'))
       });
