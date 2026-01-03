@@ -296,8 +296,19 @@ if ($impressionid) {
     <img alt="logo" src="<?= $APP_URL ?>/img/logo.png" style="height: 60px; width: auto;" />
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
-  <main class="container d-flex m-auto col-md-10 mt-1">
-
+  <main class="container d-flex m-auto col-md-10 p-0">
+    <div class="d-flex justify-content-center w-100 my-1">
+      <script>
+        atOptions = {
+          'key' : '29929d8720c37977a6ea64b1b7db2d02',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+      </script>
+      <script src="https://laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
+    </div>
     <section id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
       alt="">
       <div class="d-flex flex-wrap align-items-start justify-content-center">
@@ -406,14 +417,18 @@ if ($impressionid) {
 
       $('#destaque-link,#thumbnail').unbind('click').click(function(e) {
         e.preventDefault();
-        window.open('https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746', '_blank');
 
         setTimeout(() => {
           gtag("event", "close_convert_lead", {
             currency: "USD",
             value: 0.0004
           });
-          abrirJanela('https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4', game.url);
+          
+          abrirSmartlinkUmaVez();
+          setTimeout(()=>{
+            window.location.href = game.url;
+          }, 1000);
+          
         }, 200);
       });
 
@@ -460,13 +475,15 @@ if ($impressionid) {
               const gameSpan = document.createElement('span');
               gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
               gameLink.onclick = function() {
-                window.open('https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746', '_blank');
                 setTimeout(() => {
                   gtag("event", "close_convert_lead", {
                     currency: "USD",
                     value: 0.0004
                   });
-                  abrirJanela('https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4', game.url);
+                  abrirSmartlinkUmaVez();
+                  setTimeout(()=>{
+                    window.location.href = game.url;
+                  }, 1000);
                 }, 200);
               };
               gameItems.push(game);
