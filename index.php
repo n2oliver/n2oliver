@@ -314,15 +314,23 @@ if ($impressionid) {
       <div class="d-flex flex-wrap align-items-start justify-content-center">
 
         <div class="row">
-          <div id="game-details" class="flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+          <div id="game-details" class="flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center; font-family: Ubuntu;
+                color: white !important; ">
 
-
-            <div class="rounded" style="font-family: Ubuntu;
-            background-color: rgba(0,0,0,.6); color: white !important; padding: 12px; text-align: center;">
               <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
-              <div id="thumbnail" style="height: 250px; width: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url(img/n2.jpg)"></div>
-              
 
+            <div id="thumbnail" class="rounded align-content-end" 
+              style="
+                padding: 12px; 
+                text-align: center; 
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat; 
+                background-image: url(img/n2.jpg);
+                height: 500px">
+              <p id="game-details-content" class="bg-dark p-2 d-flex flex-column align-self-bottom" style="max-width:680px; margin:0 auto 18px;color: white;line-height:1.5;">
+                No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
+              </p>
               <div class="d-flex justify-content-center w-100 p-2">
                 <button class="btn btn-danger m-1" style="display: none" id="prev" aria-label="Aria Left">
                   <i class="fa-solid fa-arrow-left"></i>
@@ -334,9 +342,6 @@ if ($impressionid) {
                   <i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
-              <p id="game-details-content" style="max-width:680px;margin:0 auto 18px;color: white;line-height:1.5;">
-                No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
-              </p>
             </div>
           </div>
         </div>
@@ -411,11 +416,8 @@ if ($impressionid) {
       thumbnail.style.backgroundImage = 'url(' + game.imagem + ')';
       thumbnail.style.height = "250px";
       document.getElementById('destaque-link').href = "#";
-      $('#thumbnail').unbind('click', () => {
-        scroll(document.getElementById('game-details-content'))
-      });
 
-      $('#destaque-link,#thumbnail').unbind('click').click(function(e) {
+      $('#destaque-link').unbind('click').click(function(e) {
         e.preventDefault();
 
         setTimeout(() => {
@@ -438,10 +440,6 @@ if ($impressionid) {
       document.getElementById('game-details-content').innerHTML = game.descricao;
     }
     document.addEventListener('DOMContentLoaded', function() {
-      $('#thumbnail').click(() => {
-        scroll(document.getElementById('game-details-content'))
-      });
-
       setTimeout(() => {
         let gameItems = [];
         let gameItemsIndex = -1;
