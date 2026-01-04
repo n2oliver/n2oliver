@@ -101,8 +101,9 @@ if ($impressionid) {
     .game-card {
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       text-align: center;
-      overflow: auto;
+      overflow: visible;
       flex: 1 1 200px;
+      height: auto;
     }
 
     .game-card h2 {
@@ -125,21 +126,18 @@ if ($impressionid) {
       color: #FFFFFF
     }
 
-    .game-card .link:hover,
-    #destaque-link:hover {
+    .game-card .link:hover {
       background-color: #F11E52;
     }
 
     .game-card a div {
       padding: 10px;
-      align-items: end;
+      align-items: start;
       height: auto;
       background-position: center !important;
-      margin: 4px;
     }
 
-    .game-card a div:hover,
-    #destaque-link:hover {
+    .game-card a div:hover {
       filter: brightness(1.5);
     }
 
@@ -219,18 +217,6 @@ if ($impressionid) {
       transition: 1s ease;
     }
 
-    #destaque-link {
-      height: fit-content;
-      align-self: center;
-      padding: 12px 18px;
-      border-radius: 10px;
-      background: #9E0040;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #FFFFFF;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
     .adsbygoogle {
       min-width: 250px !important;
     }
@@ -238,6 +224,13 @@ if ($impressionid) {
     #ads>div>iframe,
     #atContainer-b5463c03cd36f2b207d3e311906ba716 {
       width: fit-content !important;
+    }
+    .row>*.game-card {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+    }
+    #game-details-content,#game-details-title {
+      cursor: pointer
     }
   </style>
   <script defer
@@ -317,27 +310,22 @@ if ($impressionid) {
           <div id="game-details" class="flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center; font-family: Ubuntu;
                 color: white !important; ">
 
-              <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
-
             <div id="thumbnail" class="rounded align-content-end" 
               style="
-                padding: 12px; 
                 text-align: center; 
                 background-size: cover; 
                 background-position: center; 
                 background-repeat: no-repeat; 
                 background-image: url(img/n2.jpg);
                 height: 500px">
-              <p id="game-details-content" class="bg-dark p-2 d-flex flex-column align-self-bottom" style="max-width:680px; margin:0 auto 18px;color: white;line-height:1.5;">
-                No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
-              </p>
+              <h2 style="font-size:2rem;margin-bottom:12px; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
               <div class="d-flex justify-content-center w-100 p-2">
                 <button class="btn btn-danger m-1" style="display: none" id="prev" aria-label="Aria Left">
                   <i class="fa-solid fa-arrow-left"></i>
                 </button>
-                <a id="destaque-link" href="#jogos" style="display: none">
-                  <span id="destaque-titulo">Ver Jogos</span>
-                </a>
+                <p id="game-details-content" class="p-2 d-flex flex-column align-self-bottom" style="max-width:680px; margin:0 auto; color: white;line-height:1.5; background: rgba(0, 0, 0, .8);">
+                  No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
+                </p>
                 <button class="btn btn-danger m-1" id="next" style="display: none" aria-label="Aria Right">
                   <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -353,11 +341,12 @@ if ($impressionid) {
 
     <div id="progressbar" role="progressbar" title="progressbar"></div>
     
+    <div id="jogos" class="d-flex justify-content-center row"></div>
+    
     <div id="frame" class="m-3" style="width: 100%;position: relative; z-index: 1;">
       <iframe title="aads-2410752" data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
         style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
     </div>
-    <div id="jogos" class="d-flex justify-content-center row" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))"></div>
   </main>
   <div class="container m-auto p-0 mt-1 col-md-10">
     <div class="donation-section m-0 row">
@@ -391,7 +380,6 @@ if ($impressionid) {
       </div>
     </div>
   </div>
-  
   <div class="container m-auto col-md-10 p-0 mt-1">
       <div id="frame" style="width: 320px;margin: auto;z-index: 99998;height: auto">
         <iframe data-aa='2421579' src='//ad.a-ads.com/2421579/?size=320x50'
@@ -415,9 +403,8 @@ if ($impressionid) {
       destaqueImagem.style.backgroundImage = 'url(' + game.imagem + ')';
       thumbnail.style.backgroundImage = 'url(' + game.imagem + ')';
       thumbnail.style.height = "250px";
-      document.getElementById('destaque-link').href = "#";
 
-      $('#destaque-link').unbind('click').click(function(e) {
+      $('#game-details-content,#game-details-title').unbind('click').click(function(e) {
         e.preventDefault();
 
         setTimeout(() => {
@@ -429,13 +416,12 @@ if ($impressionid) {
           abrirSmartlinkUmaVez();
           setTimeout(()=>{
             window.location.href = game.url;
-          }, 1000);
+          }, 300);
           
         }, 200);
       });
 
 
-      document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
       document.getElementById('game-details-title').textContent = game.titulo;
       document.getElementById('game-details-content').innerHTML = game.descricao;
     }
@@ -514,7 +500,6 @@ if ($impressionid) {
           setTimeout(() => {
             document.getElementById('game-details-title').textContent = gameLink.dataset.gameTitle;
             document.getElementById('game-details-content').innerHTML = gameLink.dataset.gameDesc;
-            document.getElementById('destaque-link').href = "#";
             gameItemsIndex = gameItems.indexOf(gamecard);
             if ($("#progressbar").progressbar) {
               $("#progressbar").progressbar({
@@ -586,7 +571,7 @@ if ($impressionid) {
             startProgress();
             interval = setInterval(next, duration);
           });
-          $('#next,#prev,#destaque-link').show();
+          $('#next,#prev').show();
 
           if ($("#progressbar").progressbar) {
             // Inicializa o progressbar
