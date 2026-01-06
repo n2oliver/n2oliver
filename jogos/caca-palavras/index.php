@@ -52,7 +52,32 @@
         background-color: #0056b3;
     }
     #main-text {
-      background-image: url(/jogos/img/bg-grid.jpg);
+      background-image: url(/jogos/img/bg-grid.jpg);    
+      position: relative;
+      width: 100vw;
+      background-size: cover;
+      overflow: hidden;
+      filter: brightness(.8); 
+    }
+    .spotlight {
+        position: absolute;
+        width: 200px; /* Tamanho do holofote */
+        height: 200px;
+        border-radius: 50%; /* Transforma em círculo */
+        /* Garante que o elemento não capture eventos do mouse, permitindo interação com o conteúdo abaixo */
+        pointer-events: none; 
+        
+        filter: brightness(1); 
+        background-color: rgba(255, 255, 255, .2); /* Fundo ligeiramente translúcido */
+        /* Aplica o filtro de desfoque ao fundo visível através deste elemento */
+
+        /* Posicionamento inicial fora da vista e ajuste para centralizar no cursor */
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%); 
+        
+        /* Adiciona uma transição suave para o movimento */
+        transition: transform 0.1s linear; 
     }
   </style>
   <link rel="stylesheet" href="/styles-index.css">
@@ -98,6 +123,8 @@
   </div>
   <br>
   <?php include("../../footer.php"); ?>
+  
+  <div class="spotlight"></div>
     <script>
       const footer = document.querySelector('footer')
       footer.classList.add('col-md-8');
@@ -109,7 +136,7 @@
           value: 0.0004
         });
         $('#jogar').click(()=>{
-            abrirJanela('<?= $APP_URL ?>/jogo.php', 'https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4');
+            window.location.href = '<?= $APP_URL ?>/jogo.php';
             gtag("event", "close_convert_lead", {
               currency: "USD",
               value: 0.0004
@@ -122,6 +149,15 @@
                 document.getElementById('jogar').click();
             }, 3000)
         }
+      });
+      
+
+      const spotlight = document.querySelector('.spotlight');
+
+      document.addEventListener('mousemove', (e) => {
+          // Atualiza a posição X e Y do elemento para seguir o cursor
+          spotlight.style.top = `${e.clientY}px`;
+          spotlight.style.left = `${e.clientX}px`;
       });
     </script>
 </body>

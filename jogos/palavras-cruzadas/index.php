@@ -109,7 +109,7 @@
             value: 0.0004
           });
           document.querySelector('#main-text a').addEventListener('click', ()=>{
-              abrirJanela('<?= $APP_URL ?>/jogo.php', 'https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4');
+              window.location.href = '<?= $APP_URL ?>/jogo.php';
               gtag("event", "close_convert_lead", {
                   currency: "USD",
                   value: 0.0004

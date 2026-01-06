@@ -65,6 +65,7 @@ if ($impressionid) {
       background-position: center;
       background-attachment: fixed;
       background-size: cover;
+      backdrop-filter: brightness(0.5);
     }
 
     header {
@@ -103,7 +104,7 @@ if ($impressionid) {
       text-align: center;
       overflow: visible;
       flex: 1 1 200px;
-      height: auto;
+      height: 272px;
     }
 
     .game-card h2 {
@@ -186,7 +187,6 @@ if ($impressionid) {
     }
 
     #destaque-imagem {
-      padding: 32px 16px;
       color: #000;
       text-align: center;
       height: fit-content;
@@ -285,40 +285,36 @@ if ($impressionid) {
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
   <main class="container d-flex m-auto col-md-10 p-0">
-    <section id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
+    <section id="destaque-imagem" class="w-100 n2oliver-jogos d-flex flex-column justify-content-center"
       alt="">
-      <div class="d-flex flex-wrap align-items-start justify-content-center">
 
-        <div class="row">
-          <div id="game-details" class="flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center; font-family: Ubuntu;
-                color: white !important; ">
+      <div class="row">
+        <div id="game-details" class="flex-column px-0" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center; font-family: Ubuntu;
+              color: white !important; ">
 
-            <div id="thumbnail" class="rounded align-content-end" 
-              style="
-                text-align: center; 
-                background-size: cover; 
-                background-position: center; 
-                background-repeat: no-repeat; 
-                background-image: url(img/n2.jpg);
-                height: 250px">
-              <h2 style="font-size:2rem;margin-bottom:12px; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
-              <div class="d-flex justify-content-center w-100 p-2">
-                <button class="btn btn-danger m-1" style="display: none" id="prev" aria-label="Aria Left">
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-                <p id="game-details-content" class="p-2 d-flex flex-column align-self-bottom" style="max-width:680px; margin:0 auto; color: white;line-height:1.5; background: rgba(0, 0, 0, .8);">
-                  No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
-                </p>
-                <button class="btn btn-danger m-1" id="next" style="display: none" aria-label="Aria Right">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              </div>
+          <div id="thumbnail" class="rounded align-content-end" 
+            style="
+              text-align: center; 
+              background-size: cover; 
+              background-position: center; 
+              background-repeat: no-repeat; 
+              background-image: url(img/n2.jpg);
+              height: 250px">
+            <h2 style="font-size:2rem;margin-bottom:12px; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
+            <div class="d-flex justify-content-center w-100 p-2">
+              <button class="btn btn-danger m-1" style="display: none" id="prev" aria-label="Aria Left">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <p id="game-details-content" class="p-2 d-flex flex-column align-self-bottom" style="max-width:680px; margin:0 auto; color: white;line-height:1.5; background: rgba(0, 0, 0, .8);">
+                No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
+              </p>
+              <button class="btn btn-danger m-1" id="next" style="display: none" aria-label="Aria Right">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
           </div>
         </div>
       </div>
-
-
     </section>
 
 
@@ -390,16 +386,7 @@ if ($impressionid) {
         e.preventDefault();
 
         setTimeout(() => {
-          gtag("event", "close_convert_lead", {
-            currency: "USD",
-            value: 0.0004
-          });
-          
-          abrirSmartlinkUmaVez();
-          setTimeout(()=>{
-            window.location.href = game.url;
-          }, 300);
-          
+          window.location.href = game.url;          
         }, 200);
       });
 
@@ -431,7 +418,7 @@ if ($impressionid) {
               gameLink.setAttribute('data-game-imagem', game.imagem);
 
               const gameDiv = document.createElement('div');
-              gameDiv.className = 'bg-white row border border-light min-vh-50 h-max align-content-center';
+              gameDiv.className = 'bg-white row border border-light min-vh-50 h-100 align-content-center';
               gameDiv.style.background = `url(${game.imagem})`;
 
               const gameTitle = document.createElement('h2');
@@ -442,14 +429,7 @@ if ($impressionid) {
               gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
               gameLink.onclick = function() {
                 setTimeout(() => {
-                  gtag("event", "close_convert_lead", {
-                    currency: "USD",
-                    value: 0.0004
-                  });
-                  abrirSmartlinkUmaVez();
-                  setTimeout(()=>{
-                    window.location.href = game.url;
-                  }, 1000);
+                  window.location.href = game.url;
                 }, 200);
               };
               gameItems.push(game);
