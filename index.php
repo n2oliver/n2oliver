@@ -189,9 +189,6 @@ if ($impressionid) {
       padding: 32px 16px;
       color: #000;
       text-align: center;
-      transition: 0.2s ease;
-      border-top-left-radius: 0.375rem;
-      border-top-right-radius: 0.375rem;
       height: fit-content;
       backdrop-filter: brightness(0.4);
     }
@@ -261,47 +258,33 @@ if ($impressionid) {
   <script src="js/anuncios.js"></script>
   <?php include("gtagmanager.php"); ?>
 
-  <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
-    <?php include('navbar.php'); ?>
-    <div style="position: absolute; z-index: 99999">
-      <input autocomplete="off" type="checkbox" id="aadsstickymiu7jvco" hidden />
-      <div style="padding-top: 0; padding-bottom: 0;">
-        <div style="width:15%;height: 100vh;position:fixed;text-align:center;font-size:0;top:60px;right:0;min-width:100px">
-          <label for="aadsstickymiu7jvco" style="top: -24px;margin:0 auto;right:0;left:0;max-width:24px; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
+  <div style="position: absolute; z-index: 99999">
+      <input autocomplete="off" type="checkbox" id="aadsstickymk103w4f" hidden />
+      <div style="padding-top: 0; padding-bottom: auto;">
+        <div style="width:100%;height:auto;position:fixed;text-align:center;font-size:0;bottom:0;left:0;right:0;margin:auto">
+          <label for="aadsstickymk103w4f" style="top: 50%;transform: translateY(-50%);right:24px;; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
             <svg fill="#000000" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
-              <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 " />
+              <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "/>
             </svg>
           </label>
-          <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;height:100%; display: flex;flex-direction: column; justify-content: start">
-            <iframe title="aads-2417696" data-aa=2417696 src=//acceptable.a-ads.com/2417696/?size=Adaptive style='border:0; padding:0; width:70%; height:70%; overflow:hidden; margin: 0 auto'></iframe>
-          </div>
+          <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;"><iframe data-aa=2417696 src=//acceptable.a-ads.com/2417696/?size=Adaptive style='border:0; padding:0; width:70%; height:auto; overflow:hidden; margin: auto'></iframe></div>
         </div>
         <style>
-          #aadsstickymiu7jvco:checked+div {
-            display: none;
-          }
-        </style>
-      </div>
+      #aadsstickymk103w4f:checked + div {
+        display: none;
+      }
+    </style>
     </div>
-
+  </div>
+  
+  <div class="mx-auto col-md-10 text-center mt-0">
+    <?php include('navbar.php'); ?>
   </div>
   <header class="mx-auto col-md-10 text-center mt-1">
     <img alt="logo" src="<?= $APP_URL ?>/img/logo.png" style="height: 60px; width: auto;" />
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
   <main class="container d-flex m-auto col-md-10 p-0">
-    <div class="d-flex justify-content-center w-100 my-1">
-      <script>
-        atOptions = {
-          'key' : '29929d8720c37977a6ea64b1b7db2d02',
-          'format' : 'iframe',
-          'height' : 50,
-          'width' : 320,
-          'params' : {}
-        };
-      </script>
-      <script src="https://laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
-    </div>
     <section id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
       alt="">
       <div class="d-flex flex-wrap align-items-start justify-content-center">
@@ -317,7 +300,7 @@ if ($impressionid) {
                 background-position: center; 
                 background-repeat: no-repeat; 
                 background-image: url(img/n2.jpg);
-                height: 500px">
+                height: 250px">
               <h2 style="font-size:2rem;margin-bottom:12px; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
               <div class="d-flex justify-content-center w-100 p-2">
                 <button class="btn btn-danger m-1" style="display: none" id="prev" aria-label="Aria Left">
@@ -402,7 +385,6 @@ if ($impressionid) {
       let thumbnail = document.getElementById("thumbnail");
       destaqueImagem.style.backgroundImage = 'url(' + game.imagem + ')';
       thumbnail.style.backgroundImage = 'url(' + game.imagem + ')';
-      thumbnail.style.height = "250px";
 
       $('#game-details-content,#game-details-title').unbind('click').click(function(e) {
         e.preventDefault();

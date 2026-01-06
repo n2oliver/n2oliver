@@ -1,6 +1,5 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 w-100 m-auto px-0" 
-style="background-image: url(/img/theme-image-natal.png);">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 w-100 m-auto px-0">
   <div class="container-fluid">
 
   <div class="d-flex w-100 justify-content-between">
