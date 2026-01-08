@@ -432,7 +432,6 @@ function placeWord(word) {
     gridElement.addEventListener('touchmove', handleMoveSelection, { passive: false });
     gridElement.addEventListener('touchend', handleEndSelection);
     restartButton.addEventListener('click', () => {
-        abrirSmartlinkUmaVez();
         setTimeout(()=>{
             init();
         }, 500);
@@ -450,4 +449,6 @@ function placeWord(word) {
         }
     });
     htmlObserver.observe(document.documentElement, { attributes: true });
+    
+    abrirSmartlinkUmaVez();
 });

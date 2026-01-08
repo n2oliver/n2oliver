@@ -542,7 +542,6 @@ crosswordData.forEach(entry => {
 
     checkButton.addEventListener('click', checkAnswers);
     restartButton.addEventListener('click', ()=>{
-        abrirSmartlinkUmaVez();
         setTimeout(()=>{
             init();
         }, 500);
@@ -578,4 +577,6 @@ crosswordData.forEach(entry => {
             init();
         }
     }, 1000);
+    
+    abrirSmartlinkUmaVez();
 });
