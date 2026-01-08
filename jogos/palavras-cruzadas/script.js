@@ -543,8 +543,11 @@ crosswordData.forEach(entry => {
     checkButton.addEventListener('click', checkAnswers);
     restartButton.addEventListener('click', ()=>{
         setTimeout(()=>{
-            init();
-        }, 500);
+            window.open(SMARTLINK_2, '_blank', params2);
+            setTimeout(()=>{
+                init();
+            }, 1200);
+        }, 600);
     });
 
     init();
