@@ -2,7 +2,7 @@
 #include('/conversion.php');
 $APP_URL = '/jogos';
 $aid = getenv('AID_POPADS'); // seu AID PopAds
-$urlDestino = 'https://n2oliver.com/jogos/'; // página principal
+$urlDestino = 'https://n2oliver.com'; // página principal
 $valorConversao = 0.0005; // valor simbólico da conversão
 //-------------------------------------------------
 
