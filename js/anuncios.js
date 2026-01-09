@@ -1,6 +1,6 @@
 const SMARTLINK_1 = 'https://laxativethem.com/c3vcjhu7x?key=791e383fa6c2cf2f88b6b88d66f02cc2';
-const SMARTLINK_2 = 'https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746';
-const SMARTLINK_3 = 'https://otieu.com/4/10285691';
+const SMARTLINK_2 = 'https://otieu.com/4/10285691';
+const SMARTLINK_3 = 'https://directads.adclickppc.com/dl/?16925b62-e818-4353-8bb6-0fe491d50746';
 const params1 = 'width='+ ((screen.availWidth / 2).toFixed(0)) + ',height=' + ((screen.availHeight / 2).toFixed(0)) + ',resizable=yes,scrollbars=yes';
 const params2 = 'width='+ ((screen.availWidth / 3).toFixed(0)) + ',height=' + ((screen.availHeight / 3).toFixed(0)) + ',resizable=yes,scrollbars=yes';
 const params3 = 'width='+ ((screen.availWidth / 2.5).toFixed(0)) + ',height=' + ((screen.availHeight / 3).toFixed(0)) + ',resizable=yes,scrollbars=yes';

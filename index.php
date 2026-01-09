@@ -162,10 +162,6 @@ $APP_URL = '/jogos';
       backdrop-filter: brightness(0.4);
     }
 
-    #frame {
-      margin-top: 2px !important;
-    }
-
     #progressbar {
       background: #fff;
       height: .4rem;
@@ -291,9 +287,17 @@ $APP_URL = '/jogos';
     
     <div id="jogos" class="d-flex justify-content-center row"></div>
     
-    <div id="frame" class="m-3" style="width: 100%;position: relative; z-index: 1;">
-      <iframe title="aads-2410752" data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
-        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+    <div id="frame" class="mt-2" style="width: 100%;position: relative; z-index: 1;">
+      <script>
+        atOptions = {
+          'key' : '29929d8720c37977a6ea64b1b7db2d02',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+      </script>
+      <script src="https://laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
     </div>
   </main>
   <div class="container m-auto p-0 mt-1 col-md-10">
