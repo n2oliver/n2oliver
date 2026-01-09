@@ -78,5 +78,6 @@
         echo "<script>const $footer2 = document.querySelector('$footer2'); $footer2.classList.add('container');</script>";
     ?>
     <script src="<?= $APP_URL ?>/script.js"></script>
+    <script defer src="/js/anuncios.js"></script>
 </body>
 </html>

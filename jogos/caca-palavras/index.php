@@ -1,4 +1,37 @@
-<?php $APP_URL = '/jogos/caca-palavras'; ?>
+<?php $APP_URL = '/jogos/caca-palavras'; 
+
+$aid = getenv('AID_POPADS'); // seu AID PopAds
+$urlDestino = 'https://n2oliver.com'.$APP_URL; // página principal
+$valorConversao = 0.0005; // valor simbólico da conversão
+//-------------------------------------------------
+
+$impressionid = $_GET['impressionid'] ?? null;
+
+if ($impressionid) {
+  // Testa se a página principal carrega com sucesso
+  $ch = curl_init($urlDestino);
+  curl_setopt_array($ch, [
+    CURLOPT_NOBODY => true,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT => 5
+  ]);
+  curl_exec($ch);
+  $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+  curl_close($ch);
+
+  // Se a página respondeu com HTTP 200 → postback para o PopAds
+  if ($status == 200) {
+    $postbackUrl = "http://serve.popads.net/cpixel.php?s2s=1&aid={$aid}&id={$impressionid}&value={$valorConversao}";
+    @file_get_contents($postbackUrl);
+
+    // (opcional) registrar em log local
+    file_put_contents(__DIR__ . '/impressões_validas.log', date('Y-m-d H:i:s') . " | {$impressionid} | HTTP {$status}\n", FILE_APPEND);
+  } else {
+    // (opcional) registrar falhas
+    file_put_contents(__DIR__ . '/falhas.log', date('Y-m-d H:i:s') . " | {$impressionid} | HTTP {$status}\n", FILE_APPEND);
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -52,7 +85,32 @@
         background-color: #0056b3;
     }
     #main-text {
-      background-image: url(/jogos/img/bg-grid.jpg);
+      background-image: url(/jogos/img/bg-grid.jpg);    
+      position: relative;
+      width: 100vw;
+      background-size: cover;
+      overflow: hidden;
+      filter: brightness(.8); 
+    }
+    .spotlight {
+        position: absolute;
+        width: 200px; /* Tamanho do holofote */
+        height: 200px;
+        border-radius: 50%; /* Transforma em círculo */
+        /* Garante que o elemento não capture eventos do mouse, permitindo interação com o conteúdo abaixo */
+        pointer-events: none; 
+        
+        filter: brightness(1); 
+        background-color: rgba(255, 255, 255, .2); /* Fundo ligeiramente translúcido */
+        /* Aplica o filtro de desfoque ao fundo visível através deste elemento */
+
+        /* Posicionamento inicial fora da vista e ajuste para centralizar no cursor */
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%); 
+        
+        /* Adiciona uma transição suave para o movimento */
+        transition: transform 0.1s linear; 
     }
   </style>
   <link rel="stylesheet" href="/styles-index.css">
@@ -98,6 +156,8 @@
   </div>
   <br>
   <?php include("../../footer.php"); ?>
+  
+  <div class="spotlight"></div>
     <script>
       const footer = document.querySelector('footer')
       footer.classList.add('col-md-8');
@@ -109,7 +169,7 @@
           value: 0.0004
         });
         $('#jogar').click(()=>{
-            abrirJanela('<?= $APP_URL ?>/jogo.php', 'https://laxativethem.com/vs23jmys5q?key=7c2ccbc5de27850e97ac9aae68ac23a4');
+            window.location.href = '<?= $APP_URL ?>/jogo.php';
             gtag("event", "close_convert_lead", {
               currency: "USD",
               value: 0.0004
@@ -122,6 +182,15 @@
                 document.getElementById('jogar').click();
             }, 3000)
         }
+      });
+      
+
+      const spotlight = document.querySelector('.spotlight');
+
+      document.addEventListener('mousemove', (e) => {
+          // Atualiza a posição X e Y do elemento para seguir o cursor
+          spotlight.style.top = `${e.clientY}px`;
+          spotlight.style.left = `${e.clientX}px`;
       });
     </script>
 </body>

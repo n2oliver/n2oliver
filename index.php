@@ -5,37 +5,6 @@ include('repositories/LoginRepository.php');
 include('repositories/UsuarioRepository.php');
 #include('/conversion.php');
 $APP_URL = '/jogos';
-$aid = getenv('AID_POPADS'); // seu AID PopAds
-$urlDestino = 'https://n2oliver.com/jogos/'; // página principal
-$valorConversao = 0.0005; // valor simbólico da conversão
-//-------------------------------------------------
-
-$impressionid = $_GET['impressionid'] ?? null;
-
-if ($impressionid) {
-  // Testa se a página principal carrega com sucesso
-  $ch = curl_init($urlDestino);
-  curl_setopt_array($ch, [
-    CURLOPT_NOBODY => true,
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_TIMEOUT => 5
-  ]);
-  curl_exec($ch);
-  $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-  curl_close($ch);
-
-  // Se a página respondeu com HTTP 200 → postback para o PopAds
-  if ($status == 200) {
-    $postbackUrl = "http://serve.popads.net/cpixel.php?s2s=1&aid={$aid}&id={$impressionid}&value={$valorConversao}";
-    @file_get_contents($postbackUrl);
-
-    // (opcional) registrar em log local
-    file_put_contents(__DIR__ . '/impressões_validas.log', date('Y-m-d H:i:s') . " | {$impressionid} | HTTP {$status}\n", FILE_APPEND);
-  } else {
-    // (opcional) registrar falhas
-    file_put_contents(__DIR__ . '/falhas.log', date('Y-m-d H:i:s') . " | {$impressionid} | HTTP {$status}\n", FILE_APPEND);
-  }
-}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -69,6 +38,7 @@ if ($impressionid) {
       background-position: center;
       background-attachment: fixed;
       background-size: cover;
+      backdrop-filter: brightness(0.5);
     }
 
     header {
@@ -105,8 +75,9 @@ if ($impressionid) {
     .game-card {
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       text-align: center;
-      overflow: auto;
+      overflow: visible;
       flex: 1 1 200px;
+      height: 272px;
     }
 
     .game-card h2 {
@@ -129,21 +100,18 @@ if ($impressionid) {
       color: #FFFFFF
     }
 
-    .game-card .link:hover,
-    #destaque-link:hover {
+    .game-card .link:hover {
       background-color: #F11E52;
     }
 
     .game-card a div {
       padding: 10px;
-      align-items: end;
+      align-items: start;
       height: auto;
       background-position: center !important;
-      margin: 4px;
     }
 
-    .game-card a div:hover,
-    #destaque-link:hover {
+    .game-card a div:hover {
       filter: brightness(1.5);
     }
 
@@ -192,18 +160,10 @@ if ($impressionid) {
     }
 
     #destaque-imagem {
-      padding: 32px 16px;
       color: #000;
       text-align: center;
-      transition: 0.2s ease;
-      border-top-left-radius: 0.375rem;
-      border-top-right-radius: 0.375rem;
       height: fit-content;
       backdrop-filter: brightness(0.4);
-    }
-
-    #frame {
-      margin-top: 2px !important;
     }
 
     #progressbar {
@@ -223,18 +183,6 @@ if ($impressionid) {
       transition: 1s ease;
     }
 
-    #destaque-link {
-      height: fit-content;
-      align-self: center;
-      padding: 12px 18px;
-      border-radius: 10px;
-      background: #9E0040;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #FFFFFF;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
     .adsbygoogle {
       min-width: 250px !important;
     }
@@ -242,6 +190,13 @@ if ($impressionid) {
     #ads>div>iframe,
     #atContainer-b5463c03cd36f2b207d3e311906ba716 {
       width: fit-content !important;
+    }
+    .row>*.game-card {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+    }
+    #game-details-content,#game-details-title {
+      cursor: pointer
     }
   </style>
   <script defer
@@ -271,36 +226,71 @@ if ($impressionid) {
 <body>
   <?php include("gtagmanager.php"); ?>
 
-  <div class="col-md-10 m-auto" style="position: sticky; top: 0; z-index: 999;">
-    <?php include('navbar.php'); ?>
-    <div style="position: absolute; z-index: 99999">
-      <input autocomplete="off" type="checkbox" id="aadsstickymiu7jvco" hidden />
-      <div style="padding-top: 0; padding-bottom: 0;">
-        <div style="width:15%;height: 100vh;position:fixed;text-align:center;font-size:0;top:60px;right:0;min-width:100px">
-          <label for="aadsstickymiu7jvco" style="top: -24px;margin:0 auto;right:0;left:0;max-width:24px; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
+  <div style="position: absolute; z-index: 99999">
+      <input autocomplete="off" type="checkbox" id="aadsstickymk103w4f" hidden />
+      <div style="padding-top: 0; padding-bottom: auto;">
+        <div style="width:100%;height:auto;position:fixed;text-align:center;font-size:0;bottom:0;left:0;right:0;margin:auto">
+          <label for="aadsstickymk103w4f" style="top: 50%;transform: translateY(-50%);right:24px;; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
             <svg fill="#000000" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
-              <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 " />
+              <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "/>
             </svg>
           </label>
-          <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;height:100%; display: flex;flex-direction: column; justify-content: start">
-            <iframe title="aads-2417696" data-aa=2417696 src=//acceptable.a-ads.com/2417696/?size=Adaptive style='border:0; padding:0; width:70%; height:70%; overflow:hidden; margin: 0 auto'></iframe>
-          </div>
+          <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;"><iframe data-aa=2417696 src=//acceptable.a-ads.com/2417696/?size=Adaptive style='border:0; padding:0; width:70%; height:auto; overflow:hidden; margin: auto'></iframe></div>
         </div>
         <style>
-          #aadsstickymiu7jvco:checked+div {
-            display: none;
-          }
-        </style>
-      </div>
+      #aadsstickymk103w4f:checked + div {
+        display: none;
+      }
+    </style>
     </div>
-
+  </div>
+  
+  <div class="mx-auto col-md-10 text-center mt-0">
+    <?php include('navbar.php'); ?>
   </div>
   <header class="mx-auto col-md-10 text-center mt-1">
     <img alt="logo" src="<?= $APP_URL ?>/img/logo.png" style="height: 60px; width: auto;" />
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
   <main class="container d-flex m-auto col-md-10 p-0">
-    <div class="d-flex justify-content-center w-100 my-1">
+    <section id="destaque-imagem" class="w-100 n2oliver-jogos d-flex flex-column justify-content-center"
+      alt="">
+
+      <div class="row">
+        <div id="game-details" class="flex-column px-0" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center; font-family: Ubuntu;
+              color: white !important; ">
+
+          <div id="thumbnail" class="rounded align-content-end" 
+            style="
+              text-align: center; 
+              background-size: cover; 
+              background-position: center; 
+              background-repeat: no-repeat; 
+              background-image: url(img/n2.jpg);
+              height: 250px">
+            <h2 style="font-size:2rem;margin-bottom:12px; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
+            <div class="d-flex justify-content-center w-100 p-2">
+              <button class="btn btn-danger m-1" style="display: none" id="prev" aria-label="Aria Left">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <p id="game-details-content" class="p-2 d-flex flex-column align-self-bottom" style="max-width:680px; margin:0 auto; color: white;line-height:1.5; background: rgba(0, 0, 0, .8);">
+                No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
+              </p>
+              <button class="btn btn-danger m-1" id="next" style="display: none" aria-label="Aria Right">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div id="progressbar" role="progressbar" title="progressbar"></div>
+    
+    <div id="jogos" class="d-flex justify-content-center row"></div>
+    
+    <div id="frame" class="mt-2" style="width: 100%;position: relative; z-index: 1;">
       <script>
         atOptions = {
           'key' : '29929d8720c37977a6ea64b1b7db2d02',
@@ -312,52 +302,6 @@ if ($impressionid) {
       </script>
       <script src="https://laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
     </div>
-    <section id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
-      alt="">
-      <div class="d-flex flex-wrap align-items-start justify-content-center">
-
-        <div class="row">
-          
-          <?php include("login.php"); ?>
-          <div id="game-details" class="col-md-6 col-lg-8 flex-column" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
-
-
-            <div class="rounded" style="font-family: Ubuntu;
-            background-color: rgba(0,0,0,.6); color: white !important; padding: 12px; text-align: center;">
-              <h2 style="font-size:2rem;margin-bottom:12px;"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
-              <div id="thumbnail" style="height: 250px; width: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url(img/n2.jpg)"></div>
-              
-
-              <div class="d-flex justify-content-center w-100 p-2">
-                <button class="btn btn-danger m-1" style="display: none" id="prev" aria-label="Aria Left">
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-                <a id="destaque-link" href="#jogos" style="display: none">
-                  <span id="destaque-titulo">Ver Jogos</span>
-                </a>
-                <button class="btn btn-danger m-1" id="next" style="display: none" aria-label="Aria Right">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              </div>
-              <p id="game-details-content" style="max-width:680px;margin:0 auto 18px;color: white;line-height:1.5;">
-                No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-    </section>
-
-
-    <div id="progressbar" role="progressbar" title="progressbar"></div>
-    
-    <div id="frame" class="m-3" style="width: 100%;position: relative; z-index: 1;">
-      <iframe title="aads-2410752" data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
-        style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
-    </div>
-    <div id="jogos" class="d-flex justify-content-center row" style="background-image: linear-gradient(45deg, #dedede, rgba(0,0,0, .3))"></div>
   </main>
   <div class="container m-auto p-0 mt-1 col-md-10">
     <div class="donation-section m-0 row">
@@ -391,7 +335,6 @@ if ($impressionid) {
       </div>
     </div>
   </div>
-  
   <div class="container m-auto col-md-10 p-0 mt-1">
       <div id="frame" style="width: 320px;margin: auto;z-index: 99998;height: auto">
         <iframe data-aa='2421579' src='//ad.a-ads.com/2421579/?size=320x50'
@@ -414,43 +357,20 @@ if ($impressionid) {
       let thumbnail = document.getElementById("thumbnail");
       destaqueImagem.style.backgroundImage = 'url(' + game.imagem + ')';
       thumbnail.style.backgroundImage = 'url(' + game.imagem + ')';
-      thumbnail.style.height = "250px";
-      document.getElementById('destaque-link').href = "#";
-      $('#thumbnail').unbind('click', () => {
-        scroll(document.getElementById('game-details-content'))
-      });
 
-      $('#destaque-link,#thumbnail').unbind('click').click(function(e) {
+      $('#game-details-content,#game-details-title').unbind('click').click(function(e) {
         e.preventDefault();
 
         setTimeout(() => {
-          gtag("event", "close_convert_lead", {
-            currency: "USD",
-            value: 0.0004
-          });
-          
-          abrirSmartlinkUmaVez();
-          setTimeout(()=>{
-            window.location.href = game.url;
-          }, 1000);
-          
+          window.location.href = game.url;          
         }, 200);
       });
 
 
-      document.getElementById('destaque-titulo').textContent = 'Jogar ' + game.titulo;
       document.getElementById('game-details-title').textContent = game.titulo;
       document.getElementById('game-details-content').innerHTML = game.descricao;
     }
     document.addEventListener('DOMContentLoaded', function() {
-      const appUrl = '/';
-      const login = new Login(appUrl);
-      login.setup(login, appUrl);
-
-      $('#thumbnail').click(() => {
-        scroll(document.getElementById('game-details-content'))
-      });
-
       setTimeout(() => {
         let gameItems = [];
         let gameItemsIndex = -1;
@@ -474,7 +394,7 @@ if ($impressionid) {
               gameLink.setAttribute('data-game-imagem', game.imagem);
 
               const gameDiv = document.createElement('div');
-              gameDiv.className = 'bg-white row border border-light min-vh-50 h-max align-content-center';
+              gameDiv.className = 'bg-white row border border-light min-vh-50 h-100 align-content-center';
               gameDiv.style.background = `url(${game.imagem})`;
 
               const gameTitle = document.createElement('h2');
@@ -485,14 +405,7 @@ if ($impressionid) {
               gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
               gameLink.onclick = function() {
                 setTimeout(() => {
-                  gtag("event", "close_convert_lead", {
-                    currency: "USD",
-                    value: 0.0004
-                  });
-                  abrirSmartlinkUmaVez();
-                  setTimeout(()=>{
-                    window.location.href = game.url;
-                  }, 1000);
+                  window.location.href = game.url;
                 }, 200);
               };
               gameItems.push(game);
@@ -525,7 +438,6 @@ if ($impressionid) {
           setTimeout(() => {
             document.getElementById('game-details-title').textContent = gameLink.dataset.gameTitle;
             document.getElementById('game-details-content').innerHTML = gameLink.dataset.gameDesc;
-            document.getElementById('destaque-link').href = "#";
             gameItemsIndex = gameItems.indexOf(gamecard);
             if ($("#progressbar").progressbar) {
               $("#progressbar").progressbar({
@@ -597,7 +509,7 @@ if ($impressionid) {
             startProgress();
             interval = setInterval(next, duration);
           });
-          $('#next,#prev,#destaque-link').show();
+          $('#next,#prev').show();
 
           if ($("#progressbar").progressbar) {
             // Inicializa o progressbar

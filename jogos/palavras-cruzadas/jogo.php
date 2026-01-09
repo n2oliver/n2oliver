@@ -58,5 +58,6 @@
     
     <?php include("../../footer.php"); ?>
     <script src="<?= $APP_URL ?>/script.js"></script>
+    <script defer src="/js/anuncios.js"></script>
 </body>
 </html>
