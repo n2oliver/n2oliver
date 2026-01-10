@@ -56,11 +56,10 @@ if ($impressionid) {
       backdrop-filter: brightness(.2);
     }
     .container {
-      max-width: 600px;
       margin: auto;
       background: white;
       padding: 2rem;
-      border-radius: 8px;
+      border-radius: 0px !important;
       box-shadow: 0 4px 8px rgba(0,0,0,0.6);
     }
     h1 {
@@ -124,12 +123,11 @@ if ($impressionid) {
       nav.classList.add('px-2');
       nav.style.fontSize = '12px';
     </script>
-  <div id="main-text" class="container" style="margin: 0 auto; margin-top: 14px; margin-bottom: 14px;">
+  <div id="main-text" class="col-md-8 container m-auto">
     <h1>Palavras Cruzadas</h1>
     <p>Preencha a grade com as palavras corretas usando as dicas.</p>
     <a href="#" class="btn">Jogar Agora</a>
   </div>
-  <br>
   <?php include("../../footer.php"); ?>
     <script>
       const footer = document.querySelector('footer')

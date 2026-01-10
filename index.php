@@ -28,8 +28,7 @@ $APP_URL = '/jogos';
       font-family: sans-serif;
       margin: 0;
       padding: 0 !important;
-      background: #f0f0f0;
-      background-image: url(/jogos/img/quebracabecas.jpg);
+      background: #343a40;
       overflow: auto;
       background-position: center;
       background-attachment: fixed;
@@ -44,8 +43,6 @@ $APP_URL = '/jogos';
       font-family: 'Ubuntu';
       font-size: 2rem;
       background-image: linear-gradient(0deg, black, gray);
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
     }
 
     header h1 {
@@ -69,19 +66,21 @@ $APP_URL = '/jogos';
     }
 
     .game-card {
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       text-align: center;
       overflow: visible;
       flex: 1 1 200px;
-      height: 272px;
+      margin: 4px;
     }
 
+    .game-card div {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
     .game-card h2 {
       margin: 0.5rem 0;
       font-family: 'Ubuntu';
-      -webkit-text-stroke: 1px #000;
-      color: yellow;
+      color: white;
       text-shadow: 3px 3px 3px darkslategray;
+      font-size: 18px;
     }
 
     .game-card a {
@@ -105,6 +104,7 @@ $APP_URL = '/jogos';
       align-items: start;
       height: auto;
       background-position: center !important;
+      border-radius: 10px;
     }
 
     .game-card a div:hover {
@@ -242,15 +242,15 @@ $APP_URL = '/jogos';
     </div>
   </div>
   
-  <div class="mx-auto col-md-10 text-center mt-0">
+  <div class="mx-auto col-md-12 text-center mt-0">
     <?php include('navbar.php'); ?>
   </div>
-  <header class="mx-auto col-md-10 text-center mt-1">
+  <header class="mx-auto col-md-12 text-center mt-1">
     <img alt="logo" src="<?= $APP_URL ?>/img/logo.png" style="height: 60px; width: auto;" />
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
-  <main class="container d-flex m-auto col-md-10 p-0">
-    <section id="destaque-imagem" class="w-100 n2oliver-jogos d-flex flex-column justify-content-center"
+  <main class="w-100 m-auto col-md-12 p-0">
+    <section id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
       alt="">
 
       <div class="row">
@@ -264,7 +264,7 @@ $APP_URL = '/jogos';
               background-position: center; 
               background-repeat: no-repeat; 
               background-image: url(img/n2.jpg);
-              height: 250px">
+              height: 500px">
             <h2 style="font-size:2rem;margin-bottom:12px; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
             <div class="d-flex justify-content-center w-100 p-2">
               <button class="btn btn-danger m-1" style="display: none" id="prev" aria-label="Aria Left">
@@ -285,9 +285,9 @@ $APP_URL = '/jogos';
 
     <div id="progressbar" role="progressbar" title="progressbar"></div>
     
-    <div id="jogos" class="d-flex justify-content-center row"></div>
+    <div id="jogos" class="d-flex justify-content-center row col-md-10 m-auto"></div>
     
-    <div id="frame" class="mt-2" style="width: 100%;position: relative; z-index: 1;">
+    <div id="frame" class="d-flex justify-content-center col-md-10 m-auto" style="position: relative; z-index: 1;">
       <script>
         atOptions = {
           'key' : '29929d8720c37977a6ea64b1b7db2d02',
@@ -391,11 +391,16 @@ $APP_URL = '/jogos';
               gameLink.setAttribute('data-game-imagem', game.imagem);
 
               const gameDiv = document.createElement('div');
-              gameDiv.className = 'bg-white row border border-light min-vh-50 h-100 align-content-center';
-              gameDiv.style.background = `url(${game.imagem})`;
+              const gameSubDiv = document.createElement('div');
+              
+              gameDiv.className = 'row min-vh-50 h-100 align-content-center';
+              gameSubDiv.style.height = '150px';
+              gameSubDiv.className = 'bg-dark border border-light';
+              gameSubDiv.style.background = `url(${game.imagem})`;
+              gameDiv.appendChild(gameSubDiv);
 
               const gameTitle = document.createElement('h2');
-              gameTitle.className = 'rounded-left';
+              gameTitle.className = 'rounded-left bg-dark my-0 py-1 rounded';
               gameTitle.textContent = game.titulo;
 
               const gameSpan = document.createElement('span');
@@ -414,8 +419,8 @@ $APP_URL = '/jogos';
               playButton.className = 'link btn my-2';
               playButton.textContent = 'Jogar';
 
-              gameSpan.appendChild(gameDesc);
-              gameSpan.appendChild(playButton);
+              //gameSpan.appendChild(gameDesc);
+              //gameSpan.appendChild(playButton);
               gameDiv.appendChild(gameTitle);
               gameDiv.appendChild(gameSpan);
               gameLink.appendChild(gameDiv);

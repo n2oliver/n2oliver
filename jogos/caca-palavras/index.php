@@ -53,14 +53,13 @@ if ($impressionid) {
       padding: 2rem;
       background-image: url(../../img/web-design-technology-browsing-programming-concept.jpg);
       background-size: cover;
-      backdrop-filter: brightness(.2);
+      backdrop-filter: brightness(.8);
     }
     .container {
-      max-width: 600px;
       margin: auto;
       background: white;
       padding: 2rem;
-      border-radius: 8px;
+      border-radius: 0px !important;
       box-shadow: 0 4px 8px rgba(0,0,0,0.6);
     }
     h1 {
@@ -90,7 +89,6 @@ if ($impressionid) {
       width: 100vw;
       background-size: cover;
       overflow: hidden;
-      filter: brightness(.8); 
     }
     .spotlight {
         position: absolute;
@@ -149,12 +147,11 @@ if ($impressionid) {
       nav.classList.add('px-2');
       nav.style.fontSize = '12px';
     </script>
-  <div id="main-text" class="container" style="margin: 0 auto; margin-top: 14px; margin-bottom: 14px;">
+  <div id="main-text" class="col-md-8 container m-auto">
     <h1>Caça-Palavras</h1>
     <p>Encontre as palavras escondidas na grade. Arraste com o dedo ou mouse para selecionar.</p>
     <a id="jogar" href="#" class="btn">Jogar Agora</a>
   </div>
-  <br>
   <?php include("../../footer.php"); ?>
   
   <div class="spotlight"></div>
