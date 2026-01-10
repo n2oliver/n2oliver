@@ -194,6 +194,9 @@ $APP_URL = '/jogos';
     #game-details-content,#game-details-title {
       cursor: pointer
     }
+    #thumbnail h2 {
+      margin-bottom: 0;
+    }
   </style>
   <script defer
     data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
@@ -265,15 +268,15 @@ $APP_URL = '/jogos';
               background-repeat: no-repeat; 
               background-image: url(img/n2.jpg);
               height: 500px">
-            <h2 style="font-size:2rem;margin-bottom:12px; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
-            <div class="d-flex justify-content-center w-100 p-2">
-              <button class="btn btn-danger m-1" style="display: none" id="prev" aria-label="Aria Left">
-                <i class="fa-solid fa-arrow-left"></i>
-              </button>
-              <p id="game-details-content" class="p-2 d-flex flex-column align-self-bottom" style="max-width:680px; margin:0 auto; color: white;line-height:1.5; background: rgba(0, 0, 0, .8);">
+            <h2 style="font-size:2rem; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
+            <div class="d-flex justify-content-around w-100" style="background: rgba(0, 0, 0, .8);">
+              <p id="game-details-content" class="p-2" style="max-width:680px; margin:0 auto; color: white;line-height:1.5;">
                 No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
               </p>
-              <button class="btn btn-danger m-1" id="next" style="display: none" aria-label="Aria Right">
+              <button class="btn btn-danger m-1 h-0" style="display: none; height: fit-content;" id="prev" aria-label="Aria Left">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button class="btn btn-danger m-1 h-0" id="next" style="display: none; height: fit-content;" aria-label="Aria Right">
                 <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
