@@ -249,7 +249,7 @@ $APP_URL = '/jogos';
   <div class="mx-auto col-md-12 text-center mt-0">
     <?php include('navbar.php'); ?>
   </div>
-  <header class="mx-auto col-md-12 text-center mt-1">
+  <header class="mx-auto col-md-12 text-center">
     <img alt="logo" src="<?= $APP_URL ?>/img/logo.png" style="height: 60px; width: auto;" />
     <p class="m-auto" style="max-width: 60%">Conecte-se ao seu próximo desafio.</p>
   </header>
@@ -257,7 +257,7 @@ $APP_URL = '/jogos';
     <section id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
       alt="">
 
-      <div class="row">
+      <div class="row" style="background-color: rgba(0, 0, 0, .4);">
         <div id="game-details" class="flex-column px-0" style="display:flex;flex-wrap:wrap; justify-content:center; font-family: Ubuntu;
               color: white !important; ">
 
@@ -289,6 +289,7 @@ $APP_URL = '/jogos';
       </div>
     </section>
     
+    <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2" style="font-family: Ubuntu"><strong><h2>Você também pode gostar</h2></strong></div>
     <div id="jogos" class="d-flex justify-content-center row col-md-10 m-auto"></div>
     
     <div id="frame" class="d-flex justify-content-center col-md-10 m-auto" style="position: relative; z-index: 1;">
