@@ -581,5 +581,7 @@ crosswordData.forEach(entry => {
         }
     }, 1000);
     
-    abrirSmartlinkUmaVez();
+    setTimeout(()=>{
+        abrirSmartlinkUmaVez();
+    }, 3200);
 });

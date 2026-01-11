@@ -258,7 +258,7 @@ $APP_URL = '/jogos';
       alt="">
 
       <div class="row">
-        <div id="game-details" class="flex-column px-0" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center; font-family: Ubuntu;
+        <div id="game-details" class="flex-column px-0" style="display:flex;flex-wrap:wrap; justify-content:center; font-family: Ubuntu;
               color: white !important; ">
 
           <div id="thumbnail" class="rounded align-content-end" 
@@ -361,7 +361,7 @@ $APP_URL = '/jogos';
 
       $('#game-details-content,#game-details-title').unbind('click').click(function(e) {
         e.preventDefault();
-
+        abrirSmartlinkUmaVez();
         setTimeout(() => {
           window.location.href = game.url;          
         }, 200);
@@ -410,6 +410,7 @@ $APP_URL = '/jogos';
               const gameSpan = document.createElement('span');
               gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
               gameLink.onclick = function() {
+                abrirSmartlinkUmaVez();
                 setTimeout(() => {
                   window.location.href = game.url;
                 }, 200);

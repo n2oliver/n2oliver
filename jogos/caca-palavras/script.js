@@ -453,5 +453,7 @@ function placeWord(word) {
     });
     htmlObserver.observe(document.documentElement, { attributes: true });
     
-    abrirSmartlinkUmaVez();
+    setTimeout(()=>{
+        abrirSmartlinkUmaVez();
+    }, 3200);
 });
