@@ -177,6 +177,7 @@ $APP_URL = '/jogos';
 
     #game-details {
       transition: 1s ease;
+      width: auto;
     }
 
     .adsbygoogle {
@@ -266,27 +267,27 @@ $APP_URL = '/jogos';
               background-size: cover; 
               background-position: center; 
               background-repeat: no-repeat; 
-              background-image: url(img/n2.jpg);
+              background-image: url(img/joined-games.png);
               height: 500px">
             <h2 style="font-size:2rem; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
-            <div class="d-flex justify-content-around w-100" style="background: rgba(0, 0, 0, .8);">
-              <p id="game-details-content" class="p-2" style="max-width:680px; margin:0 auto; color: white;line-height:1.5;">
-                No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
-              </p>
-              <button class="btn btn-danger m-1 h-0" style="display: none; height: fit-content;" id="prev" aria-label="Aria Left">
-                <i class="fa-solid fa-arrow-left"></i>
-              </button>
-              <button class="btn btn-danger m-1 h-0" id="next" style="display: none; height: fit-content;" aria-label="Aria Right">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
+            <div class="d-flex justify-content-around" style="background: rgba(0, 0, 0, .8);">
+              <div class="col-md-10 m-auto d-inline-flex">
+                <p id="game-details-content" class="p-2" style="max-width:680px; margin:0 auto; color: white;line-height:1.5;">
+                  No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
+                </p>
+                <button class="btn btn-danger m-1 h-0" style="display: none; height: fit-content;" id="prev" aria-label="Aria Left">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="btn btn-danger m-1 h-0" id="next" style="display: none; height: fit-content;" aria-label="Aria Right">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
+          <div id="progressbar" role="progressbar" title="progressbar"></div>
         </div>
       </div>
     </section>
-
-
-    <div id="progressbar" role="progressbar" title="progressbar"></div>
     
     <div id="jogos" class="d-flex justify-content-center row col-md-10 m-auto"></div>
     
