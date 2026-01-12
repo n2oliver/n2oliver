@@ -289,7 +289,7 @@ $APP_URL = '/jogos';
       </div>
     </section>
     
-    <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2" style="font-family: Ubuntu"><strong><h2>Você também pode gostar</h2></strong></div>
+    <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2" style="font-family: Ubuntu"><strong><h2>Você também pode gostar de</h2></strong></div>
     <div id="jogos" class="d-flex justify-content-center row col-md-10 m-auto"></div>
     
     <div id="frame" class="d-flex justify-content-center col-md-10 m-auto" style="position: relative; z-index: 1;">
