@@ -1,18 +1,6 @@
 <?php
 // Dados dos produtos (poderiam ser carregados de um banco de dados)
-$products = array(
-    array(
-        "id" => 1, 
-        "name" => "Smartphone Xiaomi Poco X7 Pro 5G NFC Black (Preto) 12GB RAM 512GB ROM [2412DPC0AG]",
-        "affiliate_link" => "https://amzn.to/42lD7gx",
-        "image_url" => "/lojavirtual/img/smartphones/61Dfzukq7KL._AC_SX679_.jpg",
-        "descricao" => "<p>Marca	XIAOMI<br>
-                            Sistema operacional	Android 14<br>
-                            Tamanho instalado da memória RAM	12 GB<br>
-                            Modelo da CPU	1.2GHz Cortex A8 Processor<br>
-                            Velocidade da CPU	3 GHz</p>"
-    ),
-    
+$products = array(    
     array(
         "id" => 2, 
         "name" => "Lucro No Instagram", 

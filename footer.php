@@ -15,10 +15,6 @@
   <span>
     <a href="mailto:suporte@n2oliver.com" style="margin-left: 10px">suporte@n2oliver.com</a>
   </span>
-
-  <span class="footer-text-small">
-    CNPJ 60.407.027/0001-25
-  </span>
 </footer>
 <script>
   window.gtranslateSettings = {

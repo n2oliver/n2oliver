@@ -203,12 +203,9 @@ $APP_URL = '/jogos';
     data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
     src="js/megapush/MegaPush.js">
   </script>
-  <!--<script data-cfasync="false" src="popads-monetization.js"  defer></script>-->
   <script src="gtag_dispatcher.js" async></script>
-  <script type="text/javascript" data-cfasync="false" src="js/abrir-janela.js"></script>
   <script src="js/jquery-ui/jquery-ui.min.js" async></script>
 
-  <?php include('popads.php'); ?>
   <style>
     .raster {
       position: fixed;
@@ -272,13 +269,18 @@ $APP_URL = '/jogos';
             <h2 style="font-size:2rem; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
             <div class="d-flex justify-content-around" style="background: rgba(0, 0, 0, .8);">
               <div class="col-md-10 m-auto d-inline-flex">
-                <p id="game-details-content" class="p-2" style="max-width:680px; margin:0 auto; color: white;line-height:1.5;">
+                <p id="game-details-content" class="p-2 flex-column" style="max-width:680px; margin:0 auto; color: white;line-height:1.5;">
                   No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
+                  <div class="text-center">
+                    <button class="btn btn-danger m-1 h-0" id="play-button" style="height: fit-content;" aria-label="Aria Right">
+                      Jogar
+                    </button>
+                  </div>
                 </p>
-                <button class="btn btn-danger m-1 h-0" style="display: none; height: fit-content;" id="prev" aria-label="Aria Left">
+                <button class="btn btn-success m-1 h-0" style="display: none; height: fit-content;" id="prev" aria-label="Aria Left">
                   <i class="fa-solid fa-arrow-left"></i>
                 </button>
-                <button class="btn btn-danger m-1 h-0" id="next" style="display: none; height: fit-content;" aria-label="Aria Right">
+                <button class="btn btn-success m-1 h-0" id="next" style="display: none; height: fit-content;" aria-label="Aria Right">
                   <i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
@@ -291,19 +293,6 @@ $APP_URL = '/jogos';
     
     <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2" style="font-family: Ubuntu"><strong><h2>Você também pode gostar de</h2></strong></div>
     <div id="jogos" class="d-flex justify-content-center row col-md-10 m-auto"></div>
-    
-    <div id="frame" class="d-flex justify-content-center col-md-10 m-auto" style="position: relative; z-index: 1;">
-      <script>
-        atOptions = {
-          'key' : '29929d8720c37977a6ea64b1b7db2d02',
-          'format' : 'iframe',
-          'height' : 50,
-          'width' : 320,
-          'params' : {}
-        };
-      </script>
-      <script src="https://laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js"></script>
-    </div>
   </main>
   <div class="container m-auto p-0 mt-1 col-md-10">
     <div class="donation-section m-0 row">
@@ -357,12 +346,12 @@ $APP_URL = '/jogos';
     function showGameInHighlight(game) {
       let destaqueImagem = document.querySelector("body");
       let thumbnail = document.getElementById("thumbnail");
+      let playButton = document.getElementById("play-button");
       destaqueImagem.style.backgroundImage = 'url(' + game.imagem + ')';
       thumbnail.style.backgroundImage = 'url(' + game.imagem + ')';
 
-      $('#game-details-content,#game-details-title').unbind('click').click(function(e) {
+      $('#game-details-content,#game-details-title,#play-button').unbind('click').click(function(e) {
         e.preventDefault();
-        abrirSmartlinkUmaVez();
         setTimeout(() => {
           window.location.href = game.url;          
         }, 200);
@@ -370,9 +359,17 @@ $APP_URL = '/jogos';
 
 
       document.getElementById('game-details-title').textContent = game.titulo;
-      document.getElementById('game-details-content').innerHTML = game.descricao;
+      document.getElementById('game-details-content').innerHTML = game.descricao + 
+        `<div class="text-center" style="display: none;">
+          <button class="btn btn-danger m-1 h-0" id="next" style="display: none; height: fit-content;" aria-label="Aria Right">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>`;
     }
     document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(()=>{
+        window.open(SMARTLINK_1, '_blank', params1);
+      }, 30000);
       setTimeout(() => {
         let gameItems = [];
         let gameItemsIndex = -1;
@@ -411,7 +408,6 @@ $APP_URL = '/jogos';
               const gameSpan = document.createElement('span');
               gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
               gameLink.onclick = function() {
-                abrirSmartlinkUmaVez();
                 setTimeout(() => {
                   window.location.href = game.url;
                 }, 200);
@@ -457,7 +453,6 @@ $APP_URL = '/jogos';
             if (gameItemsIndex !== -1) {
               showGameInHighlight(gameItems[gameItemsIndex]);
             }
-
           }, 15000);
 
           let interval = null;
@@ -598,6 +593,9 @@ $APP_URL = '/jogos';
               }, 200);
             }, 30000);
           });
+          
+          let playButton = document.getElementById("play-button");
+          $(playButton).click(()=>window.open('/jogos/linhaamarela/', 'blank'));
         });
 
       }, 1000)

@@ -58,5 +58,4 @@ docker compose watch
 
 ---
 
-© 2025 - Óliver S. Castilho (n2oliver)  
-CNPJ: 60.407.027/0001-25  
+© 2025 - Óliver S. Castilho (n2oliver)
