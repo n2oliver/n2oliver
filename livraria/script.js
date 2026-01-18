@@ -1,16 +1,10 @@
 const sections = [
-    "livros",
-    "cursos",
-    "destaques",
-    "smartphones_xiaomi",
-    "smartphones_samsung",
-    "smartphones_apple",
-    "smartphones_motorola"
+    "livros"
 ]
 $(document).ready(function(){
     for(let section of sections) 
         $.ajax({
-            url: "/lojavirtual/get_" + section + ".php",
+            url: "/livraria/get_livros.php",
             type: "GET",
             dataType: "json",
             success: function(data) {

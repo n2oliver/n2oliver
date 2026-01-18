@@ -161,6 +161,9 @@ $APP_URL = '/jogos';
       height: fit-content;
       backdrop-filter: brightness(0.4);
     }
+    #destaque-imagem .container {
+      max-width: 100%;
+    }
 
     #progressbar {
       background: #fff;
@@ -254,11 +257,11 @@ $APP_URL = '/jogos';
     <section id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
       alt="">
 
-      <div class="row" style="background-color: rgba(0, 0, 0, .4);">
-        <div id="game-details" class="flex-column px-0" style="display:flex;flex-wrap:wrap; justify-content:center; font-family: Ubuntu;
+      <div class="container" style="background-color: rgba(0, 0, 0, .4);">
+        <div id="game-details" class="flex-column px-0 col-md-6" style="display:flex;flex-wrap:wrap; justify-content: start; font-family: Ubuntu;
               color: white !important; ">
 
-          <div id="thumbnail" class="rounded align-content-end" 
+          <div id="thumbnail" class="rounded align-content-end border border-light" 
             style="
               text-align: center; 
               background-size: cover; 
@@ -266,13 +269,13 @@ $APP_URL = '/jogos';
               background-repeat: no-repeat; 
               background-image: url(img/joined-games.png);
               height: 500px">
-            <h2 style="font-size:2rem; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">SEM LIMITES</span></strong>🎮</h2>
+            <h2 style="font-size:2rem; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">n2oliver</span></strong>🎮</h2>
             <div class="d-flex justify-content-around" style="background: rgba(0, 0, 0, .8);">
               <div class="col-md-10 m-auto d-inline-flex">
                 <p id="game-details-content" class="p-2 flex-column" style="max-width:680px; margin:0 auto; color: white;line-height:1.5;">
-                  No <strong>n2oliver</strong> você encontra jogos criados para desafiar sua mente, competir com amigos e se divertir a qualquer hora. Explore modos rápidos, partidas competitivas e novidades toda semana.
+                  Carregando...
                   <div class="text-center">
-                    <button class="btn btn-danger m-1 h-0" id="play-button" style="height: fit-content;" aria-label="Aria Right">
+                    <button class="btn btn-danger m-1 h-0 text-nowrap" id="play-button" style="height: fit-content;" aria-label="Aria Right">
                       Jogar
                     </button>
                   </div>
@@ -287,6 +290,14 @@ $APP_URL = '/jogos';
             </div>
           </div>
           <div id="progressbar" role="progressbar" title="progressbar"></div>
+        </div>
+        <div id="jogos-recentes" class="d-flex justify-content-center">
+          <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2 text-start w-100" style="font-family: Ubuntu">
+            <strong><h2 class="my-0">Jogos recentes</h2></strong>
+            <div id="lista" class="container row m-0 p-0">
+            </div>
+            <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;"><iframe data-aa='2417696' src='//acceptable.a-ads.com/2417696/?size=Adaptive' style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe></div>
+          </div>
         </div>
       </div>
     </section>
@@ -369,236 +380,239 @@ $APP_URL = '/jogos';
     document.addEventListener('DOMContentLoaded', function() {
       setTimeout(()=>{
         window.open(SMARTLINK_1, '_blank', params1);
-      }, 30000);
-      setTimeout(() => {
-        let gameItems = [];
-        let gameItemsIndex = -1;
-        $.ajax({
-          url: 'jogos/obter.php',
-          method: 'GET',
-          dataType: 'json',
-          success: function(data) {
-            const container = document.getElementById('jogos');
-            let i = 0;
+      }, 10000);
+      let gameItems = [];
+      let gameItemsIndex = -1;
+      $.ajax({
+        url: 'jogos/obter.php',
+        method: 'GET',
+        dataType: 'json',
+        success: function(data) {
+          const container = document.getElementById('jogos');
+          const recentesContainer = document.getElementById('jogos-recentes').querySelector('#lista');
+          let i = 0;
 
-            data.forEach(game => {
-              const gameCard = document.createElement('div');
-              gameCard.className = 'game-card';
+          data.forEach(game => {
+            const gameCard = document.createElement('div');
+            gameCard.className = 'game-card';
 
-              const gameLink = document.createElement('a');
-              gameLink.href = '#';
-              gameLink.setAttribute('data-game-url', game.url);
-              gameLink.setAttribute('data-game-title', game.titulo);
-              gameLink.setAttribute('data-game-desc', game.descricao);
-              gameLink.setAttribute('data-game-imagem', game.imagem);
+            const gameLink = document.createElement('a');
+            gameLink.href = '#';
+            gameLink.setAttribute('data-game-url', game.url);
+            gameLink.setAttribute('data-game-title', game.titulo);
+            gameLink.setAttribute('data-game-desc', game.descricao);
+            gameLink.setAttribute('data-game-imagem', game.imagem);
 
-              const gameDiv = document.createElement('div');
-              const gameSubDiv = document.createElement('div');
-              
-              gameDiv.className = 'row min-vh-50 h-100 align-content-center';
-              gameSubDiv.style.height = '150px';
-              gameSubDiv.className = 'bg-dark border border-light';
-              gameSubDiv.style.background = `url(${game.imagem})`;
-              gameDiv.appendChild(gameSubDiv);
+            const gameDiv = document.createElement('div');
+            const gameSubDiv = document.createElement('div');
+            
+            gameDiv.className = 'row min-vh-50 h-100 align-content-center';
+            gameSubDiv.style.height = '150px';
+            gameSubDiv.className = 'bg-dark border border-light';
+            gameSubDiv.style.background = `url(${game.imagem})`;
+            gameDiv.appendChild(gameSubDiv);
 
-              const gameTitle = document.createElement('h2');
-              gameTitle.className = 'rounded-left bg-dark my-0 py-1 rounded';
-              gameTitle.textContent = game.titulo;
+            const gameTitle = document.createElement('h2');
+            gameTitle.className = 'rounded-left bg-dark my-0 py-1 rounded';
+            gameTitle.textContent = game.titulo;
 
-              const gameSpan = document.createElement('span');
-              gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
-              gameLink.onclick = function() {
-                setTimeout(() => {
-                  window.location.href = game.url;
-                }, 200);
-              };
-              gameItems.push(game);
+            const gameSpan = document.createElement('span');
+            gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
+            gameLink.onclick = function() {
+              setTimeout(() => {
+                window.location.href = game.url;
+              }, 200);
+            };
+            gameItems.push(game);
 
-              const gameDesc = document.createElement('p');
-              gameDesc.innerHTML = game.descricao;
+            const gameDesc = document.createElement('p');
+            gameDesc.innerHTML = game.descricao;
 
-              const playButton = document.createElement('div');
-              playButton.className = 'link btn my-2';
-              playButton.textContent = 'Jogar';
+            const playButton = document.createElement('div');
+            playButton.className = 'link btn my-2';
+            playButton.textContent = 'Jogar';
 
-              //gameSpan.appendChild(gameDesc);
-              //gameSpan.appendChild(playButton);
-              gameDiv.appendChild(gameTitle);
-              gameDiv.appendChild(gameSpan);
-              gameLink.appendChild(gameDiv);
-              gameCard.appendChild(gameLink);
+            //gameSpan.appendChild(gameDesc);
+            //gameSpan.appendChild(playButton);
+            gameDiv.appendChild(gameTitle);
+            gameDiv.appendChild(gameSpan);
+            gameLink.appendChild(gameDiv);
+            gameCard.appendChild(gameLink);
+            if(i < 3) {
+              recentesContainer.appendChild(gameCard);
+            } else {
               container.appendChild(gameCard);
-            });
-          },
-          error: function(error) {
-            console.error('Erro ao obter os jogos:', error);
-          }
-        }).then(response => {
-          gamecards = $('.game-card');
-          gamecard = gamecards[Math.round(Math.random() * (gamecards.length - 1))];
-          const gameLink = gamecard.querySelector('a');
-          // Encontra o índice do primeiro jogo a ser exibido
-          gameItemsIndex = Array.from(gamecards).indexOf(gamecard);
-          setTimeout(() => {
-            document.getElementById('game-details-title').textContent = gameLink.dataset.gameTitle;
-            document.getElementById('game-details-content').innerHTML = gameLink.dataset.gameDesc;
-            gameItemsIndex = gameItems.indexOf(gamecard);
-            if ($("#progressbar").progressbar) {
-              $("#progressbar").progressbar({
-                value: 0
-              }); // Este fechava o .then()
             }
+            i++;
+          });
+        },
+        error: function(error) {
+          console.error('Erro ao obter os jogos:', error);
+        }
+      }).then(response => {
+        gamecards = $('.game-card');
+        gamecard = gamecards[Math.round(Math.random() * (gamecards.length - 1))];
+        const gameLink = gamecard.querySelector('a');
+        // Encontra o índice do primeiro jogo a ser exibido
+        gameItemsIndex = Array.from(gamecards).indexOf(gamecard);
+        document.getElementById('game-details-title').textContent = gameLink.dataset.gameTitle;
+        document.getElementById('game-details-content').innerHTML = gameLink.dataset.gameDesc;
+        
+        let interval = null;
+        let progressInterval = null;
+        let progress = 0;
+        let duration = 15000;
+        let stepTime = 200;
+        let step = (stepTime / duration) * 100;
 
-            // Exibe o primeiro jogo no destaque
-            if (gameItemsIndex !== -1) {
-              showGameInHighlight(gameItems[gameItemsIndex]);
+        function startProgress() {
+          clearInterval(progressInterval);
+          progress = 0;
+          progressInterval = setInterval(() => {
+            progress += step;
+            if (progress >= 100) {
+              progress = 100;
+              clearInterval(progressInterval);
+              next();
+              startProgress();
             }
-          }, 15000);
-
-          let interval = null;
-          let progressInterval = null;
-          let progress = 0;
-          let duration = 15000;
-          let stepTime = 200;
-          let step = (stepTime / duration) * 100;
-
-          function startProgress() {
-            clearInterval(progressInterval);
-            progress = 0;
-            progressInterval = setInterval(() => {
-              progress += step;
-              if (progress >= 100) {
-                progress = 100;
-                clearInterval(progressInterval);
-                next();
-                startProgress();
-              }
-              $("#progressbar").progressbar("value", progress);
-            }, stepTime);
-          }
-
-          function next() {
-            gameItemsIndex++;
-            if (gameItemsIndex >= gameItems.length) {
-              gameItemsIndex = 0;
-            }
-            showGameInHighlight(gameItems[gameItemsIndex]);
-            progress = 0;
             $("#progressbar").progressbar("value", progress);
+          }, stepTime);
+        }
+
+        function next() {
+          gameItemsIndex++;
+          if (gameItemsIndex >= gameItems.length) {
+            gameItemsIndex = 0;
           }
+          showGameInHighlight(gameItems[gameItemsIndex]);
+          progress = 0;
+          $("#progressbar").progressbar("value", progress);
+        }
 
-          function prev() {
-            gameItemsIndex--;
-            if (gameItemsIndex < 0) {
-              gameItemsIndex = gameItems.length - 1;
-            }
-            showGameInHighlight(gameItems[gameItemsIndex]);
-            progress = 0;
-            $("#progressbar").progressbar("value", progress);
+        function prev() {
+          gameItemsIndex--;
+          if (gameItemsIndex < 0) {
+            gameItemsIndex = gameItems.length - 1;
           }
+          showGameInHighlight(gameItems[gameItemsIndex]);
+          progress = 0;
+          $("#progressbar").progressbar("value", progress);
+        }
 
-          $('#next').click(() => {
-            clearInterval(progressInterval);
-            clearInterval(interval);
-            next();
-            startProgress();
-            interval = setInterval(next, duration);
-          });
-
-          $('#prev').click(() => {
-            clearInterval(progressInterval);
-            clearInterval(interval);
-            prev();
-            startProgress();
-            interval = setInterval(next, duration);
-          });
-          $('#next,#prev').show();
-
-          if ($("#progressbar").progressbar) {
-            // Inicializa o progressbar
-            $("#progressbar").progressbar({
-              value: 0
-            });
-          }
-
-          function startProgress() {
-            clearInterval(progressInterval);
-            progress = 0;
-
-            progressInterval = setInterval(() => {
-              progress += step;
-              if (progress >= 100) {
-                progress = 100;
-                clearInterval(progressInterval);
-                next(); // executa ação ao completar
-                startProgress(); // reinicia o ciclo
-              }
-              $("#progressbar").progressbar("value", progress);
-            }, stepTime);
-          }
-
-          if ($("#progressbar").progressbar) {
-            startProgress();
-          }
-          let timeout;
-
-
-          function next() {
-            gameItemsIndex++;
-            if (gameItemsIndex >= gameItems.length) {
-              gameItemsIndex = 0;
-            }
-            const game = gameItems[gameItemsIndex];
-            showGameInHighlight(game);
-          }
-
-          function prev() {
-            gameItemsIndex--;
-            if (gameItemsIndex < 0) {
-              gameItemsIndex = gameItems.length - 1;
-            }
-            const game = gameItems[gameItemsIndex];
-            showGameInHighlight(game);
-          }
-          $('#next').click(() => {
-            next();
-            clearInterval(progressInterval);
-            startProgress();
-
-            clearInterval(interval);
-            clearTimeout(timeout);
-            timeout = setTimeout(() => {
-              interval = setInterval(next, 15000);
-              progressInterval = setInterval(() => {
-                $("#progressbar").progressbar({
-                  value: interval
-                });
-              }, 200);
-            }, 30000);
-          });
-
-          $('#prev').click(() => {
-            prev();
-            clearInterval(progressInterval);
-            startProgress();
-
-            clearInterval(interval);
-            clearTimeout(timeout);
-            timeout = setTimeout(() => {
-              interval = setInterval(prev, 15000);
-              progressInterval = setInterval(() => {
-                $("#progressbar").progressbar({
-                  value: interval
-                });
-              }, 200);
-            }, 30000);
-          });
-          
-          let playButton = document.getElementById("play-button");
-          $(playButton).click(()=>window.open('/jogos/linhaamarela/', 'blank'));
+        $('#next').click(() => {
+          clearInterval(progressInterval);
+          clearInterval(interval);
+          next();
+          startProgress();
+          interval = setInterval(next, duration);
         });
 
-      }, 1000)
+        $('#prev').click(() => {
+          clearInterval(progressInterval);
+          clearInterval(interval);
+          prev();
+          startProgress();
+          interval = setInterval(next, duration);
+        });
+        $('#next,#prev').show();
+
+        if ($("#progressbar").progressbar) {
+          // Inicializa o progressbar
+          $("#progressbar").progressbar({
+            value: 0
+          });
+        }
+
+        function startProgress() {
+          clearInterval(progressInterval);
+          progress = 0;
+
+          progressInterval = setInterval(() => {
+            progress += step;
+            if (progress >= 100) {
+              progress = 100;
+              clearInterval(progressInterval);
+              next(); // executa ação ao completar
+              startProgress(); // reinicia o ciclo
+            }
+            $("#progressbar").progressbar("value", progress);
+          }, stepTime);
+        }
+
+        if ($("#progressbar").progressbar) {
+          startProgress();
+        }
+        let timeout;
+
+
+        function next() {
+          gameItemsIndex++;
+          if (gameItemsIndex >= gameItems.length) {
+            gameItemsIndex = 0;
+          }
+          const game = gameItems[gameItemsIndex];
+          showGameInHighlight(game);
+        }
+
+        function prev() {
+          gameItemsIndex--;
+          if (gameItemsIndex < 0) {
+            gameItemsIndex = gameItems.length - 1;
+          }
+          const game = gameItems[gameItemsIndex];
+          showGameInHighlight(game);
+        }
+        $('#next').click(() => {
+          next();
+          clearInterval(progressInterval);
+          startProgress();
+
+          clearInterval(interval);
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            interval = setInterval(next, 15000);
+            progressInterval = setInterval(() => {
+              $("#progressbar").progressbar({
+                value: interval
+              });
+            }, 200);
+          }, 30000);
+        });
+
+        $('#prev').click(() => {
+          prev();
+          clearInterval(progressInterval);
+          startProgress();
+
+          clearInterval(interval);
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            interval = setInterval(prev, 15000);
+            progressInterval = setInterval(() => {
+              $("#progressbar").progressbar({
+                value: interval
+              });
+            }, 200);
+          }, 30000);
+        });
+        (() => {
+          next();
+          clearInterval(progressInterval);
+          startProgress();
+
+          clearInterval(interval);
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            interval = setInterval(next, 15000);
+            progressInterval = setInterval(() => {
+              $("#progressbar").progressbar({
+                value: interval
+              });
+            }, 200);
+          }, 30000);
+        })();
+      });
     });
   </script>
 </body>

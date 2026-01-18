@@ -30,13 +30,6 @@ $products = array(
         "descricao" => "Desenvolva uma mentalidade mais forte e assertiva. Este livro oferece insights para você se posicionar melhor em diversas situações da vida, evitando armadilhas e alcançando seus objetivos."
     ),
     array(
-        "id" => 5, 
-        "name" => "Aprenda A Lotar Sua Agenda E Faturar Mais", 
-        "affiliate_link" => "https://go.hotmart.com/X93286111Y?dp=1", 
-        "image_url" => "/lojavirtual/img/livros/AgendaLotadaLashDesigner600600px1.jpg",
-        "descricao" => "Especialmente para lash designers, este guia ensina técnicas de marketing e gestão para atrair mais clientes, lotar sua agenda e aumentar seu faturamento de forma consistente."
-    ),
-    array(
         "id" => 6, 
         "name" => "Destravada Mente (O Poder Da Mente Destravada)", 
         "affiliate_link" => "https://go.hotmart.com/F93165052P?dp=1", 
@@ -44,39 +37,11 @@ $products = array(
         "descricao" => "Liberte seu potencial máximo destravando o poder da sua mente. Aprenda técnicas para superar bloqueios mentais, aumentar sua produtividade e alcançar uma mentalidade de sucesso."
     ),
     array(
-        "id" => 7, 
-        "name" => "Beauty Master Pack - Documentos Editáveis Para Beleza E Estética", 
-        "affiliate_link" => "https://go.hotmart.com/H93286113P", 
-        "image_url" => "/lojavirtual/img/livros/BeautyPack.png",
-        "descricao" => "Otimize a gestão do seu negócio de beleza. Este pacote inclui fichas de anamnese, contratos e outros documentos essenciais, todos editáveis para se adaptar às suas necessidades."
-    ),
-    array(
-        "id" => 8, 
-        "name" => "Como Atrair Clientes Online - Livro Digital", 
-        "affiliate_link" => "https://go.hotmart.com/J93287617Q?dp=1", 
-        "image_url" => "/lojavirtual/img/livros/como-atrair-cliente.jpg", 
-        "descricao" => "Aprenda as estratégias de marketing digital mais eficazes para atrair clientes pela internet. Um guia completo para quem quer aumentar sua visibilidade e suas vendas online."
-    ),
-    array(
         "id" => 9, 
         "name" => "Modelos Prontos De Planilhas, Arquivos E Apresentações Para Diferentes Fins", 
         "affiliate_link" => "https://go.hotmart.com/J93285890A",
         "image_url" => "/lojavirtual/img/livros/modelos-prontos.jpg", 
         "descricao" => "Economize tempo e aumente sua produtividade com este pacote de modelos prontos. Planilhas, apresentações e documentos para diversas finalidades, fáceis de usar e personalizar."
-    ),
-    array(
-        "id" => 10, 
-        "name" => "Ebook Explosão De Vendas Com Ifood - Guia Completo", 
-        "affiliate_link" => "https://go.hotmart.com/S93287146I?dp=1", 
-        "image_url" => "/lojavirtual/img/livros/Explosaodevendas600600mm.jpg", 
-        "descricao" => "Alavanque seu delivery! Este guia completo ensina os segredos para otimizar seu cardápio, atrair mais clientes e aumentar suas vendas na plataforma iFood."
-    ),
-    array(
-        "id" => 11, 
-        "name" => "Em Um Relacionamento Abusivo Com a Ansiedade", 
-        "affiliate_link" => "https://go.hotmart.com/S93287146I?dp=1", 
-        "image_url" => "/lojavirtual/img/livros/em-um-relacionamento-abusivo-com-a-ansiedade.jpg", 
-        "descricao" => "Um olhar profundo e sensível sobre a ansiedade. Este livro ajuda a identificar os gatilhos e a desenvolver estratégias para se libertar de um ciclo de preocupação e medo."
     )
     // Adicione mais produtos conforme necessário
 );
