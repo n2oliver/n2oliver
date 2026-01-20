@@ -7,7 +7,20 @@ const params3 = 'width='+ ((screen.availWidth / 2.5).toFixed(0)) + ',height=' + 
 
 let anuncioAbriu;
 function abrirSmartlinkUmaVez() {
-  if (sessionStorage.getItem('smartlink_aberto')) return;
+  if (sessionStorage.getItem('smartlink_aberto')) {
+    if(sessionStorage.getItem('smartlink_aberto_2')) {
+      setTimeout(()=>{
+        window.open(SMARTLINK_3, '_blank', params3);
+      }, 200);
+      return;  
+    }
+    setTimeout(()=>{
+      window.open(SMARTLINK_2, '_blank', params2);
+    }, 200);
+    
+    sessionStorage.setItem('smartlink_aberto_2', '1');
+    return;
+  }
 
   // Evento GA (opcional, mantido)
   if (typeof gtag === 'function') {
@@ -19,11 +32,5 @@ function abrirSmartlinkUmaVez() {
 
   // Abre smartlink principal
   window.open(SMARTLINK_1, '_blank', params1);
-  setTimeout(()=>{
-    window.open(SMARTLINK_2, '_blank', params2);
-    setTimeout(()=>{
-      window.open(SMARTLINK_3, '_blank', params3);
-    }, 200);
-  }, 200);
   sessionStorage.setItem('smartlink_aberto', '1');
 }

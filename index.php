@@ -378,9 +378,6 @@ $APP_URL = '/jogos';
         </div>`;
     }
     document.addEventListener('DOMContentLoaded', function() {
-      setTimeout(()=>{
-        window.open(SMARTLINK_1, '_blank', params1);
-      }, 10000);
       let gameItems = [];
       let gameItemsIndex = -1;
       $.ajax({

@@ -173,7 +173,7 @@
                         <input type="search" id="search-input" class="form-control" placeholder="🔎 Buscar produtos por nome...">
                     </div>
                 </div>
-                <div id="product-grid" class="container g-0" style="align-items: stretch">
+                <div id="product-grid" class="container g-0 justify-content-center" style="align-items: stretch">
                     <!-- Products will be injected here by JavaScript -->
                     <div class="col-12 text-center">
                         <div class="spinner-border text-primary" role="status">
