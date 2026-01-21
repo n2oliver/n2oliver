@@ -233,7 +233,7 @@ $APP_URL = '/jogos';
           message: `
               <div class="text-center">
                   <a href="/jogos/linhaamarela/">
-                      <img src="/img/invasao-alien.png" alt="Alerta de Invasão" class="img-fluid" style="border: 2px solid #ff0000;">
+                      <img src="/img/invasao-alien.png" alt="Alerta de Invasão" class="img-fluid">
                   </a>
                   <p class="mt-3"><strong>Ameaça detectada!</strong> O destino da Terra está em suas mãos.</p>
               </div>
