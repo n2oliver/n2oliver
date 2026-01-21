@@ -207,7 +207,8 @@ $APP_URL = '/jogos';
     src="js/megapush/MegaPush.js">
   </script>
   <script src="gtag_dispatcher.js" async></script>
-  <script src="js/jquery-ui/jquery-ui.min.js" async></script>
+  <script src="js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="js/bootbox/bootbox.min.js"></script>
 
   <style>
     .raster {
@@ -225,6 +226,35 @@ $APP_URL = '/jogos';
 
 <body>
   <script src="js/anuncios.js"></script>
+  <script>
+    $(document).ready(function() {
+      const dialog = bootbox.dialog({
+          title: "⚠️ TRANSMISSÃO DE EMERGÊNCIA",
+          message: `
+              <div class="text-center">
+                  <a href="/jogos/linhaamarela/">
+                      <img src="/img/invasao-alien.png" alt="Alerta de Invasão" class="img-fluid" style="border: 2px solid #ff0000;">
+                  </a>
+                  <p class="mt-3"><strong>Ameaça detectada!</strong> O destino da Terra está em suas mãos.</p>
+              </div>
+          `,
+          buttons: {
+              cancel: {
+                  label: "IGNORAR",
+                  className: 'btn-secondary'
+              },
+              ok: {
+                  label: "COMBATER AGORA!",
+                  className: 'btn-danger',
+                  callback: function() {
+                      window.location.href = "/jogos/linhaamarela/";
+                  }
+              }
+          }
+      });
+      dialog.find('.bootbox-close-button').addClass('btn-close');
+  });
+  </script>
   <?php include("gtagmanager.php"); ?>
 
   <div style="position: absolute; z-index: 99999">
