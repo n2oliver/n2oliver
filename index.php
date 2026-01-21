@@ -75,6 +75,7 @@ $APP_URL = '/jogos';
     .game-card div {
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
+
     .game-card h2 {
       margin: 0.5rem 0;
       font-family: 'Ubuntu';
@@ -161,6 +162,7 @@ $APP_URL = '/jogos';
       height: fit-content;
       backdrop-filter: brightness(0.4);
     }
+
     #destaque-imagem .container {
       max-width: 100%;
     }
@@ -191,13 +193,17 @@ $APP_URL = '/jogos';
     #atContainer-b5463c03cd36f2b207d3e311906ba716 {
       width: fit-content !important;
     }
+
     .row>*.game-card {
       padding-right: 0 !important;
       padding-left: 0 !important;
     }
-    #game-details-content,#game-details-title {
+
+    #game-details-content,
+    #game-details-title {
       cursor: pointer
     }
+
     #thumbnail h2 {
       margin-bottom: 0;
     }
@@ -227,55 +233,103 @@ $APP_URL = '/jogos';
 <body>
   <script src="js/anuncios.js"></script>
   <script>
-    $(document).ready(function() {
-      const dialog = bootbox.dialog({
+    (function() {
+
+      if (sessionStorage.getItem('linhaAmarela_interstitial')) return;
+
+      let triggered = false;
+
+      function triggerInterstitial() {
+        if (triggered) return;
+        triggered = true;
+
+        sessionStorage.setItem('linhaAmarela_interstitial', '1');
+
+
+        const dialog = bootbox.dialog({
           title: "⚠️ TRANSMISSÃO DE EMERGÊNCIA",
           message: `
-              <div class="text-center">
-                  <a href="/jogos/linhaamarela/">
-                      <img src="/img/invasao-alien.png" alt="Alerta de Invasão" class="img-fluid">
-                  </a>
-                  <p class="mt-3"><strong>Ameaça detectada!</strong> O destino da Terra está em suas mãos.</p>
-              </div>
-          `,
+          <div class="text-center">
+            <a href="/jogos/linhaamarela/">
+                <img src="/img/invasao-alien.png" alt="Alerta de Invasão" class="img-fluid">
+            </a>
+            <p class="mt-3"><strong>Ameaça detectada!</strong> O destino da Terra está em suas mãos.</p>
+          </div>
+        `,
           buttons: {
-              cancel: {
-                  label: "IGNORAR",
-                  className: 'btn-secondary'
-              },
-              ok: {
-                  label: "COMBATER AGORA!",
-                  className: 'btn-danger',
-                  callback: function() {
-                      window.location.href = "/jogos/linhaamarela/";
-                  }
+            cancel: {
+              label: "IGNORAR",
+              className: 'btn-secondary'
+            },
+            ok: {
+              label: "COMBATER AGORA!",
+              className: 'btn-danger',
+              callback: function() {
+                window.location.href = "/jogos/linhaamarela/";
               }
+            }
           }
+        });
+        dialog.find('.bootbox-close-button').addClass('btn-close');
+
+        removeListeners();
+      }
+
+      function removeListeners() {
+        window.removeEventListener('scroll', onScroll);
+        document.removeEventListener('touchstart', onTouchStart);
+        document.removeEventListener('mousemove', onMouseMove);
+      }
+
+      function onScroll() {
+        if (window.scrollY > 10) {
+          triggerInterstitial();
+        }
+      }
+
+      function onTouchStart(e) {
+        if (e.touches && e.touches.length === 1) {
+          triggerInterstitial();
+        }
+      }
+
+      function onMouseMove() {
+        triggerInterstitial();
+      }
+
+      window.addEventListener('scroll', onScroll, {
+        passive: true
       });
-      dialog.find('.bootbox-close-button').addClass('btn-close');
-  });
+      document.addEventListener('touchstart', onTouchStart, {
+        once: true
+      });
+      document.addEventListener('mousemove', onMouseMove, {
+        once: true
+      });
+
+    })();
   </script>
   <?php include("gtagmanager.php"); ?>
 
   <div style="position: absolute; z-index: 99999">
-      <input autocomplete="off" type="checkbox" id="aadsstickymk103w4f" hidden />
-      <div style="padding-top: 0; padding-bottom: auto;">
-        <div style="width:100%;height:auto;position:fixed;text-align:center;font-size:0;bottom:0;left:0;right:0;margin:auto">
-          <label for="aadsstickymk103w4f" style="top: 50%;transform: translateY(-50%);right:24px;; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
-            <svg fill="#000000" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
-              <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "/>
-            </svg>
-          </label>
-          <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;"><iframe data-aa=2417696 src=//acceptable.a-ads.com/2417696/?size=Adaptive style='border:0; padding:0; width:70%; height:auto; overflow:hidden; margin: auto'></iframe></div>
-        </div>
-        <style>
-      #aadsstickymk103w4f:checked + div {
-        display: none;
-      }
-    </style>
+    <input autocomplete="off" type="checkbox" id="aadsstickymk103w4f" hidden />
+    <div style="padding-top: 0; padding-bottom: auto;">
+      <div style="width:100%;height:auto;position:fixed;text-align:center;font-size:0;bottom:0;left:0;right:0;margin:auto">
+        <label for="aadsstickymk103w4f" style="top: 50%;transform: translateY(-50%);right:24px;; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
+          <svg fill="#000000" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
+            <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 " />
+          </svg>
+        </label>
+        <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;"><iframe data-aa=2417696 src=//acceptable.a-ads.com/2417696/?size=Adaptive style='border:0; padding:0; width:70%; height:auto; overflow:hidden; margin: auto'></iframe></div>
+      </div>
+      <style>
+        #aadsstickymk103w4f:checked+div {
+          display: none;
+        }
+      </style>
     </div>
   </div>
-  
+
   <div class="mx-auto col-md-12 text-center mt-0">
     <?php include('navbar.php'); ?>
   </div>
@@ -287,11 +341,11 @@ $APP_URL = '/jogos';
     <section id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
       alt="">
 
-      <div class="container" style="background-color: rgba(0, 0, 0, .4);">
+      <div class="container m-auto" style="background-color: rgba(0, 0, 0, .4);">
         <div id="game-details" class="flex-column px-0 col-md-6" style="display:flex;flex-wrap:wrap; justify-content: start; font-family: Ubuntu;
               color: white !important; ">
 
-          <div id="thumbnail" class="rounded align-content-end border border-light" 
+          <div id="thumbnail" class="rounded align-content-end border border-light"
             style="
               text-align: center; 
               background-size: cover; 
@@ -304,11 +358,11 @@ $APP_URL = '/jogos';
               <div class="col-md-10 m-auto d-inline-flex">
                 <p id="game-details-content" class="p-2 flex-column" style="max-width:680px; margin:0 auto; color: white;line-height:1.5;">
                   Carregando...
-                  <div class="text-center">
-                    <button class="btn btn-danger m-1 h-0 text-nowrap" id="play-button" style="height: fit-content;" aria-label="Aria Right">
-                      Jogar
-                    </button>
-                  </div>
+                <div class="text-center">
+                  <button class="btn btn-danger m-1 h-0 text-nowrap" id="play-button" style="height: fit-content;" aria-label="Aria Right">
+                    Jogar
+                  </button>
+                </div>
                 </p>
                 <button class="btn btn-success m-1 h-0" style="display: none; height: fit-content;" id="prev" aria-label="Aria Left">
                   <i class="fa-solid fa-arrow-left"></i>
@@ -323,7 +377,9 @@ $APP_URL = '/jogos';
         </div>
         <div id="jogos-recentes" class="d-flex justify-content-center">
           <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2 text-start w-100" style="font-family: Ubuntu">
-            <strong><h2 class="my-0">Jogos recentes</h2></strong>
+            <strong>
+              <h2 class="my-0">Jogos recentes</h2>
+            </strong>
             <div id="lista" class="container row m-0 p-0">
             </div>
             <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;"><iframe data-aa='2417696' src='//acceptable.a-ads.com/2417696/?size=Adaptive' style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe></div>
@@ -331,8 +387,10 @@ $APP_URL = '/jogos';
         </div>
       </div>
     </section>
-    
-    <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2" style="font-family: Ubuntu"><strong><h2>Você também pode gostar de</h2></strong></div>
+
+    <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2" style="font-family: Ubuntu"><strong>
+        <h2>Você também pode gostar de</h2>
+      </strong></div>
     <div id="jogos" class="d-flex justify-content-center row col-md-10 m-auto"></div>
   </main>
   <div class="container m-auto p-0 mt-1 col-md-10">
@@ -368,10 +426,10 @@ $APP_URL = '/jogos';
     </div>
   </div>
   <div class="container m-auto col-md-10 p-0 mt-1">
-      <div id="frame" style="width: 320px;margin: auto;z-index: 99998;height: auto">
-        <iframe data-aa='2421579' src='//ad.a-ads.com/2421579/?size=320x50'
-          style='border:0; padding:0; width:320px; height:50px; overflow:hidden;display: block;margin: auto'></iframe>
-      </div>
+    <div id="frame" style="width: 320px;margin: auto;z-index: 99998;height: auto">
+      <iframe data-aa='2421579' src='//ad.a-ads.com/2421579/?size=320x50'
+        style='border:0; padding:0; width:320px; height:50px; overflow:hidden;display: block;margin: auto'></iframe>
+    </div>
   </div>
   <div class="container m-auto col-md-10 p-0 mt-1">
     <?php include("footer.php"); ?>
@@ -394,13 +452,13 @@ $APP_URL = '/jogos';
       $('#game-details-content,#game-details-title,#play-button').unbind('click').click(function(e) {
         e.preventDefault();
         setTimeout(() => {
-          window.location.href = game.url;          
+          window.location.href = game.url;
         }, 200);
       });
 
 
       document.getElementById('game-details-title').textContent = game.titulo;
-      document.getElementById('game-details-content').innerHTML = game.descricao + 
+      document.getElementById('game-details-content').innerHTML = game.descricao +
         `<div class="text-center" style="display: none;">
           <button class="btn btn-danger m-1 h-0" id="next" style="display: none; height: fit-content;" aria-label="Aria Right">
             <i class="fa-solid fa-arrow-right"></i>
@@ -432,7 +490,7 @@ $APP_URL = '/jogos';
 
             const gameDiv = document.createElement('div');
             const gameSubDiv = document.createElement('div');
-            
+
             gameDiv.className = 'row min-vh-50 h-100 align-content-center';
             gameSubDiv.style.height = '150px';
             gameSubDiv.className = 'bg-dark border border-light';
@@ -465,7 +523,7 @@ $APP_URL = '/jogos';
             gameDiv.appendChild(gameSpan);
             gameLink.appendChild(gameDiv);
             gameCard.appendChild(gameLink);
-            if(i < 3) {
+            if (i < 3) {
               recentesContainer.appendChild(gameCard);
             } else {
               container.appendChild(gameCard);
@@ -484,7 +542,7 @@ $APP_URL = '/jogos';
         gameItemsIndex = Array.from(gamecards).indexOf(gamecard);
         document.getElementById('game-details-title').textContent = gameLink.dataset.gameTitle;
         document.getElementById('game-details-content').innerHTML = gameLink.dataset.gameDesc;
-        
+
         let interval = null;
         let progressInterval = null;
         let progress = 0;
