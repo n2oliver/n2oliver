@@ -276,6 +276,7 @@ $APP_URL = '/jogos';
               background-repeat: no-repeat; 
               background-image: url(img/joined-games.png);
               height: 500px">
+              <div id="click-to-action" style="height: 70%;"></div>
             <h2 style="font-size:2rem; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">n2oliver</span></strong>🎮</h2>
             <div class="d-flex justify-content-around" style="background: rgba(0, 0, 0, .8);">
               <div class="col-md-10 m-auto d-inline-flex">
@@ -372,7 +373,7 @@ $APP_URL = '/jogos';
       destaqueImagem.style.backgroundImage = 'url(' + game.imagem + ')';
       thumbnail.style.backgroundImage = 'url(' + game.imagem + ')';
 
-      $('#game-details-content,#game-details-title,#play-button').unbind('click').click(function(e) {
+      $('#game-details-content,#game-details-title,#play-button,#click-to-action').unbind('click').click(function(e) {
         e.preventDefault();
         setTimeout(() => {
           window.location.href = game.url;
@@ -389,95 +390,6 @@ $APP_URL = '/jogos';
         </div>`;
     }
     document.addEventListener('DOMContentLoaded', function() {
-      (function() {
-
-        if (sessionStorage.getItem('linhaAmarela_interstitial')) return;
-
-        let triggered = false;
-
-        function triggerInterstitial() {
-          if (triggered) return;
-          triggered = true;
-
-          sessionStorage.setItem('linhaAmarela_interstitial', '1');
-
-
-          const dialog = bootbox.dialog({
-            title: "⚠️ TRANSMISSÃO DE EMERGÊNCIA",
-            message: `
-            <div class="text-center">
-              <a href="#" onclick="gtag('event', 'clicou_banner_linhaamarela'); window.location.href = '/jogos/linhaamarela/'">
-                  <img src="/img/invasao-alien.png" alt="Alerta de Invasão" class="img-fluid">
-              </a>
-              <p class="mt-3"><strong>Ameaça detectada!</strong> O destino da Terra está em suas mãos.</p>
-            </div>
-          `,
-            onEscape: () => {
-              gtag("event", "ignorou_banner_linhaamarela");
-            },
-            buttons: {
-              cancel: {
-                label: "IGNORAR",
-                className: 'btn-secondary',
-                callback: function() {
-                  gtag("event", "ignorou_banner_linhaamarela");
-                }
-              },
-              ok: {
-                label: "COMBATER AGORA!",
-                className: 'btn-danger',
-                callback: function() {
-
-                  gtag("event", "qualify_lead", {
-                    currency: "USD",
-                    value: 0.0004
-                  });
-
-                  gtag("event", "clicou_banner_linhaamarela");
-                  window.location.href = "/jogos/linhaamarela/";
-                }
-              }
-            }
-          });
-          dialog.find('.bootbox-close-button').addClass('btn-close');
-          gtag("event", "viu_banner_linhaamarela");
-
-          removeListeners();
-        }
-
-        function removeListeners() {
-          window.removeEventListener('scroll', onScroll);
-          document.removeEventListener('touchstart', onTouchStart);
-          document.removeEventListener('mousemove', onMouseMove);
-        }
-
-        function onScroll() {
-          if (window.scrollY > 10) {
-            triggerInterstitial();
-          }
-        }
-
-        function onTouchStart(e) {
-          if (e.touches && e.touches.length === 1) {
-            triggerInterstitial();
-          }
-        }
-
-        function onMouseMove() {
-          triggerInterstitial();
-        }
-
-        window.addEventListener('scroll', onScroll, {
-          passive: true
-        });
-        document.addEventListener('touchstart', onTouchStart, {
-          once: true
-        });
-        document.addEventListener('mousemove', onMouseMove, {
-          once: true
-        });
-
-      })();
       let gameItems = [];
       let gameItemsIndex = -1;
       $.ajax({
@@ -548,10 +460,10 @@ $APP_URL = '/jogos';
         }
       }).then(response => {
         gamecards = $('.game-card');
-        gamecard = gamecards[Math.round(Math.random() * (gamecards.length - 1))];
-        const gameLink = gamecard.querySelector('a');
         // Encontra o índice do primeiro jogo a ser exibido
-        gameItemsIndex = Array.from(gamecards).indexOf(gamecard);
+        gamecard = gamecards[0];
+        gameItemsIndex = -1;
+        const gameLink = gamecard.querySelector('a');
         document.getElementById('game-details-title').textContent = gameLink.dataset.gameTitle;
         document.getElementById('game-details-content').innerHTML = gameLink.dataset.gameDesc;
 
