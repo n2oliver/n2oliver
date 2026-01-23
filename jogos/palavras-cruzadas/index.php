@@ -114,13 +114,6 @@ if ($impressionid) {
 </head>
 <body style="backdrop-filter: brightness(.2)">
   <script async src="https://appsha-pnd.ctengine.io/js/script.js?wkey=97NjKiTr7b"></script>
-  
-  <script src="/js/anuncios.js"></script>
-  <script>
-    setTimeout(()=>{
-        abrirSmartlinkUmaVez();
-    }, 3200);
-  </script>
 <?php include("../../gtagmanager.php"); ?>
     <?php include('../../navbar.php'); ?>
     <script>
