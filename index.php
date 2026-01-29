@@ -101,7 +101,6 @@ $APP_URL = '/jogos';
     }
 
     .game-card a div {
-      padding: 10px;
       align-items: start;
       height: auto;
       background-position: center !important;

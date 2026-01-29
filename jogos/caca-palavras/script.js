@@ -455,5 +455,5 @@ function placeWord(word) {
     
     setTimeout(()=>{
         abrirSmartlinkUmaVez();
-    }, 3200);
+    }, 30000);
 });
