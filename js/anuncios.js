@@ -9,9 +9,17 @@ let anuncioAbriu;
 function abrirSmartlinkUmaVez() {
   if (sessionStorage.getItem('smartlink_aberto')) {
     if(sessionStorage.getItem('smartlink_aberto_2')) {
+      if(sessionStorage.getItem('smartlink_aberto_3')) {
+        setTimeout(()=>{
+          window.open(SMARTLINK_1, '_blank', params1);
+        }, 200);
+        return;
+      }
       setTimeout(()=>{
         window.open(SMARTLINK_3, '_blank', params3);
       }, 200);
+      
+      sessionStorage.setItem('smartlink_aberto_3', '1');
       return;  
     }
     setTimeout(()=>{
