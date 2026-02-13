@@ -58,66 +58,6 @@ $APP_URL = '/jogos';
       filter: drop-shadow(0 0 0.4rem white);
     }
 
-    .container {
-      display: grid;
-      gap: .2rem;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      background-color: transparent;
-    }
-
-    .game-card {
-      text-align: center;
-      overflow: visible;
-      flex: 1 1 200px;
-      margin: 4px;
-    }
-
-    .game-card div {
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .game-card h2 {
-      margin: 0.5rem 0;
-      font-family: 'Ubuntu';
-      color: white;
-      text-shadow: 3px 3px 3px darkslategray;
-      font-size: 18px;
-    }
-
-    .game-card a {
-      text-decoration: none;
-      font-family: 'Ubuntu';
-    }
-
-    .game-card .link {
-      text-align: center;
-      background-color: #E70D65;
-      font-weight: 700;
-      color: #FFFFFF
-    }
-
-    .game-card .link:hover {
-      background-color: #F11E52;
-    }
-
-    .game-card a div {
-      align-items: start;
-      height: auto;
-      background-position: center !important;
-      border-radius: 10px;
-    }
-
-    .game-card a div:hover {
-      filter: brightness(1.5);
-    }
-
-    .game-card a div span {
-      background-color: rgba(0.0, 0, 0, 0.5);
-      background-position: top;
-      color: white;
-      font-weight: bold;
-    }
-
     .intr-in {
       top: 60px !important;
     }
@@ -193,11 +133,6 @@ $APP_URL = '/jogos';
       width: fit-content !important;
     }
 
-    .row>*.game-card {
-      padding-right: 0 !important;
-      padding-left: 0 !important;
-    }
-
     #game-details-content,
     #game-details-title {
       cursor: pointer
@@ -207,6 +142,7 @@ $APP_URL = '/jogos';
       margin-bottom: 0;
     }
   </style>
+  <link rel="stylesheet" href="css/games.css" />
   <script defer
     data-site="e5e969e1-3c42-400f-ab17-83f62c295b9a"
     src="js/megapush/MegaPush.js">
