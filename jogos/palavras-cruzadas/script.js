@@ -580,8 +580,4 @@ crosswordData.forEach(entry => {
             init();
         }
     }, 1000);
-    
-    setTimeout(()=>{
-        abrirSmartlinkUmaVez();
-    }, 30000);
 });

@@ -111,6 +111,7 @@ if ($impressionid) {
           a.appendChild(r);
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
+  <script src="https://laxativethem.com/f0/b1/79/f0b17922dcf7861be67a02cba8a9b7ee.js"></script>
 </head>
 <body style="backdrop-filter: brightness(.2)">
   <script async src="https://appsha-pnd.ctengine.io/js/script.js?wkey=97NjKiTr7b"></script>
@@ -139,15 +140,22 @@ if ($impressionid) {
             currency: "USD",
             value: 0.0004
           });
-          document.querySelector('#main-text a').addEventListener('click', ()=>{
+          document.querySelector('#main-text a').addEventListener('click', (event)=>{
+            event.preventDefault();
+            abrirSmartlinkUmaVez();
+            
+            setTimeout(()=>{
               window.location.href = '<?= $APP_URL ?>/jogo.php';
-              gtag("event", "close_convert_lead", {
-                  currency: "USD",
-                  value: 0.0004
-              });
+            },200);
+          
+            gtag("event", "close_convert_lead", {
+                currency: "USD",
+                value: 0.0004
+            });
           });
       });
     </script>
+    <script defer src="/js/anuncios.js"></script>
 </body>
     <?php include("../../aads.php"); ?>
 </html>
