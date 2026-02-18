@@ -239,7 +239,7 @@ $APP_URL = '/jogos';
             <strong>
               <h2 class="my-0">Jogos recentes</h2>
             </strong>
-            <div id="lista" class="container row m-0 p-0">
+            <div id="lista" class="d-flex m-0 p-0 justify-items-center w-100">
             </div>
             <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;"><iframe data-aa='2417696' src='//acceptable.a-ads.com/2417696/?size=Adaptive' style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe></div>
           </div>

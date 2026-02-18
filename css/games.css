@@ -13,7 +13,7 @@
     .game-card {
       text-align: center;
       overflow: visible;
-      flex: 1 1 200px;
+      width: 200px;
       margin: 4px;
     }
 
