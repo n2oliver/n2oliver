@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <?php
-    $meta_title = 'Portfólio & Aplicativos — n2oliver';
+    $meta_title = 'Portfólio & Aplicativos | n2oliver';
     $meta_description = 'Conheça projetos, jogos e aplicativos desenvolvidos por Óliver. Portfólio com jogos, ferramentas e soluções web.';
     $meta_image = '/img/linhaamarela.jpg';
     $canonical = (isset($_SERVER['HTTP_HOST']) ? (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] : 'https://n2oliver.com/aplicativos.php');

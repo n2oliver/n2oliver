@@ -33,7 +33,7 @@
 
         gtag('config', 'G-0T82Y59VYL');
     </script>
-    <title>Dev — n2oliver</title>
+    <title>Dev | n2oliver</title>
     <meta name="7searchppc" content="eaa599b68df06e77def4d2f3b0228830" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,8 +82,8 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Home — n2oliver">
-    <meta name="twitter:description" content="n2oliver — notícias, jogos e recursos sobre tecnologia.">
+    <meta name="twitter:title" content="Home | n2oliver">
+    <meta name="twitter:description" content="n2oliver | notícias, jogos e recursos sobre tecnologia.">
     <meta name="twitter:image" content="https://n2oliver.com/img/n2.png">
 
     <!-- JSON-LD structured data (Website / Organization) -->

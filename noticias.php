@@ -1,5 +1,5 @@
 <?php
-$meta_title = 'Notícias — n2oliver';
+$meta_title = 'Notícias | n2oliver';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
