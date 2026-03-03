@@ -3,3 +3,9 @@ jogos/linhaamarela/database/usuario.db
 .env_local
 composer.lock
 vendor
+.phpunit.cache
+node_modules
+public/storage
+.phpunit.result.cache
+package-lock.json
+composer-lock.json
