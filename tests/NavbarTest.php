@@ -1,12 +1,12 @@
 <?php
 
 test('navbar deve conter os menus principais', function () {
-    $page = visit('http://localhost:8000');
-    $page->assertSee(' Notícias')
-        ->assertSee(' Jogos')
-        ->assertSee(' Aplicativos')
-        ->assertSee(' Livros')
-        ->assertSee(' Cursos')
-        ->assertSee(' Desenvolvedor')
-        ->assertSee(' Contato');
+    visit('http://localhost:8000')
+        ->assertSeeIn('.nav-link', ' Notícias')
+        ->assertSeeIn('.nav-link', ' Jogos')
+        ->assertSeeIn('.nav-link', ' Aplicativos')
+        ->assertSeeIn('.nav-link', ' Livros')
+        ->assertSeeIn('.nav-link', ' Cursos')
+        ->assertSeeIn('.nav-link', ' Desenvolvedor')
+        ->assertSeeIn('.nav-link', ' Contato');
 });

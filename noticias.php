@@ -2,7 +2,7 @@
 $meta_title = 'Notícias — n2oliver';
 ?>
 <!DOCTYPE html>
-<html lang="auto">
+<html lang="pt-BR">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <?php include('./cabecalho.php'); ?>
