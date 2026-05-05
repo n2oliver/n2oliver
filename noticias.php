@@ -116,7 +116,7 @@ $meta_title = 'Notícias | n2oliver';
 </body>
 </html>
 <script>
-    toggleNoticiaContent(null, 9);
+    toggleNoticiaContent(null, 10);
     function setContent(index) {
         const obj = {id: index};
         $.ajax({
