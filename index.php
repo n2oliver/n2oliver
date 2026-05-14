@@ -70,7 +70,7 @@ $APP_URL = '/jogos';
       margin-top: 2rem;
       text-align: center;
       color: #343a40;
-      overflow: auto;
+      overflow: hidden;
       height: auto;
     }
 
@@ -252,7 +252,14 @@ $APP_URL = '/jogos';
       </strong></div>
     <div id="jogos" class="d-flex justify-content-center row col-md-10 m-auto"></div>
   </main>
-  <div class="container m-auto p-0 mt-1 col-md-10">
+  <div class="container m-auto p-0 mt-1 col-md-10" 
+    onmouseover="
+      this.style.height = 'auto';
+      this.querySelector('div').querySelector('div').nextElementSibling.style.display = 'block';"
+    onmouseout="
+      this.style.height = '60px';
+      this.querySelector('div').querySelector('div').nextElementSibling.style.display = 'none';"
+    style="height: 60px">
     <div class="donation-section m-0 row">
       <div class="col-md-6">
         <h3>Gostou dos jogos?</h3>
@@ -264,7 +271,7 @@ $APP_URL = '/jogos';
           </small>
         </p>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" style="display: none">
         <p>
 
           <strong>Global Account:</strong>
@@ -294,6 +301,12 @@ $APP_URL = '/jogos';
     <?php include("footer.php"); ?>
   </div>
   <script>
+    (function(){
+      const status = $.post('buscar-noticias.php', { page: 1, offset: 0, limit: 5}, function(response){
+        console.log(response)
+      })
+      console.log(status)
+    })()
     function scroll(element) {
       element.scrollIntoView({
         behavior: "smooth",
