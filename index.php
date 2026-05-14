@@ -73,7 +73,6 @@ $APP_URL = '/jogos';
       overflow: hidden;
       height: auto;
     }
-
     .success {
       background: linear-gradient(135deg, #54a554, #77f554);
     }
@@ -159,6 +158,11 @@ $APP_URL = '/jogos';
       background-size: cover;
       background-repeat: no-repeat;
       background-color: black;
+    }
+    #lista, #jogos {
+      display: -webkit-box;
+      overflow-x: scroll;
+      width: 100vw;
     }
   </style>
   <link rel="stylesheet" href="css/games.css" />
@@ -252,64 +256,67 @@ $APP_URL = '/jogos';
             </div>
           </div>
           <div id="progressbar" role="progressbar" title="progressbar"></div>
+          <div id="donation-section-wrapper" class="container m-auto p-0 mt-1 w-100" 
+              onmouseover="
+                this.style.height = 'auto';
+                this.querySelector('div').querySelector('div').nextElementSibling.style.display = 'block';"
+              onmouseout="
+                this.style.height = '120px';
+                this.querySelector('div').querySelector('div').nextElementSibling.style.display = 'none';"
+              style="height: 120px">
+              <div class="donation-section m-0 row">
+                <div class="col-md-6">
+                  <h3>Aceitamos doações</h3>
+                  <p><i class="fas fa-donate"></i>&nbsp;Você pode contribuir nos ajudando a desenvolver novos projetos. Envie sua contribuição pelos seguintes canais!</p>
+                  <p>
+                    <small>
+                      <strong>Chave PIX:</strong> <span class="notranslate" translate="no"> suporte@n2oliver.com</span><br>
+                      <strong>Bitcoin (LN):</strong> <span class="notranslate" translate="no"> warybongo30@walletofsatoshi.com</span><br>
+                    </small>
+                  </p>
+                </div>
+                <div class="col-md-6" style="display: none">
+                  <p>
+
+                    <strong>Global Account:</strong>
+                    <span class="notranslate" translate="no">
+                      <p><small><b>OLIVER SILVA CASTILHO</b></small></p>
+                      <ul class="text-start" style="list-style-type: none; padding-left: 0;">
+                        <li><small>Account number: 889213783-6</small></li>
+                        <li><small>ACH Routing number: 026073150</small></li>
+                        <li><small>WIRE Transfer Routing Number: 026073008</small></li>
+                        <li><small>Bank name: Community Federal Savings Bank</small></li>
+                        <li><small>Bank Address: 5 Penn Plaza, New York, NY 10001</small></li>
+                      </ul>
+
+                    </span><br>
+
+                  </p>
+                </div>
+              </div>
+            </div>
         </div>
         <div id="jogos-recentes" class="d-flex justify-content-center">
-          <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2 text-start w-100" style="font-family: Ubuntu">
+          <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2 text-start" style="font-family: Ubuntu">
             <strong>
               <h2 class="my-0">Jogos recentes</h2>
             </strong>
-            <div id="lista" class="d-flex m-0 p-0 justify-items-center w-100">
+            <div id="lista" class="m-0 p-0">
             </div>
             <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;"><iframe data-aa='2417696' src='//acceptable.a-ads.com/2417696/?size=Adaptive' style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe></div>
+            
+          <div class="d-block row m-auto text-light mt-2" style="font-family: Ubuntu"><strong>
+              <h2>Você também pode gostar de</h2>
+            </strong>
+          </div>
+          <div id="jogos" class="m-0 p-0"></div>
           </div>
         </div>
+
       </div>
     </section>
-
-    <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2" style="font-family: Ubuntu"><strong>
-        <h2>Você também pode gostar de</h2>
-      </strong></div>
-    <div id="jogos" class="d-flex justify-content-center row col-md-10 m-auto"></div>
   </main>
-  <div class="container m-auto p-0 mt-1 col-md-10" 
-    onmouseover="
-      this.style.height = 'auto';
-      this.querySelector('div').querySelector('div').nextElementSibling.style.display = 'block';"
-    onmouseout="
-      this.style.height = '60px';
-      this.querySelector('div').querySelector('div').nextElementSibling.style.display = 'none';"
-    style="height: 60px">
-    <div class="donation-section m-0 row">
-      <div class="col-md-6">
-        <h3>Aceitamos doações</h3>
-        <p><i class="fas fa-donate"></i>&nbsp;Você pode contribuir nos ajudando a desenvolver novos projetos. Envie sua contribuição pelos seguintes canais!</p>
-        <p>
-          <small>
-            <strong>Chave PIX:</strong> <span class="notranslate" translate="no"> suporte@n2oliver.com</span><br>
-            <strong>Bitcoin (LN):</strong> <span class="notranslate" translate="no"> warybongo30@walletofsatoshi.com</span><br>
-          </small>
-        </p>
-      </div>
-      <div class="col-md-6" style="display: none">
-        <p>
-
-          <strong>Global Account:</strong>
-          <span class="notranslate" translate="no">
-            <p><small><b>OLIVER SILVA CASTILHO</b></small></p>
-            <ul class="text-start" style="list-style-type: none; padding-left: 0;">
-              <li><small>Account number: 889213783-6</small></li>
-              <li><small>ACH Routing number: 026073150</small></li>
-              <li><small>WIRE Transfer Routing Number: 026073008</small></li>
-              <li><small>Bank name: Community Federal Savings Bank</small></li>
-              <li><small>Bank Address: 5 Penn Plaza, New York, NY 10001</small></li>
-            </ul>
-
-          </span><br>
-
-        </p>
-      </div>
-    </div>
-  </div>
+  
   <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2" style="font-family: Ubuntu">
     <strong>
       <h2>Notícias</h2>
@@ -317,7 +324,7 @@ $APP_URL = '/jogos';
   </div>
   <div id="game-noticias" class="container m-auto p-0 mt-1 col-md-10">
   </div>
-  <div class="container m-auto p-0 mt-1 col-md-10">
+  <div class="container m-auto p-0 mt-1 col-md-10 d-flex justify-content-end">
     <a href="/noticias.php"><button class="btn btn-primary">Ver todas as notícias</button></a>
   </div>
   <div class="container m-auto col-md-10 p-0 mt-1">
@@ -331,12 +338,12 @@ $APP_URL = '/jogos';
   </div>
   <script>
     (function(){
-      const serverResponse = $.post('buscar-noticias.php', { page: 1, offset: 0, limit: 5}, function(response){
+      const serverResponse = $.post('buscar-noticias.php', { page: 1, offset: 0, limit: 15}, function(response){
         if(serverResponse.status == 200) {
           const data = JSON.parse(response);
           for(let item of data.results){
             $("#game-noticias").append($(`
-            <div class="card" onclick="window.location.href = '${item.url}'">
+            <div class="card" onclick="window.location.href = '/noticias.php?id=${item.id}'">
               <div class="img" style="background-image: url(${item.imagem})"></div>
               <strong>${item.titulo}</strong>
             </div>`))

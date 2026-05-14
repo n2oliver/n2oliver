@@ -6,7 +6,7 @@ try {
     if (empty($page)) {
         $page = 1;
     }
-    $limit = 5;
+    $limit = !empty($_POST['limit']) ? $_POST['limit'] : 5;
     $offset = ($page - 1) * $limit;
 
     $stmt = $pdo->query("SELECT COUNT(id) AS total FROM noticia");
