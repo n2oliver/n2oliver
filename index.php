@@ -343,7 +343,6 @@ $APP_URL = '/jogos';
           }
         }
       })
-      console.log(serverResponse)
     })()
     function scroll(element) {
       element.scrollIntoView({
