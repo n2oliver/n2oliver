@@ -141,6 +141,25 @@ $APP_URL = '/jogos';
     #thumbnail h2 {
       margin-bottom: 0;
     }
+    #game-noticias {
+      background-color: white;
+      display: -webkit-box;
+      overflow-x: scroll;
+      scrollbar-width: auto !important;
+      background-color: black;
+    }
+    #game-noticias .card {
+      width: 150px;
+      background-color: white;
+    }
+    
+    #game-noticias .card .img {
+      width: 100%;
+      height: 150px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: black;
+    }
   </style>
   <link rel="stylesheet" href="css/games.css" />
   <script defer
@@ -262,7 +281,7 @@ $APP_URL = '/jogos';
     style="height: 60px">
     <div class="donation-section m-0 row">
       <div class="col-md-6">
-        <h3>Gostou dos jogos?</h3>
+        <h3>Aceitamos doações</h3>
         <p><i class="fas fa-donate"></i>&nbsp;Você pode contribuir nos ajudando a desenvolver novos projetos. Envie sua contribuição pelos seguintes canais!</p>
         <p>
           <small>
@@ -291,6 +310,16 @@ $APP_URL = '/jogos';
       </div>
     </div>
   </div>
+  <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2" style="font-family: Ubuntu">
+    <strong>
+      <h2>Notícias</h2>
+    </strong>
+  </div>
+  <div id="game-noticias" class="container m-auto p-0 mt-1 col-md-10">
+  </div>
+  <div class="container m-auto p-0 mt-1 col-md-10">
+    <a href="/noticias.php"><button class="btn btn-primary">Ver todas as notícias</button></a>
+  </div>
   <div class="container m-auto col-md-10 p-0 mt-1">
     <div id="frame" style="width: 320px;margin: auto;z-index: 99998;height: auto">
       <iframe data-aa='2421579' src='//ad.a-ads.com/2421579/?size=320x50'
@@ -302,10 +331,19 @@ $APP_URL = '/jogos';
   </div>
   <script>
     (function(){
-      const status = $.post('buscar-noticias.php', { page: 1, offset: 0, limit: 5}, function(response){
-        console.log(response)
+      const serverResponse = $.post('buscar-noticias.php', { page: 1, offset: 0, limit: 5}, function(response){
+        if(serverResponse.status == 200) {
+          const data = JSON.parse(response);
+          for(let item of data.results){
+            $("#game-noticias").append($(`
+            <div class="card" onclick="window.location.href = '${item.url}'">
+              <div class="img" style="background-image: url(${item.imagem})"></div>
+              <strong>${item.titulo}</strong>
+            </div>`))
+          }
+        }
       })
-      console.log(status)
+      console.log(serverResponse)
     })()
     function scroll(element) {
       element.scrollIntoView({
