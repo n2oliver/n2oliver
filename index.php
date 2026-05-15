@@ -141,14 +141,13 @@ $APP_URL = '/jogos';
       margin-bottom: 0;
     }
     #game-noticias {
-      background-color: white;
       display: -webkit-box;
-      overflow-x: scroll;
+      overflow-x: auto;
       scrollbar-width: auto !important;
-      background-color: black;
     }
     #game-noticias .card {
       width: 150px;
+      height: fit-content;
       background-color: white;
     }
     
@@ -161,7 +160,7 @@ $APP_URL = '/jogos';
     }
     #lista, #jogos {
       display: -webkit-box;
-      overflow-x: scroll;
+      overflow-x: auto;
       width: 100vw;
     }
   </style>
