@@ -158,7 +158,7 @@ $APP_URL = '/jogos';
       background-repeat: no-repeat;
       background-color: black;
     }
-    #lista, #jogos {
+    #lista, #destaques {
       display: -webkit-box;
       overflow-x: auto;
       width: 100vw;
@@ -300,15 +300,15 @@ $APP_URL = '/jogos';
             <strong>
               <h2 class="my-0">Jogos recentes</h2>
             </strong>
-            <div id="lista" class="m-0 p-0">
+            <div id="lista" class="my-0 py-0">
             </div>
             <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;"><iframe data-aa='2417696' src='//acceptable.a-ads.com/2417696/?size=Adaptive' style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe></div>
             
-          <div class="d-block row m-auto text-light mt-2" style="font-family: Ubuntu"><strong>
+          <div class="row m-auto text-light mt-2" style="font-family: Ubuntu"><strong>
               <h2>Você também pode gostar de</h2>
             </strong>
           </div>
-          <div id="jogos" class="m-0 p-0"></div>
+          <div id="destaques" class="my-0 py-0"></div>
           </div>
         </div>
 
@@ -321,7 +321,7 @@ $APP_URL = '/jogos';
       <h2>Notícias</h2>
     </strong>
   </div>
-  <div id="game-noticias" class="container m-auto p-0 mt-1 col-md-10">
+  <div id="game-noticias" class="container m-auto py-0 mt-1 col-md-10">
   </div>
   <div class="container m-auto p-0 mt-1 col-md-10 d-flex justify-content-end">
     <a href="/noticias.php"><button class="btn btn-primary">Ver todas as notícias</button></a>
@@ -388,9 +388,7 @@ $APP_URL = '/jogos';
         method: 'GET',
         dataType: 'json',
         success: function(data) {
-          const container = document.getElementById('jogos');
           const recentesContainer = document.getElementById('jogos-recentes').querySelector('#lista');
-          let i = 0;
 
           data.forEach(game => {
             const gameCard = document.createElement('div');
@@ -410,14 +408,13 @@ $APP_URL = '/jogos';
             gameSubDiv.style.height = '150px';
             gameSubDiv.className = 'bg-dark border border-light';
             gameSubDiv.style.background = `url(${game.imagem})`;
+            gameSubDiv.style.backgroundSize = `cover`;
             gameDiv.appendChild(gameSubDiv);
 
             const gameTitle = document.createElement('h2');
             gameTitle.className = 'rounded-left bg-dark my-0 py-1 rounded';
             gameTitle.textContent = game.titulo;
 
-            const gameSpan = document.createElement('span');
-            gameSpan.className = 'align-content-center mb-0 rounded w-100 mt-2';
             gameLink.onclick = function() {
               setTimeout(() => {
                 window.location.href = game.url;
@@ -431,19 +428,10 @@ $APP_URL = '/jogos';
             const playButton = document.createElement('div');
             playButton.className = 'link btn my-2';
             playButton.textContent = 'Jogar';
-
-            //gameSpan.appendChild(gameDesc);
-            //gameSpan.appendChild(playButton);
             gameDiv.appendChild(gameTitle);
-            gameDiv.appendChild(gameSpan);
             gameLink.appendChild(gameDiv);
             gameCard.appendChild(gameLink);
-            if (i < 3) {
-              recentesContainer.appendChild(gameCard);
-            } else {
-              container.appendChild(gameCard);
-            }
-            i++;
+            recentesContainer.appendChild(gameCard);
           });
         },
         error: function(error) {
@@ -613,6 +601,63 @@ $APP_URL = '/jogos';
           }, 30000);
         })();
       });
+      $.ajax({
+        url: './obter-destaques.php',
+        method: 'GET',
+        dataType: 'json',
+        success: function(data) {
+          let destaqueItems = [];
+          const container = document.getElementById('destaques');
+
+          data.forEach(destaque => {
+            const card = document.createElement('div');
+            card.className = 'game-card';
+            
+            const destaqueLink = document.createElement('a');
+            destaqueLink.href = '#';
+            destaqueLink.setAttribute('data-game-url', destaque.url);
+            destaqueLink.setAttribute('data-game-title', destaque.titulo);
+            destaqueLink.setAttribute('data-game-desc', destaque.descricao);
+            destaqueLink.setAttribute('data-game-imagem', destaque.imagem);
+
+            const destaqueDiv = document.createElement('div');
+            const destaqueSubDiv = document.createElement('div');
+
+            destaqueDiv.className = 'row min-vh-50 h-100 align-content-center';
+            destaqueSubDiv.style.height = '150px';
+            destaqueSubDiv.className = 'bg-dark border border-light';
+            destaqueSubDiv.style.background = `url(${destaque.imagem})`;
+            destaqueSubDiv.style.backgroundSize = `cover`;
+
+            const destaqueTitle = document.createElement('h2');
+            destaqueTitle.className = 'rounded-left bg-dark my-0 py-1 rounded';
+            destaqueTitle.textContent = destaque.titulo;
+
+            destaqueLink.onclick = function() {
+              setTimeout(() => {
+                window.location.href = destaque.url;
+              }, 200);
+            };
+            destaqueItems.push(destaque);
+
+            const destaqueDesc = document.createElement('p');
+            destaqueDesc.innerHTML = destaque.descricao;
+
+            const playButton = document.createElement('div');
+            playButton.className = 'link btn my-2';
+            playButton.textContent = 'Acessar';
+
+            destaqueDiv.appendChild(destaqueTitle);
+            destaqueLink.appendChild(destaqueDiv);
+            destaqueDiv.appendChild(destaqueSubDiv);
+            card.appendChild(destaqueLink);
+            container.appendChild(card);
+          });
+        },
+        error: function(error) {
+          console.error('Erro ao obter os destaques:', error);
+        }
+      })
     });
   </script>
 </body>
