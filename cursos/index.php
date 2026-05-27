@@ -173,7 +173,10 @@
                         <input type="search" id="search-input" class="form-control" placeholder="🔎 Buscar produtos por nome...">
                     </div>
                 </div>
-                <div id="product-grid" class="container g-0 justify-content-center" style="align-items: stretch">
+                <div id="curso-webdesigner" class="container justify-content-center col-md-6" style="background-image: url(./img/curso-webdesigner-basico.png); background-size: contain; background-position: center; height: 512px; background-repeat: no-repeat"></div>
+                <div id="product-grid" class="col-md-6 container g-0 justify-content-center" style="align-items: stretch">
+                    <div class="col-md-12" style="background-image: url(./img/curso-webdesigner-basico.png); background-size: contain; background-position: center; height: 512px; background-repeat: no-repeat">
+                    </div>
                     <!-- Products will be injected here by JavaScript -->
                     <div class="col-12 text-center">
                         <div class="spinner-border text-primary" role="status">
@@ -227,7 +230,6 @@
                     grid.html('<div class="col-12"><p class="text-center text-light">Nenhum produto encontrado com estes critérios.</p></div>');
                     return;
                 }
-
                 availableProducts.forEach(product => {
                     const buttonHtml = `<a href="#" onclick="event.preventDefault()" class="btn btn-primary">Ver Produto</a>`;
 
@@ -247,6 +249,9 @@
                     `;
                     grid.append(productCard);
                 });
+                $('#curso-webdesigner').click(()=>{
+                    window.open('https://www.youtube.com/playlist?list=PL7LFRhZO3KFtZhyqbI2SKKed7Ua_HA2cA')
+                })
             }
 
             // Carrega todos os produtos

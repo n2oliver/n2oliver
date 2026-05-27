@@ -146,9 +146,10 @@ $APP_URL = '/jogos';
       scrollbar-width: auto !important;
     }
     #game-noticias .card {
+      color: white;
       width: 150px;
       height: fit-content;
-      background-color: white;
+      background-color: darkslategray;
     }
     
     #game-noticias .card .img {
@@ -301,6 +302,9 @@ $APP_URL = '/jogos';
               <h2 class="my-0">Jogos recentes</h2>
             </strong>
             <div id="lista" class="my-0 py-0">
+            </div>
+            <div class="m-auto p-0 mt-1 mx-0 d-flex justify-content-end">
+              <a href="/jogos.php"><button class="btn btn-primary">Ver todos</button></a>
             </div>
             <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;"><iframe data-aa='2417696' src='//acceptable.a-ads.com/2417696/?size=Adaptive' style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe></div>
             
