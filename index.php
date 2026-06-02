@@ -192,25 +192,6 @@ $APP_URL = '/jogos';
   <script src="js/anuncios.js"></script>
   <?php include("gtagmanager.php"); ?>
 
-  <div style="position: absolute; z-index: 99999">
-    <input autocomplete="off" type="checkbox" id="aadsstickymk103w4f" hidden />
-    <div style="padding-top: 0; padding-bottom: auto;">
-      <div style="width:100%;height:auto;position:fixed;text-align:center;font-size:0;bottom:0;left:0;right:0;margin:auto">
-        <label for="aadsstickymk103w4f" style="top: 50%;transform: translateY(-50%);right:24px;; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
-          <svg fill="#000000" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
-            <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 " />
-          </svg>
-        </label>
-        <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;"><iframe data-aa=2417696 src=//acceptable.a-ads.com/2417696/?size=Adaptive style='border:0; padding:0; width:70%; height:auto; overflow:hidden; margin: auto'></iframe></div>
-      </div>
-      <style>
-        #aadsstickymk103w4f:checked+div {
-          display: none;
-        }
-      </style>
-    </div>
-  </div>
-
   <div class="mx-auto col-md-12 text-center mt-0">
     <?php include('navbar.php'); ?>
   </div>
@@ -306,7 +287,16 @@ $APP_URL = '/jogos';
             <div class="m-auto p-0 mt-1 mx-0 d-flex justify-content-end">
               <a href="/jogos.php"><button class="btn btn-primary">Ver todos</button></a>
             </div>
-            <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;"><iframe data-aa='2417696' src='//acceptable.a-ads.com/2417696/?size=Adaptive' style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe></div>
+            <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;">
+              <!-- BEGIN AADS AD UNIT 2410752 -->
+
+              <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
+                <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
+                  style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+              </div>
+
+              <!-- END AADS AD UNIT 2410752 -->
+            </div>
             
           <div class="row m-auto text-light mt-2" style="font-family: Ubuntu"><strong>
               <h2>Você também pode gostar de</h2>
@@ -665,5 +655,25 @@ $APP_URL = '/jogos';
     });
   </script>
 </body>
+  <!-- BEGIN AADS AD UNIT 2421579 -->
 
+  <div style="position: sticky; z-index: 99999; bottom: 0px">
+        <input autocomplete="off" type="checkbox" id="aadsstickympwuknsr" hidden />
+        <div style="padding-top: 0; padding-bottom: auto;">
+          <div style="width:100%;height:auto;position: sticky;text-align:center;font-size:0;bottom:0;left:0;right:0;margin:auto">
+            <label for="aadsstickympwuknsr" style="top: 50%;transform: translateY(-50%);right:24px;; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
+              <svg fill="#000000" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
+                <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "/>
+              </svg>
+            </label>
+            <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;"><iframe data-aa=2421579 src=//acceptable.a-ads.com/2421579/?size=Adaptive style='border:0; padding:0; width:70%; height:auto; overflow:hidden; margin: auto'></iframe></div>
+          </div>
+          <style>
+        #aadsstickympwuknsr:checked + div {
+          display: none;
+        }
+      </style>
+      </div></div>
+
+  <!-- END AADS AD UNIT 2421579 -->
 </html>
