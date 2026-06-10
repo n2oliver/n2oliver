@@ -287,16 +287,6 @@ $APP_URL = '/jogos';
             <div class="m-auto p-0 mt-1 mx-0 d-flex justify-content-end">
               <a href="/jogos.php"><button class="btn btn-primary">Ver todos</button></a>
             </div>
-            <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;">
-              <!-- BEGIN AADS AD UNIT 2410752 -->
-
-              <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
-                <iframe data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
-                  style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
-              </div>
-
-              <!-- END AADS AD UNIT 2410752 -->
-            </div>
             
           <div class="row m-auto text-light mt-2" style="font-family: Ubuntu"><strong>
               <h2>Você também pode gostar de</h2>
@@ -319,12 +309,6 @@ $APP_URL = '/jogos';
   </div>
   <div class="container m-auto p-0 mt-1 col-md-10 d-flex justify-content-end">
     <a href="/noticias.php"><button class="btn btn-primary">Ver todas as notícias</button></a>
-  </div>
-  <div class="container m-auto col-md-10 p-0 mt-1">
-    <div id="frame" style="width: 320px;margin: auto;z-index: 99998;height: auto">
-      <iframe data-aa='2421579' src='//ad.a-ads.com/2421579/?size=320x50'
-        style='border:0; padding:0; width:320px; height:50px; overflow:hidden;display: block;margin: auto'></iframe>
-    </div>
   </div>
   <div class="container m-auto col-md-10 p-0 mt-1">
     <?php include("footer.php"); ?>
