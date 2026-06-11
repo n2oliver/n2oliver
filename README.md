@@ -1,6 +1,4 @@
-# 🌐 Site Profissional - Óliver S. Castilho
-
-Este é o repositório do meu site profissional como desenvolvedor web e criador de jogos online. A página está publicada em:
+# 🌐 Óliver S. Castilho
 
 🔗 **https://n2oliver.com**
 
@@ -12,6 +10,7 @@ Sou desenvolvedor full stack com foco em aplicações web e jogos interativos. T
 - CSS puro e responsivo
 - Integração de APIs
 - Jogos para navegador com lógica própria
+- Desenvolvedor com experiência profissional
 
 ## 📌 Funcionalidades
 
