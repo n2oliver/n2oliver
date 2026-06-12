@@ -10,3 +10,6 @@
 [submodule "jogos/quebra-palavras"]
 	path = jogos/quebra-palavras
 	url = https://github.com/n2oliver/quebra-palavras.git
+[submodule "calculadora"]
+	path = calculadora
+	url = https://github.com/n2oliver/calculadora.git
