@@ -210,13 +210,18 @@
                 </div>
 
                 <div class="text-box p-0" data-content-index="6" style="display: none">
-                    <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica">
-                        <h1>Cobertura de Superfícies com Perdas</h1>
-                        <p>A Calculadora Cobertura de Superfícies com Perdas é uma ferramenta inovadora desenvolvida para simplificar o processo de cálculo e otimização de materiais em diversos projetos de construção e design. Nossa calculadora permite que profissionais e entusiastas estimem com precisão a quantidade de materiais necessários, considerando perdas inevitáveis durante o processo de corte, montagem e instalação.</p>
-                        
-                        <div class="text-center">
-                            <a href="/calculadora_material.php"><button class="btn btn-primary"><strong>Acessar</strong></button></a>
-                        </div>
+                    <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica"><h1>Calculadora</h1>
+                    <p>
+                    A Calculadora é uma ferramenta desenvolvida para auxiliar na realização de cálculos matemáticos com rapidez e precisão. Ideal para tarefas do dia a dia, estudos e atividades profissionais, ela permite efetuar operações de forma prática, proporcionando mais agilidade e conveniência na resolução de contas e expressões numéricas.
+                    </p>
+
+                    <div class="text-center">
+                        <a href="/calculadora/">
+                            <button class="btn btn-primary">
+                                <strong>Acessar</strong>
+                            </button>
+                        </a>
+                    </div>
                     </div>
                 </div>
             </div>
