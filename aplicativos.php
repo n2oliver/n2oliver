@@ -31,7 +31,7 @@
                                 <div class="px-0 carousel-item-content" style="height: fit-content">
                                     <img alt="linhaamarela" class="title-image img-fluid" src="img/linhaamarela.jpg" />
                                     <h2 class="title">
-                                        <a href="/jogos/linhaamarela/" role="button" class="btn btn-custom">Linha Amarela</a>
+                                        <a href="/jogos/linhaamarela/" target="_blank" role="button" class="btn btn-custom">Linha Amarela</a>
                                     </h2>
                                 </div>
                             </div>
@@ -41,7 +41,7 @@
                                 <div class="px-0 carousel-item-content">
                                     <img alt="combo-memo" class="title-image img-fluid" src="img/combo-memo.png" />
                                     <h2 class="title">
-                                        <a href="/jogos/combo-memo/" role="button" class="btn btn-custom">Combo-Memo</a>
+                                        <a href="/jogos/combo-memo/" target="_blank" role="button" class="btn btn-custom">Combo-Memo</a>
                                     </h2>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
                                     <img alt="calculadoras-pediatricas" class="title-image img-fluid" src="img/calculadoras-pediatricas.jpg" />
                                     <h2 class="title">
-                                        <a href="https://whitebook.pebmed.com.br/planos" role="button" class="btn btn-custom">Decisões Clínicas</a>
+                                        <a href="https://whitebook.pebmed.com.br/planos" target="_blank" role="button" class="btn btn-custom">Decisões Clínicas</a>
                                     </h2>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
                                 <img alt="lojavirtual" class="title-image img-fluid" src="img/loja_virtual.jpg"/>
                                     <h2 class="title">
-                                        <a href="/lojavirtual/" role="button" class="btn btn-custom">Loja Virtual</a>
+                                        <a href="/lojavirtual/" target="_blank" role="button" class="btn btn-custom">Loja Virtual</a>
                                     </h2>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
                                     <img alt="caca-palavras" class="title-image img-fluid" src="/jogos/img/a.jpg"/>
                                     <h2 class="title">
-                                        <a href="/jogos/caca-palavras/" role="button" class="btn btn-custom">Caça-Palavras</a>
+                                        <a href="/jogos/caca-palavras/" target="_blank" role="button" class="btn btn-custom">Caça-Palavras</a>
                                     </h2>
                                 </div>
                             </div>
@@ -81,17 +81,28 @@
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
                                     <img alt="palavras-cruzadas" class="title-image img-fluid" src="/jogos/img/flat-crosswords.png"/>
                                     <h2 class="title">
-                                        <a href="/jogos/palavras-cruzadas/" role="button" class="btn btn-custom">Palavras-Cruzadas</a>
+                                        <a href="/jogos/palavras-cruzadas/" target="_blank" role="button" class="btn btn-custom">Palavras-Cruzadas</a>
                                     </h2>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item" style="overflow-x: hidden">
+                        <!-- <div class="carousel-item" style="overflow-x: hidden">
                             <div class="row">
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
                                     <img alt="calculadoramateriais" class="title-image img-fluid" src="img/calculadoramateriais.jpg"/>
                                     <h2 class="title">
-                                        <a href="/calculadora_material.php" role="button" class="btn btn-custom">Calculadora de Aplicação de Materiais</a>
+                                        <a href="/calculadora_material.php" target="_blank" role="button" class="btn btn-custom">Calculadora de Aplicação de Materiais</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div> -->
+                        
+                        <div class="carousel-item" style="overflow-x: hidden">
+                            <div class="row">
+                                <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
+                                    <img alt="calculadoramateriais" class="title-image img-fluid" src="img/calc.jpg"/>
+                                    <h2 class="title">
+                                        <a href="/calculadora/" target="_blank" role="button" class="btn btn-custom">Calculadora</a>
                                     </h2>
                                 </div>
                             </div>
