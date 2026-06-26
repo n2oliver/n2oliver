@@ -162,7 +162,6 @@ $APP_URL = '/jogos';
     #lista, #destaques {
       display: -webkit-box;
       overflow-x: auto;
-      width: 100vw;
     }
   </style>
   <link rel="stylesheet" href="css/games.css" />
@@ -203,50 +202,81 @@ $APP_URL = '/jogos';
     <section id="destaque-imagem" class="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
       alt="">
 
-      <div class="container m-auto" style="background-color: rgba(0, 0, 0, .4);">
-        <div id="game-details" class="flex-column px-0 col-md-6" style="display:flex;flex-wrap:wrap; justify-content: start; font-family: Ubuntu;
+      <div class="container m-auto p-0" style="background-color: rgba(0, 0, 0, .4);">
+        <div id="game-details" class="flex-row px-0 col-md-10" style="display:flex;flex-wrap:wrap; justify-content: start; font-family: Ubuntu;
               color: white !important; ">
-
-          <div id="thumbnail" class="rounded align-content-end border border-light"
-            style="
-              text-align: center; 
-              background-size: cover; 
-              background-position: center; 
-              background-repeat: no-repeat; 
-              background-image: url(img/joined-games.png);
-              height: 500px">
-              <div id="click-to-action" style="height: 70%;"></div>
-            <h2 style="font-size:2rem; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">n2oliver</span></strong>🎮</h2>
-            <div class="d-flex justify-content-around" style="background: rgba(0, 0, 0, .8);">
-              <div class="col-md-10 m-auto d-inline-flex">
-                <p id="game-details-content" class="p-2 flex-column" style="max-width:680px; margin:0 auto; color: white;line-height:1.5;">
-                  Carregando...
-                <div class="text-center">
-                  <button class="btn btn-danger m-1 h-0 text-nowrap" id="play-button" style="height: fit-content;" aria-label="Aria Right">
-                    Jogar
+          <div class="w-100">
+            <div id="thumbnail" class="rounded align-content-end border border-light"
+              style="
+                text-align: center; 
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat; 
+                background-image: url(img/joined-games.png);
+                width: 100vw;
+                height: 77vh">
+                <div id="click-to-action" style="height: 70%;"></div>
+              <h2 style="font-size:2rem; background: rgba(0, 0, 0, .8);"><strong><span id="game-details-title">n2oliver</span></strong>🎮</h2>
+              <div class="d-flex justify-content-around" style="background: rgba(0, 0, 0, .8);">
+                <div class="col-md-10 m-auto d-inline-flex">
+                  <p id="game-details-content" class="p-2 flex-column" style="max-width:680px; margin:0 auto; color: white;line-height:1.5;">
+                    Carregando...
+                  <div class="text-center">
+                    <button class="btn btn-lg btn-danger m-1 h-0 text-nowrap" id="play-button" style="height: fit-content;" aria-label="Aria Right">
+                      Jogar
+                    </button>
+                  </div>
+                  </p>
+                  <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" style="height: fit-content;" id="prev" aria-label="Aria Left">
+                    <i class="fa-solid fa-arrow-left"></i>
+                  </button>
+                  <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" id="next" style="height: fit-content;" aria-label="Aria Right">
+                    <i class="fa-solid fa-arrow-right"></i>
                   </button>
                 </div>
-                </p>
-                <button class="btn btn-success m-1 h-0" style="display: none; height: fit-content;" id="prev" aria-label="Aria Left">
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-                <button class="btn btn-success m-1 h-0" id="next" style="display: none; height: fit-content;" aria-label="Aria Right">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
               </div>
             </div>
-          </div>
-          <div id="progressbar" role="progressbar" title="progressbar"></div>
-          <div id="donation-section-wrapper" class="container m-auto p-0 mt-1 w-100" 
-              onmouseover="
-                this.style.height = 'auto';
-                this.querySelector('div').querySelector('div').nextElementSibling.style.display = 'block';"
-              onmouseout="
-                this.style.height = '120px';
-                this.querySelector('div').querySelector('div').nextElementSibling.style.display = 'none';"
-              style="height: 120px">
-              <div class="donation-section m-0 row">
-                <div class="col-md-6">
+            <div id="progressbar" role="progressbar" title="progressbar"></div>
+            
+          <div class="row">
+            <div id="jogos-recentes" class="d-flex justify-content-center col-md-5">
+              <div class="w-100" style="font-family: Ubuntu">
+                <div class="d-flex w-100 justify-content-between" style="transform: translateY(175px)">
+                  <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" style="height: fit-content;" id="prev" aria-label="Aria Left"
+                    onclick="scrollDivX('lista', -175);">
+                    <i class="fa-solid fa-arrow-left"></i>
+                  </button>
+                  <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" id="next" style="height: fit-content;" aria-label="Aria Right"
+                    onclick="scrollDivX('lista', 175);">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+                <strong><h2 class="my-0">Jogos recentes</h2></strong>
+                <div id="lista" class="my-0 py-0">
+                </div>
+                <div class="m-auto p-0 mt-1 mx-0 d-flex justify-content-end"><a href="/jogos.php"><button class="btn btn-primary">Ver todos</button></a></div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="row m-auto text-light" style="font-family: Ubuntu">
+                <div class="d-flex w-100 justify-content-between" style="transform: translateY(175px)">
+                  <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" style="display: none; height: fit-content;" id="prev" aria-label="Aria Left"
+                    onclick="scrollDivX('destaques', -175);">
+                    <i class="fa-solid fa-arrow-left"></i>
+                  </button>
+                  <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" id="next" style="display: none; height: fit-content;" aria-label="Aria Right"
+                    onclick="scrollDivX('destaques', 175);">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+                <strong><h2 class="my-0">Você também pode gostar de</h2></strong>
+              </div>
+              
+              <div id="destaques" class="my-0 py-0"></div>
+            </div>
+            <div id="donation-section-wrapper" class="col-md-12 m-auto p-0 mt-1 w-100">
+              <div class="donation-section col-md-10 row m-auto">
+                <div class="col-md-5">
                   <h3>Aceitamos doações</h3>
                   <p><i class="fas fa-donate"></i>&nbsp;Você pode contribuir nos ajudando a desenvolver novos projetos. Envie sua contribuição pelos seguintes canais!</p>
                   <p>
@@ -256,7 +286,7 @@ $APP_URL = '/jogos';
                     </small>
                   </p>
                 </div>
-                <div class="col-md-6" style="display: none">
+                <div class="col-md-5">
                   <p>
 
                     <strong>Global Account:</strong>
@@ -276,31 +306,25 @@ $APP_URL = '/jogos';
                 </div>
               </div>
             </div>
-        </div>
-        <div id="jogos-recentes" class="d-flex justify-content-center">
-          <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2 text-start" style="font-family: Ubuntu">
-            <strong>
-              <h2 class="my-0">Jogos recentes</h2>
-            </strong>
-            <div id="lista" class="my-0 py-0">
-            </div>
-            <div class="m-auto p-0 mt-1 mx-0 d-flex justify-content-end">
-              <a href="/jogos.php"><button class="btn btn-primary">Ver todos</button></a>
-            </div>
-            
-          <div class="row m-auto text-light mt-2" style="font-family: Ubuntu"><strong>
-              <h2>Você também pode gostar de</h2>
-            </strong>
-          </div>
-          <div id="destaques" class="my-0 py-0"></div>
           </div>
         </div>
-
       </div>
+      
     </section>
   </main>
   
   <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2" style="font-family: Ubuntu">
+    
+    <div class="d-flex w-100 justify-content-between" style="transform: translateY(175px); z-index: 2">
+      <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" style="height: fit-content;" id="prev" aria-label="Aria Left"
+        onclick="scrollDivX('game-noticias', -175);">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" id="next" style="height: fit-content;" aria-label="Aria Right"
+        onclick="scrollDivX('game-noticias', 175);">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
     <strong>
       <h2>Notícias</h2>
     </strong>
@@ -334,6 +358,11 @@ $APP_URL = '/jogos';
         block: "start"
       })
     }
+    function scrollDivX(id, offset) {
+      const div = document.getElementById(id);
+      let scrollLeft = div.scrollLeft;
+      div.scroll({left: scrollLeft + offset, behavior: 'smooth'});
+    }
 
     function showGameInHighlight(game) {
       let destaqueImagem = document.querySelector("body");
@@ -359,6 +388,12 @@ $APP_URL = '/jogos';
         </div>`;
     }
     document.addEventListener('DOMContentLoaded', function() {
+      window.onclick = () => {
+        window.onclick = () => {
+          abrirSmartlinkUmaVez();
+          window.onclick = null;
+        }
+      }
       let gameItems = [];
       let gameItemsIndex = -1;
       $.ajax({
@@ -380,18 +415,19 @@ $APP_URL = '/jogos';
             gameLink.setAttribute('data-game-imagem', game.imagem);
 
             const gameDiv = document.createElement('div');
-            const gameSubDiv = document.createElement('div');
 
+            const gameTitle = document.createElement('h2');
+            gameTitle.className = 'rounded-left bg-dark my-0 py-1 rounded';
+            gameTitle.textContent = game.titulo;
+            gameDiv.appendChild(gameTitle);
+
+            const gameSubDiv = document.createElement('div');
             gameDiv.className = 'row min-vh-50 h-100 align-content-center';
             gameSubDiv.style.height = '150px';
             gameSubDiv.className = 'bg-dark border border-light';
             gameSubDiv.style.background = `url(${game.imagem})`;
             gameSubDiv.style.backgroundSize = `cover`;
             gameDiv.appendChild(gameSubDiv);
-
-            const gameTitle = document.createElement('h2');
-            gameTitle.className = 'rounded-left bg-dark my-0 py-1 rounded';
-            gameTitle.textContent = game.titulo;
 
             gameLink.onclick = function() {
               setTimeout(() => {
@@ -406,7 +442,6 @@ $APP_URL = '/jogos';
             const playButton = document.createElement('div');
             playButton.className = 'link btn my-2';
             playButton.textContent = 'Jogar';
-            gameDiv.appendChild(gameTitle);
             gameLink.appendChild(gameDiv);
             gameCard.appendChild(gameLink);
             recentesContainer.appendChild(gameCard);

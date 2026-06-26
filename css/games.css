@@ -52,10 +52,6 @@
       border-radius: 10px;
     }
 
-    .game-card a div:hover {
-      filter: brightness(1.05);
-    }
-
     .game-card a div span {
       background-color: rgba(0.0, 0, 0, 0.5);
       background-position: top;
