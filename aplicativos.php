@@ -86,16 +86,16 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="carousel-item" style="overflow-x: hidden">
+                        <div class="carousel-item" style="overflow-x: hidden">
                             <div class="row">
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
-                                    <img alt="calculadoramateriais" class="title-image img-fluid" src="img/calculadoramateriais.jpg"/>
+                                    <img alt="inspetor-visual" class="title-image img-fluid" src="img/insp.png"/>
                                     <h2 class="title">
-                                        <a href="/calculadora_material.php" target="_blank" role="button" class="btn btn-custom">Calculadora de Aplicação de Materiais</a>
+                                        <a href="https://chromewebstore.google.com/detail/inspetor-visual/kddpnplompfhboemlbfankhjpklalaoi" target="_blank" role="button" class="btn btn-custom">Inspetor Visual Extensão para Navegadores (Chrome)</a>
                                     </h2>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                         
                         <div class="carousel-item" style="overflow-x: hidden">
                             <div class="row">
@@ -116,6 +116,7 @@
                         <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="4" aria-label="Slide 5"></button>
                         <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="5" aria-label="Slide 6"></button>
                         <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                        <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="7" aria-label="Slide 8"></button>
                     </div>
                 </div>
 
@@ -226,7 +227,7 @@
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+        <button class="carousel-control-prev rounded-circle btn btn-lg" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
                 <div class="arrow-container">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="arrow back-arrow">
                         <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
@@ -234,7 +235,7 @@
                 </div>
             <span class="visually-hidden">Previous</span>
         </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+            <button class="carousel-control-next rounded-circle btn btn-lg" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
                 <div class="arrow-container">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="arrow">
                         <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
