@@ -27,11 +27,11 @@
                     
                     <div class="carousel-inner mt-2">
                         <div class="carousel-item active" style="overflow-x: hidden">
-                            <div class="row" style="height: fit-content; align-content: center;">
-                                <div class="px-0 carousel-item-content" style="height: fit-content">
-                                    <img alt="linhaamarela" class="title-image img-fluid" src="img/linhaamarela.jpg" />
+                            <div class="row">
+                                <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
+                                    <img alt="inspetor-visual" class="title-image img-fluid" src="img/insp.png"/>
                                     <h2 class="title">
-                                        <a href="/jogos/linhaamarela/" target="_blank" role="button" class="btn btn-custom">Linha Amarela</a>
+                                        <a href="https://chromewebstore.google.com/detail/inspetor-visual/kddpnplompfhboemlbfankhjpklalaoi" target="_blank" role="button" class="btn btn-custom">Inspetor Visual Extensão para Navegadores (Chrome)</a>
                                     </h2>
                                 </div>
                             </div>
@@ -86,16 +86,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item" style="overflow-x: hidden">
-                            <div class="row">
-                                <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
-                                    <img alt="inspetor-visual" class="title-image img-fluid" src="img/insp.png"/>
-                                    <h2 class="title">
-                                        <a href="https://chromewebstore.google.com/detail/inspetor-visual/kddpnplompfhboemlbfankhjpklalaoi" target="_blank" role="button" class="btn btn-custom">Inspetor Visual Extensão para Navegadores (Chrome)</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
                         
                         <div class="carousel-item" style="overflow-x: hidden">
                             <div class="row">
@@ -103,6 +93,17 @@
                                     <img alt="calculadoramateriais" class="title-image img-fluid" src="img/calc.jpg"/>
                                     <h2 class="title">
                                         <a href="/calculadora/" target="_blank" role="button" class="btn btn-custom">Calculadora</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item" style="overflow-x: hidden">
+                            <div class="row" style="height: fit-content; align-content: center;">
+                                <div class="px-0 carousel-item-content" style="height: fit-content">
+                                    <img alt="linhaamarela" class="title-image img-fluid" src="img/linhaamarela.jpg" />
+                                    <h2 class="title">
+                                        <a href="/jogos/linhaamarela/" target="_blank" role="button" class="btn btn-custom">Linha Amarela</a>
                                     </h2>
                                 </div>
                             </div>
@@ -119,20 +120,41 @@
                         <button type="button" data-bs-target="#carouselControls" data-bs-slide-to="7" aria-label="Slide 8"></button>
                     </div>
                 </div>
+                <div class="text-box p-0" data-content-index="0">
+                    <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica"><h1>Calculadora</h1>
+                    <p>
+                    Copie o HTML e o CSS de qualquer elemento de uma página com apenas um clique. Basta selecionar o componente desejado para obter rapidamente sua estrutura HTML e seus estilos CSS, facilitando estudos, prototipação, depuração e desenvolvimento web.
+                    </p>
+                    <p>
+                    Ideal para desenvolvedores, designers e estudantes que desejam analisar interfaces, reutilizar componentes ou acelerar a criação de projetos.
+                    </p>
+                    <strong>Recursos</strong>
+                    <ul>
+                        <li>✔ Copiar HTML de qualquer elemento da página</li>
+                        <li>✔ Copiar CSS automaticamente</li>
+                        <li>✔ Seleção rápida e intuitiva</li>
+                        <li>✔ Funciona diretamente no navegador</li>
+                        <li>✔ Interface simples e leve</li>
+                        <li>✔ Aumenta a produtividade no desenvolvimento web</li>
+                    </ul>
+                    <strong>Indicado para</strong>
+                    Desenvolvedores Front-end<br>
+                    Web Designers<br>
+                    Estudantes de HTML, CSS e JavaScript<br>
+                    Análise de interfaces<br>
+                    Prototipação rápida<br>
+                    Estudos de componentes e layouts<br>
+                    <p>
+                    Copie elementos, analise estilos e acelere seu fluxo de trabalho sem complicações.
+                    </p>
 
-                <div class="text-box align-items-center p-0" data-content-index="0">
-                    <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica">
-                        <h1>Linha Amarela</h1>
-                        <p>🚨 Os monstros estão voltando. Você está pronto? 👾<br>
-                            No dia 27 de junho de 2025, o jogo Linha Amarela retorna com novos desafios, visuais impactantes e uma jogabilidade viciante no estilo Arkanoid.<br>
-                            🔥 Prepare-se para enfrentar ondas de criaturas brilhantes em um cenário distópico.<br>
-                            🎮 Mostre sua habilidade, quebre as defesas e salve o que restou!<br>
-                            💥 Totalmente gratuito e direto no navegador.<br>
-                            🌐 Compatível com desktop e mobile.<br>
-                            
-                        <div class="text-center">
-                            <a href="/jogos/linhaamarela/"><button class="btn btn-danger"><strong>Jogar agora</strong></button></a>
-                        </div>
+                    <div class="text-center">
+                        <a href="https://chromewebstore.google.com/detail/inspetor-visual/kddpnplompfhboemlbfankhjpklalaoi">
+                            <button class="btn btn-primary">
+                                <strong>Acessar</strong>
+                            </button>
+                        </a>
+                    </div>
                     </div>
                 </div>
 
@@ -225,6 +247,22 @@
                     </div>
                     </div>
                 </div>
+                <div class="text-box align-items-center p-0" data-content-index="7" style="display: none">
+                    <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica">
+                        <h1>Linha Amarela</h1>
+                        <p>🚨 Os monstros estão voltando. Você está pronto? 👾<br>
+                            No dia 27 de junho de 2025, o jogo Linha Amarela retorna com novos desafios, visuais impactantes e uma jogabilidade viciante no estilo Arkanoid.<br>
+                            🔥 Prepare-se para enfrentar ondas de criaturas brilhantes em um cenário distópico.<br>
+                            🎮 Mostre sua habilidade, quebre as defesas e salve o que restou!<br>
+                            💥 Totalmente gratuito e direto no navegador.<br>
+                            🌐 Compatível com desktop e mobile.<br>
+                            
+                        <div class="text-center">
+                            <a href="/jogos/linhaamarela/"><button class="btn btn-danger"><strong>Jogar agora</strong></button></a>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
         <button class="carousel-control-prev rounded-circle btn btn-lg" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
@@ -275,17 +313,17 @@
             });
 
             // Sincronizar o conteúdo de texto conforme o slide do carousel muda
-            carouselElement.addEventListener('slide.bs.carousel', function (event) {
+            carouselElement.addEventListener('slid.bs.carousel', function (event) {
                 const contentIndex = event.to; // Índice do slide que vai ser exibido
                 const textBoxes = document.querySelectorAll('.text-box');
-                
-                textBoxes.forEach(function (textBox) {
-                    if (parseInt(textBox.getAttribute('data-content-index')) === contentIndex) {
-                        textBox.style.display = 'block'; // Mostra a caixa de texto correspondente
-                    } else {
-                        textBox.style.display = 'none'; // Esconde as outras caixas de texto
-                    }
-                });
+                if(contentIndex)
+                    textBoxes.forEach(function (textBox) {
+                        if (parseInt(textBox.getAttribute('data-content-index')) === contentIndex) {
+                            textBox.style.display = 'block'; // Mostra a caixa de texto correspondente
+                        } else {
+                            textBox.style.display = 'none'; // Esconde as outras caixas de texto
+                        }
+                    });
             });
         });
 

@@ -26,9 +26,14 @@
     <link rel="preload" onload="this.rel='stylesheet'" as="style" href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"/>
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"></noscript>
 
-    <?php include(__DIR__ . '/css/bootstrap/bootstrap.min.php'); ?>
+    <script src="
+https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css
+" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"  async></script>
-    <script src="/js/bootstrap/bootstrap.bundle.min.js"  async></script>
+    
     <?php include(__DIR__ . '/css/font-awesome/all.min.php') ?>
 
     <link rel="stylesheet" href="/styles-index.css"/>
