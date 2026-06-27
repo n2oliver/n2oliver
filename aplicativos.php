@@ -121,7 +121,7 @@
                     </div>
                 </div>
                 <div class="text-box p-0" data-content-index="0">
-                    <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica"><h1>Calculadora</h1>
+                    <div class="bg-light p-3 rounded my-2 mx-auto" style="font-family: Helvetica"><h1>Inspetor Visual</h1>
                     <p>
                     Copie o HTML e o CSS de qualquer elemento de uma página com apenas um clique. Basta selecionar o componente desejado para obter rapidamente sua estrutura HTML e seus estilos CSS, facilitando estudos, prototipação, depuração e desenvolvimento web.
                     </p>
