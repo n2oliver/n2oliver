@@ -241,12 +241,12 @@ $APP_URL = '/jogos';
           <div class="row">
             <div id="jogos-recentes" class="d-flex justify-content-center col-md-5">
               <div class="w-100" style="font-family: Ubuntu">
-                <div class="d-flex w-100 justify-content-between" style="transform: translateY(175px)">
-                  <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" style="height: fit-content;" id="prev" aria-label="Aria Left"
+                <div class="d-flex w-100 justify-content-between" style="transform: translateY(175px); pointer-events: none">
+                  <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" style="height: fit-content; pointer-events: auto;" id="prev" aria-label="Aria Left"
                     onclick="scrollDivX('lista', -175);">
                     <i class="fa-solid fa-arrow-left"></i>
                   </button>
-                  <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" id="next" style="height: fit-content;" aria-label="Aria Right"
+                  <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" id="next" style="height: fit-content; pointer-events: auto;" aria-label="Aria Right"
                     onclick="scrollDivX('lista', 175);">
                     <i class="fa-solid fa-arrow-right"></i>
                   </button>
@@ -259,12 +259,12 @@ $APP_URL = '/jogos';
             </div>
             <div class="col-md-5">
               <div class="row m-auto text-light" style="font-family: Ubuntu">
-                <div class="d-flex w-100 justify-content-between" style="transform: translateY(175px)">
-                  <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" style="display: none; height: fit-content;" id="prev" aria-label="Aria Left"
+                <div class="d-flex w-100 justify-content-between" style="transform: translateY(175px); pointer-events: none">
+                  <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" style="display: none; height: fit-content; pointer-events: auto;" id="prev" aria-label="Aria Left"
                     onclick="scrollDivX('destaques', -175);">
                     <i class="fa-solid fa-arrow-left"></i>
                   </button>
-                  <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" id="next" style="display: none; height: fit-content;" aria-label="Aria Right"
+                  <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" id="next" style="display: none; height: fit-content; pointer-events: auto;" aria-label="Aria Right"
                     onclick="scrollDivX('destaques', 175);">
                     <i class="fa-solid fa-arrow-right"></i>
                   </button>
@@ -315,12 +315,12 @@ $APP_URL = '/jogos';
   
   <div class="d-flex justify-content-start row col-md-10 m-auto text-light mt-2" style="font-family: Ubuntu">
     
-    <div class="d-flex w-100 justify-content-between" style="transform: translateY(175px); z-index: 2">
-      <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" style="height: fit-content;" id="prev" aria-label="Aria Left"
+    <div class="d-flex w-100 justify-content-between" style="transform: translateY(175px); z-index: 2; pointer-events: none">
+      <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" style="height: fit-content; pointer-events: auto;" id="prev" aria-label="Aria Left"
         onclick="scrollDivX('game-noticias', -175);">
         <i class="fa-solid fa-arrow-left"></i>
       </button>
-      <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" id="next" style="height: fit-content;" aria-label="Aria Right"
+      <button class="btn btn-lg btn-success m-1 h-0 rounded-circle" id="next" style="height: fit-content; pointer-events: auto;" aria-label="Aria Right"
         onclick="scrollDivX('game-noticias', 175);">
         <i class="fa-solid fa-arrow-right"></i>
       </button>

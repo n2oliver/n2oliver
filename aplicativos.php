@@ -31,7 +31,7 @@
                                 <div class="px-0 carousel-item-content" style="overflow: clip; height: 100vh;">
                                     <img alt="inspetor-visual" class="title-image img-fluid" src="img/insp.png"/>
                                     <h2 class="title">
-                                        <a href="https://chromewebstore.google.com/detail/inspetor-visual/kddpnplompfhboemlbfankhjpklalaoi" target="_blank" role="button" class="btn btn-custom">Inspetor Visual Extensão para Navegadores (Chrome)</a>
+                                        <a href="/extensoes/inspetor-visual/" target="_blank" role="button" class="btn btn-custom">Inspetor Visual Extensão para Navegadores (Chrome)</a>
                                     </h2>
                                 </div>
                             </div>
@@ -149,7 +149,7 @@
                     </p>
 
                     <div class="text-center">
-                        <a href="https://chromewebstore.google.com/detail/inspetor-visual/kddpnplompfhboemlbfankhjpklalaoi">
+                        <a href="/extensoes/inspetor-visual/">
                             <button class="btn btn-primary">
                                 <strong>Acessar</strong>
                             </button>
