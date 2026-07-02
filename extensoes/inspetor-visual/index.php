@@ -16,11 +16,7 @@
 <link rel="stylesheet" href="scripts/bootstrap-5.0.2-dist/css/bootstrap.min.css" />
 </head>
 <body>
-   <?php include("gtagmanager.php"); ?>
-
 <header>
-
-   
 <div class="container mt-4">
 
    <nav class="d-flex justify-content-between">
@@ -126,6 +122,18 @@ Recursos
 <p>
 Tudo o que você precisa para estudar interfaces e acelerar seu desenvolvimento.
 </p>
+    
+    <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;">
+        <!-- BEGIN AADS AD UNIT 2421579 -->
+
+        <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
+            <iframe data-aa='2421579' src='//acceptable.a-ads.com/2421579/?size=Adaptive'
+                style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'>
+            </iframe>
+        </div>
+
+        <!-- END AADS AD UNIT 2421579 -->
+    </div>
 
 </div>
 
