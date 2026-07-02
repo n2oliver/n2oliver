@@ -13,13 +13,13 @@
 
 <link rel="stylesheet" href="inspetor.css" />
 <script src="insp.js"></script>
-<link rel="stylesheet" href="scripts/bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
 </head>
 <body>
 <header>
 <div class="container mt-4">
 
-   <nav class="d-flex justify-content-between">
+   <nav style="display: flex; justify-content: space-between;">
 
    <div class="logo">
    Inspetor Visual
@@ -34,7 +34,7 @@
 
    </nav>
    <div class="col-md-12">
-      <div class="mb-4">
+      <div class="mb-4 text-center">
          <h1>
          Inspecione qualquer elemento da página com apenas um clique.
          </h1>
