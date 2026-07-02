@@ -69,7 +69,7 @@ box-shadow:0 8px 20px rgba(26,115,232,.25);
 }
 
 .mockup{
-background:white;
+background: darkslategray;
 border:1px solid var(--border);
 border-radius:18px;
 padding:30px;
