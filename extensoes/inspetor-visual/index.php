@@ -72,7 +72,7 @@
                   </div>
             </div>
             <div class="d-flex justify-content-center">
-                  <select id="vozes" class="form-control">
+                  <select id="vozes-site" class="form-control">
                   </select>
             </div>
             
@@ -425,7 +425,7 @@ async function speak(text) {
     utterance.rate = 2.0;
     utterance.pitch = 0.5;
     if(result) {
-        utterance.voice = speechSynthesis.getVoices()[result.voz];
+        utterance.voice = speechSynthesis.getVoices()[result];
     }
 
     speechSynthesis.speak(utterance);

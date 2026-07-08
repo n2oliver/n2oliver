@@ -13,7 +13,7 @@ async function checkInspVisual() {
 async function checkSpeaker() {
     const result = localStorage.getItem("insp_visual_leitor_de_tela");
     const vozResult = localStorage.getItem("voz");
-    const selectVozes = document.getElementById("vozes");
+    const selectVozes = document.getElementById("vozes-site");
     if('speechSynthesis' in window) {
         window.speechSynthesis.addEventListener("voiceschanged", () => {
             const vozes = speechSynthesis.getVoices();
@@ -33,10 +33,10 @@ async function checkSpeaker() {
     }
     if(result == 'true') {
         document.getElementById("insp_visual_leitor_de_tela").checked = true;
-        document.getElementById("vozes").classList.remove("d-none");
+        document.getElementById("vozes-site").classList.remove("d-none");
     } else {
         document.getElementById("insp_visual_leitor_de_tela").checked = false;
-        document.getElementById("vozes").classList.add("d-none");
+        document.getElementById("vozes-site").classList.add("d-none");
         if ('speechSynthesis' in window) {
             speechSynthesis.cancel();
         }
@@ -62,10 +62,10 @@ async function speakerChangeState() {
             speechSynthesis.cancel();
         }
         localStorage.setItem('insp_visual_leitor_de_tela', false);
-        document.getElementById("vozes").classList.add("d-none");
+        document.getElementById("vozes-site").classList.add("d-none");
     } else {
         localStorage.setItem('insp_visual_leitor_de_tela', true);
-        document.getElementById("vozes").classList.remove("d-none");
+        document.getElementById("vozes-site").classList.remove("d-none");
     }
 }
 window.onload = () => {
