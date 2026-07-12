@@ -10,7 +10,7 @@
 <meta name="description" content="Visualize informações de elementos HTML, copie o código, consulte estilos CSS e ouça o texto da página utilizando leitura em voz alta.">
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="inspetor.css" />
 <script src="insp.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
@@ -29,7 +29,7 @@
       href="https://chromewebstore.google.com/detail/kddpnplompfhboemlbfankhjpklalaoi"
       target="_blank"
       rel="noopener noreferrer">
-      Instalar
+      <i class="fa-solid fa-store"></i> Ver na loja
    </a>
 
    </nav>
@@ -45,9 +45,7 @@
          </p>
 
          <a class="button"
-            href="https://chromewebstore.google.com/detail/kddpnplompfhboemlbfankhjpklalaoi"
-            target="_blank"
-            rel="noopener noreferrer">
+            href="#instalar-como-desenvolvedor">
             Saiba mais
          </a>
          <div>
@@ -122,7 +120,7 @@
 
 <div class="title">
 
-<h2>
+<h2 id="#instalar-como-desenvolvedor">
 Recursos
 </h2>
 
@@ -252,16 +250,16 @@ Aprenda HTML e CSS explorando qualquer página da internet em tempo real.
 <div class="alert alert-warning col-md-6"><strong>Aviso!</strong> Esteja ciente de que não nos responsabilizamos por qualquer dano ou mau uso decorrente do download do arquivo ou da instalação no navegador do usuário.</div>
 <ul style="list-style-type: none">
     <strong>Como instalar</strong>
-    <li>1. Baixe o arquivo zip contido no link 
+    <li>1. <strong>Baixe</strong> o arquivo zip contido no link 
         <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-0.5.2.zip">
             baixar agora (v0.5.2)
         </a>;</li>
-    <li>2. Extraia o arquivo para um diretório do seu computador;</li>
-    <li>3. Abra o navegador e ative o 'Modo desenvolvedor' ou algo semelhante;</li>
-    <li>4. Vá em Gerenciar extensões pelo menu do navegador;</li>
-    <li>5. Clique em carregar sem compactação</li>
-    <li>6. Selecione o diretório e confirme a escolha</li>
-    <li>Pronto! A extensão está instalada</li>
+    <li>2. <strong>Extraia</strong> o arquivo para um diretório do seu computador;</li>
+    <li>3. Abra o navegador e <strong>ative o 'Modo desenvolvedor'</strong> ou algo semelhante;</li>
+    <li>4. <strong>Vá em Gerenciar extensões</strong> pelo menu do navegador;</li>
+    <li>5. Clique em <strong>Carregar sem compactação</strong></li>
+    <li>6. <strong>Selecione o diretório</strong> e confirme a escolha</li>
+    <li><strong>Pronto!</strong> A extensão está instalada</li>
 </ul>
 </div>
 </div>
