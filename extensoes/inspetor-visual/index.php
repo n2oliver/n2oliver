@@ -45,7 +45,7 @@
          </p>
 
          <a class="button"
-            href="#instalar-como-desenvolvedor">
+            href="#recursos">
             Saiba mais
          </a>
          <div>
@@ -114,13 +114,13 @@
 
 </header>
 
-<section>
+<section id="recursos">
 
 <div class="container">
 
 <div class="title">
 
-<h2 id="#instalar-como-desenvolvedor">
+<h2>
 Recursos
 </h2>
 
