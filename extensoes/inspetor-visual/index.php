@@ -50,6 +50,13 @@
             rel="noopener noreferrer">
             Saiba mais
          </a>
+         <div>
+            ou 
+            <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-0.5.2.zip">
+                baixar agora (v0.5.2)
+            </a> e 
+            <a href="#instalar-como-desenvolvedor">instalar no modo desenvolvedor</a>
+        </div>
       </div>
       <div class="hero d-flex flex-column">
 
@@ -234,11 +241,29 @@ Aprenda HTML e CSS explorando qualquer página da internet em tempo real.
 </p>
 
 </div>
+</div>
+
 
 </div>
 
+<div class="d-flex justify-content-center flex-column">
+<h3 id="instalar-como-desenvolvedor">Instalar como desenvolvedor</h3>
+<p>Consiste em instalar diretamente do arquivo sem precisar baixar da loja de aplicativos.</p>
+<div class="alert alert-warning col-md-6"><strong>Aviso!</strong> Esteja ciente de que não nos responsabilizamos por qualquer dano ou mau uso decorrente do download do arquivo ou da instalação no navegador do usuário.</div>
+<ul style="list-style-type: none">
+    <strong>Como instalar</strong>
+    <li>1. Baixe o arquivo zip contido no link 
+        <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-0.5.2.zip">
+            baixar agora (v0.5.2)
+        </a>;</li>
+    <li>2. Extraia o arquivo para um diretório do seu computador;</li>
+    <li>3. Abra o navegador e ative o 'Modo desenvolvedor' ou algo semelhante;</li>
+    <li>4. Vá em Gerenciar extensões pelo menu do navegador;</li>
+    <li>5. Clique em carregar sem compactação</li>
+    <li>6. Selecione o diretório e confirme a escolha</li>
+    <li>Pronto! A extensão está instalada</li>
+</ul>
 </div>
-
 </div>
 
 </section>
