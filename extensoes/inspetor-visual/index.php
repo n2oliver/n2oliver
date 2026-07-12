@@ -50,8 +50,8 @@
          </a>
          <div>
             ou 
-            <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-0.5.3.zip">
-                baixar agora (v0.5.3)
+            <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-0.5.4.zip">
+                baixar agora (v0.5.4)
             </a> e 
             <a href="#instalar-como-desenvolvedor">instalar no modo desenvolvedor</a>
         </div>
@@ -251,8 +251,8 @@ Aprenda HTML e CSS explorando qualquer página da internet em tempo real.
 <ul style="list-style-type: none">
     <strong>Como instalar</strong>
     <li>1. <strong>Baixe</strong> o arquivo zip contido no link 
-        <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-0.5.3.zip">
-            baixar agora (v0.5.3)
+        <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-0.5.4.zip">
+            baixar agora (v0.5.4)
         </a>;</li>
     <li>2. <strong>Extraia</strong> o arquivo para um diretório do seu computador;</li>
     <li>3. Abra o navegador e <strong>ative o 'Modo desenvolvedor'</strong> ou algo semelhante;</li>
