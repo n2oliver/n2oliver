@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Inspetor Visual | N2Oliver</title>
+<title>Leitor de PDF | N2Oliver</title>
 
-<meta name="description" content="Inspecione elementos HTML, copie HTML e CSS com apenas um clique utilizando o Inspetor Visual para Google Chrome.">
+<meta name="description" content="Abra documentos PDF diretamente no Google Chrome e utilize leitura em voz alta para tornar a leitura mais prática e acessível.">
 
-<link rel="icon" type="image/png" href="./icons/insp.png">
+<link rel="icon" type="image/png" href="./icons/insp-pdf.png">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
@@ -22,7 +22,7 @@ section {
 }
 
 .container {
-    background-color: light;
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
     color: darkslategray;
@@ -38,23 +38,22 @@ section {
 
 <div class="container text-center">
 
-<h1>Inspetor Visual</h1>
+<h1>Leitor de PDF</h1>
 
 <p class="lead">
-Inspecione elementos HTML, copie HTML e CSS e analise páginas da web com rapidez diretamente no Google Chrome.
-Uma ferramenta leve e prática para desenvolvedores, designers e estudantes.
+Abra documentos PDF diretamente no Google Chrome e transforme o texto em voz utilizando as vozes disponíveis no navegador e no sistema operacional.
+Uma solução simples para leitura, acessibilidade e produtividade.
 </p>
 
 <div class="mt-4">
 
-<a href="https://chromewebstore.google.com/detail/kddpnplompfhboemlbfankhjpklalaoi"
-class="btn btn-primary"
-target="_blank">
+<a href="#"
+class="btn btn-primary">
 <i class="fa-solid fa-store"></i>
 Ver na Chrome Web Store
 </a>
 
-<a href="/extensoes/inspetor-visual/versoes/inspetor-visual-0.5.5.zip"
+<a href="/extensoes/leitor-de-pdf/versoes/leitor-de-pdf-0.5.1.zip"
 class="btn btn-outline-primary">
 Download
 </a>
@@ -73,20 +72,19 @@ Download
 
 <div class="col-lg-5 text-center">
 
-<img src="../icons/insp.png"
+<img src="../icons/insp-pdf.png"
 class="img-fluid"
 style="max-width:250px"
-alt="Inspetor Visual">
+alt="Leitor de PDF">
 
 </div>
 
 <div class="col-lg-7 py-4 bg-white">
 
-<h2>Inspecione qualquer página com um clique</h2>
+<h2>Leia documentos PDF com mais conforto</h2>
 
 <p>
-O Inspetor Visual permite selecionar elementos diretamente na página para visualizar informações, copiar HTML, copiar CSS ou obter ambos simultaneamente.
-É uma ferramenta ideal para estudos, prototipação, manutenção e desenvolvimento Front-end.
+O Leitor de PDF permite abrir documentos diretamente no navegador e utilizar leitura em voz alta para acompanhar o conteúdo sem precisar ler continuamente na tela. Escolha a voz desejada, controle a reprodução e torne sua leitura mais confortável e acessível.
 </p>
 
 </div>
@@ -109,10 +107,10 @@ Recursos
 
 <div class="card-body">
 
-<h4>Copiar HTML</h4>
+<h4>Abertura de PDFs</h4>
 
 <p>
-Copie a estrutura HTML de qualquer elemento selecionado.
+Abra documentos PDF diretamente no navegador.
 </p>
 
 </div>
@@ -127,10 +125,10 @@ Copie a estrutura HTML de qualquer elemento selecionado.
 
 <div class="card-body">
 
-<h4>Copiar CSS</h4>
+<h4>Leitura em voz alta</h4>
 
 <p>
-Obtenha automaticamente os estilos CSS aplicados ao elemento.
+Converta o texto do PDF em áudio utilizando a API Speech Synthesis.
 </p>
 
 </div>
@@ -145,10 +143,10 @@ Obtenha automaticamente os estilos CSS aplicados ao elemento.
 
 <div class="card-body">
 
-<h4>HTML + CSS</h4>
+<h4>Escolha de vozes</h4>
 
 <p>
-Copie o HTML e o CSS em uma única ação.
+Utilize qualquer voz instalada no navegador ou no sistema operacional.
 </p>
 
 </div>
@@ -163,10 +161,10 @@ Copie o HTML e o CSS em uma única ação.
 
 <div class="card-body">
 
-<h4>Inspeção Visual</h4>
+<h4>Controle da reprodução</h4>
 
 <p>
-Selecione elementos diretamente sobre a página de forma rápida e intuitiva.
+Inicie, pause, retome ou interrompa a leitura sempre que desejar.
 </p>
 
 </div>
@@ -181,10 +179,10 @@ Selecione elementos diretamente sobre a página de forma rápida e intuitiva.
 
 <div class="card-body">
 
-<h4>Interface leve</h4>
+<h4>Acessibilidade</h4>
 
 <p>
-Sem configurações complexas. Instale e comece a utilizar imediatamente.
+Ideal para pessoas com baixa visão, dislexia, TDAH ou que preferem ouvir o conteúdo.
 </p>
 
 </div>
@@ -199,10 +197,10 @@ Sem configurações complexas. Instale e comece a utilizar imediatamente.
 
 <div class="card-body">
 
-<h4>Privacidade</h4>
+<h4>Interface simples</h4>
 
 <p>
-Todo o processamento acontece localmente no navegador.
+Leve, intuitiva e pronta para uso sem configurações complexas.
 </p>
 
 </div>
@@ -229,46 +227,46 @@ Ideal para
 
 <div class="card-body">
 
-<h4>Desenvolvedores</h4>
-
-<p>
-Analise rapidamente componentes HTML e CSS durante o desenvolvimento.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="card h-100">
-
-<div class="card-body">
-
-<h4>Designers</h4>
-
-<p>
-Entenda como interfaces são construídas e reutilize componentes.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="card h-100">
-
-<div class="card-body">
-
 <h4>Estudantes</h4>
 
 <p>
-Aprenda HTML e CSS explorando páginas reais em tempo real.
+Ouça apostilas, artigos e materiais didáticos enquanto acompanha o texto.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card h-100">
+
+<div class="card-body">
+
+<h4>Profissionais</h4>
+
+<p>
+Leia contratos, relatórios e documentos de forma mais confortável.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card h-100">
+
+<div class="card-body">
+
+<h4>Acessibilidade</h4>
+
+<p>
+Facilite o acesso ao conteúdo para pessoas com dificuldades de leitura ou deficiência visual.
 </p>
 
 </div>
@@ -311,9 +309,9 @@ Caso prefira, você também pode instalar a extensão utilizando o modo desenvol
     <li><strong>Pronto!</strong> A extensão está instalada</li>
 </ul>
 </div>
-<a href="/extensoes/inspetor-visual/versoes/inspetor-visual-0.5.5.zip"
+<a href="/extensoes/leitor-de-pdf/versoes/leitor-de-pdf-0.5.1.zip"
 class="btn btn-primary">
-Baixar versão 0.5.5
+Baixar versão 0.5.1
 </a>
 
 </div>
@@ -324,10 +322,10 @@ Baixar versão 0.5.5
 
 <div class="container">
 
-<strong>Inspetor Visual</strong>
+<strong>Leitor de PDF</strong>
 
 <p class="mt-3">
-Ferramenta desenvolvida para facilitar a inspeção de elementos HTML e CSS diretamente no navegador.
+Ferramenta desenvolvida para abrir documentos PDF e realizar leitura em voz alta diretamente no Google Chrome.
 </p>
 
 <p>
