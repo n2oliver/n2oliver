@@ -51,7 +51,7 @@ class="btn btn-primary">
 Ver na Chrome Web Store
 </a>
 
-<a href="/extensoes/leitor-de-pdf/versoes/leitor-de-pdf-0.5.1.zip"
+<a href="/extensoes/leitor-de-pdf/versoes/leitor-de-pdf-0.5.2.zip"
 class="btn btn-light btn-outline-primary">
 Download
 </a>
@@ -307,9 +307,9 @@ Caso prefira, você também pode instalar a extensão utilizando o modo desenvol
     <li><strong>Pronto!</strong> A extensão está instalada</li>
 </ul>
 </div>
-<a href="/extensoes/leitor-de-pdf/versoes/leitor-de-pdf-0.5.1.zip"
+<a href="/extensoes/leitor-de-pdf/versoes/leitor-de-pdf-0.5.2.zip"
 class="btn btn-primary">
-Baixar versão 0.5.1
+Baixar versão 0.5.2
 </a>
 
 </div>
