@@ -1,4 +1,6 @@
 <?php
+include_once('load-env.php');
+include_once('database/connectdb.php');
 $meta_title = 'Notícias | n2oliver';
 ?>
 <!DOCTYPE html>
