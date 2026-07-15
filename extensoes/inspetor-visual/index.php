@@ -67,7 +67,7 @@ Download
 
 <section class="py-5">
 
-<div class="container">
+<div class="container bg-secondary text-light" style="text-shadow: 1px 2px #000000">
 
 <div class="row align-items-center g-5">
 
@@ -80,7 +80,7 @@ alt="Inspetor Visual">
 
 </div>
 
-<div class="col-lg-7 py-4 bg-white">
+<div class="col-lg-7 py-4">
 
 <h2>Inspecione qualquer página com um clique</h2>
 
@@ -95,7 +95,7 @@ O Inspetor Visual permite selecionar elementos diretamente na página para visua
 
 </div>
 
-<div class="container">
+<div class="container bg-white">
 
 <h2 class="text-center mb-5">
 Recursos
@@ -215,7 +215,7 @@ Todo o processamento acontece localmente no navegador.
 
 </div>
 
-<div class="container">
+<div class="container bg-white">
 
 <h2 class="text-center mb-5">
 Ideal para
@@ -285,7 +285,7 @@ Aprenda HTML e CSS explorando páginas reais em tempo real.
 
 <section class="py-5">
 
-<div class="container text-center">
+<div class="container text-center bg-white">
 
 <h2>Instalação manual</h2>
 
@@ -300,8 +300,8 @@ Caso prefira, você também pode instalar a extensão utilizando o modo desenvol
 <ul style="list-style-type: none">
     <strong>Como instalar</strong>
     <li>1. <strong>Baixe</strong> o arquivo zip contido no link 
-        <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-0.5.4.zip">
-            baixar agora (v0.5.4)
+        <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-1.0.0.zip">
+            baixar agora (v1.0.0)
         </a>;</li>
     <li>2. <strong>Extraia</strong> o arquivo para um diretório do seu computador;</li>
     <li>3. Abra o navegador e <strong>ative o 'Modo desenvolvedor'</strong> ou algo semelhante;</li>
