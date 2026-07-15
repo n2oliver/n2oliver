@@ -22,8 +22,6 @@ section {
 }
 
 .container {
-    background-color: white;
-    padding: 20px;
     border-radius: 10px;
     color: darkslategray;
     font-weight: 700;
@@ -34,9 +32,9 @@ section {
 
 <body>
 
-<header class="py-5">
+<header class="bg-dark">
 
-<div class="container text-center">
+<div class="container text-center bg-secondary text-light m-auto py-5" style="border-radius: 10px;">
 
 <h1>Leitor de PDF</h1>
 
@@ -54,7 +52,7 @@ Ver na Chrome Web Store
 </a>
 
 <a href="/extensoes/leitor-de-pdf/versoes/leitor-de-pdf-0.5.1.zip"
-class="btn btn-outline-primary">
+class="btn btn-light btn-outline-primary">
 Download
 </a>
 
@@ -66,7 +64,7 @@ Download
 
 <section class="py-5">
 
-<div class="container">
+<div class="container bg-white">
 
 <div class="row align-items-center g-5">
 
@@ -79,7 +77,7 @@ alt="Leitor de PDF">
 
 </div>
 
-<div class="col-lg-7 py-4 bg-white">
+<div class="col-lg-7 py-4">
 
 <h2>Leia documentos PDF com mais conforto</h2>
 
@@ -93,7 +91,7 @@ O Leitor de PDF permite abrir documentos diretamente no navegador e utilizar lei
 
 </div>
 
-<div class="container">
+<div class="container bg-white py-5">
 
 <h2 class="text-center mb-5">
 Recursos
@@ -213,7 +211,7 @@ Leve, intuitiva e pronta para uso sem configurações complexas.
 
 </div>
 
-<div class="container">
+<div class="container bg-white py-5">
 
 <h2 class="text-center mb-5">
 Ideal para
@@ -283,7 +281,7 @@ Facilite o acesso ao conteúdo para pessoas com dificuldades de leitura ou defic
 
 <section class="py-5">
 
-<div class="container text-center">
+<div class="container text-center bg-white py-5">
 
 <h2>Instalação manual</h2>
 

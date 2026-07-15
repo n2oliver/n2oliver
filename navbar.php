@@ -21,6 +21,7 @@
             <li class="nav-item"><a class="nav-link" href="/noticias.php"><i class="fa-solid fa-newspaper"></i> Notícias</a></li>
             <li class="nav-item"><a class="nav-link" href="/jogos.php"><i class="fa-solid fa-puzzle-piece"></i> Jogos</a></li>
             <li class="nav-item"><a class="nav-link" href="/aplicativos.php"><i class="fa-solid fa-hand-pointer"></i> Aplicativos</a></li>
+            <li class="nav-item"><a class="nav-link" href="/extensoes/"><i class="fa-solid fa-hand-pointer"></i> Extensões</a></li>
             <li class="nav-item"><a class="nav-link" href="/livraria/index.php"><i class="fa-solid fa-store"></i> Livros</a></li>
             <li class="nav-item"><a class="nav-link" href="/cursos/index.php"><i class="fa-solid fa-store"></i> Cursos</a></li>
             <li class="nav-item"><a class="nav-link" href="/dev.php"><i class="fa-solid fa-user"></i> Desenvolvedor</a></li>

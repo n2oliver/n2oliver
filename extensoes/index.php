@@ -45,7 +45,7 @@ Ferramentas desenvolvidas para aumentar a produtividade, facilitar o desenvolvim
 
 <section class="py-5">
 
-<div class="container">
+<div class="container bg-light text-light" style="border-radius: 10px; padding: 20px;">
 
 <div class="row g-4">
 
