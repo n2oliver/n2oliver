@@ -45,7 +45,7 @@ Uma solução simples para leitura, acessibilidade e produtividade.
 
 <div class="mt-4">
 
-<a href="#"
+<a href="https://chromewebstore.google.com/detail/inspetor-visual-leitor-de/oflopefkkohgfgbomnghdboofepehnce"
 class="btn btn-primary">
 <i class="fa-solid fa-store"></i>
 Ver na Chrome Web Store
