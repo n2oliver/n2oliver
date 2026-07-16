@@ -8,8 +8,8 @@ $APP_URL = '/jogos';
 <head>
   <?php
   // Per-page SEO meta for jogos index
-  $meta_title = 'Jogos Online | n2oliver';
-  $meta_description = 'Jogos online gratuitos: Linha Amarela, Combo-Memo e outros títulos desenvolvidos por n2oliver.';
+  $meta_title = 'n2oliver';
+  $meta_description = 'Site de tecnologia, jogos e desenvolvimento web. Explore jogos online, notícias e recursos para desenvolvedores.';
   $meta_image = 'jogos/img/logo.png';
   $canonical = (isset($_SERVER['HTTP_HOST']) ? (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] : 'https://n2oliver.com/jogos/');
   include('cabecalho.php');

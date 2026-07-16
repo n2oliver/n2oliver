@@ -89,7 +89,7 @@ Ferramentas desenvolvidas para aumentar a produtividade, facilitar o desenvolvim
             Saiba mais
             </a>
 
-            <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-1.0.0.zip"
+            <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-1.0.2.zip"
             class="btn btn-outline-primary" style="width: fit-content">
             Download
             </a>

@@ -54,7 +54,7 @@ target="_blank">
 Ver na Chrome Web Store
 </a>
 
-<a href="/extensoes/inspetor-visual/versoes/inspetor-visual-1.0.0.zip"
+<a href="/extensoes/inspetor-visual/versoes/inspetor-visual-1.0.2.zip"
 class="btn btn-outline-primary">
 Download
 </a>
@@ -300,8 +300,8 @@ Caso prefira, você também pode instalar a extensão utilizando o modo desenvol
 <ul style="list-style-type: none">
     <strong>Como instalar</strong>
     <li>1. <strong>Baixe</strong> o arquivo zip contido no link 
-        <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-1.0.0.zip">
-            baixar agora (v1.0.0)
+        <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-1.0.2.zip">
+            baixar agora (v1.0.2)
         </a>;</li>
     <li>2. <strong>Extraia</strong> o arquivo para um diretório do seu computador;</li>
     <li>3. Abra o navegador e <strong>ative o 'Modo desenvolvedor'</strong> ou algo semelhante;</li>
@@ -311,9 +311,9 @@ Caso prefira, você também pode instalar a extensão utilizando o modo desenvol
     <li><strong>Pronto!</strong> A extensão está instalada</li>
 </ul>
 </div>
-<a href="/extensoes/inspetor-visual/versoes/inspetor-visual-1.0.0.zip"
+<a href="/extensoes/inspetor-visual/versoes/inspetor-visual-1.0.2.zip"
 class="btn btn-primary">
-Baixar versão 1.0.0
+Baixar versão 1.0.2
 </a>
 
 </div>
