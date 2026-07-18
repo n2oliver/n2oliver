@@ -137,7 +137,7 @@ Ferramentas desenvolvidas para aumentar a produtividade, facilitar o desenvolvim
             Saiba mais
             </a>
 
-            <a href="/extensoes/leitor-de-pdf/versoes/leitor-de-pdf-0.5.2.zip"
+            <a href="/extensoes/leitor-de-pdf/versoes/leitor-de-pdf-0.5.4.zip"
             class="btn btn-outline-primary" style="width: fit-content">
             Download
             </a>
