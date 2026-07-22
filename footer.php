@@ -7,7 +7,7 @@
   </div>
   
   <span class="footer-text-small">
-    Todos os direitos reservados - n2oliver - 2025
+    Todos os direitos reservados - n2oliver - 2026
   </span>
 
   <a href="/politica-de-privacidade.html">Política de Privacidade</a>
