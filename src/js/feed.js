@@ -1,5 +1,4 @@
-import $ from "jquery";
-import "jquery-ui/ui/widgets/progressbar";
+import { $ } from "../App";
 
 const API_URL = process.env.REACT_APP_API_URL;
 

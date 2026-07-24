@@ -26,6 +26,7 @@ import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
 import ComboMemo from "./pages/jogos/ComboMemo.js";
 import { useEffect, useState } from "react";
+import $ from "jquery";
 
 function App() {
   const [config, setConfig] = useState([]);
@@ -76,5 +77,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
-
+export { $ };
 export default App;

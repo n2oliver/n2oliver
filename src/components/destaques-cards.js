@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const API_URL = process.env.REACT_APP_API_URL;
-
+let gameItems;
 function DestaquesCards() {
     const [destaques, setDestaques] = useState([]);
 
@@ -17,6 +17,7 @@ function DestaquesCards() {
     if(!destaques.map) {
         return "";
     }
+    gameItems = destaques;
     return (
         destaques.map((destaque, index) => (
             <div className="game-card" key={ index }>
@@ -41,4 +42,5 @@ function DestaquesCards() {
     );
 }
 
-export default DestaquesCards;
+export default DestaquesCards
+export {gameItems};

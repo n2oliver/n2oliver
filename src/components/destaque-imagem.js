@@ -1,8 +1,59 @@
 import { scrollDivX } from '../js/scroll-buttons.js';
 import RecentesCards from './recentes-cards.js';
-import DestaquesCards from './destaques-cards.js';
+import DestaquesCards, { gameItems } from './destaques-cards.js';
+import { showGameInHighlight } from "../js/feed.js";
+import "jquery-ui/ui/widgets/progressbar";
+import { $ } from '../App.js';
 
 function DestaqueImagem() {
+
+    let gameItemsIndex = -1;
+    let interval = null;
+    let progressInterval = null;
+    let progress = 0;
+    let duration = 15000;
+    let stepTime = 200;
+    let step = (stepTime / duration) * 100;
+
+    function startProgress() {
+        clearInterval(progressInterval);
+        progress = 0;
+        progressInterval = setInterval(() => {
+            progress += step;
+            if (progress >= 100) {
+                progress = 100;
+                clearInterval(progressInterval);
+                next();
+                startProgress();
+            }
+            $("#progressbar").progressbar("value", progress);
+        }, stepTime);
+    }
+    function next() {
+        gameItemsIndex++;
+        if (gameItemsIndex >= gameItems.length) {
+            gameItemsIndex = 0;
+        }
+        showGameInHighlight(gameItems[gameItemsIndex]);
+        progress = 0;
+        $("#progressbar").progressbar("value", progress);
+    }
+
+    function prev() {
+        gameItemsIndex--;
+        if (gameItemsIndex < 0) {
+            gameItemsIndex = gameItems.length - 1;
+        }
+        showGameInHighlight(gameItems[gameItemsIndex]);
+        progress = 0;
+        $("#progressbar").progressbar("value", progress);
+    }
+    setTimeout(() => {
+        $("#progressbar").progressbar({
+        value: 0
+        });
+        startProgress();
+    }, 300);
     return (
         <section id="destaque-imagem" className="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
             alt="">
@@ -22,10 +73,14 @@ function DestaqueImagem() {
                                             </button>
                                         </div>
                                     </div>
-                                    <button className="btn btn-lg btn-success m-1 h-0 rounded-circle" id="prev" aria-label="Aria Left">
+                                    <button className="btn btn-lg btn-success m-1 h-0 rounded-circle"
+                                        id="prev" aria-label="Aria Left"
+                                        onClick={prev}>
                                         <i className="fa-solid fa-arrow-left"></i>
                                     </button>
-                                    <button className="btn btn-lg btn-success m-1 h-0 rounded-circle" id="next" aria-label="Aria Right">
+                                    <button className="btn btn-lg btn-success m-1 h-0 rounded-circle"
+                                        id="next" aria-label="Aria Right"
+                                        onClick={next}>
                                         <i className="fa-solid fa-arrow-right"></i>
                                     </button>
                                 </div>

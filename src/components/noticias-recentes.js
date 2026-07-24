@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import $ from "jquery";
 import { createRoot } from "react-dom/client";
+import { $ } from "../App";
+
 let noticiasRoot = null;
 
 let pagina = 0;
@@ -10,7 +11,7 @@ function NoticiasRecentes() {
 
     const [noticias, setNoticias] = useState([]);
     const splittedPathname = window.location.pathname.split('/');
-    const id = Number(splittedPathname[splittedPathname.length-1])
+    const id = Number(splittedPathname[splittedPathname.length - 1])
     id && !isNaN(id) ? toggleNoticiaContent(null, id) : toggleNoticiaContent(null, 10);
 
 
@@ -19,7 +20,7 @@ function NoticiasRecentes() {
         buscarNoticias(event);
         $('#page-buttons .btn').click(buscarNoticias);
     });
-    
+
     useEffect(() => {
         async function carregar() {
             const response = await fetch(`${API_URL}/api/noticias/obter.php`);
@@ -40,7 +41,7 @@ function NoticiasRecentes() {
                     {noticia.imagem ? <div className="recentes-imagem" style={{ backgroundImage: `url(${API_URL}/src${noticia.imagem})` }}></div> : ''}
                     <div className="d-flex flex-column">
                         <div className="mb-1 text-light" style={{ cursor: "pointer" }} onClick={(event, noticia) => toggleNoticiaContent(event, noticia.id)}
-                             dangerouslySetInnerHTML={{ __html: noticia.titulo }}>
+                            dangerouslySetInnerHTML={{ __html: noticia.titulo }}>
                         </div>
 
                         <small className="text-light">
@@ -157,7 +158,7 @@ async function buscarNoticias(event) {
                 </div>
             ))
             }</>
-        );
+    );
 }
 export default NoticiasRecentes;
 export { voltar, avancar, toggleNoticiaContent }
