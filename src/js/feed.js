@@ -10,6 +10,9 @@ function scroll(element) {
 }
 
 function showGameInHighlight(game) {
+    if(!game) {
+        return;
+    }
     let destaqueImagem = document.querySelector("body");
     let thumbnail = document.getElementById("thumbnail");
     destaqueImagem.style.backgroundImage = 'url(' + API_URL + '/src' + game.imagem + ')';
