@@ -1,11 +1,22 @@
 import { scrollDivX } from '../js/scroll-buttons.js';
 import RecentesCards from './recentes-cards.js';
-import DestaquesCards, { gameItems } from './destaques-cards.js';
+import DestaquesCards from './destaques-cards.js';
 import { showGameInHighlight } from "../js/feed.js";
 import "jquery-ui/ui/widgets/progressbar";
 import { $ } from '../App.js';
+import { useEffect, useState } from 'react';
 
 function DestaqueImagem() {
+    const [gameItems, setGameItems] = useState([]);
+    useEffect(() => {
+        async function carregar() {
+            const response = await fetch(`${window.API_URL}/api/jogos/obter.php`);
+            const dados = await response.json();
+            setGameItems(dados);
+        }
+
+        carregar();
+    }, []);
 
     let gameItemsIndex = -1;
     let interval = null;
