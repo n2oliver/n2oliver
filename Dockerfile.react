@@ -8,6 +8,8 @@ COPY ./public/ /var/www/html/public/
 
 RUN cd ./var/www/html/ && npm install
 
+ENV NODE_OPTIONS="--disable-warning=DEP0060"
+
 EXPOSE 3000
 
 CMD ["npm", "start"]
