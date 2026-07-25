@@ -34,7 +34,7 @@ echo json_encode(
             'titulo' => 'Caça-Palavras',
             'descricao' => 'Um clássico caça-palavras para testar sua atenção e vocabulário.',
             'resumo' => '',
-            'imagem' => '/jogos/img/a.jpg'
+            'imagem' => '/img/jogos/a.jpg'
         ],
         3 => (object) [
             'id' => 4,
@@ -42,7 +42,7 @@ echo json_encode(
             'titulo' => 'Palavras Cruzadas',
             'descricao' => 'Desafie seu conhecimento com este quebra-cabeça de palavras.',
             'resumo' => '',
-            'imagem' => '/jogos/img/flat-crosswords.png'
+            'imagem' => '/img/jogos/flat-crosswords.png'
         ],
         4 => (object) [
             'id' => 5,
@@ -50,7 +50,7 @@ echo json_encode(
             'titulo' => 'Caixa de Letras',
             'descricao' => 'Desafie seu conhecimento com este quebra-cabeça com letrinhas.',
             'resumo' => '',
-            'imagem' => '/jogos/img/caixa-de-letras.png'
+            'imagem' => '/img/jogos/caixa-de-letras.png'
         ],
     )
 );
