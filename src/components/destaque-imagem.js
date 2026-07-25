@@ -6,6 +6,9 @@ import "jquery-ui/ui/widgets/progressbar";
 import { $ } from '../App.js';
 import { useEffect, useState } from 'react';
 
+let gameItemsIndex = -1;
+let progress = -1;
+
 function DestaqueImagem() {
     const [gameItems, setGameItems] = useState([]);
     useEffect(() => {
@@ -18,21 +21,18 @@ function DestaqueImagem() {
         carregar();
     }, []);
 
-    let gameItemsIndex = -1;
     let interval = null;
     let progressInterval = null;
-    let progress = 0;
     let duration = 15000;
     let stepTime = 200;
     let step = (stepTime / duration) * 100;
 
     function startProgress() {
         clearInterval(progressInterval);
-        progress = 0;
         progressInterval = setInterval(() => {
             progress += step;
             if (progress >= 100) {
-                progress = 100;
+                progress = 0;
                 clearInterval(progressInterval);
                 next();
                 startProgress();
@@ -59,12 +59,15 @@ function DestaqueImagem() {
         progress = 0;
         $("#progressbar").progressbar("value", progress);
     }
-    setTimeout(() => {
-        $("#progressbar").progressbar({
-        value: 0
-        });
-        startProgress();
-    }, 300);
+    if(typeof progressbar != 'undefined' && progress == -1) {
+        progress += 1;
+        setTimeout(() => {
+            $("#progressbar").progressbar({
+            value: 0
+            });
+            startProgress();
+        }, 1000);
+    }
     return (
         <section id="destaque-imagem" className="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
             alt="">
