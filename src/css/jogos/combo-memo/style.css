@@ -1,0 +1,16 @@
+body {
+    background-image: linear-gradient(black, darkslategrey, black);
+    background-size: cover;
+}
+
+.score-label {
+    color: lightgreen;
+}
+
+.score-value {
+    color: white;
+}
+
+.error-value {
+    color: pink;
+}
