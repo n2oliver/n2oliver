@@ -1,7 +1,9 @@
 function AAdsSticky() {
     return (
     <div style={{position: "sticky", zIndex: 99999, bottom: "0px"}}>
-        <input autoComplete="off" type="checkbox" id="aadsstickympwuknsr" hidden />
+        <input onClick={(event)=>{
+            event.target.parentElement.style.display = "none"
+        }} autoComplete="off" type="checkbox" id="aadsstickympwuknsr" hidden />
         <div style={{paddingTop: 0, paddingBottom: "auto"}}>
             <div style={{width:"100%",height:"auto",position: "sticky",textAlign:"center",fontSize:0,bottom:0,left:0,right:0,margin:"auto"}}>
                 <label htmlFor="aadsstickympwuknsr" style={{top: "50%",transform: "translateY(-50%)",right:"24px", position: "absolute", borderRadius: "4px", background: "rgba(248, 248, 249, 0.70)", padding: "4px", zIndex: 99999, cursor:"pointer"}}>
