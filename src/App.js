@@ -11,8 +11,8 @@ import './css/header.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { abrirSmartlinkUmaVez } from "./js/anuncios";
 
-import Navbar from './components/navbar.js';
-import Footer from './components/footer.js';
+import Navbar from './components/navbar';
+import Footer from './components/footer';
 
 import Home from "./pages/Home";
 import Noticias from "./pages/Noticias";
@@ -24,9 +24,10 @@ import Cursos from "./pages/Cursos";
 import Desenvolvedor from "./pages/Desenvolvedor";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
-import ComboMemo from "./pages/jogos/ComboMemo.js";
+import ComboMemo from "./pages/jogos/combo-memo/ComboMemo";
 import { useEffect, useState } from "react";
 import $ from "jquery";
+import Jogo from "./pages/jogos/combo-memo/Jogo";
 
 function App() {
   const [config, setConfig] = useState([]);
@@ -62,6 +63,7 @@ function App() {
         <Route path="/contato" element={<Contato />} />
 
         <Route path="/jogos/combo-memo" element={<ComboMemo />} />
+        <Route path="/jogos/combo-memo/jogo" element={<Jogo />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

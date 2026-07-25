@@ -1,11 +1,11 @@
-import "../../css/sobre-mim.css"
-import "../../css/jogos/combo-memo/intro/intro.css"
-import "../../css/jogos/combo-memo/card/card.css";
-import { virar } from "../../components/jogos/combo-memo/card/card";
+import "../../../css/sobre-mim.css"
+import "../../../css/jogos/combo-memo/intro/intro.css"
+import "../../../css/jogos/combo-memo/card/card.css";
+import { virar } from "../../../components/jogos/combo-memo/card/card";
 import "https://appsha-pnd.ctengine.io/js/script.js?wkey=97NjKiTr7b";
-import { gtag } from "../../js/gtag";
-import { $ } from "../../App";
-import { abrirSmartlinkUmaVez } from "../../js/anuncios";
+import { gtag } from "../../../js/gtag";
+import { $ } from "../../../App";
+import { abrirSmartlinkUmaVez } from "../../../js/anuncios";
 function ComboMemo() {
     gtag("event", "qualify_lead", {
         currency: "USD",
