@@ -5,10 +5,30 @@ import { showGameInHighlight } from "../js/feed.js";
 import "jquery-ui/ui/widgets/progressbar";
 import { $ } from '../App.js';
 import { useEffect, useState } from 'react';
+import Progressbar, { progress, setProgress } from './Progressbar.js';
+import Header from './header.js';
 
 let gameItemsIndex = -1;
-let progress = -1;
+let gamesArray = [];
+function next() {
+    gameItemsIndex++;
+    if (gameItemsIndex >= gamesArray.length) {
+        gameItemsIndex = 0;
+    }
+    showGameInHighlight(gamesArray[gameItemsIndex]);
+    setProgress(0);
+    $("#progressbar").progressbar("value", progress);
+}
 
+function prev() {
+    gameItemsIndex--;
+    if (gameItemsIndex < 0) {
+        gameItemsIndex = gamesArray.length - 1;
+    }
+    showGameInHighlight(gamesArray[gameItemsIndex]);
+    setProgress(0);
+    $("#progressbar").progressbar("value", progress);
+}
 function DestaqueImagem() {
     const [gameItems, setGameItems] = useState([]);
     useEffect(() => {
@@ -16,67 +36,22 @@ function DestaqueImagem() {
             const response = await fetch(`${window.API_URL}/api/jogos/obter.php`);
             const dados = await response.json();
             setGameItems(dados);
+            gamesArray = dados;
         }
 
         carregar();
     }, []);
-
-    let interval = null;
-    let progressInterval = null;
-    let duration = 15000;
-    let stepTime = 200;
-    let step = (stepTime / duration) * 100;
-
-    function startProgress() {
-        clearInterval(progressInterval);
-        progressInterval = setInterval(() => {
-            progress += step;
-            if (progress >= 100) {
-                progress = 0;
-                clearInterval(progressInterval);
-                next();
-                startProgress();
-            }
-            $("#progressbar").progressbar("value", progress);
-        }, stepTime);
-    }
-    function next() {
-        gameItemsIndex++;
-        if (gameItemsIndex >= gameItems.length) {
-            gameItemsIndex = 0;
-        }
-        showGameInHighlight(gameItems[gameItemsIndex]);
-        progress = 0;
-        $("#progressbar").progressbar("value", progress);
-    }
-
-    function prev() {
-        gameItemsIndex--;
-        if (gameItemsIndex < 0) {
-            gameItemsIndex = gameItems.length - 1;
-        }
-        showGameInHighlight(gameItems[gameItemsIndex]);
-        progress = 0;
-        $("#progressbar").progressbar("value", progress);
-    }
-    if(typeof progressbar != 'undefined' && progress == -1) {
-        progress += 1;
-        setTimeout(() => {
-            $("#progressbar").progressbar({
-            value: 0
-            });
-            startProgress();
-        }, 1000);
-    }
     return (
         <section id="destaque-imagem" className="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
             alt="">
             <div id="games" className="container m-auto p-0">
                 <div id="game-details" className="flex-row px-0 col-md-10">
                     <div className="w-100">
-                        <div id="thumbnail" className="w-100 rounded align-content-end border border-light">
-                            <div id="click-to-action"></div>
+                        <div id="thumbnail" className="w-100 rounded align-content-start border border-light">
                             <h2><strong><span id="game-details-title">n2oliver</span></strong>🎮</h2>
+
+                            <div id="click-to-action"></div>
+                            
                             <div id="game-details-panel" className="d-flex justify-content-around">
                                 <div className="col-md-10 m-auto d-inline-flex">
                                     <div id="game-details-content" className="p-2 flex-column">
@@ -100,7 +75,8 @@ function DestaqueImagem() {
                                 </div>
                             </div>
                         </div>
-                        <div id="progressbar" role="progressbar" title="progressbar"></div>
+
+                        <Progressbar />
 
                         <div className="w-100 row justify-content-around">
                             <div id="jogos-recentes" className="d-flex justify-content-center col-md-5">
@@ -141,6 +117,7 @@ function DestaqueImagem() {
                                     <DestaquesCards />
                                 </div>
                             </div>
+                            <Header />
                             <div id="donation-section-wrapper" className="col-md-12 m-auto p-0 mt-1 w-100">
                                 <div className="donation-section col-md-10 row m-auto">
                                     <div className="col-md-5">
@@ -177,3 +154,4 @@ function DestaqueImagem() {
     )
 }
 export default DestaqueImagem;
+export { next, gamesArray }
