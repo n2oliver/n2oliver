@@ -1,33 +1,14 @@
-import { scrollDivX } from '../js/scroll-buttons.js';
-import RecentesCards from './recentes-cards.js';
-import DestaquesCards from './destaques-cards.js';
 import { showGameInHighlight } from "../js/feed.js";
-import "jquery-ui/ui/widgets/progressbar";
-import { $ } from '../App.js';
 import { useEffect, useState } from 'react';
 import Progressbar, { progress, setProgress } from './Progressbar.js';
 import Header from './header.js';
+import DonationSectionWrapper from './donation-section-wrapper.js';
+import Recentes from './jogos/Recentes.js';
+import Destaques from './destaques.js';
 
 let gameItemsIndex = -1;
 let gamesArray = [];
-function next() {
-    gameItemsIndex++;
-    if (gameItemsIndex >= gamesArray.length) {
-        gameItemsIndex = 0;
-    }
-    showGameInHighlight(gamesArray[gameItemsIndex]);
-    setProgress(0);
-}
 
-function prev() {
-    gameItemsIndex--;
-    if (gameItemsIndex < 0) {
-        gameItemsIndex = gamesArray.length - 1;
-    }
-    showGameInHighlight(gamesArray[gameItemsIndex]);
-    setProgress(0);
-    $("#progressbar").progressbar("value", progress);
-}
 function DestaqueImagem() {
     const [gameItems, setGameItems] = useState([]);
     useEffect(() => {
@@ -76,79 +57,33 @@ function DestaqueImagem() {
                         <Progressbar />
 
                         <div className="w-100 row justify-content-around">
-                            <div id="jogos-recentes" className="d-flex justify-content-center col-md-5">
-                                <div className="w-100 ubuntu">
-                                    <div className="d-flex w-100 justify-content-between buttons" id="buttons">
-                                        <button className="btn btn-lg btn-success m-1 h-0 rounded-circle" id="prev" aria-label="Aria Left"
-                                            onClick={() => scrollDivX('lista', -175)}>
-                                            <i className="fa-solid fa-arrow-left"></i>
-                                        </button>
-                                        <button className="btn btn-lg btn-success m-1 h-0 rounded-circle" id="next" aria-label="Aria Right"
-                                            onClick={() => scrollDivX('lista', 175)}>
-                                            <i className="fa-solid fa-arrow-right"></i>
-                                        </button>
-                                    </div>
-                                    <strong><h2 className="my-0">Jogos recentes</h2></strong>
-                                    <div id="lista" className="my-0 py-0">
-                                        <RecentesCards />
-                                    </div>
-                                    <div className="m-auto p-0 mt-1 mx-0 d-flex justify-content-end"><a href="/jogos.php"><button className="btn btn-primary">Ver todos</button></a></div>
-                                </div>
-                            </div>
-                            <div className="col-md-5">
-                                <div className="row m-auto text-light ubuntu">
-                                    <div className="d-flex w-100 justify-content-between scroll-buttons buttons" id="destaques-buttons">
-                                        <button className="btn btn-lg btn-success m-1 h-0 rounded-circle" id="prev" aria-label="Aria Left"
-                                            onClick={() => scrollDivX('destaques', -175)}>
-                                            <i className="fa-solid fa-arrow-left"></i>
-                                        </button>
-                                        <button className="btn btn-lg btn-success m-1 h-0 rounded-circle" id="next" aria-label="Aria Right"
-                                            onClick={() => scrollDivX('destaques', 175)}>
-                                            <i className="fa-solid fa-arrow-right"></i>
-                                        </button>
-                                    </div>
-                                    <strong><h2 className="my-0">Seções</h2></strong>
-                                </div>
-
-                                <div id="destaques" className="my-0 py-0">
-                                    <DestaquesCards />
-                                </div>
-                            </div>
+                            <Recentes />
+                            <Destaques />
                             <Header />
-                            <div id="donation-section-wrapper" className="col-md-12 m-auto p-0 mt-1 w-100">
-                                <div className="donation-section col-md-10 row m-auto">
-                                    <div className="col-md-5">
-                                        <h3>Aceitamos doações</h3>
-                                        <p><i className="fas fa-donate"></i>&nbsp;Você pode contribuir nos ajudando a desenvolver novos projetos. Envie sua contribuição pelos seguintes canais!</p>
-                                        <p>
-                                            <small>
-                                                <strong>Chave PIX:</strong> <span className="notranslate" translate="no"> suporte@n2oliver.com</span><br />
-                                                <strong>Bitcoin (LN):</strong> <span className="notranslate" translate="no"> warybongo30@walletofsatoshi.com</span><br />
-                                            </small>
-                                        </p>
-                                    </div>
-                                    <div className="col-md-5">
-                                        <strong>Global Account:</strong>
-                                        <span className="notranslate" translate="no">
-                                            <p><small><b>OLIVER SILVA CASTILHO</b></small></p>
-                                            <ul className="text-start international-account">
-                                                <li><small>Account number: 889213783-6</small></li>
-                                                <li><small>ACH Routing number: 026073150</small></li>
-                                                <li><small>WIRE Transfer Routing Number: 026073008</small></li>
-                                                <li><small>Bank name: Community Federal Savings Bank</small></li>
-                                                <li><small>Bank Address: 5 Penn Plaza, New York, NY 10001</small></li>
-                                            </ul>
-
-                                        </span><br />
-                                    </div>
-                                </div>
-                            </div>
+                            <DonationSectionWrapper />
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     )
+}
+function next() {
+    gameItemsIndex++;
+    if (gameItemsIndex >= gamesArray.length) {
+        gameItemsIndex = 0;
+    }
+    showGameInHighlight(gamesArray[gameItemsIndex]);
+    setProgress(0);
+}
+
+function prev() {
+    gameItemsIndex--;
+    if (gameItemsIndex < 0) {
+        gameItemsIndex = gamesArray.length - 1;
+    }
+    showGameInHighlight(gamesArray[gameItemsIndex]);
+    setProgress(0);
 }
 export default DestaqueImagem;
 export { next, gamesArray }

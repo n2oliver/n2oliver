@@ -1,5 +1,7 @@
 import { $ } from "../App";
+import "jquery-ui/ui/widgets/progressbar";
 import { next } from "./destaque-imagem";
+
 let progress = -1;
 let progressInterval = null;
 let duration = 15000;
