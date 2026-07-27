@@ -48,18 +48,8 @@ function DestaqueImagem() {
                     <div className="w-100">
                         <h2><strong><span id="game-details-title">n2oliver</span></strong>🎮</h2>
                         <div id="thumbnail" className="w-100 rounded align-content-end border border-light">
-                            <div id="click-to-action"></div>
-                            
                             <div id="game-details-panel" className="d-flex justify-content-around">
                                 <div className="col-md-10 m-auto">
-                                    <div id="game-details-content" className="p-2 d-flex">
-                                        Carregando...
-                                        <div className="text-center">
-                                            <button className="btn btn-lg btn-danger m-1 h-0 text-nowrap" id="play-button" aria-label="Aria Right">
-                                                Jogar
-                                            </button>
-                                        </div>
-                                    </div>
                                     <button className="btn btn-lg btn-success m-1 h-0 rounded-circle"
                                         id="prev" aria-label="Aria Left"
                                         onClick={prev}>
@@ -70,8 +60,17 @@ function DestaqueImagem() {
                                         onClick={next}>
                                         <i className="fa-solid fa-arrow-right"></i>
                                     </button>
+                                    <div id="game-details-content" className="p-2 d-flex">
+                                        Carregando...
+                                        <div className="text-center">
+                                            <button className="btn btn-lg btn-danger m-1 h-0 text-nowrap" id="play-button" aria-label="Aria Right">
+                                                Jogar
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <div id="click-to-action"></div>
                         </div>
 
                         <Progressbar />
