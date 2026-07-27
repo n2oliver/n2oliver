@@ -1,10 +1,10 @@
 import { showGameInHighlight } from "../js/feed.js";
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Progressbar, { setProgress } from './Progressbar.js';
 import Header from './Header.js';
 import DonationSectionWrapper from './DonationSectionWrapper.js';
 import Recentes from './jogos/Recentes.js';
-import Destaques from './Destaques_.js';
+import Destaques from './Destaques.js';
 
 let gameItemsIndex = -1;
 let gamesArray = [];

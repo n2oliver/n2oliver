@@ -12,7 +12,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { abrirSmartlinkUmaVez } from "./js/anuncios";
 
 import Navbar from './components/Navbar';
-import Footer from './components/Footer_';
+import Footer from './components/Footer';
 
 import Home from "./pages/Home";
 import Noticias from "./pages/Noticias";
