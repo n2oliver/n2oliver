@@ -1,4 +1,4 @@
-import NoticiasCards from "./noticias-cards";
+import NoticiasCards from "./NoticiasCards";
 
 function GameNoticias() {
     return (

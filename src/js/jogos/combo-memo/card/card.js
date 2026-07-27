@@ -44,7 +44,8 @@ function esconderCarta(target) {
     setTimeout(() => {
         target.classList.add("sem-fundo");
     }, 300);
-    ultimaCarta = null
+    ultimaCarta = null;
+    console.log("ultimaCarta: ", ultimaCarta);
 }
 function esconderTodasAsCartas() {
     for (let target of document.querySelectorAll(".card.inverter")) {
@@ -66,7 +67,6 @@ function embaralhar() {
 
     // Embaralha
     arr.sort(() => Math.random() - 0.5);
-    console.log(arr);
     let i = 0;
     for (let target of document.querySelectorAll(".card")) {
         target.style.backgroundImage = `url(${window.API_URL}/src/img/combo-memo/card/${background[arr[i]]}.png)`;

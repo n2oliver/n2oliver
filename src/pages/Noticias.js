@@ -1,5 +1,5 @@
 import React from 'react';
-import NoticiasRecentes, { avancar, toggleNoticiaContent, voltar } from '../components/noticias-recentes';
+import NoticiasRecentes, { avancar, toggleNoticiaContent, voltar } from '../components/NoticiasRecentes';
 
 
 function Noticias() {

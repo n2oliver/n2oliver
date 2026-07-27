@@ -1,5 +1,5 @@
 import { scrollDivX } from "../../js/scroll-buttons";
-import RecentesCards from "../recentes-cards";
+import RecentesCards from "../RecentesCards";
 
 function Recentes() {
     return (<div id="jogos-recentes" className="d-flex justify-content-center col-md-5">

@@ -1,5 +1,5 @@
 import { scrollDivX } from "../js/scroll-buttons";
-import DestaquesCards from "./destaques-cards";
+import DestaquesCards from "./DestaquesCards";
 
 function Destaques() {
     return (<div className="col-md-5">

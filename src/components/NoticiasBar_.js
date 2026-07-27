@@ -1,6 +1,6 @@
 import React from 'react';
 import { scrollDivX } from '../js/scroll-buttons.js';
-import GameNoticias from './game-noticias.js';
+import GameNoticias from './GameNoticias.js';
 
 function NoticiasBar() {
     return (

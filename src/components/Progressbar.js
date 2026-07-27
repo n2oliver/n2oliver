@@ -1,6 +1,7 @@
 import { $ } from "../App";
 import "jquery-ui/ui/widgets/progressbar";
-import { next } from "./destaque-imagem";
+import { next } from "./DestaqueImagem";
+import { useState } from "react";
 
 let progress = -1;
 let progressInterval = null;
@@ -12,11 +13,13 @@ function setProgress(progressValue){
     progress = progressValue;
 }
 function Progressbar() {
-    
+    const [progressValue, setProgressValue] = useState([])
     if (typeof progressbar != 'undefined' && progress === -1) {
         progress += 1;
+        setProgressValue(progress)
         setTimeout(() => {
-            setProgressbar(0)
+            setProgressbar(0);
+            console.log(`ProgressBar started at ${progressValue}`);
         }, 1000);
     }
     return (<div id="progressbar" role="progressbar" title="progressbar"></div>)

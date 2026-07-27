@@ -11,8 +11,8 @@ import './css/header.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { abrirSmartlinkUmaVez } from "./js/anuncios";
 
-import Navbar from './components/navbar';
-import Footer from './components/footer';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer_';
 
 import Home from "./pages/Home";
 import Noticias from "./pages/Noticias";
