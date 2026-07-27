@@ -1,19 +1,17 @@
 import { showGameInHighlight } from "../js/feed.js";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Progressbar, { setProgress } from './Progressbar.js';
-import Header from './Header.js';
-import DonationSectionWrapper from './DonationSectionWrapper.js';
-import Recentes from './jogos/Recentes.js';
-import Destaques from './Destaques.js';
 
 let gameItemsIndex = -1;
 let gamesArray = [];
 
 function DestaqueImagem() {
+    const [gameItems, setGameItems] = useState([])
     useEffect(() => {
         async function carregar() {
             const response = await fetch(`${window.API_URL}/api/jogos/obter.php`);
             const dados = await response.json();
+            setGameItems(dados);
             gamesArray = dados;
         }
 
@@ -53,13 +51,6 @@ function DestaqueImagem() {
                         </div>
 
                         <Progressbar />
-
-                        <div className="w-100 row justify-content-around">
-                            <Recentes />
-                            <Destaques />
-                            <Header />
-                            <DonationSectionWrapper />
-                        </div>
                     </div>
                 </div>
             </div>

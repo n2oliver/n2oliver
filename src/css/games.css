@@ -107,14 +107,14 @@ main {
   padding: 0;
 }
 
-#destaque-imagem {
+#destaque-imagem, #template {
   color: #000;
   text-align: center;
   height: fit-content;
   backdrop-filter: brightness(0.4);
 }
 
-#destaque-imagem .container {
+#destaque-imagem .container, #template .container {
   max-width: 100%;
 }
 
@@ -131,7 +131,7 @@ main {
   height: .4rem;
 }
 
-#game-details {
+#game-details, #template-details {
   transition: 1s ease;
   width: auto;
   display: flex;

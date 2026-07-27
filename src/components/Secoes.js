@@ -1,7 +1,7 @@
 import { scrollDivX } from "../js/scroll-buttons";
 import DestaquesCards from "./DestaquesCards";
 
-function Destaques() {
+function Secoes() {
     return (<div className="col-md-5">
             <div className="row m-auto text-light ubuntu">
                 <div className="d-flex w-100 justify-content-between scroll-buttons buttons" id="destaques-buttons">
@@ -22,4 +22,4 @@ function Destaques() {
             </div>
         </div>)
 }
-export default Destaques;
+export default Secoes;

@@ -1,6 +1,6 @@
 import React from 'react';
 import ListaDeJogos from '../components/ListaJogos';
-import Header from '../components/Header';
+import Header from '../components/Slogan';
 
 function Jogos() {
   return (<>
