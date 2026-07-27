@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function ListaDeJogos() {
+function ListaJogos() {
     let gameItems = [];
     const [jogos, setJogos] = useState([]);
     const API_URL = process.env.REACT_APP_API_URL;
@@ -51,4 +51,4 @@ function ListaDeJogos() {
         }))
 }
 
-export default ListaDeJogos;
+export default ListaJogos;

@@ -1,5 +1,5 @@
 import React from 'react';
-import ListaDeJogos from '../components/ListaJogos';
+import ListaJogos from '../components/ListaJogos';
 import Header from '../components/Slogan';
 
 function Jogos() {
@@ -16,7 +16,7 @@ function Jogos() {
                 <h2 className="my-0">Todos Os Jogos</h2>
               </strong>
               <div id="lista" className="d-flex my-0 py-0">
-                <ListaDeJogos />
+                <ListaJogos />
               </div>
               <div id="frame" style={{ width: "100%", margin: "auto", position: "relative", zIndex: 1 }}>
                 {/* BEGIN AADS AD UNIT 2410752 */}
