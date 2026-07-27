@@ -3,7 +3,7 @@ import "../../../css/jogos/combo-memo/platform/platform.css"
 import "../../../css/jogos/combo-memo/card/card.css"
 import "../../../css/jogos/combo-memo/great/congratulations.css"
 import { params2, SMARTLINK_2 } from "../../../js/anuncios";
-function ComboMemoHeader() {
+function Menu() {
     return (
         <div class="menu">
             <div class="d-flex row align-content-center">
@@ -28,4 +28,4 @@ function ComboMemoHeader() {
         </div>
     )
 }
-export default ComboMemoHeader;
+export default Menu;

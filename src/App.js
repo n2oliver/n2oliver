@@ -24,7 +24,7 @@ import Cursos from "./pages/Cursos";
 import Desenvolvedor from "./pages/Desenvolvedor";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
-import ComboMemo from "./pages/jogos/combo-memo/ComboMemo";
+import Intro from "./pages/jogos/combo-memo/Intro";
 import { useEffect, useState } from "react";
 import $ from "jquery";
 import Jogo from "./pages/jogos/combo-memo/Jogo";
@@ -41,7 +41,7 @@ function App() {
 
     carregar();
   }, [])
-  if (!config || config && !config.API_URL) {
+  if (!config || (config && !config.API_URL)) {
     return;
   }
   
@@ -62,7 +62,7 @@ function App() {
         <Route path="/desenvolvedor" element={<Desenvolvedor />} />
         <Route path="/contato" element={<Contato />} />
 
-        <Route path="/jogos/combo-memo" element={<ComboMemo />} />
+        <Route path="/jogos/combo-memo" element={<Intro />} />
         <Route path="/jogos/combo-memo/jogo" element={<Jogo />} />
 
         <Route path="*" element={<NotFound />} />

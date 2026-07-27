@@ -28,9 +28,9 @@ function showGameInHighlight(game) {
 
     document.getElementById('game-details-title').textContent = game.titulo;
     document.getElementById('game-details-content').innerHTML = game.descricao +
-        `<div class="text-center" style="display: none;">
-            <button class="btn btn-danger m-1 h-0" id="next" style="display: none; height: fit-content;" aria-label="Aria Right">
-            <i class="fa-solid fa-arrow-right"></i>
+        `<div className="text-center">
+            <button onclick="window.location.href = '${game.url}'" class="btn btn-lg btn-danger m-1 h-0 text-nowrap" id="play-button" aria-label="Aria Right">
+                Jogar
             </button>
         </div>`;
 }

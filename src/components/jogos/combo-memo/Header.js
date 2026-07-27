@@ -1,11 +1,11 @@
 import "../../../css/sobre-mim.css"
 import "../../../css/jogos/combo-memo/intro/intro.css"
 import "../../../css/jogos/combo-memo/card/card.css";
-import { virar } from "../../../components/jogos/combo-memo/card/card";
+import { virar } from "./card/card";
 import "https://appsha-pnd.ctengine.io/js/script.js?wkey=97NjKiTr7b";
 import { gtag } from "../../../js/gtag";
 import { abrirSmartlinkUmaVez } from "../../../js/anuncios";
-function ComboMemo() {
+function Header() {
     gtag("event", "qualify_lead", {
         currency: "USD",
         value: 0.0004
@@ -33,4 +33,4 @@ function ComboMemo() {
             </main>
         </header>);
 }
-export default ComboMemo;
+export default Header;

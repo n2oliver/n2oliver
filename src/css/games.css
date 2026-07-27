@@ -152,6 +152,7 @@ main {
 
 #game-details-content,
 #game-details-title {
+  font-size: 2rem;
   cursor: pointer
 }
 

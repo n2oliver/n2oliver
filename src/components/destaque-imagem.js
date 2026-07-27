@@ -17,7 +17,6 @@ function next() {
     }
     showGameInHighlight(gamesArray[gameItemsIndex]);
     setProgress(0);
-    $("#progressbar").progressbar("value", progress);
 }
 
 function prev() {
@@ -47,14 +46,13 @@ function DestaqueImagem() {
             <div id="games" className="container m-auto p-0">
                 <div id="game-details" className="flex-row px-0 col-md-10">
                     <div className="w-100">
-                        <div id="thumbnail" className="w-100 rounded align-content-start border border-light">
-                            <h2><strong><span id="game-details-title">n2oliver</span></strong>🎮</h2>
-
+                        <h2><strong><span id="game-details-title">n2oliver</span></strong>🎮</h2>
+                        <div id="thumbnail" className="w-100 rounded align-content-end border border-light">
                             <div id="click-to-action"></div>
                             
                             <div id="game-details-panel" className="d-flex justify-content-around">
-                                <div className="col-md-10 m-auto d-inline-flex">
-                                    <div id="game-details-content" className="p-2 flex-column">
+                                <div className="col-md-10 m-auto">
+                                    <div id="game-details-content" className="p-2 d-flex">
                                         Carregando...
                                         <div className="text-center">
                                             <button className="btn btn-lg btn-danger m-1 h-0 text-nowrap" id="play-button" aria-label="Aria Right">

@@ -5,11 +5,8 @@ body {
 .platform {
     width: 500px;
     height: 696px;
-    display: flex;
-    flex-wrap: wrap;
     margin: 0 auto;
     background-color: transparent;
-    justify-content: center;
 }
 .menu {
     background-color: darkslategray;
