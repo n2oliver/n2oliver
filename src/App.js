@@ -24,10 +24,12 @@ import Cursos from "./pages/Cursos";
 import Desenvolvedor from "./pages/Desenvolvedor";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
-import Intro from "./pages/jogos/combo-memo/Intro";
+import ComboMemoIntro from "./pages/jogos/combo-memo/ComboMemoIntro";
+import CacaPalavrasIntro from "./pages/jogos/caca-palavras/CacaPalavrasIntro";
 import { useEffect, useState } from "react";
 import $ from "jquery";
-import Jogo from "./pages/jogos/combo-memo/Jogo";
+import ComboMemo from "./pages/jogos/combo-memo/jogar/ComboMemo";
+import CacaPalavras from "./pages/jogos/caca-palavras/jogar/CacaPalavras";
 
 function App() {
   const [config, setConfig] = useState([]);
@@ -62,8 +64,11 @@ function App() {
         <Route path="/desenvolvedor" element={<Desenvolvedor />} />
         <Route path="/contato" element={<Contato />} />
 
-        <Route path="/jogos/combo-memo" element={<Intro />} />
-        <Route path="/jogos/combo-memo/jogo" element={<Jogo />} />
+        <Route path="/jogos/combo-memo" element={<ComboMemoIntro />} />
+        <Route path="/jogos/combo-memo/jogar" element={<ComboMemo />} />
+
+        <Route path="/jogos/caca-palavras" element={<CacaPalavrasIntro />} />
+        <Route path="/jogos/caca-palavras/jogar" element={<CacaPalavras />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

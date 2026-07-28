@@ -18,7 +18,7 @@ function Header() {
             value: 0.0004
         });
         setTimeout(() => {
-            window.location.href = '/jogos/combo-memo/jogo';
+            window.location.href = '/jogos/combo-memo/jogar';
         }, 200);
     }
     return (

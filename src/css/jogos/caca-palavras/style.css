@@ -1,0 +1,75 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  background-color: #e9ebee;
+  padding: 2rem;
+  background-image: url(../../../img/web-design-technology-browsing-programming-concept.jpg);
+  background-size: cover;
+  backdrop-filter: brightness(.8);
+}
+
+.container {
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 0px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 1rem;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+#main-text {
+  background-image: url(../../../img/jogos/bg-grid.jpg);
+  position: relative;
+  width: 100vw;
+  background-size: cover;
+  overflow: hidden;
+  display: block;
+}
+
+.spotlight {
+  position: absolute;
+  width: 200px;
+  /* Tamanho do holofote */
+  height: 200px;
+  border-radius: 50%;
+  /* Transforma em círculo */
+  /* Garante que o elemento não capture eventos do mouse, permitindo interação com o conteúdo abaixo */
+  pointer-events: none;
+
+  filter: brightness(1);
+  background-color: rgba(255, 255, 255, .2);
+  /* Fundo ligeiramente translúcido */
+  /* Aplica o filtro de desfoque ao fundo visível através deste elemento */
+
+  /* Posicionamento inicial fora da vista e ajuste para centralizar no cursor */
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+
+  /* Adiciona uma transição suave para o movimento */
+  transition: transform 0.1s linear;
+}

@@ -1,6 +1,6 @@
 import Header from "../../../components/jogos/combo-memo/Header";
 
-function Intro() {
+function ComboMemoIntro() {
     return (<Header/>)
 }
-export default Intro;
+export default ComboMemoIntro;
