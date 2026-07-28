@@ -1,20 +1,17 @@
-import "../../../css/jogos/combo-memo/style.css"
-import "../../../css/jogos/combo-memo/platform/platform.css"
-import "../../../css/jogos/combo-memo/card/card.css"
-import "../../../css/jogos/combo-memo/great/congratulations.css"
 import { params2, SMARTLINK_2 } from "../../../js/anuncios";
+import { percentual } from "../../../js/jogos/combo-memo/platform/platform";
 function Menu() {
     return (
-        <div class="menu">
-            <div class="d-flex row align-content-center">
+        <div className="menu">
+            <div className="d-flex row align-content-center">
                 <h1>COMBO-MEMO</h1>
             </div>
             <h3>
-                <span class="score-label">Pontuação máxima:</span> <span id="high-score" class="score-value">0</span>% de acertos |
-                <span class="score-label">Acerto:</span> <span id="acerto" class="score-value">0</span>% |
-                <span class="error-value">Erros:</span> <span id="erros" class="error-value">0</span>
+                <span className="score-label">Pontuação máxima:</span> <span id="high-score" className="score-value">{ localStorage.combo_memo_high_score || percentual }</span>% de acertos |
+                <span className="score-label">Acerto:</span> <span id="acerto" className="score-value">0</span>% |
+                <span className="error-value">Erros:</span> <span id="erros" className="error-value">0</span>
             </h3>
-            <div class="botoes">
+            <div className="botoes">
                 <button id="btnRestart"
                     onClick={() => {
                         setTimeout(() => {

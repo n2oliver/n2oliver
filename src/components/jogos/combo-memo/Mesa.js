@@ -1,23 +1,30 @@
+import { useEffect } from "react";
+import { handleCardClick } from "../../../js/jogos/combo-memo/platform/platform";
+import { embaralhar } from "../../../js/jogos/combo-memo/card/card";
+
 function Mesa() {
-    return (<div class="mesa">
-            <div class="platform col-sm-10 m-auto" style={{paddingTop: "32px"}}>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-                <div class="card animar sem-fundo"></div>
-            </div>
-        </div>)
+    useEffect(() => {
+        embaralhar();
+    });
+    return (<div className="mesa">
+        <div className="platform col-sm-10 m-auto d-grid" style={{ paddingTop: "32px",  gridTemplateColumns: "auto auto auto auto" }}>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+            <div className="card animar sem-fundo" onClick={handleCardClick}></div>
+        </div>
+    </div>)
 }
 export default Mesa;

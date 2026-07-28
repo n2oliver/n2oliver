@@ -1,4 +1,4 @@
-import { ultimaCarta } from "../platform/platform";
+import { ultimaCarta, setUltimaCarta } from "../platform/platform";
 
 const background = {
     0: "abelha",
@@ -44,7 +44,7 @@ function esconderCarta(target) {
     setTimeout(() => {
         target.classList.add("sem-fundo");
     }, 300);
-    ultimaCarta = null;
+    setUltimaCarta(null);
     console.log("ultimaCarta: ", ultimaCarta);
 }
 function esconderTodasAsCartas() {
@@ -69,7 +69,7 @@ function embaralhar() {
     arr.sort(() => Math.random() - 0.5);
     let i = 0;
     for (let target of document.querySelectorAll(".card")) {
-        target.style.backgroundImage = `url(${window.API_URL}/src/img/combo-memo/card/${background[arr[i]]}.png)`;
+        target.style.backgroundImage = `url(${window.API_URL}/src/img/jogos/combo-memo/card/${background[arr[i]]}.png)`;
         i++;
     }
 }
