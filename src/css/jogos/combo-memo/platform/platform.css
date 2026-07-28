@@ -5,6 +5,8 @@ body {
 .platform {
     width: 100dvw;
     height: 100dvh;
+    max-width: 640px;
+    max-height: 480px;
     margin: 0 auto;
     background-color: transparent;
 }
