@@ -1,20 +1,23 @@
 import { useEffect } from "react";
-import { setUp } from "../../../../js/jogos/caca-palavras/setup";
+import { setUp } from "../../../../js/jogos/palavras-cruzadas/setup";
 function Main() {
     useEffect(() => {
         setUp();
     });
     return (
-        <main className="game-container col-md-10 notranslate" translate="no">
-            <div className="sidebar col-md-6">
-                <h2>Palavras para Encontrar</h2>
-                <ul id="word-list">
-                    {/*!-- A lista de palavras será inserida aqui --*/}
-                </ul>
-                <button id="restart-button">Recomeçar</button>
+        <main className="game-container notranslate" translate="no">
+            <div id="crossword-grid" className="grid-container">
+                {/*!-- A grade será gerada aqui via JS --*/}
             </div>
-            <div id="word-search-grid" className="grid-container col-md-6">
-                {/*!-- As letras serão inseridas aqui via JavaScript --*/}
+            <div className="clues-container">
+                <div className="clues">
+                    <h2>Horizontais</h2>
+                    <ul id="clues-across"></ul>
+                </div>
+                <div className="clues">
+                    <h2>Verticais</h2>
+                    <ul id="clues-down"></ul>
+                </div>
             </div>
         </main>
     )

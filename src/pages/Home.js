@@ -7,7 +7,7 @@ import Template from '../components/Template.js';
 
 function Home() {
     return (<>
-        <main className="w-100 m-auto col-md-12 p-0">
+        <main className="home w-100 m-auto col-md-12 p-0">
             <DestaqueImagem />
             <Template />
         </main>

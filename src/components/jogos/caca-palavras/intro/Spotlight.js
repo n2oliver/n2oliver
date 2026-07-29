@@ -1,6 +1,6 @@
 function Spotlight() {
     return (
-        <div class="spotlight"></div>
+        <div className="spotlight"></div>
     );
 }
 export default Spotlight;

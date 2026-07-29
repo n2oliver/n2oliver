@@ -1,11 +1,13 @@
-import Header from "../../../../components/jogos/caca-palavras/jogar/Header";
-import Main from "../../../../components/jogos/caca-palavras/jogar/Main";
-import Message from "../../../../components/jogos/caca-palavras/jogar/Message";
-import "../../../../css/jogos/caca-palavras/jogar/style.css";
+import Header from "../../../../components/jogos/palavras-cruzadas/jogar/Header";
+import Main from "../../../../components/jogos/palavras-cruzadas/jogar/Main";
+import Message from "../../../../components/jogos/palavras-cruzadas/jogar/Message";
+import Actions from "../../../../components/jogos/palavras-cruzadas/jogar/Actions";
+import "../../../../css/jogos/palavras-cruzadas/jogar/style.css";
 function PalavrasCruzadas() {
     return (
         <>
             <Header />
+            <Actions />
             <Main />
             <Message />
         </>
