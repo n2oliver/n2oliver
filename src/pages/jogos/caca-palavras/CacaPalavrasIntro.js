@@ -1,6 +1,5 @@
 import "../../../css/jogos/caca-palavras/style.css"
 import MainText from "../../../components/jogos/caca-palavras/intro/MainText";
-import Spotlight from "../../../components/jogos/caca-palavras/intro/Spotlight";
 import { useEffect } from "react";
 import { abrirSmartlinkUmaVez } from "../../../js/anuncios";
 import { gtag } from "../../../js/gtag";

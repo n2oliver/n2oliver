@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
+import { API_URL } from "../App";
 
 
 function NoticiasCards() {
-    const API_URL = process.env.REACT_APP_API_URL;
-
     const [noticias, setNoticias] = useState([]);
 
     function irParaNoticia(event) {

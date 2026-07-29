@@ -30,6 +30,8 @@ import { useEffect, useState } from "react";
 import $ from "jquery";
 import ComboMemo from "./pages/jogos/combo-memo/jogar/ComboMemo";
 import CacaPalavras from "./pages/jogos/caca-palavras/jogar/CacaPalavras";
+import PalavrasCruzadasIntro from "./pages/jogos/palavras-cruzadas/PalavrasCruzadasIntro";
+import PalavrasCruzadas from "./pages/jogos/palavras-cruzadas/jogar/PalavrasCruzadas";
 let API_URL;
 function App() {
   const [config, setConfig] = useState([]);
@@ -69,6 +71,9 @@ function App() {
 
         <Route path="/jogos/caca-palavras" element={<CacaPalavrasIntro />} />
         <Route path="/jogos/caca-palavras/jogar" element={<CacaPalavras />} />
+
+        <Route path="/jogos/palavras-cruzadas" element={<PalavrasCruzadasIntro />} />
+        <Route path="/jogos/palavras-cruzadas/jogar" element={<PalavrasCruzadas />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

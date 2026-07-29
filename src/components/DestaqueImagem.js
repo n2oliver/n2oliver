@@ -20,13 +20,13 @@ function DestaqueImagem() {
         carregar();
     }, []);
     return (
-        <section id="destaque-imagem" className="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
+        <section id="destaque-imagem" className="m-auto m-auto n2oliver-jogos d-flex flex-column justify-content-center"
             alt="">
             <div id="games" className="container m-auto p-0">
                 <div id="game-details" className="flex-row px-0 col-md-10">
-                    <div className="w-100">
+                    <div className="m-auto">
                         <h2><strong><span id="game-details-title">n2oliver</span></strong>🎮</h2>
-                        <div id="thumbnail" className="w-100 rounded align-content-end border border-light">
+                        <div id="thumbnail" className="m-auto rounded align-content-end border border-light">
                             <div id="game-details-panel" className="d-flex justify-content-around">
                                 <div className="col-md-10 m-auto">
                                     <button className="btn btn-lg btn-success m-1 h-0 rounded-circle"

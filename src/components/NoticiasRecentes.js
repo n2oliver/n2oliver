@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { $ } from "../App";
+import { $, API_URL } from "../App";
 
 let noticiasRoot = null;
 
 let pagina = 0;
-const API_URL = process.env.REACT_APP_API_URL;
 
 function NoticiasRecentes() {
 
