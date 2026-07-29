@@ -125,6 +125,9 @@ header h1 {
 
 .message {
     position: fixed;
+    top: 40dvh;
+    left: 60px;
+    right: 60px;
     margin: auto 0;
     background-color: #28a745;
     color: white;
