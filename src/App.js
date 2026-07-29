@@ -30,7 +30,7 @@ import { useEffect, useState } from "react";
 import $ from "jquery";
 import ComboMemo from "./pages/jogos/combo-memo/jogar/ComboMemo";
 import CacaPalavras from "./pages/jogos/caca-palavras/jogar/CacaPalavras";
-
+let API_URL;
 function App() {
   const [config, setConfig] = useState([]);
 
@@ -47,7 +47,7 @@ function App() {
     return;
   }
   
-  window.API_URL = config.API_URL;
+  API_URL = config.API_URL;
 
   return (
     <div className="App">
@@ -84,5 +84,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
-export { $ };
+export { $, API_URL };
 export default App;

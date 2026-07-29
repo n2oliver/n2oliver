@@ -1,5 +1,4 @@
-import { params2, SMARTLINK_2 } from "../../../anuncios";
-import { embaralhar, esconderCarta, esconderTodasAsCartas, virarCarta } from "../../../../js/jogos/combo-memo/card/card";
+import { esconderCarta, esconderTodasAsCartas, virarCarta } from "../../../../js/jogos/combo-memo/card/card";
 import { comemoracoes, comemoracoesFinais, comemorar } from "../../../../js/jogos/combo-memo/great/congratulations";
 
 let counter = 0;

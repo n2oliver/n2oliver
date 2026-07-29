@@ -16,20 +16,13 @@ function CacaPalavrasIntro() {
             event.preventDefault();
             abrirSmartlinkUmaVez();
             setTimeout(()=>{
-              window.location.href = '<?= $APP_URL ?>/jogo.php';
+              window.location.href = '/jogos/caca-palavras/jogar';
           },200);
             gtag("event", "close_convert_lead", {
               currency: "USD",
               value: 0.0004
             });
         });
-        if(document.referrer == '<?=$APP_URL?>/jogos' |
-            document.referrer == '<?=$APP_URL?>/jogos/'
-        ) {
-            setTimeout(()=>{
-                document.getElementById('jogar').click();
-            }, 3000)
-        }
     })
     return (<>
         <MainText />

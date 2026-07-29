@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
+import { API_URL } from "../App";
 
 function ListaJogos() {
     let gameItems = [];
     const [jogos, setJogos] = useState([]);
-    const API_URL = process.env.REACT_APP_API_URL;
 
     useEffect(() => {
         async function carregar(){
@@ -13,7 +13,7 @@ function ListaJogos() {
         }
         carregar();
     }, [])
-    if(!jogos || jogos && !jogos.length) {
+    if(!jogos || (jogos && !jogos.length)) {
         return;
     }
     return (jogos.map((game, index) => {
