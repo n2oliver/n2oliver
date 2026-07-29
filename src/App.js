@@ -32,6 +32,7 @@ import ComboMemo from "./pages/jogos/combo-memo/jogar/ComboMemo";
 import CacaPalavras from "./pages/jogos/caca-palavras/jogar/CacaPalavras";
 import PalavrasCruzadasIntro from "./pages/jogos/palavras-cruzadas/PalavrasCruzadasIntro";
 import PalavrasCruzadas from "./pages/jogos/palavras-cruzadas/jogar/PalavrasCruzadas";
+import CaixaDeLetras from "./pages/jogos/caixa-de-letras/CaixaDeLetras";
 let API_URL;
 function App() {
   const [config, setConfig] = useState([]);
@@ -74,6 +75,8 @@ function App() {
 
         <Route path="/jogos/palavras-cruzadas" element={<PalavrasCruzadasIntro />} />
         <Route path="/jogos/palavras-cruzadas/jogar" element={<PalavrasCruzadas />} />
+
+        <Route path="/jogos/caixa-de-letras" element={<CaixaDeLetras />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

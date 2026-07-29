@@ -46,7 +46,7 @@ echo json_encode(
         ],
         4 => (object) [
             'id' => 5,
-            'url' => '/jogos/quebra-palavras/',
+            'url' => '/jogos/caixa-de-letras/',
             'titulo' => 'Caixa de Letras',
             'descricao' => 'Desafie seu conhecimento com este quebra-cabeça com letrinhas.',
             'resumo' => '',

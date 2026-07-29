@@ -1,4 +1,4 @@
-function ComboMemoAAds() {
+function InGameAAds() {
     return (
         <div id="frame" style={{ width: "100%", margin: "auto",position: "relative", zIndex: 99998}}>
             <iframe title="combo-memo-frame" data-aa='2412101' src='//acceptable.a-ads.com/2412101/?size=Adaptive'
@@ -10,4 +10,4 @@ function ComboMemoAAds() {
     )
 }
 
-export default ComboMemoAAds;
+export default InGameAAds;
