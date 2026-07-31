@@ -115,7 +115,7 @@ main {
 }
 
 #destaque-imagem .container, #template .container {
-  max-width: 100%;
+  max-width: 77dvw;
 }
 
 #progressbar {
@@ -140,7 +140,7 @@ main {
   font-family: Ubuntu;
   color: white !important;
 }
-#game-details>div, #template-details>div {
+#game-details>div, #template-details>div, #game-details>div>h2 {
   width: 100%;
 }
 .adsbygoogle {
@@ -165,7 +165,7 @@ main {
   background-repeat: no-repeat;
   background-image: url(../img/joined-games.png);
   width: 100%;
-  height: 77vh
+  height: 77dvh;
 }
 
 #thumbnail h2 {
@@ -174,13 +174,6 @@ main {
 
 #thumbnail button {
   height: fit-content;
-}
-
-#game-noticias {
-  display: -webkit-box;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: auto !important;
 }
 
 #game-noticias .card {
@@ -199,10 +192,15 @@ main {
 }
 
 #lista,
-#destaques {
+#destaques,
+#game-noticias {
   display: -webkit-box;
-  overflow-x: auto;
-  flex-wrap: wrap;
+  max-width: 77dvw;
+  overflow-x: scroll;
+  scrollbar-width: auto;
+}
+#jogos-recentes {
+  width: 77dvw;
 }
 
 .buttons {
@@ -213,7 +211,8 @@ main {
 
 .buttons button {
   height: fit-content;
-  pointer-events: auto
+  pointer-events: auto; 
+  z-index: 2;
 }
 
 #international-account {

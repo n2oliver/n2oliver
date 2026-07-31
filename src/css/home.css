@@ -1,5 +1,7 @@
 .home h2 {
-    font-size:2rem; background: rgba(0, 0, 0, .8);
+    font-size:2rem; 
+    background: rgba(0, 0, 0, .8);
+    width: 77dvw;
 }
 
 #click-to-action {

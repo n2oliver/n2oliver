@@ -5,10 +5,10 @@ import NoticiasRecentes, { avancar, toggleNoticiaContent, voltar } from '../comp
 function Noticias() {
     document.addEventListener("DOMContentLoaded",()=>{
         const id = Number(window.location.pathname.substring(1))
-        id && !isNaN(id) ? toggleNoticiaContent(null, id) : toggleNoticiaContent(null, 10);
+        id && !isNaN(id) ? toggleNoticiaContent(null, id) : toggleNoticiaContent(null, 10);        
     });
     return (
-        <div>
+        <div style={{width: "100dvw"}}>
             <h1 className="w-100 text-light px-4 pt-3 pb-4 bg-primary mb-0">
                 <div className="d-flex justify-content-between align-items-center">
                     <div style={{width: "fit-content"}}>

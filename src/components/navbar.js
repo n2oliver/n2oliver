@@ -2,8 +2,8 @@
 import icon from '../img/n2-ico.jpg';
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 w-100 m-auto px-0">
-            <div className="container-fluid">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 m-auto px-0">
+            <div style={{width: "100dvw"}}>
 
                 <div className="d-flex w-100 justify-content-between">
                     <a className="navbar-brand rounded" href="/">
