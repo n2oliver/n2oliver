@@ -155,7 +155,7 @@ footer {
     /* Posiciona o título verticalmente no centro */
     transform: translate(-50%, -50%);
     /* Centraliza o título perfeitamente */
-    width: fit-content;
+    width: 100%;
     /* Faz o título ocupar toda a largura do contêiner */
     color: white;
     text-align: center;
