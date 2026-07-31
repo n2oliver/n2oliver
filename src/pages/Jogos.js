@@ -1,4 +1,3 @@
-import React from 'react';
 import ListaJogos from '../components/ListaJogos';
 import Header from '../components/Slogan';
 

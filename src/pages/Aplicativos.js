@@ -1,4 +1,5 @@
-import React from 'react';
+import Swiper from 'swiper';
+import 'swiper/css';
 
 function Aplicativos() {
   return (

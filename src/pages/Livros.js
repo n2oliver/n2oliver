@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Livros() {
   return (
     <main className="livros-page">

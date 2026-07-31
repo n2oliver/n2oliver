@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Extensoes() {
   return (
     <main className="extensoes-page">

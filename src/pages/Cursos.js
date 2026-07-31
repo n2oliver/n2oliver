@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Cursos() {
   return (
     <main className="cursos-page">

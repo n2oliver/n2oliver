@@ -1,7 +1,4 @@
-import React from 'react';
 import NoticiasRecentes, { avancar, toggleNoticiaContent, voltar } from '../components/NoticiasRecentes';
-
-
 function Noticias() {
     document.addEventListener("DOMContentLoaded",()=>{
         const id = Number(window.location.pathname.substring(1))
@@ -45,17 +42,6 @@ function Noticias() {
                         <div>
                             <button className="btn btn-primary" id="voltar" onClick={(event) => voltar(event)}><i className="fa fa-arrow-left"></i></button>
                         </div>
-                        {/*
-                        <span id="page-buttons">
-                            <script>
-                                let pagina = "<?= $noticias['page'] ?>" || 0;
-                            </script>
-                            <?php
-                            htmlFor($i = 0; $i <= $noticias['pages'] + 1; $i++) { ?>
-                                <?= $i == $noticias['page'] - 1 ? '<button id="page" type="number" className="btn btn-primary text-center disabled" disabled value="' . $i . '">' . ($i + 1) . '</button>' : 
-                                '<button id="page" type="number" className="btn btn-primary text-center" value="' . $i . '">' . ($i + 1) . '</button>' ?>
-                            <?php } ?>
-                        </span>*/}
                         <div>
                             <button className="btn btn-primary" id="avancar" onClick={(event) => avancar(event)}><i className="fa fa-arrow-right"></i></button>
                         </div>
