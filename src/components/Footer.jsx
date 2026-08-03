@@ -1,8 +1,8 @@
 import '../css/footer.css';
 import '../css/gtranslate.css';
-import SocialMedia from './SocialMedia.js';
+import SocialMedia from './SocialMedia';
 import '../js/gtranlate-settings.js';
-import AAdsSticky from './AAdsSticky.js';
+import AAdsSticky from './AAdsSticky';
 
 function Footer() {
     return (<>

@@ -1,15 +1,16 @@
 FROM node:22
 
-WORKDIR /
+WORKDIR /var/www/html
 
-COPY package*.json ./var/www/html/
-COPY ./src/ /var/www/html/src/
-COPY ./public/ /var/www/html/public/
+COPY package*.json ./
+COPY vite.config.mjs ./
+COPY index.html ./
 
-RUN cd ./var/www/html/ && npm install
+RUN npm install
 
-ENV NODE_OPTIONS="--disable-warning=DEP0060"
+COPY src ./src
+COPY public ./public
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]

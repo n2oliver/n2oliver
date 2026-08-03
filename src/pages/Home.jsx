@@ -1,8 +1,8 @@
 import '../css/home.css';
-import NoticiasBar from '../components/NoticiasBar.js';
-import DestaqueImagem from '../components/DestaqueImagem.js';
-import VerTodasAsNoticias from '../components/VerTodasAsNoticias.js';
-import Template from '../components/Template.js';
+import NoticiasBar from '../components/NoticiasBar';
+import DestaqueImagem from '../components/DestaqueImagem';
+import VerTodasAsNoticias from '../components/VerTodasAsNoticias';
+import Template from '../components/Template';
 
 function Home() {
     return (<>

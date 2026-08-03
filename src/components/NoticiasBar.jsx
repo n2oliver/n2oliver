@@ -1,5 +1,5 @@
 import { scrollDivX } from '../js/scroll-buttons.js';
-import GameNoticias from './GameNoticias.js';
+import GameNoticias from './GameNoticias';
 
 function NoticiasBar() {
     return (

@@ -1,5 +1,11 @@
-
 import { Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+import $ from "jquery";
+
+window.$ = $;
+window.jQuery = $;
+
+await import("jquery-ui-dist/jquery-ui");
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -26,8 +32,6 @@ import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
 import ComboMemoIntro from "./pages/jogos/combo-memo/ComboMemoIntro";
 import CacaPalavrasIntro from "./pages/jogos/caca-palavras/CacaPalavrasIntro";
-import { useEffect, useState } from "react";
-import $ from "jquery";
 import ComboMemo from "./pages/jogos/combo-memo/jogar/ComboMemo";
 import CacaPalavras from "./pages/jogos/caca-palavras/jogar/CacaPalavras";
 import PalavrasCruzadasIntro from "./pages/jogos/palavras-cruzadas/PalavrasCruzadasIntro";
