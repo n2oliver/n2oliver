@@ -1,4 +1,4 @@
-import { params2, SMARTLINK_2 } from "../../anuncios";
+import { params1, SMARTLINK_1 } from "../../anuncios";
 
 function setUp() {
     const wordsByLang = {
@@ -434,7 +434,7 @@ function setUp() {
     gridElement.addEventListener('touchend', handleEndSelection);
     restartButton.addEventListener('click', () => {
         setTimeout(() => {
-            window.open(SMARTLINK_2, '_blank', params2);
+            window.open(SMARTLINK_1, '_blank', params1);
             setTimeout(() => {
                 init();
             }, 1200);

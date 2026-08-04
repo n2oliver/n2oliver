@@ -5,7 +5,7 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 m-auto px-0">
             <div style={{width: "100dvw"}}>
 
-                <div className="d-flex w-100 justify-content-between">
+                <div className="d-flex w-100 navbar-container">
                     <Link className="navbar-brand rounded" to="/">
                         <img src="/img/n2-ico.jpg" width="32" className="rounded" alt="logo" />oliver
                     </Link>

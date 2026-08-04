@@ -37,3 +37,7 @@ services:
         - path: ./api
           target: /var/www/html/api
           action: sync+restart
+
+        - path: ./index.html
+          target: /var/www/html/index.html
+          action: rebuild

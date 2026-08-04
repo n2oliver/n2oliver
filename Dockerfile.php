@@ -15,15 +15,14 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 WORKDIR /var/www/html
 
 COPY package.json ./
+RUN npm install
+
 COPY vite.config.mjs ./
 COPY index.html ./
 COPY .env.development ./
-
 COPY src ./src
 COPY public ./public
 COPY api ./api
-
-RUN npm install
 RUN npm run build
 
 # Porta

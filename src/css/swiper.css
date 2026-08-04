@@ -1,6 +1,9 @@
 .aplicativos-page>div {
   width: 100dvw;
 }
+.swiper {
+    overflow-y: visible;
+}
 .swiper-slide {
     position: relative;
     width: 100%;
@@ -11,10 +14,16 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    background-color: rgba(255, 255, 255, 0.7);
+    background: rgba(20,20,20,.65);
+    backdrop-filter: blur(6px);
+    width: 100%;
+    padding: 14px 7px 14px 7px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 .slide-title a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-weight: 700;
     font-variant: all-small-caps;

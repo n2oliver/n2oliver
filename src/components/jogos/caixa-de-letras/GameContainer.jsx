@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { abrirSmartlinkUmaVez, params2, SMARTLINK_2 } from "../../../js/anuncios";
+import { abrirSmartlinkUmaVez, params1, SMARTLINK_1 } from "../../../js/anuncios";
 import { setUp } from "../../../js/jogos/caixa-de-letras/setup";
 
 function GameContainer() {
@@ -18,7 +18,7 @@ function GameContainer() {
                         event.preventDefault();
                         abrirSmartlinkUmaVez();
                         setTimeout(() => {
-                            window.open(SMARTLINK_2, '_blank', params2);
+                            window.open(SMARTLINK_1, '_blank', params1);
                             setTimeout(() => {
                                 window.location.reload();
                             }, 1200);

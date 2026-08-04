@@ -39,13 +39,25 @@ function ListaAplicativos() {
                 aplicativos.map(
                     (app, index) => {
                         /*!-- Slides --*/
-                        return <SwiperSlide  key={index} >
-                            <h2 className="slide-title">
-                                <Link to={app.url} target="_blank" role="button" className="w-auto">{app.titulo}</Link>
-                            </h2>
-                            <img alt={app.titulo} className="title-image img-fluid" 
-                                src={`${API_URL+app.imagem}`}/>
-                            
+                        return <SwiperSlide  key={index} 
+                            style={{ 
+                                backgroundImage: `url(${API_URL}${app.imagem})`, 
+                                backgroundSize: "cover", 
+                                backgroundPosition: "center",
+                                backgroundAttachment: "fixed",
+                                overflow: "auto",
+                                height: "77dvh", 
+                            }} >
+                            <div className="slide-title">
+                                <Link to={app.url} target="_blank" role="button" className="w-auto">
+                                    <img alt={app.titulo} 
+                                        style={{ width: "100%" }}
+                                        src={`${API_URL+app.imagem}`}/>
+                                </Link>
+                                <div className="text-light p-4" 
+                                    style={{ color: 'white !important' }} 
+                                    dangerouslySetInnerHTML={{ __html: app.descricao }} />
+                            </div>
                         </SwiperSlide>
                     }
                 )
