@@ -47,15 +47,17 @@ function ListaAplicativos() {
                                 backgroundAttachment: "fixed",
                                 overflow: "auto",
                                 height: "77dvh", 
+                                display: "flex",
+                                justifyContent: "center",
                             }} >
                             <div className="slide-title">
-                                <Link to={app.url} target="_blank" role="button" className="w-auto">
+                                <Link to={app.url} target="_blank" role="button" className="w-auto p-4">
                                     <img alt={app.titulo} 
                                         style={{ width: "100%" }}
                                         src={`${API_URL+app.imagem}`}/>
                                 </Link>
                                 <div className="text-light p-4" 
-                                    style={{ color: 'white !important' }} 
+                                    style={{ color: 'white !important', minWidth: "50dvw" }} 
                                     dangerouslySetInnerHTML={{ __html: app.descricao }} />
                             </div>
                         </SwiperSlide>

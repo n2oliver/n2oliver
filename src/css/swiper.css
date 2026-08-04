@@ -15,18 +15,18 @@
     transform: translateX(-50%);
     z-index: 10;
     background: rgba(20,20,20,.65);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(16px);
     width: 100%;
     padding: 14px 7px 14px 7px;
     justify-content: center;
     display: flex;
-    align-items: center;
 }
 .slide-title a {
     color: white;
     text-decoration: none;
     font-weight: 700;
     font-variant: all-small-caps;
+    min-width: 25dvw;
 }
 .title-image {
     width: 100%;

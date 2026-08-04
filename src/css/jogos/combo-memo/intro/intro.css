@@ -35,10 +35,9 @@ header img {
 
 h1 {
     font-size: 2rem;
-    margin-top: 1rem;
     color: yellow !important;
-    -webkit-text-stroke: 2px orange;
-    filter: drop-shadow(0 0 .2rem yellow);
+    -webkit-text-stroke: .3px deepskyblue;
+    filter: drop-shadow(0 0 .2rem deepskyblue);
     background-color: darkslategray;
 }
 
