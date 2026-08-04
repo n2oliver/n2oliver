@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function Navbar() {
     return (
@@ -5,9 +6,9 @@ function Navbar() {
             <div style={{width: "100dvw"}}>
 
                 <div className="d-flex w-100 justify-content-between">
-                    <a className="navbar-brand rounded" href="/">
+                    <Link className="navbar-brand rounded" to="/">
                         <img src="/img/n2-ico.jpg" width="32" className="rounded" alt="logo" />oliver
-                    </a>
+                    </Link>
 
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -16,15 +17,15 @@ function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
-                            <li className="nav-item"><a className="nav-link" href="/"><i className="fa-solid fa-home"></i> Início</a></li>
-                            <li className="nav-item"><a className="nav-link" href="/noticias"><i className="fa-solid fa-newspaper"></i> Notícias</a></li>
-                            <li className="nav-item"><a className="nav-link" href="/jogos"><i className="fa-solid fa-puzzle-piece"></i> Jogos</a></li>
-                            <li className="nav-item"><a className="nav-link" href="/aplicativos"><i className="fa-solid fa-hand-pointer"></i> Aplicativos</a></li>
-                            <li className="nav-item"><a className="nav-link" href="/extensoes"><i className="fa-solid fa-hand-pointer"></i> Extensões</a></li>
-                            <li className="nav-item"><a className="nav-link" href="/livros"><i className="fa-solid fa-store"></i> Livros</a></li>
-                            <li className="nav-item"><a className="nav-link" href="/cursos"><i className="fa-solid fa-store"></i> Cursos</a></li>
-                            <li className="nav-item"><a className="nav-link" href="/desenvolvedor"><i className="fa-solid fa-user"></i> Desenvolvedor</a></li>
-                            <li className="nav-item"><a className="nav-link" href="/contato"><i className="fa-solid fa-envelope"></i> Contato</a></li>
+                            <li className="nav-item"><Link className="nav-link" to="/"><i className="fa-solid fa-home"></i> Início</Link></li>
+                            <li className="nav-item"><Link className="nav-link" to="/noticias"><i className="fa-solid fa-newspaper"></i> Notícias</Link></li>
+                            <li className="nav-item"><Link className="nav-link" to="/jogos"><i className="fa-solid fa-puzzle-piece"></i> Jogos</Link></li>
+                            <li className="nav-item"><Link className="nav-link" to="/aplicativos"><i className="fa-solid fa-hand-pointer"></i> Aplicativos</Link></li>
+                            <li className="nav-item"><Link className="nav-link" to="/extensoes"><i className="fa-solid fa-hand-pointer"></i> Extensões</Link></li>
+                            <li className="nav-item"><Link className="nav-link" to="/livros"><i className="fa-solid fa-store"></i> Livros</Link></li>
+                            <li className="nav-item"><Link className="nav-link" to="/cursos"><i className="fa-solid fa-store"></i> Cursos</Link></li>
+                            <li className="nav-item"><Link className="nav-link" to="/desenvolvedor"><i className="fa-solid fa-user"></i> Desenvolvedor</Link></li>
+                            <li className="nav-item"><Link className="nav-link" to="/contato"><i className="fa-solid fa-envelope"></i> Contato</Link></li>
                         </ul>
                     </div>
                 </div>

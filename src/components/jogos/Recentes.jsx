@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { scrollDivX } from "../../js/scroll-buttons";
 import RecentesCards from "../RecentesCards";
 
@@ -18,7 +19,7 @@ function Recentes() {
                 <div id="lista" className="my-0 py-0">
                     <RecentesCards />
                 </div>
-                <div className="m-auto p-0 mt-1 mx-0 d-flex justify-content-end"><a href="/jogos.php"><button className="btn btn-primary">Ver todos</button></a></div>
+                <div className="m-auto p-0 mt-1 mx-0 d-flex justify-content-end"><Link to="/jogos.php"><button className="btn btn-primary">Ver todos</button></Link></div>
             </div>
         </div>)
 }

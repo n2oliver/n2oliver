@@ -3,11 +3,12 @@ import '../css/gtranslate.css';
 import SocialMedia from './SocialMedia';
 import '../js/gtranlate-settings.js';
 import AAdsSticky from './AAdsSticky';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (<>
   <footer className="site-footer mt-2 m-auto">
-    <a href="/"><span className="oliver-dev-logo footer-logo">n2oliver</span></a>
+    <Link to="/"><span className="oliver-dev-logo footer-logo">n2oliver</span></Link>
     <div className="d-flex justify-content-center">
       <SocialMedia />
     </div>
@@ -16,10 +17,10 @@ function Footer() {
       Todos os direitos reservados - n2oliver - 2026
     </span>
 
-    <a href="/politica-de-privacidade.html">Política de Privacidade</a>
-    <a href="/contato.php">Contato</a>
+    <Link to="/politica-de-privacidade.html">Política de Privacidade</Link>
+    <Link to="/contato.php">Contato</Link>
     <span>
-      <a href="mailto:suporte@n2oliver.com" style={{marginLeft: "10px"}}>suporte@n2oliver.com</a>
+      <Link to="mailto:suporte@n2oliver.com" style={{marginLeft: "10px"}}>suporte@n2oliver.com</Link>
     </span>
   </footer>
     <AAdsSticky/></>)
