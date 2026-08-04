@@ -13,8 +13,8 @@ function showGameInHighlight(game) {
     }
     let destaqueImagem = document.querySelector("body");
     let thumbnail = document.getElementById("thumbnail");
-    destaqueImagem.style.backgroundImage = 'url(' + API_URL + '/src' + game.imagem + ')';
-    thumbnail.style.backgroundImage = 'url(' + API_URL + '/src' + game.imagem + ')';
+    destaqueImagem.style.backgroundImage = 'url(' + API_URL + game.imagem + ')';
+    thumbnail.style.backgroundImage = 'url(' + API_URL + game.imagem + ')';
 
     $('#game-details-content,#game-details-title,#play-button,#click-to-action').unbind('click').click(function (e) {
         e.preventDefault();

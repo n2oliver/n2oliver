@@ -20,7 +20,7 @@ const virar = (event) => {
     event.target.classList.add('inverter');
     setTimeout(() => {
         event.target.classList.remove('sem-fundo');
-        event.target.src = `${API_URL}/src/img/jogos/combo-memo/card/${background[imageIndex]}.png`;
+        event.target.src = `${API_URL}/img/jogos/combo-memo/card/${background[imageIndex]}.png`;
         imageIndex++;
         if (imageIndex > 7) imageIndex = 0;
     }, 300);
@@ -28,7 +28,7 @@ const virar = (event) => {
         event.target.classList.remove('inverter');
         setTimeout(() => {
             event.target.classList.add('sem-fundo');
-            event.target.src = `${API_URL}/src/img/jogos/combo-memo/card/card.png`;
+            event.target.src = `${API_URL}/img/jogos/combo-memo/card/card.png`;
             event.target.onclick = (target) => virar(target);
         }, 300);
     }, 3000)
@@ -70,7 +70,7 @@ function embaralhar() {
     arr.sort(() => Math.random() - 0.5);
     let i = 0;
     for (let target of document.querySelectorAll(".card")) {
-        target.style.backgroundImage = `url(${API_URL}/src/img/jogos/combo-memo/card/${background[arr[i]]}.png)`;
+        target.style.backgroundImage = `url(${API_URL}/img/jogos/combo-memo/card/${background[arr[i]]}.png)`;
         i++;
     }
 }

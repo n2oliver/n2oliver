@@ -34,12 +34,12 @@ function NoticiasRecentes() {
         return;
     }
     return (noticias.map((noticia, index) => (
-        <div key={noticia.id} className="border rounded shadow-sm mb-1 ms-1 bg-light" style={{ width: "100%", cursor: "pointer" }} onClick={(event, noticia) => toggleNoticiaContent(event, noticia.id)}>
+        <div key={noticia.id} className="border rounded shadow-sm mb-1 ms-1 bg-light" style={{ width: "100%", cursor: "pointer" }} onClick={(event) => toggleNoticiaContent(event, noticia.id)}>
             <div className="p-2 noticia-card">
                 <div className="item d-flex align-items-center gap-2">
-                    {noticia.imagem ? <div className="recentes-imagem" style={{ backgroundImage: `url(${API_URL}/src${noticia.imagem})` }}></div> : ''}
+                    {noticia.imagem ? <div className="recentes-imagem" style={{ backgroundImage: `url(${API_URL+noticia.imagem})` }}></div> : ''}
                     <div className="d-flex flex-column">
-                        <div className="mb-1 text-light" style={{ cursor: "pointer" }} onClick={(event, noticia) => toggleNoticiaContent(event, noticia.id)}
+                        <div className="mb-1 text-light" style={{ cursor: "pointer" }} onClick={(event) => toggleNoticiaContent(event, noticia.id)}
                             dangerouslySetInnerHTML={{ __html: noticia.titulo }}>
                         </div>
 
@@ -66,7 +66,7 @@ function setContent(index) {
             const contentDiv = document.getElementById('noticia-content');
             if (contentDiv) {
                 contentDiv.innerHTML = response.conteudo;
-                $("#imagem-background").css("background-image", `url(${API_URL}/src${response.imagem})`);
+                $("#imagem-background").css("background-image", `url(${API_URL+response.imagem})`);
                 $("#imagem-background").html(response.titulo);
                 $("#imagem-background").append(response.resumo);
             }
@@ -136,7 +136,7 @@ async function buscarNoticias(event) {
                             {noticia.imagem && (
                                 <div
                                     className="recentes-imagem"
-                                    style={{ backgroundImage: `url(${API_URL}/src${noticia.imagem})` }}
+                                    style={{ backgroundImage: `url(${API_URL+noticia.imagem})` }}
                                 />
                             )}
 

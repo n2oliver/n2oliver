@@ -12,13 +12,12 @@ services:
       - "8000:80"
 
     volumes:
-      - ./src:/var/www/html/src
-      - ./public:/var/www/html/public
       - ./package.json:/var/www/html/package.json
       - ./vite.config.mjs:/var/www/html/vite.config.mjs
       - ./index.html:/var/www/html/index.html
       - ./.env.development:/var/www/html/.env.development
-      - ./api:/var/www/html/api
+      - ./public/img:/var/www/html/public/img
+      - ./public/song:/var/www/html/public/song
       - /var/www/html/node_modules
 
     env_file:

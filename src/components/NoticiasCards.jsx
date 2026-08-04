@@ -30,7 +30,7 @@ function NoticiasCards() {
     }
     return (noticias.map((noticia, index) => (
         <div className="card" key={noticia.id} onClick={irParaNoticia} data-noticia-id={noticia.id}>
-            <div className="img" style={{ backgroundImage: `url(${API_URL}/src${noticia.imagem})` }}></div>
+            <div className="img" style={{ backgroundImage: `url(${API_URL+noticia.imagem})` }}></div>
             <strong dangerouslySetInnerHTML={{ __html: noticia.titulo }}></strong>
         </div>
     )));

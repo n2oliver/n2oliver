@@ -36,7 +36,7 @@ function ListaJogos() {
                             style={
                                 {
                                     height: '150px', 
-                                    background: `url(${API_URL}/src${game.imagem})`, 
+                                    background: `url(${API_URL+game.imagem})`, 
                                     backgroundSize: 'cover'
                                 }}>
                             {/* <p>{game.descricao}</p> 

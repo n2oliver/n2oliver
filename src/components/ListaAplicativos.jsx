@@ -43,7 +43,7 @@ function ListaAplicativos() {
                                 <a href={app.url} target="_blank" role="button" className="btn btn-custom w-auto">{app.titulo}</a>
                             </h2>
                             <img alt={app.titulo} className="title-image img-fluid" 
-                                src={`${API_URL}/src${app.imagem}`}/>
+                                src={`${API_URL+app.imagem}`}/>
                             
                         </SwiperSlide>
                     }
