@@ -1,7 +1,9 @@
-import $ from "../plugins/jquery.js";
-window.jQuery = $;
-import "jquery-ui-dist/jquery-ui.js";
-import "jquery-ui-dist/jquery-ui.css";
+import $ from "../plugins/jquery-ui";
+
+import "jquery-ui/ui/widget";
+import "jquery-ui/ui/widgets/progressbar";
+import "jquery-ui/themes/base/core.css";
+import "jquery-ui/themes/base/progressbar.css";
 import { next } from "./DestaqueImagem";
 
 let progress = -1;

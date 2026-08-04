@@ -3,42 +3,40 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.php
+
     container_name: php-api
+
+    working_dir: /var/www/html
+
     ports:
-      - 8000:80
+      - "8000:80"
+
     volumes:
       - ./src:/var/www/html/src
+      - ./public:/var/www/html/public
+      - ./package.json:/var/www/html/package.json
+      - ./vite.config.mjs:/var/www/html/vite.config.mjs
+      - ./index.html:/var/www/html/index.html
+      - ./.env.development:/var/www/html/.env.development
+      - ./api:/var/www/html/api
+      - /var/www/html/node_modules
+
     env_file:
       - .env.development
+
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    develop:
-      watch:
-        - path: ./api
-          target: /var/www/html/api
-          action: sync+restart
 
-  frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile.react
-    container_name: n2oliver-react
-    working_dir: /var/www/html/
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./package.json:/var/www/html/src/package.json
-      - ./public:/var/www/html/src/public
-      - /var/www/html/src/node_modules
-    env_file:
-      - .env.development
-    depends_on:
-      - backend
-    stdin_open: true
-    tty: true
-    restart: unless-stopped
     develop:
       watch:
         - path: ./src
           target: /var/www/html/src
+          action: sync
+
+        - path: ./public
+          target: /var/www/html/public
+          action: sync
+
+        - path: ./api
+          target: /var/www/html/api
           action: sync+restart

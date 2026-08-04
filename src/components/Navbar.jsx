@@ -1,5 +1,4 @@
 
-import icon from '../img/n2-ico.jpg';
 function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 m-auto px-0">
@@ -7,7 +6,7 @@ function Navbar() {
 
                 <div className="d-flex w-100 justify-content-between">
                     <a className="navbar-brand rounded" href="/">
-                        <img src={icon} width="32" className="rounded" alt="logo" />oliver
+                        <img src="/img/n2-ico.jpg" width="32" className="rounded" alt="logo" />oliver
                     </a>
 
 

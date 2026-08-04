@@ -10,7 +10,7 @@
     animation: inverter .5s ease;
 }
 .platform .sem-fundo {
-    background-image: url(../../../../img/jogos/combo-memo/card/card.png) !important;
+    background-image: url(/img/jogos/combo-memo/card/card.png) !important;
 }
 @keyframes inverter {
   0%   { transform: scaleX(1); }

@@ -1,11 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-import $ from "jquery";
-
-window.$ = $;
-window.jQuery = $;
-
-await import("jquery-ui-dist/jquery-ui");
+import $ from "./plugins/jquery-ui.js";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';

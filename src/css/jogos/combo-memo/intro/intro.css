@@ -1,5 +1,5 @@
 body {
-    background-image: url(../../../../img/jogos/combo-memo/bg-combo-memo.png);
+    background-image: url(/img/jogos/combo-memo/bg-combo-memo.png);
     background-position: center;
     background-attachment: fixed;
 }
@@ -18,7 +18,7 @@ body {
     -webkit-text-stroke: .7px #000;
 }
 header {
-    background-image: url(../../../../img/jogos/combo-memo/platform/wood.jpg);
+    background-image: url(/img/jogos/combo-memo/platform/wood.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

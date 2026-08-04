@@ -3,7 +3,7 @@ body {
   text-align: center;
   background-color: #e9ebee;
   padding: 2rem;
-  background-image: url(../../../img/web-design-technology-browsing-programming-concept.jpg);
+  background-image: url(/img/web-design-technology-browsing-programming-concept.jpg);
   background-size: cover;
   backdrop-filter: brightness(.8);
 }
@@ -41,7 +41,7 @@ p {
 }
 
 #main-text {
-  background-image: url(../../../img/jogos/bg-grid.jpg);
+  background-image: url(/img/jogos/bg-grid.jpg);
   position: relative;
   width: 100vw;
   background-size: cover;
