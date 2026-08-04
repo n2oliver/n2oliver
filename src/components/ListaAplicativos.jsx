@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { useEffect, useState } from "react";
@@ -7,7 +8,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import '../css/swiper.css';
-import { Link } from 'react-router-dom';
 
 function ListaAplicativos() {
     const [aplicativos, setAplicativos] = useState([]);
@@ -41,7 +41,7 @@ function ListaAplicativos() {
                         /*!-- Slides --*/
                         return <SwiperSlide  key={index} >
                             <h2 className="slide-title">
-                                <Link to={app.url} target="_blank" role="button" className="btn btn-custom w-auto">{app.titulo}</Link>
+                                <Link to={app.url} target="_blank" role="button" className="w-auto">{app.titulo}</Link>
                             </h2>
                             <img alt={app.titulo} className="title-image img-fluid" 
                                 src={`${API_URL+app.imagem}`}/>

@@ -173,7 +173,7 @@ main {
 }
 
 #thumbnail button {
-  height: fit-content;
+  height: 72px;
 }
 
 #game-noticias .card {

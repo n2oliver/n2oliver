@@ -16,8 +16,6 @@ services:
       - ./vite.config.mjs:/var/www/html/vite.config.mjs
       - ./index.html:/var/www/html/index.html
       - ./.env.development:/var/www/html/.env.development
-      - ./public/img:/var/www/html/public/img
-      - ./public/song:/var/www/html/public/song
       - /var/www/html/node_modules
 
     env_file:
@@ -30,7 +28,7 @@ services:
       watch:
         - path: ./src
           target: /var/www/html/src
-          action: sync
+          action: rebuild
 
         - path: ./public
           target: /var/www/html/public

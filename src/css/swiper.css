@@ -3,14 +3,21 @@
 }
 .swiper-slide {
     position: relative;
+    width: 100%;
 }
 
 .slide-title {
     position: absolute;
-    bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.slide-title a {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-variant: all-small-caps;
 }
 .title-image {
     width: 100%;
