@@ -89,7 +89,7 @@ Ferramentas desenvolvidas para aumentar a produtividade, facilitar o desenvolvim
             Saiba mais
             </a>
 
-            <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-1.0.6.zip"
+            <a href="/extensoes/inspetor-visual/versoes/inspetor-visual-1.0.8.zip"
             class="btn btn-outline-primary" style="width: fit-content">
             Download
             </a>
@@ -137,7 +137,7 @@ Ferramentas desenvolvidas para aumentar a produtividade, facilitar o desenvolvim
             Saiba mais
             </a>
 
-            <a href="/extensoes/leitor-de-pdf/versoes/leitor-de-pdf-0.6.1.zip"
+            <a href="/extensoes/leitor-de-pdf/versoes/leitor-de-pdf-0.6.2.zip"
             class="btn btn-outline-primary" style="width: fit-content">
             Download
             </a>
