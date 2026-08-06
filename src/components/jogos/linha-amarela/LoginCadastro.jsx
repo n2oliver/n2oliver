@@ -10,11 +10,11 @@ function LoginCadastro() {
         setUpIntro(audioManager);
     });
     return (
-        <div className="container p-0" style={{ zIndex: 10, backgroundColor: "transparent !important", margin: "0 auto" }}>
-            <div style={{ backgroundColor: "rgba(255, 255, 255, 0.20)", backdropFilter: "blur(10px)" }}>
+        <div className="container p-0" style={{ zIndex: 10, backgroundColor: "transparent", margin: "0 auto" }}>
+            <nav className="navbar navbar-expand-lg navbar-dark text-light" style={{ backgroundColor: "rgba(255, 255, 255, 0.20)", backdropFilter: "blur(10px)" }}>
                 <a href={appUrl} className="linha-amarela-title" style={{ textDecoration: "none", color: "yellow", WebkitTextStroke: ".7px black", fontWeight: "bolder", fontSize: "26px" }}>Linha Amarela</a>
                 <ToastContainer />
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
@@ -29,7 +29,7 @@ function LoginCadastro() {
 
                     </ul>
                 </div>
-            </div>
+            </nav>
             <div className="row">
                 { typeof usuario != 'undefined' && usuario.email ?
                     (
