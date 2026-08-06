@@ -33,7 +33,7 @@ header img {
     max-width: 200px;
 }
 
-h1 {
+h1:not(.jumbotron h1) {
     font-size: 2rem;
     color: yellow !important;
     -webkit-text-stroke: .3px deepskyblue;

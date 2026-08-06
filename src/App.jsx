@@ -32,6 +32,7 @@ import CacaPalavras from "./pages/jogos/caca-palavras/jogar/CacaPalavras";
 import PalavrasCruzadasIntro from "./pages/jogos/palavras-cruzadas/PalavrasCruzadasIntro";
 import PalavrasCruzadas from "./pages/jogos/palavras-cruzadas/jogar/PalavrasCruzadas";
 import CaixaDeLetras from "./pages/jogos/caixa-de-letras/CaixaDeLetras";
+import LinhaAmarelaIntro from "./pages/jogos/linha-amarela/LinhaAmarelaIntro.jsx";
 let API_URL;
 function App() {
   const [config, setConfig] = useState([]);
@@ -74,6 +75,9 @@ function App() {
 
         <Route path="/jogos/palavras-cruzadas" element={<PalavrasCruzadasIntro />} />
         <Route path="/jogos/palavras-cruzadas/jogar" element={<PalavrasCruzadas />} />
+
+        <Route path="/jogos/linhaamarela" element={<LinhaAmarelaIntro />} />
+        <Route path="/jogos/linha-amarela" element={<LinhaAmarelaIntro />} />
 
         <Route path="/jogos/caixa-de-letras" element={<CaixaDeLetras />} />
 

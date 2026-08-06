@@ -1,0 +1,36 @@
+.pause, .qr-code {
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+.pause {
+    color: yellow;
+    border-radius: 20px;
+    font-family: Helvetica;
+    font-size: large;
+    border: 5px solid yellow;
+    text-align: center;
+    display: none;
+}
+.qr-code {
+    font-size: large;
+    text-align: center;
+}
+.qr-code #qr-code {
+    width: 100px;
+}
+.pause-button, .play-button {
+    width: 4em; 
+    top: 64px; 
+    right: 32px;
+}
+
+.pause-button img, .play-button img {
+    width: 64px;
+    height: 64px;
+}
+.play-button {
+    display: none;
+}
