@@ -33,6 +33,7 @@ import PalavrasCruzadasIntro from "./pages/jogos/palavras-cruzadas/PalavrasCruza
 import PalavrasCruzadas from "./pages/jogos/palavras-cruzadas/jogar/PalavrasCruzadas";
 import CaixaDeLetras from "./pages/jogos/caixa-de-letras/CaixaDeLetras";
 import LinhaAmarelaIntro from "./pages/jogos/linha-amarela/LinhaAmarelaIntro.jsx";
+import Jogo from "./pages/jogos/linha-amarela/Jogo.jsx";
 let API_URL;
 function App() {
   const [config, setConfig] = useState([]);
@@ -67,18 +68,27 @@ function App() {
         <Route path="/desenvolvedor" element={<Desenvolvedor />} />
         <Route path="/contato" element={<Contato />} />
 
+        <Route path="/jogos/combomemo" element={<ComboMemoIntro />} />
+        <Route path="/jogos/combomemo/jogar" element={<ComboMemo />} />
         <Route path="/jogos/combo-memo" element={<ComboMemoIntro />} />
         <Route path="/jogos/combo-memo/jogar" element={<ComboMemo />} />
 
+        <Route path="/jogos/cacapalavras" element={<CacaPalavrasIntro />} />
+        <Route path="/jogos/cacapalavras/jogar" element={<CacaPalavras />} />
         <Route path="/jogos/caca-palavras" element={<CacaPalavrasIntro />} />
         <Route path="/jogos/caca-palavras/jogar" element={<CacaPalavras />} />
 
+        <Route path="/jogos/palavrascruzadas" element={<PalavrasCruzadasIntro />} />
+        <Route path="/jogos/palavrascruzadas/jogar" element={<PalavrasCruzadas />} />
         <Route path="/jogos/palavras-cruzadas" element={<PalavrasCruzadasIntro />} />
         <Route path="/jogos/palavras-cruzadas/jogar" element={<PalavrasCruzadas />} />
 
         <Route path="/jogos/linhaamarela" element={<LinhaAmarelaIntro />} />
+        <Route path="/jogos/linhaamarela/jogo" element={<Jogo />} />
         <Route path="/jogos/linha-amarela" element={<LinhaAmarelaIntro />} />
+        <Route path="/jogos/linha-amarela/jogo" element={<Jogo />} />
 
+        <Route path="/jogos/caixadeletras" element={<CaixaDeLetras />} />
         <Route path="/jogos/caixa-de-letras" element={<CaixaDeLetras />} />
 
         <Route path="*" element={<NotFound />} />

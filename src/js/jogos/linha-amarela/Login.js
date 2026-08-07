@@ -42,7 +42,7 @@ class Login {
                     close: true
                 });
                 setTimeout(()=>{
-                    window.location.href=`/api${this.appUrl}/game.php`;
+                    window.location.href=`${this.appUrl}/jogo`;
                 }, 3000);
 
             },

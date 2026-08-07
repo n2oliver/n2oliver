@@ -1,0 +1,65 @@
+<<<<<<< HEAD
+import "../../../../css/jogos/linha-amarela/info.css";
+import "../../../../css/jogos/linha-amarela/logo.css";
+import "../../../../css/jogos/linha-amarela/nivel.css";
+import "../../../../css/jogos/linha-amarela/pause.css";
+=======
+>>>>>>> d064d49 (feat: início da construção da tela de jogo linha-amarela)
+function Menu() {
+    function setUser(usuario_id, partida_rapida) {
+        window.usuarioId = typeof usuario_id != 'undefined' ? usuario_id : null;
+        window.partidaRapida = typeof partida_rapida != 'undefined' ? partida_rapida : null;
+    }
+    if (typeof usuario_id != 'undefined' && typeof partida_rapida != 'undefined') {
+        setUser(usuario_id, partidaRapida);
+    }
+    return (
+        <div class="menu">
+<<<<<<< HEAD
+            <div id="pause-button" class="unselectable pause-button menu-item"><img alt="pause" src="/img/jogos/linha-amarela/pause-icon-png-12.jpg" loading="lazy" /></div>
+            <div id="play-button" class="unselectable play-button menu-item"><img alt="play" src="/img/jogos/linha-amarela/png-clipart-digital-marketing-implementation-business-computer-programming-play-button-electronics-text.png" loading="lazy" /></div>
+            <div id="audio-button" class="unselectable audio-button menu-item"><img alt="audio" width="100%" src="/img/jogos/linha-amarela/icons8-alto-falante-100.png" loading="lazy" /></div>
+            <div id="logo" class="unselectable game-logo"><img alt="logo-linhaamarela" src="/img/jogos/linha-amarela/logo-linhaamarela.png" loading="lazy" /></div>
+            <img alt="sair" src="/img/jogos/linha-amarela/logout.png" width="32" height="32" class="sair" loading="lazy" />
+=======
+            <div id="pause-button" class="unselectable pause-button menu-item"><img alt="pause" src="<?= $APP_URL ?>/img/pause-icon-png-12.jpg" loading="lazy" /></div>
+            <div id="play-button" class="unselectable play-button menu-item"><img alt="play" src="<?= $APP_URL ?>/img/png-clipart-digital-marketing-implementation-business-computer-programming-play-button-electronics-text.png" loading="lazy" /></div>
+            <div id="audio-button" class="unselectable audio-button menu-item"><img alt="audio" width="100%" src="<?= $APP_URL ?>/img/icons8-alto-falante-100.png" loading="lazy" /></div>
+            <div id="logo" class="unselectable game-logo"><img alt="logo-linhaamarela" src="<?= $APP_URL ?>/img/logo-linhaamarela.png" loading="lazy" /></div>
+            <img alt="sair" src="<?= $APP_URL ?>/img/logout.png" width="32" height="32" class="sair" loading="lazy" />
+>>>>>>> d064d49 (feat: início da construção da tela de jogo linha-amarela)
+            {
+
+                typeof usuario_id != 'undefined' && typeof partida_rapida != 'undefined' ?
+                    (<>
+                        <hr />
+                        <div>
+                            <div class="presentation-container unselectable">Pontos: <span id="points-counter">0</span></div>
+
+                            <h1>Ranking</h1>
+                            <div>
+                                <table id="all-points" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Posição</th>
+                                            <th>Usuário</th>
+                                            <th>Pontuação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="ranking">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </>)
+                    :
+                    (<><hr />
+                        <div>
+                            <div class="presentation-container unselectable">Pontos: <span id="points-counter">0</span></div>
+                        </div>
+                    </>)
+                }
+        </div>)
+}
+
+export default Menu;

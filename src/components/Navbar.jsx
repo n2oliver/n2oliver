@@ -6,7 +6,11 @@ function Navbar() {
         "/jogos/linha-amarela",
         "/jogos/linha-amarela/",  
         "/jogos/linhaamarela", 
-        "/jogos/linhaamarela/"
+        "/jogos/linhaamarela/",
+        "/jogos/linha-amarela/jogo",
+        "/jogos/linha-amarela/jogo/",  
+        "/jogos/linhaamarela/jogo", 
+        "/jogos/linhaamarela/jogo/"
     ];
     return !negativePathNames.includes(window.location.pathname) && (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 m-auto px-0">

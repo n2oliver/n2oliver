@@ -6,7 +6,13 @@ import AAdsSticky from './AAdsSticky';
 import { Link } from 'react-router-dom';
 
 function Footer() {
-    return (<>
+    const negativePathNames = [
+        "/jogos/linha-amarela/jogo",
+        "/jogos/linha-amarela/jogo/",  
+        "/jogos/linhaamarela/jogo", 
+        "/jogos/linhaamarela/jogo/"
+    ];
+    return !negativePathNames.includes(window.location.pathname) && (<>
   <footer className="site-footer mt-2 m-auto">
     <Link to="/"><span className="oliver-dev-logo footer-logo">n2oliver</span></Link>
     <div className="d-flex justify-content-center">

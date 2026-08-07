@@ -53,7 +53,7 @@ class Inscricao {
                                 });
                             setTimeout(function() {
                                 sessionStorage.setItem('ingame', true);
-                                window.location = "game.php";
+                                window.location = "/jogos/linha-amarela/jogo";
                             }, 3000);
                         }
                     ).fail(

@@ -1,7 +1,7 @@
 @font-face {
     font-family: Big John;
     font-display: swap;
-    src: url(fonts/big_john.otf);
+    src: url(/fonts/big_john.otf);
  }
 .rotate-center {
     -webkit-animation: rotate-center 0.6s ease-in-out both;
@@ -34,14 +34,14 @@
 .trofeu {
     width: 24px;
     height: 24px;
-    background-image: url(/jogos/linhaamarela/img/trofeu.png);
+    background-image: url(/img/jogos/linha-amarela/trofeu.png);
     background-size: cover;
 }
 #vidas {
     display: flex;
 }
 .heart {
-    background-image: url(/jogos/linhaamarela/img/red-pixelart-style-heart-icon.png);
+    background-image: url(/img/jogos/linha-amarela/red-pixelart-style-heart-icon.png);
     background-size: cover;
     width: 32px;
     height: 24px;

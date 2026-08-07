@@ -44,7 +44,7 @@ function setUpIntro(audioManager) {
         if (!($('.navbar-toggler').attr('aria-expanded') == 'true') && typeof usuario_id != 'undefined' && !Boolean(usuario_id)) {
             $('input:visible').first().focus()
         } else if (typeof usuario_id != 'undefined' && usuario_id) {
-            window.location.href = `/api${appUrl}/game.php`;
+            window.location.href = `${appUrl}/jogo`;
         } else {
             toast('Você precisa entrar primeiro!', {
                 duration: 3000,
@@ -56,7 +56,7 @@ function setUpIntro(audioManager) {
         }
     });
     $('#partida').click(() => {
-        window.location.href = `/api${appUrl}/game.php?partida_rapida=1`;
+        window.location.href = `${appUrl}/jogo/?partida_rapida=1`;
     })
 }
 export { setUpIntro, setUpAudioManager }
