@@ -1,3 +1,11 @@
+import { AudioManager } from "./AudioManager";
+import { Ball } from "./Ball";
+import { GameBase } from "./GameBase";
+import { Platform } from "./Platform";
+import { PointsCounter } from "./PointsCounter";
+import { SpaceInvader } from "./SpaceInvader";
+import { YellowBox } from "./YellowBox";
+
 let hammerBg;
 let hammerYellowBox;
 let hammerPlatform;
@@ -95,7 +103,7 @@ class Game extends GameBase {
                 pauseStyle.display = "none";
                 pauseButtonStyle.display = "contents";
                 playButtonStyle.display = "none";
-                const audioIsEnabled = document.getElementById("audio-button").querySelector("img").src.includes("/jogos/linhaamarela/img/icons8-alto-falante-100.png");
+                const audioIsEnabled = document.getElementById("audio-button").querySelector("img").src.includes("/jogos/linha-amarela/img/icons8-alto-falante-100.png");
                 if(audioIsEnabled) {
                     audio.play();
                 }

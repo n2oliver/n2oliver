@@ -1,3 +1,5 @@
+import { Counter } from "./Counter";
+
 class PointsCounter extends Counter {
     points = 0;
     constructor(attributes) {
@@ -68,3 +70,4 @@ class PointsCounter extends Counter {
         });
     }
 }
+export { PointsCounter };

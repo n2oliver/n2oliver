@@ -1,3 +1,5 @@
+import { GameObject } from "./GameObject";
+
 class Ball extends GameObject {
     constructor(attributes){
         super(attributes);
@@ -92,3 +94,4 @@ class Ball extends GameObject {
         return estadoDaDirecao;
     }
 }
+export { Ball };

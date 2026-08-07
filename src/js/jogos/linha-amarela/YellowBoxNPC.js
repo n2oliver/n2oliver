@@ -1,3 +1,5 @@
+import { GameObject } from "./GameObject";
+
 class YellowBoxNPC extends GameObject {
     constructor(attributes){
         super(attributes);

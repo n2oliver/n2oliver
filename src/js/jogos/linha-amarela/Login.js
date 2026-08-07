@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 class Login {
     patterns =  {
         email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
@@ -5,7 +7,7 @@ class Login {
         senha: /.*\S.*/
     }
 
-    appUrl = '/jogos/linhaamarela';
+    appUrl = '/jogos/linha-amarela';
     camadaNome = $('#camada-nome');
     camadaEmail = $('#camada-email');
 
@@ -30,29 +32,27 @@ class Login {
         const senha = this.campoSenha.val();
         this.campoSenha.attr('type', 'password');
         $.ajax({
-            url: `${this.appUrl}/login.php`,
+            url: `/api${this.appUrl}/login.php`,
             data: { email, senha },
             type: 'POST',
             success: (response) => {
                 this.showSpinner('hide');
-                Toastify({
-                    text: JSON.parse(response).data,
+                toast(JSON.parse(response).data, {
                     duration: 10000,
                     close: true
-                }).showToast();
+                });
                 setTimeout(()=>{
-                    window.location.href=`${this.appUrl}/game.php`;
+                    window.location.href=`/api${this.appUrl}/game.php`;
                 }, 3000);
 
             },
             error: (xhr) => {
                 this.showSpinner('hide');
-                Toastify({
-                    text: JSON.parse(xhr.responseText).error,
+                toast(JSON.parse(xhr.responseText).error, {
                     duration: 10000,
                     className: 'error',
                     close: true
-                }).showToast();
+                });
             }
         })
     }
@@ -65,12 +65,11 @@ class Login {
 
         if(!email.trim()) {
             this.showSpinner('hide');
-            Toastify({
-                text: "Preencha primeiro o campo email!",
+            toast("Preencha primeiro o campo email!", {
                 duration: 10000,
                 className: 'error',
                 close: true
-            }).showToast();
+            });
             return;
         }
 
@@ -79,35 +78,32 @@ class Login {
 
             this.removeNotifications();
             this.showSpinner();
-            Toastify({
-                text: 'Enviando código de verificação...',
+            toast('Enviando código de verificação...', {
                 duration: 10000,
                 close: true
-            }).showToast();
+            });
                         
             $.ajax({
-                url: `${this.appUrl}/retry-email-verify.php`,
+                url: `/api${this.appUrl}/retry-email-verify.php`,
                 data: { email },
                 type: 'POST',
                 success: (response) => {
                     this.removeNotifications();
                     this.showSpinner('hide');
-                    Toastify({
-                        text: JSON.parse(response).data,
+                    toast(JSON.parse(response).data, {
                         duration: 10000,
                         className: 'success',
                         close: true
-                    }).showToast();
+                    });
                 },
                 error: (xhr) => {
                     this.removeNotifications();
                     this.showSpinner('hide');
-                    Toastify({
-                        text: JSON.parse(xhr.responseText).error,
+                    toast(JSON.parse(xhr.responseText).error, {
                         duration: 10000,
                         className: 'error',
                         close: true
-                    }).showToast();
+                    });
                 }
             })
 
@@ -116,14 +112,13 @@ class Login {
         this.verificar.unbind('click').click(()=>{
             this.removeNotifications();
             this.showSpinner();
-            Toastify({
-                text: 'Verificando código...',
+            toast('Verificando código...', {
                 duration: 10000,
                 close: true
-            }).showToast();
+            });
 
             $.ajax({
-                url: `${this.appUrl}/check-recovery.php`,
+                url: `/api${this.appUrl}/check-recovery.php`,
                 data: { codigo: this.codigoEnviado.val() },
                 xhrFields: {
                     withCredentials: true
@@ -132,12 +127,11 @@ class Login {
                 success: (response) => {
                     this.removeNotifications();
                     this.showSpinner('hide');
-                    Toastify({
-                        text: JSON.parse(response).data,
+                    toast(JSON.parse(response).data, {
                         duration: 10000,
                         className: 'success',
                         close: true
-                    }).showToast();
+                    });
                     this.codigoEnviado.val('');
                     this.liberarCampoCadastrarSenha();
 
@@ -147,26 +141,24 @@ class Login {
                     this.btnCadastrar.unbind('click').click(()=>{
                         this.removeNotifications();
                         this.showSpinner();
-                        Toastify({
-                            text: 'Aguarde a conclusão do cadastro...',
+                        toast('Aguarde a conclusão do cadastro...', {
                             duration: 10000,
                             close: true
-                        }).showToast();
+                        });
                         const nome = this.campoNome.val();
                         const senha = this.cadastroSenha.val();
                         if(!nome.trim() || !senha.trim()) {
                             this.removeNotifications();
                             this.showSpinner('hide');
-                            Toastify({
-                                text: 'Preencha todos os campos!',
+                            toast('Preencha todos os campos!', {
                                 duration: 10000,
                                 className: 'warning',
                                 close: true
-                            }).showToast();
+                            });
                             return;
                         }
                         $.ajax({
-                            url: `${this.appUrl}/password-create.php`,
+                            url: `/api${this.appUrl}/password-create.php`,
                             data: { nome, senha },
                             xhrFields: {
                                 withCredentials: true
@@ -175,12 +167,11 @@ class Login {
                             success: (response) => {
                                 this.removeNotifications();
                                 this.showSpinner('hide');
-                                Toastify({
-                                    text: JSON.parse(response).data,
+                                toast(JSON.parse(response).data, {
                                     duration: 10000,
                                     className: 'success',
                                     close: true
-                                }).showToast();
+                                });
                                 this.camadaNome.addClass('d-none');
                                 this.cadastrarSenha.addClass('d-none');
                                 this.camadaEmail.removeClass('d-none');
@@ -189,12 +180,11 @@ class Login {
                             error: (xhr) => {
                                 this.removeNotifications();
                                 this.showSpinner('hide');
-                                Toastify({
-                                    text: JSON.parse(xhr.responseText).error,
+                                toast(JSON.parse(xhr.responseText).error, {
                                     duration: 10000,
                                     className: 'error',
                                     close: true
-                                }).showToast();
+                                });
                             }
                         });
                     });
@@ -202,12 +192,11 @@ class Login {
                 error: (xhr) => {
                     this.removeNotifications();
                     this.showSpinner('hide');
-                    Toastify({
-                        text: JSON.parse(xhr.responseText).error,
+                    toast(JSON.parse(xhr.responseText).error, {
                         duration: 10000,
                         className: 'error',
                         close: true
-                    }).showToast();
+                    });
                 }
             })
         });
@@ -230,25 +219,23 @@ class Login {
         $(document).ready(()=>{
             this.removeNotifications();
             this.showSpinner();
-            Toastify({
-                text: 'Enviando código de verificação...',
+            toast('Enviando código de verificação...', {
                 duration: 10000,
                 close: true
-            }).showToast();
+            });
             $.ajax({
-                url: `${this.appUrl}/password-create-mail.php`,
+                url: `/api${this.appUrl}/password-create-mail.php`,
                 data: { email },
                 type: 'POST',
                 success: (response) => {
                     this.removeNotifications();
                     this.showSpinner('hide');
                     if(JSON.parse(response).status == "user_exists") {
-                        Toastify({
-                            text: JSON.parse(response).data,
+                        toast(JSON.parse(response).data, {
                             duration: 10000,
                             className: 'warning',
                             close: true
-                        }).showToast();
+                        });
                         return;
                     }
                     this.campoEmail.prop('disabled', true);
@@ -258,22 +245,20 @@ class Login {
                     this.naoRecebiEmail.removeClass('d-none');
                     this.cancelarEsqueciSenhaEmail.removeClass('d-none');
                     
-                    Toastify({
-                        text: JSON.parse(response).data,
+                    toast(JSON.parse(response).data, {
                         duration: 10000,
                         className: 'success',
                         close: true
-                    }).showToast();
+                    });
                 },
                 error: (xhr) => {
                     this.removeNotifications();
                     this.showSpinner('hide');
-                    Toastify({
-                        text: JSON.parse(xhr.responseText).error,
+                    toast(JSON.parse(xhr.responseText).error, {
                         duration: 10000,
                         className: 'error',
                         close: true
-                    }).showToast();
+                    });
                 }
             })
         })
@@ -290,12 +275,11 @@ class Login {
         if(!this.campoEmail.val().trim()) {
             this.removeNotifications();
             this.showSpinner('hide');
-            Toastify({
-                text: "Preencha primeiro o campo email!",
+            toast("Preencha primeiro o campo email!", {
                 duration: 10000,
                 className: 'error',
                 close: true
-            }).showToast();
+            });
             return;
         }
         this.camadaSenha.addClass('d-none');
@@ -324,34 +308,31 @@ class Login {
 
             this.removeNotifications();
             this.showSpinner();
-            Toastify({
-                text: 'Enviando código de verificação...',
+            toast('Enviando código de verificação...', {
                 duration: 10000,
                 close: true
-            }).showToast();
+            });
             $.ajax({
-                url: `${this.appUrl}/retry-password-recovery.php`,
+                url: `/api${this.appUrl}/retry-password-recovery.php`,
                 data: { email },
                 type: 'POST',
                 success: (response) => {
                     this.removeNotifications();
                     this.showSpinner('hide');
-                    Toastify({
-                        text: JSON.parse(response).data,
+                    toast(JSON.parse(response).data, {
                         duration: 10000,
                         className: 'success',
                         close: true
-                    }).showToast();
+                    });
                 },
                 error: (xhr) => {
                     this.removeNotifications();
                     this.showSpinner('hide');
-                    Toastify({
-                        text: JSON.parse(xhr.responseText).error,
+                    toast(JSON.parse(xhr.responseText).error, {
                         duration: 10000,
                         className: 'error',
                         close: true
-                    }).showToast();
+                    });
                 }
             })
 
@@ -360,50 +341,46 @@ class Login {
         this.verificar.unbind('click').click(()=>{
             this.removeNotifications();
             this.showSpinner();
-            Toastify({
-                text: 'Validando código de verificação...',
+            toast('Validando código de verificação...', {
                 duration: 10000,
                 close: true
-            }).showToast();
+            });
 
             $.ajax({
-                url: `${this.appUrl}/check-recovery.php`,
+                url: `/api${this.appUrl}/check-recovery.php`,
                 data: { codigo: this.codigoEnviado.val() },
                 type: 'POST',
                 success: (response) => {
                     this.removeNotifications();
                     this.showSpinner('hide');
-                    Toastify({
-                        text: JSON.parse(response).data,
+                    toast(JSON.parse(response).data, {
                         duration: 10000,
                         className: 'success',
                         close: true
-                    }).showToast();
+                    });
                     this.codigoEnviado.val('');
                     this.liberarCampoCadastrarSenha();
                     this.btnCadastrar.unbind('click').click(()=>{
                         this.removeNotifications();
                         this.showSpinner();
-                        Toastify({
-                            text: 'Aguarde a conclusão da mudança...',
+                        toast('Aguarde a conclusão da mudança...', {
                             duration: 10000,
                             close: true
-                        }).showToast();
+                        });
                         const email = this.campoEmail.val();
                         const senha = this.cadastroSenha.val();
                         if(!senha.trim()) {
                             this.removeNotifications();
                             this.showSpinner('hide');
-                            Toastify({
-                                text: 'Preencha todos os campos!',
+                            toast('Preencha todos os campos!', {
                                 duration: 10000,
                                 className: 'warning',
                                 close: true
-                            }).showToast();
+                            });
                             return;
                         }
                         $.ajax({
-                            url: `${this.appUrl}/password-change.php`,
+                            url: `/api${this.appUrl}/password-change.php`,
                             data: { email, senha },
                             xhrFields: {
                                 withCredentials: true
@@ -412,12 +389,11 @@ class Login {
                             success: (response) => {
                                 this.removeNotifications();
                                 this.showSpinner('hide');
-                                Toastify({
-                                    text: JSON.parse(response).data,
+                                toast(JSON.parse(response).data, {
                                     duration: 10000,
                                     className: 'success',
                                     close: true
-                                }).showToast();
+                                });
                                 this.camadaNome.addClass('d-none');
                                 this.cadastrarSenha.addClass('d-none');
                                 this.camadaEmail.removeClass('d-none');
@@ -426,12 +402,11 @@ class Login {
                             error: (xhr) => {
                                 this.removeNotifications();
                                 this.showSpinner('hide');
-                                Toastify({
-                                    text: JSON.parse(xhr.responseText).error,
+                                toast(JSON.parse(xhr.responseText).error, {
                                     duration: 10000,
                                     className: 'error',
                                     close: true
-                                }).showToast();
+                                });
                             }
                         });
                     });
@@ -439,12 +414,11 @@ class Login {
                 error: (xhr) => {
                     this.removeNotifications();
                     this.showSpinner('hide');
-                    Toastify({
-                        text: JSON.parse(xhr.responseText).error,
+                    toast(JSON.parse(xhr.responseText).error, {
                         duration: 10000,
                         className: 'error',
                         close: true
-                    }).showToast();
+                    });
                 }
             })
         });
@@ -453,34 +427,31 @@ class Login {
             this.campoEmail.prop('disabled', true);
             this.removeNotifications();
             this.showSpinner();
-            Toastify({
-                text: 'Enviando código de verificação...',
+            toast('Enviando código de verificação...', {
                 duration: 10000,
                 close: true
-            }).showToast();
+            });
             $.ajax({
-                url: `${this.appUrl}/password-recovery.php`,
+                url: `/api${this.appUrl}/password-recovery.php`,
                 data: { email },
                 type: 'POST',
                 success: (response) => {
                     this.removeNotifications();
                     this.showSpinner('hide');
-                    Toastify({
-                        text: JSON.parse(response).data,
+                    toast(JSON.parse(response).data, {
                         duration: 10000,
                         className: 'success',
                         close: true
-                    }).showToast();
+                    });
                 },
                 error: (xhr) => {
                     this.removeNotifications();
                     this.showSpinner('hide');
-                    Toastify({
-                        text: JSON.parse(xhr.responseText).error,
+                    toast(JSON.parse(xhr.responseText).error, {
                         duration: 10000,
                         className: 'error',
                         close: true
-                    }).showToast();
+                    });
                 }
             })
         })

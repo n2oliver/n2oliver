@@ -15,3 +15,4 @@ class GameObject {
         Object.assign(document.getElementById(attributes.id).style, styles);
     }
 }
+export { GameObject };

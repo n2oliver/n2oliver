@@ -31,3 +31,4 @@ class SpaceInvaderNPC {
         }, 100);
     }    
 }
+export { SpaceInvaderNPC };

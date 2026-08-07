@@ -13,3 +13,4 @@ class Counter {
         }
     }
 }
+export { Counter };

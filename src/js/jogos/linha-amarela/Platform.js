@@ -5,8 +5,9 @@ class Platform extends GameObject {
         Object.assign(document.getElementById(attributes.id).style, { 
             position: "fixed",
             ...attributes,
-            "background-image": "url(/jogos/linhaamarela/img/trail.png)",
+            "background-image": "url(/jogos/linha-amarela/img/trail.png)",
             "background-size": "auto 100%", 
         });
     }
 }
+export { Platform };

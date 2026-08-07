@@ -1,3 +1,7 @@
+import { GameBase } from "./GameBase";
+import { PointsCounter } from "./PointsCounter";
+import { SpaceInvaderNPC } from "./SpaceInvaderNPC";
+
 class GameOver extends GameBase {
     pointsCounter;
     livesCounter;

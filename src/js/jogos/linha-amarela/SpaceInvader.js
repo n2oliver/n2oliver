@@ -166,3 +166,4 @@ class SpaceInvader {
         }
     }
 }
+export { SpaceInvader };

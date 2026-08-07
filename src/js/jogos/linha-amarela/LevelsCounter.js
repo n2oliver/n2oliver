@@ -1,3 +1,6 @@
+import { Counter } from "./Counter";
+import { SpaceInvader } from "./SpaceInvader";
+
 class LevelsCounter extends Counter  {
     level = 1;
     levelUp = new Event("levelup");

@@ -1,3 +1,5 @@
+import { GameObject } from "./GameObject";
+
 class YellowBox extends GameObject {
     
     defaultShotType = {
@@ -37,7 +39,7 @@ class YellowBox extends GameObject {
             position: "fixed",
             "background-size": "contain",
             "background-repeat": "no-repeat",
-            "background-image": "url(/jogos/linhaamarela/img/linha.png)"
+            "background-image": "url(/jogos/linha-amarela/img/linha.png)"
         });
         this.updatePosition = function(event, gameObject = this) {
             let xOffset = event.pageX;
@@ -102,3 +104,4 @@ class YellowBox extends GameObject {
         }
     }
 }
+export { YellowBox };

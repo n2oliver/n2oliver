@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 class Inscricao {
     patterns =  {
         email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
@@ -43,13 +45,12 @@ class Inscricao {
                             const expiraEm = new Date();
                             expiraEm.setTime(usuario.expiraEm * 1000);
                             document.cookie = `username=${usuario.nomedeusuario}; expires=${expiraEm.toUTCString()}`;
-                            Toastify({
-                                text: "Inscrição realizada com sucesso!",
-                                duration: 3000,
-                                style: {
-                                background: "linear-gradient(to right, #00b09b, #96c93d)",
-                                },
-                            }).showToast();
+                            toast("Inscrição realizada com sucesso!", {
+                                    duration: 3000,
+                                    style: {
+                                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                                    },
+                                });
                             setTimeout(function() {
                                 sessionStorage.setItem('ingame', true);
                                 window.location = "game.php";
@@ -57,13 +58,12 @@ class Inscricao {
                         }
                     ).fail(
                         function(error) {
-                            Toastify({
-                                text: error.responseText,
+                            toast(error.responseText, {
                                 duration: 3000,
                                 style: {
                                 background: "linear-gradient(to right, #b09b00, #ff0000)",
                                 },
-                            }).showToast();
+                            });
                         }
                     );
             } else {
@@ -81,13 +81,12 @@ class Inscricao {
                         };
                     })[0];
                     
-                Toastify({
-                    text: fieldError.message,
+                toast(fieldError.message, {
                     duration: 3000,
                     style: {
                     background: "linear-gradient(to right, #b09b00, #ff0000)",
                     },
-                }).showToast();
+                });
             }
         }
         nomedeusuarioInscricaoField.onkeyup = function(e){
@@ -113,3 +112,4 @@ class Inscricao {
         return invalid;
     }
 }
+export { Inscricao };
