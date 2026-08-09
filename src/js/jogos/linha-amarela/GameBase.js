@@ -1,3 +1,5 @@
+import { Background } from "./Background";
+
 class GameBase {
     pointsCounter;
     livesCounter;
@@ -7,7 +9,7 @@ class GameBase {
     backgroundImages = [
         "/jogos/linha-amarela/img/fundo.png",
     ];
-    constructor(e, level, totalDeMonstros, top) {
+    constructor(level, totalDeMonstros, top) {
         this.level = level;
         this.background = new Background();
         const random = Math.floor(Math.random() * this.backgroundImages.length);

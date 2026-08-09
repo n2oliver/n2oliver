@@ -1,6 +1,10 @@
+import Hammer from 'hammerjs';
+import { abrirSmartlinkUmaVez } from "../../anuncios";
 import { AudioManager } from "./AudioManager";
 import { Ball } from "./Ball";
 import { GameBase } from "./GameBase";
+import { LevelsCounter } from "./LevelsCounter";
+import { LivesCounter } from "./LivesCounter";
 import { Platform } from "./Platform";
 import { PointsCounter } from "./PointsCounter";
 import { SpaceInvader } from "./SpaceInvader";
@@ -21,8 +25,8 @@ class Game extends GameBase {
     interval;
     audioManager;
     top = 100;
-    constructor(e, level, totalDeMonstros, top, points, lives) {
-        super(e, level, totalDeMonstros, top, points, lives);
+    constructor(level, totalDeMonstros, top, points, lives) {
+        super(level, totalDeMonstros, top, points, lives);
         
         window.ball = new Ball({
             id: "red-ball",
@@ -212,25 +216,5 @@ class Game extends GameBase {
         window.onkeyup = null;
     }
 }
-            
-document.addEventListener("DOMContentLoaded", (e) => {
 
-    sessionStorage.setItem('ingame', true);
-    level = 1;
-    game = new Game(e, level);
-    document.getElementById("restart").addEventListener('click',()=>{
-        gtag("event", "close_convert_lead", {
-            currency: "USD",
-            value: 0.0004
-        });
-        setTimeout(()=>{
-            window.location.reload();
-        }, 500);
-    });
-});
-window.onclick = (e) => {
-    if(window.game) {
-        window.game.audioManager.playAsBgMusic();
-        game.start(e);      
-    }
-}
+export { Game };

@@ -1,3 +1,5 @@
+import { GameObject } from "./GameObject";
+
 class Platform extends GameObject {
     constructor(attributes){
         super(attributes);
@@ -5,7 +7,7 @@ class Platform extends GameObject {
         Object.assign(document.getElementById(attributes.id).style, { 
             position: "fixed",
             ...attributes,
-            "background-image": "url(/jogos/linha-amarela/img/trail.png)",
+            "background-image": "url(/img/jogos/linha-amarela/trail.png)",
             "background-size": "auto 100%", 
         });
     }

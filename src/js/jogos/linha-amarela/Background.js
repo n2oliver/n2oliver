@@ -15,3 +15,4 @@ class Background {
         }
     }
 }
+export { Background };

@@ -11,7 +11,7 @@ $(document).ready(() => {
     function obterPontuacaoUsuario(page, idUsuario) {
         $('.spinner').removeClass('d-none');
         $.ajax({
-            url: './obter-pontos.php',
+            url: '/api/jogos/linha-amarela/obter-pontos.php',
             method: 'POST',
             type: 'json/application',
             data: { page: page || 1, id_usuario: idUsuario },
@@ -20,7 +20,7 @@ $(document).ready(() => {
                 const pontuacoes = JSON.parse(data);
                 const pontosUsuario = $('#pontuacao');
                 pontosUsuario.html('');
-                for (pontuacao of pontuacoes) {
+                for (let pontuacao of pontuacoes) {
                     pontosUsuario.append(`<tr>
                                     <td>${pontuacao.posicao}</td>
                                     <td>${pontuacao.nome}</td>
@@ -56,7 +56,7 @@ $(document).ready(() => {
 
 
             $.ajax({
-                url: './obter-pontos.php',
+                url: '/api/jogos/linha-amarela/obter-pontos.php',
                 method: 'POST',
                 type: 'json/application',
                 data: { page: page || 1 },
@@ -65,7 +65,7 @@ $(document).ready(() => {
                     const pontuacoes = JSON.parse(data);
                     const lista = $('#lista');
                     lista.html('');
-                    for (pontuacao of pontuacoes) {
+                    for (let pontuacao of pontuacoes) {
                         lista.append(`<tr>
                                             <td>${pontuacao.posicao}</td>
                                             <td>${pontuacao.nome}</td>
@@ -79,7 +79,7 @@ $(document).ready(() => {
                 }
             });
             $.ajax({
-                url: './obter-paginacao.php',
+                url: '/api/jogos/linha-amarela/obter-paginacao.php',
                 method: 'POST',
                 type: 'json/application',
                 data: { page: page },

@@ -11,23 +11,23 @@ function Menu() {
         setUser(usuario_id, partidaRapida);
     }
     return (
-        <div class="menu">
-            <div id="pause-button" class="unselectable pause-button menu-item"><img alt="pause" src="/img/jogos/linha-amarela/pause-icon-png-12.jpg" loading="lazy" /></div>
-            <div id="play-button" class="unselectable play-button menu-item"><img alt="play" src="/img/jogos/linha-amarela/png-clipart-digital-marketing-implementation-business-computer-programming-play-button-electronics-text.png" loading="lazy" /></div>
-            <div id="audio-button" class="unselectable audio-button menu-item"><img alt="audio" width="100%" src="/img/jogos/linha-amarela/icons8-alto-falante-100.png" loading="lazy" /></div>
-            <div id="logo" class="unselectable game-logo"><img alt="logo-linhaamarela" src="/img/jogos/linha-amarela/logo-linhaamarela.png" loading="lazy" /></div>
-            <img alt="sair" src="/img/jogos/linha-amarela/logout.png" width="32" height="32" class="sair" loading="lazy" />
+        <div className="menu">
+            <div id="pause-button" className="unselectable pause-button menu-item"><img alt="pause" src="/img/jogos/linha-amarela/pause-icon-png-12.jpg" loading="lazy" /></div>
+            <div id="play-button" className="unselectable play-button menu-item"><img alt="play" src="/img/jogos/linha-amarela/png-clipart-digital-marketing-implementation-business-computer-programming-play-button-electronics-text.png" loading="lazy" /></div>
+            <div id="audio-button" className="unselectable audio-button menu-item"><img alt="audio" width="100%" src="/img/jogos/linha-amarela/icons8-alto-falante-100.png" loading="lazy" /></div>
+            <div id="logo" className="unselectable game-logo"><img alt="logo-linhaamarela" src="/img/jogos/linha-amarela/logo-linhaamarela.png" loading="lazy" /></div>
+            <img alt="sair" src="/img/jogos/linha-amarela/logout.png" width="32" height="32" className="sair" loading="lazy" />
             {
 
                 typeof usuario_id != 'undefined' && typeof partida_rapida != 'undefined' ?
                     (<>
                         <hr />
                         <div>
-                            <div class="presentation-container unselectable">Pontos: <span id="points-counter">0</span></div>
+                            <div className="presentation-container unselectable">Pontos: <span id="points-counter">0</span></div>
 
                             <h1>Ranking</h1>
                             <div>
-                                <table id="all-points" class="table">
+                                <table id="all-points" className="table">
                                     <thead>
                                         <tr>
                                             <th>Posição</th>
@@ -44,7 +44,7 @@ function Menu() {
                     :
                     (<><hr />
                         <div>
-                            <div class="presentation-container unselectable">Pontos: <span id="points-counter">0</span></div>
+                            <div className="presentation-container unselectable">Pontos: <span id="points-counter">0</span></div>
                         </div>
                     </>)
                 }

@@ -50,3 +50,4 @@ class LevelsCounter extends Counter  {
         }, false);
     }
 }
+export { LevelsCounter };

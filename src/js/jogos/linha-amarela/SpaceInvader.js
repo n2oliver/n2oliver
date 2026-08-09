@@ -40,7 +40,7 @@ class SpaceInvader {
                 invader.classList.add("unselectable");
                 invader.style.left = (left ? '-' : '') + (Math.random() * 90 + 5) + "%"; // Posição horizontal aleatória
                 invader.style.top = invaderTop + "px";
-                invader.style.backgroundImage = "url(img/" + spaceInvaders[Math.floor(Math.random() * spaceInvaders.length)] + ".png)";
+                invader.style.backgroundImage = "url(/img/jogos/linha-amarela/" + spaceInvaders[Math.floor(Math.random() * spaceInvaders.length)] + ".png)";
                 fragment.appendChild(invader); // Adiciona ao fragmento
             }
         }

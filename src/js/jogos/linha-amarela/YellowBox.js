@@ -39,7 +39,7 @@ class YellowBox extends GameObject {
             position: "fixed",
             "background-size": "contain",
             "background-repeat": "no-repeat",
-            "background-image": "url(/jogos/linha-amarela/img/linha.png)"
+            "background-image": "url(/img/jogos/linha-amarela/linha.png)"
         });
         this.updatePosition = function(event, gameObject = this) {
             let xOffset = event.pageX;

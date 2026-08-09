@@ -1,3 +1,4 @@
+import { Counter } from './Counter.js';
 class LivesCounter extends Counter {
     lives = 2;
     constructor(attributes) {
@@ -27,3 +28,4 @@ class LivesCounter extends Counter {
         }
     }
 }
+export { LivesCounter };
