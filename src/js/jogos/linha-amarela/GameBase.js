@@ -7,7 +7,7 @@ class GameBase {
     level;
     background;
     backgroundImages = [
-        "/jogos/linha-amarela/img/fundo.png",
+        "/img/jogos/linha-amarela/fundo.png",
     ];
     constructor(level, totalDeMonstros, top) {
         this.level = level;

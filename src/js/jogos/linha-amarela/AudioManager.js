@@ -44,7 +44,7 @@ class AudioManager {
         this.creatureDieAudio.play();
     }
     mudarParaLaser(tipo) {
-        this.shotAudio.src = `/song${appUrl}/mp3/laser-${tipo}.mp3`;
+        this.shotAudio.src = `/song${appUrl}/laser-${tipo}.mp3`;
     }
     playAsBgMusic  = function () {
         const audio = document.getElementById("game-sound");

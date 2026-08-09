@@ -144,7 +144,7 @@ class SpaceInvader {
                                 invader.classList.add("unselectable");
                                 invader.style.left = "0%";
                                 invader.style.top = "100px";
-                                invader.style.backgroundImage = "url(img/apple.png)";
+                                invader.style.backgroundImage = "url(/img/jogos/linha-amarela/apple.png)";
                                 document.body.append(invader);
                             }
                         }

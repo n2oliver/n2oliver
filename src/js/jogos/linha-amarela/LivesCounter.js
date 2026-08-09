@@ -6,7 +6,8 @@ class LivesCounter extends Counter {
         this.attributes = attributes;
         const styles = {
             top: "96px",
-            left: "32px"
+            left: "32px",
+            padding: "20px 20px 0 0"
         }
         Object.assign(document.getElementById(attributes.id).parentElement.style, styles);
         

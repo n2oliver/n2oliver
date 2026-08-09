@@ -26,6 +26,9 @@
 .markers {
     display: list-item !important;
     padding: 20px 20px 0 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 .ranking {
     width: 200px;
