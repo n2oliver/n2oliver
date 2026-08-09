@@ -5,7 +5,7 @@ function Main() {
         setUp();
     });
     return (
-        <main className="game-container col-md-10 notranslate" translate="no">
+        <main className="game-container col-md-10 m-auto notranslate" translate="no">
             <div className="sidebar col-md-6">
                 <h2>Palavras para Encontrar</h2>
                 <ul id="word-list">

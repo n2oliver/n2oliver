@@ -13,6 +13,7 @@ import Markers from "../../../components/jogos/linha-amarela/Markers";
 import Spinner from "../../../components/jogos/linha-amarela/Spinner";
 import Pause from "../../../components/jogos/linha-amarela/Jogo/Pause";
 
+import '../../../css/home.css';
 import "../../../css/games.css";
 import "../../../css/jogos/linha-amarela/audio.css";
 import "../../../css/jogos/linha-amarela/box.css";

@@ -11,7 +11,12 @@ function Menu() {
         setUser(usuario_id, partidaRapida);
     }
     return (
-        <div className="menu">
+        <div className="menu" style={{
+            position: "absolute",
+            display: "inline-block",
+            width: "fit-content",
+            right: "0px"
+        }}>
             <div id="pause-button" className="unselectable pause-button menu-item"><img alt="pause" src="/img/jogos/linha-amarela/pause-icon-png-12.jpg" loading="lazy" /></div>
             <div id="play-button" className="unselectable play-button menu-item"><img alt="play" src="/img/jogos/linha-amarela/png-clipart-digital-marketing-implementation-business-computer-programming-play-button-electronics-text.png" loading="lazy" /></div>
             <div id="audio-button" className="unselectable audio-button menu-item"><img alt="audio" width="100%" src="/img/jogos/linha-amarela/icons8-alto-falante-100.png" loading="lazy" /></div>

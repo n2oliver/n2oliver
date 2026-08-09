@@ -8,16 +8,13 @@
     animation: rotate-center 0.6s ease-in-out both;
 }
 .menu {
-    display: inline-flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    float: right;
     padding: 20px 20px 0 20px;
     border: 1px solid #0000;
     background-color: rgba(44,55,135, .1);
     color: rgb(184, 182, 182) !important;
     user-select: none;
-    z-index: 9999 !important;
 }
 .menu h1 {
     color: #ec971f !important;

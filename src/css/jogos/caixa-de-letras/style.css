@@ -24,7 +24,7 @@ body {
     margin: 0 auto;;
 }
 
-.grid {
+#grid.grid {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 0;

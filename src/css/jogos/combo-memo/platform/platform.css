@@ -1,7 +1,6 @@
 body {
     margin: 0 auto;
     width: fit-content;
-    overflow: clip;
 }
 #root {
     width: 100dvw;
@@ -11,7 +10,7 @@ body {
     height: 100dvh;
     margin: 0 auto;
     background-color: transparent;
-    position: absolute;
+    position: relative;
 }
 .menu {
     background-color: darkslategray;
@@ -20,7 +19,7 @@ body {
     text-align: center;
     font-family: sans-serif;
     margin-bottom: 6px;
-    position: absolute;
+    position: relative;
     top: 0px;
     z-index: 10;
     width: 100vw;
@@ -36,16 +35,14 @@ body {
   margin: 0 !important;
 }
 
-.menu .botoes {
-    margin-top: 2px;
-    margin-left: 14px;
-    margin-right: 14px;
-}
 .menu h3 {
     margin: 0;
     font-size: 1rem;
 }
 .menu button {
+    margin-top: 2px;
+    margin-left: 14px;
+    margin-right: 14px;
     background-color: #f0ad4e;
     color: firebrick;
     border: none;
@@ -54,6 +51,7 @@ body {
     font-size: 0.9em;
     border-radius: 4px;
     cursor: pointer;
+    height: auto;
 }
 
 .menu button:hover {

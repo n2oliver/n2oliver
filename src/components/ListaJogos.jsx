@@ -27,7 +27,7 @@ function ListaJogos() {
                     onClick={
                         function () {
                             setTimeout(() => {
-                                window.location.href = game.url;
+                                window.open(game.url);
                             }, 200);
                         }
                     }>

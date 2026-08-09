@@ -6,12 +6,10 @@ function Menu() {
             <div className="d-flex row align-content-center">
                 <h1>COMBO-MEMO</h1>
             </div>
-            <h3>
+            <h3 className="bg-dark">
                 <span className="score-label">Pontuação máxima:</span> <span id="high-score" className="score-value">{ localStorage.combo_memo_high_score || percentual }</span>% de acertos |
                 <span className="score-label">Acerto:</span> <span id="acerto" className="score-value">0</span>% |
                 <span className="error-value">Erros:</span> <span id="erros" className="error-value">0</span>
-            </h3>
-            <div className="botoes">
                 <button id="btnRestart"
                     onClick={() => {
                         setTimeout(() => {
@@ -21,7 +19,7 @@ function Menu() {
                             }, 1200);
                         }, 600);
                     }}>Reiniciar</button>
-            </div>
+            </h3>
         </div>
     )
 }
