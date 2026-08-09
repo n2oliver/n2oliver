@@ -13,9 +13,10 @@ function Menu() {
     return (
         <div className="menu" style={{
             position: "absolute",
-            display: "inline-block",
+            display: "grid",
             width: "fit-content",
-            right: "0px"
+            right: "0px",
+            gridTemplateColumns: "auto auto auto auto"
         }}>
             <div id="pause-button" className="unselectable pause-button menu-item"><img alt="pause" src="/img/jogos/linha-amarela/pause-icon-png-12.jpg" loading="lazy" /></div>
             <div id="play-button" className="unselectable play-button menu-item"><img alt="play" src="/img/jogos/linha-amarela/png-clipart-digital-marketing-implementation-business-computer-programming-play-button-electronics-text.png" loading="lazy" /></div>
