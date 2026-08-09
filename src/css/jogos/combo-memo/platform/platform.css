@@ -1,14 +1,17 @@
 body {
     margin: 0 auto;
     width: fit-content;
+    overflow: clip;
+}
+#root {
+    width: 100dvw;
 }
 .platform {
-    width: 100dvw;
+    width: stretch;
     height: 100dvh;
-    max-width: 640px;
-    max-height: 480px;
     margin: 0 auto;
     background-color: transparent;
+    position: absolute;
 }
 .menu {
     background-color: darkslategray;
@@ -21,6 +24,7 @@ body {
     top: 0px;
     z-index: 10;
     width: 100vw;
+    width: stretch;
 }
 
 .menu h1 {

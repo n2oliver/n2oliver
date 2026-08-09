@@ -38,3 +38,6 @@ header img {
 .container-fluid {
   max-width: 100dvw;
 }
+.App {
+  width: stretch;
+}

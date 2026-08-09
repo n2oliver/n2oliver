@@ -48,23 +48,18 @@ function Jogo() {
     useEffect(() => {
         async function obterRanking(idUsuario) {
             $('.spinner').removeClass('d-none');
-            await fetch('/api/jogos/linha-amarela/obter-ranking.php', {
+            const response = await fetch('/api/jogos/linha-amarela/obter-ranking.php', {
                 method: 'POST',
                 type: 'json/application',
                 data: {
                     id_usuario: idUsuario
-                },
-                success: (data) => {
-                    $('.spinner').addClass('d-none');
-                    const pontuacoes = data;
-                    const ranking = $('#ranking');
-                    ranking.html(pontuacoes);
-                },
-                error: (error) => {
-                    $('.spinner').addClass('d-none');
-                    console.log(error.responseText);
                 }
             });
+            const data = await response.json();
+            $('.spinner').addClass('d-none');
+            const pontuacoes = data;
+            const ranking = $('#ranking');
+            ranking.html(pontuacoes);
         }
         async function setUpGame() {
             $('.spinner').removeClass('d-none');
@@ -92,10 +87,12 @@ function Jogo() {
                     setTimeout(()=>{
                         setUpGame();
                     }, 1000);
-                    continue;
+                    return;
                 }
             }
-            window.game = new Game(level);
+            if(!window.game) {
+                window.game = new Game(level);
+            }
             document.getElementById("restart").addEventListener('click',()=>{
                 gtag("event", "close_convert_lead", {
                     currency: "USD",
