@@ -1,9 +1,11 @@
-$(document).ready(() => {
+import { $ } from "../../../App";
+
+function pontuacao() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     let page = urlParams.get('page');
     let totalPaginas = 0;
-    if(typeof usuarioId !== 'undefined') {
+    if (typeof usuarioId !== 'undefined') {
         obterPontuacaoUsuario(page, usuarioId);
     }
     paginar();
@@ -35,7 +37,7 @@ $(document).ready(() => {
         });
     }
     function paginar(event) {
-        if(event) event.preventDefault();
+        if (event) event.preventDefault();
         let timer;
         clearTimeout(timer);
         $('.spinner').removeClass('d-none');
@@ -96,4 +98,26 @@ $(document).ready(() => {
             });
         }, 200);
     }
-});
+}
+async function obterRanking(idUsuario) {
+    $('.spinner').removeClass('d-none');
+    $.ajax({
+        url: '/api/jogos/linha-amarela/obter-ranking.php',
+        method: 'POST',
+        type: 'json/application',
+        data: {
+            id_usuario: idUsuario
+        },
+        success: (data) => {
+            $('.spinner').addClass('d-none');
+            const pontuacoes = data;
+            const ranking = $('#ranking');
+            ranking.html(pontuacoes);
+        },
+        error: (error) => {
+            $('.spinner').addClass('d-none');
+            console.log(error.responseText);
+        }
+    });
+}
+export { pontuacao, obterRanking };

@@ -1,3 +1,4 @@
+import { $ } from "../../../App";
 import { Counter } from "./Counter";
 import { SpaceInvader } from "./SpaceInvader";
 

@@ -1,4 +1,6 @@
+import { $ } from "../../../App";
 import { Counter } from "./Counter";
+import { obterRanking } from "./pontuacao";
 
 class PointsCounter extends Counter {
     points = 0;
@@ -19,7 +21,7 @@ class PointsCounter extends Counter {
                 this.timer = setTimeout(() => {
                     if(!window.partidaRapida && usuarioId) {
                         $.ajax({
-                            url: './registrar-pontos.php',
+                            url: '/api/jogos/linha-amarela/registrar-pontos.php',
                             method: 'POST',
                             type: 'json/application',
                             data: { pontos: this.points, nivel: window.game.levelsCounter.level },
@@ -27,14 +29,14 @@ class PointsCounter extends Counter {
                                 sessionStorage.setItem('pontuacao', this.points);
                                 sessionStorage.setItem('nivel', window.game.levelsCounter.level);
                                 $.ajax({
-                                    url: './obter-pontos.php',
+                                    url: '/api/jogos/linha-amarela/obter-pontos.php',
                                     method: 'POST',
                                     type: 'json/application',
                                     data: { page: 1 },
                                     success: (data)=>{
                                         sessionStorage.setItem('pontuacao', this.points);
                                         sessionStorage.setItem('nivel', window.game.levelsCounter.level);
-                                        obterRanking(usuarioId);
+                                        obterRanking(window.usuarioId);
                                     },
                                     error: (error)=>{
                                         console.log(error.responseText);
@@ -54,12 +56,12 @@ class PointsCounter extends Counter {
         }
     }
     static getHighScores = async (page) => {
-        const params = { userId: sessionStorage.userId };
+        const params = { userId: window.usuarioId };
         if(page) {
             params.page = page;
         }
         return $.ajax({
-            url: '/obter-pontos',
+            url: '/api/jogos/linha-amarela/obter-pontos.php',
             method: 'GET',
             type: 'json/application',
             data: params,

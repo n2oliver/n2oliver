@@ -1,4 +1,5 @@
 import { toast } from "react-toastify";
+import { $ } from "../../../App";
 
 class Login {
     patterns =  {

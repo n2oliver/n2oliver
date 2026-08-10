@@ -21,7 +21,7 @@ import "../../../css/jogos/linha-amarela/enemies.css";
 import "../../../css/jogos/linha-amarela/game.css";
 import "../../../css/jogos/linha-amarela/intro.css";
 import "../../../css/jogos/linha-amarela/style.css";
-import "../../../js/jogos/linha-amarela/pontuacao";
+import "../../../css/jogos/linha-amarela/game-over.css";
 
 import "../../../js/anuncios";
 import "../../../js/jogos/linha-amarela/Background";
@@ -40,82 +40,19 @@ import "../../../js/jogos/linha-amarela/SpaceInvader";
 import "../../../js/jogos/linha-amarela/SpaceInvaderNPC";
 import "../../../js/jogos/linha-amarela/YellowBox";
 import "../../../js/jogos/linha-amarela/YellowBoxNPC";
-import { Game } from "../../../js/jogos/linha-amarela/Game";
+import { init } from "../../../js/jogos/linha-amarela/Game";
 import YellowBox from "../../../components/jogos/linha-amarela/Jogo/YellowBox";
 import Intro from "../../../components/jogos/linha-amarela/Jogo/Intro";
 
 function Jogo() {
     let partida_rapida;
     useEffect(() => {
-        async function obterRanking(idUsuario) {
-            $('.spinner').removeClass('d-none');
-            const response = await fetch('/api/jogos/linha-amarela/obter-ranking.php', {
-                method: 'POST',
-                type: 'json/application',
-                data: {
-                    id_usuario: idUsuario
-                }
-            });
-            const data = await response.json();
-            $('.spinner').addClass('d-none');
-            const pontuacoes = data;
-            const ranking = $('#ranking');
-            ranking.html(pontuacoes);
-        }
-        async function setUpGame() {
-            $('.spinner').removeClass('d-none');
-            const urlParams = new URLSearchParams(window.location.search);
-            const partidaRapida = urlParams.get('partida_rapida');
-            const setup = await fetch(`/api/jogos/linha-amarela/setup-game.php/?partida_rapida=${partidaRapida}`);
-            const page = await setup.text();
-            console.log(page);
-            if(page) {
-                window.location.href = page;
-                return;
-            }
-            partida_rapida = true;
-            sessionStorage.setItem('ingame', true);
-            let level = 1;
-            const objects = [
-                "yellow-box",
-                "platform",
-                "points-counter",
-                "levels-counter",
-                "vidas",
-            ];
-            for(let objectId of objects) {
-                if(!document.getElementById(objectId)) {
-                    setTimeout(()=>{
-                        setUpGame();
-                    }, 1000);
-                    return;
-                }
-            }
-            if(!window.game) {
-                window.game = new Game(level);
-            }
-            document.getElementById("restart").addEventListener('click',()=>{
-                gtag("event", "close_convert_lead", {
-                    currency: "USD",
-                    value: 0.0004
-                });
-                setTimeout(()=>{
-                    window.location.reload();
-                }, 500);
-            });
-            
-            window.onclick = (e) => {
-                if(window.game) {
-                    window.game.audioManager.playAsBgMusic();
-                    game.start(e);      
-                }
-            }
-        }
         $('.sair').click(() => {
             window.location.href = '/api/jogos/linha-amarela/sair.php';
         });
-        setUpGame();
-        if (typeof usuarioId !== 'undefined') obterRanking(usuarioId);
+        if(!window.game) {
+            init();
+        }
     });
     return (<>
         <Spinner />

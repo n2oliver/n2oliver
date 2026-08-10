@@ -1,3 +1,4 @@
+import { $ } from "../../../App";
 import { GameBase } from "./GameBase";
 import { PointsCounter } from "./PointsCounter";
 import { SpaceInvaderNPC } from "./SpaceInvaderNPC";

@@ -1,14 +1,28 @@
+import { useEffect, useState } from "react";
 import "../../../../css/jogos/linha-amarela/info.css";
 import "../../../../css/jogos/linha-amarela/logo.css";
 import "../../../../css/jogos/linha-amarela/nivel.css";
 import "../../../../css/jogos/linha-amarela/pause.css";
 function Menu() {
-    function setUser(usuario_id, partida_rapida) {
-        window.usuarioId = typeof usuario_id != 'undefined' ? usuario_id : null;
-        window.partidaRapida = typeof partida_rapida != 'undefined' ? partida_rapida : null;
+    const [userData, setUserData] = useState([]);
+    useEffect(()=>{
+        async function setUser() {
+            const response = await fetch('/api/jogos/linha-amarela/verifica-login.php');
+            const dados = await response.json();
+
+            if(dados.code == 401) {
+                window.location.href = "/jogos/linha-amarela";
+            }
+            setUserData(dados);
+        }
+        setUser();
+    }, []);
+    
+    if (typeof userData.usuario_id != 'undefined') {
+        window.usuarioId = typeof userData.usuario_id != 'undefined' ? userData.usuario_id : null;
     }
-    if (typeof usuario_id != 'undefined' && typeof partida_rapida != 'undefined') {
-        setUser(usuario_id, partidaRapida);
+    if (typeof userData.partida_rapida != 'undefined') {
+        window.partidaRapida = typeof userData.partida_rapida != 'undefined' ? userData.partida_rapida : null;
     }
     return (
         <div className="menu" style={{
@@ -25,13 +39,13 @@ function Menu() {
             <img alt="sair" src="/img/jogos/linha-amarela/logout.png" width="32" height="32" className="sair" loading="lazy" />
             {
 
-                typeof usuario_id != 'undefined' && typeof partida_rapida != 'undefined' ?
+                userData.usuario_id ?
                     (<>
-                        <hr />
+                        <div></div><div></div><div></div>
                         <div>
                             <div className="presentation-container unselectable">Pontos: <span id="points-counter">0</span></div>
 
-                            <h1>Ranking</h1>
+                            <h1 class="ranking-title">Ranking</h1>
                             <div>
                                 <table id="all-points" className="table">
                                     <thead>
@@ -48,7 +62,7 @@ function Menu() {
                         </div>
                     </>)
                     :
-                    (<><hr />
+                    (<><div></div>
                         <div>
                             <div className="presentation-container unselectable">Pontos: <span id="points-counter">0</span></div>
                         </div>

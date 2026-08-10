@@ -15,6 +15,7 @@
     background-color: rgba(44,55,135, .1);
     color: rgb(184, 182, 182) !important;
     user-select: none;
+    z-index: 99999999;
 }
 .menu h1 {
     color: #ec971f !important;

@@ -14,24 +14,6 @@ function Pause() {
                     zIndex: 21000000,
                     top: "100px",
                 }}>
-                    <div className="col-md-6" style={{
-                        display: "flex",
-                        height: "fit-content",
-                        justifyContent: "center",
-                        position: "sticky",
-                        left: "0px"
-                    }}>
-                        <div>
-                            <div>Aceitamos doações:</div>
-                            <div>Chave PIX:</div>
-                            <div><img alt="qr-code" id="qr-code" src="/img/jogos/linha-amarela/qr-code.jpeg" loading="lazy" /></div>
-                            <div>suporte@n2oliver.com</div>
-                        </div>
-                        <div>
-                            <div>Para sair clique no<br />botão abaixo</div>
-                            <img alt="logout" src="/img/jogos/linha-amarela/logout.png" width="100" height="100" className="sair" loading="lazy" />
-                        </div>
-                    </div>
                     <div style={{ height: "fit-content" }}>
                         <div className="m-auto text-light mt-2" style={{ fontFamily: "Ubuntu" }}>
                             <strong>

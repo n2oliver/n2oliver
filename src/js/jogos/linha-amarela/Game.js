@@ -9,6 +9,7 @@ import { Platform } from "./Platform";
 import { PointsCounter } from "./PointsCounter";
 import { SpaceInvader } from "./SpaceInvader";
 import { YellowBox } from "./YellowBox";
+import { pontuacao } from './pontuacao';
 
 let hammerBg;
 let hammerYellowBox;
@@ -27,7 +28,7 @@ class Game extends GameBase {
     top = 100;
     constructor(level, totalDeMonstros, top, points, lives) {
         super(level, totalDeMonstros, top, points, lives);
-        
+
         window.ball = new Ball({
             id: "red-ball",
             supportBarId: "yellow-box",
@@ -43,10 +44,10 @@ class Game extends GameBase {
             velocity: window.ball ? window.ball.attributes.velocity : 1
         });
 
-        if(points) {
+        if (points) {
             this.pointsCounter.increaseCounter(points);
         }
-        if(lives != null) {
+        if (lives != null) {
             this.livesCounter.lives = lives;
         }
 
@@ -65,7 +66,7 @@ class Game extends GameBase {
         width: "100vw",
         height: 80,
         positionY: 90,
-        positionX: "0", 
+        positionX: "0",
     });
     pointsCounter = new PointsCounter({
         id: "points-counter",
@@ -77,16 +78,16 @@ class Game extends GameBase {
     livesCounter = new LivesCounter({
         id: "vidas",
     });
-    pause = function(e) {
+    pause = function (e) {
         let validation;
-        if(e.type == "keyup") {
+        if (e.type == "keyup") {
             validation = e.keyCode == 27;
         } else {
             validation = true;
         }
-        
-        if(validation) {
-            if(window.pause) {
+
+        if (validation) {
+            if (window.pause) {
                 window.pause = false;
             } else {
                 window.pause = true
@@ -96,7 +97,7 @@ class Game extends GameBase {
             const playButtonStyle = document.getElementById("play-button").style;
             const pauseButtonStyle = document.getElementById("pause-button").style;
             const audio = document.getElementById("game-sound");
-            if(window.pause) {
+            if (window.pause) {
                 qrCodeStyle.classList.remove("d-none");
                 pauseStyle.display = "contents";
                 pauseButtonStyle.display = "none";
@@ -107,8 +108,8 @@ class Game extends GameBase {
                 pauseStyle.display = "none";
                 pauseButtonStyle.display = "contents";
                 playButtonStyle.display = "none";
-                const audioIsEnabled = document.getElementById("audio-button").querySelector("img").src.includes("/jogos/linha-amarela/img/icons8-alto-falante-100.png");
-                if(audioIsEnabled) {
+                const audioIsEnabled = document.getElementById("audio-button").querySelector("img").src.includes("/jogos/linha-amarela/icons8-alto-falante-100.png");
+                if (audioIsEnabled) {
                     audio.play();
                 }
             }
@@ -117,42 +118,42 @@ class Game extends GameBase {
     start = (e) => {
         abrirSmartlinkUmaVez();
         document.querySelector('.intro').style.display = 'none';
-        if((typeof window.gameOver != 'undefined' && window.gameOver === false) || typeof window.gameOver == 'undefined') {
+        if ((typeof window.gameOver != 'undefined' && window.gameOver === false) || typeof window.gameOver == 'undefined') {
             window.game.setEvents(e);
             window.pause = false;
 
             window.spaceInvader = new SpaceInvader();
             window.spaceInvader.top = window.game.top;
             window.spaceInvader.totalDeMonstros = window.game.totalDeMonstros;
-            
+
             clearInterval(this.invaderInterval);
-            this.invaderInterval = window.spaceInvader.init(parseInt(window.game.levelsCounter.level)*5);
+            this.invaderInterval = window.spaceInvader.init(parseInt(window.game.levelsCounter.level) * 5);
 
             $(".nivel").text("Nivel " + window.game.levelsCounter.level).show();
-            setTimeout(()=> {
+            setTimeout(() => {
                 $(".nivel").hide();
             }, 3000);
 
             const ballInterval = window.ball.init(window.ball.attributes);
-            
+
             this.interval = setInterval(() => {
-                if(document.onmousemove == window.game.yellowBox.mouseMove && document.getElementById(window.ball.attributes.id).offsetTop >= window.innerHeight - 90 &&
-                    document.getElementById(window.ball.attributes.id).offsetTop <= window.innerHeight - 60){
+                if (document.onmousemove == window.game.yellowBox.mouseMove && document.getElementById(window.ball.attributes.id).offsetTop >= window.innerHeight - 90 &&
+                    document.getElementById(window.ball.attributes.id).offsetTop <= window.innerHeight - 60) {
                     window.game.pointsCounter.increaseCounter(5);
                 }
-                if(document.getElementById(window.ball.attributes.id).offsetTop > window.innerHeight) {
+                if (document.getElementById(window.ball.attributes.id).offsetTop > window.innerHeight) {
                     clearInterval(ballInterval);
                     clearInterval(this.invaderInterval);
                     clearInterval(this.interval);
                     window.spaceInvader.destroy();
-                    
+
                     game.livesCounter.decreaseCounter();
-                    if(window.game.livesCounter.lives < 0) {
+                    if (window.game.livesCounter.lives < 0) {
                         window.game.pointsCounter.points = 0;
                         window.game.levelsCounter.level = 0;
                         window.game.livesCounter.lives = 0;
                         sessionStorage.setItem('ingame', false);
-                        if(typeof window.usuarioId !== 'undefined') {
+                        if (typeof window.usuarioId !== 'undefined') {
                             window.location = "gameover.php";
                             return;
                         }
@@ -165,13 +166,13 @@ class Game extends GameBase {
                         audio.pause();
 
                     }
-                    if(!window.gameOver) {
+                    if (!window.gameOver) {
                         window.level = window.game.levelsCounter.level
-                        window.game = new Game(event, window.game.levelsCounter.level, window.spaceInvader.totalDeMonstros, window.spaceInvader.top, window.game.pointsCounter.points, window.game.livesCounter.lives);
+                        window.game = new Game(window.game.levelsCounter.level, window.spaceInvader.totalDeMonstros, window.spaceInvader.top, window.game.pointsCounter.points, window.game.livesCounter.lives);
                         window.level = window.game.levelsCounter.level = window.level
                         window.onclick = window.game.start;
                     }
-                    
+
                 }
             }, 25);
         } else {
@@ -189,12 +190,12 @@ class Game extends GameBase {
         hammerYellowBox.on('pan', window.game.yellowBox.mouseMove);
         hammerPlatform.on('pan', window.game.yellowBox.mouseMove);
         hammerAudio.on('pan', window.game.yellowBox.mouseMove);
-        document.getElementById("audio-button").onclick = () => { 
+        document.getElementById("audio-button").onclick = () => {
             window.game.audioManager.toggleAudio();
         };
 
         const hammerPresentationElements = document.getElementsByClassName("unselectable");
-        for(let presentation of hammerPresentationElements) {
+        for (let presentation of hammerPresentationElements) {
             hammerPresentation = new Hammer(presentation);
             hammerPresentation.on('pan', window.game.yellowBox.mouseMove);
         }
@@ -206,7 +207,7 @@ class Game extends GameBase {
         window.onclick = null;
         window.onkeyup = this.pause;
     }
-    
+
     desabilitarEventos = () => {
 
         // Desativa eventos globais
@@ -216,5 +217,54 @@ class Game extends GameBase {
         window.onkeyup = null;
     }
 }
+async function setUpGame() {
+    $('.spinner').removeClass('d-none');
+    const urlParams = new URLSearchParams(window.location.search);
+    const partidaRapida = urlParams.get('partida_rapida');
+    const setup = await fetch(`/api/jogos/linha-amarela/setup-game.php/?partida_rapida=${partidaRapida}`);
+    const page = await setup.text();
+    console.log(page);
+    if (page) {
+        window.location.href = page;
+        return;
+    }
+}
+function init() {
+    sessionStorage.setItem('ingame', true);
+    let level = 1;
+    const objects = [
+        "yellow-box",
+        "platform",
+        "points-counter",
+        "levels-counter",
+        "vidas",
+    ];
+    for (let objectId of objects) {
+        if (!document.getElementById(objectId)) {
+            setTimeout(() => {
+                setUpGame();
+            }, 1000);
+            return;
+        }
+    }
+    window.game = new Game(level);
+    pontuacao();
+    document.getElementById("restart").addEventListener('click', () => {
+        gtag("event", "close_convert_lead", {
+            currency: "USD",
+            value: 0.0004
+        });
+        setTimeout(() => {
+            window.location.reload();
+        }, 500);
+    });
 
-export { Game };
+    window.onclick = (e) => {
+        if (window.game) {
+            window.game.audioManager.playAsBgMusic();
+            game.start(e);
+        }
+    }
+}
+
+export { init };

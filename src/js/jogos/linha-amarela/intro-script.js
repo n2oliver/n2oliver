@@ -2,6 +2,7 @@ import { toast } from "react-toastify";
 import { gtag } from "../../gtag";
 import { AudioManager } from "./AudioManager";
 import { Login } from "./Login";
+import { $ } from "../../../App";
 const appUrl = '/jogos/linha-amarela';
 function setUpAudioManager() {
     const audioManager = new AudioManager();
@@ -55,7 +56,8 @@ function setUpIntro(audioManager) {
             });
         }
     });
-    $('#partida').click(() => {
+    $('#partida').click(async () => {
+        await fetch("/api/jogos/linha-amarela/fast-game.php");
         window.location.href = `${appUrl}/jogo/?partida_rapida=1`;
     })
 }
