@@ -5,11 +5,7 @@ class Background {
             const style = {
                 background: "url(" + image + ") no-repeat center center fixed",
                 'background-size': "cover",
-                position: "fixed",
-                height: "100dvh",
-                "max-height": "100dvh",
                 "max-width": "100dvw",
-                overflow: "clip",
                 margin: "0 auto",
                 "z-index": "-1",
             }

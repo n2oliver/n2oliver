@@ -8,20 +8,15 @@ class GameOver extends GameBase {
     livesCounter;
     levelsCounter;
     level;
-    constructor(e, level, points, lives) {
-        super(e, level, points, lives);
+    constructor(level, points, lives) {
+        super(level, points, lives);
 
-        this.start = async (e) => {
+        this.start = async () => {
             // PointsCounter.getHighScores().then(listScores).catch(error => {
             //     console.log(error);
             // });
             window.spaceInvaderNpc = new SpaceInvaderNPC();
             this.invaderInterval = window.spaceInvaderNpc.init();
-
-            // Exibir anúncio ao final do jogo
-            if (typeof abrirSmartlinkUmaVez === 'function') {
-                abrirSmartlinkUmaVez();
-            }
         }
     };
 }
@@ -75,3 +70,15 @@ function listScores (data) {
         share();
     });
 }
+function init () {
+    setTimeout(()=>{
+        if(sessionStorage.pontuacao) {
+            $("#game-over").show();
+            $("#your-points-box").show();
+        }
+        const level = 1;
+        const game = new GameOver(level);
+        game.start();
+    }, 500);
+}
+export { init };

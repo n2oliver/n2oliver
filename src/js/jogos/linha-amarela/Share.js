@@ -20,7 +20,7 @@ function saveImage(canvas) {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    window.location = '/gameover.php';
+    window.location = '/jogos/linha-amarela/fim';
 }
 async function share() {
     takeshot().then((canvas)=>{

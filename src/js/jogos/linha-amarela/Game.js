@@ -154,7 +154,7 @@ class Game extends GameBase {
                         window.game.livesCounter.lives = 0;
                         sessionStorage.setItem('ingame', false);
                         if (typeof window.usuarioId !== 'undefined') {
-                            window.location = "gameover.php";
+                            window.location = "/jogos/linha-amarela/fim";
                             return;
                         }
                         $('.heart').remove();
@@ -218,6 +218,10 @@ class Game extends GameBase {
     }
 }
 async function setUpGame() {
+    Object.assign(document.body.style, {
+        position: "fixed",
+        overflow: "clip"
+    });
     $('.spinner').removeClass('d-none');
     const urlParams = new URLSearchParams(window.location.search);
     const partidaRapida = urlParams.get('partida_rapida');
@@ -258,6 +262,8 @@ function init() {
             window.location.reload();
         }, 500);
     });
+    document.body.style.height = "100dvh";
+    document.body.style.maxHeight = "100dvh";
 
     window.onclick = (e) => {
         if (window.game) {

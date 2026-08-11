@@ -5,9 +5,7 @@ function pontuacao() {
     const urlParams = new URLSearchParams(queryString);
     let page = urlParams.get('page');
     let totalPaginas = 0;
-    if (typeof usuarioId !== 'undefined') {
-        obterPontuacaoUsuario(page, usuarioId);
-    }
+    obterPontuacaoUsuario(page, window.usuarioId);
     paginar();
 
     function obterPontuacaoUsuario(page, idUsuario) {

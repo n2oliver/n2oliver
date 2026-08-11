@@ -7,7 +7,7 @@ class SpaceInvaderNPC {
             invader.classList.add("unselectable");
             invader.style.left = i + "%";
             invader.style.top = "0px";
-            invader.style.backgroundImage = "url(img/" + spaceInvaders[Math.floor(Math.random() * spaceInvaders.length)] + ".png)";
+            invader.style.backgroundImage = "url(/img/jogos/linha-amarela/" + spaceInvaders[Math.floor(Math.random() * spaceInvaders.length)] + ".png)";
             document.getElementById("invaders").append(invader);
         }
         

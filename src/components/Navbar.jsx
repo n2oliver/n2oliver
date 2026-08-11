@@ -4,13 +4,17 @@ import { API_URL } from "../App";
 function Navbar() {
     const negativePathNames = [
         "/jogos/linha-amarela",
-        "/jogos/linha-amarela/",  
-        "/jogos/linhaamarela", 
+        "/jogos/linha-amarela/",
+        "/jogos/linhaamarela",
         "/jogos/linhaamarela/",
         "/jogos/linha-amarela/jogo",
-        "/jogos/linha-amarela/jogo/",  
-        "/jogos/linhaamarela/jogo", 
-        "/jogos/linhaamarela/jogo/"
+        "/jogos/linha-amarela/jogo/",
+        "/jogos/linhaamarela/jogo",
+        "/jogos/linhaamarela/jogo/",
+        "/jogos/linha-amarela/fim",
+        "/jogos/linha-amarela/fim/",
+        "/jogos/linhaamarela/fim",
+        "/jogos/linhaamarela/fim/"
     ];
     return !negativePathNames.includes(window.location.pathname) && (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 m-auto px-0">

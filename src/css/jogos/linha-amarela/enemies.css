@@ -7,6 +7,7 @@
     top: 200px;
     left: 50%;
     transform: translateX(16px);
+    z-index: 99999;
 }
 .anim-alien-die {
     animation: explode 2s forwards;
