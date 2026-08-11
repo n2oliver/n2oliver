@@ -22,7 +22,7 @@ function RecentesCards() {
         recentes.map((recente, index) => (
             <div className="game-card" key={index}
                 style={{
-                    height: "150px",
+                    height: "stretch",
                     background: `url(${API_URL + recente.imagem}) 0% 0%`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'

@@ -22,7 +22,7 @@ function ListaJogos() {
             key={index}
             className='game-card'
             style={{
-                height: '150px',
+                height: 'stretch',
                 background: `url(${API_URL + game.imagem})`,
                 backgroundSize: 'cover'
             }}>

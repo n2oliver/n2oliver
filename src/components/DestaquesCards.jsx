@@ -22,7 +22,7 @@ function DestaquesCards() {
                 className="game-card"
                 key={index}
                 style={{
-                    height: "150px",
+                    height: "stretch",
                     background: `url(${API_URL + destaque.imagem}) 0% 0%`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'

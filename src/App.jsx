@@ -35,6 +35,7 @@ import CaixaDeLetras from "./pages/jogos/caixa-de-letras/CaixaDeLetras";
 import LinhaAmarelaIntro from "./pages/jogos/linha-amarela/LinhaAmarelaIntro.jsx";
 import Jogo from "./pages/jogos/linha-amarela/Jogo.jsx";
 import FimDeJogo from "./pages/jogos/linha-amarela/FimDeJogo.jsx";
+import InspetorVisual from "./pages/extensoes/InspetorVisual.jsx";
 let API_URL;
 function App() {
   const [config, setConfig] = useState([]);
@@ -61,13 +62,19 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/noticias" element={<Noticias />} />
         <Route path="/noticias/:id" element={<Noticias />} />
-        <Route path="/jogos" element={<Jogos />} />
         <Route path="/aplicativos" element={<Aplicativos />} />
+        
         <Route path="/extensoes" element={<Extensoes />} />
+
+        <Route path="/extensoes/inspetor-visual" element={<InspetorVisual />} />
+        <Route path="/extensoes/inspetorvisual" element={<InspetorVisual />} />
+
         <Route path="/livros" element={<Livros />} />
         <Route path="/cursos" element={<Cursos />} />
         <Route path="/desenvolvedor" element={<Desenvolvedor />} />
         <Route path="/contato" element={<Contato />} />
+
+        <Route path="/jogos" element={<Jogos />} />
 
         <Route path="/jogos/combomemo" element={<ComboMemoIntro />} />
         <Route path="/jogos/combomemo/jogar" element={<ComboMemo />} />
