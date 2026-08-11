@@ -1,0 +1,14 @@
+section {
+    background-image: url(/img/extensoes/bg-complex-green.png);
+    backdrop-filter: brightness(.5);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.card-body {
+    background-color: floralwhite;
+}
+
+.card-body p {
+    padding: 14px;
+}

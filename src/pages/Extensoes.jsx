@@ -1,11 +1,11 @@
+import Header from "../components/extensoes/Header";
+import Section from "../components/extensoes/Section";
+import "../css/extensoes/style.css";
+
 function Extensoes() {
-  return (
-    <main className="extensoes-page">
-        <div className="container py-4 d-block bg-white">
-            <h1>Extensões</h1>
-            <p>Bem-vindo à seção de extensões! Aqui você encontrará uma variedade de extensões para melhorar sua experiência.</p>
-        </div>
-    </main>
-  );
+  return (<>
+    <Header />
+    <Section />
+  </>);
 }
 export default Extensoes;
