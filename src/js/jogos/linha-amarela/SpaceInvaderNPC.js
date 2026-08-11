@@ -15,7 +15,7 @@ class SpaceInvaderNPC {
         return setInterval(function () {
             if(!window.pause) {
                 for(let invader of document.getElementsByClassName('invader')) {
-                    if (invader.offsetLeft > window.innerWidth - 64) {
+                    if (invader.offsetLeft > document.body.clientWidth - 64) {
                         left = false;
                     }
                     if (invader.offsetLeft < 0) {

@@ -57,8 +57,8 @@ function FimDeJogo() {
         <Spinner />
         <GameOver />
         <Points />
-        <Ranking />
         <Logo />
+        <Ranking />
         <Invaders />
     </>);
 }

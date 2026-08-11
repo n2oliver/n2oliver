@@ -60,7 +60,7 @@ class SpaceInvader {
                     window.game.levelsCounter.increaseCounter(window.game.pointsCounter.points, window.game.levelsCounter.level);
                 }
                 for (let invader of document.getElementsByClassName('invader')) {
-                    if (invader.offsetLeft > window.innerWidth - 64) {
+                    if (invader.offsetLeft > document.body.clientWidth - 64) {
                         left = false;
                     }
                     if (invader.offsetLeft < 0) {
@@ -89,7 +89,7 @@ class SpaceInvader {
                     invader.style.transform = `translateY(${currentY + translateY}px)`;
 
                     // Inverte direção vertical se ultrapassar limites
-                    if (currentY + translateY > 50 || currentY + translateY < -50) {
+                    if (currentY + translateY > 50 || currentY + translateY < 0 || invader.offsetTop > document.body.clientHeight - 64) {
                         invader.dataset.direction = invader.dataset.direction === "down" ? "up" : "down";
                     }
 
