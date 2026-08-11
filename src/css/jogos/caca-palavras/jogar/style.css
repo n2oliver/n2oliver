@@ -40,7 +40,7 @@ header h1 {
 
 .game-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     width: 100%;
 }
@@ -137,4 +137,10 @@ header h1 {
     opacity: 0;
     transition: opacity 0.5s;
     pointer-events: none;
+}
+
+@media screen and (max-width: 992px) {
+    .game-container {
+        flex-wrap: wrap !important;
+    }
 }

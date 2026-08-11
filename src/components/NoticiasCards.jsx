@@ -29,9 +29,19 @@ function NoticiasCards() {
         return;
     }
     return (noticias.map((noticia, index) => (
-        <div className="card" key={noticia.id} onClick={irParaNoticia} data-noticia-id={noticia.id}>
-            <div className="img" style={{ backgroundImage: `url(${API_URL+noticia.imagem})` }}></div>
-            <strong dangerouslySetInnerHTML={{ __html: noticia.titulo }}></strong>
+        <div
+            className="card" key={noticia.id}
+            onClick={irParaNoticia}
+            data-noticia-id={noticia.id}
+            style={{
+                height: "150px",
+                backgroundImage: `url(${API_URL + noticia.imagem})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+            }}>
+            <strong style={{
+                backgroundColor: "rgba(33,33,33,.33)"
+            }}dangerouslySetInnerHTML={{ __html: noticia.titulo }}></strong>
         </div>
     )));
 }

@@ -15,11 +15,12 @@
     transform: translateX(-50%);
     z-index: 10;
     background: rgba(20,20,20,.65);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(8px);
     width: 100%;
     padding: 14px 7px 14px 7px;
     justify-content: center;
     display: flex;
+    flex-wrap: nowrap;
 }
 .slide-title a {
     color: white;
@@ -33,4 +34,9 @@
     height: 77dvh;
     object-fit: cover;
     display: block;
+}
+@media screen and (max-width: 992px) {
+    .slide-title {
+        flex-wrap: wrap !important;
+    }
 }

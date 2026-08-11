@@ -26,8 +26,9 @@ header h1 {
 }
 
 .game-container {
+    flex-direction: row;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     width: 100%;
 }

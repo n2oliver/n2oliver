@@ -20,22 +20,21 @@ function RecentesCards() {
     recentes.length && showGameInHighlight(recentes[0]);
     return (
         recentes.map((recente, index) => (
-            <div className="game-card" key={index} >
+            <div className="game-card" key={index}
+                style={{
+                    height: "150px",
+                    background: `url(${API_URL + recente.imagem}) 0% 0%`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                }}>
                 <button
                     data-game-url={recente.url}
                     data-game-title={recente.titulo}
                     data-game-desc={recente.descricao}
-                    data-game-imagem={`${API_URL+recente.imagem}`}
+                    data-game-imagem={`${API_URL + recente.imagem}`}
                     onClick={(event) => window.open(recente.url)}>
                     <div className="row min-vh-50 h-100 align-content-center">
                         <h2 className="rounded-left bg-dark my-0 py-1 rounded">{recente.titulo}</h2>
-                        <div className="bg-dark border border-light"
-                            style={{ 
-                                height: "150px", 
-                                background: `url(${API_URL+recente.imagem}) 0% 0%`, 
-                                backgroundSize: 'cover', 
-                                backgroundPosition: 'center' }}>
-                        </div>
                     </div>
                 </button>
             </div>

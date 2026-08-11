@@ -2,6 +2,7 @@ import { params1, SMARTLINK_1 } from "../../anuncios";
 
 function setUp() {
     try {
+        document.querySelector('meta[name="viewport"]').content = "";
         const gridElement = document.getElementById('crossword-grid');
         const cluesAcrossElement = document.getElementById('clues-across');
         const cluesDownElement = document.getElementById('clues-down');

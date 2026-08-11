@@ -181,6 +181,7 @@ main {
   color: white;
   width: 150px;
   height: 150px;
+  margin: 2px;
   background-color: darkslategray;
 }
 
@@ -198,6 +199,8 @@ main {
   max-width: 77dvw;
   overflow-x: scroll;
   scrollbar-width: auto;
+  display: -webkit-inline-box;
+  background-color: transparent;
 }
 #jogos-recentes {
   width: 77dvw;

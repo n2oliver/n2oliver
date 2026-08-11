@@ -25,46 +25,46 @@ function ListaAplicativos() {
         return;
     }
     return (
-        <Swiper 
+        <Swiper
             modules={[Navigation, Pagination]}
             direction="horizontal"
             loop={true}
             navigation
             pagination={{ clickable: true }}
             style={{
-                display: "flex", 
+                display: "flex",
                 alignItems: "center"
-                }}>
+            }}>
             {
                 aplicativos.map(
                     (app, index) => {
                         /*!-- Slides --*/
-                        return <SwiperSlide  key={index} 
-                            style={{ 
-                                backgroundImage: `url(${API_URL}${app.imagem})`, 
-                                backgroundSize: "cover", 
-                                backgroundPosition: "center",
-                                backgroundAttachment: "fixed",
-                                overflow: "auto",
-                                height: "77dvh", 
-                                display: "flex",
-                                justifyContent: "center",
-                            }} >
-                            <div className="slide-title">
-                                <Link to={app.url} target="_blank" role="button" className="w-auto p-4">
-                                    <img alt={app.titulo} 
-                                        style={{ width: "100%" }}
-                                        src={`${API_URL+app.imagem}`}/>
-                                </Link>
-                                <div className="text-light p-4" 
-                                    style={{ color: 'white !important', minWidth: "50dvw" }} 
-                                    dangerouslySetInnerHTML={{ __html: app.descricao }} />
-                            </div>
-                        </SwiperSlide>
+                        return <Link to={app.url} target="_blank" role="button" className="w-auto p-4">
+                            <SwiperSlide key={index}
+                                style={{
+                                    backgroundImage: `url(${API_URL}${app.imagem})`,
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                    backgroundAttachment: "fixed",
+                                    overflow: "auto",
+                                    height: "77dvh",
+                                    display: "flex",
+                                    justifyContent: "center",
+                                }} >
+                                <div className="slide-title">
+                                    <div className="text-light p-4"
+                                        style={{ color: 'white !important' }}
+                                        dangerouslySetInnerHTML={{ __html: app.descricao }} />
+                                    <img alt={app.titulo}
+                                        style={{ minWidth: "50dvw", height: "fit-content" }}
+                                        src={`${API_URL + app.imagem}`} />
+                                </div>
+                            </SwiperSlide>
+                        </Link>
                     }
                 )
             }
-        </Swiper>
+        </Swiper >
     )
 }
 export default ListaAplicativos;
