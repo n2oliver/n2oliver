@@ -1,4 +1,4 @@
-import "../../../../css/jogos/linha-amarela/game-over.css";
+import "../../../../css/jogos/linha-amarela/game-over.module.css";
 function GameOver() {
     return (
         <div id="game-over" className="d-none">

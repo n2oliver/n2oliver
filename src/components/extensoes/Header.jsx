@@ -1,6 +1,6 @@
 function Extensoes() {
     return (
-        <div className="py-5 bg-white">
+        <div className="py-5 px-4 bg-white">
             <h2>Extensões para Google Chrome</h2>
             <p className="lead">
                 Ferramentas desenvolvidas para aumentar a produtividade,

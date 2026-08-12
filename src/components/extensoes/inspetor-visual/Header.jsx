@@ -1,7 +1,7 @@
 function Header() {
     return (
-        <div className="py-5">
-            <div className="container text-center">
+        <div>
+            <div className="container text-center m-auto my-2">
                 <h2>Inspetor Visual</h2>
                 <p className="lead">
                     Inspecione elementos HTML, copie HTML e CSS

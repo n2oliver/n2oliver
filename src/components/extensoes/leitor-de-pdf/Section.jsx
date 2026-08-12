@@ -2,9 +2,9 @@ import Header from "./Header";
 
 function Section() {
     return (
-        <section className="pt-5">
+        <section className="pt-2">
             <Header />
-            <div className="container bg-white">
+            <div className="container bg-white m-auto my-2">
                 <div className="row align-items-center g-5">
                     <div className="col-lg-5 text-center">
                         <img src="/img/extensoes/leitor-de-pdf/insp-pdf.png"
@@ -20,7 +20,7 @@ function Section() {
                     </div>
                 </div>
             </div>
-            <div className="container bg-white py-5">
+            <div className="container bg-white py-5 m-auto my-2">
                 <h2 className="text-center mb-5">
                     Recursos
                 </h2>
@@ -87,7 +87,7 @@ function Section() {
                     </div>
                 </div>
             </div>
-            <div className="container bg-white py-5">
+            <div className="container bg-white py-5 m-auto my-2">
                 <h2 className="text-center mb-5">
                     Ideal para
                 </h2>

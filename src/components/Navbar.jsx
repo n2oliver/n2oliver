@@ -37,10 +37,14 @@ function Navbar() {
                             <li className="nav-item"><Link className="nav-link" to="/jogos"><i className="fa-solid fa-puzzle-piece"></i> Jogos</Link></li>
                             <li className="nav-item"><Link className="nav-link" to="/aplicativos"><i className="fa-solid fa-hand-pointer"></i> Aplicativos</Link></li>
                             <li className="nav-item"><Link className="nav-link" to="/extensoes"><i className="fa-solid fa-hand-pointer"></i> Extensões</Link></li>
-                            <li className="nav-item"><Link className="nav-link" to="/livros"><i className="fa-solid fa-store"></i> Livros</Link></li>
-                            <li className="nav-item"><Link className="nav-link" to="/cursos"><i className="fa-solid fa-store"></i> Cursos</Link></li>
-                            <li className="nav-item"><Link className="nav-link" to="/desenvolvedor"><i className="fa-solid fa-user"></i> Desenvolvedor</Link></li>
-                            <li className="nav-item"><Link className="nav-link" to="/contato"><i className="fa-solid fa-envelope"></i> Contato</Link></li>
+                            {
+                                /*
+                                <li className="nav-item"><Link className="nav-link" to="/livros"><i className="fa-solid fa-store"></i> Livros</Link></li>
+                                <li className="nav-item"><Link className="nav-link" to="/cursos"><i className="fa-solid fa-store"></i> Cursos</Link></li>
+                                <li className="nav-item"><Link className="nav-link" to="/desenvolvedor"><i className="fa-solid fa-user"></i> Desenvolvedor</Link></li>
+                                <li className="nav-item"><Link className="nav-link" to="/contato"><i className="fa-solid fa-envelope"></i> Contato</Link></li>
+                                */
+                            }
                         </ul>
                     </div>
                 </div>

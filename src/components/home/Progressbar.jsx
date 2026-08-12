@@ -1,10 +1,12 @@
-import $ from "../plugins/jquery-ui";
+import $ from "../../plugins/jquery-ui";
 
 import "jquery-ui/ui/widget";
 import "jquery-ui/ui/widgets/progressbar";
 import "jquery-ui/themes/base/core.css";
 import "jquery-ui/themes/base/progressbar.css";
 import { next } from "./DestaqueImagem";
+import { useLocation } from 'react-router-dom';
+import { useEffect } from "react";
 
 let progress = -1;
 let progressInterval = null;
@@ -16,7 +18,13 @@ function setProgress(progressValue){
     progress = progressValue;
 }
 function Progressbar() {
-    
+    const location = useLocation();
+    useEffect(() => {
+        return () => {
+            clearInterval(progressInterval);
+        };
+    }, [location.pathname]); 
+
     if (typeof progressbar != 'undefined' && progress === -1) {
         progress += 1;
         setTimeout(() => {

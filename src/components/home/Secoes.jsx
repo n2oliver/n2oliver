@@ -1,4 +1,4 @@
-import { scrollDivX } from "../js/scroll-buttons";
+import { scrollDivX } from "../../js/scroll-buttons";
 import DestaquesCards from "./DestaquesCards";
 
 function Secoes() {

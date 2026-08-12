@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { showGameInHighlight } from "../js/feed";
-import { API_URL } from "../App";
+import { showGameInHighlight } from "../../js/feed";
+import { API_URL } from "../../App";
 
 function RecentesCards() {
     const [recentes, setRecentes] = useState([]);

@@ -1,7 +1,6 @@
 import DonationSectionWrapper from "./DonationSectionWrapper";
-import Recentes from "./jogos/Recentes";
+import Recentes from "../jogos/Recentes";
 import Secoes from "./Secoes";
-import Slogan from "./Slogan";
 
 function Template() {
     return (
@@ -13,7 +12,6 @@ function Template() {
                         <div className="m-auto row justify-content-around">
                             <Recentes />
                             <Secoes />
-                            <Slogan />
                             <DonationSectionWrapper />
                         </div>
                     </div>

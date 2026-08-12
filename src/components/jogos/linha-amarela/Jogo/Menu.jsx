@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import "../../../../css/jogos/linha-amarela/info.css";
-import "../../../../css/jogos/linha-amarela/logo.css";
-import "../../../../css/jogos/linha-amarela/nivel.css";
-import "../../../../css/jogos/linha-amarela/pause.css";
+import "../../../../css/jogos/linha-amarela/info.module.css";
+import "../../../../css/jogos/linha-amarela/logo.module.css";
+import "../../../../css/jogos/linha-amarela/nivel.module.css";
+import "../../../../css/jogos/linha-amarela/pause.module.css";
 function Menu() {
     const [userData, setUserData] = useState([]);
     useEffect(()=>{

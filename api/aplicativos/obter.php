@@ -143,18 +143,6 @@ echo json_encode(
                     </a>
                 </div>',
             'imagem' => '/img/calc.png'
-        ],
-        7 => (object) [
-            'id' => 8,
-            'url' => '/lojavirtual/',
-            'titulo' => 'Oliv3r Store - Loja Virtual',
-            'descricao' => '<h1>Oliv3r Store - Loja Virtual</h1>
-                <p>A Oliv3r Store é um espaço de afiliados onde apresento uma curadoria pessoal de produtos que uso e recomendo. O foco é oferecer valor real, com descrições originais e uma seleção cuidadosa de tecnologia, livros e cursos, alinhados aos temas de desenvolvimento e bem-estar do site.</p>
-                
-                <div class="text-center">
-                    <a href="/lojavirtual/"><button class="btn btn-primary"><strong>Acessar</strong></button></a>
-                </div>',
-            'imagem' => '/img/loja_virtual.jpg'
-        ],
+        ]
     )
 );

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { API_URL } from "../App";
+import { Link } from 'react-router-dom';
+import { API_URL } from "../../App";
 
 function DestaquesCards() {
     const [destaques, setDestaques] = useState([]);
@@ -27,15 +28,17 @@ function DestaquesCards() {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}>
-                <button
-                    data-game-url={destaque.url}
-                    data-game-title={destaque.titulo}
-                    data-game-desc={destaque.descricao}
-                    data-game-imagem={`${API_URL + destaque.imagem}`}>
-                    <div className="row min-vh-50 h-100 align-content-center">
-                        <h2 className="rounded-left bg-dark my-0 py-1 rounded">{destaque.titulo}</h2>
-                    </div>
-                </button>
+                <Link to={destaque.url} target="_blank" role="button">
+                    <button
+                        data-game-url={destaque.url}
+                        data-game-title={destaque.titulo}
+                        data-game-desc={destaque.descricao}
+                        data-game-imagem={`${API_URL + destaque.imagem}`}>
+                        <div className="row min-vh-50 h-100 align-content-center">
+                            <h2 className="rounded-left bg-dark my-0 py-1 rounded">{destaque.titulo}</h2>
+                        </div>
+                    </button>
+                </Link>
             </div>
         ))
     );

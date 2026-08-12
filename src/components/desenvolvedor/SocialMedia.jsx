@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../css/social-media.css';
+import '../../css/social-media.css';
 function SocialMedia() {
     return (
         <div className="d-flex align-content-end">

@@ -1,7 +1,7 @@
-import { showGameInHighlight } from "../js/feed.js";
+import { showGameInHighlight } from "../../js/feed.js";
 import { useEffect, useState } from 'react';
-import Progressbar, { setProgress } from './Progressbar';
-import { API_URL } from "../App";
+import Progressbar, { setProgress } from './Progressbar.jsx';
+import { API_URL } from "../../App.jsx";
 
 let gameItemsIndex = -1;
 let gamesArray = [];

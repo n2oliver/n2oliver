@@ -1,6 +1,6 @@
 import DownloadSection from "../../components/extensoes/leitor-de-pdf/DownloadSection";
 import Section from "../../components/extensoes/leitor-de-pdf/Section";
-import "../../css/extensoes/style.css";
+import "../../css/extensoes/style.module.css";
 
 function LeitorDePdf() {
   return (<>

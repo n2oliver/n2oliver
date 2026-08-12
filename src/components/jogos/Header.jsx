@@ -1,4 +1,4 @@
-function Slogan() {
+function Header() {
     return (
         <header className="mx-auto col-md-12 text-center">
             <img alt="logo" src="/img/jogos/logo.png" style={{height: "60px", width: "auto"}} />
@@ -7,4 +7,4 @@ function Slogan() {
     )
 }
 
-export default Slogan;
+export default Header;

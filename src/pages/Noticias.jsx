@@ -1,4 +1,4 @@
-import NoticiasRecentes, { avancar, toggleNoticiaContent, voltar } from '../components/NoticiasRecentes';
+import NoticiasRecentes, { avancar, toggleNoticiaContent, voltar } from '../components/noticias/NoticiasRecentes';
 function Noticias() {
     document.addEventListener("DOMContentLoaded",()=>{
         const id = Number(window.location.pathname.substring(1))

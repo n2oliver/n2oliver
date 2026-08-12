@@ -1,7 +1,7 @@
 function Section() {
     return (
-        <section className="py-5">
-            <div className="container bg-light text-light" style={{ borderRadius: "10px", padding: "20px" }}>
+        <section>
+            <div className="container bg-light text-light m-auto my-2" style={{ borderRadius: "10px", padding: "20px" }}>
                 <div className="row g-4">
                     <div className="col-lg-6">
                         <div className="card h-100 shadow-sm">

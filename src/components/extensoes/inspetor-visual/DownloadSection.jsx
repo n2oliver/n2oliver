@@ -1,7 +1,7 @@
 function DownloadSection() {
     return (
-        <section className="py-5">
-            <div className="container text-center bg-white">
+        <section>
+            <div className="container text-center bg-white m-auto my-2">
                 <h2>Instalação manual</h2>
                 <p>
                     Caso prefira, você também pode instalar a extensão utilizando o modo desenvolvedor do Google Chrome.

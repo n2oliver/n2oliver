@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { scrollDivX } from "../../js/scroll-buttons";
-import RecentesCards from "../RecentesCards";
+import RecentesCards from "./RecentesCards";
 
 function Recentes() {
     return (<div id="jogos-recentes" className="d-flex justify-content-center col-md-5">

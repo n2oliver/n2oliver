@@ -196,7 +196,7 @@ main {
 #lista,
 #destaques,
 #game-noticias {
-  max-width: 77dvw;
+  max-width: 100%;
   overflow-x: scroll;
   scrollbar-width: auto;
   display: -webkit-inline-box;

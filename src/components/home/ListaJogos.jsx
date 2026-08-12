@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { API_URL } from "../App";
+import { API_URL } from "../../App";
 
 function ListaJogos() {
     let gameItems = [];

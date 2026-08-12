@@ -1,4 +1,4 @@
-import ListaAplicativos from '../components/ListaAplicativos';
+import ListaAplicativos from '../components/home/ListaAplicativos';
 
 function Aplicativos() {
 

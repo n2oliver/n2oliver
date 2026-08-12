@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { useEffect, useState } from "react";
-import { API_URL } from '../App';
+import { API_URL } from '../../App';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import '../css/swiper.css';
+import '../../css/swiper.css';
 
 function ListaAplicativos() {
     const [aplicativos, setAplicativos] = useState([]);

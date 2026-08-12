@@ -1,5 +1,5 @@
 import { scrollDivX } from "../../../../js/scroll-buttons";
-import ListaJogos from "../../../ListaJogos";
+import ListaJogos from "../../../home/ListaJogos";
 
 function Pause() {
     return (

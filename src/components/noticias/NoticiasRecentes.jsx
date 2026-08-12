@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { $, API_URL } from "../App";
+import { $, API_URL } from "../../App";
 
 let noticiasRoot = null;
 

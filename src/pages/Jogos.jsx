@@ -1,5 +1,5 @@
-import ListaJogos from '../components/ListaJogos';
-import Header from '../components/Slogan';
+import ListaJogos from '../components/home/ListaJogos';
+import Header from '../components/jogos/Header';
 
 function Jogos() {
   return (<>

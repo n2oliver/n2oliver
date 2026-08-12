@@ -2,9 +2,9 @@ import Header from "./Header";
 
 function Section() {
     return (
-        <section className="pt-5">
+        <section className="pt-2">
             <Header />
-            <div className="container bg-secondary text-light" style={{ textShadow: "1px 2px #000000" }}>
+            <div className="container bg-secondary text-light m-auto my-2" style={{ textShadow: "1px 2px #000000" }}>
                 <div className="row align-items-center g-5">
                     <div className="col-lg-5 text-center">
                         <img src="/img/extensoes/inspetor-visual/insp.png"
@@ -21,7 +21,7 @@ function Section() {
                     </div>
                 </div>
             </div>
-            <div className="container bg-white">
+            <div className="container bg-white m-auto my-2">
                 <h2 className="text-center mb-5">
                     Recursos
                 </h2>
@@ -88,7 +88,7 @@ function Section() {
                     </div>
                 </div>
             </div>
-            <div className="container bg-white">
+            <div className="container bg-white m-auto my-2">
                 <h2 className="text-center mb-5">
                     Ideal para
                 </h2>

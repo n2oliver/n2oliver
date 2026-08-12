@@ -1,11 +1,11 @@
-import { scrollDivX } from '../js/scroll-buttons.js';
+import { scrollDivX } from '../../js/scroll-buttons.js';
 import GameNoticias from './GameNoticias';
 
 function NoticiasBar() {
     return (
         <div className="m-auto">
             <div className="m-auto row justify-content-around"></div>
-            <div className="col-md-12">
+            <div className="col-md-10 m-auto">
                 <div className="row m-auto text-light ubuntu">
                     <h2>Notícias</h2>
 

@@ -1,7 +1,7 @@
 function Header() {
     return (
         <div>
-            <div className="container text-center bg-secondary text-light m-auto py-5" style={{ borderRadius: "10px" }}>
+            <div className="container text-center bg-secondary text-light m-auto" style={{ borderRadius: "10px" }}>
                 <h2>Leitor de PDF</h2>
                 <p className="lead">
                     Abra documentos PDF diretamente no Google Chrome

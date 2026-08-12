@@ -1,6 +1,6 @@
 import '../css/footer.css';
 import '../css/gtranslate.css';
-import SocialMedia from './SocialMedia';
+import SocialMedia from './desenvolvedor/SocialMedia.jsx';
 import '../js/gtranlate-settings.js';
 import AAdsSticky from './AAdsSticky';
 import { Link } from 'react-router-dom';

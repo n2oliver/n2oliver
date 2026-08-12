@@ -1,4 +1,4 @@
-import "../../../css/jogos/caca-palavras/style.css"
+import "../../../css/jogos/caca-palavras/style.module.css"
 import MainText from "../../../components/jogos/caca-palavras/intro/MainText";
 import { useEffect } from "react";
 import { abrirSmartlinkUmaVez } from "../../../js/anuncios";
