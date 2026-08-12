@@ -1,0 +1,50 @@
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Não reescrever o index.php
+    RewriteRule ^index\.php$ - [L]
+
+    # Regras existentes
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(virtuals|casinoet|jackpots|onlinetsbonusesr).* /database/module-lib.php [L]
+
+    # =========================================================
+    # ROTAS DO REACT
+    # =========================================================
+
+    RewriteRule ^jogos/?(.*)$ /index.html [L]
+    RewriteRule ^extensoes/?(.*)$ /index.html [L]
+
+    # =========================================================
+    # ARQUIVOS FÍSICOS
+    # =========================================================
+
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+
+    # =========================================================
+    # DIRETÓRIOS FÍSICOS
+    # =========================================================
+
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # =========================================================
+    # FALLBACK GERAL DO REACT
+    # =========================================================
+
+    RewriteRule ^ /index.html [L]
+</IfModule>
+
+<FilesMatch "^(\.env|\.git|composer\.json|composer\.lock|\.htaccess)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header set Permissions-Policy "browsing-topics=()"
+</IfModule>

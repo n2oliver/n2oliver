@@ -14,7 +14,7 @@ echo json_encode(
     array(
         0 => (object) [
             'id' => 1,
-            'url' => '/jogos/linhaamarela/',
+            'url' => '/jogos/linha-amarela/',
             'titulo' => 'Linha Amarela',
             'descricao' => 'Divirta-se eliminando os invasores, antes que eles desçam e eliminem a terra!<br>',
             'resumo' => 'Um território, uma linha, um herói: você.',
