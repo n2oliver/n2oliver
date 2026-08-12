@@ -1,4 +1,4 @@
-body {
+.parent {
     background-image: url(/img/jogos/combo-memo/bg-combo-memo.png);
     background-position: center;
     background-attachment: fixed;
@@ -17,7 +17,7 @@ body {
     color: yellow !important;
     -webkit-text-stroke: .7px #000;
 }
-header {
+.header {
     background-image: url(/img/jogos/combo-memo/platform/wood.jpg);
     background-size: cover;
     background-position: center;
@@ -29,7 +29,7 @@ header {
     border: 1px solid white;
 }
 
-header img {
+.header img {
     max-width: 200px;
 }
 
@@ -41,7 +41,7 @@ h1:not(.jumbotron h1):not(.ranking-title) {
     background-color: darkslategray;
 }
 
-#jogar-agora {
+#jogar_agora {
     display: inline-block;
     padding: 12px 24px;
     background-color: #f30012;
@@ -64,4 +64,4 @@ footer {
     border: 1px solid white;
     margin-bottom: 20px !important;
     min-width: 0 !important;
-} 
+}

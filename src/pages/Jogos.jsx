@@ -10,7 +10,7 @@ function Jogos() {
 
         <div className="container m-auto" style={{ backgroundColor: "rgba(0, 0, 0, .4)" }}>
           <div id="jogos-recentes" className="d-flex justify-content-center">
-            <div className="justify-content-start col-md-10 m-auto text-light mt-2 ubuntu">
+            <div className="justify-content-start col-md-10 m-auto text-light mt-2 ubuntu w-100">
               <strong>
                 <h2 className="my-0">Todos Os Jogos</h2>
               </strong>

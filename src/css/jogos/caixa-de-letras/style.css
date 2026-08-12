@@ -12,6 +12,11 @@ body {
     justify-content: center;
     min-height: auto;
     margin-bottom: 64px;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    max-height: 100dvh;
+    margin: 1rem 0;
 }
 
 .game-title {
@@ -30,7 +35,8 @@ body {
     background: #f8f3e7;
     border-radius: 0;
     box-shadow: 0 0 0 16px #b8864b, 0 0 0 24px #e2c48d, 2px 2px 12px rgba(0, 0, 0, 0.12);
-    width: 77dvw;
+    width: 32dvw;
+    min-width: 190px;
     margin: 0 auto;
     box-sizing: border-box;
     border: 8px solid #b8864b;
@@ -87,9 +93,4 @@ body {
     top: -32px;
     z-index: 1;
     background-color: rgba(255,255,255,0.7);
-}
-header {
-    margin: 0 auto !important;
-    width: 77dvw;
-    margin-top: 24px !important;
 }
