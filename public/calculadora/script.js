@@ -49,37 +49,61 @@ function testa(event) {
     return true;
 }
 function tecla(valor) {
-    if(/[\+\-\*\/]+$/gi.test(numberString) && /[\+\-\*\/]+/gi.test(valor)) {
-        numberString = numberString.replace(/[\+\-\*\/]+$/gi, valor);
-    } else if (valor == "(") {
-        if (
-            numberString.length > 0 &&
-            /[\d.)%]$/.test(numberString)
-        ) {
-            numberString += "*(";
-        } else {
-            numberString += "(";
-        }
-    } else if (valor == ")") {
-        numberString += ")";
-    } else {
-        numberString += !isNaN(valor) ? parseInt(valor) : valor.toString();
+    const input = document.getElementById("digitedNumber");
+
+    // Garante que numberString esteja sincronizado com o campo
+    numberString = input.value;
+
+    const inicio = input.selectionStart ?? numberString.length;
+    const fim = input.selectionEnd ?? inicio;
+
+    // Texto antes e depois da seleção
+    let antes = numberString.substring(0, inicio);
+    let depois = numberString.substring(fim);
+
+    // Se for operador e já houver operador imediatamente antes do cursor,
+    // substitui o operador anterior.
+    if (
+        /[\+\-\*\/]$/.test(antes) &&
+        /[\+\-\*\/]/.test(valor)
+    ) {
+        antes = antes.substring(0, antes.length - 1);
     }
 
-    document.getElementById("digitedNumber").value = decimal(numberString);
+    // Tratamento do (
+    if (valor === "(") {
+        if (antes.length > 0 && /[\d.)%]$/.test(antes)) {
+            valor = "*(";
+        }
+    }
+
+    // Nova expressão
+    numberString = antes + valor + depois;
+
+    input.value = decimal(numberString);
+
     resultado = false;
 
-    try {
-        const valor = decimal(eval(result()));
+    // Cursor fica imediatamente depois do caractere inserido
+    const novaPosicao = antes.length + valor.length;
 
-        if (valor == "=") {
+    input.focus();
+    input.setSelectionRange(novaPosicao, novaPosicao);
+
+    try {
+        const valorPreview = decimal(eval(result()));
+
+        if (valorPreview == "=") {
             document.getElementById("result_preview").innerText = "";
             return;
         }
 
-        document.getElementById("result_preview").innerText = "=" + valor;
+        document.getElementById("result_preview").innerText =
+            "=" + valorPreview;
+
     } catch {
-        document.getElementById("result_preview").innerText = "=" + result();
+        document.getElementById("result_preview").innerText =
+            "=" + result();
     }
 }
 function decimal(expr) {

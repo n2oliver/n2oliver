@@ -1,6 +1,5 @@
 import DonationSectionWrapper from "./DonationSectionWrapper";
 import Recentes from "../jogos/Recentes";
-import Secoes from "./Secoes";
 
 function Template() {
     return (
@@ -11,7 +10,6 @@ function Template() {
                     <div className="m-auto">
                         <div className="m-auto row justify-content-around">
                             <Recentes />
-                            <Secoes />
                             <DonationSectionWrapper />
                         </div>
                     </div>
