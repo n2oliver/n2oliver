@@ -39,7 +39,7 @@ import InspetorVisual from "./pages/extensoes/InspetorVisual.jsx";
 import LeitorDePdf from "./pages/extensoes/LeitorDePdf.jsx";
 let API_URL;
 function App() {
-  const [config, setConfig] = useState([]);
+  const [config, setConfig] = useState(null);
 
   useEffect(() => {
     async function carregar() {
@@ -51,7 +51,7 @@ function App() {
     carregar();
   }, [])
   if (!config || (config && !config.API_URL)) {
-    return;
+    return null;
   }
   
   API_URL = config.API_URL;
