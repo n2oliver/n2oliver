@@ -4,24 +4,23 @@ function Section() {
     return (
         <section className="pt-5">
             <Header />
-            <div className="container bg-secondary text-light" style={{ textShadow: "1px 2px #000000" }}>
+            <div className="container bg-white">
                 <div className="row align-items-center g-5">
                     <div className="col-lg-5 text-center">
-                        <img src="/img/extensoes/inspetor-visual/insp.png"
+                        <img src="/img/extensoes/leitor-de-pdf/insp-pdf.png"
                             className="img-fluid"
                             style={{ maxWidth: "250px" }}
-                            alt="Inspetor Visual" />
+                            alt="Leitor de PDF" />
                     </div>
                     <div className="col-lg-7 py-4">
-                        <h2>Inspecione qualquer página com um clique</h2>
+                        <h2>Leia documentos PDF com mais conforto</h2>
                         <p>
-                            O Inspetor Visual permite selecionar elementos diretamente na página para visualizar informações, copiar HTML, copiar CSS ou obter ambos simultaneamente.
-                            É uma ferramenta ideal para estudos, prototipação, manutenção e desenvolvimento Front-end.
+                            O Leitor de PDF permite abrir documentos diretamente no navegador e utilizar leitura em voz alta para acompanhar o conteúdo sem precisar ler continuamente na tela. Escolha a voz desejada, controle a reprodução e torne sua leitura mais confortável e acessível.
                         </p>
                     </div>
                 </div>
             </div>
-            <div className="container bg-white">
+            <div className="container bg-white py-5">
                 <h2 className="text-center mb-5">
                     Recursos
                 </h2>
@@ -29,9 +28,9 @@ function Section() {
                     <div className="col-md-4">
                         <div className="card h-100">
                             <div className="card-body">
-                                <h4>Copiar HTML</h4>
+                                <h4>Abertura de PDFs</h4>
                                 <p>
-                                    Copie a estrutura HTML de qualquer elemento selecionado.
+                                    Abra documentos PDF diretamente no navegador.
                                 </p>
                             </div>
                         </div>
@@ -39,9 +38,9 @@ function Section() {
                     <div className="col-md-4">
                         <div className="card h-100">
                             <div className="card-body">
-                                <h4>Copiar CSS</h4>
+                                <h4>Leitura em voz alta</h4>
                                 <p>
-                                    Obtenha automaticamente os estilos CSS aplicados ao elemento.
+                                    Converta o texto do PDF em áudio utilizando a API Speech Synthesis.
                                 </p>
                             </div>
                         </div>
@@ -49,9 +48,9 @@ function Section() {
                     <div className="col-md-4">
                         <div className="card h-100">
                             <div className="card-body">
-                                <h4>HTML + CSS</h4>
+                                <h4>Escolha de vozes</h4>
                                 <p>
-                                    Copie o HTML e o CSS em uma única ação.
+                                    Utilize qualquer voz instalada no navegador ou no sistema operacional.
                                 </p>
                             </div>
                         </div>
@@ -59,9 +58,9 @@ function Section() {
                     <div className="col-md-4">
                         <div className="card h-100">
                             <div className="card-body">
-                                <h4>Inspeção Visual</h4>
+                                <h4>Controle da reprodução</h4>
                                 <p>
-                                    Selecione elementos diretamente sobre a página de forma rápida e intuitiva.
+                                    Inicie, pause, retome ou interrompa a leitura sempre que desejar.
                                 </p>
                             </div>
                         </div>
@@ -69,9 +68,9 @@ function Section() {
                     <div className="col-md-4">
                         <div className="card h-100">
                             <div className="card-body">
-                                <h4>Interface leve</h4>
+                                <h4>Acessibilidade</h4>
                                 <p>
-                                    Sem configurações complexas. Instale e comece a utilizar imediatamente.
+                                    Ideal para pessoas com baixa visão, dislexia, TDAH ou que preferem ouvir o conteúdo.
                                 </p>
                             </div>
                         </div>
@@ -79,16 +78,16 @@ function Section() {
                     <div className="col-md-4">
                         <div className="card h-100">
                             <div className="card-body">
-                                <h4>Privacidade</h4>
+                                <h4>Interface simples</h4>
                                 <p>
-                                    Todo o processamento acontece localmente no navegador.
+                                    Leve, intuitiva e pronta para uso sem configurações complexas.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="container bg-white">
+            <div className="container bg-white py-5">
                 <h2 className="text-center mb-5">
                     Ideal para
                 </h2>
@@ -96,29 +95,29 @@ function Section() {
                     <div className="col-md-4">
                         <div className="card h-100">
                             <div className="card-body">
-                                <h4>Desenvolvedores</h4>
-                                <p>
-                                    Analise rapidamente componentes HTML e CSS durante o desenvolvimento.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="card h-100">
-                            <div className="card-body">
-                                <h4>Designers</h4>
-                                <p>
-                                    Entenda como interfaces são construídas e reutilize componentes.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="card h-100">
-                            <div className="card-body">
                                 <h4>Estudantes</h4>
                                 <p>
-                                    Aprenda HTML e CSS explorando páginas reais em tempo real.
+                                    Ouça apostilas, artigos e materiais didáticos enquanto acompanha o texto.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="card h-100">
+                            <div className="card-body">
+                                <h4>Profissionais</h4>
+                                <p>
+                                    Leia contratos, relatórios e documentos de forma mais confortável.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="card h-100">
+                            <div className="card-body">
+                                <h4>Acessibilidade</h4>
+                                <p>
+                                    Facilite o acesso ao conteúdo para pessoas com dificuldades de leitura ou deficiência visual.
                                 </p>
                             </div>
                         </div>

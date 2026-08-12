@@ -36,6 +36,7 @@ import LinhaAmarelaIntro from "./pages/jogos/linha-amarela/LinhaAmarelaIntro.jsx
 import Jogo from "./pages/jogos/linha-amarela/Jogo.jsx";
 import FimDeJogo from "./pages/jogos/linha-amarela/FimDeJogo.jsx";
 import InspetorVisual from "./pages/extensoes/InspetorVisual.jsx";
+import LeitorDePdf from "./pages/extensoes/LeitorDePdf.jsx";
 let API_URL;
 function App() {
   const [config, setConfig] = useState([]);
@@ -68,6 +69,9 @@ function App() {
 
         <Route path="/extensoes/inspetor-visual" element={<InspetorVisual />} />
         <Route path="/extensoes/inspetorvisual" element={<InspetorVisual />} />
+
+        <Route path="/extensoes/leitor-de-pdf" element={<LeitorDePdf />} />
+        <Route path="/extensoes/leitordepdf" element={<LeitorDePdf />} />
 
         <Route path="/livros" element={<Livros />} />
         <Route path="/cursos" element={<Cursos />} />
