@@ -6,7 +6,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.game-container {
+.game-container-cl {
     display: flex;
     align-items: center;
     justify-content: center;

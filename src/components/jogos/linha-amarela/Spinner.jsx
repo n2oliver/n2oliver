@@ -1,4 +1,4 @@
-import "../../../css/jogos/linha-amarela/spinner.module.css";
+import "../../../css/jogos/linha-amarela/spinner.css";
 function Spinner() {
     return (
         <div className="spinner d-none"></div>

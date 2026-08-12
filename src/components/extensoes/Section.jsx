@@ -25,7 +25,7 @@ function Section() {
                                         </ul>
                                     </div>
                                     <div className="w-100 align-content-end text-center">
-                                        <a href="/extensoes/inspetor-visual/" className="btn btn-primary gap-3 m-1" style={{ width: "fit-content" }}>
+                                        <a href="/extensoes/inspetor-visual" className="btn btn-primary gap-3 m-1" style={{ width: "fit-content" }}>
                                             Saiba mais
                                         </a>
                                         <a href="/download/extensoes/inspetor-visual/versoes/inspetor-visual-1.0.8.zip"
@@ -58,7 +58,7 @@ function Section() {
                                         </ul>
                                     </div>
                                     <div className="w-100 align-content-end text-center">
-                                        <a href="/extensoes/leitor-de-pdf/" className="btn btn-primary m-1" style={{ width: "fit-content" }}>
+                                        <a href="/extensoes/leitor-de-pdf" className="btn btn-primary m-1" style={{ width: "fit-content" }}>
                                             Saiba mais
                                         </a>
                                         <a href="/download/extensoes/leitor-de-pdf/versoes/leitor-de-pdf-0.6.2.zip"

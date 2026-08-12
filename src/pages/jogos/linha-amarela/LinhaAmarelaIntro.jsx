@@ -7,13 +7,13 @@ import Spinner from "../../../components/jogos/linha-amarela/Spinner";
 import "../../../js/jogos/linha-amarela/Login";
 import "../../../js/gtag_dispatcher";
 
-import "../../../css/jogos/linha-amarela/style.module.css";
-import "../../../css/jogos/linha-amarela/logo.module.css";
-import "../../../css/jogos/linha-amarela/landing.module.css";
-import "../../../css/jogos/linha-amarela/audio.module.css";
-import "../../../css/jogos/linha-amarela/pause.module.css";
-import "../../../css/jogos/linha-amarela/spinner.module.css";
-import "../../../css/jogos/linha-amarela/intro.module.css";
+import "../../../css/jogos/linha-amarela/style.css";
+import "../../../css/jogos/linha-amarela/logo.css";
+import "../../../css/jogos/linha-amarela/landing.css";
+import "../../../css/jogos/linha-amarela/audio.css";
+import "../../../css/jogos/linha-amarela/pause.css";
+import "../../../css/jogos/linha-amarela/spinner.css";
+import "../../../css/jogos/linha-amarela/intro.css";
 
 function LinhaAmarelaIntro() {
     return (<>

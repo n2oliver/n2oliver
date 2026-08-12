@@ -1,4 +1,4 @@
-import "../../../css/jogos/palavras-cruzadas/style.module.css"
+import "../../../css/jogos/palavras-cruzadas/style.css"
 import MainText from "../../../components/jogos/palavras-cruzadas/intro/MainText";
 import { useEffect } from "react";
 import { abrirSmartlinkUmaVez } from "../../../js/anuncios";

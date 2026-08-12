@@ -10,7 +10,7 @@ function GameContainer() {
         setUp();
     });
     return (
-        <div className="game-container">
+        <div className="game-container-cl">
             <div className="game-title text-dark bg-warning m-auto"><strong>Caixa de Letras</strong></div>
             <div className="instructions"><strong>Arraste ou clique para mover as letras. Encontre palavras comuns do português brasileiro!</strong>
                 <div className="botoes text-center">

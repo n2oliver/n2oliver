@@ -3,12 +3,19 @@ import { appUrl } from "../../../pages/jogos/linha-amarela/LinhaAmarelaIntro";
 import { setUpAudioManager, setUpIntro } from "../../../js/jogos/linha-amarela/intro-script";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
 
 function LoginCadastro() {
-    useEffect(()=>{
+    const navigate = useNavigate();
+    useEffect(() => {
         const audioManager = setUpAudioManager();
-        setUpIntro(audioManager);
-    });
+
+        setUpIntro(audioManager, () => {
+            setTimeout(() => {
+                navigate(`${appUrl}/jogo`);
+            }, 3000);
+        });
+    }, [navigate]);
     return (
         <div className="container p-0" style={{ zIndex: 10, backgroundColor: "transparent", margin: "0 auto" }}>
             <nav className="navbar navbar-expand-lg navbar-dark text-light" style={{ backgroundColor: "rgba(255, 255, 255, 0.20)", backdropFilter: "blur(10px)" }}>

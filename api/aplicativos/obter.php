@@ -14,7 +14,7 @@ echo json_encode(
     array(
         0 => (object) [
             'id' => 1,
-            'url' => '/extensoes/',
+            'url' => '/extensoes',
             'titulo' => 'Inspetor Visual Extensão para Navegadores (Chrome)',
             'descricao' => '<h1>Inspetor Visual</h1>
                     <p>
@@ -44,7 +44,7 @@ echo json_encode(
                     </p>
 
                     <div class="text-center">
-                        <a href="/extensoes/">
+                        <a href="/extensoes">
                             <button class="btn btn-primary">
                                 <strong>Acessar</strong>
                             </button>
@@ -54,19 +54,19 @@ echo json_encode(
         ],
         1 => (object) [
             'id' => 2,
-            'url' => '/jogos/combo-memo/',
+            'url' => '/jogos/combo-memo',
             'titulo' => 'Combo-Memo',
             'descricao' => '<h1>Combo-Memo</h1>
                 <p>Um jogo da memória clássico, desenvolvido com JavaScript puro e CSS para ser leve e divertido. O projeto inclui animações dinâmicas, sistema de combos e comemorações, oferecendo uma experiência de jogo engajante e totalmente gratuita no navegador.</p>
                 
                 <div class="text-center">
-                    <a href="/jogos/combo-memo/"><button class="btn btn-danger"><strong>Jogar agora</strong></button></a>
+                    <a href="/jogos/combo-memo"><button class="btn btn-danger"><strong>Jogar agora</strong></button></a>
                 </div>',
             'imagem' => '/img/combo-memo.png'
         ],
         2 => (object) [
             'id' => 3,
-            'url' => '/jogos/caca-palavras/',
+            'url' => '/jogos/caca-palavras',
             'titulo' => 'Caça-Palavras',
             'descricao' => '<h1>Caça-Palavras</h1>
                 <p>Venha jogar Caça-Palavras com a gente!
@@ -82,13 +82,13 @@ echo json_encode(
                 Jogue no seu ritmo e divirta-se encontrando cada palavra escondida.
                 Será que você consegue achar todas?</p>
                 <div class="text-center">
-                    <a href="/jogos/caca-palavras/"><button class="btn btn-danger"><strong>Jogar agora</strong></button></a>
+                    <a href="/jogos/caca-palavras"><button class="btn btn-danger"><strong>Jogar agora</strong></button></a>
                 </div>',
             'imagem' => '/img/jogos/a.jpg'
         ],
         3 => (object) [
             'id' => 4,
-            'url' => '/jogos/palavras-cruzadas/',
+            'url' => '/jogos/palavras-cruzadas',
             'titulo' => 'Palavras Cruzadas',
             'descricao' => '<h1>Desafie-se nas Palavras Cruzadas!</h1>
                         
@@ -102,13 +102,13 @@ echo json_encode(
 
                     <p>Tem alguns minutos? Complete a grade no seu tempo e divirta-se descobrindo cada resposta.</p>
                 <div class="text-center">
-                    <a href="/jogos/palavras-cruzadas/"><button class="btn btn-danger"><strong>Jogar agora</strong></button></a>
+                    <a href="/jogos/palavras-cruzadas"><button class="btn btn-danger"><strong>Jogar agora</strong></button></a>
                 </div>',
             'imagem' => '/img/jogos/flat-crosswords.png'
         ],
         4 => (object) [
             'id' => 5,
-            'url' => '/jogos/caixa-de-letras/',
+            'url' => '/jogos/caixa-de-letras',
             'titulo' => 'Caixa de Letras',
             'descricao' => 'Desafie seu conhecimento com este quebra-cabeça com letrinhas.',
             'imagem' => '/img/jogos/caixa-de-letras.png'
@@ -128,7 +128,7 @@ echo json_encode(
         ],
         6 => (object) [
             'id' => 7,
-            'url' => '/calculadora/',
+            'url' => '/calculadora',
             'titulo' => 'Calculadora',
             'descricao' => '<h1>Calculadora</h1>
                 <p>
@@ -136,7 +136,7 @@ echo json_encode(
                 </p>
 
                 <div class="text-center">
-                    <a href="/calculadora/">
+                    <a href="/calculadora">
                         <button class="btn btn-primary">
                             <strong>Acessar</strong>
                         </button>

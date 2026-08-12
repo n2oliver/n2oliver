@@ -38,7 +38,7 @@ header h1 {
     color: white;
 }
 
-.game-container {
+.game-container-cp {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -55,6 +55,7 @@ header h1 {
     -moz-user-select: none;      /* Old versions of Firefox */
     -ms-user-select: none;       /* Internet Explorer/Edge */
     user-select: none;           /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+    width: fit-content;
 }
 
 .grid-cell {

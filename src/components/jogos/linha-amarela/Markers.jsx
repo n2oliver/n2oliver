@@ -1,4 +1,4 @@
-import "../../../css/jogos/linha-amarela/markers.module.css";
+import "../../../css/jogos/linha-amarela/markers.css";
 
 function Markers() {
     return (<div className="menu-item markers">

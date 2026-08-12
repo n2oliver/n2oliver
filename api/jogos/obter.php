@@ -14,7 +14,7 @@ echo json_encode(
     array(
         0 => (object) [
             'id' => 1,
-            'url' => '/jogos/linha-amarela/',
+            'url' => '/jogos/linha-amarela',
             'titulo' => 'Linha Amarela',
             'descricao' => 'Divirta-se eliminando os invasores, antes que eles desçam e eliminem a terra!<br>',
             'resumo' => 'Um território, uma linha, um herói: você.',
@@ -22,7 +22,7 @@ echo json_encode(
         ],
         1 => (object) [
             'id' => 2,
-            'url' => '/jogos/combo-memo/',
+            'url' => '/jogos/combo-memo',
             'titulo' => 'Combo-Memo',
             'descricao' => 'Um divertido jogo da memória com combinações!<br>',
             'resumo' => '',
@@ -30,7 +30,7 @@ echo json_encode(
         ],
         2 => (object) [
             'id' => 3,
-            'url' => '/jogos/caca-palavras/',
+            'url' => '/jogos/caca-palavras',
             'titulo' => 'Caça-Palavras',
             'descricao' => 'Um clássico caça-palavras para testar sua atenção e vocabulário.',
             'resumo' => '',
@@ -38,7 +38,7 @@ echo json_encode(
         ],
         3 => (object) [
             'id' => 4,
-            'url' => '/jogos/palavras-cruzadas/',
+            'url' => '/jogos/palavras-cruzadas',
             'titulo' => 'Palavras Cruzadas',
             'descricao' => 'Desafie seu conhecimento com este quebra-cabeça de palavras.',
             'resumo' => '',
@@ -46,7 +46,7 @@ echo json_encode(
         ],
         4 => (object) [
             'id' => 5,
-            'url' => '/jogos/caixa-de-letras/',
+            'url' => '/jogos/caixa-de-letras',
             'titulo' => 'Caixa de Letras',
             'descricao' => 'Desafie seu conhecimento com este quebra-cabeça com letrinhas.',
             'resumo' => '',

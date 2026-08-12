@@ -2,7 +2,7 @@ import { toast } from "react-toastify";
 import { $ } from "../../../App";
 
 class Login {
-    patterns =  {
+    patterns = {
         email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
         nomedeusuario: /^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$/,
         senha: /.*\S.*/
@@ -25,38 +25,44 @@ class Login {
     cadastrarSenha = $('#cadastrar-senha');
     cadastroSenha = $('#cadastro-senha');
 
-    login = () => {
+    login = async () => {
         this.removeNotifications();
         this.showSpinner();
+
         const email = this.campoEmail.val();
+
         this.campoSenha.attr('type', 'text');
         const senha = this.campoSenha.val();
         this.campoSenha.attr('type', 'password');
-        $.ajax({
-            url: `/api${this.appUrl}/login.php`,
-            data: { email, senha },
-            type: 'POST',
-            success: (response) => {
-                this.showSpinner('hide');
-                toast(JSON.parse(response).data, {
-                    duration: 10000,
-                    close: true
-                });
-                setTimeout(()=>{
-                    window.location.href=`${this.appUrl}/jogo`;
-                }, 3000);
 
-            },
-            error: (xhr) => {
-                this.showSpinner('hide');
-                toast(JSON.parse(xhr.responseText).error, {
-                    duration: 10000,
-                    className: 'error',
-                    close: true
-                });
-            }
-        })
-    }
+        try {
+            const response = await $.ajax({
+                url: `/api${this.appUrl}/login.php`,
+                data: { email, senha },
+                type: 'POST'
+            });
+
+            this.showSpinner('hide');
+
+            toast(JSON.parse(response).data, {
+                duration: 10000,
+                close: true
+            });
+
+            return true;
+
+        } catch (xhr) {
+            this.showSpinner('hide');
+
+            toast(JSON.parse(xhr.responseText).error, {
+                duration: 10000,
+                className: 'error',
+                close: true
+            });
+
+            return false;
+        }
+    };
 
     naoTenhoConta = () => {
         this.removeNotifications();
@@ -64,7 +70,7 @@ class Login {
         const email = this.campoEmail.val();
         this.codigoEnviado.val('');
 
-        if(!email.trim()) {
+        if (!email.trim()) {
             this.showSpinner('hide');
             toast("Preencha primeiro o campo email!", {
                 duration: 10000,
@@ -74,7 +80,7 @@ class Login {
             return;
         }
 
-        this.naoRecebiEmail.unbind('click').click(()=>{
+        this.naoRecebiEmail.unbind('click').click(() => {
             this.codigoEnviado.val('');
 
             this.removeNotifications();
@@ -83,7 +89,7 @@ class Login {
                 duration: 10000,
                 close: true
             });
-                        
+
             $.ajax({
                 url: `/api${this.appUrl}/retry-email-verify.php`,
                 data: { email },
@@ -109,8 +115,8 @@ class Login {
             })
 
         });
-        
-        this.verificar.unbind('click').click(()=>{
+
+        this.verificar.unbind('click').click(() => {
             this.removeNotifications();
             this.showSpinner();
             toast('Verificando código...', {
@@ -139,7 +145,7 @@ class Login {
                     this.camadaNome.removeClass('d-none');
                     this.camadaEmail.addClass('d-none');
 
-                    this.btnCadastrar.unbind('click').click(()=>{
+                    this.btnCadastrar.unbind('click').click(() => {
                         this.removeNotifications();
                         this.showSpinner();
                         toast('Aguarde a conclusão do cadastro...', {
@@ -148,7 +154,7 @@ class Login {
                         });
                         const nome = this.campoNome.val();
                         const senha = this.cadastroSenha.val();
-                        if(!nome.trim() || !senha.trim()) {
+                        if (!nome.trim() || !senha.trim()) {
                             this.removeNotifications();
                             this.showSpinner('hide');
                             toast('Preencha todos os campos!', {
@@ -201,8 +207,8 @@ class Login {
                 }
             })
         });
-        
-        this.cancelarEsqueciSenhaEmail.unbind('click').click(()=> {
+
+        this.cancelarEsqueciSenhaEmail.unbind('click').click(() => {
             this.removeNotifications();
             this.showSpinner('hide');
 
@@ -217,7 +223,7 @@ class Login {
             this.campoEmail.prop('disabled', false);
         });
 
-        $(document).ready(()=>{
+        $(document).ready(() => {
             this.removeNotifications();
             this.showSpinner();
             toast('Enviando código de verificação...', {
@@ -231,7 +237,7 @@ class Login {
                 success: (response) => {
                     this.removeNotifications();
                     this.showSpinner('hide');
-                    if(JSON.parse(response).status == "user_exists") {
+                    if (JSON.parse(response).status == "user_exists") {
                         toast(JSON.parse(response).data, {
                             duration: 10000,
                             className: 'warning',
@@ -245,7 +251,7 @@ class Login {
                     this.codigoEmail.removeClass('d-none');
                     this.naoRecebiEmail.removeClass('d-none');
                     this.cancelarEsqueciSenhaEmail.removeClass('d-none');
-                    
+
                     toast(JSON.parse(response).data, {
                         duration: 10000,
                         className: 'success',
@@ -265,15 +271,15 @@ class Login {
         })
     }
 
-    passwordRecovery = () => {          
+    passwordRecovery = () => {
         this.removeNotifications();
-        this.showSpinner();  
+        this.showSpinner();
         const email = this.campoEmail.val();
 
 
         this.codigoEnviado.val('');
 
-        if(!this.campoEmail.val().trim()) {
+        if (!this.campoEmail.val().trim()) {
             this.removeNotifications();
             this.showSpinner('hide');
             toast("Preencha primeiro o campo email!", {
@@ -288,8 +294,8 @@ class Login {
         this.naoRecebiEmail.removeClass('d-none');
         this.cancelarEsqueciSenhaEmail.removeClass('d-none');
         this.cadastrarSenha.addClass('d-none');
-        
-        this.cancelarEsqueciSenhaEmail.unbind('click').click(()=> {
+
+        this.cancelarEsqueciSenhaEmail.unbind('click').click(() => {
             this.removeNotifications();
             this.showSpinner('hide');
 
@@ -304,7 +310,7 @@ class Login {
             this.campoEmail.prop('disabled', false);
         });
 
-        this.naoRecebiEmail.unbind('click').click(()=>{
+        this.naoRecebiEmail.unbind('click').click(() => {
             this.codigoEnviado.val('');
 
             this.removeNotifications();
@@ -338,8 +344,8 @@ class Login {
             })
 
         });
-        
-        this.verificar.unbind('click').click(()=>{
+
+        this.verificar.unbind('click').click(() => {
             this.removeNotifications();
             this.showSpinner();
             toast('Validando código de verificação...', {
@@ -361,7 +367,7 @@ class Login {
                     });
                     this.codigoEnviado.val('');
                     this.liberarCampoCadastrarSenha();
-                    this.btnCadastrar.unbind('click').click(()=>{
+                    this.btnCadastrar.unbind('click').click(() => {
                         this.removeNotifications();
                         this.showSpinner();
                         toast('Aguarde a conclusão da mudança...', {
@@ -370,7 +376,7 @@ class Login {
                         });
                         const email = this.campoEmail.val();
                         const senha = this.cadastroSenha.val();
-                        if(!senha.trim()) {
+                        if (!senha.trim()) {
                             this.removeNotifications();
                             this.showSpinner('hide');
                             toast('Preencha todos os campos!', {
@@ -424,7 +430,7 @@ class Login {
             })
         });
 
-        $(document).ready(()=>{
+        $(document).ready(() => {
             this.campoEmail.prop('disabled', true);
             this.removeNotifications();
             this.showSpinner();
@@ -461,7 +467,7 @@ class Login {
     sairCadastro = () => {
         this.removeNotifications();
         this.showSpinner('hide');
-        
+
         this.codigoEnviado.val('');
 
         this.camadaSenha.removeClass('d-none');
@@ -470,7 +476,7 @@ class Login {
         this.cadastrarSenha.addClass('d-none');
     }
     removeNotifications = () => {
-        for(let toast of document.querySelectorAll('.toastify')) {
+        for (let toast of document.querySelectorAll('.toastify')) {
             toast.remove();
         }
     }
@@ -480,7 +486,7 @@ class Login {
         this.codigoEmail.addClass('d-none');
     }
     showSpinner = (state) => {
-        if(!state) {
+        if (!state) {
             $('.spinner').removeClass('d-none');
             return;
         }

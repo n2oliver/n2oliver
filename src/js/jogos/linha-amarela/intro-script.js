@@ -21,13 +21,19 @@ function setUpAudioManager() {
     }
     return audioManager;
 }
-function setUpIntro(audioManager) {
+function setUpIntro(audioManager, callbackLogin) {
     const login = new Login();
+
     gtag("event", "qualify_lead", {
         currency: "USD",
         value: 0.0004
     });
-    $('#login').click(login.login);
+
+    $('#login').click(async () => {
+        if (await login.login()) {
+            callbackLogin();
+        }
+    });
 
     $('#sair').click(() => {
         $.get(`/api${appUrl}/sair.php`, () => {

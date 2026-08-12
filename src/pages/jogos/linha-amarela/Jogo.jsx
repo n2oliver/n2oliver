@@ -15,13 +15,13 @@ import Pause from "../../../components/jogos/linha-amarela/Jogo/Pause";
 
 import '../../../css/home.css';
 import "../../../css/games.css";
-import "../../../css/jogos/linha-amarela/audio.module.css";
-import "../../../css/jogos/linha-amarela/box.module.css";
-import "../../../css/jogos/linha-amarela/enemies.module.css";
-import "../../../css/jogos/linha-amarela/game.module.css";
-import "../../../css/jogos/linha-amarela/intro.module.css";
-import "../../../css/jogos/linha-amarela/style.module.css";
-import "../../../css/jogos/linha-amarela/game-over.module.css";
+import "../../../css/jogos/linha-amarela/audio.css";
+import "../../../css/jogos/linha-amarela/box.css";
+import "../../../css/jogos/linha-amarela/enemies.css";
+import "../../../css/jogos/linha-amarela/game.css";
+import "../../../css/jogos/linha-amarela/intro.css";
+import "../../../css/jogos/linha-amarela/style.css";
+import "../../../css/jogos/linha-amarela/game-over.css";
 
 import "../../../js/anuncios";
 import "../../../js/jogos/linha-amarela/Background";

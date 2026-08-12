@@ -18,7 +18,7 @@
   },
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build && copyfiles -u 1 \"api/**/*\" dist/api && copyfiles \".env.development\" dist/",
+    "build": "vite build && copyfiles -u 1 \"api/**/*\" dist/api && copyfiles -u 1 \"src/css/**/*\" dist/css && copyfiles \".env.development\" dist/",
     "preview": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --ui",

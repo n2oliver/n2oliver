@@ -1,6 +1,6 @@
 import Header from "../components/extensoes/Header";
 import Section from "../components/extensoes/Section";
-import "../css/extensoes/style.module.css";
+import "../css/extensoes/style.css";
 
 function Extensoes() {
   return (<>

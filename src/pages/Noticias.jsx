@@ -5,7 +5,7 @@ function Noticias() {
         id && !isNaN(id) ? toggleNoticiaContent(null, id) : toggleNoticiaContent(null, 10);        
     });
     return (
-        <div style={{width: "100dvw"}}>
+        <div>
             <h1 className="w-100 text-light px-4 pt-3 pb-4 bg-primary mb-0">
                 <div className="d-flex justify-content-between align-items-center">
                     <div style={{width: "fit-content"}}>
