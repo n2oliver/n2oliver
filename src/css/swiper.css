@@ -14,7 +14,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    background: rgba(20,20,20,.65);
+    background: rgba(0,0,0,.8);
     backdrop-filter: blur(8px);
     width: 100%;
     padding: 14px 7px 14px 7px;

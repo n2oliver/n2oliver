@@ -80,7 +80,7 @@ function Navbar() {
 
                             <li className="nav-item">
                                 <Link className="nav-link" to="/extensoes">
-                                    <i className="fa-solid fa-hand-pointer"></i> Extensões
+                                    <i className="fa-solid fa-plug"></i> Extensões
                                 </Link>
                             </li>
 
