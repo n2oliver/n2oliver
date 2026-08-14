@@ -33,7 +33,7 @@
     max-width: 200px;
 }
 
-h1:not(.jumbotron h1):not(.ranking-title) {
+h1:not(.jumbotron):not(.ranking-title) {
     font-size: 2rem;
     color: yellow !important;
     -webkit-text-stroke: .3px deepskyblue;

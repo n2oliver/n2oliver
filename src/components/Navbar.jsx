@@ -1,5 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { API_URL } from "../App";
+import { autotranslate } from "../js/autotranslate";
+import "../css/gtranslate.css";
+import { useEffect } from "react";
 
 function Navbar() {
     const location = useLocation();
@@ -19,15 +22,18 @@ function Navbar() {
         "/jogos/linhaamarela/fim/"
     ];
 
+    useEffect(() => {
+        autotranslate();
+    }, [])
     if (negativePathNames.includes(location.pathname)) {
         return null;
     }
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 m-auto px-0">
-            <div style={{ width: "100dvw" }}>
+            <div className="w-100 d-flex">
 
-                <div className="d-flex w-100 navbar-container">
+                <div className="d-flex navbar-container">
 
                     <Link className="navbar-brand rounded" to="/">
                         <img

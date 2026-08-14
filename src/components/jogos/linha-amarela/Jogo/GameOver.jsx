@@ -7,7 +7,7 @@ function GameOver() {
             <div className="box-body game-over-ending text-danger mb-3"><strong>O extraterrestres invadiram a Terra!</strong></div>
             <div className="d-flex mb-3">
                 <div><button id="restart" style={{ background: "darkorange", marginTop: "20px" }}>Reiniciar</button></div>
-                <div><a href='api/jogos/linha-amarela/sair.php'><button className="sair" style={{ marginTop: "20px" }}>Sair</button></a></div>
+                <div><a href='/api/jogos/linha-amarela/sair.php'><button className="sair" style={{ marginTop: "20px" }}>Sair</button></a></div>
             </div>
         </div>
     )

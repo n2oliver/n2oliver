@@ -1,4 +1,4 @@
-import "../css/extensoes/section.module.css";
+import "../../css/extensoes/section.module.css";
 function Section() {
     return (
         <section>

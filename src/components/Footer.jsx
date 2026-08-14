@@ -1,7 +1,5 @@
 import '../css/footer.css';
-import '../css/gtranslate.css';
 import SocialMedia from './desenvolvedor/SocialMedia.jsx';
-import '../js/gtranlate-settings.js';
 import AAdsSticky from './AAdsSticky';
 import { Link, useLocation } from 'react-router-dom';
 

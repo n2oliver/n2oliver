@@ -3,6 +3,7 @@
     color: black !important;
     display: flex;
     align-items: center;
+    width: fit-content;
 }
 
 .gt_container--hich1m .gt_switcher .gt_option,
