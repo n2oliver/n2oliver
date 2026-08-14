@@ -6,7 +6,7 @@
 
 Sou desenvolvedor full stack com foco em aplicações web e jogos interativos. Trabalho com tecnologias como:
 
-- PHP, JavaScript e HTML5
+- React, JavaScript, PHP e HTML5
 - CSS puro e responsivo
 - Integração de APIs
 - Jogos para navegador com lógica própria
@@ -22,8 +22,8 @@ Sou desenvolvedor full stack com foco em aplicações web e jogos interativos. T
 
 ## 🚀 Acesse
 
-🔹 Portfólio: [n2oliver.com/aplicativos.php](https://n2oliver.com/aplicativos.php)  
-🔹 Jogos online: [n2oliver.com/jogos/](https://n2oliver.com/jogos/)  
+🔹 Portfólio: [n2oliver.com/aplicativos](https://n2oliver.com/aplicativos)  
+🔹 Jogos online: [n2oliver.com/jogos](https://n2oliver.com/jogos)  
 🔹 GitHub: [github.com/n2oliver](https://github.com/n2oliver)
 
 ## 📁 Estrutura do projeto
