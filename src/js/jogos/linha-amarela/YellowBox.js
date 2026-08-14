@@ -46,7 +46,7 @@ class YellowBox extends GameObject {
             if(isNaN(event.pageX) && event.center) {
                 xOffset = event.center.x
             }
-            if(xOffset) {
+            if(xOffset && xOffset + 40 < document.body.clientWidth) {
                 let positionX = xOffset;
                 positionX = (xOffset > 8 ? positionX : 8);
                 let positionY = (window.innerHeight - gameObject.attributes.positionY)
