@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# 🌐 Óliver S. Castilho
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🔗 **https://n2oliver.com**
 
-## Available Scripts
+## 🧑‍💻 Sobre mim
 
-In the project directory, you can run:
+Sou desenvolvedor full stack com foco em aplicações web e jogos interativos. Trabalho com tecnologias como:
 
-### `npm start`
+- PHP, JavaScript e HTML5
+- CSS puro e responsivo
+- Integração de APIs
+- Jogos para navegador com lógica própria
+- Desenvolvedor com experiência profissional
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📌 Funcionalidades
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Página inicial com apresentação pessoal
+- Link para portfólio de projetos web e jogos
+- Acesso direto aos jogos publicados
+- Contato via email
+- Link para meu GitHub
 
-### `npm test`
+## 🚀 Acesse
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🔹 Portfólio: [n2oliver.com/aplicativos.php](https://n2oliver.com/aplicativos.php)  
+🔹 Jogos online: [n2oliver.com/jogos/](https://n2oliver.com/jogos/)  
+🔹 GitHub: [github.com/n2oliver](https://github.com/n2oliver)
 
-### `npm run build`
+## 📁 Estrutura do projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+├── index.html # Página principal
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+├── /jogos/ # Subpasta com jogos desenvolvidos
 
-### `npm run eject`
+├── /portifolio.php # Página de portfólio
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+├── /img/ # Imagens usadas no site
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+├── /css/ # Estilos personalizados
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+└── /scripts/ # (Opcional) JS para futuras interações
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📁 Build do projeto
 
-## Learn More
+Execute o comando de terminal na pasta raiz do projeto: 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+/
+docker compose watch
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📫 Contato
 
-### Code Splitting
+📧 suporte@n2oliver.com  
+📱 (21) 98669-5629  
+🌍 [n2oliver.com](https://n2oliver.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© 2025 - Óliver S. Castilho (n2oliver)
