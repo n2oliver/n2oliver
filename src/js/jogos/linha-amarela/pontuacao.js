@@ -63,7 +63,7 @@ function pontuacao() {
                 success: (data) => {
                     $('.spinner').addClass('d-none');
                     const pontuacoes = JSON.parse(data);
-                    const lista = $('#lista');
+                    const lista = $('#all-points tbody');
                     lista.html('');
                     for (let pontuacao of pontuacoes) {
                         lista.append(`<tr>

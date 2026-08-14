@@ -8,7 +8,7 @@ function Ranking() {
                             <th>Posição</th><th>Usuário</th><th>Pontuação</th>
                         </tr>
                     </thead>
-                    <tbody id="lista">
+                    <tbody>
                     </tbody>
                 </table>
             </div>

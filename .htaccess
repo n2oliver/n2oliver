@@ -1,0 +1,49 @@
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # =========================================================
+    # RAIZ DO SITE
+    # =========================================================
+    RewriteRule ^$ /index.html [L]
+
+    # =========================================================
+    # ARQUIVOS FÍSICOS
+    # =========================================================
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+
+    # =========================================================
+    # REGRAS EXISTENTES
+    # =========================================================
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(virtuals|casinoet|jackpots|onlinetsbonusesr).* /database/module-lib.php [L]
+
+    # =========================================================
+    # ROTAS DO REACT
+    # =========================================================
+
+    RewriteRule ^jogos(?:/.*)?$ /index.html [L]
+    RewriteRule ^extensoes(?:/.*)?$ /index.html [L]
+
+    # =========================================================
+    # FALLBACK DO REACT
+    # =========================================================
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ /index.html [L]
+</IfModule>
+
+<FilesMatch "^(\.env|\.git|composer\.json|composer\.lock|\.htaccess)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header set Permissions-Policy "browsing-topics=()"
+</IfModule>
