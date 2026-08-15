@@ -18,7 +18,7 @@ echo json_encode(
             'titulo' => 'Linha Amarela',
             'descricao' => 'Divirta-se eliminando os invasores, antes que eles desçam e eliminem a terra!<br>',
             'resumo' => 'Um território, uma linha, um herói: você.',
-            'imagem' => '/img/invasao-alien.png'
+            'imagem' => '/img/invasao-alien.jpg'
         ],
         1 => (object) [
             'id' => 2,
@@ -26,7 +26,7 @@ echo json_encode(
             'titulo' => 'Combo-Memo',
             'descricao' => 'Um divertido jogo da memória com combinações!<br>',
             'resumo' => '',
-            'imagem' => '/img/combo-memo.png'
+            'imagem' => '/img/combo-memo.jpg'
         ],
         2 => (object) [
             'id' => 3,

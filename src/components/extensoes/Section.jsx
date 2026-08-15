@@ -9,7 +9,7 @@ function Section() {
                             <div className="card-body">
                                 <h2 className="bg-white p-2 mb-0">Inspetor Visual</h2>
                                 <div className="d-flex justify-content-center" style={{ backgroundColor: "currentColor" }}>
-                                    <img src="/img/extensoes/inspetor-visual/insp.png" className="col-md-6" />
+                                    <img src="/img/extensoes/inspetor-visual/insp.jpg" className="col-md-6" />
                                 </div>
                                 <p className="bg-white rounded-bottom p-2 mb-0">
                                     Inspecione qualquer elemento de uma página da web e copie HTML e CSS com apenas um clique.

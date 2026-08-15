@@ -50,7 +50,7 @@ echo json_encode(
                             </button>
                         </a>
                     </div>',
-            'imagem' => '/img/insp.png'
+            'imagem' => '/img/insp.jpg'
         ],
         1 => (object) [
             'id' => 2,

@@ -5,13 +5,10 @@ DirectoryIndex index.html index.php
     RewriteBase /
 
     # =========================================================
-    # RAIZ DO SITE
-    # =========================================================
-    RewriteRule ^$ /index.html [L]
-
-    # =========================================================
     # ARQUIVOS FÍSICOS
     # =========================================================
+    # Se o arquivo realmente existir, entrega diretamente.
+    # Vale para PHP, HTML, CSS, JS, imagens, PDFs etc.
     RewriteCond %{REQUEST_FILENAME} -f
     RewriteRule ^ - [L]
 
@@ -33,16 +30,26 @@ DirectoryIndex index.html index.php
     # =========================================================
     # FALLBACK DO REACT
     # =========================================================
-
+    # Qualquer rota que não seja arquivo/diretório físico
+    # será entregue ao React.
+    
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^ /index.html [L]
 </IfModule>
 
+# =============================================================
+# PROTEÇÃO DE ARQUIVOS SENSÍVEIS
+# =============================================================
+
 <FilesMatch "^(\.env|\.git|composer\.json|composer\.lock|\.htaccess)$">
     Order allow,deny
     Deny from all
 </FilesMatch>
+
+# =============================================================
+# HEADERS
+# =============================================================
 
 <IfModule mod_headers.c>
     Header set Permissions-Policy "browsing-topics=()"
