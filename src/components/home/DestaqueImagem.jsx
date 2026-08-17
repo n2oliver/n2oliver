@@ -2,6 +2,7 @@ import { showGameInHighlight } from "../../js/feed.js";
 import { useEffect, useState } from 'react';
 import Progressbar, { setProgress } from './Progressbar.jsx';
 import { API_URL } from "../../App.jsx";
+import dados from "../../js/jogos.json";
 
 let gameItemsIndex = -1;
 let gamesArray = [];
@@ -10,8 +11,6 @@ function DestaqueImagem() {
     const [gameItems, setGameItems] = useState([])
     useEffect(() => {
         async function carregar() {
-            const response = await fetch(`${API_URL}/api/jogos/obter.php`);
-            const dados = await response.json();
             setGameItems(dados);
             gamesArray = dados;
             console.log(atob(gameItems.toString()));

@@ -7,7 +7,7 @@ function Section() {
             <div className="container bg-secondary text-light m-auto my-2" style={{ textShadow: "1px 2px #000000" }}>
                 <div className="row align-items-center g-5">
                     <div className="col-lg-5 text-center">
-                        <img src="/img/extensoes/inspetor-visual/insp.jpg"
+                        <img src="/img/extensoes/inspetor-visual/insp.png"
                             className="img-fluid"
                             style={{ maxWidth: "250px" }}
                             alt="Inspetor Visual" />

@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { API_URL } from "../../App";
+import dados from "../../js/secoes.json";
 
 function DestaquesCards() {
     const [destaques, setDestaques] = useState([]);
 
     useEffect(() => {
         async function carregar() {
-            const response = await fetch(`${API_URL}/api/destaques/obter.php`);
-            const dados = await response.json();
             setDestaques(dados);
         }
 

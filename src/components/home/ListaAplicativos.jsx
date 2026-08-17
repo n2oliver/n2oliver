@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { useEffect, useState } from "react";
 import { API_URL } from '../../App';
+import dados from '../../js/aplicativos.json';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -14,8 +15,6 @@ function ListaAplicativos() {
 
     useEffect(() => {
         async function carregar() {
-            const response = await fetch(`${API_URL}/api/aplicativos/obter.php`);
-            const dados = await response.json();
             setAplicativos(dados);
         }
         carregar();

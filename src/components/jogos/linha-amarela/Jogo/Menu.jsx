@@ -35,7 +35,7 @@ function Menu() {
             <div id="pause-button" className="unselectable pause-button menu-item"><img alt="pause" src="/img/jogos/linha-amarela/pause-icon-png-12.jpg" loading="lazy" /></div>
             <div id="play-button" className="unselectable play-button menu-item"><img alt="play" src="/img/jogos/linha-amarela/png-clipart-digital-marketing-implementation-business-computer-programming-play-button-electronics-text.png" loading="lazy" /></div>
             <div id="audio-button" className="unselectable audio-button menu-item"><img alt="audio" width="100%" src="/img/jogos/linha-amarela/icons8-alto-falante-100.png" loading="lazy" /></div>
-            <div id="logo" className="unselectable game-logo"><img alt="logo-linhaamarela" src="/img/jogos/linha-amarela/logo-linhaamarela.jpg" loading="lazy" /></div>
+            <div id="logo" className="unselectable game-logo"><img alt="logo-linhaamarela" src="/img/jogos/linha-amarela/logo-linhaamarela.png" loading="lazy" /></div>
             <img alt="sair" src="/img/jogos/linha-amarela/logout.png" width="32" height="32" className="sair" loading="lazy" />
             {
 

@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import { showGameInHighlight } from "../../js/feed";
 import { API_URL } from "../../App";
+import dados from "../../js/jogos.json";
 
 function RecentesCards() {
     const [recentes, setRecentes] = useState([]);
 
     useEffect(() => {
         async function carregar() {
-            const response = await fetch(`${API_URL}/api/jogos/obter.php`);
-            const dados = await response.json();
             setRecentes(dados);
         }
 

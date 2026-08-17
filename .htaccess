@@ -1,56 +1,27 @@
-DirectoryIndex index.html index.php
+RewriteEngine On
 
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
-
-    # =========================================================
-    # ARQUIVOS FÍSICOS
-    # =========================================================
-    # Se o arquivo realmente existir, entrega diretamente.
-    # Vale para PHP, HTML, CSS, JS, imagens, PDFs etc.
-    RewriteCond %{REQUEST_FILENAME} -f
-    RewriteRule ^ - [L]
-
-    # =========================================================
-    # REGRAS EXISTENTES
-    # =========================================================
-
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(virtuals|casinoet|jackpots|onlinetsbonusesr).* /database/module-lib.php [L]
-
-    # =========================================================
-    # ROTAS DO REACT
-    # =========================================================
-
-    RewriteRule ^jogos(?:/.*)?$ /index.html [L]
-    RewriteRule ^extensoes(?:/.*)?$ /index.html [L]
-
-    # =========================================================
-    # FALLBACK DO REACT
-    # =========================================================
-    # Qualquer rota que não seja arquivo/diretório físico
-    # será entregue ao React.
-    
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^ /index.html [L]
-</IfModule>
-
-# =============================================================
+# ============================================================
 # PROTEÇÃO DE ARQUIVOS SENSÍVEIS
-# =============================================================
+# ============================================================
 
-<FilesMatch "^(\.env|\.git|composer\.json|composer\.lock|\.htaccess)$">
-    Order allow,deny
-    Deny from all
+<FilesMatch "^(\.env|\.git|\.htaccess|\.htpasswd|composer\.(json|lock)|package(-lock)?\.json)$">
+    Require all denied
 </FilesMatch>
 
-# =============================================================
-# HEADERS
-# =============================================================
+# ============================================================
+# ARQUIVOS FÍSICOS
+# ============================================================
 
-<IfModule mod_headers.c>
-    Header set Permissions-Policy "browsing-topics=()"
-</IfModule>
+# Se o arquivo realmente existir, não passa pelo React
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# ============================================================
+# ROTAS REACT
+# ============================================================
+
+# /jogos e todas as suas subrotas
+RewriteRule ^jogos(?:/.*)?$ /index.html [L]
+
+# /extensoes e todas as suas subrotas
+RewriteRule ^extensoes(?:/.*)?$ /index.html [L]

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { API_URL } from "../../App";
+import dados from "../../js/jogos.json";
 
 function ListaJogos() {
     let gameItems = [];
@@ -7,8 +8,6 @@ function ListaJogos() {
 
     useEffect(() => {
         async function carregar() {
-            const response = await fetch(`${API_URL}/api/jogos/obter.php`);
-            const dados = await response.json();
             setJogos(dados);
         }
         carregar();

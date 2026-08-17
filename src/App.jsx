@@ -37,14 +37,13 @@ import Jogo from "./pages/jogos/linha-amarela/Jogo.jsx";
 import FimDeJogo from "./pages/jogos/linha-amarela/FimDeJogo.jsx";
 import InspetorVisual from "./pages/extensoes/InspetorVisual.jsx";
 import LeitorDePdf from "./pages/extensoes/LeitorDePdf.jsx";
+import dados from "./js/api.json";
 let API_URL;
 function App() {
   const [config, setConfig] = useState(null);
 
   useEffect(() => {
     async function carregar() {
-      const response = await fetch("/api/obter-api.php");
-      const dados = await response.json()
       setConfig(dados);
     }
 
