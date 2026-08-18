@@ -12,16 +12,15 @@ RewriteEngine On
 # ARQUIVOS FÍSICOS
 # ============================================================
 
-# Se o arquivo realmente existir, não passa pelo React
+# Se o arquivo realmente existir, entrega o arquivo
+# e não passa pelo React.
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 
 # ============================================================
-# ROTAS REACT
+# SPA - REACT / VITE
 # ============================================================
 
-# /jogos e todas as suas subrotas
-RewriteRule ^jogos(?:/.*)?$ /index.html [L]
-
-# /extensoes e todas as suas subrotas
-RewriteRule ^extensoes(?:/.*)?$ /index.html [L]
+# Qualquer rota que não seja um arquivo físico
+# será entregue ao React.
+RewriteRule ^ /index.html [L]
