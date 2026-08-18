@@ -3,6 +3,7 @@ import { API_URL } from "../App";
 import { autotranslate } from "../js/autotranslate";
 import "../css/gtranslate.css";
 import { useEffect } from "react";
+import Header from "./jogos/Header";
 
 function Navbar() {
     const location = useLocation();
@@ -23,6 +24,29 @@ function Navbar() {
     ];
 
     useEffect(() => {
+        if (!negativePathNames.includes(location.pathname)) return;
+
+        window.atOptions = {
+            key: '29929d8720c37977a6ea64b1b7db2d02',
+            format: 'iframe',
+            height: 50,
+            width: 320,
+            params: {}
+        };
+
+        const script = document.createElement('script');
+
+        script.src =
+            'https://laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js';
+
+        script.async = true;
+
+        document.body.appendChild(script);
+
+        return () => {
+            script.remove();
+            delete window.atOptions;
+        };
         autotranslate();
     }, [])
     if (negativePathNames.includes(location.pathname)) {
@@ -30,74 +54,84 @@ function Navbar() {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 m-auto px-0">
-            <div className="w-100 d-flex">
+        <>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 m-auto px-0">
+                <div className="w-100 d-flex">
 
-                <div className="d-flex navbar-container">
+                    <div className="d-flex navbar-container">
 
-                    <Link className="navbar-brand rounded" to="/">
-                        <img
-                            src="/img/n2-ico.jpg"
-                            width="32"
-                            className="rounded"
-                            alt="logo"
-                        />
-                        oliver
-                    </Link>
+                        <Link className="navbar-brand rounded" to="/">
+                            <img
+                                src="/img/n2-ico.jpg"
+                                width="32"
+                                className="rounded"
+                                alt="logo"
+                            />
+                            oliver
+                        </Link>
 
-                    <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+                        <button
+                            className="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav"
+                            aria-controls="navbarNav"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
 
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav">
+                        <div className="collapse navbar-collapse" id="navbarNav">
+                            <ul className="navbar-nav">
 
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/">
-                                    <i className="fa-solid fa-home"></i> Início
-                                </Link>
-                            </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/">
+                                        <i className="fa-solid fa-home"></i> Início
+                                    </Link>
+                                </li>
 
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/noticias">
-                                    <i className="fa-solid fa-newspaper"></i> Notícias
-                                </Link>
-                            </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/noticias">
+                                        <i className="fa-solid fa-newspaper"></i> Notícias
+                                    </Link>
+                                </li>
 
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/jogos">
-                                    <i className="fa-solid fa-puzzle-piece"></i> Jogos
-                                </Link>
-                            </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/jogos">
+                                        <i className="fa-solid fa-puzzle-piece"></i> Jogos
+                                    </Link>
+                                </li>
 
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/aplicativos">
-                                    <i className="fa-solid fa-hand-pointer"></i> Aplicativos
-                                </Link>
-                            </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/aplicativos">
+                                        <i className="fa-solid fa-hand-pointer"></i> Aplicativos
+                                    </Link>
+                                </li>
 
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/extensoes">
-                                    <i className="fa-solid fa-plug"></i> Extensões
-                                </Link>
-                            </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/extensoes">
+                                        <i className="fa-solid fa-plug"></i> Extensões
+                                    </Link>
+                                </li>
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
+
+                    <div className="gtranslate_wrapper ms-auto me-2 d-flex align-items-center"></div>
+
                 </div>
-
-                <div className="gtranslate_wrapper ms-auto me-2 d-flex align-items-center"></div>
-
-            </div>
-        </nav>
+            </nav>
+            <Header />
+            <div
+                style={{
+                    width: '320px',
+                    height: '50px',
+                    margin: '10px auto'
+                }}
+            />
+        </>
     );
 }
 

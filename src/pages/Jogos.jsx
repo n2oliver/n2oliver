@@ -1,9 +1,7 @@
 import ListaJogos from '../components/home/ListaJogos';
-import Header from '../components/jogos/Header';
 
 function Jogos() {
   return (<>
-    <Header />
     <main className="w-100 m-auto col-md-12 p-0">
       <section id="destaque-imagem" className="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
         alt="">

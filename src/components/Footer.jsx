@@ -2,6 +2,7 @@ import '../css/footer.css';
 import SocialMedia from './desenvolvedor/SocialMedia.jsx';
 import AAdsSticky from './AAdsSticky';
 import { Link, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function Footer() {
     const location = useLocation();
