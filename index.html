@@ -8,6 +8,36 @@
 </head>
 <body>
   <div id="root"></div>
+  <script>      
+      const negativePathNames = [
+          "/jogos/linha-amarela",
+          "/jogos/linha-amarela/",
+          "/jogos/linhaamarela",
+          "/jogos/linhaamarela/",
+          "/jogos/linha-amarela/jogo",
+          "/jogos/linha-amarela/jogo/",
+          "/jogos/linhaamarela/jogo",
+          "/jogos/linhaamarela/jogo/",
+          "/jogos/linha-amarela/fim",
+          "/jogos/linha-amarela/fim/",
+          "/jogos/linhaamarela/fim",
+          "/jogos/linhaamarela/fim/"
+      ];
+      if(!negativePathNames.includes(window.location.pathname)) {
+        window.atOptions = {
+            key: '29929d8720c37977a6ea64b1b7db2d02',
+            format: 'iframe',
+            height: 50,
+            width: 320,
+            params: {}
+        };
+      }
+  </script>
+
+  <script
+      type="text/javascript"
+      src="https://laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js">
+  </script>
   <script type="module" src="./src/index.jsx"></script>
 </body>
 </html>

@@ -24,29 +24,6 @@ function Navbar() {
     ];
 
     useEffect(() => {
-        if (!negativePathNames.includes(location.pathname)) return;
-
-        window.atOptions = {
-            key: '29929d8720c37977a6ea64b1b7db2d02',
-            format: 'iframe',
-            height: 50,
-            width: 320,
-            params: {}
-        };
-
-        const script = document.createElement('script');
-
-        script.src =
-            'https://laxativethem.com/29929d8720c37977a6ea64b1b7db2d02/invoke.js';
-
-        script.async = true;
-
-        document.body.appendChild(script);
-
-        return () => {
-            script.remove();
-            delete window.atOptions;
-        };
         autotranslate();
     }, [])
     if (negativePathNames.includes(location.pathname)) {
@@ -124,13 +101,6 @@ function Navbar() {
                 </div>
             </nav>
             <Header />
-            <div
-                style={{
-                    width: '320px',
-                    height: '50px',
-                    margin: '10px auto'
-                }}
-            />
         </>
     );
 }
