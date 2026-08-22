@@ -59,8 +59,8 @@ header h1 {
 }
 
 .grid-cell {
-    width: 35px;
-    height: 35px;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,7 +141,7 @@ header h1 {
 }
 
 @media screen and (max-width: 992px) {
-    .game-container {
-        flex-wrap: wrap !important;
+    .game-container-cp {
+        flex-wrap: wrap;
     }
 }
