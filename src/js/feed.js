@@ -13,9 +13,12 @@ function showGameInHighlight(game) {
     }
     let destaqueImagem = document.querySelector("body");
     let thumbnail = document.getElementById("thumbnail");
-    destaqueImagem.style.backgroundImage = 'url(' + API_URL + game.imagem + ')';
-    thumbnail.style.backgroundImage = 'url(' + API_URL + game.imagem + ')';
-
+    if(destaqueImagem) {
+        destaqueImagem.style.backgroundImage = 'url(' + API_URL + game.imagem + ')';
+    }
+    if(thumbnail) {
+        thumbnail.style.backgroundImage = 'url(' + API_URL + game.imagem + ')';
+    }
     $('#game-details-content,#game-details-title,#play-button,#click-to-action').unbind('click').click(function (e) {
         e.preventDefault();
         setTimeout(() => {
@@ -24,13 +27,19 @@ function showGameInHighlight(game) {
     });
 
 
-    document.getElementById('game-details-title').textContent = game.titulo;
-    document.getElementById('game-details-content').innerHTML = game.descricao +
-        `<div class="text-center">
-            <button onclick="window.location.href = '${game.url}'" class="btn btn-lg btn-danger m-1 h-0 text-nowrap" id="play-button" aria-label="Aria Right">
-                Jogar
-            </button>
-        </div>`;
+    const detailsTitle = document.getElementById('game-details-title');
+    if(detailsTitle) {
+        detailsTitle.textContent = game.titulo;
+    }
+    const detailsContent = document.getElementById('game-details-content');
+    if(detailsContent) {
+        detailsContent.innerHTML = game.descricao +
+            `<div class="text-center">
+                <button onclick="window.location.href = '${game.url}'" class="btn btn-lg btn-danger m-1 h-0 text-nowrap" id="play-button" aria-label="Aria Right">
+                    Jogar
+                </button>
+            </div>`;
+    }
 }
 
 export { scroll, showGameInHighlight }

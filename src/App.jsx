@@ -16,9 +16,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 import Home from "./pages/Home";
-import Noticias from "./pages/Noticias";
+import Tecnologia from "./pages/Tecnologia.jsx";
 import Jogos from "./pages/Jogos";
-import Aplicativos from "./pages/Aplicativos";
+import Projetos from "./pages/Projetos.jsx";
 import Extensoes from "./pages/Extensoes";
 import Livros from "./pages/Livros";
 import Cursos from "./pages/Cursos";
@@ -60,9 +60,14 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/noticias" element={<Noticias />} />
-        <Route path="/noticias/:id" element={<Noticias />} />
-        <Route path="/aplicativos" element={<Aplicativos />} />
+        
+        <Route path="/tecnologia" element={<Tecnologia />} />
+        <Route path="/tecnologia/:id" element={<Tecnologia />} />
+        <Route path="/noticias" element={<Tecnologia />} />
+        <Route path="/noticias/:id" element={<Tecnologia />} />
+
+        <Route path="/projetos" element={<Projetos />} />
+        <Route path="/aplicativos" element={<Projetos />} />
         
         <Route path="/extensoes" element={<Extensoes />} />
 

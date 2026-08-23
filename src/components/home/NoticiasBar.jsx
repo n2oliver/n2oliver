@@ -7,7 +7,7 @@ function NoticiasBar() {
             <div className="m-auto row justify-content-around"></div>
             <div className="col-md-10 m-auto">
                 <div className="row m-auto text-light ubuntu">
-                    <h2>Notícias</h2>
+                    <h2>Tecnologia</h2>
 
                     <div className="d-flex m-auto justify-content-between buttons">
                         <button className="btn btn-lg btn-success m-1 h-0 rounded-circle" id="prev" aria-label="Aria Left"

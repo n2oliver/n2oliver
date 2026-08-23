@@ -69,8 +69,8 @@ function Navbar() {
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/noticias">
-                                        <i className="fa-solid fa-newspaper"></i> Notícias
+                                    <Link className="nav-link" to="/tecnologia">
+                                        <i className="fa-solid fa-newspaper"></i> Tecnologia
                                     </Link>
                                 </li>
 
@@ -82,16 +82,9 @@ function Navbar() {
 
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/aplicativos">
-                                        <i className="fa-solid fa-hand-pointer"></i> Aplicativos
+                                        <i className="fa-solid fa-hand-pointer"></i> Projetos
                                     </Link>
                                 </li>
-
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/extensoes">
-                                        <i className="fa-solid fa-plug"></i> Extensões
-                                    </Link>
-                                </li>
-
                             </ul>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 import NoticiasRecentes, { avancar, toggleNoticiaContent, voltar } from '../components/noticias/NoticiasRecentes';
-function Noticias() {
+function Tecnologia() {
     document.addEventListener("DOMContentLoaded",()=>{
         const id = Number(window.location.pathname.substring(1))
         id && !isNaN(id) ? toggleNoticiaContent(null, id) : toggleNoticiaContent(null, 10);        
@@ -10,7 +10,7 @@ function Noticias() {
                 <div className="d-flex justify-content-between align-items-center">
                     <div style={{width: "fit-content"}}>
                         <i className="fa fa-pager p-2"></i>
-                        <span id="noticias-span-title">Notícias</span>
+                        <span id="noticias-span-title">Tecnologia</span>
                     </div>
                     <div className="oliver-dev-logo text-end w-50">n2oliver</div>
                 </div>
@@ -52,4 +52,4 @@ function Noticias() {
     );
 }
 
-export default Noticias;
+export default Tecnologia;

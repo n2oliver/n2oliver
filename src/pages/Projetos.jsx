@@ -1,6 +1,6 @@
 import ListaAplicativos from '../components/home/ListaAplicativos';
 
-function Aplicativos() {
+function Projetos() {
 
   return (
     <main className="aplicativos-page">
@@ -9,4 +9,4 @@ function Aplicativos() {
       </div>
     </main>);
 }
-export default Aplicativos;
+export default Projetos;
