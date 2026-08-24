@@ -15,7 +15,7 @@ function Recentes() {
                         <i className="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
-                <strong><h2 className="my-0">Jogos recentes</h2></strong>
+                <strong><h2 className="my-0">Jogos</h2></strong>
                 <div id="lista" className="my-0 py-0">
                     <RecentesCards />
                 </div>

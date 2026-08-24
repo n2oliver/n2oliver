@@ -1,0 +1,45 @@
+{
+    "criacional": [
+        {
+            "id": 1,
+            "url": "https://youtube.com/shorts/0eWsb5ATdCw?feature=share",
+            "titulo": "Singleton",
+            "descricao": "Uma classe, uma instância",
+            "resumo": "Como fazer com que uma classe possua somente uma instância",
+            "imagem": "/img/padroes/singleton.jpg"
+        },
+        {
+            "id": 2,
+            "url": "https://www.youtube.com/shorts/adeCfzb7Pdo",
+            "titulo": "Factory Method",
+            "descricao": "Um método fábrica para seus objetos",
+            "resumo": "Você pode instanciar um objeto de forma encapsulada.",
+            "imagem": "/img/padroes/factory-method.jpg"
+        },
+        {
+            "id": 3,
+            "url": "https://www.youtube.com/watch?v=OZuBAKXBrNY",
+            "titulo": "Abstract Factory",
+            "descricao": "Fábrica abstrata<br>",
+            "resumo": "Instanciando variantes de objetos de linhas padronizadas",
+            "imagem": "/img/padroes/abstract-factory.jpg"
+        },
+        {
+            "id": 4,
+            "url": "/jogos/palavras-cruzadas",
+            "titulo": "Palavras Cruzadas",
+            "descricao": "Desafie seu conhecimento com este quebra-cabeça de palavras.",
+            "resumo": "",
+            "imagem": "/img/jogos/flat-crosswords.png"
+        },
+        {
+            "id": 5,
+            "url": "/jogos/caixa-de-letras",
+            "titulo": "Caixa de Letras",
+            "descricao": "Desafie seu conhecimento com este quebra-cabeça com letrinhas.",
+            "resumo": "",
+            "imagem": "/img/jogos/caixa-de-letras.png"
+        }
+    ],
+    "estrutural": []
+}

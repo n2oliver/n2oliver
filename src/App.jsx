@@ -15,9 +15,9 @@ import { abrirSmartlinkUmaVez } from "./js/anuncios";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-import Home from "./pages/Home";
+import Home from "./pages/Home.jsx";
 import Tecnologia from "./pages/Tecnologia.jsx";
-import Jogos from "./pages/Jogos";
+import Jogos from "./pages/Jogos.jsx";
 import Projetos from "./pages/Projetos.jsx";
 import Extensoes from "./pages/Extensoes";
 import Livros from "./pages/Livros";
