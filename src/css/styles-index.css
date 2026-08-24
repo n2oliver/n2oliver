@@ -58,6 +58,9 @@ body.oliver-dev>* {
     color: white !important;
     transition: 1s;
 }
+.navbar-collapse {
+    width: max-content;
+}
 
 .navbar .nav-c a:hover {
     background-color: #fbff00 !important;
@@ -476,6 +479,9 @@ h1 {
 
     .navbar {
         padding: 10px;
+    }
+    .navbar-collapse {
+        width: fit-content;
     }
     .navbar-container {
         justify-content: space-around;

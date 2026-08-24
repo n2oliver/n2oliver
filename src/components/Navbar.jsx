@@ -33,11 +33,11 @@ function Navbar() {
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 m-auto px-0">
-                <div className="w-100 d-flex">
+                <div className="d-flex w-100">
 
-                    <div className="d-flex navbar-container">
+                    <div className="d-flex w-100">
 
-                        <Link className="navbar-brand rounded" to="/">
+                        <Link className="navbar-brand rounded" to="/" style={{ width: "stretch" }}>
                             <img
                                 src="/img/n2-ico.jpg"
                                 width="32"
@@ -46,50 +46,55 @@ function Navbar() {
                             />
                             oliver
                         </Link>
+                        <div class="flex-column">
+                            <button
+                                className="navbar-toggler"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav"
+                                aria-controls="navbarNav"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                                style={{
+                                    width: "stretch"
+                                }}>
+                                <span className="navbar-toggler-icon"></span>
+                            </button>
 
-                        <button
-                            className="navbar-toggler"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarNav"
-                            aria-controls="navbarNav"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                        >
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
+                            <div className="collapse navbar-collapse" id="navbarNav">
+                                <ul className="navbar-nav">
 
-                        <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav">
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/">
+                                            <i className="fa-solid fa-home"></i> Início
+                                        </Link>
+                                    </li>
 
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/">
-                                        <i className="fa-solid fa-home"></i> Início
-                                    </Link>
-                                </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/tecnologia">
+                                            <i className="fa-solid fa-newspaper"></i> Tecnologia
+                                        </Link>
+                                    </li>
 
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/tecnologia">
-                                        <i className="fa-solid fa-newspaper"></i> Tecnologia
-                                    </Link>
-                                </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/jogos">
+                                            <i className="fa-solid fa-puzzle-piece"></i> Jogos
+                                        </Link>
+                                    </li>
 
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/jogos">
-                                        <i className="fa-solid fa-puzzle-piece"></i> Jogos
-                                    </Link>
-                                </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/aplicativos">
+                                            <i className="fa-solid fa-hand-pointer"></i> Projetos
+                                        </Link>
+                                    </li>
 
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/aplicativos">
-                                        <i className="fa-solid fa-hand-pointer"></i> Projetos
-                                    </Link>
-                                </li>
-                            </ul>
+                                    <li className="nav-item">
+                                        <div className="gtranslate_wrapper ms-auto me-2 d-flex align-items-center"></div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-
-                    <div className="gtranslate_wrapper ms-auto me-2 d-flex align-items-center"></div>
 
                 </div>
             </nav>
