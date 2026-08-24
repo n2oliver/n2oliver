@@ -23,7 +23,6 @@ RUN npm install
 # Project
 COPY vite.config.mjs ./
 COPY index.html ./
-COPY .env.development ./
 COPY src ./src
 COPY public ./public
 COPY api ./api
@@ -33,6 +32,7 @@ RUN npm run build
 
 # .htaccess
 COPY .htaccess /var/www/html/dist/.htaccess
+COPY .env.development ./.env
 
 # Apache DocumentRoot -> dist
 RUN sed -ri 's!/var/www/html!/var/www/html/dist!g' \
