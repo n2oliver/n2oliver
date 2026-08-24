@@ -36,3 +36,4 @@ public/storage
 .phpunit.result.cache
 package-lock.json
 composer-lock.json
+src/js/api.json
