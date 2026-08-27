@@ -23,9 +23,7 @@ function Footer() {
                 </span>
             </Link>
 
-            <div className="d-flex justify-content-center">
-                <SocialMedia />
-            </div>
+            <SocialMedia />
 
             <span className="footer-text-small">
                 Todos os direitos reservados - n2oliver - 2026

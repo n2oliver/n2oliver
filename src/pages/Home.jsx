@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import PadroesDeProjetos from '../components/home/PadroesDeProjetos';
+import SocialMedia from '../components/desenvolvedor/SocialMedia';
 
 function Home({ title }) {
   useEffect(() => {
