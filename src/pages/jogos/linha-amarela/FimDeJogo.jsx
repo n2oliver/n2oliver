@@ -28,9 +28,14 @@ import Logo from "../../../components/jogos/linha-amarela/GameOver/Logo.jsx";
 import Invaders from "../../../components/jogos/linha-amarela/GameOver/Invaders.jsx";
 import { pontuacao } from "../../../js/jogos/linha-amarela/pontuacao.js";
 
-function FimDeJogo() {
+function FimDeJogo({ title }) {
     const [userData, setUserData] = useState([]);
-    useEffect(()=>{
+    useEffect(() => {
+        if (title) {
+            document.title = title;
+        }
+    }, [title]);
+    useEffect(() => {
         gtag("event", "close_convert_lead", {
             currency: "USD",
             value: 0.0004
@@ -49,7 +54,7 @@ function FimDeJogo() {
         document.body.style.height = "auto";
         document.body.style.maxHeight = "auto";
     }, []);
-    if(userData.usuario_id) {
+    if (userData.usuario_id) {
         window.usuarioId = userData.usuario_id;
     }
     pontuacao();

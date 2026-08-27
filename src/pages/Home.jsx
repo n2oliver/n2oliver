@@ -1,6 +1,12 @@
+import { useEffect } from 'react';
 import PadroesDeProjetos from '../components/home/PadroesDeProjetos';
 
-function Home() {
+function Home({ title }) {
+  useEffect(() => {
+    if (title) {
+      document.title = title;
+    }
+  }, [title]);
   return (<>
     <main className="w-100 m-auto col-md-12 p-0">
       <section id="destaque-imagem" className="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"

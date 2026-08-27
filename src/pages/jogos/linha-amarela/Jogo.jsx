@@ -44,13 +44,19 @@ import { init } from "../../../js/jogos/linha-amarela/Game";
 import YellowBox from "../../../components/jogos/linha-amarela/Jogo/YellowBox";
 import Intro from "../../../components/jogos/linha-amarela/Jogo/Intro";
 
-function Jogo() {
+function Jogo({ title }) {
     let partida_rapida;
+    
+    useEffect(() => {
+        if (title) {
+            document.title = title;
+        }
+    }, [title]);
     useEffect(() => {
         $('.sair').click(() => {
             window.location.href = '/api/jogos/linha-amarela/sair.php';
         });
-        if(!window.game) {
+        if (!window.game) {
             init();
         }
     });

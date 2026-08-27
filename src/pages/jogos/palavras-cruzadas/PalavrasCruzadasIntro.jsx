@@ -5,7 +5,12 @@ import { abrirSmartlinkUmaVez } from "../../../js/anuncios";
 import { gtag } from "../../../js/gtag";
 import { $ } from "../../../App";
 
-function PalavrasCruzadasIntro() {
+function PalavrasCruzadasIntro({ title }) {
+  useEffect(() => {
+    if (title) {
+      document.title = title;
+    }
+  }, [title]);
   useEffect(() => {
     gtag("event", "qualify_lead", {
       currency: "USD",

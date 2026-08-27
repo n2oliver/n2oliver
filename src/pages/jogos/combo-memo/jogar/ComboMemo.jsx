@@ -6,8 +6,14 @@ import Menu from "../../../../components/jogos/combo-memo/Menu";
 import Mesa from "../../../../components/jogos/combo-memo/Mesa";
 import InGameAAds from "../../ads/InGameAAds";
 import "../../../../js/jogos/combo-memo/platform/platform";
+import { useEffect } from "react";
 
-function ComboMemo() {
+function ComboMemo({ title }) {
+    useEffect(() => {
+        if (title) {
+            document.title = title;
+        }
+    }, [title]);
     return (<>
         <Menu />
         <Mesa />

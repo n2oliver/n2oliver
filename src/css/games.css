@@ -207,7 +207,7 @@ main {
   width: 77dvw;
 }
 
-.buttons {
+#qr-code .buttons, #jogos-recentes .buttons {
   transform: translateY(175px);
   pointer-events: none;
   z-index: 2;

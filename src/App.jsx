@@ -20,10 +20,6 @@ import Tecnologia from "./pages/Tecnologia.jsx";
 import Jogos from "./pages/Jogos.jsx";
 import Projetos from "./pages/Projetos.jsx";
 import Extensoes from "./pages/Extensoes";
-import Livros from "./pages/Livros";
-import Cursos from "./pages/Cursos";
-import Desenvolvedor from "./pages/Desenvolvedor";
-import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
 import ComboMemoIntro from "./pages/jogos/combo-memo/ComboMemoIntro";
 import CacaPalavrasIntro from "./pages/jogos/caca-palavras/CacaPalavrasIntro";
@@ -38,6 +34,7 @@ import FimDeJogo from "./pages/jogos/linha-amarela/FimDeJogo.jsx";
 import InspetorVisual from "./pages/extensoes/InspetorVisual.jsx";
 import LeitorDePdf from "./pages/extensoes/LeitorDePdf.jsx";
 import dados from "./js/api.json";
+import Calculadora from "./pages/Calculadora.jsx";
 let API_URL;
 function App() {
   const [config, setConfig] = useState(null);
@@ -52,64 +49,61 @@ function App() {
   if (!config || (config && !config.API_URL)) {
     return null;
   }
-  
+
   API_URL = config.API_URL;
 
   return (
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        
-        <Route path="/tecnologia" element={<Tecnologia />} />
-        <Route path="/tecnologia/:id" element={<Tecnologia />} />
-        <Route path="/noticias" element={<Tecnologia />} />
-        <Route path="/noticias/:id" element={<Tecnologia />} />
+        <Route path="/" element={<Home title="Início - n2oliver" />} />
 
-        <Route path="/projetos" element={<Projetos />} />
-        <Route path="/aplicativos" element={<Projetos />} />
-        
-        <Route path="/extensoes" element={<Extensoes />} />
+        <Route path="/tecnologia" element={<Tecnologia title="Tecnologia - n2oliver" />} />
+        <Route path="/tecnologia/:id" element={<Tecnologia title="Tecnologia - n2oliver" />} />
+        <Route path="/noticias" element={<Tecnologia title="Tecnologia - n2oliver" />} />
+        <Route path="/noticias/:id" element={<Tecnologia title="Tecnologia - n2oliver" />} />
 
-        <Route path="/extensoes/inspetor-visual" element={<InspetorVisual />} />
-        <Route path="/extensoes/inspetorvisual" element={<InspetorVisual />} />
+        <Route path="/projetos" element={<Projetos title="Projetos - n2oliver" />} />
+        <Route path="/aplicativos" element={<Projetos title="Projetos - n2oliver" />} />
 
-        <Route path="/extensoes/leitor-de-pdf" element={<LeitorDePdf />} />
-        <Route path="/extensoes/leitordepdf" element={<LeitorDePdf />} />
+        <Route path="/extensoes" element={<Extensoes title="Extensões - n2oliver" />} />
 
-        <Route path="/livros" element={<Livros />} />
-        <Route path="/cursos" element={<Cursos />} />
-        <Route path="/desenvolvedor" element={<Desenvolvedor />} />
-        <Route path="/contato" element={<Contato />} />
+        <Route path="/extensoes/inspetor-visual" element={<InspetorVisual title="Inspetor Visual - n2oliver" />} />
+        <Route path="/extensoes/inspetorvisual" element={<InspetorVisual title="Inspetor Visual - n2oliver" />} />
 
-        <Route path="/jogos" element={<Jogos />} />
+        <Route path="/extensoes/leitor-de-pdf" element={<LeitorDePdf title="Leitor de PDF - n2oliver" />} />
+        <Route path="/extensoes/leitordepdf" element={<LeitorDePdf title="Leitor de PDF - n2oliver" />} />
 
-        <Route path="/jogos/combomemo" element={<ComboMemoIntro />} />
-        <Route path="/jogos/combomemo/jogar" element={<ComboMemo />} />
-        <Route path="/jogos/combo-memo" element={<ComboMemoIntro />} />
-        <Route path="/jogos/combo-memo/jogar" element={<ComboMemo />} />
+        <Route path="/jogos" element={<Jogos title="Jogos - n2oliver" />} />
 
-        <Route path="/jogos/cacapalavras" element={<CacaPalavrasIntro />} />
-        <Route path="/jogos/cacapalavras/jogar" element={<CacaPalavras />} />
-        <Route path="/jogos/caca-palavras" element={<CacaPalavrasIntro />} />
-        <Route path="/jogos/caca-palavras/jogar" element={<CacaPalavras />} />
+        <Route path="/jogos/combomemo" element={<ComboMemoIntro title="Combo-Memo Início - n2oliver" />} />
+        <Route path="/jogos/combomemo/jogar" element={<ComboMemo title="Combo-Memo - n2oliver" />} />
+        <Route path="/jogos/combo-memo" element={<ComboMemoIntro title="Combo-Memo Início - n2oliver" />} />
+        <Route path="/jogos/combo-memo/jogar" element={<ComboMemo title="Combo-Memo - n2oliver" />} />
 
-        <Route path="/jogos/palavrascruzadas" element={<PalavrasCruzadasIntro />} />
-        <Route path="/jogos/palavrascruzadas/jogar" element={<PalavrasCruzadas />} />
-        <Route path="/jogos/palavras-cruzadas" element={<PalavrasCruzadasIntro />} />
-        <Route path="/jogos/palavras-cruzadas/jogar" element={<PalavrasCruzadas />} />
+        <Route path="/jogos/cacapalavras" element={<CacaPalavrasIntro title="Caça-Palavras Início - n2oliver" />} />
+        <Route path="/jogos/cacapalavras/jogar" element={<CacaPalavras title="Caça-Palavras - n2oliver" />} />
+        <Route path="/jogos/caca-palavras" element={<CacaPalavrasIntro title="Caça-Palavras Início - n2oliver" />} />
+        <Route path="/jogos/caca-palavras/jogar" element={<CacaPalavras title="Caça-Palavras - n2oliver" />} />
 
-        <Route path="/jogos/linhaamarela" element={<LinhaAmarelaIntro />} />
-        <Route path="/jogos/linhaamarela/jogo" element={<Jogo />} />
-        <Route path="/jogos/linhaamarela/fim" element={<FimDeJogo />} />
-        <Route path="/jogos/linha-amarela" element={<LinhaAmarelaIntro />} />
-        <Route path="/jogos/linha-amarela/jogo" element={<Jogo />} />
-        <Route path="/jogos/linha-amarela/fim" element={<FimDeJogo />} />
+        <Route path="/jogos/palavrascruzadas" element={<PalavrasCruzadasIntro title="Palavras-Cruzadas Início - n2oliver" />} />
+        <Route path="/jogos/palavrascruzadas/jogar" element={<PalavrasCruzadas title="Palavras-Cruzadas - n2oliver" />} />
+        <Route path="/jogos/palavras-cruzadas" element={<PalavrasCruzadasIntro title="Palavras-Cruzadas Início - n2oliver" />} />
+        <Route path="/jogos/palavras-cruzadas/jogar" element={<PalavrasCruzadas title="Tecnologia - n2oliver" />} />
 
-        <Route path="/jogos/caixadeletras" element={<CaixaDeLetras />} />
-        <Route path="/jogos/caixa-de-letras" element={<CaixaDeLetras />} />
+        <Route path="/jogos/linhaamarela" element={<LinhaAmarelaIntro title="Linha Amarela Início - n2oliver" />} />
+        <Route path="/jogos/linhaamarela/jogo" element={<Jogo title="Linha Amarela - n2oliver" />} />
+        <Route path="/jogos/linhaamarela/fim" element={<FimDeJogo title="Linha Amarela Fim de Jogo - n2oliver" />} />
+        <Route path="/jogos/linha-amarela" element={<LinhaAmarelaIntro title="Linha Amarela Início - n2oliver" />} />
+        <Route path="/jogos/linha-amarela/jogo" element={<Jogo title="Linha Amarela - n2oliver" />} />
+        <Route path="/jogos/linha-amarela/fim" element={<FimDeJogo title="Linha Amarela Fim de Jogo - n2oliver" />} />
 
-        <Route path="*" element={<NotFound />} />
+        <Route path="/jogos/caixadeletras" element={<CaixaDeLetras title="Caixa de Letras - n2oliver" />} />
+        <Route path="/jogos/caixa-de-letras" element={<CaixaDeLetras title="Caixa de Letras - n2oliver" />} />
+
+        <Route path="/calculadora" element={<Calculadora title="Calculadora - n2oliver" />} />
+
+        <Route path="*" element={<NotFound title="Página não encontrada - n2oliver" />} />
       </Routes>
       <Footer />
     </div>

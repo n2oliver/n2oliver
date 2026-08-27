@@ -3,7 +3,6 @@ import { API_URL } from "../App";
 import { autotranslate } from "../js/autotranslate";
 import "../css/gtranslate.css";
 import { useEffect } from "react";
-import Header from "./jogos/Header";
 
 function Navbar() {
     const location = useLocation();
@@ -89,6 +88,12 @@ function Navbar() {
                                     </li>
 
                                     <li className="nav-item">
+                                        <Link className="nav-link" to="/calculadora">
+                                            <i className="fa-solid fa-hand-pointer"></i> Calculadora Online
+                                        </Link>
+                                    </li>
+
+                                    <li className="nav-item">
                                         <div className="gtranslate_wrapper ms-auto me-2 d-flex align-items-center"></div>
                                     </li>
                                 </ul>
@@ -98,7 +103,6 @@ function Navbar() {
 
                 </div>
             </nav>
-            <Header />
         </>
     );
 }

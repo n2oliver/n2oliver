@@ -1,10 +1,17 @@
-function Desenvolvedor() {
+import { useEffect } from "react";
+
+function Desenvolvedor({ title }) {
+  useEffect(() => {
+    if (title) {
+      document.title = title;
+    }
+  }, [title]);
   return (
     <main className="desenvolvedor-page">
-        <div className="container py-4 d-block bg-white">
-            <h1>Desenvolvedor</h1>
-            <p>Bem-vindo à seção do desenvolvedor! Aqui você encontrará informações sobre o desenvolvimento de software e tecnologias emergentes.</p>
-        </div>
+      <div className="container py-4 d-block bg-white">
+        <h1>Desenvolvedor</h1>
+        <p>Bem-vindo à seção do desenvolvedor! Aqui você encontrará informações sobre o desenvolvimento de software e tecnologias emergentes.</p>
+      </div>
     </main>
   );
 }

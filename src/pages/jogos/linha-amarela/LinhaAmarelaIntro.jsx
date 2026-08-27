@@ -14,8 +14,14 @@ import "../../../css/jogos/linha-amarela/audio.css";
 import "../../../css/jogos/linha-amarela/pause.css";
 import "../../../css/jogos/linha-amarela/spinner.css";
 import "../../../css/jogos/linha-amarela/intro.css";
+import { useEffect } from "react";
 
-function LinhaAmarelaIntro() {
+function LinhaAmarelaIntro({ title }) {
+    useEffect(() => {
+        if (title) {
+            document.title = title;
+        }
+    }, [title]);
     return (<>
         <Spinner />
         <MainMenuSound />
@@ -25,4 +31,4 @@ function LinhaAmarelaIntro() {
 }
 
 export default LinhaAmarelaIntro;
-export {appUrl};
+export { appUrl };
