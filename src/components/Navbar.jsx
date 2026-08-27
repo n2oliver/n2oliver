@@ -32,11 +32,11 @@ function Navbar() {
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-0 mx-0 m-auto px-0">
-                <div className="d-flex w-100">
+                <div className="d-flex col-md-10 m-auto">
 
                     <div className="d-flex w-100">
 
-                        <Link className="navbar-brand rounded" to="/" style={{ width: "stretch" }}>
+                        <Link className="navbar-brand rounded text-start" to="/" style={{ width: "stretch" }}>
                             <img
                                 src="/img/n2-ico.jpg"
                                 width="32"
