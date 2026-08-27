@@ -21,16 +21,14 @@ function PadroesDeProjetos() {
             <Accordion.Item eventKey="0">
                 <Accordion.Header><h2>Criacionais</h2></Accordion.Header>
                 <Accordion.Body>
-                    <div class="row">
+                    <div class="row justify-content-start">
                         {padroes.criacional.map((padrao, index) => {
                             patternItems.push(padrao);
                             return <div
                                 key={index}
                                 className='game-card'
                                 style={{
-                                    height: 'stretch',
-                                    background: `url(${API_URL + padrao.imagem})`,
-                                    backgroundSize: 'cover'
+                                    background: `url(${API_URL + padrao.imagem})`
                                 }}>
                                 <button
                                     data-game-url={padrao.url}
@@ -60,16 +58,14 @@ function PadroesDeProjetos() {
             <Accordion.Item eventKey="1">
                 <Accordion.Header><h2>Em breve...</h2></Accordion.Header>
                 <Accordion.Body>
-                    <div class="row">
+                    <div class="row justify-content-start ">
                         {padroes.em_breve.map((padrao, index) => {
                             patternItems.push(padrao);
                             return <div
                                 key={index}
                                 className='game-card'
                                 style={{
-                                    height: 'stretch',
-                                    background: `url(${API_URL + padrao.imagem})`,
-                                    backgroundSize: 'cover'
+                                    background: padrao.imagem ? `url(${API_URL + padrao.imagem})` : ""
                                 }}>
                                 <button
                                     data-game-url={padrao.url}

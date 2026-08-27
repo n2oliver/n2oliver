@@ -43,6 +43,24 @@
             "descricao": "E SE VOCÊ PUDESSE CLONAR UM OBJETO?",
             "resumo": "",
             "imagem": "/img/padroes/prototype-ii.jpg"
+        },
+        {
+            "id": 6,
+            "youtube": "https://www.youtube.com/embed/81WDxwuU3Ng?si=FEDi8TZIX2PeXKhp",
+            "tiktok": "7673940617281555732",
+            "titulo": "Builder — PARTE 1",
+            "descricao": "O PROBLEMA ANTES DA SOLUÇÃO",
+            "resumo": "",
+            "imagem": "/img/padroes/builder-i.jpg"
+        },
+        {
+            "id": 7,
+            "youtube": "https://www.youtube.com/embed/NM18TdqCkKc?si=wgFtZUmrUvkki64M",
+            "tiktok": "7673994192275787028",
+            "titulo": "Builder — PARTE 2",
+            "descricao": "Saindo do caos na criação de objetos",
+            "resumo": "",
+            "imagem": "/img/padroes/builder-ii.jpg"
         }
     ],
     "em_breve": [
@@ -53,7 +71,7 @@
             "titulo": "Estruturais",
             "descricao": "",
             "resumo": "",
-            "imagem": "/img/n2.jpg"
+            "imagem": ""
         },
         {
             "id": 0,
@@ -62,7 +80,7 @@
             "titulo": "Comportamentais",
             "descricao": "",
             "resumo": "",
-            "imagem": "/img/n2.jpg"
+            "imagem": ""
         }
     ]
 }

@@ -89,7 +89,7 @@ function Navbar() {
 
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/calculadora">
-                                            <i className="fa-solid fa-hand-pointer"></i> Calculadora Online
+                                            <i className="fa-solid fa-calculator"></i> Calculadora Online
                                         </Link>
                                     </li>
 

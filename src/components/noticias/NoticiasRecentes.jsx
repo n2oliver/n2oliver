@@ -123,10 +123,12 @@ async function buscarNoticias(event) {
     if (dados.page) pagina = dados.page;
 
     const container = document.getElementById("noticias");
-
-    if (!noticiasRoot) {
-        noticiasRoot = createRoot(container);
+    if (noticiasRoot) {
+        noticiasRoot.unmount(); // Desmonta o componente e limpa o container
+        noticiasRoot = null;    // Reseta a variável
     }
+    noticiasRoot = createRoot(container);
+    
     noticiasRoot.render(
         <>
             {dados.results.map((noticia) => (

@@ -14,7 +14,7 @@ function Home({ title }) {
         alt="">
 
         <div className="container m-auto" style={{ backgroundColor: "rgba(0, 0, 0, .4)" }}>
-          <div id="jogos-recentes" className="d-flex justify-content-center">
+          <div>
             <div className="justify-content-start col-md-10 m-auto text-light mt-2 ubuntu w-100">
               <strong>
                 <h2 className="my-0">Padrões de Projeto GoF (Gang of Four)</h2>
