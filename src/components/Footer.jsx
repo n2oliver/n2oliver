@@ -1,6 +1,5 @@
 import '../css/footer.css';
 import SocialMedia from './desenvolvedor/SocialMedia.jsx';
-import AAdsSticky from './AAdsSticky';
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -17,42 +16,38 @@ function Footer() {
     const showFooter = !negativePathNames.includes(location.pathname);
 
     return showFooter && (
-        <>
-            <footer className="site-footer mt-2 m-auto">
-                <Link to="/">
-                    <span className="oliver-dev-logo footer-logo">
-                        n2oliver
-                    </span>
-                </Link>
-
-                <div className="d-flex justify-content-center">
-                    <SocialMedia />
-                </div>
-
-                <span className="footer-text-small">
-                    Todos os direitos reservados - n2oliver - 2026
+        <footer className="site-footer mt-2 m-auto">
+            <Link to="/">
+                <span className="oliver-dev-logo footer-logo">
+                    n2oliver
                 </span>
+            </Link>
 
-                <Link to="/politica-de-privacidade.html">
-                    Política de Privacidade
+            <div className="d-flex justify-content-center">
+                <SocialMedia />
+            </div>
+
+            <span className="footer-text-small">
+                Todos os direitos reservados - n2oliver - 2026
+            </span>
+
+            <Link to="/politica-de-privacidade.html">
+                Política de Privacidade
+            </Link>
+
+            <Link to="/contato.php">
+                Contato
+            </Link>
+
+            <span>
+                <Link
+                    to="mailto:suporte@n2oliver.com"
+                    style={{ marginLeft: "10px" }}
+                >
+                    suporte@n2oliver.com
                 </Link>
-
-                <Link to="/contato.php">
-                    Contato
-                </Link>
-
-                <span>
-                    <Link
-                        to="mailto:suporte@n2oliver.com"
-                        style={{ marginLeft: "10px" }}
-                    >
-                        suporte@n2oliver.com
-                    </Link>
-                </span>
-            </footer>
-
-            <AAdsSticky />
-        </>
+            </span>
+        </footer>
     );
 }
 

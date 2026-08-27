@@ -34,8 +34,7 @@ try {
                 (!empty($noticiaInfo['imagem']) ?
                     '<script>$("#imagem-background").css("background-image", "url(' . htmlspecialchars($noticiaInfo['imagem']) . ')");</script>'
                 : '') .
-                '<div class="me-2 mt-4 px-3"><div class="text-center">-- Continua depois do anúncio --</div>' .
-                    '<div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 1;"><iframe data-aa=\'2417696\' src=\'\/\/acceptable.a-ads.com/2417696/?size=Adaptive\' style=\'border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto\'></iframe></div>' .
+                '<div class="me-2 mt-4 px-3">' .
                     '<p class="text-dark">' . $noticiaInfo['conteudo'] . '</p>
                 </div>' .
                 (!empty($noticiaInfo['data_edicao']) ?

@@ -1,0 +1,26 @@
+body {
+    background-image: url(/img/jogos/combo-memo/platform/wood.jpg);
+}
+
+.calculadora .buttons {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.button:hover {
+    background-color: #dee1e3;
+    color: #000;
+}
+
+.outline {
+    outline-width: 4px;
+    outline-style: outset;
+    outline-offset: -4px;
+}
+
+.result_preview {
+    bottom: 32px;
+    right: 16px;
+    font-size: 24px;
+}
