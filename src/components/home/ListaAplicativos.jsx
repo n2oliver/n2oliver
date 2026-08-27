@@ -38,19 +38,19 @@ function ListaAplicativos() {
                 aplicativos.map(
                     (app, index) => {
                         /*!-- Slides --*/
-                        return <Link to={app.url} target="_blank" role="button" className="w-auto p-4">
-                            <SwiperSlide key={index}
-                                style={{
-                                    backgroundImage: `url(${API_URL}${app.imagem})`,
-                                    backgroundSize: "cover",
-                                    backgroundPosition: "center",
-                                    backgroundAttachment: "fixed",
-                                    overflow: "auto",
-                                    height: "77dvh",
-                                    display: "flex",
-                                    justifyContent: "center",
-                                }} >
-                                <div className="slide-title">
+                        return <SwiperSlide key={index}
+                            style={{
+                                backgroundImage: `url(${API_URL}${app.imagem})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                backgroundAttachment: "fixed",
+                                overflow: "auto",
+                                height: "77dvh",
+                                display: "flex",
+                                justifyContent: "center",
+                            }} >
+                            <Link to={app.url} target="_blank" role="button">
+                                <div className="slide-title" style={{ minHeight: "100%" }}>
                                     <div className="text-light p-4"
                                         style={{ color: 'white !important' }}
                                         dangerouslySetInnerHTML={{ __html: app.descricao }} />
@@ -58,8 +58,8 @@ function ListaAplicativos() {
                                         style={{ minWidth: "50dvw", height: "fit-content" }}
                                         src={`${API_URL + app.imagem}`} />
                                 </div>
-                            </SwiperSlide>
-                        </Link>
+                            </Link>
+                        </SwiperSlide>
                     }
                 )
             }

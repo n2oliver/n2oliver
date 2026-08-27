@@ -469,7 +469,30 @@ h1 {
     padding-top: 50px;
     color: light-dark(black, white);
 }
+.scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: grab;                 /* Visual cue that component can be dragged */
+    user-select: none;            /* Prevents text selection during drag */
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+}
+.scroll-container:active {
+  cursor: grabbing;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none; 
+}
+.scroll-content {
+  display: inline-flex;
+  gap: 16px;
+  padding: 10px;
+}
 
+.scroll-item {
+  border-radius: 8px;
+}
 
 /* Media Queries */
 @media screen and (max-width: 992px) {

@@ -21,6 +21,10 @@
     justify-content: center;
     display: flex;
     flex-wrap: nowrap;
+    flex-direction: row-reverse;
+}
+.slide-title p, .slide-title ul, .slide-title strong {
+    font-size: 12px !important;
 }
 .slide-title a {
     color: white;

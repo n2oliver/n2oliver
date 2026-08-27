@@ -1,55 +1,88 @@
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from "react";
-import { API_URL } from '../../App';
-import dados from '../../js/aplicativos.json';
-import Carousel from 'react-bootstrap/Carousel';
+import { useEffect, useRef, useState } from "react";
+import { API_URL } from "../../App";
+import dados from "../../js/aplicativos.json";
 
 function ListaProjetos() {
-    const [aplicativos, setAplicativos] = useState([]);
-    const [index, setIndex] = useState(0);
+    const isDown = useRef(false);
+    const startX = useRef(0);
+    const scrollLeft = useRef(0);
+    const arrastou = useRef(false);
 
-    const handleSelect = (selectedIndex) => {
-        setIndex(selectedIndex);
-    };
+    const [aplicativos, setAplicativos] = useState([]);
 
     useEffect(() => {
         async function carregar() {
             setAplicativos(dados);
         }
         carregar();
-    }, []);
+    }, [dados]);
 
     if (!aplicativos || (aplicativos && !aplicativos.length)) {
         return;
     }
+    function startDragEvent(e) {
+        arrastou.current = true;
+        isDown.current = true;
+        e.currentTarget.classList.add('active');
+        // Get initial X coordinate relative to the container
+        startX.current = e.pageX - e.currentTarget.offsetLeft;
+        // Get initial scroll position
+        scrollLeft.current = e.currentTarget.scrollLeft;
+    }
+    function mouseLeave() {
+        isDown.current = false;
+    }
+    function mouseUp() {
+        arrastou.current = false;
+        isDown.current = false;
+    }
+    function dragEvent(e) {
+        arrastou.current = true;
+        if (!isDown.current) return;
+
+        e.preventDefault();
+
+        const container = e.currentTarget;
+
+        const x = e.pageX - container.offsetLeft;
+        const walk = x - startX.current;
+
+        container.scrollLeft = scrollLeft.current - walk;
+    }
     return (
-        <Carousel data-bs-theme="dark" activeIndex={index} onSelect={handleSelect}>
-            {
-                aplicativos.map(
-                    (app, index) => {
-                        /*!-- Slides --*/
-                        return <Carousel.Item key={index}
-                            style={{
-                                overflow: "auto",
-                                display: "flex",
-                                justifyContent: "center",
-                            }} >
-                                <img
-                                    className="d-block w-100"
-                                    src={`${API_URL}${app.imagem}`}
-                                    alt={app.titulo} 
-                                    style={{ height: "77dvh" }} />
-                            <Carousel.Caption className="bg-dark text-light">
-                                <Link to={app.url} target="_blank" role="button" className="w-auto p-4">
-                                    <h1>{ app.titulo }</h1>
-                                    <p>{ app.resumo }</p>
-                                </Link>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    }
-                )
-            }
-        </Carousel>
+        <>
+            <div className="d-inline-flex w-100 justify-content-start scroll-container" id="draggable-scroll"
+                onMouseDown={(event) => startDragEvent(event)} onMouseLeave={ mouseLeave } onMouseUp={mouseUp}
+                onMouseMove={dragEvent}>
+                <div className="scroll-content">
+                    {aplicativos.map((aplicativo, index) => {
+                        return <div
+                            key={index}
+                            className='scroll-item'
+                            onClick={() => setTimeout(() => {
+                                if(!arrastou.current) {
+                                    window.open(aplicativo.url);
+                                }
+                            }, 300)}>
+                            <button
+                                className="game-card"
+                                data-game-url={aplicativo.url}
+                                data-game-title={aplicativo.titulo}
+                                data-game-desc={aplicativo.resumo}
+                                data-game-imagem={aplicativo.imagem}
+                                style={{
+                                    background: `url(${API_URL + aplicativo.imagem})`
+                                }}>
+                                <p style={{ fontSize: ".7em", background: "rgba(0,0,0,.7)" }}>{aplicativo.resumo}</p>
+                            </button>
+                            <h4 className="border border-light py-1 rounded-pill px-4 m-auto"style={{ maxWidth: "100%", width: "fit-content" }}>
+                                {aplicativo.titulo}
+                            </h4>
+                        </div>;
+                    })}
+                </div>
+            </div>
+        </>
     )
 }
 export default ListaProjetos;

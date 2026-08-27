@@ -16,7 +16,7 @@ function Footer() {
     const showFooter = !negativePathNames.includes(location.pathname);
 
     return showFooter && (
-        <footer className="site-footer mt-2 m-auto">
+        <footer className="site-footer mt-2 mx-0 m-auto">
             <Link to="/">
                 <span className="oliver-dev-logo footer-logo">
                     n2oliver

@@ -33,14 +33,6 @@
     max-width: 200px;
 }
 
-h1:not(.jumbotron):not(.ranking-title) {
-    font-size: 2rem;
-    color: yellow !important;
-    -webkit-text-stroke: .3px deepskyblue;
-    filter: drop-shadow(0 0 .2rem deepskyblue);
-    background-color: darkslategray;
-}
-
 #jogar_agora {
     display: inline-block;
     padding: 12px 24px;

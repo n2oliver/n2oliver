@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import PadroesDeProjetos from '../components/home/PadroesDeProjetos';
-{/*import ListaProjetos from '../components/home/ListaProjetos'; */}
+import ListaProjetos from '../components/home/ListaProjetos';
 
 function Home({ title }) {
   useEffect(() => {
@@ -10,29 +10,15 @@ function Home({ title }) {
   }, [title]);
   return (<>
     <main className="w-100 m-auto col-md-12 p-0">
-      <section id="destaque-imagem" className="w-100 m-auto n2oliver-jogos d-flex flex-column justify-content-center"
+      <section id="destaque-imagem" className="m-auto n2oliver-jogos d-flex flex-column justify-content-center"
+        style={{ width: "stretch", maxWidth: "94dvw" }}
         alt="">
 
-        <div className="container m-auto" style={{ backgroundColor: "rgba(0, 0, 0, .4)" }}>
+        <div className="container m-auto p-0" style={{ backgroundColor: "rgba(0, 0, 0, .4)", maxWidth: "94dvw" }}>
           <div>
             <div className="justify-content-start col-md-10 m-auto text-light mt-2 ubuntu w-100">
-              <strong>
-                <h2 className="my-0">Padrões de Projeto GoF (Gang of Four)</h2>
-              </strong>
-              <div className="">
-                {/*<ListaProjetos />*/}
-                <PadroesDeProjetos />
-              </div>
-              <div id="frame" style={{ width: "100%", margin: "auto", position: "relative", zIndex: 1 }}>
-                {/* BEGIN AADS AD UNIT 2410752 */}
-
-                <div id="frame" style={{ width: "100%", margin: "auto", position: "relative", zIndex: 99998 }}>
-                  <iframe title="frame" data-aa='2410752' src='//acceptable.a-ads.com/2410752/?size=Adaptive'
-                    style={{ border: 0, padding: 0, width: "70%", height: "auto", overflow: "hidden", display: "block", margin: "auto" }}></iframe>
-                </div>
-
-                {/* END AADS AD UNIT 2410752 */}
-              </div>
+              <ListaProjetos />
+              <PadroesDeProjetos />
             </div>
           </div>
         </div>

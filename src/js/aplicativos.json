@@ -2,7 +2,7 @@
     {
         "id": 1,
         "url": "/extensoes",
-        "titulo": "Inspetor Visual Extensão para Navegadores (Chrome)",
+        "titulo": "Inspetor Visual",
         "descricao": "<h1>Inspetor Visual</h1><p>Copie o HTML e o CSS de qualquer elemento de uma página com apenas um clique. Basta selecionar o componente desejado para obter rapidamente sua estrutura HTML e seus estilos CSS, facilitando estudos, prototipação, depuração e desenvolvimento web.</p><p>Ideal para desenvolvedores, designers e estudantes que desejam analisar interfaces, reutilizar componentes ou acelerar a criação de projetos.</p><strong>Recursos</strong><ul><li>✔ Copiar HTML de qualquer elemento da página</li><li>✔ Copiar CSS automaticamente</li><li>✔ Seleção rápida e intuitiva</li><li>✔ Funciona diretamente no navegador</li><li>✔ Interface simples e leve</li><li>✔ Aumenta a produtividade no desenvolvimento web</li></ul><strong>Indicado para</strong>Desenvolvedores Front-end<br>Web Designers<br>Estudantes de HTML, CSS e JavaScript<br>Análise de interfaces<br>Prototipação rápida<br>Estudos de componentes e layouts<br><p>Copie elementos, analise estilos e acelere seu fluxo de trabalho sem complicações.</p><div class=\"text-center\"><a href=\"/extensoes\"><button class=\"btn btn-primary\"><strong>Acessar</strong></button></a></div>",
         "resumo": "Copie o HTML e o CSS de qualquer elemento de uma página com apenas um clique.",
         "imagem": "/img/insp.jpg"
@@ -19,8 +19,8 @@
         "id": 3,
         "url": "/jogos/caca-palavras",
         "titulo": "Caça-Palavras",
-        "descricao": "<h1>Caça-Palavras</h1><p>Venha jogar Caça-Palavras com a gente! No Caça-Palavras, cada partida é uma nova descoberta. As palavras estão escondidas entre as ! letras e cabe a você encontrá-las.<ul><li>Simples de jogar</li><li>Bom para treinar a atenção</li><li>Perfeito para passar o tempo</li></ul>Jogue no seu ritmo e divirta-se encontrando cada palavra escondida.Será que você consegue achar todas?</p><div class=\"text-center\"><a href=\"/jogos/caca-palavras\"><button class=\"btn btn-danger\"><strong>Jogar agora</strong></button></a></div>",
-        "resumo": "Venha jogar Caça-Palavras com a gente! No Caça-Palavras, cada partida é uma nova descoberta. As palavras estão escondidas entre as ! letras e cabe a você encontrá-las.",
+        "descricao": "<h1>Caça-Palavras</h1><p>Venha jogar Caça-Palavras com a gente! No Caça-Palavras, cada partida é uma nova descoberta. As palavras estão escondidas entre as letras e cabe a você encontrá-las.<ul><li>Simples de jogar</li><li>Bom para treinar a atenção</li><li>Perfeito para passar o tempo</li></ul>Jogue no seu ritmo e divirta-se encontrando cada palavra escondida.Será que você consegue achar todas?</p><div class=\"text-center\"><a href=\"/jogos/caca-palavras\"><button class=\"btn btn-danger\"><strong>Jogar agora</strong></button></a></div>",
+        "resumo": "Venha jogar Caça-Palavras com a gente! No Caça-Palavras, cada partida é uma nova descoberta. As palavras estão escondidas entre as letras e cabe a você encontrá-las.",
         "imagem": "/img/jogos/a.jpg"
     },
     {
@@ -54,5 +54,13 @@
         "descricao": "<h1>Calculadora</h1><p>A Calculadora é uma ferramenta desenvolvida para auxiliar na realização de cálculos matemáticos com rapidez e precisão. Ideal para tarefas do dia a dia, estudos e atividades profissionais, ela permite efetuar operações de forma prática, proporcionando mais agilidade e conveniência na resolução de contas e expressões numéricas.</p><div class=\"text-center\"><a href=\"/calculadora\"><button class=\"btn btn-primary\"><strong>Acessar</strong></button></a></div>",
         "resumo": "A Calculadora é uma ferramenta desenvolvida para auxiliar na realização de cálculos matemáticos com rapidez e precisão.",
         "imagem": "/img/calc.png"
+    },
+    {
+        "id": 1,
+        "url": "/jogos/linha-amarela",
+        "titulo": "Linha Amarela",
+        "descricao": "Divirta-se eliminando os invasores, antes que eles desçam e eliminem a terra!<br>",
+        "resumo": "Um território, uma linha, um herói: você.",
+        "imagem": "/img/invasao-alien.jpg"
     }
 ]
