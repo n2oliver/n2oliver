@@ -44,10 +44,12 @@ function PadroesDeProjetos() {
                                             }, 200);
                                         }
                                     }>
-                                    <div className="row min-vh-50 h-100 align-content-center">
+                                    <div className="row min-vh-50 align-content-center">
                                         <h2 className="rounded-left bg-dark my-0 py-1 rounded">
                                             {padrao.titulo}
                                         </h2>
+                                        <p style={{ fontSize: ".7em", background: "rgba(0,0,0,.7)" }}>{padrao.descricao}</p>
+                                        <small className="small" style={{ fontSize: ".64em", background: "rgba(0,0,0,.7)" }}>{padrao.resumo}</small>
                                     </div>
                                 </button>
                             </div>;
@@ -81,10 +83,12 @@ function PadroesDeProjetos() {
                                             }, 200);
                                         }
                                     }>
-                                    <div className="row min-vh-50 h-100 align-content-center">
+                                    <div className="row min-vh-50 align-content-center">
                                         <h2 className="rounded-left bg-dark my-0 py-1 rounded">
-                                            {padrao.titulo}
+                                            {padrao.titulo} 
                                         </h2>
+                                        <p style={{ fontSize: ".7em", background: "rgba(0,0,0,.7)" }}>{padrao.descricao}</p>
+                                        <small className="small" style={{ fontSize: ".64em", background: "rgba(0,0,0,.7)" }}>{padrao.resumo}</small>
                                     </div>
                                 </button>
                             </div>;

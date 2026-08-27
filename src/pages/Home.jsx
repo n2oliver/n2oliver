@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import PadroesDeProjetos from '../components/home/PadroesDeProjetos';
-import SocialMedia from '../components/desenvolvedor/SocialMedia';
+{/*import ListaProjetos from '../components/home/ListaProjetos'; */}
 
 function Home({ title }) {
   useEffect(() => {
@@ -20,6 +20,7 @@ function Home({ title }) {
                 <h2 className="my-0">Padrões de Projeto GoF (Gang of Four)</h2>
               </strong>
               <div className="">
+                {/*<ListaProjetos />*/}
                 <PadroesDeProjetos />
               </div>
               <div id="frame" style={{ width: "100%", margin: "auto", position: "relative", zIndex: 1 }}>

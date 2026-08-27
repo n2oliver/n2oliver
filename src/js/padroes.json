@@ -6,7 +6,7 @@
             "tiktok": "7672926148287810837",
             "titulo": "Singleton",
             "descricao": "Uma classe, uma instância",
-            "resumo": "Como fazer com que uma classe possua somente uma instância",
+            "resumo": "Instanciar objeto uma única vez",
             "imagem": "/img/padroes/singleton.jpg"
         },
         {
@@ -14,8 +14,8 @@
             "youtube": "https://www.youtube.com/embed/OZuBAKXBrNY?si=IljhKaUKtSnaGsMW",
             "tiktok": "7673672266550496533",
             "titulo": "Abstract Factory",
-            "descricao": "Fábrica abstrata<br>",
-            "resumo": "Instanciando variantes de objetos de linhas padronizadas",
+            "descricao": "Fábrica abstrata",
+            "resumo": "Criar variantes para um padrão de objetos",
             "imagem": "/img/padroes/abstract-factory.jpg"
         },
         {
@@ -23,7 +23,7 @@
             "url": "https://www.youtube.com/shorts/adeCfzb7Pdo",
             "titulo": "Factory Method",
             "descricao": "Um método fábrica para seus objetos",
-            "resumo": "Você pode instanciar um objeto de forma encapsulada.",
+            "resumo": "Método para a criação de novos objetos",
             "imagem": "/img/padroes/factory-method.jpg"
         },
         {
@@ -32,7 +32,7 @@
             "tiktok": "7674463299873869077",
             "titulo": "Prototype — PARTE 1",
             "descricao": "E SE VOCÊ PUDESSE CLONAR UM OBJETO?",
-            "resumo": "",
+            "resumo": "Clonar objetos",
             "imagem": "/img/padroes/prototype-i.jpg"
         },
         {
@@ -40,8 +40,8 @@
             "youtube": "https://www.youtube.com/embed/vmdEV6td0Kk?si=W32TdCoM_Xd2n_PR",
             "tiktok": "7674663389427305749",
             "titulo": "Prototype — PARTE 2",
-            "descricao": "E SE VOCÊ PUDESSE CLONAR UM OBJETO?",
-            "resumo": "",
+            "descricao": "QUANDO O CLONE NÃO É TÃO SIMPLES",
+            "resumo": "Clonar objetos na prática",
             "imagem": "/img/padroes/prototype-ii.jpg"
         },
         {
@@ -50,7 +50,7 @@
             "tiktok": "7673940617281555732",
             "titulo": "Builder — PARTE 1",
             "descricao": "O PROBLEMA ANTES DA SOLUÇÃO",
-            "resumo": "",
+            "resumo": "Etapas de criação para simplificar interfaces",
             "imagem": "/img/padroes/builder-i.jpg"
         },
         {
@@ -59,7 +59,7 @@
             "tiktok": "7673994192275787028",
             "titulo": "Builder — PARTE 2",
             "descricao": "Saindo do caos na criação de objetos",
-            "resumo": "",
+            "resumo": "Criar objetos em etapas na prática",
             "imagem": "/img/padroes/builder-ii.jpg"
         }
     ],
