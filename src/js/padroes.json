@@ -2,7 +2,8 @@
     "criacional": [
         {
             "id": 1,
-            "url": "https://youtube.com/shorts/0eWsb5ATdCw?feature=share",
+            "youtube": "https://www.youtube.com/embed/0eWsb5ATdCw?si=MwFx_nMe9IkxXzCZ",
+            "tiktok": "7672926148287810837",
             "titulo": "Singleton",
             "descricao": "Uma classe, uma instância",
             "resumo": "Como fazer com que uma classe possua somente uma instância",
@@ -10,6 +11,15 @@
         },
         {
             "id": 2,
+            "youtube": "https://www.youtube.com/embed/OZuBAKXBrNY?si=IljhKaUKtSnaGsMW",
+            "tiktok": "7673672266550496533",
+            "titulo": "Abstract Factory",
+            "descricao": "Fábrica abstrata<br>",
+            "resumo": "Instanciando variantes de objetos de linhas padronizadas",
+            "imagem": "/img/padroes/abstract-factory.jpg"
+        },
+        {
+            "id": 3,
             "url": "https://www.youtube.com/shorts/adeCfzb7Pdo",
             "titulo": "Factory Method",
             "descricao": "Um método fábrica para seus objetos",
@@ -17,29 +27,42 @@
             "imagem": "/img/padroes/factory-method.jpg"
         },
         {
-            "id": 3,
-            "url": "https://www.youtube.com/watch?v=OZuBAKXBrNY",
-            "titulo": "Abstract Factory",
-            "descricao": "Fábrica abstrata<br>",
-            "resumo": "Instanciando variantes de objetos de linhas padronizadas",
-            "imagem": "/img/padroes/abstract-factory.jpg"
-        },
-        {
             "id": 4,
-            "url": "/jogos/palavras-cruzadas",
-            "titulo": "Palavras Cruzadas",
-            "descricao": "Desafie seu conhecimento com este quebra-cabeça de palavras.",
+            "youtube": "https://www.youtube.com/embed/WAwD34BiIAc?si=epUXAJIlN89HJffH",
+            "tiktok": "7674463299873869077",
+            "titulo": "Prototype — PARTE 1",
+            "descricao": "E SE VOCÊ PUDESSE CLONAR UM OBJETO?",
             "resumo": "",
-            "imagem": "/img/jogos/flat-crosswords.png"
+            "imagem": "/img/padroes/prototype-i.jpg"
         },
         {
             "id": 5,
-            "url": "/jogos/caixa-de-letras",
-            "titulo": "Caixa de Letras",
-            "descricao": "Desafie seu conhecimento com este quebra-cabeça com letrinhas.",
+            "youtube": "https://www.youtube.com/embed/vmdEV6td0Kk?si=W32TdCoM_Xd2n_PR",
+            "tiktok": "7674663389427305749",
+            "titulo": "Prototype — PARTE 2",
+            "descricao": "E SE VOCÊ PUDESSE CLONAR UM OBJETO?",
             "resumo": "",
-            "imagem": "/img/jogos/caixa-de-letras.png"
+            "imagem": "/img/padroes/prototype-ii.jpg"
         }
     ],
-    "estrutural": []
+    "em_breve": [
+        {
+            "id": 1,
+            "youtube": "/",
+            "tiktok": "",
+            "titulo": "Estruturais",
+            "descricao": "",
+            "resumo": "",
+            "imagem": "/img/n2.jpg"
+        },
+        {
+            "id": 0,
+            "youtube": "/",
+            "tiktok": "",
+            "titulo": "Comportamentais",
+            "descricao": "",
+            "resumo": "",
+            "imagem": "/img/n2.jpg"
+        }
+    ]
 }

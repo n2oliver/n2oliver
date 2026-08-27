@@ -31,13 +31,50 @@ function PadroesDeProjetos() {
                         }}>
                         <button
                             data-game-url={padrao.url}
+                            data-game-youtube={padrao.youtube}
+                            data-game-tiktok={padrao.tiktok}
                             data-game-title={padrao.titulo}
                             data-game-desc={padrao.descricao}
                             data-game-imagem={padrao.imagem}
                             onClick={
                                 function () {
                                     setTimeout(() => {
-                                        window.open(padrao.url);
+                                        window.open(padrao.youtube || padrao.url);
+                                    }, 200);
+                                }
+                            }>
+                            <div className="row min-vh-50 h-100 align-content-center">
+                                <h2 className="rounded-left bg-dark my-0 py-1 rounded">
+                                    {padrao.titulo}
+                                </h2>
+                            </div>
+                        </button>
+                    </div>;
+                })}
+            </div>
+            <h2 class="bg-dark">Em breve...</h2>
+            <div class="row">
+                {padroes.em_breve.map((padrao, index) => {
+                    patternItems.push(padrao);
+                    return <div
+                        key={index}
+                        className='game-card'
+                        style={{
+                            height: 'stretch',
+                            background: `url(${API_URL + padrao.imagem})`,
+                            backgroundSize: 'cover'
+                        }}>
+                        <button
+                            data-game-url={padrao.url}
+                            data-game-youtube={padrao.youtube}
+                            data-game-tiktok={padrao.tiktok}
+                            data-game-title={padrao.titulo}
+                            data-game-desc={padrao.descricao}
+                            data-game-imagem={padrao.imagem}
+                            onClick={
+                                function () {
+                                    setTimeout(() => {
+                                        window.open(padrao.youtube || padrao.url);
                                     }, 200);
                                 }
                             }>
