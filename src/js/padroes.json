@@ -1,5 +1,5 @@
 {
-    "criacional": [
+    "Criacionais": [
         {
             "id": 1,
             "youtube": "https://www.youtube.com/embed/0eWsb5ATdCw?si=MwFx_nMe9IkxXzCZ",
@@ -21,6 +21,7 @@
         {
             "id": 3,
             "url": "https://www.youtube.com/shorts/adeCfzb7Pdo",
+            "tiktok": "7673135119170931989",
             "titulo": "Factory Method",
             "descricao": "Um método fábrica para seus objetos",
             "resumo": "Método para a criação de novos objetos",
@@ -63,21 +64,95 @@
             "imagem": "/img/padroes/builder-ii.jpg"
         }
     ],
-    "em_breve": [
+    "Estruturais": [
         {
-            "id": 1,
-            "youtube": "/",
-            "tiktok": "",
-            "titulo": "Estruturais",
-            "descricao": "",
-            "resumo": "",
-            "imagem": ""
+            "id": 8,
+            "youtube": "https://www.youtube.com/embed/tGuoo0_RATU?si=TCAgdof9lc0MBUo5",
+            "tiktok": "7675691184219491604",
+            "titulo": "Adapter",
+            "descricao": "Unindo componentes pelo poder da adaptação",
+            "resumo": "Adaptar interfaces incompatíveis",
+            "imagem": "/img/padroes/adapter.jpg"
         },
+        {
+            "id": 9,
+            "youtube": "https://www.youtube.com/embed/KWDf2SAz1Jg?si=sIwjGlIOv0hWOP5T",
+            "tiktok": "7676160784027684116",
+            "titulo": "Bridge",
+            "descricao": "Duas dimensões e uma arquitetura mais flexível",
+            "resumo": "Separar a abstração da implementação",
+            "imagem": "/img/padroes/bridge.jpg"
+        },
+        {
+            "id": 10,
+            "youtube": "https://www.youtube.com/embed/4KFOKFXLCaE?si=Bmc8f6DuSJ2QRebL",
+            "tiktok": "7676635697964551442",
+            "titulo": "Composite",
+            "descricao": "Tratando partes e conjuntos da mesma forma",
+            "resumo": "Compor objetos mesclando classes",
+            "imagem": "/img/padroes/bridge.jpg"
+        },
+        {
+            "id": 11,
+            "youtube": "https://www.youtube.com/embed/nGblJLkeCc0?si=kjIn9mLPUS8wUCYO",
+            "tiktok": "7677011053284298001",
+            "titulo": "Decorator — PARTE 1",
+            "descricao": "Não mude a classe! Decore o objeto.",
+            "resumo": "Envolver um objeto com novos detalhes",
+            "imagem": "/img/padroes/decorator-i.jpg"
+        },
+        {
+            "id": 12,
+            "youtube": "https://www.youtube.com/embed/BNCupgthERk?si=uRGRgNc6tNAIEL79",
+            "tiktok": "7677643564582554888",
+            "titulo": "Decorator — PARTE 2",
+            "descricao": "Um objeto envolve outro e acresce ao seu comportamento",
+            "resumo": "Decorar objetos com novas características",
+            "imagem": "/img/padroes/decorator-ii.jpg"
+        },
+        {
+            "id": 13,
+            "url": "https://youtube.com/shorts/Wlfvt7aCTRY?si=o7QPqdQjBvWNndGP",
+            "tiktok": "7677970430707223828",
+            "titulo": "Facade — PARTE 1",
+            "descricao": "Não elimina a complexidade, mas ao menos esconde",
+            "resumo": "Encapsular a complexidade",
+            "imagem": "/img/padroes/facade-i.jpg"
+        },
+        {
+            "id": 14,
+            "youtube": "https://www.youtube.com/embed/3YaKY3Lnzoo?si=qasR7nKBSEtjLVNI",
+            "tiktok": "7675691184219491604",
+            "titulo": "Facade — PARTE 2",
+            "descricao": "Ajuda no housekeeping",
+            "resumo": "Manter a casa limpa",
+            "imagem": "/img/padroes/facade-ii.jpg"
+        },
+        {
+            "id": 15,
+            "youtube": "https://www.youtube.com/embed/J9laUOOyoWI?si=HL7b3EGPAdxoB9Fq",
+            "tiktok": "7678058742134443271",
+            "titulo": "Flyweight",
+            "descricao": "Em vez de cópias compartilhadas, o Flyweight reutiliza objetos que já existem",
+            "resumo": "Evitar dados repetidos na memória",
+            "imagem": "/img/padroes/flyweight.jpg"
+        },
+        {
+            "id": 16,
+            "youtube": "https://www.youtube.com/embed/Zr9_aGzjwcs?si=AbFB7y9A-HkT8irA",
+            "tiktok": "7678411486376611090",
+            "titulo": "Proxy",
+            "descricao": "Etapas antes de um objeto receber parâmetros, ou depois que ele os entregue.",
+            "resumo": "Incrementar etapas",
+            "imagem": "/img/padroes/proxy.jpg"
+        }
+    ],
+    "Comportamentais": [
         {
             "id": 0,
             "youtube": "/",
             "tiktok": "",
-            "titulo": "Comportamentais",
+            "titulo": "Em breve...",
             "descricao": "",
             "resumo": "",
             "imagem": ""

@@ -493,7 +493,9 @@ h1 {
 .scroll-item {
   border-radius: 8px;
 }
-
+.modal {
+    height: 100dvh;
+}
 /* Media Queries */
 @media screen and (max-width: 992px) {
     .col-6 {
