@@ -16,9 +16,13 @@ function Home({ title }) {
 
         <div className="container m-auto p-0" style={{ backgroundColor: "rgba(0, 0, 0, .4)", maxWidth: "94dvw" }}>
           <div>
-            <div className="justify-content-start col-md-10 m-auto text-light mt-2 ubuntu w-100">
-              <ListaProjetos />
+            <div className="justify-content-start text-start col-md-10 m-auto text-light mt-2 ubuntu w-100">
+              <strong>
+                  <h1 className="text-success m-0" style={{ WebkitTextStroke: "1px #fff",fontSize: "3rem", whiteSpace: "normal" }}>QUALIDADE <i className="fa fa-check"></i> É</h1>
+                  <h2 className="my-0 ubuntu">A NOSSA <span className="text-danger"  style={{ WebkitTextStroke: "1px #fff" }}>ENERGIA</span></h2>
+              </strong>
               <PadroesDeProjetos />
+              <ListaProjetos />
             </div>
           </div>
         </div>

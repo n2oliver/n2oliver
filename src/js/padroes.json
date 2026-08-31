@@ -135,7 +135,8 @@
             "titulo": "Flyweight",
             "descricao": "Em vez de cópias compartilhadas, o Flyweight reutiliza objetos que já existem",
             "resumo": "Evitar dados repetidos na memória",
-            "imagem": "/img/padroes/flyweight.jpg"
+            "imagem": "/img/padroes/flyweight.jpg",
+            "noopener": true
         },
         {
             "id": 16,
@@ -144,18 +145,137 @@
             "titulo": "Proxy",
             "descricao": "Etapas antes de um objeto receber parâmetros, ou depois que ele os entregue.",
             "resumo": "Incrementar etapas",
-            "imagem": "/img/padroes/proxy.jpg"
+            "imagem": "/img/padroes/proxy.jpg",
+            "noopener": true
         }
     ],
     "Comportamentais": [
         {
-            "id": 0,
+            "id": 17,
+            "youtube": "https://www.youtube.com/embed/AwgIpY1ckWA?si=BtUdhTMK89YwjmXh",
+            "tiktok": "7679264801448611079",
+            "titulo": "Observer",
+            "descricao": "Notificar vários objetos sem criar um código cheio de dependências",
+            "resumo": "",
+            "imagem": "/img/padroes/observer.jpg"
+        },
+        {
+            "id": 18,
+            "youtube": "https://www.youtube.com/embed/k_mBfByuz4E?si=rQGlMo_52xMP4K2s",
+            "tiktok": "7679630808738499848",
+            "titulo": "Strategy",
+            "descricao": "Separe as decisões em classes distintas",
+            "resumo": "Quando seu código começa a ficar cheio de ifs",
+            "imagem": "/img/padroes/strategy.jpg"
+        },
+        {
+            "id": 19,
+            "youtube": "https://www.youtube.com/embed/JM-WCs_KM4I?si=work8M4l7-mG1Gn_",
+            "tiktok": "7680188458278685970",
+            "titulo": "State",
+            "descricao": "E se o comportamento mudasse conforme o estado?",
+            "resumo": "Eliminar condicionais",
+            "imagem": "/img/padroes/state.jpg"
+        },
+        {
+            "id": 20,
             "youtube": "/",
             "tiktok": "",
-            "titulo": "Em breve...",
+            "titulo": "Em breve... => { ",
             "descricao": "",
             "resumo": "",
-            "imagem": ""
+            "imagem": "",
+            "noopener": true
+        },
+        {
+            "id": 21,
+            "youtube": "/",
+            "tiktok": "",
+            "titulo": "Command",
+            "descricao": "",
+            "resumo": "",
+            "imagem": "",
+            "noopener": true
+        },
+        {
+            "id": 22,
+            "youtube": "/",
+            "tiktok": "",
+            "titulo": "Chain of Responsibility",
+            "descricao": "",
+            "resumo": "",
+            "imagem": "",
+            "noopener": true
+        },
+        {
+            "id": 23,
+            "youtube": "/",
+            "tiktok": "",
+            "titulo": "Template",
+            "descricao": "",
+            "resumo": "",
+            "imagem": "",
+            "noopener": true
+        },
+        {
+            "id": 24,
+            "youtube": "/",
+            "tiktok": "",
+            "titulo": "Interpreter",
+            "descricao": "",
+            "resumo": "",
+            "imagem": "",
+            "noopener": true
+        },
+        {
+            "id": 25,
+            "youtube": "/",
+            "tiktok": "",
+            "titulo": "Visitor",
+            "descricao": "",
+            "resumo": "",
+            "imagem": "",
+            "noopener": true
+        },
+        {
+            "id": 26,
+            "youtube": "/",
+            "tiktok": "",
+            "titulo": "Mediator",
+            "descricao": "",
+            "resumo": "",
+            "imagem": "",
+            "noopener": true
+        },
+        {
+            "id": 27,
+            "youtube": "/",
+            "tiktok": "",
+            "titulo": "Memento",
+            "descricao": "",
+            "resumo": "",
+            "imagem": "",
+            "noopener": true
+        },
+        {
+            "id": 28,
+            "youtube": "/",
+            "tiktok": "",
+            "titulo": "Iterator",
+            "descricao": "",
+            "resumo": "",
+            "imagem": "",
+            "noopener": true
+        },
+        {
+            "id": 29,
+            "youtube": "/",
+            "tiktok": "",
+            "titulo": "}",
+            "descricao": "",
+            "resumo": "",
+            "imagem": "",
+            "noopener": true
         }
     ]
 }

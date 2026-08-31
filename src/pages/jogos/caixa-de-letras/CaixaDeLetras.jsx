@@ -1,5 +1,4 @@
 import GameContainer from "../../../components/jogos/caixa-de-letras/GameContainer";
-import InGameAAds from "../ads/InGameAAds";
 import "../../../css/jogos/caixa-de-letras/style.css";
 import { useEffect } from "react";
 
@@ -12,7 +11,6 @@ function CaixaDeLetras({ title }) {
     return (
         <>
             <GameContainer />
-            <InGameAAds />
         </>
     );
 }

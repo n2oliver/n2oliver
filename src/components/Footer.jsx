@@ -29,21 +29,17 @@ function Footer() {
                 Todos os direitos reservados - n2oliver - 2026
             </span>
 
-            <Link to="/politica-de-privacidade.html">
+            <a href="/politica-de-privacidade.html">
                 Política de Privacidade
-            </Link>
-
-            <Link to="/contato.php">
-                Contato
-            </Link>
-
+            </a>
+            
             <span>
-                <Link
-                    to="mailto:suporte@n2oliver.com"
+                <a
+                    href="mailto:suporte@n2oliver.com"
                     style={{ marginLeft: "10px" }}
                 >
                     suporte@n2oliver.com
-                </Link>
+                </a>
             </span>
         </footer>
     );

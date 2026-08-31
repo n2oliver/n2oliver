@@ -59,16 +59,21 @@ function PadroesDeProjetos() {
 
         container.scrollLeft = scrollLeft.current - walk;
     }
+    function openWindow(padrao) {
+        setTimeout(() => {
+            window.open(padrao.url);
+        }, 200);
+    }
     return (
         <>
             <strong>
-                <h2 className="my-0 text-start">Padrões de Projeto</h2>
+                <h2 className="my-0 py-4 text-start">Padrões de Projeto</h2>
             </strong>
             <Accordion defaultActiveKey="0" flush data-bs-theme="dark">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header><h2>Criacionais</h2></Accordion.Header>
                     <Accordion.Body className="scroll-container"
-                        onMouseDown={(event) => startDragEvent(event)} onMouseLeave={ mouseLeave } onMouseUp={mouseUp}
+                        onMouseDown={(event) => startDragEvent(event)} onMouseLeave={mouseLeave} onMouseUp={mouseUp}
                         onMouseMove={dragEvent}>
                         <div class="d-inline-flex w-100 justify-content-start scroll-content">
                             {padroes.Criacionais.map((padrao, index) => {
@@ -86,18 +91,14 @@ function PadroesDeProjetos() {
                                         data-game-desc={padrao.descricao}
                                         data-game-imagem={padrao.imagem}
                                         onClick={
-                                            () => padrao.youtube ? handleShow(padrao) : (function (padrao) {
-                                                setTimeout(() => {
-                                                    window.open(padrao.url);
-                                                }, 200);
-                                            })(padrao)
+                                            () => padrao.youtube ? handleShow(padrao) : openWindow(padrao)
                                         }>
                                         <div className="row min-vh-50 align-content-center">
                                             <h2 className="rounded-left bg-dark my-0 py-1 rounded">
                                                 {padrao.titulo}
                                             </h2>
-                                            <p style={{ fontSize: ".7em", background: "rgba(0,0,0,.7)" }}>{padrao.descricao}</p>
-                                            <small className="small" style={{ fontSize: ".64em", background: "rgba(0,0,0,.7)" }}>{padrao.resumo}</small>
+                                            <p style={{ fontSize: ".7em", background: "rgba(255,255,255,.9)", color: "black" }}>{padrao.descricao}</p>
+                                            <small className="small" style={{ fontSize: ".64em", background: "rgba(0,0,0,.9)" }}>{padrao.resumo}</small>
                                         </div>
                                     </button>
                                 </div>;
@@ -108,7 +109,7 @@ function PadroesDeProjetos() {
                 <Accordion.Item eventKey="1">
                     <Accordion.Header><h2>Estruturais</h2></Accordion.Header>
                     <Accordion.Body className="scroll-container"
-                        onMouseDown={(event) => startDragEvent(event)} onMouseLeave={ mouseLeave } onMouseUp={mouseUp}
+                        onMouseDown={(event) => startDragEvent(event)} onMouseLeave={mouseLeave} onMouseUp={mouseUp}
                         onMouseMove={dragEvent}>
                         <div class="d-inline-flex w-100 justify-content-start scroll-content">
                             {padroes.Estruturais.map((padrao, index) => {
@@ -126,18 +127,14 @@ function PadroesDeProjetos() {
                                         data-game-desc={padrao.descricao}
                                         data-game-imagem={padrao.imagem}
                                         onClick={
-                                            () => padrao.youtube ? handleShow(padrao) : (function (padrao) {
-                                                setTimeout(() => {
-                                                    window.open(padrao.url);
-                                                }, 200);
-                                            })(padrao)
+                                            () => padrao.youtube ? handleShow(padrao) : openWindow(padrao)
                                         }>
                                         <div className="row min-vh-50 align-content-center">
                                             <h2 className="rounded-left bg-dark my-0 py-1 rounded">
                                                 {padrao.titulo}
                                             </h2>
-                                            <p style={{ fontSize: ".7em", background: "rgba(0,0,0,.7)" }}>{padrao.descricao}</p>
-                                            <small className="small" style={{ fontSize: ".64em", background: "rgba(0,0,0,.7)" }}>{padrao.resumo}</small>
+                                            <p style={{ fontSize: ".7em", background: "rgba(255,255,255,.9)", color: "black" }}>{padrao.descricao}</p>
+                                            <small className="small" style={{ fontSize: ".64em", background: "rgba(0,0,0,.9)" }}>{padrao.resumo}</small>
                                         </div>
                                     </button>
                                 </div>;
@@ -146,9 +143,9 @@ function PadroesDeProjetos() {
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
-                    <Accordion.Header><h2>Em breve...</h2></Accordion.Header>
+                    <Accordion.Header><h2>Comportamentais</h2></Accordion.Header>
                     <Accordion.Body className="scroll-container"
-                        onMouseDown={(event) => startDragEvent(event)} onMouseLeave={ mouseLeave } onMouseUp={mouseUp}
+                        onMouseDown={(event) => startDragEvent(event)} onMouseLeave={mouseLeave} onMouseUp={mouseUp}
                         onMouseMove={dragEvent}>
                         <div class="d-inline-flex w-100 justify-content-start scroll-content">
                             {padroes.Comportamentais.map((padrao, index) => {
@@ -166,18 +163,19 @@ function PadroesDeProjetos() {
                                         data-game-desc={padrao.descricao}
                                         data-game-imagem={padrao.imagem}
                                         onClick={
-                                            () => padrao.youtube ? handleShow(padrao) : (function (padrao) {
-                                                setTimeout(() => {
-                                                    window.open(padrao.url);
-                                                }, 200);
-                                            })(padrao)
+                                            () => {
+                                                if(padrao.noopener) {
+                                                    return;
+                                                }
+                                                return padrao.youtube ? handleShow(padrao) : openWindow(padrao);
+                                            }
                                         }>
                                         <div className="row min-vh-50 align-content-center">
                                             <h2 className="rounded-left bg-dark my-0 py-1 rounded">
                                                 {padrao.titulo}
                                             </h2>
-                                            <p style={{ fontSize: ".7em", background: "rgba(0,0,0,.7)" }}>{padrao.descricao}</p>
-                                            <small className="small" style={{ fontSize: ".64em", background: "rgba(0,0,0,.7)" }}>{padrao.resumo}</small>
+                                            <p style={{ fontSize: ".7em", background: "rgba(255,255,255,.9)", color: "black" }}>{padrao.descricao}</p>
+                                            <small className="small" style={{ fontSize: ".64em", background: "rgba(0,0,0,.9)" }}>{padrao.resumo}</small>
                                         </div>
                                     </button>
                                 </div>;
@@ -186,7 +184,7 @@ function PadroesDeProjetos() {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-            <YoutubePlayer video={video} show={show} handleClose={handleClose}/>
+            <YoutubePlayer video={video} show={show} handleClose={handleClose} />
         </>
     );
 }
