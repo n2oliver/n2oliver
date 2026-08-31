@@ -66,6 +66,15 @@ function PadroesDeProjetos() {
     }
     return (
         <>
+            <div className="text-center">
+                <a href="https://go.hotmart.com/R107405978K">
+                    <img role="button" 
+                        style={{ maxWidth: "992px" }} 
+                        title="banner-js-good-stuffs" 
+                        width="100%" 
+                        src="/img/banner-js-good-stuffs.jpg" />
+                </a>
+            </div>
             <strong>
                 <h2 className="my-0 py-4 text-start">Padrões de Projeto</h2>
             </strong>

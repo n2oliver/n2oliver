@@ -52,7 +52,7 @@ function ListaProjetos() {
     return (
         <>
             <strong>
-                <h2 className="my-0 py-4 text-start">Projetos</h2>
+                <h2 className="my-0 py-4 text-start">Produtos</h2>
             </strong>
             <div className="d-inline-flex w-100 justify-content-start scroll-container" id="draggable-scroll"
                 onMouseDown={(event) => startDragEvent(event)} onMouseLeave={ mouseLeave } onMouseUp={mouseUp}
@@ -78,7 +78,7 @@ function ListaProjetos() {
                                 }}>
                                 <p style={{ fontSize: ".7em", background: "rgba(0,0,0,.9)" }}>{aplicativo.resumo}</p>
                             </button>
-                            <h4 className="border border-light py-1 rounded-pill px-4 m-auto"style={{ maxWidth: "100%", width: "fit-content" }}>
+                            <h4 className="border border-light py-1 rounded-pill px-4 m-auto text-center"style={{ maxWidth: "100%", width: "fit-content" }}>
                                 {aplicativo.titulo}
                             </h4>
                         </div>;

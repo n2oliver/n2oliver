@@ -83,7 +83,7 @@ function Navbar() {
 
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/aplicativos">
-                                            <i className="fa-solid fa-hand-pointer"></i> Projetos
+                                            <i className="fa-solid fa-hand-pointer"></i> Produtos
                                         </Link>
                                     </li>
 
