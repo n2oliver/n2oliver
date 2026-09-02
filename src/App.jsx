@@ -10,7 +10,6 @@ import './css/games.css';
 import './css/header.css';
 
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { abrirSmartlinkUmaVez } from "./js/anuncios";
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -109,13 +108,5 @@ function App() {
     </div>
   );
 }
-document.addEventListener('DOMContentLoaded', function () {
-  window.onclick = () => {
-    window.onclick = () => {
-      abrirSmartlinkUmaVez();
-      window.onclick = null;
-    }
-  }
-});
 export { $, API_URL };
 export default App;

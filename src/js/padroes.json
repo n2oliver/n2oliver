@@ -179,29 +179,27 @@
         },
         {
             "id": 20,
-            "youtube": "/",
-            "tiktok": "",
-            "titulo": "Em breve... => { ",
-            "descricao": "",
-            "resumo": "",
-            "imagem": "",
-            "noopener": true
+            "youtube": "https://www.youtube.com/embed/Lb0iEPghtpY?si=MEqjZZiyy7qRh_iT",
+            "tiktok": "7680337056760859912",
+            "titulo": "Command",
+            "descricao": "Que tal reduzir a complexidade, desacoplando ações?",
+            "resumo": "Desacoplar ações do objeto",
+            "imagem": "/img/padroes/command.jpg"
         },
         {
             "id": 21,
-            "youtube": "/",
-            "tiktok": "",
-            "titulo": "Command",
-            "descricao": "",
-            "resumo": "",
-            "imagem": "",
-            "noopener": true
+            "youtube": "https://www.youtube.com/embed/L912i7DAa54?si=Qv8xlt-jvhU9HSSY",
+            "tiktok": "7680705888411208968",
+            "titulo": "Chain of Responsibility",
+            "descricao": "Uma linha de processamento de objetos",
+            "resumo": "Encadear o tratamento de uma requisição por vários objetos",
+            "imagem": "/img/padroes/chain-of-responsibility.jpg"
         },
         {
             "id": 22,
             "youtube": "/",
             "tiktok": "",
-            "titulo": "Chain of Responsibility",
+            "titulo": "Em breve... => { ",
             "descricao": "",
             "resumo": "",
             "imagem": "",

@@ -67,7 +67,7 @@ function PadroesDeProjetos() {
     return (
         <>
             <div className="text-center">
-                <a href="https://go.hotmart.com/R107405978K">
+                <a href="/boas-praticas-javascript.html">
                     <img role="button" 
                         style={{ maxWidth: "992px" }} 
                         title="banner-js-good-stuffs" 
