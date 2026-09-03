@@ -197,19 +197,18 @@
         },
         {
             "id": 22,
-            "youtube": "/",
-            "tiktok": "",
-            "titulo": "Em breve... => { ",
-            "descricao": "",
-            "resumo": "",
-            "imagem": "",
-            "noopener": true
+            "youtube": "https://www.youtube.com/embed/9o8CEU7yDIU?si=Cjtiz75PUip9Sgaf",
+            "tiktok": "7681336269774900498",
+            "titulo": "Template",
+            "descricao": "A massa é a mesma, mas o recheio é diferente",
+            "resumo": "Seguir os mesmos passos, alterando apenas detalhes",
+            "imagem": "/img/padroes/template.jpg"
         },
         {
             "id": 23,
             "youtube": "/",
             "tiktok": "",
-            "titulo": "Template",
+            "titulo": "Em breve... => { ",
             "descricao": "",
             "resumo": "",
             "imagem": "",

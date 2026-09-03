@@ -31,33 +31,39 @@ function PadroesDeProjetos() {
         return;
     }
     function startDragEvent(e) {
-        arrastou.current = true;
         isDown.current = true;
+        arrastou.current = false;
+
         e.currentTarget.classList.add('active');
-        // Get initial X coordinate relative to the container
+
         startX.current = e.pageX - e.currentTarget.offsetLeft;
-        // Get initial scroll position
         scrollLeft.current = e.currentTarget.scrollLeft;
     }
+
     function mouseLeave() {
         isDown.current = false;
     }
+
     function mouseUp() {
-        arrastou.current = false;
         isDown.current = false;
     }
+
     function dragEvent(e) {
-        arrastou.current = true;
         if (!isDown.current) return;
 
-        e.preventDefault();
-
         const container = e.currentTarget;
-
         const x = e.pageX - container.offsetLeft;
         const walk = x - startX.current;
 
-        container.scrollLeft = scrollLeft.current - walk;
+        // Só considera arraste depois de um deslocamento mínimo
+        if (Math.abs(walk) > 5) {
+            arrastou.current = true;
+        }
+
+        if (arrastou.current) {
+            e.preventDefault();
+            container.scrollLeft = scrollLeft.current - walk;
+        }
     }
     function openWindow(padrao) {
         setTimeout(() => {
@@ -68,10 +74,10 @@ function PadroesDeProjetos() {
         <>
             <div className="text-center">
                 <a href="/boas-praticas-javascript.html">
-                    <img role="button" 
-                        style={{ maxWidth: "992px" }} 
-                        title="banner-js-good-stuffs" 
-                        width="100%" 
+                    <img role="button"
+                        style={{ maxWidth: "992px" }}
+                        title="banner-js-good-stuffs"
+                        width="100%"
                         src="/img/banner-js-good-stuffs.jpg" />
                 </a>
             </div>
@@ -99,9 +105,16 @@ function PadroesDeProjetos() {
                                         data-game-title={padrao.titulo}
                                         data-game-desc={padrao.descricao}
                                         data-game-imagem={padrao.imagem}
-                                        onClick={
-                                            () => padrao.youtube ? handleShow(padrao) : openWindow(padrao)
-                                        }>
+                                        onClick={() => {
+                                            if (arrastou.current) {
+                                                arrastou.current = false;
+                                                return;
+                                            }
+
+                                            padrao.youtube
+                                                ? handleShow(padrao)
+                                                : openWindow(padrao);
+                                        }}>
                                         <div className="row min-vh-50 align-content-center">
                                             <h2 className="rounded-left bg-dark my-0 py-1 rounded">
                                                 {padrao.titulo}
@@ -135,9 +148,16 @@ function PadroesDeProjetos() {
                                         data-game-title={padrao.titulo}
                                         data-game-desc={padrao.descricao}
                                         data-game-imagem={padrao.imagem}
-                                        onClick={
-                                            () => padrao.youtube ? handleShow(padrao) : openWindow(padrao)
-                                        }>
+                                        onClick={() => {
+                                            if (arrastou.current) {
+                                                arrastou.current = false;
+                                                return;
+                                            }
+
+                                            padrao.youtube
+                                                ? handleShow(padrao)
+                                                : openWindow(padrao);
+                                        }}>
                                         <div className="row min-vh-50 align-content-center">
                                             <h2 className="rounded-left bg-dark my-0 py-1 rounded">
                                                 {padrao.titulo}
@@ -171,14 +191,16 @@ function PadroesDeProjetos() {
                                         data-game-title={padrao.titulo}
                                         data-game-desc={padrao.descricao}
                                         data-game-imagem={padrao.imagem}
-                                        onClick={
-                                            () => {
-                                                if(padrao.noopener) {
-                                                    return;
-                                                }
-                                                return padrao.youtube ? handleShow(padrao) : openWindow(padrao);
+                                        onClick={() => {
+                                            if (arrastou.current || padrao.noopener) {
+                                                arrastou.current = false;
+                                                return;
                                             }
-                                        }>
+
+                                            padrao.youtube
+                                                ? handleShow(padrao)
+                                                : openWindow(padrao);
+                                        }}>
                                         <div className="row min-vh-50 align-content-center">
                                             <h2 className="rounded-left bg-dark my-0 py-1 rounded">
                                                 {padrao.titulo}
