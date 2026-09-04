@@ -206,19 +206,18 @@
         },
         {
             "id": 23,
-            "youtube": "/",
-            "tiktok": "",
-            "titulo": "Em breve... => { ",
-            "descricao": "",
-            "resumo": "",
-            "imagem": "",
-            "noopener": true
+            "youtube": "https://www.youtube.com/embed/C7TP9W6uwaQ?si=Hy53zlNobrWQXfBB",
+            "tiktok": "7681430910327180562",
+            "titulo": "Interpreter",
+            "descricao": "Criar interpretadores para linguagens de programação",
+            "resumo": "Compor um conjunto de regras para interpretar uma linguagem",
+            "imagem": "/img/padroes/interpreter.jpg"
         },
         {
             "id": 24,
             "youtube": "/",
             "tiktok": "",
-            "titulo": "Interpreter",
+            "titulo": "Em breve... => { ",
             "descricao": "",
             "resumo": "",
             "imagem": "",
