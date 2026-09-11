@@ -1,5 +1,3 @@
-import { params1, SMARTLINK_1 } from "../../anuncios";
-
 function setUp() {
     try {
         document.querySelector('meta[name="viewport"]').content = "";
@@ -548,11 +546,8 @@ function setUp() {
         checkButton.addEventListener('click', checkAnswers);
         restartButton.addEventListener('click', () => {
             setTimeout(() => {
-                window.open(SMARTLINK_1, '_blank', params1);
-                setTimeout(() => {
-                    init();
-                }, 1200);
-            }, 600);
+                init();
+            }, 200);
         });
 
         init();

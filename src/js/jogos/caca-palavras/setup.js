@@ -1,5 +1,3 @@
-import { params1, SMARTLINK_1 } from "../../anuncios";
-
 function setUp() {
     const wordsByLang = {
         pt: [
@@ -433,12 +431,10 @@ function setUp() {
     gridElement.addEventListener('touchmove', handleMoveSelection, { passive: false });
     gridElement.addEventListener('touchend', handleEndSelection);
     restartButton.addEventListener('click', () => {
+        
         setTimeout(() => {
-            window.open(SMARTLINK_1, '_blank', params1);
-            setTimeout(() => {
-                init();
-            }, 1200);
-        }, 600);
+            init();
+        }, 200);
     });
 
     init();

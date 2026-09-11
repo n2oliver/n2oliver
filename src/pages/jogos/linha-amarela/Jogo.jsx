@@ -23,7 +23,6 @@ import "../../../css/jogos/linha-amarela/intro.css";
 import "../../../css/jogos/linha-amarela/style.css";
 import "../../../css/jogos/linha-amarela/game-over.css";
 
-import "../../../js/anuncios";
 import "../../../js/jogos/linha-amarela/Background";
 import "../../../js/jogos/linha-amarela/Ball";
 import "../../../js/jogos/linha-amarela/Counter";

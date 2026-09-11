@@ -52,7 +52,7 @@ function ListaProjetos() {
     return (
         <>
             <strong>
-                <h2 className="my-0 py-4 text-start">Produtos</h2>
+                <h2 className="my-0 py-4 text-start">Outros produtos</h2>
             </strong>
             <div className="d-inline-flex w-100 justify-content-start scroll-container" id="draggable-scroll"
                 onMouseDown={(event) => startDragEvent(event)} onMouseLeave={ mouseLeave } onMouseUp={mouseUp}

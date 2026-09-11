@@ -1,4 +1,3 @@
-import { params1, SMARTLINK_1 } from "../../../js/anuncios";
 import { percentual } from "../../../js/jogos/combo-memo/platform/platform";
 function Menu() {
     return (
@@ -13,11 +12,8 @@ function Menu() {
                 <button id="btnRestart"
                     onClick={() => {
                         setTimeout(() => {
-                            window.open(SMARTLINK_1, '_blank', params1);
-                            setTimeout(() => {
-                                window.location.reload(); // ou, se quiser reiniciar sem recarregar: zerar o estado e chamar embaralhar()
-                            }, 1200);
-                        }, 600);
+                            window.location.reload(); // ou, se quiser reiniciar sem recarregar: zerar o estado e chamar embaralhar()
+                        }, 200);
                     }}>Reiniciar</button>
             </h3>
         </div>

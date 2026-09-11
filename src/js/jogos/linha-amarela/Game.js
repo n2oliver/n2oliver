@@ -1,5 +1,4 @@
 import Hammer from 'hammerjs';
-import { abrirSmartlinkUmaVez } from "../../anuncios";
 import { AudioManager } from "./AudioManager";
 import { Ball } from "./Ball";
 import { GameBase } from "./GameBase";
@@ -116,7 +115,6 @@ class Game extends GameBase {
         }
     }
     start = (e) => {
-        abrirSmartlinkUmaVez();
         document.querySelector('.intro').style.display = 'none';
         if ((typeof window.gameOver != 'undefined' && window.gameOver === false) || typeof window.gameOver == 'undefined') {
             window.game.setEvents(e);

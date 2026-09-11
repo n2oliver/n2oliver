@@ -21,7 +21,6 @@ import Spinner from "../../../components/jogos/linha-amarela/Spinner";
 import { useEffect, useState } from "react";
 import { init } from "../../../js/jogos/linha-amarela/GameOver.js";
 import { gtag } from "../../../js/gtag.js";
-import { abrirSmartlinkUmaVez } from "../../../js/anuncios.js";
 import Points from "../../../components/jogos/linha-amarela/GameOver/Points.jsx";
 import Ranking from "../../../components/jogos/linha-amarela/GameOver/Ranking.jsx";
 import Logo from "../../../components/jogos/linha-amarela/GameOver/Logo.jsx";
@@ -40,7 +39,6 @@ function FimDeJogo({ title }) {
             currency: "USD",
             value: 0.0004
         });
-        abrirSmartlinkUmaVez();
 
         async function setUser() {
             const response = await fetch('/api/jogos/linha-amarela/verifica-login.php');

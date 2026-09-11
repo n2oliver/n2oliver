@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { abrirSmartlinkUmaVez, params1, SMARTLINK_1 } from "../../../js/anuncios";
 import { setUp } from "../../../js/jogos/caixa-de-letras/setup";
 
 function GameContainer() {
@@ -16,13 +15,9 @@ function GameContainer() {
                 <div className="botoes text-center">
                     <button id="btnRestart" className="btn btn-warning" onClick={(event) => {
                         event.preventDefault();
-                        abrirSmartlinkUmaVez();
                         setTimeout(() => {
-                            window.open(SMARTLINK_1, '_blank', params1);
-                            setTimeout(() => {
-                                window.location.reload();
-                            }, 1200);
-                        }, 600);
+                            window.location.reload();
+                        }, 200);
                     }}><strong id="reiniciar">Carregando...</strong><i className="fas fa-spinner fa-spin"></i></button>
                 </div>
             </div>

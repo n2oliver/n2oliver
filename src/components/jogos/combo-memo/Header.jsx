@@ -4,7 +4,6 @@ import "../../../css/jogos/combo-memo/card/card.css";
 import { virar } from "../../../js/jogos/combo-memo/card/card";
 import "https://appsha-pnd.ctengine.io/js/script.js?wkey=97NjKiTr7b";
 import { gtag } from "../../../js/gtag";
-import { abrirSmartlinkUmaVez } from "../../../js/anuncios";
 import { API_URL } from "../../../App";
 function Header() {
     gtag("event", "qualify_lead", {
@@ -13,7 +12,6 @@ function Header() {
     });
     function jogar (event) {
         event.preventDefault();
-        abrirSmartlinkUmaVez();
         gtag("event", "close_convert_lead", {
             currency: "USD",
             value: 0.0004
