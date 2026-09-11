@@ -8,6 +8,8 @@ function PadroesDeProjetos() {
     const [padroes, setPadroes] = useState({});
     const [show, setShow] = useState(false);
     const [video, setVideo] = useState({});
+    const [activeKey, setActiveKey] = useState(null);
+
     const isDown = useRef(false);
     const startX = useRef(0);
     const scrollLeft = useRef(0);
@@ -25,6 +27,10 @@ function PadroesDeProjetos() {
         async function carregar() {
             setPadroes(dados);
         }
+        
+        setTimeout(() => {
+            setActiveKey('0');
+        }, 10);
         carregar();
     }, {})
     if (!padroes || (padroes && !Object.entries(padroes).length)) {
@@ -73,9 +79,9 @@ function PadroesDeProjetos() {
     return (
         <>
             <strong>
-                <h2 className="my-0 py-4 text-start">Padrões de Projeto</h2>
+                <h4 className="my-0 pb-2 pt-2 text-start">Padrões de Projeto</h4>
             </strong>
-            <Accordion defaultActiveKey="0" flush data-bs-theme="dark">
+            <Accordion activeKey={activeKey} onSelect={(eventKey) => setActiveKey(eventKey)} flush data-bs-theme="dark">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header><h2>Criacionais</h2></Accordion.Header>
                     <Accordion.Body className="scroll-container"
@@ -207,15 +213,6 @@ function PadroesDeProjetos() {
                 </Accordion.Item>
             </Accordion>
             <YoutubePlayer video={video} show={show} handleClose={handleClose} />
-            <div className="text-center mt-4">
-                <a href="/boas-praticas-javascript.html">
-                    <img role="button"
-                        style={{ maxWidth: "992px" }}
-                        title="banner-js-good-stuffs"
-                        width="100%"
-                        src="/img/banner-js-good-stuffs.jpg" />
-                </a>
-            </div>
         </>
     );
 }

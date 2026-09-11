@@ -50,15 +50,27 @@ function ListaProjetos() {
         container.scrollLeft = scrollLeft.current - walk;
     }
     return (
-        <>
-            <strong>
-                <h2 className="my-0 py-4 text-start">Outros produtos</h2>
-            </strong>
+        <> 
             <div className="d-inline-flex w-100 justify-content-start scroll-container" id="draggable-scroll"
                 onMouseDown={(event) => startDragEvent(event)} onMouseLeave={ mouseLeave } onMouseUp={mouseUp}
                 onMouseMove={dragEvent}>
                 <div className="scroll-content">
-                    {aplicativos.map((aplicativo, index) => {
+                    <div
+                        key={-1}
+                        className='scroll-item'
+                        style={{
+                            wordWrap: "normal",
+                            textAlign: "center",
+                            alignContent: "center",
+                            position: "sticky",
+                            left: "0px",
+                            padding: "4px",
+                            background: "rgba(0, 0, 0, .8)",
+                            backdropFilter: "blur(4px)",
+                            border: "darkslategray 4px solid",
+                            color: "white"
+                        }}><div>Jogos</div><div>&</div><div>Web</div><div>Apps</div></div>
+                    { aplicativos.map((aplicativo, index) => {
                         return <div
                             key={index}
                             className='scroll-item'
@@ -67,6 +79,9 @@ function ListaProjetos() {
                                     window.open(aplicativo.url);
                                 }
                             }, 300)}>
+                            <h4 className="m-auto text-center"style={{ maxWidth: "100%", width: "fit-content" }}>
+                                {aplicativo.titulo}
+                            </h4>
                             <button
                                 className="game-card"
                                 data-game-url={aplicativo.url}
@@ -78,12 +93,18 @@ function ListaProjetos() {
                                 }}>
                                 <p style={{ fontSize: ".7em", background: "rgba(0,0,0,.9)" }}>{aplicativo.resumo}</p>
                             </button>
-                            <h4 className="border border-light py-1 rounded-pill px-4 m-auto text-center"style={{ maxWidth: "100%", width: "fit-content" }}>
-                                {aplicativo.titulo}
-                            </h4>
                         </div>;
                     })}
                 </div>
+            </div>
+            <div className="text-center mt-4">
+                <a href="/boas-praticas-javascript.html">
+                    <img role="button"
+                        style={{ maxWidth: "992px" }}
+                        title="banner-js-good-stuffs"
+                        width="100%"
+                        src="/img/banner-js-good-stuffs.jpg" />
+                </a>
             </div>
         </>
     )
