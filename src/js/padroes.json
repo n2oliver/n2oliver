@@ -215,19 +215,18 @@
         },
         {
             "id": 24,
-            "youtube": "/",
-            "tiktok": "",
-            "titulo": "Em breve... => { ",
-            "descricao": "",
-            "resumo": "",
-            "imagem": "",
-            "noopener": true
+            "youtube": "https://www.youtube.com/embed/EjhuZW_fwTc?si=VXFaIDYX3zPeDQzt",
+            "tiktok": "7684708223873518865",
+            "titulo": "Visitor",
+            "descricao": "Executar operações de objetos sem alterar suas classes",
+            "resumo": "Separar as operações da estrutura",
+            "imagem": "/img/padroes/visitor.jpg"
         },
         {
             "id": 25,
             "youtube": "/",
             "tiktok": "",
-            "titulo": "Visitor",
+            "titulo": "Em breve... => { ",
             "descricao": "",
             "resumo": "",
             "imagem": "",
