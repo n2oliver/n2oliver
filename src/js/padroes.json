@@ -224,29 +224,27 @@
         },
         {
             "id": 25,
-            "youtube": "/",
-            "tiktok": "",
-            "titulo": "Em breve... => { ",
-            "descricao": "",
-            "resumo": "",
-            "imagem": "",
-            "noopener": true
+            "youtube": "https://www.youtube.com/embed/neJ5sW2Qejo?si=I2CLm6m7HVruD8AB",
+            "tiktok": "7685191362844658945",
+            "titulo": "Mediator",
+            "descricao": "Comunicação centralizada entre objetos",
+            "resumo": "Colocar um intermediário na comunicação entre objetos",
+            "imagem": "/img/padroes/mediator.jpg"
         },
         {
             "id": 26,
-            "youtube": "/",
-            "tiktok": "",
-            "titulo": "Mediator",
-            "descricao": "",
-            "resumo": "",
-            "imagem": "",
-            "noopener": true
+            "youtube": "https://www.youtube.com/embed/4hpTfTK1e8U?si=YJcvbwhf5so9Mx-K",
+            "tiktok": "7688563868125154577",
+            "titulo": "Memento",
+            "descricao": "Como salvar e restaurar o estado de um objeto",
+            "resumo": "Permite capturar o estado de um objeto em determinado momento",
+            "imagem": "/img/padroes/memento.jpg"
         },
         {
             "id": 27,
             "youtube": "/",
             "tiktok": "",
-            "titulo": "Memento",
+            "titulo": "Em breve... => { ",
             "descricao": "",
             "resumo": "",
             "imagem": "",
