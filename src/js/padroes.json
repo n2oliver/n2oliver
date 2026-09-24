@@ -242,33 +242,12 @@
         },
         {
             "id": 27,
-            "youtube": "/",
-            "tiktok": "",
-            "titulo": "Em breve... => { ",
-            "descricao": "",
-            "resumo": "",
-            "imagem": "",
-            "noopener": true
-        },
-        {
-            "id": 28,
-            "youtube": "/",
-            "tiktok": "",
+            "youtube": "https://www.youtube.com/embed/j0C3nVXX4lk?si=uBujsAsRNNOqcqZy",
+            "tiktok": "7688897665299533074",
             "titulo": "Iterator",
-            "descricao": "",
-            "resumo": "",
-            "imagem": "",
-            "noopener": true
-        },
-        {
-            "id": 29,
-            "youtube": "/",
-            "tiktok": "",
-            "titulo": "}",
-            "descricao": "",
-            "resumo": "",
-            "imagem": "",
-            "noopener": true
+            "descricao": "Acessar os elementos de uma coleção de forma sequencial ou controlada",
+            "resumo": "Percorrer uma coleção sem depender da sua estrutura",
+            "imagem": "/img/padroes/iterator.jpg"
         }
     ]
 }
