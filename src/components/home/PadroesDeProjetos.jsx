@@ -27,10 +27,6 @@ function PadroesDeProjetos() {
         async function carregar() {
             setPadroes(dados);
         }
-        
-        setTimeout(() => {
-            setActiveKey('0');
-        }, 10);
         carregar();
     }, {})
     if (!padroes || (padroes && !Object.entries(padroes).length)) {
@@ -213,6 +209,15 @@ function PadroesDeProjetos() {
                 </Accordion.Item>
             </Accordion>
             <YoutubePlayer video={video} show={show} handleClose={handleClose} />
+            <div className="text-center mt-4">
+                <a href="/boas-praticas-javascript.html">
+                    <img role="button"
+                        style={{ maxWidth: "992px" }}
+                        title="banner-js-good-stuffs"
+                        width="100%"
+                        src="/img/banner-js-good-stuffs.jpg" />
+                </a>
+            </div>
         </>
     );
 }

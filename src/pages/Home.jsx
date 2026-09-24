@@ -17,8 +17,8 @@ function Home({ title }) {
         <div className="container m-auto p-0" style={{ backgroundColor: "rgba(0, 0, 0, .4)", maxWidth: "94dvw" }}>
           <div>
             <div className="justify-content-start text-start col-md-10 m-auto text-light mt-2 ubuntu w-100">
-              <PadroesDeProjetos />
               <ListaProjetos />
+              <PadroesDeProjetos />
             </div>
           </div>
         </div>

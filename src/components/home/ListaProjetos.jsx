@@ -76,7 +76,7 @@ function ListaProjetos() {
                             className='scroll-item'
                             onClick={() => setTimeout(() => {
                                 if(!arrastou.current) {
-                                    window.open(aplicativo.url);
+                                    window.location.href = aplicativo.url;
                                 }
                             }, 300)}>
                             <h4 className="m-auto text-center"style={{ maxWidth: "100%", width: "fit-content" }}>
@@ -96,15 +96,6 @@ function ListaProjetos() {
                         </div>;
                     })}
                 </div>
-            </div>
-            <div className="text-center mt-4">
-                <a href="/boas-praticas-javascript.html">
-                    <img role="button"
-                        style={{ maxWidth: "992px" }}
-                        title="banner-js-good-stuffs"
-                        width="100%"
-                        src="/img/banner-js-good-stuffs.jpg" />
-                </a>
             </div>
         </>
     )
