@@ -208,16 +208,7 @@ function PadroesDeProjetos() {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-            <YoutubePlayer video={video} show={show} handleClose={handleClose} />
-            <div className="text-center mt-4">
-                <a href="/boas-praticas-javascript.html">
-                    <img role="button"
-                        style={{ maxWidth: "992px" }}
-                        title="banner-js-good-stuffs"
-                        width="100%"
-                        src="/img/banner-js-good-stuffs.jpg" />
-                </a>
-            </div>
+            <YoutubePlayer video={video} show={show} handleClose={handleClose} />  
         </>
     );
 }

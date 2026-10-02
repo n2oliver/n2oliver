@@ -1,0 +1,49 @@
+{
+    "Aulas": [
+        {
+            "id": 1,
+            "youtube": "https://www.youtube.com/embed/9DuZlj8_72g?si=PUt6PD6BeFN7-vyb",
+            "tiktok": "7592044113369894162",
+            "titulo": "Como usar um computador",
+            "descricao": "Conheça as principais funções físicas de um computador e como utilizá-lo",
+            "resumo": "",
+            "imagem": "/img/informatica-basica/como-usar-computador.png"
+        },
+        {
+            "id": 2,
+            "youtube": "https://www.youtube.com/embed/TfGXS2f6jf0?si=qWBXlWKhHMCChwlR",
+            "tiktok": "7691403943959629063",
+            "titulo": "Sistemas Operacionais",
+            "descricao": "O básico para começar a usar o computador",
+            "resumo": "",
+            "imagem": "/img/informatica-basica/sistemas-operacionais.png"
+        },
+        {
+            "id": 3,
+            "youtube": "https://www.youtube.com/embed/HK23gcWKUXU?si=KZRnGVMKF9ZawJ9T",
+            "tiktok": "7691775433976663303",
+            "titulo": "Principais programas do Windows",
+            "descricao": "Um tour pelos principais programas do Windows 11",
+            "resumo": "",
+            "imagem": "/img/informatica-basica/tour-windows-11.png"
+        },
+        {
+            "id": 4,
+            "youtube": "https://www.youtube.com/embed/LHm4-nYrwrM?si=ESLuK7bgrnaJcSR9",
+            "tiktok": "7644346811523747092",
+            "titulo": "Celular e tablet como tela extra no computador",
+            "descricao": "Extenda seu monitor com o smartphone ou tablet",
+            "resumo": "",
+            "imagem": "/img/informatica-basica/smartphone-como-tela.png"
+        },
+        {
+            "id": 5,
+            "youtube": "https://www.youtube.com/embed/qSN1vghdRlo?si=SXB6VmQ6emwizKRj",
+            "tiktok": "7642827054370606357",
+            "titulo": "Como funciona um programa de computador",
+            "descricao": "Entenda como funciona a programação de um sistema",
+            "resumo": "",
+            "imagem": "/img/informatica-basica/como-funciona-um-sistema.png"
+        }
+    ]
+}

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import PadroesDeProjetos from '../components/home/PadroesDeProjetos';
 import ListaProjetos from '../components/home/ListaProjetos';
+import InformaticaBasica from '../components/home/InformaticaBasica';
 
 function Home({ title }) {
   useEffect(() => {
@@ -18,7 +19,17 @@ function Home({ title }) {
           <div>
             <div className="justify-content-start text-start col-md-10 m-auto text-light mt-2 ubuntu w-100">
               <ListaProjetos />
-              <PadroesDeProjetos />
+              <div className="text-center mt-4">
+                  <a href="/boas-praticas-javascript.html">
+                      <img role="button"
+                          style={{ maxWidth: "992px" }}
+                          title="banner-js-good-stuffs"
+                          width="100%"
+                          src="/img/banner-js-good-stuffs.jpg" />
+                  </a>
+              </div>
+              <InformaticaBasica />
+              <PadroesDeProjetos />            
             </div>
           </div>
         </div>
