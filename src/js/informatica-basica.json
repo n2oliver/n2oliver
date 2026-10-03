@@ -44,6 +44,15 @@
             "descricao": "Entenda como funciona a programação de um sistema",
             "resumo": "",
             "imagem": "/img/informatica-basica/como-funciona-um-sistema.png"
+        },
+        {
+            "id": 6,
+            "youtube": "https://www.youtube.com/embed/juAtu3-8MM4?si=L8gFU2IayYS-eL43",
+            "tiktok": "7692217793265143058",
+            "titulo": "Editores de texto e IDEs",
+            "descricao": "Conheça alguns que você pode utilizar no dia a dia",
+            "resumo": "",
+            "imagem": "/img/informatica-basica/editores-de-texto-e-ides.png"
         }
     ]
 }
