@@ -18,6 +18,7 @@ function Home({ title }) {
         <div className="container m-auto p-0" style={{ backgroundColor: "rgba(0, 0, 0, .4)", maxWidth: "94dvw" }}>
           <div>
             <div className="justify-content-start text-start col-md-10 m-auto text-light mt-2 ubuntu w-100">
+              <h2 className="text-center w-100">Produtos</h2>
               <ListaProjetos />
               <div className="text-center mt-4">
                   <a href="/boas-praticas-javascript.html">
@@ -28,6 +29,7 @@ function Home({ title }) {
                           src="/img/banner-js-good-stuffs.jpg" />
                   </a>
               </div>
+              <h2 className="text-center w-100">Cursos</h2>
               <InformaticaBasica />
               <PadroesDeProjetos />            
             </div>

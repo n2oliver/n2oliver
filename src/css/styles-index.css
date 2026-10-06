@@ -216,29 +216,7 @@ footer {
 }
 
 .carousel-control-next {
-    background: #fff;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    position: fixed;
-    height: fit-content;
-    width: fit-content;
-    padding: 34px;
-    margin: auto;
-}
-.carousel-control-prev:hover,
-.carousel-control-next:hover{
-    opacity: 1;
-}
-
-.carousel-control-prev:hover {
-    background: #9c006c;
-    color: white;
-}
-
-.carousel-control-next:hover {
-    background: white;
+    background: #000000;
 }
 
 .carousel-inner {
@@ -515,27 +493,6 @@ h1 {
     }
     .arrow {
         opacity: .80;
-    }
-
-    .carousel-control-prev:hover,
-    .carousel-control-next:hover {
-        opacity: .8;
-        transform: scale(1.05);
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        opacity: 0.7;
-        transition: all 0.3s ease;
-        background: transparent;
-        align-content: center;
-        display: flex;
-        align-self: center;
-        height: fit-content;
-        width: fit-content;
-        padding: 34px;
-        margin: auto;
     }
 
     .icon-item:hover i,
