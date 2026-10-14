@@ -34,6 +34,7 @@ import InspetorVisual from "./pages/extensoes/InspetorVisual.jsx";
 import LeitorDePdf from "./pages/extensoes/LeitorDePdf.jsx";
 import dados from "./js/api.json";
 import Calculadora from "./pages/Calculadora.jsx";
+import Video from "./pages/Video.jsx";
 let API_URL;
 function App() {
   const [config, setConfig] = useState(null);
@@ -56,6 +57,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home title="Início - n2oliver" />} />
+
+        <Route path="/video" element={<Video title="Vídeo - n2oliver" />} />
 
         <Route path="/tecnologia" element={<Tecnologia title="Tecnologia - n2oliver" />} />
         <Route path="/tecnologia/:id" element={<Tecnologia title="Tecnologia - n2oliver" />} />
