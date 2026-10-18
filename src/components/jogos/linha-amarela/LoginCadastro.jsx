@@ -10,7 +10,7 @@ function LoginCadastro() {
     useEffect(() => {
         const audioManager = setUpAudioManager();
 
-        setUpIntro(audioManager, () => {
+        setUpIntro(() => {
             setTimeout(() => {
                 navigate(`${appUrl}/jogo`);
             }, 3000);

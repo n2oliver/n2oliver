@@ -3,6 +3,7 @@ import { API_URL } from "../App";
 import { autotranslate } from "../js/autotranslate";
 import "../css/gtranslate.css";
 import { useEffect } from "react";
+import User from "./User";
 
 function Navbar() {
     const location = useLocation();
@@ -36,7 +37,7 @@ function Navbar() {
 
                     <div className="d-flex w-100">
 
-                        <Link className="navbar-brand rounded text-start" to="/" style={{ width: "stretch" }}>
+                        <Link className="navbar-brand rounded text-start" to="/" style={{ width: "fit-content" }}>
                             <img
                                 src="/img/n2-ico.jpg"
                                 width="32"
@@ -45,6 +46,7 @@ function Navbar() {
                             />
                             oliver
                         </Link>
+                        <User />
                         <div class="flex-column">
                             <button
                                 className="navbar-toggler"
