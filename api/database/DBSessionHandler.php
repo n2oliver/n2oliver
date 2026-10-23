@@ -2,57 +2,68 @@
 
 class DBSessionHandler implements SessionHandlerInterface
 {
-    private $pdo;
+    private PDO $pdo;
 
     public function __construct(PDO $pdo)
-    {   // Testa se a pasta padrão está funcional (local vs servidor)
-        $sessionPath = __DIR__ . '/sessao-temp';
-
-        if (!is_dir($sessionPath)) {
-            mkdir($sessionPath, 0700, true); // cria a pasta se não existir
-        }
-
+    {
         $this->pdo = $pdo;
     }
 
-    public function open($savePath, $sessionName) {
+    public function open(string $path, string $name): bool
+    {
         return true;
     }
 
-    public function close() {
+    public function close(): bool
+    {
         return true;
     }
 
-    public function read($id) {
-        $stmt = $this->pdo->prepare("SELECT data FROM sessions WHERE id = :id");
+    public function read(string $id): string|false
+    {
+        $stmt = $this->pdo->prepare(
+            "SELECT data FROM sessions WHERE id = :id"
+        );
+
         $stmt->execute(['id' => $id]);
-        if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            return $row['data'];
-        }
-        return '';
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $row ? (string) $row['data'] : '';
     }
 
-    public function write($id, $data) {
-        $timestamp = time();
+    public function write(string $id, string $data): bool
+    {
         $stmt = $this->pdo->prepare("
             REPLACE INTO sessions (id, data, timestamp)
             VALUES (:id, :data, :timestamp)
         ");
+
         return $stmt->execute([
             'id' => $id,
             'data' => $data,
-            'timestamp' => $timestamp
+            'timestamp' => time()
         ]);
     }
 
-    public function destroy($id) {
-        $stmt = $this->pdo->prepare("DELETE FROM sessions WHERE id = :id");
+    public function destroy(string $id): bool
+    {
+        $stmt = $this->pdo->prepare(
+            "DELETE FROM sessions WHERE id = :id"
+        );
+
         return $stmt->execute(['id' => $id]);
     }
 
-    public function gc($maxLifetime) {
-        $old = time() - $maxLifetime;
-        $stmt = $this->pdo->prepare("DELETE FROM sessions WHERE timestamp < :old");
-        return $stmt->execute(['old' => $old]);
+    public function gc(int $max_lifetime): int|false
+    {
+        $stmt = $this->pdo->prepare(
+            "DELETE FROM sessions WHERE timestamp < :old"
+        );
+
+        $stmt->execute([
+            'old' => time() - $max_lifetime
+        ]);
+
+        return $stmt->rowCount();
     }
 }

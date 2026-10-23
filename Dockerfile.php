@@ -1,4 +1,4 @@
-FROM php:7.3-apache
+FROM php:8.5-apache
 
 # Node.js
 COPY --from=node:lts /usr/local/bin/ /usr/local/bin/
