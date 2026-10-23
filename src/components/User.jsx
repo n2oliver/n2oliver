@@ -44,9 +44,11 @@ function User() {
                                     <strong>Senha:</strong>
                                     <input id="senha" type="password" className="form-control" placeholder="Senha" />
                                     <small id="esqueci-senha" className="recovery-link m-1 text-nowrap">Esqueci minha senha</small>
-                                    <button className="btn btn-success" id="login">Login</button>
-                                    <strong id="nao-tenho-conta" className="btn btn-primary">Criar conta</strong>
                                 </small>
+                            </div>
+                            <div id="camada-cadastro" className="px-2">
+                                <button className="btn btn-success" id="login">Login</button>
+                                <strong id="nao-tenho-conta" className="btn btn-primary">Criar conta</strong>
                             </div>
                             <div id="cadastrar-senha" className="px-2 d-none">
                                 <small>
