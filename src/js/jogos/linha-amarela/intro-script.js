@@ -21,7 +21,7 @@ function setUpAudioManager() {
     }
     return audioManager;
 }
-function setUpIntro(callbackLogin) {
+function setUpIntro(audioManager, callbackLogin) {
     const login = new Login();
 
     gtag("event", "qualify_lead", {
