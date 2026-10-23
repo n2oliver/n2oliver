@@ -34,7 +34,6 @@ import InspetorVisual from "./pages/extensoes/InspetorVisual.jsx";
 import LeitorDePdf from "./pages/extensoes/LeitorDePdf.jsx";
 import dados from "./js/api.json";
 import Calculadora from "./pages/Calculadora.jsx";
-import NMocao from "./pages/NMocao.jsx";
 let API_URL;
 function App() {
   const [config, setConfig] = useState(null);
@@ -102,7 +101,6 @@ function App() {
         <Route path="/jogos/caixa-de-letras" element={<CaixaDeLetras title="Caixa de Letras - n2oliver" />} />
 
         <Route path="/calculadora" element={<Calculadora title="Calculadora - n2oliver" />} />
-        <Route path="/nmocao" element={<NMocao title="NMoção - n2oliver" />} />
 
         <Route path="*" element={<NotFound title="Página não encontrada - n2oliver" />} />
       </Routes>

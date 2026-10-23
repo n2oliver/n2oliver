@@ -70,12 +70,6 @@ function Navbar() {
                                     </li>
 
                                     <li className="nav-item">
-                                        <Link className="nav-link" to="/nmocao">
-                                            <i className="fa-solid fa-smile"></i> NMoção
-                                        </Link>
-                                    </li>
-
-                                    <li className="nav-item">
                                         <Link className="nav-link" to="/tecnologia">
                                             <i className="fa-solid fa-newspaper"></i> Tecnologia
                                         </Link>
