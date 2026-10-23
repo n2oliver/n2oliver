@@ -8,7 +8,6 @@ function InformaticaBasica() {
     const [aulas, setAulas] = useState({});
     const [show, setShow] = useState(false);
     const [video, setVideo] = useState({});
-    const [activeKey, setActiveKey] = useState(null);
 
     const isDown = useRef(false);
     const startX = useRef(0);
@@ -77,9 +76,8 @@ function InformaticaBasica() {
             <strong>
                 <h4 className="my-0 pb-2 pt-2 text-start">Informática Básica</h4>
             </strong>
-            <Accordion activeKey={activeKey} onSelect={(eventKey) => setActiveKey(eventKey)} flush data-bs-theme="dark">
+            <Accordion activeKey="0" flush data-bs-theme="dark">
                 <Accordion.Item eventKey="0">
-                    <Accordion.Header><h2>Aulas</h2></Accordion.Header>
                     <Accordion.Body className="scroll-container"
                         onMouseDown={(event) => startDragEvent(event)} onMouseLeave={mouseLeave} onMouseUp={mouseUp}
                         onMouseMove={dragEvent}>
