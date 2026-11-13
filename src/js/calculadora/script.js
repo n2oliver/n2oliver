@@ -109,7 +109,7 @@ function decimal(expr) {
     return (!isNaN(expr) ? new Intl.NumberFormat('pt-BR', {
         minimumFractionDigits: 0,
         maximumFractionDigits: 9,
-    }).format(expr).toString().replace(/0+$/gi, "").replace(/\.$/gi, "") : expr) || ''
+    }).format(expr) || ''
 }
 function prepareResult() {
 
